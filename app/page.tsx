@@ -1,7 +1,9 @@
 import ArrowRight from "@/components/ArrowRight";
 import EventItem from "@/components/EventItem";
+import GeneralBoxItem from "@/components/GeneralBoxItem";
 import Header from "@/components/Header";
-import { Event, getSortedEvents } from "@/lib/fetch-events";
+import HowToJoin from "@/components/HowToJoin";
+import { getSortedEvents } from "@/lib/fetch-events";
 import Image from "next/image";
 
 export default function Home() {
@@ -66,11 +68,48 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-4xl max-md:w-screen max-md:px-4 grid max-md:grid-rows-2 md:grid-rows-1 md:gap-11 max-md:gap-6 grid-flow-col">
-        {events.map((event) => (
-          <EventItem key={event.id} event={event} />
-        ))}
+          {events.map((event) => (
+            <EventItem key={event.id} event={event} />
+          ))}
         </div>
       </div>
+
+      <div className="bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-md:px-4">
+          <div className="md:text-6xl max-md:text-4xl md:leading-[77px] max-md:leading-60px font-medium font-FamiljenGrotesk">
+            Lorem Lorem
+          </div>
+          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
+        </div>
+        <div className="max-w-4xl max-md:w-screen max-md:px-4 grid max-md:grid-rows-4 md:grid-rows-2 md:gap-11 max-md:gap-6 grid-flow-col">
+          <GeneralBoxItem
+            title="Documents"
+            description="You can read study reports and discussion reports established through the BGIN working group."
+            buttonTitle="View Documents"
+            buttonTapped={() => console.log("documents tapped")}
+          />
+          <GeneralBoxItem
+            title="Events"
+            description="You can read study reports and discussion reports established through the BGIN working group."
+            buttonTitle="View Documents"
+            buttonTapped={() => console.log("documents tapped")}
+          />
+          <GeneralBoxItem
+            title="Working Groups"
+            description="You can read study reports and discussion reports established through the BGIN working group."
+            buttonTitle="View Documents"
+            buttonTapped={() => console.log("documents tapped")}
+          />
+          <GeneralBoxItem
+            title="Meeting Notes"
+            description="You can read study reports and discussion reports established through the BGIN working group."
+            buttonTitle="View Documents"
+            buttonTapped={() => console.log("documents tapped")}
+          />
+        </div>
+      </div>
+
+      <HowToJoin />
     </main>
   );
 }
