@@ -1,8 +1,11 @@
 import ArrowRight from "@/components/ArrowRight";
+import EventItem from "@/components/EventItem";
 import Header from "@/components/Header";
+import { Event, getSortedEvents } from "@/lib/fetch-events";
 import Image from "next/image";
 
 export default function Home() {
+  const events = getSortedEvents();
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
@@ -51,7 +54,23 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-screen" />
+
+      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-md:px-4">
+          <div className="md:text-6xl max-md:text-4xl md:leading-[77px] max-md:leading-60px font-medium font-FamiljenGrotesk">
+            Upcoming Events
+          </div>
+          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]">
+            <div>View All</div>
+            <ArrowRight />
+          </div>
+        </div>
+        <div className="max-w-4xl max-md:w-screen max-md:px-4 grid max-md:grid-rows-2 md:grid-rows-1 md:gap-11 max-md:gap-6 grid-flow-col">
+        {events.map((event) => (
+          <EventItem key={event.id} event={event} />
+        ))}
+        </div>
+      </div>
     </main>
   );
 }
