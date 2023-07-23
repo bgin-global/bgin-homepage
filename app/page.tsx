@@ -1,5 +1,6 @@
 import ArrowRight from "@/components/ArrowRight";
 import EventItem from "@/components/EventItem";
+import Footer from "@/components/Footer";
 import GeneralBoxItem from "@/components/GeneralBoxItem";
 import Header from "@/components/Header";
 import HowToJoin from "@/components/HowToJoin";
@@ -110,6 +111,7 @@ export default function Home() {
       </div>
 
       <HowToJoin />
+      <Footer />
     </main>
   );
 }
