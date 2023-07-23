@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
-      <div className="flex-col flex items-start md:pt-6 pb-16 h-fit max-w-4xl m-auto">
+      <div className="flex-col flex items-start lg:pt-6 pb-16 h-fit max-w-4xl m-auto">
         <Image
           alt="Hero Image"
           src="/images/Hero/Image.svg"
-          className="max-md:hidden w-[100%] h-[200px] rounded-2xl"
+          className="max-lg:hidden w-[100%] h-[200px] rounded-2xl"
           width={100}
           height={100}
           style={{
@@ -26,7 +26,7 @@ export default function Home() {
         <Image
           alt="Hero Image"
           src="/images/Hero/Image_SP.svg"
-          className="md:hidden w-screen h-[444px]"
+          className="lg:hidden w-screen h-[444px]"
           width={100}
           height={100}
           style={{
@@ -36,16 +36,16 @@ export default function Home() {
 
         <div className="flex-col w-full flex items-center gap-12 pt-16">
           <div className="flex-col flex items-center gap-2 text-center text-black mx-4">
-            <div className="max-md:text-4xl md:text-5xl max-md:leading-[48px] md:leading-[77px] font-medium font-FamiljenGrotesk">
+            <div className="max-lg:text-4xl lg:text-5xl max-lg:leading-[48px] lg:leading-[77px] font-medium font-FamiljenGrotesk">
               Building the Blockchain Future Through Inclusive Collaboration
             </div>
-            <div className="text-base leading-[19px] font-Inter md:max-w-[750px]">
+            <div className="text-base leading-[19px] font-Inter lg:max-w-[750px]">
               We are devoted to establishing a common language, fostering
               academic roots, and consistently providing trustworthy resources
               for sustainable blockchain development.
             </div>
           </div>
-          <div className="flex max-md:flex-col justify-center max-md:items-center md:items-start gap-6 text-base font-semibold font-Inter">
+          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter">
             <div className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white">
               <div>Join Our Community</div>
               <ArrowRight size="sm" color="white" />
@@ -59,8 +59,8 @@ export default function Home() {
       </div>
 
       <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-md:px-4">
-          <div className="md:text-6xl max-md:text-4xl md:leading-[77px] max-md:leading-60px font-medium font-FamiljenGrotesk">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
+          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
             Upcoming Events
           </div>
           <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]">
@@ -68,7 +68,7 @@ export default function Home() {
             <ArrowRight />
           </div>
         </div>
-        <div className="max-w-4xl max-md:w-screen max-md:px-4 grid max-md:grid-rows-2 md:grid-rows-1 md:gap-11 max-md:gap-6 grid-flow-col">
+        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-2 lg:grid-rows-1 lg:gap-11 max-lg:gap-6 grid-flow-col">
           {events.map((event) => (
             <EventItem key={event.id} event={event} />
           ))}
@@ -76,13 +76,13 @@ export default function Home() {
       </div>
 
       <div className="bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-md:px-4">
-          <div className="md:text-6xl max-md:text-4xl md:leading-[77px] max-md:leading-60px font-medium font-FamiljenGrotesk">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
+          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
             Lorem Lorem
           </div>
           <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
         </div>
-        <div className="max-w-4xl max-md:w-screen max-md:px-4 grid max-md:grid-rows-4 md:grid-rows-2 md:gap-11 max-md:gap-6 grid-flow-col">
+        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-4 lg:grid-rows-2 lg:gap-11 max-lg:gap-6 grid-flow-col">
           <GeneralBoxItem
             title="Documents"
             description="You can read study reports and discussion reports established through the BGIN working group."

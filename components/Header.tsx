@@ -9,7 +9,7 @@ function Header() {
     <div
       className={`${
         isOpen ? "" : "border border-b-black"
-      } max-md:fixed max-md:top-0 max-md:left-0 max-md:z-999 max-md:w-screen bg-white`}
+      } max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-999 max-lg:w-screen bg-white`}
     >
       <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
         <Image
@@ -20,7 +20,7 @@ function Header() {
           height={44}
         />
 
-        <div className="flex md:hidden justify-center items-center gap-6">
+        <div className="flex lg:hidden justify-center items-center gap-6">
           <div className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
             <div>Join Us</div>
           </div>
@@ -87,7 +87,7 @@ function Header() {
           </button>
         </div>
 
-        <div className="flex max-md:hidden justify-center items-center gap-6">
+        <div className="flex max-lg:hidden justify-center items-center gap-6">
           <div className="text-base leading-[19px] text-black">About</div>
           <div className="text-base leading-[19px] text-black">Documents</div>
           <div className="text-base leading-[19px] text-black">Events</div>
@@ -103,7 +103,7 @@ function Header() {
       <div
         className={`${
           isOpen ? "" : "hidden"
-        } absolute md:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
+        } absolute lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
         id="navbar"
       >
         <div className="w-full flex justify-between items-center">

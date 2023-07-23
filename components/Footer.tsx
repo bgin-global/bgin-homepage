@@ -1,11 +1,11 @@
 "use client";
 
-function Footer() {
+export default function Footer() {
   return (
-    <div className="flex-col w-screen flex justify-center items-center border-t border-black">
+    <div className="flex-col w-full flex justify-center items-center border-t border-black">
       <div className="w-full flex items-end px-4 py-12">
-        <div className="max-w-4xl m-auto flex-1 flex max-md:flex-col max-md:justify-center md:justify-between max-md:items-center md:items-end max-md:gap-10">
-          <div className="flex-col flex justify-center items-start max-md:items-center gap-6 text-black">
+        <div className="max-w-4xl m-auto flex-1 flex max-lg:flex-col max-lg:justify-center lg:justify-between max-lg:items-center lg:items-end max-lg:gap-10">
+          <div className="flex-col flex justify-center items-start max-lg:items-center gap-6 text-black">
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Contact Info
             </div>
@@ -138,4 +138,3 @@ function Footer() {
     </div>
   );
 }
-export default Footer;
