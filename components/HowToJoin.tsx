@@ -33,7 +33,7 @@ function HowToJoin() {
               <Image
                 src="/images/How to Join/Image.svg"
                 alt="How to Join"
-                className="w-full max-md:h-[300px] h-full max-h-[385px]"
+                className="w-full max-md:h-[300px] h-full max-h-[385px] max-md:rounded-t-xl md:rounded-r-xl"
                 width={100}
                 height={100}
                 style={{
