@@ -103,7 +103,7 @@ function Header() {
       <div
         className={`${
           isOpen ? "" : "hidden"
-        } absolute lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
+        } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
         id="navbar"
       >
         <div className="w-full flex justify-between items-center">
