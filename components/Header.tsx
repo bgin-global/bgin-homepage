@@ -2,6 +2,7 @@
 import Image from "next/image";
 import ArrowRight from "./ArrowRight";
 import { useState } from "react";
+import Link from "next/link";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +13,15 @@ function Header() {
       } max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-999 max-lg:w-screen bg-white`}
     >
       <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
-        <Image
-          src="/images/Header/Logo.svg"
-          alt="Logo"
-          className="h-[44px] w-[44px]"
-          width={44}
-          height={44}
-        />
+        <Link href="/">
+          <Image
+            src="/images/Header/Logo.svg"
+            alt="Logo"
+            className="h-[44px] w-[44px]"
+            width={44}
+            height={44}
+          />
+        </Link>
 
         <div className="flex lg:hidden justify-center items-center gap-6">
           <div className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
@@ -88,12 +91,20 @@ function Header() {
         </div>
 
         <div className="flex max-lg:hidden justify-center items-center gap-6">
-          <div className="text-base leading-[19px] text-black">About</div>
-          <div className="text-base leading-[19px] text-black">Documents</div>
-          <div className="text-base leading-[19px] text-black">Events</div>
-          <div className="text-base leading-[19px] text-black">
-            Working groups
-          </div>
+          <Link href="/about">
+            <div className="text-base leading-[19px] text-black">About</div>
+          </Link>
+          <Link href="/documents">
+            <div className="text-base leading-[19px] text-black">Documents</div>
+          </Link>
+          <Link href="/events">
+            <div className="text-base leading-[19px] text-black">Events</div>
+          </Link>
+          <Link href="/working-groups">
+            <div className="text-base leading-[19px] text-black">
+              Working groups
+            </div>
+          </Link>
           <div className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
             <div>Join Us</div>
           </div>
@@ -106,36 +117,43 @@ function Header() {
         } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
         id="navbar"
       >
-        <div className="w-full flex justify-between items-center">
+        <Link
+          href="/about"
+          className="w-full flex justify-between items-center"
+        >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
             About
           </div>
           <ArrowRight />
-        </div>
-        <div className="w-full flex justify-between items-center">
+        </Link>
+
+        <Link
+          href="/documents"
+          className="w-full flex justify-between items-center"
+        >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
             Documents
           </div>
           <ArrowRight />
-        </div>
-        <div className="w-full flex justify-between items-center">
+        </Link>
+        <Link
+          href="/events"
+          className="w-full flex justify-between items-center"
+        >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
             Events
           </div>
           <ArrowRight />
-        </div>
-        <div className="w-full flex justify-between items-center">
+        </Link>
+        <Link
+          href="/working-groups"
+          className="w-full flex justify-between items-center"
+        >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
             Working groups
           </div>
           <ArrowRight />
-        </div>
-        <div className="w-full flex justify-between items-center">
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Meetings
-          </div>
-          <ArrowRight />
-        </div>
+        </Link>
       </div>
     </div>
   );

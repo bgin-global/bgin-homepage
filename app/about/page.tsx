@@ -1,14 +1,12 @@
 import ArrowRight from "@/components/ArrowRight";
-import EventItem from "@/components/EventItem";
 import Footer from "@/components/Footer";
 import GeneralBoxItem from "@/components/GeneralBoxItem";
 import Header from "@/components/Header";
 import HowToJoin from "@/components/HowToJoin";
 import { getSortedEvents } from "@/lib/fetch-events";
 import Image from "next/image";
-import Link from "next/link";
 
-export default function Home() {
+export default function About() {
   const events = getSortedEvents();
   return (
     <main className="min-h-screen bg-white w-screen">
@@ -41,72 +39,43 @@ export default function Home() {
               Building the Blockchain Future Through Inclusive Collaboration
             </div>
             <div className="text-base leading-[19px] font-Inter lg:max-w-[750px]">
+              BGIN, short for Blockchain Governance Initiative Network, is
+              shaping the future of blockchain. As this technology transforms
+              numerous sectors, our current financial systems and regulations
+              must adapt. BGIN leads the charge in creating an open, global
+              platform where all stakeholders can engage in dialogue, build
+              shared understanding, and work together for a thriving ecosphere.
               We are devoted to establishing a common language, fostering
               academic roots, and consistently providing trustworthy resources
               for sustainable blockchain development.
             </div>
           </div>
-          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter">
-            <div className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white">
-              <div>Join Our Community</div>
-              <ArrowRight size="sm" color="white" />
-            </div>
-            <Link href="/about">
-              <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-full border border-[#2d2d2d] text-[#2d2d2d]">
-                <div>Learn About Us</div>
-                <ArrowRight size="sm" color="black" />
-              </div>
-            </Link>
-          </div>
         </div>
       </div>
 
-      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
+      <div className="bg-[#D2DEFC] w-full flex-col flex items-center pb-32 h-fit">
         <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
           <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Upcoming Events
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]">
-            <div>View All</div>
-            <ArrowRight />
-          </div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-2 lg:grid-rows-1 lg:gap-11 max-lg:gap-6 grid-flow-col">
-          {events.map((event) => (
-            <EventItem key={event.id} event={event} />
-          ))}
-        </div>
-      </div>
-
-      <div className="bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Lorem Lorem
+            Our approach
           </div>
           <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
         </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-4 lg:grid-rows-2 lg:gap-11 max-lg:gap-6 grid-flow-col">
+        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-3 lg:grid-rows-1 lg:gap-6 max-lg:gap-6 grid-flow-col">
           <GeneralBoxItem
-            title="Documents"
-            description="You can read study reports and discussion reports established through the BGIN working group."
+            title="Mission"
+            description="We aims at providing an open and neutral sphere for all stakeholders to deepen common understanding and to collaborate to address issues they face in order to attain sustainable development of the blockchain community."
             buttonTitle="View Documents"
             buttonTapped={() => console.log("documents tapped")}
           />
           <GeneralBoxItem
-            title="Events"
-            description="You can read study reports and discussion reports established through the BGIN working group."
+            title="Participants"
+            description="Our participants include individuals and companies from a wide range of industries who are passionate about Blockchain technology and its potential to revolutionize the way we do business."
             buttonTitle="View Documents"
             buttonTapped={() => console.log("documents tapped")}
           />
           <GeneralBoxItem
-            title="Working Groups"
-            description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Documents"
-            buttonTapped={() => console.log("documents tapped")}
-          />
-          <GeneralBoxItem
-            title="Meeting Notes"
-            description="You can read study reports and discussion reports established through the BGIN working group."
+            title="Principles"
+            description="Our organization is guided by the principles of transparency, collaboration, and innovation. We believe that by working together and sharing knowledge, we can create a better future for all."
             buttonTitle="View Documents"
             buttonTapped={() => console.log("documents tapped")}
           />
