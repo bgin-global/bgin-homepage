@@ -1,15 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BGIN-HOMEPAGE
+
+Next.js based homepage.
 
 ## Getting Started
 
-First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+$ npm i
+$ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -17,6 +15,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+<br>
 
 ## Learn More
 
@@ -27,8 +27,51 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+When you push to `main` branch, the app will be automatically deployed.
+
+<br>
+
+## Management Workflow
+
+This section explains the management workflow when you want to create/edit the events, working groups, documentations.
+You can edit the markdown files under the folder `posts/` directly, and update the news when reflecting the changes to GitHub.
+
+The example steps of the workflow are below↓
+
+### 1. Create/Edit new File
+
+Create `posts/**/~~~.md` and edit it. Please set the same top metadata as the other md files.
+
+For instance, event's metadata is like:
+
+```md
+---
+title: 'Blockchain Summit 2023'
+date: '2023 Mar. 29'
+location: 'New York, US'
+---
+```
+
+All files follows markdown format.
+
+### 2. Push to new branch
+
+Cut the new branch from main and push your updates.
+
+### 3. Review
+
+Your updates will be reflected to preview site automatically.
+Plz check the link and review it.
+
+### 4. Merge
+
+If the updates is file, merge the branch to `main`.
+Then, deployment will run.
+
+<br>
+
+If you have a question, plz feel free to contact to masatojames@wall-of-death.com
