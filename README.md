@@ -1,6 +1,9 @@
-# BGIN-HOMEPAGE
+# <img src="./public/images/Header/Logo.svg">
 
-Next.js based homepage.
+BGIN's (new) official website powered by Next.js and TailwindCSS.<br>
+With simple, popular management workflow.
+
+<br>
 
 ## Getting Started
 
