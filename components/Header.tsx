@@ -102,7 +102,7 @@ function Header() {
           </Link>
           <Link href="/working-groups">
             <div className="text-base leading-[19px] text-black">
-              Working groups
+              Working Groups
             </div>
           </Link>
           <div className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
@@ -150,7 +150,7 @@ function Header() {
           className="w-full flex justify-between items-center"
         >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Working groups
+            Working Groups
           </div>
           <ArrowRight />
         </Link>
