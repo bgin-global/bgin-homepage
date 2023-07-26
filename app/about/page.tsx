@@ -1,3 +1,4 @@
+import AboutItem from "@/components/AboutItem";
 import ArrowRight from "@/components/ArrowRight";
 import Footer from "@/components/Footer";
 import GeneralBoxItem from "@/components/GeneralBoxItem";
@@ -61,23 +62,17 @@ export default function About() {
           <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
         </div>
         <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-3 lg:grid-rows-1 lg:gap-6 max-lg:gap-6 grid-flow-col">
-          <GeneralBoxItem
+          <AboutItem
             title="Mission"
             description="We aims at providing an open and neutral sphere for all stakeholders to deepen common understanding and to collaborate to address issues they face in order to attain sustainable development of the blockchain community."
-            buttonTitle="View Documents"
-            buttonTapped={() => console.log("documents tapped")}
           />
-          <GeneralBoxItem
+          <AboutItem
             title="Participants"
             description="Our participants include individuals and companies from a wide range of industries who are passionate about Blockchain technology and its potential to revolutionize the way we do business."
-            buttonTitle="View Documents"
-            buttonTapped={() => console.log("documents tapped")}
           />
-          <GeneralBoxItem
+          <AboutItem
             title="Principles"
             description="Our organization is guided by the principles of transparency, collaboration, and innovation. We believe that by working together and sharing knowledge, we can create a better future for all."
-            buttonTitle="View Documents"
-            buttonTapped={() => console.log("documents tapped")}
           />
         </div>
       </div>

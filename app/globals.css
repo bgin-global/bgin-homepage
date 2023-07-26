@@ -31,6 +31,6 @@ body {
 }
 
 * {
-	/* outline: 1px solid magenta; */
+	outline: 1px solid magenta;
   overflow-x: hidden;
 }
