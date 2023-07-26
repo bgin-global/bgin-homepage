@@ -18,7 +18,7 @@ interface PostId {
   };
 }
 
-const directory = path.join(process.cwd(), "posts/events");
+const directory = path.join(process.cwd(), "contents/events");
 
 export function getSortedEvents(futureOnly: boolean = false): Event[] {
   const today = Date.now();
