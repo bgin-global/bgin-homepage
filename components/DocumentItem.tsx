@@ -49,7 +49,7 @@ export default function DocumentItem(props: Props) {
 const DocumentThumbnail = (props: { title: string; author: string }) => {
   return (
     <svg
-      className="w-full h-auto"
+      className="w-full h-auto rounded-xl"
       width="334"
       height="533"
       viewBox="0 0 334 533"
