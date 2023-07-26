@@ -10,7 +10,7 @@ function Header() {
     <div
       className={`${
         isOpen ? "" : "border border-b-black"
-      } max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-999 max-lg:w-screen bg-white`}
+      } max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-999 max-lg:w-screen bg-white z-[999]`}
     >
       <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
         <Link href="/">
