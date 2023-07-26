@@ -5,11 +5,13 @@ import { remark } from "remark";
 import prism from "remark-prism";
 import html from "remark-html";
 
+type DIRECTION = "ALL" | "FUTURE" | "PAST";
 export interface Event {
   id: string;
   title: string;
   date: string;
   location: string;
+  description: string;
 }
 
 interface PostId {
@@ -20,27 +22,31 @@ interface PostId {
 
 const directory = path.join(process.cwd(), "contents/events");
 
-export function getSortedEvents(futureOnly: boolean = false): Event[] {
+export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
   const today = Date.now();
   const fileNames = fs.readdirSync(directory);
-  const allPostsData: Event[] = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(directory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
-    const event: Event = {
-      id,
-      title: matterResult.data.title as string,
-      date: matterResult.data.date as string,
-      location: matterResult.data.location as string,
-    };
-    return event;
-  })
-  .filter((event) => {
-    if (!futureOnly) return true;
-    const eventDate = Date.parse(event.date);
-    return eventDate >= today;
-  })
+  const allPostsData: Event[] = fileNames
+    .map((fileName) => {
+      const id = fileName.replace(/\.md$/, "");
+      const fullPath = path.join(directory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+      const matterResult = matter(fileContents);
+      const event: Event = {
+        id,
+        title: matterResult.data.title as string,
+        date: matterResult.data.date as string,
+        location: matterResult.data.location as string,
+        description: matterResult.data.description as string,
+      };
+      return event;
+    })
+    .filter((event) => {
+      if (direction === "ALL") return true;
+      const eventDate = Date.parse(event.date);
+      const isFutureEvent = (eventDate >= today);
+      if (direction === "PAST") !isFutureEvent;
+      else return isFutureEvent;
+    });
 
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -80,6 +86,7 @@ export async function getEventData(
     title: matterResult.data.title as string,
     date: matterResult.data.date as string,
     location: matterResult.data.location as string,
+    description: matterResult.data.description as string,
   };
 
   return {

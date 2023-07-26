@@ -1,7 +1,8 @@
 ---
-title: 'Blockchain Summit 2023'
-date: '2023 Mar. 29'
-location: 'New York, US'
+title: "Blockchain Summit 2023"
+date: "2023 Mar. 29"
+location: "New York, US"
+description: "The Blockchain Summit 2021 was a huge success, with over 500 attendees from around the world. The summit featured keynote speakers from the top Blockchain companies, as well as breakout sessions and networking opportunities."
 ---
 
 コンピュータの性能は指数関数的な進化を遂げています。
