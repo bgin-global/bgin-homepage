@@ -1,4 +1,5 @@
 import ArrowRight from "@/components/ArrowRight";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getEventData } from "@/lib/fetch-events";
 import Image from "next/image";
@@ -55,6 +56,8 @@ export default async function EventPage({
           <></>
         )}
       </div>
+
+      <Footer />
     </main>
   );
 }
