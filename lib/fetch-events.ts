@@ -13,6 +13,7 @@ export interface Event {
   register_link: string;
   title: string;
   date: string;
+  date_until?: string;
   location: string;
   description: string;
 }
@@ -40,6 +41,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         thumbnail: matterResult.data.thumbnail as string,
         register_link: matterResult.data.register_link as string,
         date: matterResult.data.date as string,
+        date_until: matterResult.data.date_until as string | undefined,
         location: matterResult.data.location as string,
         description: matterResult.data.description as string,
       };
@@ -47,7 +49,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
     })
     .filter((event) => {
       if (direction === "ALL") return true;
-      const eventDate = Date.parse(event.date);
+      const eventDate = Date.parse(event.date_until || event.date);
       const isFutureEvent = eventDate >= today;
       if (direction === "PAST") return !isFutureEvent;
       else return isFutureEvent;
@@ -95,6 +97,7 @@ export async function getEventData(
     thumbnail: matterResult.data.thumbnail as string,
     register_link: matterResult.data.register_link as string,
     date: matterResult.data.date as string,
+    date_until: matterResult.data.date_until as string | undefined,
     location: matterResult.data.location as string,
     description: matterResult.data.description as string,
   };
