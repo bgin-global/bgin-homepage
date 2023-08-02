@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const events = getSortedEvents();
+  const events = getSortedEvents("FUTURE");
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
@@ -81,33 +81,37 @@ export default function Home() {
       <div className="bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit">
         <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
           <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Lorem Lorem
+            See More
           </div>
           <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
         </div>
         <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-4 lg:grid-rows-2 lg:gap-11 max-lg:gap-6 grid-flow-col">
           <GeneralBoxItem
             title="Documents"
+            thumbnail="/images/Home/Documents.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
             buttonTitle="View Documents"
             buttonTapped={() => console.log("documents tapped")}
           />
           <GeneralBoxItem
             title="Events"
+            thumbnail="/images/Home/Events.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Documents"
+            buttonTitle="View Events"
             buttonTapped={() => console.log("documents tapped")}
           />
           <GeneralBoxItem
             title="Working Groups"
+            thumbnail="/images/Home/Working Groups.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Documents"
+            buttonTitle="View WGs"
             buttonTapped={() => console.log("documents tapped")}
           />
           <GeneralBoxItem
             title="Meeting Notes"
+            thumbnail="/images/Home/Meeting Notes.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Documents"
+            buttonTitle="View Meeting Notes"
             buttonTapped={() => console.log("documents tapped")}
           />
         </div>

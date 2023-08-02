@@ -1,15 +1,13 @@
-import ArrowRight from "@/components/ArrowRight";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import HowToJoin from "@/components/HowToJoin";
 import PastEventItem from "@/components/PastEventItem";
 import UpcomingEventTopItem from "@/components/UpcomingEventTopItem";
 import { getSortedEvents } from "@/lib/fetch-events";
 import Image from "next/image";
 
 export default function Events() {
-  const futureEvents = getSortedEvents();
-  const pastEvents = getSortedEvents();
+  const futureEvents = getSortedEvents("FUTURE");
+  const pastEvents = getSortedEvents("PAST");
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
@@ -29,7 +27,7 @@ export default function Events() {
             />
             <Image
               alt="Hero Image"
-              src="/images/Events/dummy.svg"
+              src={futureEvents[futureEvents.length - 1].thumbnail}
               className="max-lg:hidden w-full h-full rounded-2xl"
               width={100}
               height={100}

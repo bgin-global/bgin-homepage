@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import prism from "remark-prism";
 import html from "remark-html";
 
 export interface WorkingGroup {
@@ -61,31 +60,31 @@ export function getAllWorkingGroupIds(): PostId[] {
   });
 }
 
-export async function getWorkingGroupData(
-  slug: string
-): Promise<WorkingGroup & { contentHtml: string }> {
-  const fullPath = path.join(directory, `${slug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const matterResult = matter(fileContents);
+// export async function getWorkingGroupData(
+//   slug: string
+// ): Promise<WorkingGroup & { contentHtml: string }> {
+//   const fullPath = path.join(directory, `${slug}.md`);
+//   const fileContents = fs.readFileSync(fullPath, "utf8");
+//   const matterResult = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(prism)
-    .use(html, { sanitize: false })
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+//   const processedContent = await remark()
+//     .use(prism)
+//     .use(html, { sanitize: false })
+//     .process(matterResult.content);
+//   const contentHtml = processedContent.toString();
 
-  const workingGroup: WorkingGroup = {
-    id: slug,
-    group_name: matterResult.data.group_name as string,
-    co_chairs: matterResult.data.co_chairs as CoChair[],
-    description: matterResult.data.description as string,
-    mailinglist_url: matterResult.data.mailinglist_url as string,
-    github_url: matterResult.data.github_url as string,
-    detail_url: matterResult.data.detail_url as string,
-  };
+//   const workingGroup: WorkingGroup = {
+//     id: slug,
+//     group_name: matterResult.data.group_name as string,
+//     co_chairs: matterResult.data.co_chairs as CoChair[],
+//     description: matterResult.data.description as string,
+//     mailinglist_url: matterResult.data.mailinglist_url as string,
+//     github_url: matterResult.data.github_url as string,
+//     detail_url: matterResult.data.detail_url as string,
+//   };
 
-  return {
-    ...workingGroup,
-    contentHtml,
-  };
-}
+//   return {
+//     ...workingGroup,
+//     contentHtml,
+//   };
+// }

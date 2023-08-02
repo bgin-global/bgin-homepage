@@ -1,6 +1,7 @@
 import { Event } from "@/lib/fetch-events";
 import ArrowRight from "./ArrowRight";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   event: Event;
@@ -12,7 +13,7 @@ export default function UpcomingEventTopItem(props: Props) {
       <div className="bg:bg-white bg-cover w-full h-[200px] gap-2.5 rounded-xl">
         <Image
           alt="Hero Image"
-          src="/images/Events/dummy.svg"
+          src={props.event.thumbnail}
           className="lg:hidden w-full h-full rounded-2xl"
           width={100}
           height={100}
@@ -37,10 +38,13 @@ export default function UpcomingEventTopItem(props: Props) {
           </div>
         </div>
       </div>
-      <div className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter">
+      <Link
+        href={"/events/" + props.event.id}
+        className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+      >
         <div>Register Now</div>
         <ArrowRight size="sm" color="white" />
-      </div>
+      </Link>
     </div>
   );
 }

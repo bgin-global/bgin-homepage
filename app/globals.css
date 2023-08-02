@@ -34,3 +34,44 @@ body {
 	/* outline: 1px solid magenta; */
   overflow-x: hidden;
 }
+
+h2 {
+  margin-top: 24px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 60px;
+  font-family: 'Familjen Grotesk';
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 40px;
+  font-family: 'Familjen Grotesk';
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ol, ul, li {
+  overflow-x: visible;
+  list-style: disc;
+  list-style-type: disc;
+}
+
+li::marker {
+  color: black;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 1px black solid;
+}
