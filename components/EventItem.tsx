@@ -31,7 +31,7 @@ export default function EventItem(props: Props) {
           </div>
           <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
             <div>Location: {props.event.location}</div>
-            <div>Date: {props.event.date}</div>
+            <div>Date: {props.event.date}{props.event.date_until ? ` 〜 ${props.event.date_until}` : ''}</div>
           </div>
         </div>
       </div>

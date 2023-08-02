@@ -24,7 +24,7 @@ export default async function EventPage({
           {event?.title}
         </div>
         <div className="text-sm leading-[17px] font-Inter font-semibold">
-          <div>{event?.date}</div>
+          <div>{event?.date}{event?.date_until ? ` 〜 ${event?.date_until}` : ''}</div>
           <div>{event?.location}</div>
         </div>
 
@@ -39,13 +39,13 @@ export default async function EventPage({
           }}
         />
 
-        <Link
+        {/* <Link
           href={event?.register_link ?? "/"}
           className="w-full bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
         >
           <div>Register Now</div>
           <ArrowRight size="sm" color="white" />
-        </Link>
+        </Link> */}
 
         {event ? (
           <div

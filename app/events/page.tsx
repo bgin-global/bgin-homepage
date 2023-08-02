@@ -29,8 +29,8 @@ export default function Events() {
               alt="Hero Image"
               src={futureEvents[futureEvents.length - 1].thumbnail}
               className="max-lg:hidden w-full h-full rounded-2xl"
-              width={100}
-              height={100}
+              width={1000}
+              height={1000}
               style={{
                 objectFit: "cover",
               }}
