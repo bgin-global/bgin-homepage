@@ -1,6 +1,8 @@
 "use client";
+import { useRouter } from 'next/navigation'
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <div className="flex-col w-full flex justify-center items-center border-t border-black">
       <div className="w-full flex items-end px-4 py-12">
@@ -43,8 +45,7 @@ export default function Footer() {
           <div className="flex justify-center items-center gap-6">
             <svg
               onClick={() => {
-                // TODO
-                console.log("github");
+                router.push("https://github.com/bgin_global");
               }}
               width="32"
               height="32"
@@ -67,8 +68,7 @@ export default function Footer() {
 
             <svg
               onClick={() => {
-                // TODO
-                console.log("twitter");
+                router.push('https://twitter.com/bgin_global');
               }}
               width="32"
               height="32"
@@ -84,8 +84,7 @@ export default function Footer() {
 
             <svg
               onClick={() => {
-                // TODO
-                console.log("linked in");
+                router.push("https://www.linkedin.com/company/blockchain-governance-initiative-network/");
               }}
               width="32"
               height="32"
@@ -108,8 +107,7 @@ export default function Footer() {
 
             <svg
               onClick={() => {
-                // TODO
-                console.log("youtube");
+                router.push('https://www.youtube.com/channel/UCW_2j8IK0G92Mjx6OEVbS2w')
               }}
               width="32"
               height="32"
