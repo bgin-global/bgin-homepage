@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="flex justify-center items-center gap-6">
             <svg
               onClick={() => {
-                router.push("https://github.com/bgin_global");
+                router.push("https://github.com/bgin-global");
               }}
               width="32"
               height="32"

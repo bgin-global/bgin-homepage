@@ -15,6 +15,6 @@ Identity (including keys) and Access management for access to crypto-currency ex
 Identity (including keys) and Access management using Blockchain/DLT for Online resource access
 Privacy considerations to be taken into account for the above.'
 mailinglist_url: "https://example.com"
-github_url: "https://github.com/bgin_global"
+github_url: "https://github.com/bgin-global"
 detail_url: "https://example.com"
 ---
