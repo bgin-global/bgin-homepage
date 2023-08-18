@@ -91,28 +91,28 @@ export default function Home() {
             thumbnail="/images/Home/Documents.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
             buttonTitle="View Documents"
-            buttonTapped={() => console.log("documents tapped")}
+            buttonJumpTo="/documents"
           />
           <GeneralBoxItem
             title="Events"
             thumbnail="/images/Home/Events.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
             buttonTitle="View Events"
-            buttonTapped={() => console.log("documents tapped")}
+            buttonJumpTo="/events"
           />
           <GeneralBoxItem
             title="Working Groups"
             thumbnail="/images/Home/Working Groups.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
             buttonTitle="View WGs"
-            buttonTapped={() => console.log("documents tapped")}
+            buttonJumpTo="/working-groups"
           />
           <GeneralBoxItem
             title="Meeting Notes"
             thumbnail="/images/Home/Meeting Notes.svg"
             description="You can read study reports and discussion reports established through the BGIN working group."
             buttonTitle="View Meeting Notes"
-            buttonTapped={() => console.log("documents tapped")}
+            buttonJumpTo="/documents"
           />
         </div>
       </div>
