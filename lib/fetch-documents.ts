@@ -7,6 +7,7 @@ import html from "remark-html";
 export interface Document {
   id: string;
   title: string;
+  published_at: string;
   author: string;
   abstract: string;
   category: string;
@@ -30,6 +31,7 @@ export function getAllDocuments(): Document[] {
     const document: Document = {
       id,
       title: matterResult.data.title as string,
+      published_at: matterResult.data.published_at as string,
       author: matterResult.data.author as string,
       abstract: matterResult.data.abstract as string,
       category: matterResult.data.category as string,
@@ -37,7 +39,7 @@ export function getAllDocuments(): Document[] {
     return document;
   });
 
-  return allDocumentData.reverse();
+  return allDocumentData.reverse().sort((a,b) => 0 - (a.category > b.category ? 1 : -1));
 }
 
 export function getAllDocumentsIds(): PostId[] {
@@ -67,6 +69,7 @@ export function getAllDocumentsIds(): PostId[] {
 //   const document: Document = {
 //     id: slug,
 //     title: matterResult.data.title as string,
+//     published_at: matterResult.data.published_at as string,
 //     author: matterResult.data.author as string,
 //     abstract: matterResult.data.abstract as string,
 //     category: matterResult.data.category as string,
