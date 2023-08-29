@@ -15,6 +15,7 @@ export interface Event {
   date: string;
   date_until?: string;
   location: string;
+  url?: string;
   description: string;
 }
 
@@ -43,6 +44,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         date: matterResult.data.date as string,
         date_until: matterResult.data.date_until as string | undefined,
         location: matterResult.data.location as string,
+        url: matterResult.data.url as string | undefined,
         description: matterResult.data.description as string,
       };
       return event;
@@ -56,7 +58,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
     });
 
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    if (new Date(a.date) < new Date(b.date)) {
       return 1;
     } else {
       return -1;
@@ -99,6 +101,7 @@ export async function getEventData(
     date: matterResult.data.date as string,
     date_until: matterResult.data.date_until as string | undefined,
     location: matterResult.data.location as string,
+    url: matterResult.data.url as string | undefined,
     description: matterResult.data.description as string,
   };
 

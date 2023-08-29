@@ -75,3 +75,53 @@ th, td {
   padding-right: 4px;
   border: 1px black solid;
 }
+
+.speakers {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, auto);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media not all and (min-width: 768px) {
+  .speakers {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.speaker h4 {
+  font-weight: 700;
+}
+
+.speaker img {
+  width: 160px;
+  aspect-ratio: 1/1;
+  border-radius: 2000px;
+  margin: auto;
+  object-fit: cover;
+}
+
+.sponsors {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(3, auto);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media not all and (min-width: 768px) {
+  .sponsors {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.sponsors a img {
+  max-height: 100px;
+  object-fit: contain;
+  margin: auto;
+}
