@@ -10,7 +10,7 @@ export default function DocumentItem(props: Props) {
   return (
     <div className="flex-col flex items-center">
       <Link
-        href={"/documents/" + props.document.id + ".pdf"}
+        href={props.document.url}
         className="relative"
       >
         <div className="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-out ease-linear duration-300 rounded-xl">
