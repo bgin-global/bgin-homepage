@@ -16,5 +16,5 @@ Identity (including keys) and Access management using Blockchain/DLT for Online 
 Privacy considerations to be taken into account for the above.'
 mailinglist_url: "https://example.com"
 github_url: "https://github.com/bgin-global"
-detail_url: "https://example.com"
+detail_url: "https://docs.google.com/document/d/1eRNE8hMW4X1ixzO3IowUWJU1q81YuO9fKT_MaRTZR5c/edit#heading=h.oj3duu3olyl0"
 ---
