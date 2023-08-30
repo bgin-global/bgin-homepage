@@ -10,7 +10,7 @@ type DIRECTION = "ALL" | "FUTURE" | "PAST";
 export interface Event {
   id: string;
   thumbnail: string;
-  register_link: string;
+  register_link?: string;
   title: string;
   date: string;
   date_until?: string;
@@ -40,7 +40,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         id,
         title: matterResult.data.title as string,
         thumbnail: matterResult.data.thumbnail as string,
-        register_link: matterResult.data.register_link as string,
+        register_link: matterResult.data.register_link as string | undefined,
         date: matterResult.data.date as string,
         date_until: matterResult.data.date_until as string | undefined,
         location: matterResult.data.location as string,
@@ -97,7 +97,7 @@ export async function getEventData(
     id: slug,
     title: matterResult.data.title as string,
     thumbnail: matterResult.data.thumbnail as string,
-    register_link: matterResult.data.register_link as string,
+    register_link: matterResult.data.register_link as string | undefined,
     date: matterResult.data.date as string,
     date_until: matterResult.data.date_until as string | undefined,
     location: matterResult.data.location as string,
