@@ -57,6 +57,12 @@ export default function Home() {
                 <ArrowRight size="sm" color="black" />
               </div>
             </Link>
+            <Link href="https://bgin.discourse.group/">
+              <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-full border border-[#2d2d2d] text-[#2d2d2d]">
+                <div>Next Call</div>
+                <ArrowRight size="sm" color="black" />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -75,6 +81,52 @@ export default function Home() {
           {events.map((event) => (
             <EventItem key={event.id} event={event} />
           ))}
+        </div>
+      </div>
+
+      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
+          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
+            Active Projects
+          </div>
+          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
+        </div>
+        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-11 max-lg:gap-6 grid-flow-row">
+          <GeneralBoxItem
+            title="Wallet Governance"
+            thumbnail="/images/Documents/IKPWG.svg"
+            description="Wallet governance, policy and key management will be quintessential features to any society which leverages decentralised innovations."
+            buttonTitle="Reference"
+            buttonJumpTo="https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit"
+          />
+          <GeneralBoxItem
+            title="Soul Bound Token (SBT)"
+            thumbnail="/images/Documents/IKPWG.svg"
+            description="To Examine the implications of Soulbound Tokens (SBTs), a novel smart contract primitive introduced by E. Glen Weyl, Puja Ohlhaver, and Vitalik Buterin (2022) “Decentralized Society: Finding Web3's Soul”, to curb Web3’s “hyper financialisation” and lack of tooling to enable social coordination."
+            buttonTitle="Reference"
+            buttonJumpTo="https://docs.google.com/document/d/1eJCzuYrTo_o4aX9eVDbV6t1a1dWh_8z71HjMPF9Fx58/edit#heading=h.lx18g0zd74ho"
+          />
+          <GeneralBoxItem
+            title="Token Economy Compliance"
+            thumbnail="/images/Documents/IKPWG.svg"
+            description="Development phases of the token economy and the KYC and the attestation needed in each development phase."
+            buttonTitle="Reference"
+            buttonJumpTo="https://docs.google.com/presentation/d/1Jrh5ef3gy1oABgHFaeGPlNhOLANF709eZrK7MiP0MEY/edit#slide=id.p1"
+          />
+          <GeneralBoxItem
+            title="Selective Disclosure"
+            thumbnail="/images/Documents/IKPWG.svg"
+            description="To provide guidance on various types of selective disclosure protocols and discuss its merits and demerits."
+            buttonTitle="Reference"
+            buttonJumpTo="https://docs.google.com/document/d/1eJCzuYrTo_o4aX9eVDbV6t1a1dWh_8z71HjMPF9Fx58/edit#heading=h.7o6tqo7r2fgj"
+          />
+          <GeneralBoxItem
+            title="ZKP Technology"
+            thumbnail="/images/Documents/IKPWG.svg"
+            description="Documentation for a comprehensive understanding of ZKP technology and use cases."
+            buttonTitle="Reference"
+            buttonJumpTo="https://docs.google.com/document/d/1mPoC0RESQq4JqpE1ecRWny8R-QrNKNFRFfT_dKaHSM8/edit"
+          />
         </div>
       </div>
 
