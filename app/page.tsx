@@ -57,12 +57,6 @@ export default function Home() {
                 <ArrowRight size="sm" color="black" />
               </div>
             </Link>
-            <Link href="https://bgin.discourse.group/">
-              <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-full border border-[#2d2d2d] text-[#2d2d2d]">
-                <div>Next Call</div>
-                <ArrowRight size="sm" color="black" />
-              </div>
-            </Link>
           </div>
         </div>
       </div>
@@ -126,6 +120,31 @@ export default function Home() {
             description="Documentation for a comprehensive understanding of ZKP technology and use cases."
             buttonTitle="Reference"
             buttonJumpTo="https://docs.google.com/document/d/1mPoC0RESQq4JqpE1ecRWny8R-QrNKNFRFfT_dKaHSM8/edit"
+          />
+        </div>
+      </div>
+
+      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
+          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
+            Next Call
+          </div>
+          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
+        </div>
+        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-11 max-lg:gap-6 grid-flow-row">
+          <GeneralBoxItem
+            title="Identity and Key Management WG"
+            thumbnail="/images/Documents/IKPWG.svg"
+            description=""
+            buttonTitle="2am (UTC) on every other Thursday"
+            buttonJumpTo="/"
+          />
+          <GeneralBoxItem
+            title="Decentralized Treasury WG"
+            thumbnail="/images/Documents/DTWG.svg"
+            description=""
+            buttonTitle="TBD"
+            buttonJumpTo="/"
           />
         </div>
       </div>
