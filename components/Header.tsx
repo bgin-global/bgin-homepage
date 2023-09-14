@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import ArrowRight from "./ArrowRight";
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 function Header() {
@@ -94,9 +94,32 @@ function Header() {
           <Link href="/about">
             <div className="text-base leading-[19px] text-black">About</div>
           </Link>
-          <Link href="/documents">
-            <div className="text-base leading-[19px] text-black">Documents</div>
-          </Link>
+          <ul className="pl-0" style={{ listStyle: "none" }}>
+            <li style={{ listStyle: "none" }}>
+              <button
+                type="button"
+                className="peer text-base leading-[19px] text-black"
+              >
+                Resources
+              </button>
+              <div className="hidden flex-col absolute bg-white hover:flex peer-hover:flex text-black border-2 border-black p-2 gap-2">
+                <React.Fragment key={0}>
+                  <Link href="/documents" className="hover:opacity-50">
+                    Documents
+                  </Link>
+                </React.Fragment>
+                <React.Fragment key={0}>
+                  <Link
+                    href="https://www.youtube.com/@bgin/videos"
+                    className="hover:opacity-50"
+                  >
+                    Videos
+                  </Link>
+                </React.Fragment>
+              </div>
+            </li>
+          </ul>
+
           <Link href="/events">
             <div className="text-base leading-[19px] text-black">Events</div>
           </Link>
@@ -133,6 +156,15 @@ function Header() {
         >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
             Documents
+          </div>
+          <ArrowRight />
+        </Link>
+        <Link
+          href="https://www.youtube.com/@bgin/videos"
+          className="w-full flex justify-between items-center"
+        >
+          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
+            Videos
           </div>
           <ArrowRight />
         </Link>
