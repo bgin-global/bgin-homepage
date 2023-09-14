@@ -1,5 +1,5 @@
 ---
-date: "2020 Jul. 16"
+date: "2020 Jul. 17"
 title: "Online Meeting Summary 2020/06/18"
 tag: ["meeting"]
 url: "/reports/20200618OnlineMeetingReport.pdf"
