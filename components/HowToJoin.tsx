@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ArrowRight from "./ArrowRight";
+import Link from "next/link";
 
 function HowToJoin() {
   return (
@@ -23,10 +24,10 @@ function HowToJoin() {
                 </div>
               </div>
               <div className="w-full flex-col flex items-start gap-2.5 text-base font-semibold text-black font-Inter">
-                <div className="bg-white flex justify-center items-center gap-2 px-6 py-4 rounded-full">
+                <Link href="https://bgin.discourse.group/" className="bg-white flex justify-center items-center gap-2 px-6 py-4 rounded-full">
                   <div>Join Our Community</div>
                   <ArrowRight size="sm" color="black" />
-                </div>
+                </Link>
               </div>
             </div>
             <div className="bg-cover h-full max-lg:w-full w-1/2 flex items-start gap-2.5">

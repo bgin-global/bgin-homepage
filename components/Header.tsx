@@ -24,9 +24,9 @@ function Header() {
         </Link>
 
         <div className="flex lg:hidden justify-center items-center gap-6">
-          <div className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
+          <Link href="https://bgin.discourse.group/" className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
             <div>Join Us</div>
-          </div>
+          </Link>
           <button
             type="button"
             className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -128,9 +128,9 @@ function Header() {
               Working Groups
             </div>
           </Link>
-          <div className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
+          <Link href="https://bgin.discourse.group/" className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
             <div>Join Us</div>
-          </div>
+          </Link>
         </div>
       </div>
 
