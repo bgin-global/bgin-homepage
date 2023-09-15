@@ -5,49 +5,65 @@ With simple, popular management workflow.
 
 <br>
 
-## Getting Started
+## Prepare
 
+#### 1. install node.js
+
+from https://nodejs.org/en/download
+
+#### 2. install npm
 
 ```bash
+$ sudo npm install -g npm
+```
+
+#### 3. use github
+
+https://docs.github.com/en/get-started/quickstart/hello-world
+
+also see [cheatsheets](https://training.github.com/downloads/github-git-cheat-sheet/)
+
+<br>
+
+## Getting Started
+
+```bash
+$ git clone git@github.com:bgin-global/bgin-homepage.git
+$ cd bgin-homepage
 $ npm i
 $ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-<br>
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 <br>
 
 ## Deploy
 
-When you push to `main` branch, the app will be automatically deployed.
+When you push to any branch and create a pull request, the app will be automatically deployed to test.
+
+When you push to `main` branch, the app will be automatically deployed to production.
 
 <br>
 
 ## Management Workflow
 
 This section explains the management workflow when you want to create/edit the events, working groups, documentations.
-You can edit the markdown files under the folder `posts/` directly, and update the news when reflecting the changes to GitHub.
+You can edit the markdown files under the folder `contents/` directly, and update the news when reflecting the changes to GitHub.
 
 The example steps of the workflow are below↓
 
+### 0. Cut the branch
+
+```bash
+$ git clone git@github.com:bgin-global/bgin-homepage.git
+$ cd bgin-homepage
+$ git checkout -b yourname-001
+```
+
 ### 1. Create/Edit new File
 
-Create `posts/**/~~~.md` and edit it. Please set the same top metadata as the other md files.
+Create `contents/**/~~~.md` and edit it. Please set the same top metadata as the other md files.
 
 For instance, event's metadata is like:
 
@@ -63,7 +79,13 @@ All files follows markdown format.
 
 ### 2. Push to new branch
 
-Cut the new branch from main and push your updates.
+```bash
+$ git add .
+$ git commit -m"what you changed"
+$ git push origin HEAD
+```
+
+then, go to the GitHub and create new Pull Request.
 
 ### 3. Review
 
@@ -75,6 +97,15 @@ Plz check the link and review it.
 If the updates is file, merge the branch to `main`.
 Then, deployment will run.
 
+### 5. Update Remote
+
+After updating, please renew your main.
+
+```bash
+$ git checkout main
+$ git pull origin main
+```
+
 <br>
 
-If you have a question, plz feel free to contact to masatojames@wall-of-death.com
+If you have a question, plz feel free to contact to @0xvon 
