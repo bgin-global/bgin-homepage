@@ -24,9 +24,14 @@ function Header() {
         </Link>
 
         <div className="flex lg:hidden justify-center items-center gap-6">
-          <Link href="https://bgin.discourse.group/" className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
+          <a
+            href="https://bgin.discourse.group/"
+            className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div>Join Us</div>
-          </Link>
+          </a>
           <button
             type="button"
             className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -109,12 +114,14 @@ function Header() {
                   </Link>
                 </React.Fragment>
                 <React.Fragment key={0}>
-                  <Link
+                  <a
                     href="https://www.youtube.com/@bgin/videos"
                     className="hover:opacity-50"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Videos
-                  </Link>
+                  </a>
                 </React.Fragment>
               </div>
             </li>
@@ -128,9 +135,14 @@ function Header() {
               Working Groups
             </div>
           </Link>
-          <Link href="https://bgin.discourse.group/" className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white">
+          <a
+            href="https://bgin.discourse.group/"
+            className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div>Join Us</div>
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -159,15 +171,17 @@ function Header() {
           </div>
           <ArrowRight />
         </Link>
-        <Link
+        <a
           href="https://www.youtube.com/@bgin/videos"
           className="w-full flex justify-between items-center"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
             Videos
           </div>
           <ArrowRight />
-        </Link>
+        </a>
         <Link
           href="/events"
           className="w-full flex justify-between items-center"

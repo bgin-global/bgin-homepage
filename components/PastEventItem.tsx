@@ -40,6 +40,7 @@ export default function PastEventItem(props: Props) {
           <Link
             href={props.event.url ?? "/events/" + props.event.id}
             className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+            prefetch={false}
           >
             <div>More Details</div>
             <ArrowRight size="sm" color="white" />

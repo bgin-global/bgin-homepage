@@ -24,7 +24,7 @@ function HowToJoin() {
                 </div>
               </div>
               <div className="w-full flex-col flex items-start gap-2.5 text-base font-semibold text-black font-Inter">
-                <Link href="https://bgin.discourse.group/" className="bg-white flex justify-center items-center gap-2 px-6 py-4 rounded-full">
+                <Link href="https://bgin.discourse.group/" className="bg-white flex justify-center items-center gap-2 px-6 py-4 rounded-full" prefetch={false} target="blank">
                   <div>Join Our Community</div>
                   <ArrowRight size="sm" color="black" />
                 </Link>

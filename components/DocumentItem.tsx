@@ -9,9 +9,11 @@ interface Props {
 export default function DocumentItem(props: Props) {
   return (
     <div className="flex-col flex items-center">
-      <Link
+      <a
         href={props.document.url}
         className="relative"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-out ease-linear duration-300 rounded-xl">
           <div
@@ -30,7 +32,7 @@ export default function DocumentItem(props: Props) {
           publised_at={props.document.published_at}
           category={props.document.category}
         />
-      </Link>
+      </a>
 
       <div className="text-black flex-col w-full flex items-start gap-6 p-3">
         <div className="w-full flex-col flex items-start gap-6">

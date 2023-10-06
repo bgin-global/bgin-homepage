@@ -47,10 +47,15 @@ export default function Home() {
             </div>
           </div>
           <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter">
-            <Link href="https://bgin.discourse.group/" className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white">
+            <a
+              href="https://bgin.discourse.group/"
+              className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div>Join Our Community</div>
               <ArrowRight size="sm" color="white" />
-            </Link>
+            </a>
             <Link href="/about">
               <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-full border border-[#2d2d2d] text-[#2d2d2d]">
                 <div>Learn About Us</div>

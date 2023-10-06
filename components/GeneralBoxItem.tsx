@@ -43,6 +43,8 @@ export default function GeneralBoxItem(props: Props) {
       <Link
         href={props.buttonJumpTo}
         className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+        prefetch={false}
+        target="blank"
       >
         <div>{props.buttonTitle}</div>
         <ArrowRight size="sm" color="white" />
