@@ -46,7 +46,7 @@ export default function Home() {
               for sustainable blockchain development.
             </div>
           </div>
-          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter">
+          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter bgin-button">
             <a
               href="https://bgin.discourse.group/"
               className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white"

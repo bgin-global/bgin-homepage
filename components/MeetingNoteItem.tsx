@@ -9,7 +9,7 @@ interface Props {
 
 export default function MeetingNoteItem(props: Props) {
   return (
-    <div className="bg-white h-full w-full flex-1 flex-col flex justify-between items-start gap-8 px-4 pt-4 pb-6 rounded-3xl">
+    <div className="bg-white h-full w-full flex-1 flex-col flex justify-between items-start gap-8 px-4 pt-4 pb-6 rounded-3xl bgin-button">
       <div className="flex flex-col gap-4">
         <div className="bg-cover w-full h-[200px] gap-2.5 rounded-xl mx-auto">
           <Image
