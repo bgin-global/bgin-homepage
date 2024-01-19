@@ -141,15 +141,15 @@ export default function Home() {
             title="Identity and Key Management WG"
             thumbnail="/images/Documents/IKPWG.svg"
             description=""
-            buttonTitle="2am (UTC) on every other Thursday"
-            buttonJumpTo="/"
+            buttonTitle="Thu. 2AM UTC"
+            buttonJumpTo="https://docs.google.com/document/d/1S3C2dtJgpbnsD2T5hfP8Cq6wdxvW2ESUzUCo7Zzknv8/edit?usp=sharing"
           />
           <GeneralBoxItem
             title="Decentralized Treasury WG"
             thumbnail="/images/Documents/DTWG.svg"
             description=""
-            buttonTitle="TBD"
-            buttonJumpTo="/"
+            buttonTitle="Wed. 1PM UTC"
+            buttonJumpTo="https://docs.google.com/document/d/1Q11HpbiDi7v9Rt4qBDMV--XQhtGHks2k9T6foGp_ino/edit?usp=sharing"
           />
         </div>
       </div>
