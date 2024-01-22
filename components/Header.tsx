@@ -23,7 +23,7 @@ function Header() {
           />
         </Link>
 
-        <div className="flex lg:hidden justify-center items-center gap-6">
+        <div className="flex lg:hidden justify-center items-center gap-6 bgin-button">
           <a
             href="https://bgin.discourse.group/"
             className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white"
@@ -95,7 +95,7 @@ function Header() {
           </button>
         </div>
 
-        <div className="flex max-lg:hidden justify-center items-center gap-6">
+        <div className="flex max-lg:hidden justify-center items-center gap-6 bgin-button">
           <Link href="/about">
             <div className="text-base leading-[19px] text-black">About</div>
           </Link>

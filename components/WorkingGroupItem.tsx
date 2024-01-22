@@ -62,7 +62,7 @@ export default function WorkingGroupItem(props: Props) {
               {props.workingGroup.description}
             </div>
           </div>
-          <div className="grid lg:grid-rows-1 max-lg:grid-rows-3 items-start gap-3 text-base font-semibold font-Inter grid-flow-col">
+          <div className="grid lg:grid-rows-1 max-lg:grid-rows-3 items-start gap-3 text-base font-semibold font-Inter grid-flow-col bgin-button">
             <a
               href={props.workingGroup.mailinglist_url}
               className="w-full bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white"
