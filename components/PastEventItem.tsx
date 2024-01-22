@@ -27,7 +27,7 @@ export default function PastEventItem(props: Props) {
         <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
           {props.event.title}
         </div>
-        <div className="w-full flex-col flex items-start gap-6">
+        <div className="w-full flex-col flex items-start gap-6 bgin-button">
           <div className="w-full flex-col flex items-start gap-2 text-black">
             <div className="text-sm leading-[17px] font-Inter pb-4">
               {props.event.description}

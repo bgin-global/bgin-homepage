@@ -125,3 +125,15 @@ th, td {
   object-fit: contain;
   margin: auto;
 }
+
+a {
+  text-decoration: underline;
+}
+
+.bgin-button>a {
+  text-decoration: inherit;
+}
+
+.bgin-button>a:hover {
+  opacity: 0.4;
+}

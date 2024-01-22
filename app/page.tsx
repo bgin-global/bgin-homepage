@@ -46,7 +46,7 @@ export default function Home() {
               for sustainable blockchain development.
             </div>
           </div>
-          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter">
+          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter bgin-button">
             <a
               href="https://bgin.discourse.group/"
               className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white"
@@ -141,15 +141,15 @@ export default function Home() {
             title="Identity and Key Management WG"
             thumbnail="/images/Documents/IKPWG.svg"
             description=""
-            buttonTitle="2am (UTC) on every other Thursday"
-            buttonJumpTo="/"
+            buttonTitle="Thu. 2AM UTC"
+            buttonJumpTo="https://docs.google.com/document/d/1S3C2dtJgpbnsD2T5hfP8Cq6wdxvW2ESUzUCo7Zzknv8/edit?usp=sharing"
           />
           <GeneralBoxItem
             title="Decentralized Treasury WG"
             thumbnail="/images/Documents/DTWG.svg"
             description=""
-            buttonTitle="TBD"
-            buttonJumpTo="/"
+            buttonTitle="Wed. 1PM UTC"
+            buttonJumpTo="https://docs.google.com/document/d/1Q11HpbiDi7v9Rt4qBDMV--XQhtGHks2k9T6foGp_ino/edit?usp=sharing"
           />
         </div>
       </div>
