@@ -31,17 +31,33 @@ export default function EventItem(props: Props) {
           </div>
           <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
             <div>Location: {props.event.location}</div>
-            <div>Date: {props.event.date}{props.event.date_until ? ` 〜 ${props.event.date_until}` : ''}</div>
+            <div>
+              Date: {props.event.date}
+              {props.event.date_until ? ` 〜 ${props.event.date_until}` : ""}
+            </div>
           </div>
         </div>
       </div>
-      <Link
-        href={"/events/" + props.event.id}
-        className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
-      >
-        <div>View Details</div>
-        <ArrowRight size="sm" color="white" />
-      </Link>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 grid-flow-row bgin-button">
+        <Link
+          href={"/events/" + props.event.id}
+          className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+        >
+          <div>More Details</div>
+          <ArrowRight size="sm" color="white" />
+        </Link>
+        {props.event.another_md && props.event.lang === "ENG" ? (
+          <Link
+            href={"/events/" + props.event.another_md}
+            className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+          >
+            <div>詳細(日本語)</div>
+            <ArrowRight size="sm" color="white" />
+          </Link>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 }

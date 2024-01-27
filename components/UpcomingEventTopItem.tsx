@@ -9,7 +9,7 @@ interface Props {
 
 export default function UpcomingEventTopItem(props: Props) {
   return (
-    <div className="bg-white h-full w-full flex-1 flex-col flex justify-center items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button">
+    <div className="bg-white h-full w-full flex-1 flex-col flex justify-center items-start gap-4 px-4 pt-4 pb-6 rounded-3xl">
       <div className="bg:bg-white bg-cover w-full h-[200px] gap-2.5 rounded-xl">
         <Image
           alt="Hero Image"
@@ -34,17 +34,33 @@ export default function UpcomingEventTopItem(props: Props) {
           </div>
           <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter font-semibold">
             <div>Location: {props.event.location}</div>
-            <div>Date: {props.event.date}{props.event.date_until ? ` 〜 ${props.event.date_until}` : ''}</div>
+            <div>
+              Date: {props.event.date}
+              {props.event.date_until ? ` 〜 ${props.event.date_until}` : ""}
+            </div>
           </div>
         </div>
       </div>
-      <Link
-        href={"/events/" + props.event.id}
-        className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
-      >
-        <div>Register Now</div>
-        <ArrowRight size="sm" color="white" />
-      </Link>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 grid-flow-row bgin-button">
+        <Link
+          href={"/events/" + props.event.id}
+          className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+        >
+          <div>More Details</div>
+          <ArrowRight size="sm" color="white" />
+        </Link>
+        {props.event.another_md && props.event.lang === "ENG" ? (
+          <Link
+            href={"/events/" + props.event.another_md}
+            className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
+          >
+            <div>詳細(日本語)</div>
+            <ArrowRight size="sm" color="white" />
+          </Link>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 }
