@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 type DIRECTION = "ALL" | "FUTURE" | "PAST";
+type LANG = "ENG" | "JP";
 export interface Event {
   id: string;
   thumbnail: string;
@@ -17,6 +18,8 @@ export interface Event {
   location: string;
   url?: string;
   description: string;
+  another_md?: string;
+  lang: LANG;
 }
 
 interface PostId {
@@ -46,10 +49,13 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         location: matterResult.data.location as string,
         url: matterResult.data.url as string | undefined,
         description: matterResult.data.description as string,
+        another_md: matterResult.data.another_md as string | undefined,
+        lang: matterResult.data.lang ?? "ENG" as LANG,
       };
       return event;
     })
     .filter((event) => {
+      if (event.lang !== "ENG") return false;
       if (direction === "ALL") return true;
       const eventDate = Date.parse(event.date_until || event.date);
       const isFutureEvent = eventDate >= today;
@@ -103,6 +109,8 @@ export async function getEventData(
     location: matterResult.data.location as string,
     url: matterResult.data.url as string | undefined,
     description: matterResult.data.description as string,
+    another_md: matterResult.data.another_md as string | undefined,
+    lang: matterResult.data.lang ?? "ENG" as LANG,
   };
 
   return {

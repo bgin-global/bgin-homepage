@@ -30,6 +30,18 @@ export default async function EventPage({
           </div>
           <div>{event?.location}</div>
         </div>
+        {event?.another_md ? (
+          <div>
+            <Link
+              className="text-sm leading-[17px] font-Inter font-semibold"
+              href={event?.another_md}
+            >
+              {event.lang == "ENG" ? "日本語" : "English"}
+            </Link>
+          </div>
+        ) : (
+          <></>
+        )}
 
         <Image
           alt="Event Thumbnail"
