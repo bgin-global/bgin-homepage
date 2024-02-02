@@ -32,7 +32,7 @@ body {
 
 * {
 	/* outline: 1px solid magenta; */
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 h2 {
