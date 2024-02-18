@@ -18,7 +18,7 @@ export interface Event {
   location: string;
   url?: string;
   description: string;
-  another_md?: string;
+  jp_url?: string;
   lang: LANG;
 }
 
@@ -52,7 +52,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         location: matterResult.data.location as string,
         url: matterResult.data.url as string | undefined,
         description: matterResult.data.description as string,
-        another_md: matterResult.data.another_md as string | undefined,
+        jp_url: matterResult.data.jp_url as string | undefined,
         lang: matterResult.data.lang ?? ("ENG" as LANG),
       };
       return event;
@@ -114,7 +114,7 @@ export async function getEventData(
     location: matterResult.data.location as string,
     url: matterResult.data.url as string | undefined,
     description: matterResult.data.description as string,
-    another_md: matterResult.data.another_md as string | undefined,
+    jp_url: matterResult.data.jp_url as string | undefined,
     lang: matterResult.data.lang ?? ("ENG" as LANG),
   };
 

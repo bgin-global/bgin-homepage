@@ -4,13 +4,12 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getEventData } from "@/lib/fetch-events";
 import Image from "next/image";
-import Tab from "./tabs";
+import Tab from "../tabs";
 import { fetchMarkdownContent } from "@/lib/fetch-md";
 import Link from "next/link";
 
 const contentDirectory = "contents/events/block10/";
-const mdPath = "20240303-block10";
-const mdPathJA = "20240303-block10_jp";
+const mdPath = "20240303-block10_jp";
 
 export default async function Page() {
   const event = await getEventData(mdPath);
@@ -38,10 +37,10 @@ export default async function Page() {
             {event?.title}
           </div>
           <Link
-            href="/events/20240303-block10/jp"
+            href="/events/20240303-block10"
             className=" bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter h-12"
           >
-            <div>日本語</div>
+            <div>ENG</div>
           </Link>
         </div>
 

@@ -46,9 +46,9 @@ export default function EventItem(props: Props) {
           <div>More Details</div>
           <ArrowRight size="sm" color="white" />
         </Link>
-        {props.event.another_md && props.event.lang === "ENG" ? (
+        {props.event.jp_url && props.event.lang === "ENG" ? (
           <Link
-            href={"/events/" + props.event.another_md}
+            href={"/events/" + props.event.jp_url}
             className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
           >
             <div>詳細(日本語)</div>

@@ -30,11 +30,11 @@ export default async function EventPage({
           </div>
           <div>{event?.location}</div>
         </div>
-        {event?.another_md ? (
+        {event?.jp_url ? (
           <div>
             <Link
               className="text-sm leading-[17px] font-Inter font-semibold"
-              href={event?.another_md}
+              href={event?.jp_url}
             >
               {event.lang == "ENG" ? "日本語" : "English"}
             </Link>
