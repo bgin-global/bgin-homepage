@@ -1,79 +1,189 @@
 ### Day 1 (Mar. 3 Sun.) | Global Business Hub Tokyo
 
-| Time          | Title                                                                                                                            | Short Description                                                                                                                                                                                                                                                      | Main Discussants                                                                                                   |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| 13:00 - 13:10 | Opening Remarks<br>                                                                                                              |                                                                                                                                                                                                                                                                        | Jumpei Miwa (Local Chair)<br>Shin'ichiro Matsuo (BGIN Chair)                                                       |
-| 13:10 - 14:30 | Opening session<br>Recap of Block#9 and Goal of Block#10 and BGIN                                                                | Recap of BGIN Block #9 (Joseph Beverley 20 minutes)<br>Lessons from the Internet Governance Process (Case of IETF and IGF) and How BGIN work helps global Blockchain ecosystem (Hirotaka Nakajima 30 minutes)<br>Discussion on Goal of Block #10 and BGIN (30 minutes) | Joseph Beverley<br>HIroraka Nakajima                                                                               |
-| 14:30 - 16:00 | Workshop under Chatham House Rule<br>Privacy vs Discoverability                                                                  | Recap of the privacy pool session at Block 9 (Carole House, 10 minutes)<br>Taxonomy regarding privacy protection<br> requirements and privacy enhancing technologies (PETs)                                                                                            | Carole House<br>Amanda Wick<br>Chainalysis (speaker TBD)<br>Jamie Danker (Venable, former NIST)<br>Carol van Cleef |
-| 16:00 - 16:30 | Coffee Break                                                                                                                     |                                                                                                                                                                                                                                                                        |                                                                                                                    |
-| 16:30 - 18:00 | Workshop under Chatham House Rule<br>Stability Challenges - interconnectedness between incumbent system and decentralised system |                                                                                                                                                                                                                                                                        | Jumpei Miwa<br>Hiromi Yamaoka<br>Yuko Kawai (remote)<br>Chainalysis                                                |
-| 18:00 -       | Networking Event<br>(supported by Fintech Association Japan)                                                                     |                                                                                                                                                                                                                                                                        |                                                                                                                    |
+---
 
-### Day 2 (Mar. 4 Mon.) | Conference Square M Plus
+#### 13:00 - 13:10 Opening Remarks
 
-**Financial Applications and Social Economics**
+**Jumpei Miwa (Local Chair), Shin'ichiro Matsuo (BGIN Chair)**
 
-| Time                   | Title                                                                                                                      | Short Description                                                                                                                     | Main Discussants                                                                                           |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| 9:00 - 9:10            | Opening of Day2                                                                                                            |                                                                                                                                       | Chloe White (DTWG co-chair)Leon Molechanovsky (DTWG co-chair)                                              |
-| 9:10 - 10:00           | Keynote Speech 1<br>Celebrating 4th anniversary of BGIN                                                                    | Speech by Mr. Shigeru Ariizumi <br>Fireside chat to revisit the history to establish BGIN<br>Expectations to BGIN                     | Shigeru ARIIZUMI (JFSA Vice Commissioner for International Affairs) <br>Shin’ichiro Matsuo (fireside chat) |
-| 10:00 - 10:30          | Coffee Break                                                                                                               |                                                                                                                                       |                                                                                                            |
-| 10:30 - 12:00          | Round Table for an Emerging Issue<br>The Role of DAOs in the modern world                                                  | Japanese DAO Laws / Case Study (20 mins)<br>Taxonomy table creation (30-40 mins) <br>Governance / Roles of each stakeholder (30 mins) | Hal Seki<br>Keiji Tonomura<br>Joni Pirovich (COALA)                                                        |
-| 12:00 - 13:00          | Lunch                                                                                                                      |                                                                                                                                       |                                                                                                            |
-| 13:00 - 14:30 [Room A] | Workshop under Chatham House Rule<br>Transparency of dApps and Sound DeFi                                                  |                                                                                                                                       |                                                                                                            |
-| 13:00 - 14:30 [Room B] | Workshop under Chatham House Rule<br>Socio-economic impact of blockchain technologies                                      |                                                                                                                                       |                                                                                                            |
-| 14:30 - 15:00          | Coffee Break                                                                                                               |                                                                                                                                       |                                                                                                            |
-| 15:00 - 16:30 [Room A] | Workshop with Chatham House Rule<br>The mutual impact and improved outcomes of blockchain & AI as synergistic technologies |                                                                                                                                       | Chloe White<br>Joni Pirovich<br>Dr Gayan Benedict (MIT)                                                    |
-| 15:00 - 16:30 [Room B] | Workshop under Chatham House Rule<br>Smart Contract Security,  and Governance                                              |                                                                                                                                       | Leon Molechanovsky <br>Shunya Noda<br>Torigoe                                                              |
-| 16:30 - 17:00          | Coffee Break                                                                                                               |                                                                                                                                       |                                                                                                            |
-| 17:00 - 18:30 [Room A] | Workshop under Chatham House Rule<br>The Harmonisation of CBDC, Deposit Token, Stablecoin, Crypto Assets and DeFi          |                                                                                                                                       | Masaki Bessho<br>Samar Sen (Talos)<br>Chainalysis<br>Hiromi Yamaoka                                        |
-| 17:00 - 18:30 [Room B] |                                                                                                                            |                                                                                                                                       |                                                                                                            |
-| 18:30 - 18:45          | Wrap Up                                                                                                                    |                                                                                                                                       |                                                                                                            |
-| 19:00 - 21:00          | Social Event                                                                                                               |                                                                                                                                       |                                                                                                            |
+#### 13:10 - 14:30 Opening session
 
-### Day 3 (Mar. 5 Tue.) | Conference Square M Plus
+Recap of Block#9 and Goal of Block#10 and BGIN
 
-**Non-Financial Applications**
+**Shin’ichiro Matsuo, Joseph Beverley**, Hirotaka Nakajima
 
-| Time                   | Title                                                                                               | Short Description                                                                                                                                                                                                                                                                                           | Main Discussants                                                                                                           |
-| ---------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 9:00 - 9:10            | Opening of Day 3                                                                                    |                                                                                                                                                                                                                                                                                                             | Mitchell Travers (IKP-WG co-chair)<br>Nat Sakimura (IKP-WG Co-chair)                                                       |
-| 9:10 - 9:30            | Keynote Speech<br>Layer 2 Governance                                                                |                                                                                                                                                                                                                                                                                                             |                                                                                                                            |
-| 9:30 - 11:00           | Workshop under Chatham House Rule<br>Layer 2 Governance                                             |                                                                                                                                                                                                                                                                                                             | Mitchell Travers<br>Marouen Zelleg (Polygon Lab)                                                                           |
-| 11:00 - 11:30          | Coffee Break                                                                                        |                                                                                                                                                                                                                                                                                                             |                                                                                                                            |
-| 11:30 - 13:00 [Room A] | Workshop under Chatham House Rule<br>ZKP and its application                                        |                                                                                                                                                                                                                                                                                                             | Leona Hioki                                                                                                                |
-| 11:30 - 13:00 [Room B] | Workshop under Chatham House Rule<br>Challenges and innovations in on-chain analysis                |                                                                                                                                                                                                                                                                                                             | Angela Ang (TRM lab) <br>Chainanalysis                                                                                     |
-| 13:00 - 14:00          | Lunch                                                                                               |                                                                                                                                                                                                                                                                                                             |                                                                                                                            |
-| 14:00 - 15:30 [Room A] | Workshop under Chatham House Rule<br>Security and Incident Response                                 | A document for newcomers<br>Identify what average blockchain engineers don’t know<br>We have good lessons and existing documents <br>We can use these documents for 80% of security problems<br> We needs to add some document for 20% specific to blockchain system<br>Economic Incentive, Cyber Insurance | Carole House<br>Jessy (Amulet) <br>Sigal Mandelker (Crypto ISAC)<br>Eric Burger (Virginia Tech)<br>Kenichi Sugawara (CGTF) |
-| 14:00 - 15:30 [Room B] | Workshop under Chatham House Rule<br>SBT Paper Part 2On-chain identity, reputation and attestations |                                                                                                                                                                                                                                                                                                             | Joseph Beverley                                                                                                            |
-| 15:30 - 16:00          | Coffee Break                                                                                        |                                                                                                                                                                                                                                                                                                             |                                                                                                                            |
-| 16:00 - 17:30 [Room A] | Workshop under Chatham House Rule<br>Privacy pool / Accountable Wallet                              |                                                                                                                                                                                                                                                                                                             | Shin’ichiro Matsuo<br>Masato Yamanaka                                                                                      |
-| 16:00 - 17:30 [Room B] | Workshop under Chatham House Rule<br>Wallet Governance and Credential Management                    |                                                                                                                                                                                                                                                                                                             | Nat Sakimura                                                                                                               |
-| 17:30 - 18:00          | Wrap Up                                                                                             |                                                                                                                                                                                                                                                                                                             |                                                                                                                            |
+#### 14:30 - 16:00 [Workshop under Chatham House Rule] Privacy vs Discoverability
 
-### Day 4 (Mar. 6 Wed.) | Conference Square M Plus
+**Carole House**, Amanda Wick, Chainalysis (speaker TBD), Jamie Danker (Venable, former NIST), Carol van Cleef
 
-**Industry, Sponsors & BGIN Operational Activities**
+https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
-| Time          | Title                                                                                           | Short Description                                                                                                                                                                                       | Main Discussants              |
-| ------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| 9:00 - 9:10   | Opening of Day 4                                                                                |                                                                                                                                                                                                         |                               |
-| 9:10 - 10:00  | Industrial Roundtable<br>Blockchain applications and business                                   |                                                                                                                                                                                                         |                               |
-| 10:00 - 10:20 | Coffee Break                                                                                    |                                                                                                                                                                                                         |                               |
-| 10:20 - 11:10 | Industrial Roundtable<br>Future roadmap of blockchain technology development                    |                                                                                                                                                                                                         |                               |
-| 11:10 - 12:00 | Industrial Roundtable<br>Trusted Web: strengthen trustworthiness of digital society             |                                                                                                                                                                                                         |                               |
-| 12:00 - 13:00 | Lunch                                                                                           |                                                                                                                                                                                                         |                               |
-| 13:00 - 13:50 | Local Blockchain Community Round Table<br>Woman in Crypto: Japan, Asia and Global Collaboration |                                                                                                                                                                                                         | Yuki Kamimoto                 |
-| 13:50 - 14:40 | Local Blockchain Community Round Table<br>Japanese Blockchain Community Sessions                |                                                                                                                                                                                                         | Jumpei Miwa                   |
-| 14:40 - 15:00 | Coffee Break                                                                                    |                                                                                                                                                                                                         |                               |
-| 15:00 - 16:00 | Round Table<br>Future Roadmap of BGIN                                                           |                                                                                                                                                                                                         | Shin'ichiro Matsuo            |
-| 15:60 - 16:30 | Closing Plenary                                                                                 | Report back from working group chairs<br>Decentralised Treasury Working Group<br>Identity, Key Management and Privacy Working Group<br>Resolutions<br>The next step<br>Next general meetings (Block 11) | Shin'ichiro MatsuoJumpei Miwa |
+#### 16:00 - 16:30 Coffee Break
 
-## Related documents
+#### 16:30 - 18:00 [Workshop under Chatham House Rule] Stability Challenges - interconnectedness between incumbent system and decentralised system
 
-- Privacy vs Discoverability: https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
-- Transparency of dApps and Sound DeFi: https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf , https://www.fsa.go.jp/en/policy/bgin/ResearchPaper_qunie_en.pdf
-- Challenges and innovations in on-chain analysis: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
-- Security and Incident Response: https://bgin-global.org/documents/20220606_Custody.pdf , CGTF Document (= ISO TR23576) , GU research paper for cyber insurance based on smart contract (WTSC2019) , Liar of existing documents , GU Standardization paper (CoDecFin2024)
-- SBT Paper Part 2 On-chain identity, reputation and attestations: https://bgin-global.org/documents/20230201_SBT.pdf
-- Privacy pool / Accountable Wallet: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563364
+**Jumpei Miwa, Yuta Takanashi (FSB)**, Hiromi Yamaoka, Yuko Kawai (remote), Nobu Sugimoto (IMF), Nao Kitazawa (ex-Coinbase), Chainalysis
+
+#### 18:00 Networking Event (supported by Fintech Association Japan)
+
+### Day 2 (Mar. 4 Mon.) Financial Applications and Social Economics | Conference Square M Plus
+
+---
+
+#### 9:00 - 9:10 Opening of Day2
+
+**Chloe White (DTWG co-chair), Leon Molechanovsky (DTWG co-chair)**
+
+#### 9:10 - 10:00 [Keynote Speech 1] BGIN's four-year trajectory to its 10th meeting
+
+**Shigeru ARIIZUMI (JFSA Vice Commissioner for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair)
+
+#### 10:00 - 10:30 Coffee Break
+
+#### 10:30 - 12:00 [Round Table for an Emerging Issue] The Role of DAOs in the modern world
+
+**Hal Seki**, Keiji Tonomura, Joni Pirovich (COALA) , Dmitry Fedotov (ADGM)
+
+#### 12:00 - 13:00 Lunch
+
+#### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
+
+Hashlock - Fletcher, Chainalysis
+
+https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf
+
+https://www.fsa.go.jp/en/policy/bgin/ResearchPaper_qunie_en.pdf
+
+The meeting report of block 9
+
+#### 13:00 - 14:30 [Room B] [Workshop under Chatham House Rule] Socio-economic impact of blockchain technologies
+
+#### 14:30 - 15:00 Coffee Break
+
+#### 15:00 - 16:30 [Room A] [Workshop with Chatham House Rule] The mutual impact and improved outcomes of blockchain & AI as synergistic technologies
+
+**Chloe White**, Joni Pirovich, Dr Gayan Benedict (MIT)
+
+#### 15:00 - 16:30 [Room B] [Workshop under Chatham House Rule] Smart Contract Security, and Governance
+
+**Leon Molechanovsky**, Shunya Noda, Torigoe
+
+The meeting report of block 9
+
+#### 16:30 - 17:00 Coffee Break
+
+#### 17:00 - 18:30 [Room A] [Workshop under Chatham House Rule] The Harmonisation of CBDC, Deposit Token, Stablecoin, Crypto Assets and DeFi
+
+**Masaki Bessho**, Samar Sen (Talos), Chainalysis, Hiromi Yamaoka
+
+The meeting report of block 9
+
+#### 17:00 - 18:30 [Room B] TBD
+
+https://bgin-global.org/documents/20230724_PoF_of_Stablecoins.pdf
+
+#### 18:30 - 18:45 Wrap Up
+
+#### 19:00 - 21:00 Social Event
+
+### Day 3 (Mar. 5 Tue.) Non-Financial Applications | Conference Square M Plus
+
+#### 9:00 - 9:10 Opening of Day 3
+
+Mitchell Travers (IKP-WG co-chair), Nat Sakimura (IKP-WG Co-chair)
+
+#### 9:10 - 9:30 [Keynote Speech] Layer 2 Governance
+
+#### 9:30 - 11:00 [Workshop under Chatham House Rule] Layer 2 Governance
+
+**Mitchell Travers**, Marouen Zelleg (Polygon Lab)
+
+#### 11:00 - 11:30 Coffee Break
+
+#### 11:30 - 13:00 [Room A] [Workshop under Chatham House Rule] Wallet Governance and Credential Management
+
+**Nat Sakimura**, Daniel Goldscheider(Open Wallet Foundation)
+
+Current draft document
+
+The meeting report of block 9
+
+#### 11:30 - 13:00 [Room B] [Workshop under Chatham House Rule] Challenges and innovations in on-chain analysis
+
+Angela Ang (TRM lab), Kevin Oconnor (FinCEN)
+
+https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
+
+#### 13:00 - 14:00 Lunch
+
+#### 14:00 - 15:30 [Room A] [Workshop under Chatham House Rule] Security and Incident Response
+
+**Carole House**, Jessy Irwin (Amulet), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF)
+
+https://bgin-global.org/documents/20220606_Custody.pdf
+
+CGTF Document (= ISO TR23576)
+
+GU research paper for cyber insurance based on smart contract (WTSC2019)
+
+Liar of existing documents
+
+GU Standardization paper (CoDecFin2024)
+
+#### 14:00 - 15:30 [Room B] [Workshop under Chatham House Rule] SBT Paper Part 2 On-chain identity, reputation and attestations
+
+**Joseph Beverley**
+
+https://bgin-global.org/documents/20230201_SBT.pdf
+
+#### 15:30 - 16:00 Coffee Break
+
+#### 16:00 - 17:30 [Room A] [Workshop under Chatham House Rule] Privacy pool / Accountable Wallet
+
+**Shin’ichiro Matsuo**, Masato Yamanaka, Fabian (remote)
+
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563364
+
+The meeting report of block 9
+
+#### 16:00 - 17:30 [Room B] [Workshop under Chatham House Rule] ZKP and its application
+
+**Leona Hioki**
+
+Current draft document
+
+The meeting report of block 9
+
+#### 17:30 - 18:00 Wrap Up
+
+### Day 4 (Mar. 6 Wed.) Industry, Sponsors & BGIN Operational Activities | Conference Square M Plus
+
+#### 9:00 - 9:10 Opening of Day 4
+
+#### 9:10 - 10:00 [Industrial Roundtable] Blockchain applications and business
+
+#### 10:00 - 10:20 Coffee Break
+
+#### 10:20 - 11:10 [Industrial Roundtable] Future roadmap of blockchain technology development
+
+#### 11:10 - 12:00 [Industrial Roundtable] Trusted Web: strengthen trustworthiness of digital society
+
+#### 12:00 - 13:00 Lunch
+
+#### 13:00 - 13:50 [Local Blockchain Community Round Table] Woman in Crypto: Japan, Asia and Global Collaboration
+
+**Yuki Kamimoto**
+
+#### 13:50 - 14:40 [Local Blockchain Community Round Table] Japanese Blockchain Community Sessions
+
+**Jumpei Miwa**
+
+#### 14:40 - 15:00 Coffee Break
+
+#### 15:00 - 16:00 [Round Table] Future Roadmap of BGIN
+
+**Shin'ichiro Matsuo**
+
+#### 15:60 - 16:30 Closing Plenary
+
+**Shin'ichiro Matsuo, Jumpei Miwa**

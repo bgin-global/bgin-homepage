@@ -55,7 +55,11 @@ export default function Component(props: Props) {
       </TabsHeader>
       <TabsBody>
         {tabData.map((tabItem) => (
-          <TabPanel key={tabItem.title} value={tabItem.title}>
+          <TabPanel
+            key={tabItem.title}
+            value={tabItem.title}
+            className="text-black font-Inter"
+          >
             <div
               dangerouslySetInnerHTML={{ __html: tabItem.content }}
               className="w-full"
