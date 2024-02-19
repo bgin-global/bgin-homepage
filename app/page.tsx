@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import GeneralBoxItem from "@/components/GeneralBoxItem";
 import Header from "@/components/Header";
 import HowToJoin from "@/components/HowToJoin";
+import { nextCalls } from "@/contents/next-call";
 import { getSortedEvents } from "@/lib/fetch-events";
 import Image from "next/image";
 import Link from "next/link";
@@ -86,6 +87,29 @@ export default function Home() {
       <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
         <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
           <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
+            Next Call
+          </div>
+          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
+        </div>
+        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-11 max-lg:gap-6 grid-flow-row">
+          {nextCalls.map((call) => {
+            return (
+              <GeneralBoxItem
+                key={call.workingGroup}
+                title={call.workingGroup}
+                thumbnail={call.thumbnail}
+                description=""
+                buttonTitle={call.nextCall}
+                buttonJumpTo={call.detailLink}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
+        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
+          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
             Active Projects
           </div>
           <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
@@ -125,31 +149,6 @@ export default function Home() {
             description="Documentation for a comprehensive understanding of ZKP technology and use cases."
             buttonTitle="Reference"
             buttonJumpTo="https://docs.google.com/document/d/1mPoC0RESQq4JqpE1ecRWny8R-QrNKNFRFfT_dKaHSM8/edit"
-          />
-        </div>
-      </div>
-
-      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Next Call
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-11 max-lg:gap-6 grid-flow-row">
-          <GeneralBoxItem
-            title="Identity and Key Management WG"
-            thumbnail="/images/Documents/IKPWG.svg"
-            description=""
-            buttonTitle="Thu. 2AM UTC"
-            buttonJumpTo="https://docs.google.com/document/d/1S3C2dtJgpbnsD2T5hfP8Cq6wdxvW2ESUzUCo7Zzknv8/edit?usp=sharing"
-          />
-          <GeneralBoxItem
-            title="Decentralized Treasury WG"
-            thumbnail="/images/Documents/DTWG.svg"
-            description=""
-            buttonTitle="Wed. 1PM UTC"
-            buttonJumpTo="https://docs.google.com/document/d/1Q11HpbiDi7v9Rt4qBDMV--XQhtGHks2k9T6foGp_ino/edit?usp=sharing"
           />
         </div>
       </div>

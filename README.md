@@ -69,9 +69,9 @@ For instance, event's metadata is like:
 
 ```md
 ---
-title: 'Blockchain Summit 2023'
-date: '2023 Mar. 29'
-location: 'New York, US'
+title: "Blockchain Summit 2023"
+date: "2023 Mar. 29"
+location: "New York, US"
 ---
 ```
 
@@ -108,4 +108,10 @@ $ git pull origin main
 
 <br>
 
-If you have a question, plz feel free to contact to @0xvon 
+## Update Next Call Date
+
+1. Go to ./contents/next-call-ts
+2. Modify the parameter `nextCall`
+3. Push
+
+If you have a question, plz feel free to contact to @0xvon

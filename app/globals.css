@@ -26,6 +26,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+b, strong {
+  font-weight: bold;
+}
+
 .bg-sub {
   background-color: #F0F4FE;
 }
@@ -48,6 +52,14 @@ h3 {
   font-size: 1.7rem;
   font-weight: 500;
   line-height: 40px;
+  font-family: 'Familjen Grotesk';
+}
+
+h4 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 24px;
   font-family: 'Familjen Grotesk';
 }
 

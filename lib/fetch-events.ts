@@ -18,7 +18,7 @@ export interface Event {
   location: string;
   url?: string;
   description: string;
-  another_md?: string;
+  jp_url?: string;
   lang: LANG;
 }
 
@@ -32,7 +32,10 @@ const directory = path.join(process.cwd(), "contents/events");
 
 export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
   const today = Date.now();
-  const fileNames = fs.readdirSync(directory);
+  const fileNames = fs
+    .readdirSync(directory, { withFileTypes: true })
+    .filter((f) => f.isFile())
+    .map((f) => f.name);
   const allPostsData: Event[] = fileNames
     .map((fileName) => {
       const id = fileName.replace(/\.md$/, "");
@@ -49,8 +52,8 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         location: matterResult.data.location as string,
         url: matterResult.data.url as string | undefined,
         description: matterResult.data.description as string,
-        another_md: matterResult.data.another_md as string | undefined,
-        lang: matterResult.data.lang ?? "ENG" as LANG,
+        jp_url: matterResult.data.jp_url as string | undefined,
+        lang: matterResult.data.lang ?? ("ENG" as LANG),
       };
       return event;
     })
@@ -73,7 +76,10 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
 }
 
 export function getAllEventIds(): PostId[] {
-  const fileNames = fs.readdirSync(directory);
+  const fileNames = fs
+    .readdirSync(directory, { withFileTypes: true })
+    .filter((f) => f.isFile())
+    .map((f) => f.name);
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -86,7 +92,6 @@ export function getAllEventIds(): PostId[] {
 export async function getEventData(
   slug: string
 ): Promise<Event & { contentHtml: string }> {
-  console.log("slug ", slug);
   const fullPath = path.join(directory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
@@ -109,8 +114,8 @@ export async function getEventData(
     location: matterResult.data.location as string,
     url: matterResult.data.url as string | undefined,
     description: matterResult.data.description as string,
-    another_md: matterResult.data.another_md as string | undefined,
-    lang: matterResult.data.lang ?? "ENG" as LANG,
+    jp_url: matterResult.data.jp_url as string | undefined,
+    lang: matterResult.data.lang ?? ("ENG" as LANG),
   };
 
   return {

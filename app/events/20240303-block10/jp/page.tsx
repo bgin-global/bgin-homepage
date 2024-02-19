@@ -1,28 +1,49 @@
+/* eslint-disable react/no-unescaped-entities */
 import ArrowRight from "@/components/ArrowRight";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getEventData } from "@/lib/fetch-events";
 import Image from "next/image";
+import Tab from "../tabs";
+import { fetchMarkdownContent } from "@/lib/fetch-md";
 import Link from "next/link";
 
-export default async function EventPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  let event;
-  if (params.slug != null && typeof params.slug === "string") {
-    event = await getEventData(params.slug);
-  }
+const contentDirectory = "contents/events/block10/";
+const mdPath = "20240303-block10_jp";
+
+export default async function Page() {
+  const event = await getEventData(mdPath);
+  const programContent = await fetchMarkdownContent(
+    contentDirectory,
+    "program"
+  );
+  const accessContent = await fetchMarkdownContent(contentDirectory, "access");
+  const speakersContent = await fetchMarkdownContent(
+    contentDirectory,
+    "speakers"
+  );
+  const sponsorsContent = await fetchMarkdownContent(
+    contentDirectory,
+    "sponsors"
+  );
 
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
       <div className="text-black max-w-4xl w-full max-lg:px-4 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
-        <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk max-lg:pt-32 lg:pt-12 pb-4">
-          {event?.title}
+        <div className="w-full grid grid-cols-7 gap-6 grid-flow-row items-center bgin-button">
+          <div className="col-span-6 lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk max-lg:pt-32 lg:pt-12 pb-4">
+            {event?.title}
+          </div>
+          <Link
+            href="/events/20240303-block10"
+            className=" bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter h-12"
+          >
+            <div>ENG</div>
+          </Link>
         </div>
+
         <div className="text-sm leading-[17px] font-Inter font-semibold">
           <div>
             {event?.date}
@@ -30,19 +51,6 @@ export default async function EventPage({
           </div>
           <div>{event?.location}</div>
         </div>
-        {event?.jp_url ? (
-          <div>
-            <Link
-              className="text-sm leading-[17px] font-Inter font-semibold"
-              href={event?.jp_url}
-            >
-              {event.lang == "ENG" ? "日本語" : "English"}
-            </Link>
-          </div>
-        ) : (
-          <></>
-        )}
-
         <Image
           alt="Event Thumbnail"
           src={event?.thumbnail ?? "/images/Events/dummy.svg"}
@@ -69,14 +77,13 @@ export default async function EventPage({
           <></>
         )}
 
-        {event ? (
-          <div
-            dangerouslySetInnerHTML={{ __html: event.contentHtml }}
-            className="w-full"
-          />
-        ) : (
-          <></>
-        )}
+        <Tab
+          homeContent={event.contentHtml}
+          programContent={programContent}
+          accessContent={accessContent}
+          speakersContent={speakersContent}
+          sponsorsContent={sponsorsContent}
+        />
       </div>
 
       <Footer />
