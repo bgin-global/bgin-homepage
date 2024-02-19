@@ -136,7 +136,7 @@
     </div>
     <div class="speaker">
         <img src="/images/Events/person/Stefano Tempest.jpeg">
-        <h4>Stefano Tempest</h4>
+        <h4>Stefano Tempesta</h4>
         <h4>Blockchain Committee Vice Chair, Australian Computer Society </h4>
     </div>
     <div class="speaker">
