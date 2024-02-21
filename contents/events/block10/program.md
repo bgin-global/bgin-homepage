@@ -14,7 +14,7 @@ Recap of Block#9 and Goal of Block#10 and BGIN
 
 #### 14:30 - 16:00 [Workshop under Chatham House Rule] Privacy vs Discoverability
 
-**Carole House**, Amanda Wick, Chainalysis (speaker TBD), Jamie Danker (Venable, former NIST), Carol van Cleef
+**Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former NIST), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity) 
 
 https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
@@ -22,9 +22,11 @@ https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
 #### 16:30 - 18:00 [Workshop under Chatham House Rule] Stability Challenges - interconnectedness between incumbent system and decentralised system
 
-**Jumpei Miwa, Yuta Takanashi (FSB)**, Hiromi Yamaoka, Yuko Kawai (remote), Nobu Sugimoto (IMF), Nao Kitazawa (ex-Coinbase), Chainalysis
+**Jumpei Miwa (Block#10 Local Chair)**, Yuta Takanashi, Nao Kitazawa (Eight Roads), Nobu Sugimoto (IMF), Yuko Kawai (remote), Hiromi Yamaoka (Future Corp)
 
 #### 18:00 Networking Event (supported by Fintech Association Japan)
+
+
 
 ### Day 2 (Mar. 4 Mon.) Financial Applications and Social Economics | Conference Square M Plus
 
@@ -34,9 +36,9 @@ https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
 **Chloe White (DTWG co-chair), Leon Molechanovsky (DTWG co-chair)**
 
-#### 9:10 - 10:00 [Keynote Speech 1] BGIN's four-year trajectory to its 10th meeting
+#### 9:10 - 10:00 [Keynote Speech & Panel] BGIN's 4-year Journey to the 10th Block Meeting
 
-**Shigeru ARIIZUMI (JFSA Vice Commissioner for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair)
+**Shigeru ARIIZUMI (JFSA Vice Commissioner for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/IEO TC 307 JWGG4) 
 
 #### 10:00 - 10:30 Coffee Break
 
@@ -48,27 +50,30 @@ https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
 #### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
 
-Hashlock - Fletcher, Chainalysis
+**Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD)
 
-https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf
+Related Documents 1: https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf
 
-https://www.fsa.go.jp/en/policy/bgin/ResearchPaper_qunie_en.pdf
+Related Documents 2: https://www.fsa.go.jp/en/policy/bgin/ResearchPaper_qunie_en.pdf
 
-The meeting report of block 9
+Related Documents 3: The meeting report of block 9
 
-#### 13:00 - 14:30 [Room B] [Workshop under Chatham House Rule] Socio-economic impact of blockchain technologies
+#### 13:00 - 14:30 [Room B] [Workshop under Chatham House Rule] Tokenization and Real-World Assets
+
+Will Remor (MakerDAO), Alejandro Gutierrez (npayme Labs), Masato Yamanaka (SMTB)
 
 #### 14:30 - 15:00 Coffee Break
 
 #### 15:00 - 16:30 [Room A] [Workshop with Chatham House Rule] The mutual impact and improved outcomes of blockchain & AI as synergistic technologies
 
-**Chloe White**, Joni Pirovich, Dr Gayan Benedict (MIT)
+**Chloe White**, Joni Pirovich (COALA), Dr Gayan Benedict (MIT), Austin Zhu (Desoul)
+
 
 #### 15:00 - 16:30 [Room B] [Workshop under Chatham House Rule] Smart Contract Security, and Governance
 
-**Leon Molechanovsky**, Shunya Noda, Torigoe
+**Leon Molechanovsky**, Shunya Noda (University of Tokyo), Torigoe (Titania Research) 
 
-The meeting report of block 9
+Related Documents 1: The meeting report of block 9
 
 #### 16:30 - 17:00 Coffee Break
 
@@ -76,17 +81,22 @@ The meeting report of block 9
 
 **Masaki Bessho**, Samar Sen (Talos), Chainalysis, Hiromi Yamaoka
 
-The meeting report of block 9
+Related Documents 1: The meeting report of block 9
+Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoins.pdf
 
-#### 17:00 - 18:30 [Room B] TBD
+#### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
-https://bgin-global.org/documents/20230724_PoF_of_Stablecoins.pdf
+Chainalysis, Angela Ang (TRM Labs) 
 
 #### 18:30 - 18:45 Wrap Up
 
 #### 19:00 - 21:00 Social Event
 
+
+
 ### Day 3 (Mar. 5 Tue.) Non-Financial Applications | Conference Square M Plus
+
+---
 
 #### 9:00 - 9:10 Opening of Day 3
 
@@ -94,71 +104,72 @@ Mitchell Travers (IKP-WG co-chair), Nat Sakimura (IKP-WG Co-chair)
 
 #### 9:10 - 9:30 [Keynote Speech] Layer 2 Governance
 
-#### 9:30 - 11:00 [Workshop under Chatham House Rule] Layer 2 Governance
+#### 9:30 - 11:00 [Round Table for an Emerging Issue] Layer 2 Governance
 
-**Mitchell Travers**, Marouen Zelleg (Polygon Lab)
+**Mitchell Travers**, Leona Hioki (Intmax)
 
 #### 11:00 - 11:30 Coffee Break
 
 #### 11:30 - 13:00 [Room A] [Workshop under Chatham House Rule] Wallet Governance and Credential Management
 
-**Nat Sakimura**, Daniel Goldscheider(Open Wallet Foundation)
+**Nat Sakimura**, Daniel Goldscheider(Open Wallet Foundation), Saki Otsuki (NEC)
 
-Current draft document
+Related Document 1: Current draft document
 
-The meeting report of block 9
+Related Document 2: The meeting report of block 9
 
 #### 11:30 - 13:00 [Room B] [Workshop under Chatham House Rule] Challenges and innovations in on-chain analysis
 
-Angela Ang (TRM lab), Kevin Oconnor (FinCEN)
+Angela Ang (TRM lab), Kevin Oconnor (FinCEN), Daniel Goldsmith (Heights Labs), Evan Kohlmann (Cloudburst Technology) 
 
-https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
+Related Document 1: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
 
 #### 13:00 - 14:00 Lunch
 
 #### 14:00 - 15:30 [Room A] [Workshop under Chatham House Rule] Security and Incident Response
 
-**Carole House**, Jessy Irwin (Amulet), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF)
+**Carole House**, Jessy Irwin (Amulet Security), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF), Julien Bringer (ISO/IEO TC 307 JWG4) 
 
-https://bgin-global.org/documents/20220606_Custody.pdf
+Related Document 1: https://bgin-global.org/documents/20220606_Custody.pdf
 
-CGTF Document (= ISO TR23576)
+Related Document 2: CGTF Document (= ISO TR23576)
 
-GU research paper for cyber insurance based on smart contract (WTSC2019)
-
-Liar of existing documents
-
-GU Standardization paper (CoDecFin2024)
+Related Document 2: GU research paper for cyber insurance based on smart contract (WTSC2019)
 
 #### 14:00 - 15:30 [Room B] [Workshop under Chatham House Rule] SBT Paper Part 2 On-chain identity, reputation and attestations
 
-**Joseph Beverley**
+**Joseph Beverley (Soulbis)**
 
-https://bgin-global.org/documents/20230201_SBT.pdf
+Related Document 1: https://bgin-global.org/documents/20230201_SBT.pdf
 
 #### 15:30 - 16:00 Coffee Break
 
 #### 16:00 - 17:30 [Room A] [Workshop under Chatham House Rule] Privacy pool / Accountable Wallet
 
-**Shin’ichiro Matsuo**, Masato Yamanaka, Fabian (remote)
+**Shin’ichiro Matsuo**, Masato Yamanaka (SMTB), Fabian Schär (University of Basel), Jemma Xu (Singularity), Ken Katayama (NRI) 
 
-https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563364
+Related Document 1: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563364
 
-The meeting report of block 9
+Related Document 2: The meeting report of block 9
 
 #### 16:00 - 17:30 [Room B] [Workshop under Chatham House Rule] ZKP and its application
 
-**Leona Hioki**
+**Leona Hioki (Intmax)**
 
-Current draft document
+Related Document 1: Current draft document
 
-The meeting report of block 9
+Related Document 2: The meeting report of block 9
 
 #### 17:30 - 18:00 Wrap Up
 
+
 ### Day 4 (Mar. 6 Wed.) Industry, Sponsors & BGIN Operational Activities | Conference Square M Plus
 
+---
+
 #### 9:00 - 9:10 Opening of Day 4
+
+**Shin’ichiro Matsuo (BGIN Co-Chair)**
 
 #### 9:10 - 10:00 [Industrial Roundtable] Blockchain applications and business
 
@@ -166,13 +177,13 @@ The meeting report of block 9
 
 #### 10:20 - 11:10 [Industrial Roundtable] Future roadmap of blockchain technology development
 
-#### 11:10 - 12:00 [Industrial Roundtable] Trusted Web: strengthen trustworthiness of digital society
+#### 11:10 - 12:00 [Industrial Roundtable] Trusted Web: strengthen the trustworthiness of digital society
 
 #### 12:00 - 13:00 Lunch
 
 #### 13:00 - 13:50 [Local Blockchain Community Round Table] Woman in Crypto: Japan, Asia and Global Collaboration
 
-**Yuki Kamimoto**
+**Yuki Kamimoto (CoinDesk JAPAN) **, Amanda Wick (AWIC), Chloe White (IKPWG Co-Chair), Waka Itagaki (METI Japan), Yuko Kawai (Bank of Kochi)
 
 #### 13:50 - 14:40 [Local Blockchain Community Round Table] Japanese Blockchain Community Sessions
 
@@ -187,3 +198,4 @@ The meeting report of block 9
 #### 15:60 - 16:30 Closing Plenary
 
 **Shin'ichiro Matsuo, Jumpei Miwa**
+
