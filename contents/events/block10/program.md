@@ -79,7 +79,7 @@ Related Documents 1: The meeting report of block 9
 
 #### 17:00 - 18:30 [Room A] [Workshop under Chatham House Rule] The Harmonisation of CBDC, Deposit Token, Stablecoin, Crypto Assets and DeFi
 
-Main discussants: **Masaki Bessho**, Samar Sen (Talos), Chainalysis, Hiromi Yamaoka
+Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Hiromi Yamaoka (Future Corp), Arif Ismail (IMF), Yam Ki Chan (Circle), Ramy Soliman (GMO), Solana Foundation, Benedict Nolens (BIS Innovation Hub), Alan Lim (MAS)
 
 Related Documents 1: The meeting report of block 9
 
@@ -129,7 +129,7 @@ Related Document 1: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pd
 
 #### 13:00 - 14:00 Lunch
 
-#### 14:00 - 15:30 [Room A] [Workshop under Chatham House Rule] Security and Incident Response
+#### 14:00 - 15:30 [Room A] [Workshop under Chatham House Rule] Incident Response and Cyber Security
 
 Main discussants: **Carole House**, Jessy Irwin (Amulet Security), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF), Julien Bringer (ISO/IEO TC 307 JWG4) 
 
