@@ -16,7 +16,7 @@ Recap of Block#9 and Goal of Block#10 and BGIN
 
 **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former NIST), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity) 
 
-https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
+Related Document 1: https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
 #### 16:00 - 16:30 Coffee Break
 
@@ -82,6 +82,7 @@ Related Documents 1: The meeting report of block 9
 **Masaki Bessho**, Samar Sen (Talos), Chainalysis, Hiromi Yamaoka
 
 Related Documents 1: The meeting report of block 9
+
 Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoins.pdf
 
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
