@@ -38,7 +38,7 @@ Speaker: **Chloe White (DTWG co-chair), Leon Molechanovsky (DTWG co-chair)**
 
 #### 9:10 - 10:00 [Keynote Speech & Panel] BGIN's 4-year Journey to the 10th Block Meeting
 
-Panelists: **Shigeru ARIIZUMI (JFSA Vice Commissioner for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/IEO TC 307 JWGG4) 
+Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/IEO TC 307 JWGG4) 
 
 #### 10:00 - 10:30 Coffee Break
 
