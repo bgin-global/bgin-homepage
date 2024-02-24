@@ -25,10 +25,10 @@ export default function Component(props: Props) {
       title: "program",
       content: props.programContent,
     },
-    {
-      title: "main discussants",
-      content: props.speakersContent,
-    },
+    // {
+    //   title: "main discussants",
+    //   content: props.speakersContent,
+    // },
     {
       title: "sponsors",
       content: props.sponsorsContent,
