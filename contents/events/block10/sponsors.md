@@ -19,7 +19,8 @@
         <img src="/images/Events/sponsor/MUFG.jpeg">
     </a>
     <a href="https://www.chainalysis.com/">
-        <img src="/images/Events/sponsor/Chainalysis.jpg">    
+        <img src="/images/Events/sponsor/Chainalysis.jpg"> 
+    </a>
 </div>
 
 ## Level 2 Sponsors
