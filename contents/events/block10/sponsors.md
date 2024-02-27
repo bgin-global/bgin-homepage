@@ -43,12 +43,16 @@
     <a href="https://www.ginco.co.jp/en">
         <img src="">
     </a>
-    <a href="https://www.ey.com/en_gl">
-        <img src="">
-    </a>        
+    <a href="https://www.ey.com/">
+        <img src="/images/Events/sponsor/EY.jpeg">
+    </a>
+    <a href="https://www.monexgroup.jp/en/index.html">
+        <img src="/images/Events/sponsor/MonexGroup.png">
+    </a>
 </div>
 
 ## Supporting Organization
+
 
 
 
