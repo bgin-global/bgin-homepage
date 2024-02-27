@@ -5,7 +5,7 @@
         <img src="/images/Events/sponsor/Recruit.png">
     </a>
     <a href="https://www.smbc.co.jp/global/">
-        <img src="">
+        <img src="/images/Events/sponsor/smbc.jpg">
     </a>
 </div>
 
@@ -19,7 +19,7 @@
         <img src="/images/Events/sponsor/MUFG.jpeg">
     </a>
     <a href="https://www.chainalysis.com/">
-        <img src="">    
+        <img src="/images/Events/sponsor/Chainalysis.jpg">    
 </div>
 
 ## Level 2 Sponsors
@@ -41,7 +41,7 @@
         <img src="/images/Events/sponsor/NTTD_Corplogo_RGB_M.jpg">
     </a>
     <a href="https://www.ginco.co.jp/en">
-        <img src="">
+        <img src="/images/Events/sponsor/Ginco.jpeg">
     </a>
     <a href="https://www.ey.com/">
         <img src="/images/Events/sponsor/EY.jpeg">
@@ -53,7 +53,10 @@
 
 ## Supporting Organization
 
-
-
+<div class="sponsors">
+    <a href="https://fintechjapan.org/en/">
+        <img src="/images/Events/sponsor/fintech_assoc_japan.jpg">
+    </a>
+</div>
 
 
