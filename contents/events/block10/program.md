@@ -14,7 +14,7 @@ Main discussants: **Shin’ichiro Matsuo**, Joseph Beverley (Soulbis), Hirotaka 
 
 #### 14:30 - 16:00 [Workshop under Chatham House Rule] Privacy vs Discoverability
 
-Main discussants: **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former NIST), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity) 
+Main discussants: **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former DHS), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity), Jonathan Rouach (QEDIT) 
 
 Related Document 1: https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
@@ -22,9 +22,9 @@ Related Document 1: https://bgin-global.org/documents/20230428_Selective_Disclos
 
 #### 16:30 - 18:00 [Workshop under Chatham House Rule] Stability Challenges - interconnectedness between incumbent system and decentralised system
 
-Main discussants: **Jumpei Miwa (Block#10 Local Chair)**, Yuta Takanashi, Nao Kitazawa (Eight Roads), Nobu Sugimoto (IMF), Yuko Kawai (remote), Hiromi Yamaoka (Future Corp)
+Main discussants: **Jumpei Miwa (Block#10 Local Chair)**, Yuta Takanashi, Nao Kitazawa (Eight Roads), Nobu Sugimoto (IMF), Yuko Kawai (remote), Hiromi Yamaoka (Future Corp), Chengyi Ong (Chainalysis)
 
-#### 18:00 Networking Event (supported by Fintech Association Japan)
+#### 18:00 - 20:00 Networking Event (supported by Fintech Association Japan)
 
 
 
@@ -38,7 +38,7 @@ Speaker: **Chloe White (DTWG co-chair), Leon Molechanovsky (DTWG co-chair)**
 
 #### 9:10 - 10:00 [Keynote Speech & Panel] BGIN's 4-year Journey to the 10th Block Meeting
 
-Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/IEO TC 307 JWGG4) 
+Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/TC 307/JWG 4) 
 
 #### 10:00 - 10:30 Coffee Break
 
