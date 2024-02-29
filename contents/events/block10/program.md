@@ -16,6 +16,8 @@ Main discussants: **Shin’ichiro Matsuo**, Joseph Beverley (Soulbis), Hirotaka 
 
 Main discussants: **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former DHS), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity), Jonathan Rouach (QEDIT) 
 
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-privacy-vs-discoverability-day1/332
+
 Related Document 1: https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
 
 #### 16:00 - 16:30 Coffee Break
@@ -23,6 +25,8 @@ Related Document 1: https://bgin-global.org/documents/20230428_Selective_Disclos
 #### 16:30 - 18:00 [Workshop under Chatham House Rule] Stability Challenges - interconnectedness between incumbent system and decentralised system
 
 Main discussants: **Jumpei Miwa (Block#10 Local Chair)**, Yuta Takanashi, Nao Kitazawa (Eight Roads), Nobu Sugimoto (IMF), Yuko Kawai (remote), Hiromi Yamaoka (Future Corp), Chengyi Ong (Chainalysis)
+
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-financial-stability-challenges-day1/333
 
 #### 18:00 - 20:00 Networking Event (supported by Fintech Association Japan)
 
@@ -46,12 +50,16 @@ Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, 
 
 Main discussants: **Hal Seki**, Keiji Tonomura, Joni Pirovich (BADASL), Dmitry Fedotov (ADGM)
 
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-role-of-daos-in-the-modern-world-day2/334/7
+
 #### 12:00 - 13:00 Lunch
 
 #### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
 
 Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD), Caroline Malcolm (Chainalysis)
 , Nikos Andrikogiannopoulos (Metrika)
+
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-transparency-of-dapps-and-sound-defi-day2/335/2
 
 Related Documents 1: https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf
 
@@ -63,15 +71,21 @@ Related Documents 3: The meeting report of block 9
 
 Main discussants: Will Remor (MakerDAO), Alejandro Gutierrez (npayme Labs), Masato Yamanaka (SMTB), Jerome Dadon (MezFi)
 
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-tokenization-and-real-world-assets/381
+
 #### 14:30 - 15:00 Coffee Break
 
 #### 15:00 - 16:30 [Room A] [Workshop with Chatham House Rule] The mutual impact and improved outcomes of blockchain & AI as synergistic technologies
 
 Main discussants: **Chloe White**, Joni Pirovich (BADASL), Dr Gayan Benedict (MIT University), Austin Zhu (Desoul), Arturo Rodriguez (NotCentralised), Stephan Roberto (Ape Law) 
 
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-impact-of-ai-day2/336
+
 #### 15:00 - 16:30 [Room B] [Workshop under Chatham House Rule] Smart Contract Security, and Governance
 
 Main discussants: **Leon Molechanovsky**, Shunya Noda (University of Tokyo), Torigoe (Titania Research) 
+
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-smart-contract-security-and-governance-day2/337/25
 
 Related Documents 1: The meeting report of block 9
 
@@ -81,6 +95,8 @@ Related Documents 1: The meeting report of block 9
 
 Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Nobu Sugimoto (IMF), Hiromi Yamaoka (Future Corp), Yam Ki Chan (Circle), Ramy Soliman (GMO), Can Sun (Solana Foundation), Benedict Nolens (BIS Innovation Hub), Chengyi Ong (Chainalysis)
 
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-harmonization-of-cbdc-deposit-token-stablecoin-crypto-asset-and-defi-day1/338
+
 Related Documents 1: The meeting report of block 9
 
 Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoins.pdf
@@ -88,6 +104,8 @@ Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoi
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
 Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Caroline Malcolm (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Ciphertrace), Jessica Mila Schutzman (Brava) 
+
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-illicit-activities/382/2
 
 #### 18:30 - 18:45 Wrap Up
 
@@ -117,6 +135,8 @@ Main discussants: **Mitchell Travers**, Leona Hioki (Intmax)
 
 Main discussants: **Nat Sakimura**, Daniel Goldscheider (OpenWallet Foundation), Saki Otsuki (NEC)
 
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-wallet-governance-and-credential-management-day3/342/5
+
 Related Document 1: Current draft document
 
 Related Document 2: The meeting report of block 9
@@ -124,6 +144,8 @@ Related Document 2: The meeting report of block 9
 #### 11:30 - 13:00 [Room B] [Workshop under Chatham House Rule] Challenges and innovations in on-chain analysis
 
 Main discussants: **Shin'ichiro Mastuo**, Angela Ang (TRM lab), Kevin Oconnor (FinCEN), Daniel Goldsmith (Heights Labs), Evan Kohlmann (Cloudburst Technology), Chen Arad (Solidus Labs), Joshua Foo (Ciphertrace)
+
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-challenges-and-innovation-of-on-chain-analysis-day3/340
 
 Related Document 1: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
 
@@ -150,6 +172,8 @@ Related Document 1: https://bgin-global.org/documents/20230201_SBT.pdf
 #### 16:00 - 17:30 [Room A] [Workshop under Chatham House Rule] Privacy pool / Accountable Wallet
 
 Main discussants: **Shin’ichiro Matsuo**, Masato Yamanaka (SMTB), Fabian Schär (University of Basel), Jemma Xu (Singularity), Ken Katayama (NRI) 
+
+Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-privacy-pool-day3/341/2
 
 Related Document 1: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563364
 
