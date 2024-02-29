@@ -44,13 +44,14 @@ Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, 
 
 #### 10:30 - 12:00 [Round Table for an Emerging Issue] The Role of DAOs in the modern world
 
-Main discussants: **Hal Seki**, Keiji Tonomura, Joni Pirovich (COALA) , Dmitry Fedotov (ADGM)
+Main discussants: **Hal Seki**, Keiji Tonomura, Joni Pirovich (BADASL), Dmitry Fedotov (ADGM)
 
 #### 12:00 - 13:00 Lunch
 
 #### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
 
-Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD)
+Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD), Caroline Malcolm (Chainalysis)
+, Nikos Andrikogiannopoulos (Metrika)
 
 Related Documents 1: https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf
 
@@ -60,14 +61,13 @@ Related Documents 3: The meeting report of block 9
 
 #### 13:00 - 14:30 [Room B] [Workshop under Chatham House Rule] Tokenization and Real-World Assets
 
-Main discussants: Will Remor (MakerDAO), Alejandro Gutierrez (npayme Labs), Masato Yamanaka (SMTB)
+Main discussants: Will Remor (MakerDAO), Alejandro Gutierrez (npayme Labs), Masato Yamanaka (SMTB), Jerome Dadon (MezFi)
 
 #### 14:30 - 15:00 Coffee Break
 
 #### 15:00 - 16:30 [Room A] [Workshop with Chatham House Rule] The mutual impact and improved outcomes of blockchain & AI as synergistic technologies
 
-Main discussants: **Chloe White**, Joni Pirovich (COALA), Dr Gayan Benedict (MIT), Austin Zhu (Desoul)
-
+Main discussants: **Chloe White**, Joni Pirovich (BADASL), Dr Gayan Benedict (MIT University), Austin Zhu (Desoul), Arturo Rodriguez (NotCentralised), Stephan Roberto (Ape Law) 
 
 #### 15:00 - 16:30 [Room B] [Workshop under Chatham House Rule] Smart Contract Security, and Governance
 
@@ -79,7 +79,7 @@ Related Documents 1: The meeting report of block 9
 
 #### 17:00 - 18:30 [Room A] [Workshop under Chatham House Rule] The Harmonisation of CBDC, Deposit Token, Stablecoin, Crypto Assets and DeFi
 
-Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Hiromi Yamaoka (Future Corp), Arif Ismail (IMF), Yam Ki Chan (Circle), Ramy Soliman (GMO), Solana Foundation, Benedict Nolens (BIS Innovation Hub), Alan Lim (MAS)
+Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Nobu Sugimoto (IMF), Hiromi Yamaoka (Future Corp), Yam Ki Chan (Circle), Ramy Soliman (GMO), Can Sun (Solana Foundation), Benedict Nolens (BIS Innovation Hub), Chengyi Ong (Chainalysis)
 
 Related Documents 1: The meeting report of block 9
 
@@ -87,7 +87,7 @@ Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoi
 
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
-Main discussants: Chainalysis, Angela Ang (TRM Labs) 
+Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Caroline Malcolm (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Ciphertrace), Jessica Mila Schutzman (Brava) 
 
 #### 18:30 - 18:45 Wrap Up
 
@@ -105,7 +105,7 @@ Mitchell Travers (IKP-WG co-chair), Nat Sakimura (IKP-WG Co-chair)
 
 #### 9:10 - 9:30 [Keynote Speech] Layer 2 Governance
 
-Speaker: 
+Speaker: Justin Drake (Ethereum Foundation)
 
 #### 9:30 - 11:00 [Round Table for an Emerging Issue] Layer 2 Governance
 
@@ -115,7 +115,7 @@ Main discussants: **Mitchell Travers**, Leona Hioki (Intmax)
 
 #### 11:30 - 13:00 [Room A] [Workshop under Chatham House Rule] Wallet Governance and Credential Management
 
-Main discussants: **Nat Sakimura**, Daniel Goldscheider(Open Wallet Foundation), Saki Otsuki (NEC)
+Main discussants: **Nat Sakimura**, Daniel Goldscheider (OpenWallet Foundation), Saki Otsuki (NEC)
 
 Related Document 1: Current draft document
 
@@ -123,7 +123,7 @@ Related Document 2: The meeting report of block 9
 
 #### 11:30 - 13:00 [Room B] [Workshop under Chatham House Rule] Challenges and innovations in on-chain analysis
 
-Main discussants: Angela Ang (TRM lab), Kevin Oconnor (FinCEN), Daniel Goldsmith (Heights Labs), Evan Kohlmann (Cloudburst Technology) 
+Main discussants: **Shin'ichiro Mastuo**, Angela Ang (TRM lab), Kevin Oconnor (FinCEN), Daniel Goldsmith (Heights Labs), Evan Kohlmann (Cloudburst Technology), Chen Arad (Solidus Labs), Joshua Foo (Ciphertrace)
 
 Related Document 1: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
 
@@ -131,7 +131,7 @@ Related Document 1: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pd
 
 #### 14:00 - 15:30 [Room A] [Workshop under Chatham House Rule] Incident Response and Cyber Security
 
-Main discussants: **Carole House**, Jessy Irwin (Amulet Security), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF), Julien Bringer (ISO/IEO TC 307 JWG4) 
+Main discussants: **Carole House**, Jessy Irwin (Amulet Security), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF), Julien Bringer (ISO/TC 307/JWG 4), Hayato Shigekawa (Chainalysis)
 
 Related Document 1: https://bgin-global.org/documents/20220606_Custody.pdf
 
@@ -196,7 +196,7 @@ Main discussants: **Yuki Kamimoto (CoinDesk JAPAN)**, Amanda Wick (AWIC), Chloe 
 
 #### 13:50 - 14:40 [Local Blockchain Community Round Table] Japanese Blockchain Community Sessions
 
-Speaker: **Jumpei Miwa**
+Speaker: **Jumpei Miwa**, Seihaku Yoshida (HashPort), Jeff Wentworth (CurveGrid), Yosuke Shiraishi (MZ Web3 Fund), Russel Saito (Blockdaemon)
 
 #### 14:40 - 15:00 Coffee Break
 
