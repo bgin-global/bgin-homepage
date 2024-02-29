@@ -83,7 +83,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-impact-
 
 #### 15:00 - 16:30 [Room B] [Workshop under Chatham House Rule] Smart Contract Security, and Governance
 
-Main discussants: **Leon Molechanovsky**, Shunya Noda (University of Tokyo), Torigoe (Titania Research) 
+Main discussants: **Leon Molechanovsky**, Shunya Noda (University of Tokyo), vita (Titania Research) 
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-smart-contract-security-and-governance-day2/337/25
 
