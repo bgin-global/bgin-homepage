@@ -228,7 +228,7 @@ Speaker: **Jumpei Miwa**, Seihaku Yoshida (HashPort), Jeff Wentworth (CurveGrid)
 
 Speaker: **Shin'ichiro Matsuo**
 
-#### 15:60 - 16:30 Closing Plenary
+#### 16:00 - 16:30 Closing Plenary
 
 Speaker: **Shin'ichiro Matsuo, Jumpei Miwa**
 
