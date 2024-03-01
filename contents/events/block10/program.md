@@ -103,7 +103,7 @@ Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoi
 
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
-Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Chengyi Ong (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Ciphertrace), Jessica Mila Schutzman (Brava) 
+Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Chengyi Ong (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Mastercard), Jessica Mila Schutzman (Brava) 
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-illicit-activities/382/2
 
@@ -143,7 +143,7 @@ Related Document 2: The meeting report of block 9
 
 #### 11:30 - 13:00 [Room B] [Workshop under Chatham House Rule] Challenges and innovations in on-chain analysis
 
-Main discussants: **Shin'ichiro Mastuo**, Angela Ang (TRM lab), Kevin Oconnor (FinCEN), Daniel Goldsmith (Heights Labs), Evan Kohlmann (Cloudburst Technology), Chen Arad (Solidus Labs), Joshua Foo (Ciphertrace)
+Main discussants: **Shin'ichiro Mastuo**, Angela Ang (TRM lab), Kevin Oconnor (FinCEN), Daniel Goldsmith (Heights Labs), Evan Kohlmann (Cloudburst Technology), Chen Arad (Solidus Labs), Joshua Foo (Mastercard)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-challenges-and-innovation-of-on-chain-analysis-day3/340
 
