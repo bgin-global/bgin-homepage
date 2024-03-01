@@ -56,7 +56,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-rol
 
 #### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
 
-Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD), Caroline Malcolm (Chainalysis)
+Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD), Chengyi Ong (Chainalysis)
 , Nikos Andrikogiannopoulos (Metrika)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-transparency-of-dapps-and-sound-defi-day2/335/2
@@ -93,7 +93,7 @@ Related Documents 1: The meeting report of block 9
 
 #### 17:00 - 18:30 [Room A] [Workshop under Chatham House Rule] The Harmonisation of CBDC, Deposit Token, Stablecoin, Crypto Assets and DeFi
 
-Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Nobu Sugimoto (IMF), Hiromi Yamaoka (Future Corp), Yam Ki Chan (Circle), Ramy Soliman (GMO), Can Sun (Solana Foundation), Benedict Nolens (BIS Innovation Hub), Chengyi Ong (Chainalysis)
+Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Nobu Sugimoto (IMF), Hiromi Yamaoka (Future Corp), Yam Ki Chan (Circle), Ramy Soliman (GMO), Can Sun (Solana Foundation), Benedict Nolens (BIS Innovation Hub), 
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-harmonization-of-cbdc-deposit-token-stablecoin-crypto-asset-and-defi-day1/338
 
@@ -103,7 +103,7 @@ Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoi
 
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
-Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Caroline Malcolm (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Ciphertrace), Jessica Mila Schutzman (Brava) 
+Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Chengyi Ong (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Ciphertrace), Jessica Mila Schutzman (Brava) 
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-illicit-activities/382/2
 
