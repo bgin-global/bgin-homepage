@@ -220,7 +220,7 @@ Main discussants: **Yuki Kamimoto (CoinDesk JAPAN)**, Amanda Wick (AWIC), Chloe 
 
 #### 13:50 - 14:40 [Local Blockchain Community Round Table] Japanese Blockchain Community Sessions
 
-Speaker: **Nao Kitazawa (Eight Roads)**, Seihaku Yoshida (HashPort), Jeff Wentworth (CurveGrid), Yosuke Shiraishi (MZ Web3 Fund), Russel Saito (Blockdaemon)
+Speaker: **Nao Kitazawa (Eight Roads)**, Seihaku Yoshida (HashPort), Jeff Wentworth (Curvegrid), Yosuke Shiraishi (MZ Web3 Fund), Russel Saito (Blockdaemon)
 
 #### 14:40 - 15:00 Coffee Break
 
