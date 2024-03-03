@@ -56,7 +56,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-rol
 
 #### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
 
-Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Iota Nassr (OECD), Chengyi Ong (Chainalysis)
+Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Alex Zerden　(Capital Peak Strategies LLC), Chengyi Ong (Chainalysis)
 , Nikos Andrikogiannopoulos (Metrika)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-transparency-of-dapps-and-sound-defi-day2/335/2
