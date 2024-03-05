@@ -9,8 +9,7 @@
     </a>
 </div>
 
-**Contributed Materials by Recruit**
-https://www.youtube.com/watch?v=hTKIBH222Ik&ab_channel=RECRUITTECHINFO
+
 
 ## Level 1 Sponsors
 
@@ -62,5 +61,8 @@ https://www.youtube.com/watch?v=hTKIBH222Ik&ab_channel=RECRUITTECHINFO
         <img src="/images/Events/sponsor/fintech_assoc_japan.jpg">
     </a>
 </div>
+
+## Contributed Materials by Recruit
+[![Digital Payment Transformation in the US Labor Market](/images/Events/sponsor/image.png)](https://www.youtube.com/watch?v=hTKIBH222Ik&ab_channel=RECRUITTECHINFO "Watch the Video!")
 
 
