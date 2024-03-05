@@ -38,7 +38,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-financi
 
 #### 9:00 - 9:10 Opening of Day2
 
-Speaker: **Chloe White (DTWG co-chair), Leon Molechanovsky (DTWG co-chair)**
+Speaker: **Chloe White (DTWG co-chair), Leon Molchanovsky (DTWG co-chair)**
 
 #### 9:10 - 10:00 [Keynote Speech & Panel] BGIN's 4-year Journey to the 10th Block Meeting
 
@@ -83,7 +83,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-impact-
 
 #### 15:00 - 16:30 [Room B] [Workshop under Chatham House Rule] Smart Contract Security, and Governance
 
-Main discussants: **Leon Molechanovsky**, Shunya Noda (University of Tokyo), vita (Titania Research) 
+Main discussants: **Leon Molchanovsky**, Shunya Noda (University of Tokyo), vita (Titania Research), Bruno Woltzenlogel Paleo (Djed alliance)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-smart-contract-security-and-governance-day2/337/25
 
