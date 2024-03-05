@@ -9,6 +9,9 @@
     </a>
 </div>
 
+**Contributed Materials by Recruit**
+https://www.youtube.com/watch?v=hTKIBH222Ik&ab_channel=RECRUITTECHINFO
+
 ## Level 1 Sponsors
 
 <div class="sponsors">
