@@ -62,7 +62,7 @@
     </a>
 </div>
 
-## Contributed Materials by Recruit
+## Contributed Materials by Special Sponsor - Recruit
 Digital Payment Transformation in the US Labor Market 米国労働市場から見えてくるデジタルペイメント変革の動き| Enablers Talk (Click the image below to watch the video)
 [![Digital Payment Transformation in the US Labor Market](/images/Events/sponsor/image.png)](https://www.youtube.com/watch?v=hTKIBH222Ik&ab_channel=RECRUITTECHINFO "Watch the Video!")
 
