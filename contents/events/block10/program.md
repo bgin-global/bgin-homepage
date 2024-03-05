@@ -14,7 +14,7 @@ Main discussants: **Shin’ichiro Matsuo**, Joseph Beverley (Soulbis), Hirotaka 
 
 #### 14:30 - 16:00 [Workshop under Chatham House Rule] Privacy vs Discoverability
 
-Main discussants: **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former DHS), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity), Jonathan Rouach (QEDIT) 
+Main discussants: **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, former DHS), Carol van Cleef (Luminous Group), Bessho Masaki (Bank of Japan), Jemma Xu (Singularity), Jonathan Rouach (QEDIT)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-privacy-vs-discoverability-day1/332
 
@@ -30,8 +30,6 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-financi
 
 #### 18:00 - 20:00 Networking Event (supported by Fintech Association Japan)
 
-
-
 ### Day 2 (Mar. 4 Mon.) Financial Applications and Social Economics | Conference Square M Plus
 
 ---
@@ -42,7 +40,7 @@ Speaker: **Chloe White (DTWG co-chair), Leon Molchanovsky (DTWG co-chair)**
 
 #### 9:10 - 10:00 [Keynote Speech & Panel] BGIN's 4-year Journey to the 10th Block Meeting
 
-Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Carole House (ex-White House), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/TC 307/JWG 4) 
+Panelists: **Shigeru ARIIZUMI (JFSA Vice Minister for International Affairs)**, Shin’ichiro Matsuo (BGIN Co-Chair), Jumpei Miwa (Block#10 Local Chair), Carole House (ex-White House), Roselyn Newnjr (Agnostic), Julien Bringer (ISO/TC 307/JWG 4)
 
 #### 10:00 - 10:30 Coffee Break
 
@@ -56,7 +54,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-rol
 
 #### 13:00 - 14:30 [Room A] [Workshop under Chatham House Rule] Transparency of dApps and Sound DeFi
 
-Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Alex Zerden　(Capital Peak Strategies LLC), Chengyi Ong (Chainalysis)
+Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Alex Zerden 　(Capital Peak Strategies LLC), Chengyi Ong (Chainalysis)
 , Nikos Andrikogiannopoulos (Metrika)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-transparency-of-dapps-and-sound-defi-day2/335/2
@@ -77,7 +75,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-tokeniz
 
 #### 15:00 - 16:30 [Room A] [Workshop with Chatham House Rule] The mutual impact and improved outcomes of blockchain & AI as synergistic technologies
 
-Main discussants: **Chloe White**, Joni Pirovich (BADASL), Dr Gayan Benedict (MIT University), Austin Zhu (Desoul), Arturo Rodriguez (NotCentralised), Stephan Roberto (Ape Law) 
+Main discussants: **Chloe White**, Joni Pirovich (BADASL), Dr Gayan Benedict (MIT University), Austin Zhu (Desoul), Arturo Rodriguez (NotCentralised), Stephan Roberto (Ape Law)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-impact-of-ai-day2/336
 
@@ -93,7 +91,7 @@ Related Documents 1: The meeting report of block 9
 
 #### 17:00 - 18:30 [Room A] [Workshop under Chatham House Rule] The Harmonisation of CBDC, Deposit Token, Stablecoin, Crypto Assets and DeFi
 
-Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Nobu Sugimoto (IMF), Hiromi Yamaoka (Future Corp), Yam Ki Chan (Circle), Ramy Soliman (GMO), Can Sun (Solana Foundation), Benedict Nolens (BIS Innovation Hub), 
+Main discussants: **Masaki Bessho (Bank of Japan)**, Samar Sen (Talos), Nobu Sugimoto (IMF), Hiromi Yamaoka (Future Corp), Yam Ki Chan (Circle), Ramy Soliman (GMO), Can Sun (Solana Foundation), Benedict Nolens (BIS Innovation Hub),
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-harmonization-of-cbdc-deposit-token-stablecoin-crypto-asset-and-defi-day1/338
 
@@ -103,15 +101,13 @@ Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoi
 
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
-Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Chengyi Ong (Chainalysis), Angela Ang (TRM Labs), Chen Arad  (Solidus Labs), Joshua Foo (Mastercard), Jessica Mila Schutzman (Brava) 
+Main discussants: **Leon Molchanovsky**, Hayato Shigekawa (Chainalysis), Chengyi Ong (Chainalysis), Angela Ang (TRM Labs), Chen Arad (Solidus Labs), Joshua Foo (Mastercard), Jessica Mila Schutzman (Brava)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-illicit-activities/382/2
 
 #### 18:30 - 18:45 Wrap Up
 
 #### 19:00 - 21:00 Social Event
-
-
 
 ### Day 3 (Mar. 5 Tue.) Non-Financial Applications | Conference Square M Plus
 
@@ -171,7 +167,7 @@ Related Document 1: https://bgin-global.org/documents/20230201_SBT.pdf
 
 #### 16:00 - 17:30 [Room A] [Workshop under Chatham House Rule] Privacy pool / Accountable Wallet
 
-Main discussants: **Shin’ichiro Matsuo**, Masato Yamanaka (SMTB), Fabian Schär (University of Basel), Jemma Xu (Singularity), Ken Katayama (NRI) 
+Main discussants: **Shin’ichiro Matsuo**, Masato Yamanaka (SMTB), Fabian Schär (University of Basel), Jemma Xu (Singularity), Ken Katayama (NRI)
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-privacy-pool-day3/341/2
 
@@ -189,7 +185,6 @@ Related Document 2: The meeting report of block 9
 
 #### 17:30 - 18:00 Wrap Up
 
-
 ### Day 4 (Mar. 6 Wed.) Industry, Sponsors & BGIN Operational Activities | Conference Square M Plus
 
 ---
@@ -200,17 +195,23 @@ Speaker: **Shin’ichiro Matsuo (BGIN Co-Chair)**
 
 #### 9:10 - 10:00 [Industrial Roundtable] Blockchain applications and business
 
-Speaker: 
+Recruit: Jumpei Miwa
+SMBC: Kohei Ichihara
+DeCurret DCP: Hiromi Yamaoka
+Monex: Yo Nakagawa
 
 #### 10:00 - 10:20 Coffee Break
 
-#### 10:20 - 11:10 [Industrial Roundtable] Future roadmap of blockchain technology development
+#### 10:20 - 11:10 [Industrial Roundtable] Future of blockchain technology development
 
-Speaker: 
+Chainalysis: Chengyi Ong
+NRI: Ken Katayama, Kosuke Kawazu
+Ginco: Ken Masuda
+Digital Garage: Ichiro Kuwahara
 
 #### 11:10 - 12:00 [Industrial Roundtable] Trusted Web: strengthen the trustworthiness of digital society
 
-Speaker: 
+Speaker:
 
 #### 12:00 - 13:00 Lunch
 
@@ -231,4 +232,3 @@ Speaker: **Shin'ichiro Matsuo**
 #### 16:00 - 16:30 Closing Plenary
 
 Speaker: **Shin'ichiro Matsuo, Jumpei Miwa**
-
