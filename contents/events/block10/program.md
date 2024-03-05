@@ -211,7 +211,7 @@ Digital Garage: Ichiro Kuwahara
 
 #### 11:10 - 12:00 [Industrial Roundtable] Trusted Web: strengthen the trustworthiness of digital society
 
-Speaker:
+Yuta Okuyama (Cabinet Secretariat), Yuichi Ohta (DataSign), Hisayoshi Endo (DNP), Rintaro Okamoto (DNP)
 
 #### 12:00 - 13:00 Lunch
 
