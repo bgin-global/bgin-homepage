@@ -8,9 +8,8 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`${
-        isOpen ? "" : "border border-b-black"
-      } max-lg:fixed max-lg:top-0 max-lg:left-0 max-lg:z-999 max-lg:w-screen bg-white z-[999]`}
+      className={`${isOpen ? "" : "border border-b-black"
+        } fixed lg:static top-0 left-0 z-999 w-screen bg-white`}
     >
       <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
         <Link href="/">
@@ -95,7 +94,7 @@ function Header() {
           </button>
         </div>
 
-        <div className="flex max-lg:hidden justify-center items-center gap-6 bgin-button">
+        <div className="hidden lg:flex justify-center items-center gap-6 bgin-button">
           <Link href="/about">
             <div className="text-base leading-[19px] text-black">About</div>
           </Link>
@@ -147,9 +146,8 @@ function Header() {
       </div>
 
       <div
-        className={`${
-          isOpen ? "" : "hidden"
-        } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
+        className={`${isOpen ? "" : "hidden"
+          } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
         id="navbar"
       >
         <Link

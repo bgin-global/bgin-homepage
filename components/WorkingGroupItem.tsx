@@ -8,8 +8,8 @@ interface Props {
 
 export default function WorkingGroupItem(props: Props) {
   return (
-    <div className="bg-white w-full flex max-lg:flex-col items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
-      <div className="lg:w-auto max-lg:w-full h-[400px] flex items-start gap-2.5 rounded-xl">
+    <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
+      <div className="w-full lg:w-auto h-[400px] flex items-start gap-2.5 rounded-xl">
         <Image
           alt="Hero Image"
           src="/images/Hero/Image_SP.svg"
@@ -61,7 +61,7 @@ export default function WorkingGroupItem(props: Props) {
               {props.workingGroup.description}
             </div>
           </div>
-          <div className="grid lg:grid-rows-1 max-lg:grid-rows-3 items-start gap-3 text-base font-semibold font-Inter grid-flow-col bgin-button">
+          <div className="grid grid-rows-3 lg:grid-rows-1 items-start gap-3 text-base font-semibold font-Inter grid-flow-col bgin-button">
             <a
               href={props.workingGroup.mailinglist_url}
               className="w-full bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white"

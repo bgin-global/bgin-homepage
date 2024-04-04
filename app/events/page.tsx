@@ -1,8 +1,10 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import SectionTitle from "@/components/Home/SectionTitle";
 import PastEventItem from "@/components/PastEventItem";
 import UpcomingEventTopItem from "@/components/UpcomingEventTopItem";
 import { getSortedEvents } from "@/lib/fetch-events";
+import { CUSTOM_STYLES } from "@/styles/custom";
 import Image from "next/image";
 
 export default function Events() {
@@ -12,23 +14,18 @@ export default function Events() {
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
-      <div className="bg-[#D2DEFC] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Upcoming Events
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
-        </div>
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+        <SectionTitle title="Upcoming Events" />
 
         {futureEvents[futureEvents.length - 1] ? (
-          <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid grid-rows-1 grid-flow-col gap-6">
+          <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
             <UpcomingEventTopItem
               event={futureEvents[futureEvents.length - 1]}
             />
             <Image
               alt="Hero Image"
               src={futureEvents[futureEvents.length - 1].thumbnail}
-              className="max-lg:hidden w-full h-full rounded-2xl"
+              className="hidden lg:block w-full h-full rounded-2xl"
               width={1000}
               height={1000}
               style={{
@@ -41,14 +38,9 @@ export default function Events() {
         )}
       </div>
 
-      <div className="bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Past Events
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 flex flex-col gap-6">
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
+        <SectionTitle title="Past Events" />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
           {pastEvents.map((event) => (
             <PastEventItem key={event.id} event={event} />
           ))}

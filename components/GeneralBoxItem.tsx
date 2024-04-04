@@ -18,7 +18,7 @@ export default function GeneralBoxItem(props: Props) {
           <Image
             alt={props.title}
             src={props.thumbnail}
-            className="w-[100%] h-[100%] rounded-2xl"
+            className="w-full h-full rounded-2xl"
             width={100}
             height={100}
             style={{

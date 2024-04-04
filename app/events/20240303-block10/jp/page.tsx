@@ -31,9 +31,9 @@ export default async function Page() {
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
-      <div className="text-black max-w-4xl w-full max-lg:px-4 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
+      <div className="text-black max-w-4xl w-full px-4 lg:px-0 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
         <div className="w-full grid grid-cols-7 gap-6 grid-flow-row items-center bgin-button">
-          <div className="col-span-6 lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk max-lg:pt-32 lg:pt-12 pb-4">
+          <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk pt-32 lg:pt-12 pb-4">
             {event?.title}
           </div>
           <Link
@@ -62,8 +62,8 @@ export default async function Page() {
           }}
         />
         {event &&
-        Date.parse(event.date_until || event.date) >= Date.now() &&
-        event.register_link ? (
+          Date.parse(event.date_until || event.date) >= Date.now() &&
+          event.register_link ? (
           <a
             href={event.register_link}
             className="w-full bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"

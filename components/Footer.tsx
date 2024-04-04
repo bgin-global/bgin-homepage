@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <div className="flex-col w-full flex justify-center items-center border-t border-black">
       <div className="w-full flex items-end px-4 py-12">
-        <div className="max-w-4xl m-auto flex-1 flex max-lg:flex-col max-lg:justify-center lg:justify-between max-lg:items-center lg:items-end max-lg:gap-10">
-          <div className="flex-col flex justify-center items-start max-lg:items-center gap-6 text-black">
+        <div className="max-w-4xl m-auto flex-1 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end gap-10 lg:gap-0">
+          <div className="flex-col flex justify-center items-center lg:items-start gap-6 text-black">
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Contact Info
             </div>

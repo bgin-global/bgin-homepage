@@ -54,12 +54,12 @@ const DocumentThumbnail = (props: { title: string; publised_at: string; category
   return (
     <div className="h-fit flex flex-col items-start justify-start font-medium text-black font-FamiljenGrotesk p-2 bg-white rounded-xl">
       <div>
-        <div className="max-lg:text-sm lg:text-[8px]">{props.publised_at}</div>
-        <div className="max-lg:text-lg lg:text-base line-clamp-1">
+        <div className="text-sm lg:text-[8px]">{props.publised_at}</div>
+        <div className="text-lg lg:text-base line-clamp-1">
           {props.title}
         </div>
       </div>
-      <div className="lg:h-[80px] max-lg:h-[120px]" />
+      <div className="h-[120px] lg:h-[80px]" />
       <Image
         src={"/images/Documents/" + props.category + ".svg"}
         width="100"

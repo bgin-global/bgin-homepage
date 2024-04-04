@@ -1,97 +1,33 @@
-import ArrowRight from "@/components/ArrowRight";
-import EventItem from "@/components/EventItem";
+import EventItem from "@/components/Home/EventItem";
 import Footer from "@/components/Footer";
 import GeneralBoxItem from "@/components/GeneralBoxItem";
 import Header from "@/components/Header";
 import HowToJoin from "@/components/HowToJoin";
 import { nextCalls } from "@/contents/next-call";
 import { getSortedEvents } from "@/lib/fetch-events";
-import Image from "next/image";
-import Link from "next/link";
+import SectionTitle from "@/components/Home/SectionTitle";
+import Hero from "@/components/Home/Hero";
+import { CUSTOM_STYLES } from "@/styles/custom";
 
 export default function Home() {
   const events = getSortedEvents("FUTURE");
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
-      <div className="flex-col flex items-start lg:pt-6 pb-16 h-fit max-w-4xl m-auto">
-        <Image
-          alt="Hero Image"
-          src="/images/Hero/Image.svg"
-          className="max-lg:hidden w-[100%] h-[200px] rounded-2xl"
-          width={100}
-          height={100}
-          style={{
-            objectFit: "cover",
-          }}
-        />
-        <Image
-          alt="Hero Image"
-          src="/images/Hero/Image_SP.svg"
-          className="lg:hidden w-screen h-[444px]"
-          width={100}
-          height={100}
-          style={{
-            objectFit: "cover",
-          }}
-        />
+      <Hero type={1} />
 
-        <div className="flex-col w-full flex items-center gap-12 pt-16">
-          <div className="flex-col flex items-center gap-2 text-center text-black mx-4">
-            <div className="max-lg:text-4xl lg:text-5xl max-lg:leading-[48px] lg:leading-[77px] font-medium font-FamiljenGrotesk">
-              Building the Blockchain Future Through Inclusive Collaboration
-            </div>
-            <div className="text-base leading-[19px] font-Inter lg:max-w-[750px]">
-              We are devoted to establishing a common language, fostering
-              academic roots, and consistently providing trustworthy resources
-              for sustainable blockchain development.
-            </div>
-          </div>
-          <div className="flex max-lg:flex-col justify-center max-lg:items-center lg:items-start gap-6 text-base font-semibold font-Inter bgin-button">
-            <a
-              href="https://bgin.discourse.group/"
-              className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div>Join Our Community</div>
-              <ArrowRight size="sm" color="white" />
-            </a>
-            <Link href="/about">
-              <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-full border border-[#2d2d2d] text-[#2d2d2d]">
-                <div>Learn About Us</div>
-                <ArrowRight size="sm" color="black" />
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Upcoming Events
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]">
-            <div>View All</div>
-            <ArrowRight />
-          </div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-2 lg:grid-rows-1 lg:gap-11 max-lg:gap-6 grid-flow-col">
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+        <SectionTitle title="Upcoming Events" />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
           {events.map((event) => (
             <EventItem key={event.id} event={event} />
           ))}
         </div>
       </div>
 
-      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Next Call
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-11 max-lg:gap-6 grid-flow-row">
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+        <SectionTitle title="Next Call" />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
           {nextCalls.map((call) => {
             return (
               <GeneralBoxItem
@@ -107,14 +43,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            Active Projects
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-cols-1 lg:grid-cols-2 lg:gap-11 max-lg:gap-6 grid-flow-row">
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+        <SectionTitle title="Active Projects" />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
           <GeneralBoxItem
             title="Wallet Governance"
             thumbnail="/images/Documents/IKPWG.svg"
@@ -153,14 +84,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit">
-        <div className="w-full flex justify-between items-start text-black max-w-4xl m-auto pt-32 pb-12 max-lg:px-4">
-          <div className="lg:text-6xl max-lg:text-4xl lg:leading-[77px] max-lg:leading-60px font-medium font-FamiljenGrotesk">
-            See More
-          </div>
-          <div className="flex justify-center items-center gap-2 px-6 py-4 rounded-[6px] text-base font-semibold font-Inter min-w-[150px]"></div>
-        </div>
-        <div className="lg:max-w-4xl lg:w-full max-lg:w-screen max-lg:px-4 grid max-lg:grid-rows-4 lg:grid-rows-2 lg:gap-11 max-lg:gap-6 grid-flow-col">
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
+        <SectionTitle title="See More" />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
           <GeneralBoxItem
             title="Documents"
             thumbnail="/images/Home/Documents.svg"
