@@ -32,17 +32,15 @@ export default async function Page() {
       <Header />
 
       <div className="text-black max-w-4xl w-full px-4 lg:px-0 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
-        <div className="w-full grid grid-cols-7 gap-6 grid-flow-row items-center bgin-button">
-          <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk pt-32 lg:pt-12 pb-4">
-            {event?.title}
-          </div>
-          <Link
-            href="/events/20240303-block10"
-            className=" bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter h-12"
-          >
-            <div>ENG</div>
-          </Link>
+        <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk lg:pt-12 py-4">
+          {event?.title}
         </div>
+        <Link
+          href="/events/20240303-block10"
+          className=" bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter h-12 overflow-hidden"
+        >
+          <div>ENG</div>
+        </Link>
 
         <div className="text-sm leading-[17px] font-Inter font-semibold">
           <div>

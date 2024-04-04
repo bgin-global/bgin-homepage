@@ -9,7 +9,7 @@ function Header() {
   return (
     <div
       className={`${isOpen ? "" : "border border-b-black"
-        } fixed lg:static top-0 left-0 z-999 w-screen bg-white`}
+        } static w-screen bg-white`}
     >
       <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
         <Link href="/">

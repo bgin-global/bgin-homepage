@@ -20,7 +20,7 @@ export default async function EventPage({
       <Header />
 
       <div className="text-black max-w-4xl w-full px-4 lg:px-0 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
-        <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk pt-32 lg:pt-12 pb-4">
+        <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk lg:pt-12 py-4">
           {event?.title}
         </div>
         <div className="text-sm leading-[17px] font-Inter font-semibold">
