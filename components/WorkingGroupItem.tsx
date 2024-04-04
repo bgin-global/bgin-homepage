@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ArrowRight from "./ArrowRight";
 import { WorkingGroup } from "@/lib/fetch-working-groups";
-import Link from "next/link";
 
 interface Props {
   workingGroup: WorkingGroup;
@@ -23,8 +22,8 @@ export default function WorkingGroupItem(props: Props) {
         />
       </div>
       <div className="h-full lg:w-full flex-col flex items-start gap-6">
-        <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-          {props.workingGroup.group_name}
+        <div className="text-3xl leading-[48px] font-medium text-black font-FamiljenGrotesk">
+          {props.workingGroup.group_name} <span className="px-4 py-2 border border-solid border-red-700 rounded-full text-red-700">{props.workingGroup.inactive ? "Inactive" : "Active"}</span>
         </div>
         <div className="w-full flex-col flex items-start gap-6">
           <div className="w-full flex-col flex items-start gap-2 text-black">

@@ -14,4 +14,5 @@ description: 'The Governance WG aims at developing the governance mechanism of B
 mailinglist_url: "https://example.com"
 github_url: "https://github.com/bgin-global"
 detail_url: "https://docs.google.com/document/d/1O641FrqZNX8IrgP5cKvAyyfBO80REEfBYCopXg5ieJ8/edit#heading=h.oj3duu3olyl0"
+inactive: true
 ---
