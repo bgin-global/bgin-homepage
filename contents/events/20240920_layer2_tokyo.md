@@ -19,8 +19,7 @@ We hold the first layer 2 meetup the purpose of which is to discuss our project 
 
 ## About this event
 
-​BGIN has held global Block conferences two or three times a year since its founding in 2020. Block Conferences represent the premier forum for multi-stakeholder discussions provided by BGIN. In addition to Block Conferences, BGIN will organize Layer2 Meetups to exchange ideas with various community hubs across the globe openly. The  Blockchain Center of the University of Zurich will be hosting the first Layer2 Meetup on July 1st, 2024. 
-While the program is hybrid, we strongly suggest people participate in the program onsite.
+​BGIN has held global Block conferences two or three times a year since its founding in 2020. Block Conferences represent the premier forum for multi-stakeholder discussions provided by BGIN. In addition to Block Conferences, BGIN will organize Layer2 Meetups to exchange ideas with various community hubs across the globe openly. While the program is hybrid, we strongly suggest people participate in the program onsite.
 
 ## ​Who should attend?
 
