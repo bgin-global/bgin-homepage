@@ -1,7 +1,6 @@
 ---
 title: "Layer 2 Meetup @ Tokyo, Japan"
 date: "2024 September. 20"
-date_until: "2024 September 20"
 location: "Tokyo, Japan"
 thumbnail: "/images/Events/dummy.svg"
 register_link: "https://lu.ma/ek33ayxg"
