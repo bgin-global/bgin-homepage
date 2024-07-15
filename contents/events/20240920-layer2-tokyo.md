@@ -22,7 +22,7 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ## ​Who should attend?
 
-​・Developers, Regulators, Business entities, Consumers, Academia, and anyone interested in blockchain ecosystems!
+​Developers, Regulators, Business entities, Consumers, Academia, and anyone interested in blockchain ecosystems!
 
 ## Programme
 
