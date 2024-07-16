@@ -9,7 +9,7 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
 
 ## Registration
 
-"https://lu.ma/ek33ayxg"
+### <b style="color:red;">[Click here for registration](https://lu.ma/ek33ayxg)</b> ### 
 
 ## Colocated Event
 
