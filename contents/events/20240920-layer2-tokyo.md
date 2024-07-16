@@ -13,7 +13,7 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
 
 ## Colocated Event
 
-### Bitcoin Tokyo 2024 (September 21-22, 2024) ###
+### <b style="color:red;">[Bitcoin Tokyo 2024 (September 21-22, 2024)](https://bitcoinconference.tokyo/en/)</b> ### 
 
 
 ## Background
