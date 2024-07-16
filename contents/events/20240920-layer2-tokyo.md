@@ -11,6 +11,11 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
 
 "https://lu.ma/ek33ayxg"
 
+## Colocated Event
+
+### Bitcoin Tokyo 2024 (September 21-22, 2024) ###
+
+
 ## Background
 
 Blockchain Governance Initiative Network (BGIN) is a non-profit organization that creates neutral forums for in-depth discussions among all stakeholders, documenting a common language to establish shared understanding. It also fosters innovation, best practices, and standards for blockchain governance in operational, regulatory, and technical spheres. We hold the second layer 2 meetup in Tokyo, Japan, the purpose of which is to discuss our project topics with people in different communities and expand our community through networking. 
