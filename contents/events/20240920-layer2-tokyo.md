@@ -17,7 +17,7 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ## About this event
 
-​BGIN has held global Block conferences two or three times a year since its founding in 2020. Block Conferences represent the premier forum for multi-stakeholder discussions provided by BGIN. In addition to Block Conferences, BGIN will organize Layer2 Meetups to exchange ideas with various community hubs across the globe openly. We will have our second Layer2 Meetup in Tokyo, Japan, on September 20, collocated with  <b>Bitcoin Tokyo 2024</b> from September 21 to 22. While the program is hybrid, we strongly suggest people participate onsite.
+​BGIN has held global Block conferences two or three times a year since its founding in 2020. Block Conferences represent the premier forum for multi-stakeholder discussions provided by BGIN. In addition to Block Conferences, BGIN will organize Layer2 Meetups to exchange ideas with various community hubs across the globe openly. We will have our second Layer2 Meetup in Tokyo, Japan, on September 20, collocated with [Bitcoin Tokyo 2024](https://bitcoinconference.tokyo/en/) from September 21 to 22. While the program is hybrid, we strongly suggest people participate onsite.
 
 ## ​Who should attend?
 
