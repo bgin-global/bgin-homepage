@@ -13,9 +13,11 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
 
 ## Colocated Event
 
+<div class="events">
     <a href="https://bitcoinconference.tokyo/en/">
         <img src="/images/Events/BitcoinTokyo2024.jpg">
     </a>
+</div>
 
 ## Background
 
