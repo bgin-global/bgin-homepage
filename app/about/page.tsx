@@ -41,21 +41,11 @@ export default function About() {
       </div>
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
-        <SectionTitle title="Our Approach" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.THREE}>
-          <AboutItem
-            title="Mission"
-            description="We aims at providing an open and neutral sphere for all stakeholders to deepen common understanding and to collaborate to address issues they face in order to attain sustainable development of the blockchain community."
-          />
-          <AboutItem
-            title="Participants"
-            description="Our participants include individuals and companies from a wide range of industries who are passionate about Blockchain technology and its potential to revolutionize the way we do business."
-          />
-          <AboutItem
-            title="Principles"
-            description="Our organization is guided by the principles of transparency, collaboration, and innovation. We believe that by working together and sharing knowledge, we can create a better future for all."
-          />
-        </div>
+        <SectionTitle title="BGIN Principle" />
+      </div>
+
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+        <SectionTitle title="BGIN Story" />
       </div>
 
       <HowToJoin />
