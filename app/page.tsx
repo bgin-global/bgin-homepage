@@ -35,31 +35,31 @@ export default function Home() {
         <SectionTitle title="See More" />
         <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
           <GeneralBoxItem
-            title="Documents"
+            title="Projects"
             thumbnail="/images/Home/Documents.svg"
-            description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Documents"
+            description=""
+            buttonTitle="View"
             buttonJumpTo="/documents"
           />
           <GeneralBoxItem
-            title="Events"
+            title="Block Conferences"
             thumbnail="/images/Home/Events.svg"
-            description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Events"
+            description=""
+            buttonTitle="View"
             buttonJumpTo="/events"
           />
           <GeneralBoxItem
             title="Working Groups"
             thumbnail="/images/Home/Working Groups.svg"
-            description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View WGs"
+            description=""
+            buttonTitle="View"
             buttonJumpTo="/working-groups"
           />
           <GeneralBoxItem
-            title="Meeting Notes"
+            title="Layer2 Meetups"
             thumbnail="/images/Home/Meeting Notes.svg"
-            description="You can read study reports and discussion reports established through the BGIN working group."
-            buttonTitle="View Meeting Notes"
+            description=""
+            buttonTitle="View"
             buttonJumpTo="/documents"
           />
         </div>

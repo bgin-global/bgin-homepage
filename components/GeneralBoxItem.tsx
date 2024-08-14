@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button/Button";
+import { CUSTOM_STYLES } from "@/styles/custom";
 
 interface Props {
   title: string;
@@ -14,7 +15,7 @@ export default function GeneralBoxItem(props: Props) {
     <div className="bg-white h-full w-full flex-1 flex-col flex justify-between items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button">
       <div>
         <div className="bg-cover w-full h-[200px] gap-2.5 rounded-xl">
-          <Image
+          {/* <Image
             alt={props.title}
             src={props.thumbnail}
             className="w-full h-full rounded-2xl"
@@ -23,14 +24,12 @@ export default function GeneralBoxItem(props: Props) {
             style={{
               objectFit: "cover",
             }}
-          />
+          /> */}
         </div>
         <div className="flex-col w-full flex items-start gap-6 px-2 h-fit">
           <div className="w-full flex-col flex items-start gap-1 text-black">
             <div className="flex-col flex items-start gap-2">
-              <div className="text-3xl leading-[42px] font-medium font-FamiljenGrotesk">
-                {props.title}
-              </div>
+              <div className={CUSTOM_STYLES.SUBTITLE}>{props.title}</div>
             </div>
             <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
               <div>{props.description}</div>
@@ -39,11 +38,13 @@ export default function GeneralBoxItem(props: Props) {
         </div>
       </div>
 
-      <Button
-        link={props.buttonJumpTo}
-        text={props.buttonTitle}
-        color="black"
-      />
+      <div>
+        <Button
+          link={props.buttonJumpTo}
+          text={props.buttonTitle}
+          color="black"
+        />
+      </div>
     </div>
   );
 }
