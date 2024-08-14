@@ -1,15 +1,16 @@
 "use client";
 import Image from "next/image";
-import ArrowRight from "./ArrowRight";
 import React, { useState } from "react";
 import Link from "next/link";
+import PlainButton from "./Button/PlainButton";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`${isOpen ? "" : "border border-b-black"
-        } static w-screen bg-white`}
+      className={`${
+        isOpen ? "" : "border border-b-black"
+      } static w-screen bg-white`}
     >
       <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
         <Link href="/">
@@ -146,58 +147,19 @@ function Header() {
       </div>
 
       <div
-        className={`${isOpen ? "" : "hidden"
-          } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
+        className={`${
+          isOpen ? "" : "hidden"
+        } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
         id="navbar"
       >
-        <Link
-          href="/about"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            About
-          </div>
-          <ArrowRight />
-        </Link>
-
-        <Link
-          href="/documents"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Documents
-          </div>
-          <ArrowRight />
-        </Link>
-        <a
-          href="https://www.youtube.com/@bgin/videos"
-          className="w-full flex justify-between items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Videos
-          </div>
-          <ArrowRight />
-        </a>
-        <Link
-          href="/events"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Events
-          </div>
-          <ArrowRight />
-        </Link>
-        <Link
-          href="/working-groups"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Working Groups
-          </div>
-          <ArrowRight />
-        </Link>
+        <PlainButton link="/about" text="About" />
+        <PlainButton link="/documents" text="Documents" />
+        <PlainButton
+          link="https://www.youtube.com/@bgin/videos"
+          text="Videos"
+        />
+        <PlainButton link="/events" text="Events" />
+        <PlainButton link="/working-groups" text="Working Groups" />
       </div>
     </div>
   );

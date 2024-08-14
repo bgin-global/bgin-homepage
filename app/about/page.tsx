@@ -1,10 +1,9 @@
 import AboutItem from "@/components/AboutItem";
-import ArrowRight from "@/components/ArrowRight";
 import Footer from "@/components/Footer";
 import GeneralBoxItem from "@/components/GeneralBoxItem";
 import Header from "@/components/Header";
 import Hero from "@/components/Home/Hero";
-import SectionTitle from "@/components/Home/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 import HowToJoin from "@/components/HowToJoin";
 import { getSortedEvents } from "@/lib/fetch-events";
 import { CUSTOM_STYLES } from "@/styles/custom";

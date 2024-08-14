@@ -1,6 +1,5 @@
 import Image from "next/image";
-import ArrowRight from "./ArrowRight";
-import Link from "next/link";
+import Button from "./Button/Button";
 
 interface Props {
   title: string;
@@ -40,15 +39,11 @@ export default function GeneralBoxItem(props: Props) {
         </div>
       </div>
 
-      <Link
-        href={props.buttonJumpTo}
-        className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
-        prefetch={false}
-        target="blank"
-      >
-        <div>{props.buttonTitle}</div>
-        <ArrowRight size="sm" color="white" />
-      </Link>
+      <Button
+        link={props.buttonJumpTo}
+        text={props.buttonTitle}
+        color="black"
+      />
     </div>
   );
 }

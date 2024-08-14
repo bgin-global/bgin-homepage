@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import ArrowRight from "@/components/ArrowRight";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getEventData } from "@/lib/fetch-events";
@@ -7,6 +6,7 @@ import Image from "next/image";
 import Tab from "./tabs";
 import { fetchMarkdownContent } from "@/lib/fetch-md";
 import Link from "next/link";
+import Button from "@/components/Button/Button";
 
 const contentDirectory = "contents/events/block10/";
 const mdPath = "20240303-block10";
@@ -61,17 +61,13 @@ export default async function Page() {
           }}
         />
         {event &&
-          Date.parse(event.date_until || event.date) >= Date.now() &&
-          event.register_link ? (
-          <a
-            href={event.register_link}
-            className="w-full bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div>Register Now</div>
-            <ArrowRight size="sm" color="white" />
-          </a>
+        Date.parse(event.date_until || event.date) >= Date.now() &&
+        event.register_link ? (
+          <Button
+            link={event.register_link}
+            text="Register Now"
+            color="black"
+          />
         ) : (
           <></>
         )}

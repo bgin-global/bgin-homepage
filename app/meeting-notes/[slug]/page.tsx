@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import SectionTitle from "@/components/Home/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 import MeetingNoteItem from "@/components/MeetingNoteItem";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import { getMeetingNotes } from "./notes";
@@ -24,7 +24,7 @@ export default async function MeetingNotePage({
         <SectionTitle title="Block Meeting Notes" />
         <div className={CUSTOM_STYLES.SECTION_FLEX.THREE}>
           {meetingNotes.map((meetingNote) => {
-            return <MeetingNoteItem key={meetingNote.id} note={meetingNote} />
+            return <MeetingNoteItem key={meetingNote.id} note={meetingNote} />;
           })}
         </div>
       </div>

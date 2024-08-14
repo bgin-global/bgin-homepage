@@ -1,5 +1,5 @@
 import { Event } from "@/lib/fetch-events";
-import ArrowRight from "./ArrowRight";
+import ArrowRight from "./Button/ArrowRight";
 import Image from "next/image";
 import Link from "next/link";
 

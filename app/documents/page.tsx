@@ -1,7 +1,7 @@
 import DocumentItem from "@/components/DocumentItem";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import SectionTitle from "@/components/Home/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 import { getAllDocuments } from "@/lib/fetch-documents";
 import { CUSTOM_STYLES } from "@/styles/custom";
 

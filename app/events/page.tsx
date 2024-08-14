@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import SectionTitle from "@/components/Home/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 import PastEventItem from "@/components/PastEventItem";
 import UpcomingEventTopItem from "@/components/UpcomingEventTopItem";
 import { getSortedEvents } from "@/lib/fetch-events";
