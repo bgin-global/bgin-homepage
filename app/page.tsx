@@ -6,7 +6,7 @@ import HowToJoin from "@/components/HowToJoin";
 import { nextCalls } from "@/contents/next-call";
 import { getSortedEvents } from "@/lib/fetch-events";
 import SectionTitle from "@/components/SectionTitle";
-import Hero from "@/components/Home/Hero";
+import Hero from "@/components/Hero";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import { projects } from "@/contents/projects";
 import ProjectInProgress from "@/components/projectInProgress";

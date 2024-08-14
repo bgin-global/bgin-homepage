@@ -1,7 +1,7 @@
 import AboutItem from "@/components/AboutItem";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Hero from "@/components/Home/Hero";
+import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
 import HowToJoin from "@/components/HowToJoin";
 import { getSortedEvents } from "@/lib/fetch-events";
