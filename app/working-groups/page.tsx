@@ -9,7 +9,6 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 
 export default function WorkingGroups() {
   const workingGroups = getAllWorkingGroups();
-  const meetingNotes = getSortedMeetingNotes();
 
   return (
     <main className="min-h-screen bg-white w-screen">
@@ -25,15 +24,6 @@ export default function WorkingGroups() {
                 workingGroup={workingGroup}
               />
             );
-          })}
-        </div>
-      </div>
-
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
-        <SectionTitle title="Meeting Notes" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.THREE}>
-          {meetingNotes.map((meetingNote) => {
-            return <MeetingNoteItem key={meetingNote.id} note={meetingNote} />;
           })}
         </div>
       </div>

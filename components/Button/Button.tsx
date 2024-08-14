@@ -15,7 +15,7 @@ export default function Button({ link, text, color, withArrow = true }: Props) {
         href={link}
         className={`${
           color == "black" ? "bg-black" : "bg-white"
-        } flex justify-between items-center gap-2 px-6 py-4 rounded-full`}
+        } flex justify-between items-center gap-2 px-6 py-4 rounded-full border border-black`}
         target="_blank"
         rel="noopener noreferrer"
       >

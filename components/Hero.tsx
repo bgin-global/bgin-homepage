@@ -1,5 +1,5 @@
 import { CUSTOM_STYLES } from "@/styles/custom";
-import Button from "../Button/Button";
+import Button from "./Button/Button";
 
 interface Props {
   type: 1 | 2;
