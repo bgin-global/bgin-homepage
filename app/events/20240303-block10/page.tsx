@@ -32,7 +32,7 @@ export default async function Page() {
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
-      <div className="text-black max-w-4xl w-full px-4 lg:px-0 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
+      <div className="text-black max-w-5xl w-full px-4 xl:px-0 pb-32 h-fit bg-white m-auto flex flex-col gap-4 bgin-button">
         <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk lg:pt-12 pt-4">
           {event?.title}
         </div>

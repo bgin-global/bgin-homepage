@@ -1,12 +1,12 @@
 "use client";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const router = useRouter();
   return (
     <div className="flex-col w-full flex justify-center items-center border-t border-black">
       <div className="w-full flex items-end px-4 py-12">
-        <div className="max-w-4xl m-auto flex-1 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end gap-10 lg:gap-0">
+        <div className="max-w-5xl m-auto flex-1 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-end gap-10 lg:gap-0">
           <div className="flex-col flex justify-center items-center lg:items-start gap-6 text-black">
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Contact Info
@@ -68,7 +68,7 @@ export default function Footer() {
 
             <svg
               onClick={() => {
-                router.push('https://twitter.com/bgin_global');
+                router.push("https://twitter.com/bgin_global");
               }}
               width="32"
               height="32"
@@ -84,7 +84,9 @@ export default function Footer() {
 
             <svg
               onClick={() => {
-                router.push("https://www.linkedin.com/company/blockchain-governance-initiative-network/");
+                router.push(
+                  "https://www.linkedin.com/company/blockchain-governance-initiative-network/"
+                );
               }}
               width="32"
               height="32"
@@ -107,7 +109,9 @@ export default function Footer() {
 
             <svg
               onClick={() => {
-                router.push('https://www.youtube.com/channel/UCW_2j8IK0G92Mjx6OEVbS2w')
+                router.push(
+                  "https://www.youtube.com/channel/UCW_2j8IK0G92Mjx6OEVbS2w"
+                );
               }}
               width="32"
               height="32"

@@ -13,11 +13,11 @@ export default function Documents() {
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Documents" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.FOUR}>
+        {/* <div className={CUSTOM_STYLES.SECTION_FLEX.FOUR}>
           {documents.map((document) => (
             <DocumentItem key={document.id} document={document} />
           ))}
-        </div>
+        </div> */}
       </div>
       <Footer />
     </main>

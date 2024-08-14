@@ -13,7 +13,7 @@ function Header() {
         isOpen ? "" : "border border-b-black"
       } static w-screen bg-white`}
     >
-      <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
+      <div className="flex justify-between items-center p-4 max-w-5xl m-auto">
         <Link href="/">
           <Image
             src="/images/Header/Logo.svg"

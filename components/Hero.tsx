@@ -7,7 +7,7 @@ interface Props {
 
 export default function Hero({ type }: Props) {
   return (
-    <div className="flex-col flex items-start lg:pt-6 pb-16 h-fit max-w-4xl m-auto">
+    <div className="flex-col flex items-start lg:pt-6 pb-16 h-fit max-w-5xl m-auto">
       <div className="flex-col w-full flex items-center gap-12 pt-16">
         <div className="flex-col flex items-center gap-5 text-black mx-4">
           <div className={CUSTOM_STYLES.TITLE.CENTER}>

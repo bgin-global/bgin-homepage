@@ -1,20 +1,20 @@
-import { PublishedProject } from "@/contents/projects";
 import { CUSTOM_STYLES } from "@/styles/custom";
 
 interface Props {
-  project: PublishedProject;
+  title: string;
+  link: string;
 }
 
-export default function ProjectPublished({ project }: Props) {
+export default function ItemList({ title, link }: Props) {
   return (
     <li className={`${CUSTOM_STYLES.DESCRIPTION} bgin-button`}>
       <a
-        href={project.link}
+        href={link}
         className="relative"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {project.date}, {project.title}
+        {title}
       </a>
     </li>
   );
