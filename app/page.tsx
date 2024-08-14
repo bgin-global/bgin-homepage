@@ -8,6 +8,8 @@ import { getSortedEvents } from "@/lib/fetch-events";
 import SectionTitle from "@/components/SectionTitle";
 import Hero from "@/components/Home/Hero";
 import { CUSTOM_STYLES } from "@/styles/custom";
+import { projects } from "@/contents/projects";
+import ProjectInProgress from "@/components/projectInProgress";
 
 export default function Home() {
   const events = getSortedEvents("FUTURE");
@@ -22,7 +24,11 @@ export default function Home() {
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Projects in progress" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}></div>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
+          {projects.inProgress.map((project) => {
+            return <ProjectInProgress key={project.title} project={project} />;
+          })}
+        </div>
       </div>
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>

@@ -15,5 +15,6 @@ export const CUSTOM_STYLES = {
       "text-4xl leading-[50px] font-medium font-FamiljenGrotesk text-center",
     LEFT: "text-4xl leading-[50px] font-medium font-FamiljenGrotesk",
   },
+  SUBTITLE: "text-2xl leading-[35px] font-medium font-FamiljenGrotesk",
   DESCRIPTION: "text-base leading-[19px] font-Inter",
 };
