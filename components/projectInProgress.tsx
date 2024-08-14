@@ -8,7 +8,7 @@ interface Props {
 
 export default function ProjectInProgress({ project }: Props) {
   return (
-    <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12">
+    <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 m-4">
       <div className="h-full lg:w-full flex-col flex items-start gap-6">
         <div className={CUSTOM_STYLES.SUBTITLE}>{project.title}</div>
         <div className="w-full flex-col flex items-start gap-6 bgin-button">

@@ -6,7 +6,16 @@ export interface Project {
   wg_link: string;
 }
 
-export const projects: { inProgress: Project[] } = {
+export interface PublishedProject {
+  title: string;
+  date: string;
+  link: string;
+}
+
+export const projects: {
+  inProgress: Project[];
+  published: PublishedProject[];
+} = {
   inProgress: [
     {
       title: "Wallet Governance",
@@ -79,6 +88,58 @@ export const projects: { inProgress: Project[] } = {
       reference: "/",
       wg: "GIKP WG",
       wg_link: "/",
+    },
+  ],
+  published: [
+    {
+      title:
+        "Present and Future of a Decentralized Financial System and the Associated Regulatory Considerations",
+      date: "January 01 2021",
+      link: "/",
+    },
+    {
+      title: "Study Report for Ransomware Reaction",
+      date: "April 21 2022",
+      link: "/",
+    },
+    {
+      title: "NFT Study Report Part 1: Introduction and Use Cases",
+      date: "June 06 2022",
+      link: "/",
+    },
+    {
+      title: "Incident Response of Decentralized Custody; A Case Study",
+      date: "June 06 2022",
+      link: "/",
+    },
+    {
+      title:
+        "Soulbound Tokens (SBTs) Study Report Part 1: Building and Embracing a New Social Identity Layer?",
+      date: "February 01 2023",
+      link: "/",
+    },
+    {
+      title: "Proposal of Principles of DeFi Disclosure and Regulation",
+      date: "February 12 2023",
+      link: "/",
+    },
+    {
+      title:
+        "Discussion Points: Potential Points of Failure of Stablecoins and DeFi",
+      date: "March 23 2023",
+      link: "/",
+    },
+
+    {
+      title:
+        "Study Report on Selective Disclosure:  Overview and Classifications",
+      date: "April 28 2023",
+      link: "/",
+    },
+    {
+      title: "Potential Points of Failure of Stablecoins and DeFi",
+      date: "July 24 2023",
+      link: "/",
     },
   ],
 };
