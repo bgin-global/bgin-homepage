@@ -1,5 +1,5 @@
 import Button from "@/components/Button/Button";
-import { loadmaps } from "@/contents/loadmaps";
+import { roadmaps } from "@/contents/roadmaps";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Image from "next/image";
 
@@ -74,7 +74,7 @@ const Timeline = () => {
           className="h-full w-auto"
         />
       </div>
-      {loadmaps.map((item, index) => (
+      {roadmaps.map((item, index) => (
         <TimelineItem key={index} {...item} />
       ))}
       <div className="flex gap-4 lg:gap-10 w-full max-md:max-w-full">

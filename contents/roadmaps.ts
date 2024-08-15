@@ -1,4 +1,4 @@
-export interface LoadmapData {
+export interface RoadmapData {
   date: string;
   title: string;
   description: string;
@@ -8,7 +8,7 @@ export interface LoadmapData {
   textColor: string;
 }
 
-export const loadmaps: LoadmapData[] = [
+export const roadmaps: RoadmapData[] = [
   {
     date: "March 2019",
     title: "Blockchain Roundtable",
