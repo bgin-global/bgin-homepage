@@ -6,7 +6,8 @@ export const CUSTOM_STYLES = {
   SECTION_FLEX: {
     ONE: "w-screen lg:w-full max-w-5xl px-4 flex flex-col gap-6",
     TWO: "w-screen lg:w-full max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-11",
-    THREE: "w-screen lg:w-full max-w-5xl px-4 flex flex-col lg:flex-row gap-6",
+    LATERAL:
+      "w-screen lg:w-full max-w-5xl px-4 flex flex-col lg:flex-row gap-6",
   },
   TITLE: {
     CENTER:

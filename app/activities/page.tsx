@@ -9,6 +9,7 @@ import ItemBlock from "@/components/ItemBlock";
 import ItemList from "@/components/ItemList";
 import { projects } from "@/contents/projects";
 import ItemCard from "@/components/ItemCard";
+import Image from "next/image";
 
 export default function Activities() {
   return (
@@ -17,8 +18,21 @@ export default function Activities() {
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Structures of Our Activities" />
-
-        <div className={CUSTOM_STYLES.SECTION_FLEX.THREE}>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
+          <Image
+            src="/images/Activities/structure.svg"
+            alt="structures of our activities"
+            width={100}
+            height={100}
+            className="w-full lg:w-[90%] h-auto"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </div>
+      </div>
+      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           <ItemCard
             title="Block Conference"
             description="Twice a year (spring and fall)

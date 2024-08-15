@@ -21,23 +21,13 @@ function HowToJoin() {
                   </div>
                 </div>
               </div>
-              <Button
-                link="https://bgin.discourse.group/"
-                text="Join Our Community"
-                color="white"
-              />
-            </div>
-            <div className="bg-cover h-full w-full lg:w-1/2 flex items-start gap-2.5">
-              {/* <Image
-                src="/images/How to Join/Image.svg"
-                alt="How to Join"
-                className="w-full h-[300px] lg:h-full max-h-[385px] rounded-t-xl lg:rounded-r-xl"
-                width={100}
-                height={100}
-                style={{
-                  objectFit: "cover",
-                }}
-              /> */}
+              <div>
+                <Button
+                  link="https://bgin.discourse.group/"
+                  text="Join Our Community"
+                  color="white"
+                />
+              </div>
             </div>
           </div>
         </div>

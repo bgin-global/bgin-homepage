@@ -22,7 +22,7 @@ export default async function MeetingNotePage({
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
         <SectionTitle title="Block Meeting Notes" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.THREE}>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           {meetingNotes.map((meetingNote) => {
             return <MeetingNoteItem key={meetingNote.id} note={meetingNote} />;
           })}
