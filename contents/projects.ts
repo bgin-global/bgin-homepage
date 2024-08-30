@@ -95,51 +95,51 @@ export const projects: {
       title:
         "Present and Future of a Decentralized Financial System and the Associated Regulatory Considerations",
       date: "January 01 2021",
-      link: "/",
+      link: "/documents/20210101_Defi.pdf",
     },
     {
       title: "Study Report for Ransomware Reaction",
       date: "April 21 2022",
-      link: "/",
+      link: "/documents/20220421_Ransomwere.pdf",
     },
     {
       title: "NFT Study Report Part 1: Introduction and Use Cases",
       date: "June 06 2022",
-      link: "/",
+      link: "/documents/20220606_NFT.pdf",
     },
     {
       title: "Incident Response of Decentralized Custody; A Case Study",
       date: "June 06 2022",
-      link: "/",
+      link: "/documents/20220606_Custody.pdf",
     },
     {
       title:
         "Soulbound Tokens (SBTs) Study Report Part 1: Building and Embracing a New Social Identity Layer?",
       date: "February 01 2023",
-      link: "/",
+      link: "/documents/20230201_SBT.pdf",
     },
     {
       title: "Proposal of Principles of DeFi Disclosure and Regulation",
       date: "February 12 2023",
-      link: "/",
+      link: "/documents/20230213_Defi_Disclosure.pdf",
     },
     {
       title:
         "Discussion Points: Potential Points of Failure of Stablecoins and DeFi",
       date: "March 23 2023",
-      link: "/",
+      link: "/documents/20230323_Stablecoin_and_Defi.pdf",
     },
 
     {
       title:
         "Study Report on Selective Disclosure:  Overview and Classifications",
       date: "April 28 2023",
-      link: "/",
+      link: "/documents/20230428_Selective_Disclosure.pdf",
     },
     {
       title: "Potential Points of Failure of Stablecoins and DeFi",
       date: "July 24 2023",
-      link: "/",
+      link: "/documents/20230724_PoF_of_Stablecoins.pdf",
     },
   ],
 };
