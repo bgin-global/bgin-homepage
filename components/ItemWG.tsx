@@ -1,27 +1,13 @@
-import Image from "next/image";
-import ArrowRight from "./Button/ArrowRight";
-import { WorkingGroup } from "@/lib/fetch-working-groups";
+import { WorkingGroup } from "@/contents/workingGroups";
 import Button from "./Button/Button";
 
 interface Props {
   workingGroup: WorkingGroup;
 }
 
-export default function WorkingGroupItem(props: Props) {
+export default function ItemWG(props: Props) {
   return (
     <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
-      <div className="w-0 lg:w-1/3 lg:h-[400px] flex items-start gap-2.5 rounded-xl">
-        {/* <Image
-          alt="Hero Image"
-          src="/images/Hero/Image_SP.svg"
-          className="w-[100%] h-[100%] rounded-2xl"
-          width={100}
-          height={100}
-          style={{
-            objectFit: "cover",
-          }}
-        /> */}
-      </div>
       <div className="h-full lg:w-full flex-col flex items-start gap-6">
         <div className="text-3xl leading-[48px] font-medium text-black font-FamiljenGrotesk">
           {props.workingGroup.group_name}{" "}

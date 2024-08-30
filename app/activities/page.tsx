@@ -1,8 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
-import { getSortedMeetingNotes } from "@/lib/fetch-meeting-notes";
-import { getAllWorkingGroups } from "@/lib/fetch-working-groups";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import SectionSubtitle from "@/components/SectionSubtitle";
 import ItemBlock from "@/components/ItemBlock";
@@ -62,7 +60,7 @@ Collocated with international events host by other communities to discuss topics
 
 ・Project management
 ・Discussion on the project details"
-            link="/activities/working-group"
+            link="/activities/working-groups"
             colorPattern="navy"
           />
         </div>

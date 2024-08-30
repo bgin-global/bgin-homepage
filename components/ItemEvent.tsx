@@ -7,7 +7,7 @@ interface Props {
   event: Event;
 }
 
-export default function PastEventItem(props: Props) {
+export default function ItemEvent(props: Props) {
   return (
     <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
       <div className="w-full h-[300px] flex items-start gap-2.5 rounded-xl">

@@ -105,15 +105,6 @@ function Header() {
               Activities
             </div>
           </Link>
-
-          <Link href="/events">
-            <div className="text-base leading-[19px] text-black">Events</div>
-          </Link>
-          <Link href="/working-groups">
-            <div className="text-base leading-[19px] text-black">
-              Working Groups
-            </div>
-          </Link>
           <div>
             <Button
               link="https://bgin.discourse.group/"
@@ -137,8 +128,6 @@ function Header() {
           link="https://www.youtube.com/@bgin/videos"
           text="Videos"
         />
-        <PlainButton link="/events" text="Events" />
-        <PlainButton link="/working-groups" text="Working Groups" />
       </div>
     </div>
   );
