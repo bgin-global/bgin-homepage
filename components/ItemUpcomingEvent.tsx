@@ -1,7 +1,3 @@
-import { Event } from "@/lib/fetch-events";
-import ArrowRight from "./Button/ArrowRight";
-import Image from "next/image";
-import Link from "next/link";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Button from "./Button/Button";
 

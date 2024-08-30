@@ -1,9 +1,7 @@
-import EventItem from "@/components/Home/EventItem";
 import Footer from "@/components/Footer";
 import ItemBlock from "@/components/ItemBlock";
 import Header from "@/components/Header";
 import HowToJoin from "@/components/HowToJoin";
-import { nextCalls } from "@/contents/next-call";
 import { getSortedEvents } from "@/lib/fetch-events";
 import SectionTitle from "@/components/SectionTitle";
 import Hero from "@/components/Hero";
@@ -40,7 +38,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
+      {/* <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
         <SectionTitle title="See More" />
         <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
           <ItemBlock
@@ -72,7 +70,7 @@ export default function Home() {
             buttonJumpTo="/documents"
           />
         </div>
-      </div>
+      </div> */}
 
       <HowToJoin />
       <Footer />
