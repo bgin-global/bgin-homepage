@@ -6,6 +6,38 @@ import HowToJoin from "@/components/HowToJoin";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Image from "next/image";
 import Timeline from "./Timeline";
+import ItemPrinciple from "./ItemPrinciple";
+
+const principles = [
+  {
+    title: "Neutrality",
+    description:
+      "No matter the location, we always prioritize neutrality in our discussion forums where participants from diverse backgrounds or with differing viewpoints can discuss issues or make decisions without any bias or influence from any particular group. The purpose is to ensure fairness and impartiality in the discussions and outcomes.",
+    imageSrc: "/images/About/Neutral Decision.svg",
+    imageAlt: "Neutrality icon",
+  },
+  {
+    title: "Multi-Stakeholders",
+    description:
+      "We value a culture where multiple stakeholder groups and parties are welcomed and free to participate and express their views. We embody multi-stakeholder discussions, which are essential for the foundation of blockchain governance. Stakeholders include the entire blockchain ecosystem, including governments, business entities, developers, academia, and customers.",
+    imageSrc: "/images/About/Multicultural People.svg",
+    imageAlt: "Multi-Stakeholders icon",
+  },
+  {
+    title: "Common Language",
+    description:
+      "We develop and record a set of terms and definitions that are agreed upon by multi-stakeholders involved to help ensure clarity, reduce misunderstandings, and facilitate effective communication, and build academic anchors through continuous provision of trustable documents and codes based on an open source-style approach",
+    imageSrc: "/images/About/Multicultural People.svg",
+    imageAlt: "Common Language icon",
+  },
+  {
+    title: "Best Practices & Standards",
+    description:
+      "Our goal is to establish formal guidelines or specifications—be they technical, operational, or regulatory—developed through stakeholder consensus to ensure robust blockchain governance while fostering technological innovation.",
+    imageSrc: "/images/About/Multicultural People.svg",
+    imageAlt: "Best Practices & Standards icon",
+  },
+];
 
 export default function About() {
   return (
@@ -40,6 +72,15 @@ export default function About() {
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="BGIN Principle" />
+        <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
+          {principles.map((principle, index) => (
+            <ItemPrinciple
+              key={index}
+              {...principle}
+              isReversed={index % 2 != 0}
+            />
+          ))}
+        </div>
       </div>
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
