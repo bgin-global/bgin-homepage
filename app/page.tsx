@@ -63,13 +63,29 @@ export default function Home() {
           <ItemCard
             title={blockUpcoming.title}
             subtitle={`@${blockUpcoming.location}`}
-            description={`Date: ${blockUpcoming.date}`}
+            description={
+              <>
+                <p className="mb-0">Date: {blockUpcoming.date}</p>
+                <p className="mb-0">Location: {blockUpcoming.location}</p>
+              </>
+            }
             link="/activities/block-conference"
             colorPattern="white"
           />
           <ItemCard
             title="Working Group"
-            description=""
+            description={
+              <>
+                <div className="mb-2">
+                  <p>GIKP WG</p>
+                  <p>Date: 11am Universal Time, _________, 2024</p>
+                </div>
+                <div>
+                  <p>FASE WG</p>
+                  <p>Date: 11am Universal Time, _________, 2024</p>
+                </div>
+              </>
+            }
             link="/activities/working-groups"
             colorPattern="navy"
           />

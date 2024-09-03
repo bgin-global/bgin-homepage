@@ -33,33 +33,64 @@ export default function Activities() {
         <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           <ItemCard
             title="Block Conference"
-            description="Twice a year (spring and fall)
-・Approval/multi-stakeholder discussion on project documents created or in progress 
-・Clarification of discussion points regarding new topics
-・New projects launch
-・Steering Committee Meeting"
+            subtitle=""
+            description={
+              <>
+                <p className="mb-2">Twice a year (spring and fall)</p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>
+                    Approval/multi-stakeholder discussion on project documents
+                    created or in progress
+                  </li>
+                  <li>
+                    Clarification of discussion points regarding new topics
+                  </li>
+                  <li>New projects launch</li>
+                  <li>Steering Committee Meeting</li>
+                </ul>
+              </>
+            }
             link="/activities/block-conference"
             colorPattern="white"
           />
           <ItemCard
             title="Layer2 Meetup"
-            description="2-3 times a month
-
-Collocated with international events host by other communities to discuss topics relevant to the communities
-
-・Discussion on project documents in progress with new community members
-・Discovery of new topics for discussion at Block Conferences
-・Networking"
+            subtitle="(Off-chain transactions)"
+            description={
+              <>
+                <p className="mb-2">2-3 times a month</p>
+                <p className="mb-2">
+                  Collocated with international events host by other communities
+                  to discuss topics relevant to the communities
+                </p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>
+                    Discussion on project documents in progress with new
+                    community members
+                  </li>
+                  <li>
+                    Discovery of new topics for discussion at Block Conferences
+                  </li>
+                  <li>Networking</li>
+                </ul>
+              </>
+            }
             link="/activities/layer2-meetup"
             colorPattern="blue"
             isNew={true}
           />
           <ItemCard
             title="Working Group"
-            description="Biweekly meetings
-
-・Project management
-・Discussion on the project details"
+            subtitle="(Transactions)"
+            description={
+              <>
+                <p className="mb-2"> Biweekly meetings</p>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Project management</li>
+                  <li>Discussion on the project details</li>
+                </ul>
+              </>
+            }
             link="/activities/working-groups"
             colorPattern="navy"
           />

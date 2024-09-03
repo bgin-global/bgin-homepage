@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import Button from "./Button/Button";
 import { CUSTOM_STYLES } from "@/styles/custom";
 
@@ -7,7 +8,7 @@ interface Props {
   title: string;
   subtitle?: string;
   height?: string;
-  description: string;
+  description: ReactNode;
   link: string;
   colorPattern: COLOR_PATTERN;
   isNew?: boolean;
@@ -68,19 +69,22 @@ export default function ItemCard({
               colorPattern
             )} w-full flex-col flex items-start gap-1`}
           >
-            <div className="flex-row flex items-start gap-2">
-              <div className={CUSTOM_STYLES.SUBTITLE}>{title}</div>
-              {isNew && (
-                <div className={CUSTOM_STYLES.SUBTITLE + " text-[#D3CC2F]"}>
-                  NEW!
-                </div>
+            <div className="h-20">
+              <div className="flex-row flex items-start gap-2">
+                <div className={CUSTOM_STYLES.SUBTITLE}>{title}</div>
+                {isNew && (
+                  <div className={CUSTOM_STYLES.SUBTITLE + " text-[#D3CC2F]"}>
+                    NEW!
+                  </div>
+                )}
+              </div>
+              {subtitle && (
+                <div className={CUSTOM_STYLES.SUBTITLE}>{subtitle}</div>
               )}
             </div>
-            {subtitle && (
-              <div className={CUSTOM_STYLES.SUBTITLE}>{subtitle}</div>
-            )}
+
             <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
-              <div>{description}</div>
+              {description}
             </div>
           </div>
         </div>
