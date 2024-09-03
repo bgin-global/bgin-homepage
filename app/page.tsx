@@ -8,10 +8,14 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 import { projects } from "@/contents/projects";
 import Image from "next/image";
 import ItemCard from "@/components/ItemCard";
-import { upcomingLayer2Meetup } from "@/contents/upcomingEvents";
+import {
+  upcomingBlockConference,
+  upcomingLayer2Meetup,
+} from "@/contents/upcomingEvents";
 
 export default function Home() {
   const layer2Upcoming = upcomingLayer2Meetup;
+  const blockUpcoming = upcomingBlockConference;
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
@@ -42,7 +46,7 @@ export default function Home() {
           />
         </div>
         <div
-          className={`${CUSTOM_STYLES.SECTION_FLEX.ONE} items-start justify-start px-4`}
+          className={`${CUSTOM_STYLES.SECTION_FLEX.ONE} items-start justify-start px-4 pb-12`}
         >
           <Image
             src="/images/Home/Layer1 Activity.svg"
@@ -53,6 +57,21 @@ export default function Home() {
             style={{
               objectFit: "cover",
             }}
+          />
+        </div>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
+          <ItemCard
+            title={blockUpcoming.title}
+            subtitle={`@${blockUpcoming.location}`}
+            description={`Date: ${blockUpcoming.date}`}
+            link="/activities/block-conference"
+            colorPattern="white"
+          />
+          <ItemCard
+            title="Working Group"
+            description=""
+            link="/activities/working-groups"
+            colorPattern="navy"
           />
         </div>
       </div>
