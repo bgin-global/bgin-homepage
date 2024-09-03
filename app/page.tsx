@@ -11,11 +11,13 @@ import ItemCard from "@/components/ItemCard";
 import {
   upcomingBlockConference,
   upcomingLayer2Meetup,
+  upcomingWGCalls,
 } from "@/contents/upcomingEvents";
 
 export default function Home() {
   const layer2Upcoming = upcomingLayer2Meetup;
   const blockUpcoming = upcomingBlockConference;
+  const wgCallUpcoming = upcomingWGCalls;
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
@@ -76,14 +78,14 @@ export default function Home() {
             title="Working Group"
             description={
               <>
-                <div className="mb-2">
-                  <p>GIKP WG</p>
-                  <p>Date: 11am Universal Time, _________, 2024</p>
-                </div>
-                <div>
-                  <p>FASE WG</p>
-                  <p>Date: 11am Universal Time, _________, 2024</p>
-                </div>
+                {wgCallUpcoming.map((wg, index) => {
+                  return (
+                    <div key={index} className="mb-2">
+                      <p>{wg.wgTitle}</p>
+                      <p>Date: {wg.date}</p>
+                    </div>
+                  );
+                })}
               </>
             }
             link="/activities/working-groups"

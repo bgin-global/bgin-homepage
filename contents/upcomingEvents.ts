@@ -11,3 +11,14 @@ export const upcomingLayer2Meetup = {
   location: "Zurich, Switzerland",
   link: "/",
 };
+
+export const upcomingWGCalls = [
+  {
+    wgTitle: "GIKP WG",
+    date: "11am Universal Time, _________, 2024",
+  },
+  {
+    wgTitle: "FASE WG",
+    date: "11am Universal Time, _________, 2024",
+  },
+];
