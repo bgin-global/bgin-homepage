@@ -5,6 +5,8 @@ type COLOR_PATTERN = "white" | "blue" | "navy";
 
 interface Props {
   title: string;
+  subtitle?: string;
+  height?: string;
   description: string;
   link: string;
   colorPattern: COLOR_PATTERN;
@@ -46,6 +48,8 @@ const buttonColor = (colorPattern: COLOR_PATTERN): "white" | "black" => {
 
 export default function ItemCard({
   title,
+  subtitle,
+  height,
   description,
   link,
   colorPattern,
@@ -53,9 +57,9 @@ export default function ItemCard({
 }: Props) {
   return (
     <div
-      className={`${backgroundColor(
-        colorPattern
-      )} h-[420px] w-full flex flex-col justify-between items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button`}
+      className={`${backgroundColor(colorPattern)} ${
+        height ?? "h-[420px]"
+      } w-full flex flex-col justify-between items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button`}
     >
       <div>
         <div className="flex-col w-full flex items-start gap-6 h-fit">
@@ -72,6 +76,9 @@ export default function ItemCard({
                 </div>
               )}
             </div>
+            {subtitle && (
+              <div className={CUSTOM_STYLES.SUBTITLE}>{subtitle}</div>
+            )}
             <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
               <div>{description}</div>
             </div>

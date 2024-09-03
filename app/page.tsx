@@ -2,21 +2,59 @@ import Footer from "@/components/Footer";
 import ItemBlock from "@/components/ItemBlock";
 import Header from "@/components/Header";
 import HowToJoin from "@/components/HowToJoin";
-import { getSortedEvents } from "@/lib/fetch-events";
 import SectionTitle from "@/components/SectionTitle";
 import Hero from "@/components/Hero";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import { projects } from "@/contents/projects";
+import Image from "next/image";
+import ItemCard from "@/components/ItemCard";
+import { upcomingLayer2Meetup } from "@/contents/upcomingEvents";
 
 export default function Home() {
-  const events = getSortedEvents("FUTURE");
+  const layer2Upcoming = upcomingLayer2Meetup;
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
       <Hero type={1} />
 
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+      <div className={`${CUSTOM_STYLES.SECTION_CONTAINER.BLUE} items-start`}>
         <SectionTitle title="Next Activities" />
+        <div
+          className={`${CUSTOM_STYLES.SECTION_FLEX.ALWAYS_LATERAL} items-end`}
+        >
+          <Image
+            src="/images/Home/Layer2 Activity.svg"
+            alt="Layer 2 Activity"
+            width={100}
+            height={100}
+            className="w-full h-auto"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+          <ItemCard
+            title={layer2Upcoming.title}
+            subtitle={`@${layer2Upcoming.location}`}
+            description={`Date: ${layer2Upcoming.date}`}
+            link="/activities/layer2-meetup"
+            height="h-auto"
+            colorPattern="blue"
+          />
+        </div>
+        <div
+          className={`${CUSTOM_STYLES.SECTION_FLEX.ONE} items-start justify-start px-4`}
+        >
+          <Image
+            src="/images/Home/Layer1 Activity.svg"
+            alt="Layer 1 Activity"
+            width={100}
+            height={100}
+            className="w-[80%] h-auto"
+            style={{
+              objectFit: "cover",
+            }}
+          />
+        </div>
       </div>
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>

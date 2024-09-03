@@ -8,6 +8,7 @@ export const CUSTOM_STYLES = {
     TWO: "w-screen lg:w-full max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-11",
     LATERAL:
       "w-screen lg:w-full max-w-5xl px-4 flex flex-col lg:flex-row gap-6",
+    ALWAYS_LATERAL: "w-screen lg:w-full max-w-5xl px-4 flex flex-row gap-6",
   },
   TITLE: {
     CENTER:
