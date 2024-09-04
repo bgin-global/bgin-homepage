@@ -52,10 +52,10 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 | ------------------- | --------------------------------- | ------------------------------------ |
 | 12:00 - 13:00       | Registration & Networking Lunch   |                                      |
 | 13:00 - 13:15       | Opening                           |                                      |
-| 13:15 - 14:45       | Worksop session                   | Wallet Governance                    |
+| 13:15 - 14:45       | Worksop session                   | Regulatory Uncertainty for Lightning Businesses|
 | 14:45 - 15:00       | Coffee Break                      |                                      |
-| 15:00 - 16:30       | Workshop Session                  | Cyber Security and Incident Response |
+| 15:00 - 16:30       | Workshop Session                  | Wallet Governance                    |
 | 16:30 - 16:45       | Coffee Break                      |                                      |
-| 16:45 - 18:15       | Workshop Session                  | Regulatory Uncertainty for Lightning Businesses|
+| 16:45 - 18:15       | Workshop Session                  | Cyber Security and Incident Response |
 | 18:15 - 18:30       | Closing                           |                                      |
 
