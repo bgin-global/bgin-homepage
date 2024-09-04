@@ -19,6 +19,21 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
     </a>
 </div>
 
+## Sponsors
+
+<div class="sponsors">
+    <a href="https://www.garage.co.jp/en/">
+        <img src="/images/Events/sponsor/DG.jpeg">
+    </a>
+    <a href="https://www.ginco.co.jp/en">
+        <img src="/images/Events/sponsor/Ginco.jpeg">
+    </a>
+    <a href="https://fintechjapan.org/en/">
+        <img src="/images/Events/sponsor/fintech_assoc_japan.jpg">
+    </a>
+</div>
+
+
 ## Background
 
 Blockchain Governance Initiative Network (BGIN) is a non-profit organization that creates neutral forums for in-depth discussions among all stakeholders, documenting a common language to establish shared understanding. It also fosters innovation, best practices, and standards for blockchain governance in operational, regulatory, and technical spheres. We hold the second layer 2 meetup in Tokyo, Japan, the purpose of which is to discuss our project topics with people in different communities and expand our community through networking. 
@@ -43,3 +58,4 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 | 16:30 - 16:45       | Coffee Break                      |                                      |
 | 16:45 - 18:15       | Workshop Session                  | Regulatory Uncertainty for Lightning Businesses|
 | 18:15 - 18:30       | Closing                           |                                      |
+
