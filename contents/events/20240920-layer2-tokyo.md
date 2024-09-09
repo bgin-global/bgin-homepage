@@ -62,6 +62,7 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 ## Workshop Agenda and Related Documents
 
 ​The purpose of our workshops at Layer2 Meetup is:
+
 ・​Review and discussion of existing documents and key priority issues
 
 ​・Identification of items that should be standardized
