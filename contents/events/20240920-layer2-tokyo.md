@@ -63,15 +63,20 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ​The purpose of our workshops at Layer2 Meetup is:
 ・​Review and discussion of existing documents and key priority issues
+
 ​・Identification of items that should be standardized
+
 ​・Creation of a draft table of contents for new papers
 
 <b>​13:15-14:45 Workshop Session: Regulatory Uncertainty for Lightning Businesses</b>
 
 
+
 <b>​​15:00-16:30 Workshop Session: Wallet Governance</b>
+
 https://bgin.discourse.group/t/wallet-governance-layer2-meetup-tokyo-sept-20th-2024/536
 
 <b>​16:45-18:15 Workshop Session: Cybersecurity & Incident Response</b>
+
 ​https://bgin.discourse.group/t/cybersecurity-standard-layer2-meetup-tokyo-sept-20th-2024/537
 
