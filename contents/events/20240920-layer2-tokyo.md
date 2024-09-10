@@ -37,7 +37,7 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
 
 <div class="sponsors">
     <a href="https://www.garage.co.jp/en/">
-        <img src="/images/Events/sponsor/JFSA.ong">
+        <img src="/images/Events/sponsor/JFSA.png">
     </a>
 
 
