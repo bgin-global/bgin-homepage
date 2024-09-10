@@ -77,11 +77,15 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ​・Creation of a draft table of contents for new papers
 
+
 <b>​13:15-14:45 Workshop Session: Regulatory Uncertainty for Lightning Businesses</b>
+
 
 For more details: 
 
+
 <b>​​15:00-16:30 Workshop Session: Wallet Governance</b>
+
 
 - ​What is the definition of “Governance” for a wallet? (5 mins)
 ​- Wallet Governance and Policy Study Report (15 mins)
@@ -92,7 +96,9 @@ For more details:
 
 For more details: https://bgin.discourse.group/t/wallet-governance-layer2-meetup-tokyo-sept-20th-2024/536
 
+
 <b>​16:45-18:15 Workshop Session: Cybersecurity & Incident Response</b>
+
 
 - Cybersecurity Information Sharing Alignment for the Crypto Industry (20 mins)
 ​- Information Sharing and Analysis Center (ISAC) for crypto (10 mins)
@@ -101,4 +107,5 @@ For more details: https://bgin.discourse.group/t/wallet-governance-layer2-meetup
 - ​Next steps (5 mins)
 
 For more details: ​https://bgin.discourse.group/t/cybersecurity-standard-layer2-meetup-tokyo-sept-20th-2024/537
+
 
