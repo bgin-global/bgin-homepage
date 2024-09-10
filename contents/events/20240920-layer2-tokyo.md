@@ -81,8 +81,7 @@ For more details:
 - ​What technical and operational requirements are necessary for proper key and privacy management to protect users? (25 mins)
 - ​How can wallets be developed securely? (20 mins)
 - ​How can wallets balance with regulatory requirements? (20 mins)
-
-​Next steps (5 minutes)
+- ​Next steps (5 minutes)
 
 For more details: https://bgin.discourse.group/t/wallet-governance-layer2-meetup-tokyo-sept-20th-2024/536
 
