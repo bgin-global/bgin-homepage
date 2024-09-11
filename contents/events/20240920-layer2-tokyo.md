@@ -33,7 +33,7 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
     </a>
 </div>
 
-## Endorsement 
+## Partners
 
 <div class="sponsors">
     <a href="https://www.fsa.go.jp/en/">
