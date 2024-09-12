@@ -73,6 +73,7 @@ You can edit the contents under the folder `contents/` directly.
 | Project List          | /contents/projects.ts       |
 | Working Group List    | /contents/workingGroups.ts  |
 | Event                 | contents/events/...         |
+| Partnerships          | contents/sponsors.ts        |
 
 For other contents, please edit `app/` directly.
 
