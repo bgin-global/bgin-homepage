@@ -1,9 +1,6 @@
-# <img src="./public/images/Header/Logo.svg">
+## <img src="./public/images/Header/Logo.svg">
 
-BGIN's (new) official website powered by Next.js and TailwindCSS.<br>
-With simple, popular management workflow.
-
-<br>
+BGIN's official website powered by Next.js and TailwindCSS.
 
 ## Prepare
 
@@ -23,8 +20,6 @@ https://docs.github.com/en/get-started/quickstart/hello-world
 
 also see [cheatsheets](https://training.github.com/downloads/github-git-cheat-sheet/)
 
-<br>
-
 ## Getting Started
 
 ```bash
@@ -36,24 +31,20 @@ $ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<br>
-
 ## Deploy
 
 When you push to any branch and create a pull request, the app will be automatically deployed to test.
 
-When you push to `main` branch, the app will be automatically deployed to production.
+When you push/merge to `main` branch, the app will be automatically deployed to production.
 
-<br>
+## Contribution Guideline
 
-## Management Workflow
+This section explains how to edit the contents of the website.
+As the high level overview, you can mainly edit the contents under the folder `contents/` directly, and push it to GitHub to reflect the changes.
 
-This section explains the management workflow when you want to create/edit the events, working groups, documentations.
-You can edit the markdown files under the folder `contents/` directly, and update the news when reflecting the changes to GitHub.
+More details are explained in the following sections.
 
-The example steps of the workflow are below↓
-
-### 0. Cut the branch
+#### 0. Clone project and create the new branch
 
 ```bash
 $ git clone git@github.com:bgin-global/bgin-homepage.git
@@ -61,27 +52,35 @@ $ cd bgin-homepage
 $ git checkout -b yourname-001
 ```
 
-### 1. Create/Edit new File
+If you've already cloned the project, please make sure that your main branch is up-to-date. And always create the new branch from `main`.
 
-Create `contents/**/~~~.md` and edit it. Please set the same top metadata as the other md files.
-
-For instance, event's metadata is like:
-
-```md
----
-title: "Blockchain Summit 2023"
-date: "2023 Mar. 29"
-location: "New York, US"
----
+```
+$ git checkout main
+$ git pull origin main
+$ git checkout -b yourname-001
 ```
 
-All files follows markdown format.
+### 1. Edit the contents
+
+You can edit the contents under the folder `contents/` directly.
+
+| Content               | Where to edit               |
+| --------------------- | --------------------------- |
+| Next Block Conference | /contents/upcomingEvents.ts |
+| Next Layer2 Meeting   | /contents/upcomingEvents.ts |
+| Next WG Calls         | /contents/upcomingEvents.ts |
+| Roadmap               | /contents/roadmap.ts        |
+| Project List          | /contents/projects.ts       |
+| Working Group List    | /contents/workingGroups.ts  |
+| Event                 | contents/events/...         |
+
+For other contents, please edit `app/` directly.
 
 ### 2. Push to new branch
 
 ```bash
 $ git add .
-$ git commit -m"what you changed"
+$ git commit -m"write what you changed"
 $ git push origin HEAD
 ```
 
@@ -105,13 +104,5 @@ After updating, please renew your main.
 $ git checkout main
 $ git pull origin main
 ```
-
-<br>
-
-## Update Next Call Date
-
-1. Go to ./contents/next-call-ts
-2. Modify the parameter `nextCall`
-3. Push
 
 If you have a question, plz feel free to contact to @0xvon
