@@ -9,6 +9,8 @@ export const CUSTOM_STYLES = {
     LATERAL:
       "w-screen lg:w-full max-w-5xl px-4 flex flex-col lg:flex-row gap-6",
     ALWAYS_LATERAL: "w-screen lg:w-full max-w-5xl px-4 flex flex-row gap-6",
+    HOLIZONTAL_SCROLL:
+      "w-screen lg:w-full max-w-5xl px-4 flex flex-row gap-4 overflow-x-scroll whitespace-nowrap",
   },
   TITLE: {
     CENTER:

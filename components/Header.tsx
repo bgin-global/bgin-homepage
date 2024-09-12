@@ -105,6 +105,11 @@ function Header() {
               Activities
             </div>
           </Link>
+          <Link href="/gov">
+            <div className="text-base leading-[19px] text-black">
+              Governance
+            </div>
+          </Link>
           <div>
             <Button
               link="https://bgin.discourse.group/"
@@ -124,6 +129,7 @@ function Header() {
       >
         <PlainButton link="/about" text="About" />
         <PlainButton link="/activities" text="Activities" />
+        <PlainButton link="/gov" text="Governance" />
         <PlainButton
           link="https://www.youtube.com/@bgin/videos"
           text="Videos"
