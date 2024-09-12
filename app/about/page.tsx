@@ -6,7 +6,7 @@ import HowToJoin from "@/components/HowToJoin";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Image from "next/image";
 import Timeline from "./Timeline";
-import ItemPrinciple from "./ItemPrinciple";
+import ItemReversible from "@/components/ItemReversible";
 
 const principles = [
   {
@@ -74,7 +74,7 @@ export default function About() {
         <SectionTitle title="BGIN Principle" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
           {principles.map((principle, index) => (
-            <ItemPrinciple
+            <ItemReversible
               key={index}
               {...principle}
               isReversed={index % 2 != 0}
