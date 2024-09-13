@@ -2,14 +2,14 @@ export const upcomingBlockConference = {
   title: "Block#11",
   date: "Oct 21-24",
   location: "Washington DC, US",
-  link: "/",
+  link: "/events/20241025-block11",
 };
 
 export const upcomingLayer2Meetup = {
   title: "Layer2 Meetup",
   date: "July 1st",
   location: "Zurich, Switzerland",
-  link: "/",
+  link: "/events/20240920-layer2-tokyo",
 };
 
 export const upcomingWGCalls = [

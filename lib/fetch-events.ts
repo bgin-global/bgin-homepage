@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 type DIRECTION = "ALL" | "FUTURE" | "PAST";
+type EVENT_TYPE = "block-conferences" | "layer2-meetups";
 type LANG = "ENG" | "JP";
 export interface Event {
   id: string;
@@ -19,27 +20,32 @@ export interface Event {
   url?: string;
   description: string;
   jp_url?: string;
+  report_url?: string;
   lang: LANG;
 }
 
-interface PostId {
-  params: {
-    slug: string;
-  };
-}
+const directory = (type: EVENT_TYPE) => {
+  switch (type) {
+    case "block-conferences":
+      return path.join(process.cwd(), "contents/events/block-conferences");
+    case "layer2-meetups":
+      return path.join(process.cwd(), "contents/events/layer2-meetups");
+  }
+};
 
-const directory = path.join(process.cwd(), "contents/events");
-
-export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
+export function getSortedEvents(
+  type: EVENT_TYPE,
+  direction: DIRECTION = "ALL"
+): Event[] {
   const today = Date.now();
   const fileNames = fs
-    .readdirSync(directory, { withFileTypes: true })
+    .readdirSync(directory(type), { withFileTypes: true })
     .filter((f) => f.isFile())
     .map((f) => f.name);
   const allPostsData: Event[] = fileNames
     .map((fileName) => {
       const id = fileName.replace(/\.md$/, "");
-      const fullPath = path.join(directory, fileName);
+      const fullPath = path.join(directory(type), fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const matterResult = matter(fileContents);
       const event: Event = {
@@ -53,6 +59,7 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
         url: matterResult.data.url as string | undefined,
         description: matterResult.data.description as string,
         jp_url: matterResult.data.jp_url as string | undefined,
+        report_url: matterResult.data.report_url as string | undefined,
         lang: matterResult.data.lang ?? ("ENG" as LANG),
       };
       return event;
@@ -75,24 +82,11 @@ export function getSortedEvents(direction: DIRECTION = "ALL"): Event[] {
   });
 }
 
-export function getAllEventIds(): PostId[] {
-  const fileNames = fs
-    .readdirSync(directory, { withFileTypes: true })
-    .filter((f) => f.isFile())
-    .map((f) => f.name);
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
-}
-
 export async function getEventData(
+  type: EVENT_TYPE,
   slug: string
 ): Promise<Event & { contentHtml: string }> {
-  const fullPath = path.join(directory, `${slug}.md`);
+  const fullPath = path.join(directory(type), `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 
@@ -115,6 +109,7 @@ export async function getEventData(
     url: matterResult.data.url as string | undefined,
     description: matterResult.data.description as string,
     jp_url: matterResult.data.jp_url as string | undefined,
+    report_url: matterResult.data.report_url as string | undefined,
     lang: matterResult.data.lang ?? ("ENG" as LANG),
   };
 

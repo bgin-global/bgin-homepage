@@ -3,7 +3,7 @@ import { upcomingLayer2Meetup } from "@/contents/upcomingEvents";
 import Activity from "../Activity";
 
 export default function Layer2Meetup() {
-  const pastEvents = getSortedEvents("PAST");
+  const pastEvents = getSortedEvents("layer2-meetups", "PAST");
   return (
     <Activity
       eventUpcoming={upcomingLayer2Meetup}

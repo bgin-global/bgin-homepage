@@ -1,7 +1,6 @@
 import Image from "next/image";
-import ArrowRight from "./Button/ArrowRight";
-import Link from "next/link";
 import { Event } from "@/lib/fetch-events";
+import Button from "./Button/Button";
 
 interface Props {
   event: Event;
@@ -40,24 +39,30 @@ export default function ItemEvent(props: Props) {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 grid-flow-row bgin-button">
-            <Link
-              href={"/events/" + props.event.id}
-              className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
-            >
-              <div>More Details</div>
-              <ArrowRight size="sm" color="white" />
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 grid-flow-row bgin-button">
+            <Button
+              link={"/events/" + props.event.id}
+              text="Details"
+              color="black"
+              withArrow={true}
+            />
             {props.event.jp_url && props.event.lang === "ENG" ? (
-              <Link
-                href={"/events/" + props.event.jp_url}
-                className="bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter"
-              >
-                <div>詳細(日本語)</div>
-                <ArrowRight size="sm" color="white" />
-              </Link>
+              <Button
+                link={"/events/" + props.event.jp_url}
+                text="詳細"
+                color="black"
+                withArrow={true}
+              />
             ) : (
               <></>
+            )}
+            {props.event.report_url && (
+              <Button
+                link={props.event.report_url}
+                text="report"
+                color="white"
+                withArrow={true}
+              />
             )}
           </div>
         </div>

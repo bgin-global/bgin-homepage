@@ -8,11 +8,11 @@ import { fetchMarkdownContent } from "@/lib/fetch-md";
 import Link from "next/link";
 import Button from "@/components/Button/Button";
 
-const contentDirectory = "contents/events/block10/";
+const contentDirectory = "contents/events/block-conferences/block10/";
 const mdPath = "20240303-block10_jp";
 
 export default async function Page() {
-  const event = await getEventData(mdPath);
+  const event = await getEventData("block-conferences", mdPath);
   const programContent = await fetchMarkdownContent(
     contentDirectory,
     "program"

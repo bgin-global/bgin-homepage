@@ -12,7 +12,11 @@ export default async function EventPage({
 }) {
   let event;
   if (params.slug != null && typeof params.slug === "string") {
-    event = await getEventData(params.slug);
+    if (params.slug.includes("block")) {
+      event = await getEventData("block-conferences", params.slug);
+    } else {
+      event = await getEventData("layer2-meetups", params.slug);
+    }
   }
 
   return (
