@@ -49,8 +49,8 @@ export default function Button({ link, text, color, withArrow = true }: Props) {
         className={`${getBgColor(
           color
         )} flex justify-between items-center gap-2 px-6 py-4 rounded-full border border-black`}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={link.startsWith("http") ? "_blank" : undefined}
+        rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
       >
         <div className={`${getTextColor(color)} text-xl`}>{text}</div>
         {withArrow && <ArrowRight size="sm" color={getArrowColor(color)} />}

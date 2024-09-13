@@ -12,8 +12,6 @@ export default function PlainButton({ link, text }: Props) {
       <Link
         href={link}
         className={`flex justify-between items-center gap-2 px-6 py-4 rounded-full`}
-        target="_blank"
-        rel="noopener noreferrer"
       >
         <div className={`text-black text-xl`}>{text}</div>
         <ArrowRight size="sm" color="black" />
