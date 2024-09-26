@@ -75,6 +75,8 @@ export default function Governance() {
           <ItemCardSquare />
           <ItemCardSquare />
           <ItemCardSquare />
+          <ItemCardSquare />
+          <ItemCardSquare />
         </div>
 
         <SectionSubtitle title="BGIN Co-Charis" />

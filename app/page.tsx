@@ -61,7 +61,7 @@ export default function Home() {
             }}
           />
         </div>
-        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           <ItemCard
             title={blockUpcoming.title}
             subtitle={`@${blockUpcoming.location}`}
@@ -76,6 +76,7 @@ export default function Home() {
           />
           <ItemCard
             title="Working Group"
+            subtitle="　"
             description={
               <>
                 {wgCallUpcoming.map((wg, index) => {
@@ -109,43 +110,15 @@ export default function Home() {
                 buttonJumpTo={project.reference}
               />
             );
+            // return (
+            //   <div
+            //     key={project.title}
+            //     className="bg-[#002060] h-[260px] w-auto rounded-xl shrink-0"
+            //   />
+            // );
           })}
         </div>
       </div>
-
-      {/* <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
-        <SectionTitle title="See More" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
-          <ItemBlock
-            title="Projects"
-            thumbnail="/images/Home/Documents.svg"
-            description=""
-            buttonTitle="View"
-            buttonJumpTo="/documents"
-          />
-          <ItemBlock
-            title="Block Conferences"
-            thumbnail="/images/Home/Events.svg"
-            description=""
-            buttonTitle="View"
-            buttonJumpTo="/events"
-          />
-          <ItemBlock
-            title="Working Groups"
-            thumbnail="/images/Home/Working Groups.svg"
-            description=""
-            buttonTitle="View"
-            buttonJumpTo="/working-groups"
-          />
-          <ItemBlock
-            title="Layer2 Meetups"
-            thumbnail="/images/Home/Meeting Notes.svg"
-            description=""
-            buttonTitle="View"
-            buttonJumpTo="/documents"
-          />
-        </div>
-      </div> */}
 
       <HowToJoin />
       <Footer />

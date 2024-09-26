@@ -46,13 +46,13 @@ export default function About() {
       <Hero type={2} />
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
-        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
+        <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           <Image
             src="/images/About/01.svg"
             alt="block10 meeting"
             width={100}
             height={100}
-            className="w-full h-[300px] lg:h-full max-h-[385px]"
+            className="w-full h-[300px] lg:h-auto"
             style={{
               objectFit: "cover",
             }}
@@ -62,7 +62,7 @@ export default function About() {
             alt="block10 meeting"
             width={100}
             height={100}
-            className="w-full h-[300px] lg:h-full max-h-[385px]"
+            className="w-full h-[300px] lg:h-auto"
             style={{
               objectFit: "cover",
             }}

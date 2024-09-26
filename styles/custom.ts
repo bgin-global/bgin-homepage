@@ -1,16 +1,17 @@
 export const CUSTOM_STYLES = {
   SECTION_CONTAINER: {
-    BLUE: "bg-[#d2defc] w-full flex-col flex items-center pb-32 h-fit",
-    WHITE: "bg-[#F0F4FE] w-full flex-col flex items-center pb-32 h-fit",
+    BLUE: "bg-[#d2defc] w-full mx-auto pb-32 h-fit",
+    WHITE: "bg-[#F0F4FE] w-full pb-32 h-fit",
   },
   SECTION_FLEX: {
-    ONE: "w-screen lg:w-full max-w-5xl px-4 flex flex-col gap-6",
-    TWO: "w-screen lg:w-full max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-11",
+    ONE: "w-screen lg:w-full px-4 max-w-5xl mx-auto flex flex-col gap-6",
+    TWO: "w-screen lg:w-full px-4 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 grid-flow-row",
     LATERAL:
-      "w-screen lg:w-full max-w-5xl px-4 flex flex-col lg:flex-row gap-6",
-    ALWAYS_LATERAL: "w-screen lg:w-full max-w-5xl px-4 flex flex-row gap-6",
+      "w-screen lg:w-full px-4 max-w-5xl mx-auto flex flex-col lg:flex-row gap-6",
+    ALWAYS_LATERAL:
+      "w-screen lg:w-full px-4 max-w-5xl mx-auto flex flex-row gap-6",
     HOLIZONTAL_SCROLL:
-      "w-screen lg:w-full max-w-5xl px-4 flex flex-row gap-4 overflow-x-scroll whitespace-nowrap",
+      "w-screen lg:w-full px-4 max-w-5xl mx-auto flex flex-row gap-4 overflow-x-scroll whitespace-nowrap",
   },
   TITLE: {
     CENTER:

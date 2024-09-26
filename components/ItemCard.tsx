@@ -69,7 +69,7 @@ export default function ItemCard({
               colorPattern
             )} w-full flex-col flex items-start gap-1`}
           >
-            <div className="h-20">
+            <div>
               <div className="flex-row flex items-start gap-2">
                 <div className={CUSTOM_STYLES.SUBTITLE}>{title}</div>
                 {isNew && (

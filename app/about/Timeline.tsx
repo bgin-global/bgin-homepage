@@ -64,7 +64,7 @@ const TimelineItem = ({
 
 const Timeline = () => {
   return (
-    <section className="relative flex flex-col rounded-none max-w-5xl px-6 xl:px-0 gap-8 overflow-visible">
+    <section className="relative mx-auto flex flex-col rounded-none max-w-5xl px-6 xl:px-0 gap-8 overflow-visible">
       <div className="h-[100%] absolute left-[42px] xl:left-[18px] top-[10px]">
         <Image
           src="/images/About/bottom_arrow.svg"

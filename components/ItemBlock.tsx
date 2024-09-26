@@ -19,7 +19,7 @@ export default function ItemBlock({
   withImage = true,
 }: Props) {
   return (
-    <div className="bg-white h-full w-full flex-1 flex-col flex justify-between items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button">
+    <div className="bg-white h-full w-auto flex-1 flex-col flex justify-between items-start gap-4 pt-4 pb-6 rounded-3xl bgin-button">
       <div>
         {withImage && (
           <div className="bg-cover w-full h-[200px] gap-2.5 rounded-xl">

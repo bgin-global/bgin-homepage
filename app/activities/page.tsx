@@ -33,7 +33,7 @@ export default function Activities() {
         <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           <ItemCard
             title="Block Conference"
-            subtitle=""
+            subtitle="　"
             description={
               <>
                 <p className="mb-2">Twice a year (spring and fall)</p>
