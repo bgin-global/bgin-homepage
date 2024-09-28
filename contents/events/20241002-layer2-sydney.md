@@ -1,11 +1,10 @@
-
 ---
 title: "Layer 2 Meetup @ Sydney, Australia"
-date: "2024 October 2nd"
+date: "2024 October. 2nd"
 location: "Sydney, Australia"
 thumbnail: "/images/Events/dummy.svg"
 register_link: "https://lu.ma/gxyidi9q"
-description: "BGIN will hold the fourth layer2 meetup in Sydney, Australia."
+description: "BGIN will hold a layer2 meetup in Sydney, Australia."
 ---
 
 ## Registration
