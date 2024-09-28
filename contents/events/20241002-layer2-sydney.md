@@ -1,6 +1,6 @@
 ---
 title: "Layer 2 Meetup @ Sydney, Australia"
-date: "2024 October. 2nd"
+date: "2024 October. 2"
 location: "Sydney, Australia"
 thumbnail: "/images/Events/dummy.svg"
 register_link: "https://lu.ma/gxyidi9q"
