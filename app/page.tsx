@@ -42,7 +42,7 @@ export default function Home() {
             title={layer2Upcoming.title}
             subtitle={`@${layer2Upcoming.location}`}
             description={`Date: ${layer2Upcoming.date}`}
-            link="/activities/layer2-meetup"
+            link={layer2Upcoming.link}
             height="h-auto"
             colorPattern="blue"
           />
