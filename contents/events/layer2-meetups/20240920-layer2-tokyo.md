@@ -5,11 +5,12 @@ location: "Tokyo, Japan"
 thumbnail: "/images/Events/dummy.svg"
 register_link: "https://lu.ma/ek33ayxg"
 description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
+report_url: "https://drive.google.com/drive/u/0/folders/1aXAIBfBZtYtZUdex1oaCpe9my2BQXKrn"
 ---
 
 ## Registration
 
-### <b style="color:red;">[Click here for registration](https://lu.ma/ek33ayxg)</b> ### 
+### <b style="color:red;">[Click here for registration](https://lu.ma/ek33ayxg)</b>
 
 ## Colocated Event
 
@@ -43,7 +44,7 @@ description: "BGIN will hold the first layer2 meetup in Tokyo, Japan."
 
 ## Background
 
-Blockchain Governance Initiative Network (BGIN) is a non-profit organization that creates neutral forums for in-depth discussions among all stakeholders, documenting a common language to establish shared understanding. It also fosters innovation, best practices, and standards for blockchain governance in operational, regulatory, and technical spheres. We hold the second layer 2 meetup in Tokyo, Japan, the purpose of which is to discuss our project topics with people in different communities and expand our community through networking. 
+Blockchain Governance Initiative Network (BGIN) is a non-profit organization that creates neutral forums for in-depth discussions among all stakeholders, documenting a common language to establish shared understanding. It also fosters innovation, best practices, and standards for blockchain governance in operational, regulatory, and technical spheres. We hold the second layer 2 meetup in Tokyo, Japan, the purpose of which is to discuss our project topics with people in different communities and expand our community through networking.
 
 ## About this event
 
@@ -55,17 +56,17 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ## Programme
 
-|                     | Title                             | Topic                                |
-| ------------------- | --------------------------------- | ------------------------------------ |
-| 12:00 - 13:00       | Registration                      |                                      |
-| 13:00 - 13:15       | Opening                           |                                      |
-| 13:15 - 14:45       | Worksop session                   | Regulatory Uncertainty for Lightning Businesses|
-| 14:45 - 15:00       | Coffee Break                      |                                      |
-| 15:00 - 16:30       | Workshop Session                  | Wallet Governance                    |
-| 16:30 - 16:45       | Coffee Break                      |                                      |
-| 16:45 - 18:15       | Workshop Session                  | Cyber Security and Incident Response |
-| 18:15 - 18:30       | Closing                           |                                      |
-| 19:00 -             | Networking Dinner                 |                                      |
+|               | Title             | Topic                                           |
+| ------------- | ----------------- | ----------------------------------------------- |
+| 12:00 - 13:00 | Registration      |                                                 |
+| 13:00 - 13:15 | Opening           |                                                 |
+| 13:15 - 14:45 | Worksop session   | Regulatory Uncertainty for Lightning Businesses |
+| 14:45 - 15:00 | Coffee Break      |                                                 |
+| 15:00 - 16:30 | Workshop Session  | Wallet Governance                               |
+| 16:30 - 16:45 | Coffee Break      |                                                 |
+| 16:45 - 18:15 | Workshop Session  | Cyber Security and Incident Response            |
+| 18:15 - 18:30 | Closing           |                                                 |
+| 19:00 -       | Networking Dinner |                                                 |
 
 ## Workshop Agenda and Related Documents
 
@@ -77,15 +78,11 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ​・Creation of a draft table of contents for new papers
 
-
 <b>​13:15-14:45 Workshop Session: Regulatory Uncertainty for Lightning Businesses</b>
-
 
 For more details: https://bgin.discourse.group/t/regulatory-uncertainty-for-ln-businesses-layer2-meetup-tokyo-sept-20th-2024/539
 
-
 <b>​​15:00-16:30 Workshop Session: Wallet Governance</b>
-
 
 - ​Wallet Governance and Policy Study Report (30 mins)
 - ​How can wallets be developed securely? (30 mins)
@@ -93,16 +90,12 @@ For more details: https://bgin.discourse.group/t/regulatory-uncertainty-for-ln-b
 
 For more details: https://bgin.discourse.group/t/wallet-governance-layer2-meetup-tokyo-sept-20th-2024/536
 
-
 <b>​16:45-18:15 Workshop Session: Cybersecurity & Incident Response</b>
 
-
 - Cybersecurity Information Sharing Alignment for the Crypto Industry (20 mins)
-​- Information Sharing and Analysis Center (ISAC) for crypto (10 mins)
+  ​- Information Sharing and Analysis Center (ISAC) for crypto (10 mins)
 - ​Responsible Disclosure Practices (40 mins)
 - ​Recent incidents and responses (15 mins)
 - ​Next steps (5 mins)
 
 For more details: ​https://bgin.discourse.group/t/cybersecurity-standard-layer2-meetup-tokyo-sept-20th-2024/537
-
-

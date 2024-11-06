@@ -5,15 +5,16 @@ location: "Sydney, Australia"
 thumbnail: "/images/Events/dummy.svg"
 register_link: "https://lu.ma/gxyidi9q"
 description: "BGIN will hold a layer2 meetup in Sydney, Australia."
+report_url: "https://drive.google.com/drive/u/0/folders/1yYZoCz4OdqEbgnYAlPfaqEEKcEvHuSYD"
 ---
 
 ## Registration
 
-### <b style="color:red;">[Click here for registration](https://lu.ma/gxyidi9q)</b> ### 
+### <b style="color:red;">[Click here for registration](https://lu.ma/gxyidi9q)</b>
 
 ## Background
 
-Blockchain Governance Initiative Network (BGIN) is a non-profit organization that creates neutral forums for in-depth discussions among all stakeholders, documenting a common language to establish shared understanding. It also fosters innovation, best practices, and standards for blockchain governance in operational, regulatory, and technical spheres. We hold the second layer2 meetup in Sydney, Australia, the purpose of which is to discuss our project topics with people in different communities and expand our community through networking. 
+Blockchain Governance Initiative Network (BGIN) is a non-profit organization that creates neutral forums for in-depth discussions among all stakeholders, documenting a common language to establish shared understanding. It also fosters innovation, best practices, and standards for blockchain governance in operational, regulatory, and technical spheres. We hold the second layer2 meetup in Sydney, Australia, the purpose of which is to discuss our project topics with people in different communities and expand our community through networking.
 
 ## About this event
 
@@ -25,10 +26,10 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 ## Programme
 
-|                     | Title                             | Topic                                |
-| ------------------- | --------------------------------- | ------------------------------------ |
-| 08:30 - 09:00       | Registration                      |                                      |
-| 09:00 - 10:30       | Cybersecurity Information Sharing |                                      |
+|               | Title                             | Topic |
+| ------------- | --------------------------------- | ----- |
+| 08:30 - 09:00 | Registration                      |       |
+| 09:00 - 10:30 | Cybersecurity Information Sharing |       |
 
 ## Workshop Agenda and Related Documents
 
@@ -42,9 +43,8 @@ Blockchain Governance Initiative Network (BGIN) is a non-profit organization tha
 
 <b>​09:00-10:30 Workshop Session: Cybersecurity Information Sharing </b>
 
-
 - Cybersecurity Information Sharing Alignment for the Crypto Industry
-​- Information Sharing and Analysis Center (ISAC) for crypto 
+  ​- Information Sharing and Analysis Center (ISAC) for crypto
 - ​Responsible Disclosure Practices
 - ​Recent incidents and responses
 - ​Next steps

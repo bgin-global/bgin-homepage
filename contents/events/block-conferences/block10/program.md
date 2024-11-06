@@ -18,7 +18,7 @@ Main discussants: **Carole House**, Amanda Wick (AWIC), Jamie Danker (Venable, f
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-privacy-vs-discoverability-day1/332
 
-Related Document 1: https://bgin-global.org/documents/20230428_Selective_Disclosure.pdf
+Related Document 1: https://drive.google.com/drive/folders/1PiYadrwKENQ0wtk4SpbMKSPWN4j_O5_C?usp=sharing
 
 #### 16:00 - 16:30 Coffee Break
 
@@ -59,7 +59,7 @@ Main discussants: **Carole House**, Fletcher Roberts (Hasklock), Alex Zerden 　
 
 Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-transparency-of-dapps-and-sound-defi-day2/335/2
 
-Related Documents 1: https://bgin-global.org/documents/20230213_Defi_Disclosure.pdf
+Related Documents 1: https://drive.google.com/drive/folders/1BHAOmPlWSi6AEm3FLef9xxtk74gFUggg?usp=sharing
 
 Related Documents 2: https://www.fsa.go.jp/en/policy/bgin/ResearchPaper_qunie_en.pdf
 
@@ -97,7 +97,7 @@ Discourse: https://bgin.discourse.group/t/block-10-call-for-contribution-the-har
 
 Related Documents 1: The meeting report of block 9
 
-Related Documents 2: https://bgin-global.org/documents/20230724_PoF_of_Stablecoins.pdf
+Related Documents 2: https://drive.google.com/drive/folders/1uRRCeaC0pwtP5_t_sH9An7JeN-5zYm-1?usp=sharing
 
 #### 17:00 - 18:30 [Room B] [Workshop under Chatham House Rule] Illicit Activities
 
@@ -151,7 +151,7 @@ Related Document 1: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pd
 
 Main discussants: **Carole House**, Jessy Irwin (Amulet Security), Sigal Mandelker (Crypto ISAC), Kenichi Sugawara (CGTF), Julien Bringer (ISO/TC 307/JWG 4), Hayato Shigekawa (Chainalysis)
 
-Related Document 1: https://bgin-global.org/documents/20220606_Custody.pdf
+Related Document 1: https://drive.google.com/drive/folders/1feQ6wU8CfuTdtnkrtiO8Qi2olJpCH2bz?usp=drive_link
 
 Related Document 2: CGTF Document (= ISO TR23576)
 
@@ -161,7 +161,7 @@ Related Document 2: GU research paper for cyber insurance based on smart contrac
 
 Main discussants: **Joseph Beverley (Soulbis)**
 
-Related Document 1: https://bgin-global.org/documents/20230201_SBT.pdf
+Related Document 1: https://drive.google.com/drive/folders/1qavS-AxWDc5KP2swGXmiUpr241mYfTMo?usp=drive_link
 
 #### 15:30 - 16:00 Coffee Break
 

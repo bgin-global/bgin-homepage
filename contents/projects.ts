@@ -92,6 +92,11 @@ export const projects: {
   ],
   published: [
     {
+      title: "2020 Online Meeting Report",
+      date: "June 18 2020",
+      link: "https://drive.google.com/drive/u/0/folders/1dKDWefmNVskSNLK8UUEpEYyeXLof2Qr4",
+    },
+    {
       title:
         "Present and Future of a Decentralized Financial System and the Associated Regulatory Considerations",
       date: "January 01 2021",
