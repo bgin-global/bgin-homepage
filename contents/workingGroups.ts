@@ -28,7 +28,7 @@ export const workingGroups: WorkingGroup[] = [
       "The goal of IAM, Key Management and Privacy (IKP) Working Group is to provide guidance and good practice documents that describe Identity (including keys) and Access management for access to crypto-currency exchange; Identity (including keys) and Access management using Blockchain/DLT for Online resource access Privacy considerations to be taken into account for the above.",
     subscribe_url: "",
     document_url:
-      "https://docs.google.com/document/d/1eRNE8hMW4X1ixzO3IowUWJU1q81YuO9fKT_MaRTZR5c/edit#heading=h.oj3duu3olyl0",
+      "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
     community_url: "https://bgin.discourse.group/c/ikp-wg/8",
     inactive: false,
   },
@@ -49,8 +49,23 @@ export const workingGroups: WorkingGroup[] = [
       "The Financial Applications and Social Economics (FASE) working group focuses on an extensive array of topics around how blockchain technologies and crypto in general can enable new financial applications and socio economic growth.",
     subscribe_url: "https://github.com/bgin-global",
     document_url:
-      "https://drive.google.com/drive/folders/1h12WibGhcrHksuG1Cy9ULBJqJ7Kp7pi3",
+      "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     community_url: "https://bgin.discourse.group/c/working-group-s/fase/9",
+    inactive: false,
+  },
+  {
+    group_name: "Cybersecurity (CS) Working Group",
+    co_chairs: [
+      {
+        name: " ",
+        job: " ",
+      },
+    ],
+    description: " ",
+    subscribe_url: "",
+    document_url:
+      "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
+    community_url: " ",
     inactive: false,
   },
   {
@@ -69,7 +84,7 @@ export const workingGroups: WorkingGroup[] = [
       "The Governance WG aims at developing the governance mechanism of BGIN itself. It will discuss a variety of topics including its organization structure, IPR policy and fundraising policy.",
     subscribe_url: "",
     document_url:
-      "https://docs.google.com/document/d/1O641FrqZNX8IrgP5cKvAyyfBO80REEfBYCopXg5ieJ8/edit#heading=h.oj3duu3olyl0",
+      "https://drive.google.com/drive/folders/1pFY5QUKUPqZbAIdR_T0bDBRcsCoiyZKb?usp=drive_link",
     community_url: "",
     inactive: true,
   },
@@ -84,7 +99,8 @@ export const workingGroups: WorkingGroup[] = [
     description:
       "The Decentralized Treasury WG aims at exploring best practices of raising funding that could/should replace ICO at all (as previous generations of fund raising were far from perfect) as well as ongoing fund/treasury management to finance operations/development of strategic initiatives.",
     subscribe_url: "",
-    document_url: "",
+    document_url:
+      "https://drive.google.com/drive/folders/1CwC9A9flbyuR34AE_kI3y2h5PM_eUJjI?usp=drive_link",
     community_url: "",
     inactive: true,
   },

@@ -95,51 +95,44 @@ export const projects: {
       title:
         "Present and Future of a Decentralized Financial System and the Associated Regulatory Considerations",
       date: "January 01 2021",
-      link: "/documents/20210101_Defi.pdf",
+      link: "https://drive.google.com/drive/folders/1rD4XHLhDZCVV6si9OvLZ8vhiU-Kqc9Gg?usp=drive_link",
     },
     {
       title: "Study Report for Ransomware Reaction",
       date: "April 21 2022",
-      link: "/documents/20220421_Ransomwere.pdf",
+      link: "https://drive.google.com/drive/folders/1Rb4Ygxvp6fgd4rdB08mALx7kedrNZWl-?usp=sharing",
     },
     {
       title: "NFT Study Report Part 1: Introduction and Use Cases",
       date: "June 06 2022",
-      link: "/documents/20220606_NFT.pdf",
+      link: "https://drive.google.com/drive/folders/1kjmfgpC5tC_4xPCjjnhPXO_Hqa3b14wl?usp=drive_link",
     },
     {
       title: "Incident Response of Decentralized Custody; A Case Study",
       date: "June 06 2022",
-      link: "/documents/20220606_Custody.pdf",
+      link: "https://drive.google.com/drive/folders/1feQ6wU8CfuTdtnkrtiO8Qi2olJpCH2bz?usp=drive_link",
     },
     {
       title:
         "Soulbound Tokens (SBTs) Study Report Part 1: Building and Embracing a New Social Identity Layer?",
       date: "February 01 2023",
-      link: "/documents/20230201_SBT.pdf",
+      link: "https://drive.google.com/drive/folders/1qavS-AxWDc5KP2swGXmiUpr241mYfTMo?usp=drive_link",
     },
     {
       title: "Proposal of Principles of DeFi Disclosure and Regulation",
-      date: "February 12 2023",
-      link: "/documents/20230213_Defi_Disclosure.pdf",
+      date: "February 13 2023",
+      link: "https://drive.google.com/drive/folders/1BHAOmPlWSi6AEm3FLef9xxtk74gFUggg?usp=sharing",
     },
-    {
-      title:
-        "Discussion Points: Potential Points of Failure of Stablecoins and DeFi",
-      date: "March 23 2023",
-      link: "/documents/20230323_Stablecoin_and_Defi.pdf",
-    },
-
     {
       title:
         "Study Report on Selective Disclosure:  Overview and Classifications",
       date: "April 28 2023",
-      link: "/documents/20230428_Selective_Disclosure.pdf",
+      link: "https://drive.google.com/drive/folders/1PiYadrwKENQ0wtk4SpbMKSPWN4j_O5_C?usp=sharing",
     },
     {
       title: "Potential Points of Failure of Stablecoins and DeFi",
       date: "July 24 2023",
-      link: "/documents/20230724_PoF_of_Stablecoins.pdf",
+      link: "https://drive.google.com/drive/folders/1uRRCeaC0pwtP5_t_sH9An7JeN-5zYm-1?usp=sharing",
     },
   ],
 };
