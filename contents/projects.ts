@@ -21,72 +21,62 @@ export const projects: {
       title: "Wallet Governance",
       description:
         "Wallet governance, policy and key management will be quintessential features to any society which leverages decentralised innovations.",
-      reference: "/",
-      wg: "GIKP WG",
+      reference: "https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
     {
       title: "Soul Bound Token (SBT)",
       description:
         "To Examine the implications of Soulbound Tokens (SBTs), a novel smart contract primitive introduced by E. Glen Weyl, Puja Ohlhaver, and Vitalik Buterin (2022) “Decentralized Society: Finding Web3's Soul”, to curb Web3’s “hyper financialisation” and lack of tooling to enable social coordination.",
-      reference: "/",
-      wg: "GIKP WG",
+      reference: "https://drive.google.com/drive/folders/1UqkmJQkgmCA05-w-BP8at4moS79fHcdU?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
-
+    {
+      title: "ZKP and its Application",
+      description: "xxx",
+      reference: "https://drive.google.com/drive/folders/1wEOhN-tcuWk9RiwrItYS6jRS7Fp_Qi3V?usp=drive_link",
+      wg: "IKP WG",
+      wg_link: "/",
+    },
     {
       title: "Layer2 Governance",
-      description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
+      description: "As “Layer 2” scaling solutions emerge to address the scalability and cost-efficiency challenges of “Layer 1” blockchains, they could bring new governance and security challenges, as described in “Blockchain Trilemma.” The ongoing research at BGIN IKP WG objectively analyzes the trust points that can be created by “Layer2.” Based on the research, this project will engage business operators, regulators, and technical experts to explore how to solve the security and governance challenges.",
+      reference: "https://drive.google.com/drive/folders/14nX6N775xMnAg05vFNkeuKgTkLhVRI4f?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
 
     {
       title: "Blockchain Analysis Challenges",
-      description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
+      description: "This project will address the challenges in blockchain analysis, focusing on client education, evidence gathering, and proactive detection methodologies. Key topics include FATF compliance for VASPs, the role of blockchain analytics firms, and the impact of privacy technologies and off-chain transactions on analysis. We will explore the role of BGIN in enhancing education and discuss strategies to overcome these challenges, aiming to create a comprehensive document for the IKP WG.",
+      reference: "https://drive.google.com/drive/folders/1kXPS4mnjnmbk1ux2b0p8hme_IUp-_tqT?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
 
     {
       title: "Accountable Wallet",
       description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
+      reference: "https://drive.google.com/drive/folders/1wOoJNpeTvJ1VEPoJXgDUZ8ebysn0efWK?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
 
     {
       title: "AI and Blockchain",
-      description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
-      wg_link: "/",
-    },
-
-    {
-      title: "Taxonomy of Illicit Activities",
-      description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
+      description: "The convergence of blockchain and AI offers groundbreaking potential. Whether leveraging blockchain to solve AI’s data management challenges or harnessing AI to tackle governance issues in blockchain, the synergies between these technologies are being hotly debated. This discussion will take a futuristic lens, weighing both the positive and negative aspects of these synergistic applications, drawing from real-world use cases.",
+      reference: "https://drive.google.com/drive/folders/1-ngWvRGQ_5N36Mr0Pgh119tGIGmCExSu?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
 
     {
       title: "Cyber Security Standards",
-      description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
-      wg_link: "/",
-    },
-
-    {
-      title: "Privacy vs Discoverability",
-      description: "xxx",
-      reference: "/",
-      wg: "GIKP WG",
+      description: "Despite significant advancements, cybersecurity incidents remain prevalent in the crypto industry. Just as in other sectors, achieving industry-wide alignment on cybersecurity information sharing is crucial. This discussion will explore how the crypto industry can establish a robust international information-sharing framework, drawing lessons from traditional finance and other industries.",
+      reference: "https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link",
+      wg: "IKP WG",
       wg_link: "/",
     },
   ],
