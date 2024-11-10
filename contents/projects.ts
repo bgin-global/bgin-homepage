@@ -20,7 +20,7 @@ export const projects: {
     {
       title: "Wallet Governance",
       description:
-        "Wallet governance, policy and key management will be quintessential features to any society which leverages decentralised innovations.",
+        "The project will discuss (1) the approaches to authentication processes that support the reliability and functionality of credentials, (2) key management methods that prioritize privacy and security, and (3) governance models that harmonize diverse legal, technical, and operational frameworks across different jurisdictions and sectors in order to build a secure, highly interoperable, and universally accessible digital wallet ecosystem.",
       reference: "https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=drive_link",
       wg: "IKP WG",
       wg_link: "/",
