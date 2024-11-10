@@ -1,17 +1,19 @@
 "use client";
 import Image from "next/image";
-import ArrowRight from "./ArrowRight";
 import React, { useState } from "react";
 import Link from "next/link";
+import PlainButton from "./Button/PlainButton";
+import Button from "./Button/Button";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`${isOpen ? "" : "border border-b-black"
-        } static w-screen bg-white`}
+      className={`${
+        isOpen ? "" : "border border-b-black"
+      } static w-screen bg-white`}
     >
-      <div className="flex justify-between items-center p-4 max-w-4xl m-auto">
+      <div className="flex justify-between items-center p-4 max-w-5xl m-auto">
         <Link href="/">
           <Image
             src="/images/Header/Logo.svg"
@@ -23,14 +25,14 @@ function Header() {
         </Link>
 
         <div className="flex lg:hidden justify-center items-center gap-6 bgin-button">
-          <a
-            href="https://bgin.discourse.group/"
-            className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div>Join Us</div>
-          </a>
+          <div>
+            <Button
+              link="https://bgin.discourse.group/"
+              text="Join Us"
+              color="black"
+              withArrow={false}
+            />
+          </div>
           <button
             type="button"
             className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -98,106 +100,44 @@ function Header() {
           <Link href="/about">
             <div className="text-base leading-[19px] text-black">About</div>
           </Link>
-          <ul className="pl-0" style={{ listStyle: "none" }}>
-            <li style={{ listStyle: "none" }}>
-              <button
-                type="button"
-                className="peer text-base leading-[19px] text-black"
-              >
-                Resources
-              </button>
-              <div className="hidden flex-col absolute bg-white hover:flex peer-hover:flex text-black border-2 border-black p-2 gap-2">
-                <React.Fragment key={0}>
-                  <Link href="/documents" className="hover:opacity-50">
-                    Documents
-                  </Link>
-                </React.Fragment>
-                <React.Fragment key={0}>
-                  <a
-                    href="https://www.youtube.com/@bgin/videos"
-                    className="hover:opacity-50"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Videos
-                  </a>
-                </React.Fragment>
-              </div>
-            </li>
-          </ul>
-
-          <Link href="/events">
-            <div className="text-base leading-[19px] text-black">Events</div>
-          </Link>
-          <Link href="/working-groups">
+          <Link href="/activities">
             <div className="text-base leading-[19px] text-black">
-              Working Groups
+              Activities
             </div>
           </Link>
-          <a
-            href="https://bgin.discourse.group/"
-            className="bg-black flex justify-center items-center gap-2 px-3 py-2 rounded-full text-sm leading-[21px] font-semibold text-white"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div>Join Us</div>
-          </a>
+          <Link href="/gov">
+            <div className="text-base leading-[19px] text-black">
+              Governance
+            </div>
+          </Link>
+          <Link href="/sponsors">
+            <div className="text-base leading-[19px] text-black">Sponsors</div>
+          </Link>
+          <div>
+            <Button
+              link="https://bgin.discourse.group/"
+              text="Join Us"
+              color="black"
+              withArrow={false}
+            />
+          </div>
         </div>
       </div>
 
       <div
-        className={`${isOpen ? "" : "hidden"
-          } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-6 p-6 bg-sub`}
+        className={`${
+          isOpen ? "" : "hidden"
+        } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-2 bg-sub`}
         id="navbar"
       >
-        <Link
-          href="/about"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            About
-          </div>
-          <ArrowRight />
-        </Link>
-
-        <Link
-          href="/documents"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Documents
-          </div>
-          <ArrowRight />
-        </Link>
-        <a
-          href="https://www.youtube.com/@bgin/videos"
-          className="w-full flex justify-between items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Videos
-          </div>
-          <ArrowRight />
-        </a>
-        <Link
-          href="/events"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Events
-          </div>
-          <ArrowRight />
-        </Link>
-        <Link
-          href="/working-groups"
-          className="w-full flex justify-between items-center"
-        >
-          <div className="text-3xl leading-[42px] font-medium text-black font-FamiljenGrotesk">
-            Working Groups
-          </div>
-          <ArrowRight />
-        </Link>
+        <PlainButton link="/about" text="About" />
+        <PlainButton link="/activities" text="Activities" />
+        <PlainButton link="/gov" text="Governance" />
+        <PlainButton link="/sponsors" text="Sponsors" />
+        <PlainButton
+          link="https://www.youtube.com/@bgin/videos"
+          text="Videos"
+        />
       </div>
     </div>
   );

@@ -34,9 +34,8 @@ b, strong {
   background-color: #F0F4FE;
 }
 
-* {
-	/* outline: 1px solid magenta; */
-  overflow-x: hidden;
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 h2 {
@@ -71,10 +70,6 @@ ol, ul, li {
   overflow-x: visible;
   list-style: disc;
   list-style-type: disc;
-}
-
-li::marker {
-  color: black;
 }
 
 table {
@@ -148,4 +143,11 @@ a {
 
 .bgin-button>a:hover {
   opacity: 0.4;
+}
+
+/* applying grid-cols-2 because it doesn't work by default */
+@media (min-width: 960px) {
+  .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
