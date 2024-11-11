@@ -58,8 +58,7 @@ export const projects: {
 
     {
       title: "Accountable Wallet",
-      description: "This project aims to design and implement a mechanism that allows wallet holders to prove that they are not involved in illicit activities while preserving their privacy.
-By implementing a system that empowers wallet holders to proactively prove and verify each other's legitimacy before transactions, we aim to protect them from unintentional involvement in illicit activities. Our goal is to address compliance issues in the crypto ecosystem that cannot be solved solely by current regulatory rules and tools.",
+      description: "This project aims to design and implement a mechanism that allows wallet holders to prove that they are not involved in illicit activities while preserving their privacy. By implementing a system that empowers wallet holders to proactively prove and verify each other's legitimacy before transactions, we aim to protect them from unintentional involvement in illicit activities. Our goal is to address compliance issues in the crypto ecosystem that cannot be solved solely by current regulatory rules and tools.",
       reference: "https://drive.google.com/drive/folders/1wOoJNpeTvJ1VEPoJXgDUZ8ebysn0efWK?usp=drive_link",
       wg: "IKP WG",
       wg_link: "/",
