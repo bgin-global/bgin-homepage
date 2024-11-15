@@ -1,6 +1,6 @@
 export const upcomingBlockConference = {
   title: "Block#12",
-  date: "March 2 and 3",
+  date: "March 1 and 2",
   location: "Tokyo, Japan",
   link: "",
 };
