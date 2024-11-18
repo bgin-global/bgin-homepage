@@ -2,7 +2,7 @@ export const upcomingBlockConference = {
   title: "Block#12",
   date: "March 2 and 3",
   location: "Tokyo, Japan",
-  link: "",
+  link: "https://www.eventbrite.com/e/bgin-block12-conference-tickets-1087071041749?aff=oddtdtcreator",
 };
 
 export const upcomingLayer2Meetup = {
