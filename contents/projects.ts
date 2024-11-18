@@ -35,7 +35,7 @@ export const projects: {
     },
     {
       title: "ZKP and its Application",
-      description: "xxx",
+      description: "This project explores Zero-Knowledge Proof (ZKP) technology, focusing on its definitions, terminology, and advancements. It examines ZKP's backend, frontend, and historical development while analyzing its societal impact, including specialized programming tools, performance trade-offs, vulnerabilities, and applications. Special attention is given to zkRollup technology, its history, and concerns, highlighting ZKP's role in advancing privacy and blockchain innovation.",
       reference: "https://drive.google.com/drive/folders/1wEOhN-tcuWk9RiwrItYS6jRS7Fp_Qi3V?usp=drive_link",
       wg: "IKP WG",
       wg_link: "/",
