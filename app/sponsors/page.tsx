@@ -8,8 +8,11 @@ import Image from "next/image";
 import ItemCardSquare from "@/components/ItemCardSquare";
 import { partnerships } from "@/contents/sponsors";
 import ItemReversible from "@/components/ItemReversible";
+import { getSortedEvents } from "@/lib/fetch-events";
 
 export default function Sponsors() {
+  const pastBlockConfs = getSortedEvents("block-conferences", "PAST");
+  const pastLayer2Events = getSortedEvents("layer2-meetups", "PAST");
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
@@ -36,21 +39,30 @@ export default function Sponsors() {
           <ItemCardSquare />
         </div>
         <SectionSubtitle title="Event Sponsors of past Block conferences" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
-          <ItemCard
-            title="BGIN Block #11 Meeting"
-            height="h-auto"
-            description={<></>}
-            link="https://docs.google.com/document/d/1KPy2L3nYVaATl8hc_NplG0_iOGz_W_JJIOuOf_X2k5I/edit?usp=sharing"
-            colorPattern="white"
-          />
-          <ItemCard
-            title="BGIN Block #10 Meeting"
-            height="h-auto"
-            description={<></>}
-            link="https://github.com/bgin-global/genesis-documents/blob/master/TermsOfReference.md"
-            colorPattern="white"
-          />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.HOLIZONTAL_SCROLL}>
+          {pastBlockConfs.map((event, index) => {
+            return <ItemCard
+              title={event.title}
+              height="h-auto"
+              description={<></>}
+              link={"/events/" + event.id}
+              key={index}
+              colorPattern="white"
+            />
+          })}
+        </div>
+        <SectionSubtitle title="Event Sponsors of past Layer2 Meetups" />
+        <div className={CUSTOM_STYLES.SECTION_FLEX.HOLIZONTAL_SCROLL}>
+          {pastLayer2Events.map((event, index) => {
+            return <ItemCard
+              title={event.title}
+              height="h-auto"
+              description={<></>}
+              link={"/events/" + event.id}
+              key={index}
+              colorPattern="white"
+            />
+          })}
         </div>
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0 py-8">
           <div className={`${CUSTOM_STYLES.DESCRIPTION} pb-6`}>
