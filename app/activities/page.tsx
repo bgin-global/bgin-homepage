@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
@@ -17,6 +18,9 @@ export default function Activities() {
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Structures of Our Activities" />
         <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
+          <div className={CUSTOM_STYLES.DESCRIPTION}>
+            The "Block" Conferences, which serve as BGIN's General Meeting, are the main conferences aimed at launching projects, reviewing ongoing initiatives, and delivering final reports. Detailed discussions on projects take place in the Working Group meetings. In other words, we build "transactions" in the Working Groups, while the "Block" Conference serves to "generate and validate blocks." on "Layer 1". Additionally, we hold "Layer 2" Meetups colocated with other community-hosted conferences to gather input for our projects. The discussions at these meetups are then "rolled up" to "Layer 1."
+          </div>
           <Image
             src="/images/Activities/structure.svg"
             alt="structures of our activities"
@@ -58,7 +62,7 @@ export default function Activities() {
             subtitle="(Off-chain transactions)"
             description={
               <>
-                <p className="mb-2">2-3 times a month</p>
+                <p className="mb-2">5-10 times a year</p>
                 <p className="mb-2">
                   Collocated with international events host by other communities
                   to discuss topics relevant to the communities

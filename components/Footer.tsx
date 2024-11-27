@@ -37,7 +37,7 @@ export default function Footer() {
                     />
                   </svg>
 
-                  <div>bgin-admin@mail.bgin-global.org</div>
+                  <div>bgin_admin@bg2x.org</div>
                 </div>
               </div>
             </div>

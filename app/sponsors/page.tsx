@@ -56,7 +56,7 @@ export default function Sponsors() {
           <div className={`${CUSTOM_STYLES.DESCRIPTION} pb-6`}>
             Please feel free to contact us (
             <span className="text-[#E46060]">
-              bgin-admin@mail.bgin-global.org
+              bgin_admin@bg2x.org
             </span>
             ) if you are interested in sponsoring BGIN!
           </div>
