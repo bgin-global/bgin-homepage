@@ -30,9 +30,8 @@ const TimelineItem = ({
           className={`flex shrink-0 self-start ${bgColor} rounded-full h-[60px] w-[60px] z-10`}
         />
         <div
-          className={`grow pt-4 ${
-            highlightImageSrc ? "pb-0" : "pb-7"
-          } ${bgColor} w-fit max-md:max-w-full`}
+          className={`grow pt-4 ${highlightImageSrc ? "pb-0" : "pb-7"
+            } ${bgColor} w-fit max-md:max-w-full`}
         >
           <div className={`${CUSTOM_STYLES.SUBTITLE} ${textColor} px-7`}>
             {date}, {title}
@@ -80,7 +79,7 @@ const Timeline = () => {
       <div className="flex gap-4 lg:gap-10 w-full max-md:max-w-full">
         <div className={`flex shrink-0 self-start h-[60px] w-[60px]`} />
         <div className={`grow px-7 py-7 bg-[#F0F4FE] w-fit max-md:max-w-full`}>
-          <p className="text-base leading-5 text-black max-md:max-w-full mb-8">
+          <p className="text-lg leading-5 text-black max-md:max-w-full mb-8">
             Since its foundation, BGIN has provided forums for multi-stakeholder
             discussions across various regions of the world, fostering a shared
             understanding and documenting consensus on numerous important

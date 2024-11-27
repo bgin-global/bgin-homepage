@@ -20,5 +20,5 @@ export const CUSTOM_STYLES = {
     LEFT_SEMIBOLD: "text-4xl leading-[50px] font-semibold font-FamiljenGrotesk",
   },
   SUBTITLE: "text-2xl leading-[35px] font-medium font-FamiljenGrotesk",
-  DESCRIPTION: "text-base leading-[19px] font-Inter",
+  DESCRIPTION: "text-lg leading-[19px] font-Inter",
 };

@@ -28,10 +28,10 @@ export default function ItemEvent(props: Props) {
         </div>
         <div className="w-full flex-col flex items-start gap-6 bgin-button">
           <div className="w-full flex-col flex items-start gap-2 text-black">
-            <div className="text-sm leading-[17px] font-Inter pb-4">
+            <div className="text-base leading-[17px] font-Inter pb-4">
               {props.event.description}
             </div>
-            <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter font-semibold">
+            <div className="flex-col flex items-start gap-1 text-base leading-[17px] font-Inter font-semibold">
               <div>Location: {props.event.location}</div>
               <div>
                 Date: {props.event.date}

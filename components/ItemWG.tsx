@@ -11,11 +11,10 @@ export default function ItemWG(props: Props) {
         <div className="text-3xl leading-[48px] font-medium text-black font-FamiljenGrotesk">
           {props.workingGroup.group_name}{" "}
           <span
-            className={`px-4 py-2 border border-solid rounded-full ${
-              props.workingGroup.inactive
-                ? "border-red-700 text-red-700"
-                : "border-green-700 text-green-700"
-            }`}
+            className={`px-4 py-2 border border-solid rounded-full ${props.workingGroup.inactive
+              ? "border-red-700 text-red-700"
+              : "border-green-700 text-green-700"
+              }`}
           >
             {props.workingGroup.inactive ? "Inactive" : "Active"}
           </span>
@@ -40,7 +39,7 @@ export default function ItemWG(props: Props) {
                     </svg>
 
                     <div className="flex-col flex justify-center items-start">
-                      <div className="text-sm leading-[17px]">{chair.name}</div>
+                      <div className="text-base leading-[17px]">{chair.name}</div>
                       <div className="text-xs leading-[18px]">{chair.job}</div>
                     </div>
                   </div>
@@ -52,12 +51,12 @@ export default function ItemWG(props: Props) {
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Description
             </div>
-            <div className="text-sm leading-[17px] font-Inter">
+            <div className="text-base leading-[17px] font-Inter">
               {props.workingGroup.description}
             </div>
           </div>
           {!props.workingGroup.inactive && (
-            <div className="grid grid-rows-3 lg:grid-rows-1 items-start gap-3 text-base font-semibold font-Inter grid-flow-col bgin-button">
+            <div className="grid grid-rows-3 lg:grid-rows-1 items-start gap-3 text-lg font-semibold font-Inter grid-flow-col bgin-button">
               <a
                 href={props.workingGroup.subscribe_url}
                 className="w-full flex justify-center items-center gap-2 px-6 py-4 rounded-full border border-[#2d2d2d] text-[#2d2d2d]"

@@ -9,9 +9,8 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`${
-        isOpen ? "" : "border border-b-black"
-      } static w-screen bg-white`}
+      className={`${isOpen ? "" : "border border-b-black"
+        } static w-screen bg-white`}
     >
       <div className="flex justify-between items-center p-4 max-w-5xl m-auto">
         <Link href="/">
@@ -98,20 +97,20 @@ function Header() {
 
         <div className="hidden lg:flex justify-center items-center gap-6 bgin-button">
           <Link href="/about">
-            <div className="text-base leading-[19px] text-black">About</div>
+            <div className="text-lg leading-[19px] text-black">About</div>
           </Link>
           <Link href="/activities">
-            <div className="text-base leading-[19px] text-black">
+            <div className="text-lg leading-[19px] text-black">
               Activities
             </div>
           </Link>
           <Link href="/gov">
-            <div className="text-base leading-[19px] text-black">
+            <div className="text-lg leading-[19px] text-black">
               Governance
             </div>
           </Link>
           <Link href="/sponsors">
-            <div className="text-base leading-[19px] text-black">Sponsors</div>
+            <div className="text-lg leading-[19px] text-black">Sponsors</div>
           </Link>
           <div>
             <Button
@@ -125,9 +124,8 @@ function Header() {
       </div>
 
       <div
-        className={`${
-          isOpen ? "" : "hidden"
-        } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-2 bg-sub`}
+        className={`${isOpen ? "" : "hidden"
+          } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-2 bg-sub`}
         id="navbar"
       >
         <PlainButton link="/about" text="About" />

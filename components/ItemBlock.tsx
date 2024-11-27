@@ -41,7 +41,7 @@ export default function ItemBlock({
             <div className="flex-col flex items-start gap-2">
               <div className={CUSTOM_STYLES.SUBTITLE}>{title}</div>
             </div>
-            <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
+            <div className="flex-col flex items-start gap-1 text-base leading-[17px] font-Inter">
               <div>{description}</div>
             </div>
           </div>

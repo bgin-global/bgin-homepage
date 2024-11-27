@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Contact Info
             </div>
-            <div className="flex-col flex items-start gap-6 text-base leading-[19px] font-Inter">
+            <div className="flex-col flex items-start gap-6 text-lg leading-[19px] font-Inter">
               <div className="flex-col flex items-start gap-6">
                 <div className="flex items-start gap-2">
                   <svg

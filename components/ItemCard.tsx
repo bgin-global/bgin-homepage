@@ -58,9 +58,8 @@ export default function ItemCard({
 }: Props) {
   return (
     <div
-      className={`${backgroundColor(colorPattern)} ${
-        height ?? "h-[420px]"
-      } w-full flex flex-col justify-between items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button`}
+      className={`${backgroundColor(colorPattern)} ${height ?? "h-[420px]"
+        } w-full flex flex-col justify-between items-start gap-4 px-4 pt-4 pb-6 rounded-3xl bgin-button`}
     >
       <div>
         <div className="flex-col w-full flex items-start gap-6 h-fit">
@@ -83,7 +82,7 @@ export default function ItemCard({
               )}
             </div>
 
-            <div className="flex-col flex items-start gap-1 text-sm leading-[17px] font-Inter">
+            <div className="flex-col flex items-start gap-1 text-base leading-[17px] font-Inter">
               {description}
             </div>
           </div>

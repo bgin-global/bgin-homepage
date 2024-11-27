@@ -38,12 +38,12 @@ export default async function Page() {
         </div>
         <Link
           href="/events/20240303-block10/jp"
-          className=" bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-base font-semibold text-white font-Inter h-12 overflow-hidden"
+          className=" bg-black flex justify-center items-center gap-2 px-6 py-4 rounded-full text-lg font-semibold text-white font-Inter h-12 overflow-hidden"
         >
           <div>日本語</div>
         </Link>
 
-        <div className="text-sm leading-[17px] font-Inter font-semibold">
+        <div className="text-lg leading-[17px] font-Inter font-semibold">
           <div>
             {event?.date}
             {event?.date_until ? ` 〜 ${event?.date_until}` : ""}
@@ -61,8 +61,8 @@ export default async function Page() {
           }}
         />
         {event &&
-        Date.parse(event.date_until || event.date) >= Date.now() &&
-        event.register_link ? (
+          Date.parse(event.date_until || event.date) >= Date.now() &&
+          event.register_link ? (
           <Button
             link={event.register_link}
             text="Register Now"

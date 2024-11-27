@@ -27,7 +27,7 @@ export default async function EventPage({
         <div className="text-4xl lg:text-6xl leading-60px lg:leading-[77px] font-medium font-FamiljenGrotesk lg:pt-12 py-4">
           {event?.title}
         </div>
-        <div className="text-sm leading-[17px] font-Inter font-semibold">
+        <div className="text-lg leading-[17px] font-Inter font-semibold">
           <div>
             {event?.date}
             {event?.date_until ? ` 〜 ${event?.date_until}` : ""}
@@ -37,7 +37,7 @@ export default async function EventPage({
         {event?.jp_url ? (
           <div>
             <Link
-              className="text-sm leading-[17px] font-Inter font-semibold"
+              className="text-lg leading-[17px] font-Inter font-semibold"
               href={event?.jp_url}
             >
               {event.lang == "ENG" ? "日本語" : "English"}
@@ -58,8 +58,8 @@ export default async function EventPage({
           }}
         />
         {event &&
-        Date.parse(event.date_until || event.date) >= Date.now() &&
-        event.register_link ? (
+          Date.parse(event.date_until || event.date) >= Date.now() &&
+          event.register_link ? (
           <Button
             link={event.register_link}
             text="Register Now"
