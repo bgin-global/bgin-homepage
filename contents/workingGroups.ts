@@ -61,8 +61,8 @@ export const workingGroups: WorkingGroup[] = [
         job: " ",
       },
     ],
-    description: " ",
-    subscribe_url: "",
+    description: "",
+    subscribe_url: "https://groups.google.com/g/bgin-cybersecurity-working-group",
     document_url:
       "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     community_url: " ",
