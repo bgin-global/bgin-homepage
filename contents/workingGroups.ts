@@ -26,7 +26,7 @@ export const workingGroups: WorkingGroup[] = [
     ],
     description:
       "The goal of IAM, Key Management and Privacy (IKP) Working Group is to provide guidance and good practice documents that describe Identity (including keys) and Access management for access to crypto-currency exchange; Identity (including keys) and Access management using Blockchain/DLT for Online resource access Privacy considerations to be taken into account for the above.",
-    subscribe_url: "",
+    subscribe_url: "https://groups.google.com/g/bgin-ikp-working-group",
     document_url:
       "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
     community_url: "https://bgin.discourse.group/c/ikp-wg/8",
@@ -47,7 +47,7 @@ export const workingGroups: WorkingGroup[] = [
     ],
     description:
       "The Financial Applications and Social Economics (FASE) working group focuses on an extensive array of topics around how blockchain technologies and crypto in general can enable new financial applications and socio economic growth.",
-    subscribe_url: "https://github.com/bgin-global",
+    subscribe_url: "https://groups.google.com/g/bgin-face-working-group",
     document_url:
       "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     community_url: "https://bgin.discourse.group/c/working-group-s/fase/9",
