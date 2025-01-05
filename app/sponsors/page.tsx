@@ -104,7 +104,6 @@ export default function Sponsors() {
         </div>
         ;
       </div>
-      export const partnerships = [
       <Footer />
     </main>
   );
