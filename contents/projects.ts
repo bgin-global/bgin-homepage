@@ -51,7 +51,7 @@ export const projects: {
     {
       title: "Blockchain Analysis Challenges",
       description: "This project will address the challenges in blockchain analysis, focusing on client education, evidence gathering, and proactive detection methodologies. Key topics include FATF compliance for VASPs, the role of blockchain analytics firms, and the impact of privacy technologies and off-chain transactions on analysis. We will explore the role of BGIN in enhancing education and discuss strategies to overcome these challenges, aiming to create a comprehensive document for the IKP WG.",
-      reference: "https://drive.google.com/drive/folders/1kXPS4mnjnmbk1ux2b0p8hme_IUp-_tqT?usp=drive_link",
+      reference: "https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb",
       wg: "IKP WG",
       wg_link: "/",
     },
