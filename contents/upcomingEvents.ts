@@ -6,9 +6,9 @@ export const upcomingBlockConference = {
 };
 
 export const upcomingLayer2Meetup = {
-  title: "Layer2 Meetup@___",
-  date: "",
-  location: "",
+  title: "Layer2 Meetup@Sydney",
+  date: "March 10",
+  location: "Sydney, Australia",
   link: "",
 };
 
