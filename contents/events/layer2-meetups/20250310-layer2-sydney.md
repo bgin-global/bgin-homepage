@@ -15,7 +15,12 @@ report_url: ""
 ## Supporters
 
 <div class="supporters">
-
+    <a href="https://www.womenincrypto.org/">
+        <img src="/images/Events/sponsor/AWIC.jpg">
+    </a>
+    <a href="https://www.blockchainapac.com.au/">
+        <img src="/images/Events/sponsor/Blockchain-apac.png">
+    </a>
 </div>
 
 ## Background
