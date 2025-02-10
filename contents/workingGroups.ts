@@ -61,9 +61,8 @@ export const workingGroups: WorkingGroup[] = [
         job: "Penguin Securities",
       },
     ],
-    description: 
-      "To address the challenge of increasing international sharing of vulnerability information and threat intelligence within the crypto industry, the goal is to determine the optimal operational framework tailored to the industry through multi-stakeholder discussions (involving existing national or regional ISACs, other standardization bodies, regulators, and business operators including DeFi). This process will culminate in the creation of standards documents. 
-Additionally, the objectives are: (1) to support international cooperation across ISACs, (2) to provide educational content for resource-constrained businesses and nations, and (3), where needed, to develop technical standards, including data formats for sharing vulnerability information and other cybersecurity measures, for submission to the appropriate standardization bodies.",
+    description:
+      "To address the challenge of increasing international sharing of vulnerability information and threat intelligence within the crypto industry, the goal is to determine the optimal operational framework tailored to the industry through multi-stakeholder discussions (involving existing national or regional ISACs, other standardization bodies, regulators, and business operators including DeFi). This process will culminate in the creation of standards documents. Additionally, the objectives are: (1) to support international cooperation across ISACs, (2) to provide educational content for resource-constrained businesses and nations, and (3), where needed, to develop technical standards, including data formats for sharing vulnerability information and other cybersecurity measures, for submission to the appropriate standardization bodies.",
     subscribe_url: "https://groups.google.com/g/bgin-cybersecurity-working-group",
     document_url:
       "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
