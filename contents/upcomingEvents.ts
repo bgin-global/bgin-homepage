@@ -9,7 +9,7 @@ export const upcomingLayer2Meetup = {
   title: "Layer2 Meetup@Sydney",
   date: "March 10",
   location: "Sydney, Australia",
-  link: "https://lu.ma/33o6zq7a",
+  link: "/events/20250310-layer2-sydney",
 };
 
 export const upcomingWGCalls = [

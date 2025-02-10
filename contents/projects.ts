@@ -71,16 +71,15 @@ export const projects: {
       wg: "FACE WG",
       wg_link: "/",
     },
-    
+
     {
       title: "Stablecoin Research",
-      description: "This research project identifies potential policy gaps and issues that may require further examination by practitioners and policymakers. We provide a forward-looking perspective on anticipated legal reforms in the realm of stablecoins.
-",
+      description: "This research project identifies potential policy gaps and issues that may require further examination by practitioners and policymakers. We provide a forward-looking perspective on anticipated legal reforms in the realm of stablecoins.",
       reference: "https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z",
       wg: "FACE WG",
       wg_link: "/",
     },
-    
+
     {
       title: "Cyber Security Standards",
       description: "Despite significant advancements, cybersecurity incidents remain prevalent in the crypto industry. Just as in other sectors, achieving industry-wide alignment on cybersecurity information sharing is crucial. This discussion will explore how the crypto industry can establish a robust international information-sharing framework, drawing lessons from traditional finance and other industries.",
