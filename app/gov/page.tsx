@@ -6,6 +6,8 @@ import SectionSubtitle from "@/components/SectionSubtitle";
 import ItemCard from "@/components/ItemCard";
 import Image from "next/image";
 import ItemCardSquare from "@/components/ItemCardSquare";
+import {governanceDocuments} from "@/contents/governanceDocs";
+import ItemList from "@/components/ItemList";
 
 export default function Governance() {
   return (
@@ -44,7 +46,7 @@ export default function Governance() {
             title="ByLaw"
             height="h-auto"
             description={<></>}
-            link="https://docs.google.com/document/d/1KPy2L3nYVaATl8hc_NplG0_iOGz_W_JJIOuOf_X2k5I/edit?usp=sharing"
+            link="https://docs.google.com/document/d/1DpBbV6pSnzAj-VaudlDujySmgY2lfshm/edit?usp=sharing&ouid=106857294797183271466&rtpof=true&sd=true"
             colorPattern="navy"
           />
           <ItemCard
@@ -62,6 +64,20 @@ export default function Governance() {
             colorPattern="blue"
           />
         </div>
+
+        <SectionSubtitle title="Other governance documents" />
+
+                <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
+                  {governanceDocuments.map((doc) => {
+                    return (
+                      <ItemList
+                        key={doc.title}
+                        title={`${doc.date}, ${doc.title}`}
+                        link={doc.link}
+                      />
+                    );
+                  })}
+                </ul>
       </div>
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Our Members" />
