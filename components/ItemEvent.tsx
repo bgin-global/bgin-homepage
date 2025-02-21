@@ -48,7 +48,7 @@ export default function ItemEvent(props: Props) {
             />
             {props.event.jp_url && props.event.lang === "ENG" ? (
               <Button
-                link={"/events/" + props.event.jp_url}
+                link={props.event.jp_url}
                 text="詳細"
                 color="black"
                 withArrow={true}
