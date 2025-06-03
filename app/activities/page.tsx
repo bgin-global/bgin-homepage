@@ -110,6 +110,15 @@ export default function Activities() {
             understandings and potentially leading to standards creation.
           </div>
         </div>
+        <SectionSubtitle title="Newsletter" />
+　　　　　
+        <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
+　　　　 　　　 <ItemList
+  　　　　　　　  title="May 2025, BGIN Newsletter"
+  　　　　　　　  link="/images/Activities/BGIN%20May%202025%20WG%20Newsletter.pdf"
+　　　　  　　　/>
+　　　　　</ul>
+        
         <SectionSubtitle title="Published" />
 
         <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
