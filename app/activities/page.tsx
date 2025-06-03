@@ -115,7 +115,7 @@ export default function Activities() {
         <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
 　　　　 　　　 <ItemList
   　　　　　　　  title="May 2025, BGIN Newsletter"
-  　　　　　　　  link="/images/Activities/BGIN%20May%202025%20WG%20Newsletter.pdf"
+  　　　　　　　  link="/images/Activities/BGIN May 2025 WG Newsletter.pdf"
 　　　　  　　　/>
 　　　　　</ul>
         
