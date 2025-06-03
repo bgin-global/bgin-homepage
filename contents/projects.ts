@@ -92,7 +92,7 @@ export const projects: {
     {
       title: "BGIN 2025 May Newsletter",
       date: "June 2 2025",
-      link: "/public/images/Activities/BGIN May 2025 WG Newsletter.pdf",
+      link: "/images/Activities/BGIN May 2025 WG Newsletter.pdf",
     },
     {
       title: "2020 Online Meeting Report",
