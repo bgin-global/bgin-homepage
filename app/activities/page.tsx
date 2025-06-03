@@ -110,20 +110,6 @@ export default function Activities() {
             understandings and potentially leading to standards creation.
           </div>
         </div>
-        <SectionSubtitle title="Newsletter" />
-
-        <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
-          {projects.published.map((project) => {
-            return (
-              <ItemList
-                key={project.title}
-                title={`${project.date}, ${project.title}`}
-                link={project.link}
-              />
-            );
-          })}
-        </ul>
-
         <SectionSubtitle title="Published" />
 
         <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
