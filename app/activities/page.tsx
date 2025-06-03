@@ -103,26 +103,13 @@ export default function Activities() {
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Projects" />
-　　　　　<div className="w-full max-w-5xl m-auto px-6 xl:px-0">
- 　　　　 <div className={CUSTOM_STYLES.DESCRIPTION}>
-   　　　　 <p>
-    　　　　  BGIN has created documents that contribute to sound blockchain governance,
-    　　　　  helping different stakeholders generate shared understandings and potentially
-     　　　　 leading to standards creation.
-   　　　　 </p>
-    　　　　<p className="mt-4">
-            📄{" "}
-           <a
-            href="/images/Activities/BGIN_May_2025_WG_Newsletter.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 underline"
-           >
-            BGIN Newsletter May 2025 (PDF)
-           </a>
-          </p>
-        </div>
-       </div>
+        <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
+          <div className={CUSTOM_STYLES.DESCRIPTION}>
+            BGIN has created documents that contribute to sound blockchain
+            governance, helping different stakeholders generate shared
+            understandings and potentially leading to standards creation.
+          </div>
+        </div>        
         <SectionSubtitle title="Published" />
 
         <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
