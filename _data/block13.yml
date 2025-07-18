@@ -1,0 +1,360 @@
+# BGIN Block 13 Event Data
+# This file contains all the structured data for the Block 13 event page
+
+# Critical Projects for Block 13
+critical_projects:
+  - title: "Zero-Knowledge Tax Protocol"
+    description: "A draft proposal to standardize zk-based compliance proofs for cross-border tax reporting and regulatory transparency."
+    wg: "wg1"
+    phase: "draft"
+    link: "https://bgin-global.org/docs/zk-tax-protocol"
+    
+  - title: "Decentralized Identity Anchors"
+    description: "Cross-chain DID registry proposal enabling interoperable identity verification across blockchain networks."
+    wg: "wg2"
+    phase: "proposal"
+    link: "https://bgin-global.org/docs/did-anchors"
+    
+  - title: "Regulatory Sandbox Framework"
+    description: "Standardized framework for blockchain regulatory testing environments across jurisdictions."
+    wg: "wg1"
+    phase: "review"
+    link: "https://bgin-global.org/docs/regulatory-sandbox"
+    
+  - title: "Smart Contract Audit Standards"
+    description: "Comprehensive guidelines for smart contract security auditing and certification processes."
+    wg: "wg3"
+    phase: "proposal"
+    link: "https://bgin-global.org/docs/audit-standards"
+    
+  - title: "Cross-Border CBDC Protocol"
+    description: "Technical specifications for central bank digital currency interoperability."
+    wg: "wg2"
+    phase: "draft"
+    link: "https://bgin-global.org/docs/cbdc-protocol"
+    
+  - title: "DeFi Risk Assessment Matrix"
+    description: "Risk evaluation framework for decentralized finance protocols and governance structures."
+    wg: "wg3"
+    phase: "review"
+    link: "https://bgin-global.org/docs/defi-risk-matrix"
+
+# Event Agenda for October 15-17, 2025
+agenda:
+  # October 15, 2025 - Day 1
+  - day: "2025-10-15"
+    time: "09:00"
+    room: "Main Hall"
+    title: "Opening Keynote: The Future of Global Blockchain Governance"
+    wg: "general"
+    description: "Welcome address and overview of BGIN's mission and Block 13 objectives."
+    link: "/sessions/opening-keynote"
+    
+  - day: "2025-10-15"
+    time: "10:30"
+    room: "Main Hall"
+    title: "WG1 Panel: Regulatory Innovation in Blockchain"
+    wg: "wg1"
+    description: "Panel discussion on emerging regulatory frameworks and compliance innovations."
+    link: "/sessions/wg1-regulatory-panel"
+    
+  - day: "2025-10-15"
+    time: "12:00"
+    room: "Breakout Room A"
+    title: "Zero-Knowledge Compliance Deep Dive"
+    wg: "wg1"
+    description: "Technical workshop on implementing zk-proofs for regulatory compliance."
+    link: "/sessions/zk-compliance-workshop"
+    
+  - day: "2025-10-15"
+    time: "14:00"
+    room: "Breakout Room B"
+    title: "Decentralized Identity Standards"
+    wg: "wg2"
+    description: "Working session on cross-chain identity verification protocols."
+    link: "/sessions/did-standards"
+    
+  - day: "2025-10-15"
+    time: "15:30"
+    room: "Main Hall"
+    title: "Cross-Industry Collaboration Forum"
+    wg: "general"
+    description: "Open forum for industry representatives to discuss collaboration opportunities."
+    link: "/sessions/collaboration-forum"
+    
+  # October 16, 2025 - Day 2
+  - day: "2025-10-16"
+    time: "09:00"
+    room: "Main Hall"
+    title: "Day 2 Keynote: Central Bank Digital Currencies"
+    wg: "general"
+    description: "Insights from central bank representatives on CBDC development and interoperability."
+    link: "/sessions/cbdc-keynote"
+    
+  - day: "2025-10-16"
+    time: "10:30"
+    room: "Breakout Room A"
+    title: "WG2 Technical Session: Interoperability Protocols"
+    wg: "wg2"
+    description: "Deep dive into technical specifications for blockchain interoperability."
+    link: "/sessions/wg2-interoperability"
+    
+  - day: "2025-10-16"
+    time: "12:00"
+    room: "Breakout Room B"
+    title: "Smart Contract Security Standards"
+    wg: "wg3"
+    description: "Workshop on developing comprehensive smart contract audit guidelines."
+    link: "/sessions/smart-contract-security"
+    
+  - day: "2025-10-16"
+    time: "14:00"
+    room: "Main Hall"
+    title: "DeFi Risk Management Panel"
+    wg: "wg3"
+    description: "Panel discussion on risk assessment and mitigation in decentralized finance."
+    link: "/sessions/defi-risk-panel"
+    
+  - day: "2025-10-16"
+    time: "15:30"
+    room: "Breakout Room A"
+    title: "Regulatory Sandbox Implementation"
+    wg: "wg1"
+    description: "Hands-on session for implementing regulatory testing frameworks."
+    link: "/sessions/regulatory-sandbox"
+    
+  # October 17, 2025 - Day 3
+  - day: "2025-10-17"
+    time: "09:00"
+    room: "Main Hall"
+    title: "Day 3 Keynote: Future of Blockchain Governance"
+    wg: "general"
+    description: "Vision for the next decade of blockchain governance and international cooperation."
+    link: "/sessions/future-governance-keynote"
+    
+  - day: "2025-10-17"
+    time: "10:30"
+    room: "Main Hall"
+    title: "Working Group Synthesis Session"
+    wg: "general"
+    description: "Combined session where all working groups present their findings and recommendations."
+    link: "/sessions/wg-synthesis"
+    
+  - day: "2025-10-17"
+    time: "12:00"
+    room: "Breakout Room A"
+    title: "Implementation Roadmap Workshop"
+    wg: "general"
+    description: "Collaborative workshop to develop implementation timelines for Block 13 outcomes."
+    link: "/sessions/implementation-roadmap"
+    
+  - day: "2025-10-17"
+    time: "14:00"
+    room: "Main Hall"
+    title: "Closing Ceremony & Next Steps"
+    wg: "general"
+    description: "Summary of Block 13 achievements and announcement of future initiatives."
+    link: "/sessions/closing-ceremony"
+
+# Publications and Research Outputs
+publications:
+  - title: "Multichain Interoperability Framework"
+    image: "/images/publications/mif-cover.jpg"
+    link: "/publications/multichain-interoperability-framework"
+    summary: "A comprehensive framework for Layer-1 messaging compatibility and cross-chain communication protocols."
+    
+  - title: "Global Regulatory Harmonization Report"
+    image: "/images/publications/grh-report.jpg"
+    link: "/publications/global-regulatory-harmonization"
+    summary: "Analysis of regulatory approaches across major jurisdictions and recommendations for harmonization."
+    
+  - title: "DeFi Risk Assessment Methodology"
+    image: "/images/publications/defi-risk.jpg"
+    link: "/publications/defi-risk-assessment"
+    summary: "Systematic approach to evaluating and mitigating risks in decentralized finance ecosystems."
+    
+  - title: "Zero-Knowledge Compliance Whitepaper"
+    image: "/images/publications/zk-compliance.jpg"
+    link: "/publications/zk-compliance-whitepaper"
+    summary: "Technical specifications for implementing privacy-preserving compliance mechanisms."
+    
+  - title: "CBDC Interoperability Standards"
+    image: "/images/publications/cbdc-standards.jpg"
+    link: "/publications/cbdc-interoperability"
+    summary: "Technical standards for enabling interoperability between central bank digital currencies."
+    
+  - title: "Blockchain Governance Best Practices"
+    image: "/images/publications/governance-practices.jpg"
+    link: "/publications/governance-best-practices"
+    summary: "Guidelines for implementing effective governance mechanisms in blockchain networks."
+
+# Event Sponsors
+sponsors:
+  - name: "Open Finance Foundation"
+    logo_url: "/images/sponsors/open-finance-foundation.png"
+    website: "https://openfinance.org"
+    tier: "platinum"
+    
+  - name: "Global Tech Consortium"
+    logo_url: "/images/sponsors/global-tech-consortium.svg"
+    website: "https://gtc.global"
+    tier: "gold"
+    
+  - name: "Blockchain Research Institute"
+    logo_url: "/images/sponsors/blockchain-research-institute.png"
+    website: "https://blockchainresearchinstitute.org"
+    tier: "gold"
+    
+  - name: "Digital Currency Group"
+    logo_url: "/images/sponsors/digital-currency-group.svg"
+    website: "https://dcg.co"
+    tier: "silver"
+    
+  - name: "ConsenSys"
+    logo_url: "/images/sponsors/consensys.png"
+    website: "https://consensys.net"
+    tier: "silver"
+    
+  - name: "Chainlink Labs"
+    logo_url: "/images/sponsors/chainlink-labs.svg"
+    website: "https://chainlinklabs.com"
+    tier: "bronze"
+    
+  - name: "Protocol Labs"
+    logo_url: "/images/sponsors/protocol-labs.png"
+    website: "https://protocol.ai"
+    tier: "bronze"
+
+# Venue Rooms and Facilities
+rooms:
+  - name: "Main Hall"
+    image: "/images/venue/main-hall.jpg"
+    caption: "Primary auditorium with capacity for 300 attendees, equipped with live streaming capabilities."
+    capacity: 300
+    features:
+      - "Live streaming equipment"
+      - "Simultaneous translation"
+      - "High-resolution displays"
+      - "Professional audio system"
+    
+  - name: "Breakout Room A"
+    image: "/images/venue/breakout-room-a.jpg"
+    caption: "Intimate setting for working group sessions and technical workshops (50 people)."
+    capacity: 50
+    features:
+      - "Interactive whiteboards"
+      - "Collaborative seating"
+      - "Video conferencing"
+      - "Technical presentation setup"
+    
+  - name: "Breakout Room B"
+    image: "/images/venue/breakout-room-b.jpg"
+    caption: "Flexible space for panel discussions and specialized sessions (75 people)."
+    capacity: 75
+    features:
+      - "Modular seating arrangement"
+      - "Multiple screen displays"
+      - "Wireless presentation system"
+      - "Breakout discussion areas"
+    
+  - name: "Networking Lounge"
+    image: "/images/venue/networking-lounge.jpg"
+    caption: "Comfortable space for informal discussions and coffee breaks."
+    capacity: 100
+    features:
+      - "Casual seating areas"
+      - "Refreshment stations"
+      - "Quiet zones"
+      - "Power outlets and WiFi"
+    
+  - name: "Exhibition Hall"
+    image: "/images/venue/exhibition-hall.jpg"
+    caption: "Space for sponsor exhibitions and technology demonstrations."
+    capacity: 150
+    features:
+      - "Modular booth spaces"
+      - "Demo stations"
+      - "Product showcase areas"
+      - "Meeting pods"
+
+# Working Group Information
+working_groups:
+  - id: "wg1"
+    name: "Working Group 1: Regulatory & Legal"
+    description: "Focuses on regulatory frameworks, compliance mechanisms, and legal considerations for blockchain technology."
+    color: "amber"
+    lead: "Dr. Sarah Chen"
+    focus_areas:
+      - "Regulatory compliance"
+      - "Legal frameworks"
+      - "Policy development"
+      - "Cross-jurisdictional coordination"
+    
+  - id: "wg2"
+    name: "Working Group 2: Technical Standards"
+    description: "Develops technical standards for interoperability, security, and blockchain infrastructure."
+    color: "blue"
+    lead: "Prof. Michael Rodriguez"
+    focus_areas:
+      - "Interoperability protocols"
+      - "Technical standards"
+      - "Infrastructure development"
+      - "Security frameworks"
+    
+  - id: "wg3"
+    name: "Working Group 3: Risk & Governance"
+    description: "Addresses risk management, governance mechanisms, and ethical considerations in blockchain systems."
+    color: "red"
+    lead: "Dr. Emily Zhang"
+    focus_areas:
+      - "Risk assessment"
+      - "Governance models"
+      - "Ethical guidelines"
+      - "Stakeholder engagement"
+
+# Event Details
+event_details:
+  title: "BGIN Block 13"
+  subtitle: "Advancing Global Blockchain Governance"
+  dates:
+    start: "2025-10-15"
+    end: "2025-10-17"
+  location:
+    venue: "Washington Convention Center"
+    city: "Washington, D.C."
+    country: "United States"
+    address: "801 Mt Vernon Pl NW, Washington, DC 20001"
+  registration:
+    status: "coming_soon"
+    early_bird_date: "2025-08-15"
+    regular_date: "2025-09-30"
+    capacity: 400
+  contact:
+    email: "block13@bgin-global.org"
+    phone: "+1-202-555-0123"
+    website: "https://bgin-global.org/events/block13"
+
+# Social Media and External Links
+social_links:
+  twitter: "https://twitter.com/BGIN_Global"
+  linkedin: "https://linkedin.com/company/bgin-global"
+  github: "https://github.com/bgin-global"
+  youtube: "https://youtube.com/c/BGINGlobal"
+
+# Additional Resources
+resources:
+  - title: "Event Code of Conduct"
+    link: "/code-of-conduct"
+    description: "Guidelines for respectful and inclusive participation"
+    
+  - title: "Technical Requirements"
+    link: "/technical-requirements"
+    description: "Equipment and connectivity requirements for presentations"
+    
+  - title: "Accommodation Guide"
+    link: "/accommodation-guide"
+    description: "Recommended hotels and transportation options"
+    
+  - title: "Visa Information"
+    link: "/visa-information"
+    description: "Travel and visa requirements for international attendees"
