@@ -50,7 +50,7 @@ export default function ItemEvent(props: Props) {
                   target={props.event.register_link?.startsWith("http") ? "_blank" : undefined}
                   rel={props.event.register_link?.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
-                  <div className="text-white text-xl font-semibold">Registration</div>
+                  <div className="text-white text-xl font-semibold">Registration & Details</div>
                   <svg
                     width="22"
                     height="22"
