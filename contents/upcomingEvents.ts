@@ -1,24 +1,24 @@
 export const upcomingBlockConference = {
-  title: "Block#13",
-  date: "October",
+  title: "BGIN Block #13 Meeting",
+  date: "October 15-17, 2025",
   location: "Washington, D.C.",
   link: "/events/20250302-block12",
 };
 
 export const upcomingLayer2Meetup = {
-  title: "Layer2 Meetup@Sydney",
-  date: "July 1-2",
-  location: "Switzerland,
+  title: "Layer2 Meetup",
+  date: "March 1-2, 2025",
+  location: "Sydney, Australia",
   link: "/events/20250310-layer2-sydney",
 };
 
 export const upcomingWGCalls = [
   {
     wgTitle: "GIKP WG",
-    date: "12pm Universal Time, June 5, 2025",
+    date: "12pm Universal Time, June 31, 2025",
   },
   {
     wgTitle: "FASE WG",
-    date: "11:30am Universal Time, June 4, 2025",
+    date: "11am Universal Time, August 27, 2025",
   },
 ];
