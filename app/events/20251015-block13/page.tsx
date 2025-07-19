@@ -312,7 +312,7 @@ export default function Block13Page() {
 
         {/* Critical Projects Section */}
         <section className="block13-section">
-          <h2 className="block13-section-title">Key Research Projects</h2>
+          <h2 className="block13-section-title">Key Projects</h2>
           <div className="block13-grid block13-grid-3">
             {criticalProjects.map((project) => (
               <div key={project.id} className={`block13-card block13-wg-card ${project.wg.toLowerCase()} flex flex-col`}>
