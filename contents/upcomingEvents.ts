@@ -14,7 +14,7 @@ export const upcomingLayer2Meetup = {
 
 export const upcomingWGCalls = [
   {
-    wgTitle: "GIKP WG",
+    wgTitle: "IKP WG",
     date: "12pm Universal Time, July 31, 2025",
   },
   {
