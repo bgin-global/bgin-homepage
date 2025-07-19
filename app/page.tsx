@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/Footer";
 import ItemBlock from "@/components/ItemBlock";
 import Header from "@/components/Header";
@@ -13,14 +14,39 @@ import {
   upcomingLayer2Meetup,
   upcomingWGCalls,
 } from "@/contents/upcomingEvents";
+import { useState } from "react";
+// ...existing imports and code...
 
 export default function Home() {
   const layer2Upcoming = upcomingLayer2Meetup;
   const blockUpcoming = upcomingBlockConference;
   const wgCallUpcoming = upcomingWGCalls;
+  const [showWhatsNew, setShowWhatsNew] = useState(true);
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
+
+      {/* What's New Headline */}
+      {showWhatsNew && (
+        <div className="w-full bg-yellow-100 border-b border-yellow-300 py-4 flex justify-center items-center relative">
+          <a
+            href="/events/20251015-block13"
+            className="text-xl md:text-2xl font-bold text-yellow-900 hover:underline"
+            style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
+          >
+            What&#39;s New: BGIN Block 13 Event Page is Live! Click here for details.
+          </a>
+          <button
+            onClick={() => setShowWhatsNew(false)}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-yellow-900 text-lg font-bold px-2 py-1 rounded hover:bg-yellow-200"
+            aria-label="Close What's New"
+            style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       <Hero type={1} />
 
       <div className={`${CUSTOM_STYLES.SECTION_CONTAINER.BLUE} items-start`}>

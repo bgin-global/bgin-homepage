@@ -28,9 +28,10 @@ export default function ItemEvent(props: Props) {
         </div>
         <div className="w-full flex-col flex items-start gap-6 bgin-button">
           <div className="w-full flex-col flex items-start gap-2 text-black">
-            <div className="text-base leading-[17px] font-Inter pb-4">
-              {props.event.description}
-            </div>
+            <div 
+              className="text-base leading-[17px] font-Inter pb-4"
+              dangerouslySetInnerHTML={{ __html: props.event.description }}
+            />
             <div className="flex-col flex items-start gap-1 text-base leading-[17px] font-Inter font-semibold">
               <div>Location: {props.event.location}</div>
               <div>
@@ -39,30 +40,69 @@ export default function ItemEvent(props: Props) {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 grid-flow-row bgin-button">
-            <Button
-              link={"/events/" + props.event.id}
-              text="Details"
-              color="black"
-              withArrow={true}
-            />
-            {props.event.jp_url && props.event.lang === "ENG" ? (
-              <Button
-                link={props.event.jp_url}
-                text="詳細"
-                color="black"
-                withArrow={true}
-              />
+          <div className="bgin-button">
+            {props.event.id === "upcoming-registration" ? (
+              // Special registration button - full width and bigger
+              <div className="w-full mb-4">
+                <a
+                  href={props.event.register_link || "/events/" + props.event.id}
+                  className="bg-[#6890F5] hover:bg-[#5a7de8] flex justify-center items-center gap-3 px-8 py-5 rounded-full border border-[#6890F5] w-full transition-colors"
+                  target={props.event.register_link?.startsWith("http") ? "_blank" : undefined}
+                  rel={props.event.register_link?.startsWith("http") ? "noopener noreferrer" : undefined}
+                >
+                  <div className="text-white text-xl font-semibold">Registration & Details</div>
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.58325 11H17.4166"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M11 4.58325L17.4167 10.9999L11 17.4166"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
             ) : (
-              <></>
-            )}
-            {props.event.report_url && (
-              <Button
-                link={props.event.report_url}
-                text="report"
-                color="white"
-                withArrow={true}
-              />
+              // Regular button grid for other events
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 grid-flow-row">
+                <Button
+                  link={"/events/" + props.event.id}
+                  text="Details"
+                  color="black"
+                  withArrow={true}
+                />
+                {props.event.jp_url && props.event.lang === "ENG" ? (
+                  <Button
+                    link={props.event.jp_url}
+                    text="詳細"
+                    color="black"
+                    withArrow={true}
+                  />
+                ) : (
+                  <></>
+                )}
+                {props.event.report_url && (
+                  <Button
+                    link={props.event.report_url}
+                    text="report"
+                    color="white"
+                    withArrow={true}
+                  />
+                )}
+              </div>
             )}
           </div>
         </div>

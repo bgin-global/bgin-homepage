@@ -90,6 +90,11 @@ export const projects: {
   ],
   published: [
     {
+      title: "BGIN 2025 June Newsletter",
+      date: "Jully 2 2025",
+      link: "/images/Activities/BGIN June 2025 WG Newsletter.pdf",
+    },
+    {
       title: "BGIN 2025 May Newsletter",
       date: "June 2 2025",
       link: "/images/Activities/BGIN May 2025 WG Newsletter.pdf",
