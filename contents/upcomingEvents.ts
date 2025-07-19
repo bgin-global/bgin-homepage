@@ -4,13 +4,14 @@ export const upcomingBlockConference = [
   date: "October 15-17, 2025",
   location: "Washington, D.C., USA",
   link: "/events/20251015-block13",
-  },
-
+  }
+  /*,
   {
   title: "BGIN Block #14 Meeting",
   date: "March 1-2, 2026",
   location: "Tokyo, Japan",
   }
+  */
 ];
 
 export const upcomingLayer2Meetup = {
