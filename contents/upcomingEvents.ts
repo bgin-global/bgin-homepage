@@ -7,15 +7,15 @@ export const upcomingBlockConference = {
 
 export const upcomingLayer2Meetup = {
   title: "Layer2 Meetup",
-  date: "March 1-2, 2025",
-  location: "Sydney, Australia",
-  link: "/events/20250310-layer2-sydney",
+  date: "September 15-17, 2025",
+  location: "Tokyo & Osaka, Japan",
+  link: "",
 };
 
 export const upcomingWGCalls = [
   {
     wgTitle: "IKP WG",
-    date: "12pm Universal Time, July 31, 2025",
+    date: "12pm Universal Time, August 14, 2025",
   },
   {
     wgTitle: "FASE WG",

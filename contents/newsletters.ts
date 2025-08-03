@@ -8,6 +8,13 @@ export interface Newsletter {
 
 export const newsletters: Newsletter[] = [
   {
+  title: "BGIN July 2025 WG Newsletter",
+  date: "August 3rd, 2025",
+  description: "Highlights from the BGIN July 2025 Working Group meetings, including key decisions and important upcoming events.",
+  link: "/images/Activities/BGIN July 2025 WG Newsletter.pdf",
+  workingGroups: ["IKP WG", "FASE WG", "CS WG"],
+  }, 
+  {
     title: "BGIN June 2025 WG Newsletter",
     date: "June 30, 2025",
     description: "Latest updates from our working groups including progress on ongoing projects and meeting schedules for Summer 2025.",
