@@ -100,14 +100,13 @@ function Header() {
             <div className="text-lg leading-[19px] text-black">About</div>
           </Link>
           <Link href="/activities">
-            <div className="text-lg leading-[19px] text-black">
-              Activities
-            </div>
+            <div className="text-lg leading-[19px] text-black">Activities</div>
+          </Link>
+          <Link href="/news">
+            <div className="text-lg leading-[19px] text-black">News</div>
           </Link>
           <Link href="/gov">
-            <div className="text-lg leading-[19px] text-black">
-              Governance
-            </div>
+            <div className="text-lg leading-[19px] text-black">Governance</div>
           </Link>
           <Link href="/sponsors">
             <div className="text-lg leading-[19px] text-black">Sponsors</div>
@@ -123,20 +122,28 @@ function Header() {
         </div>
       </div>
 
-      <div
-        className={`${isOpen ? "" : "hidden"
-          } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-2 bg-sub`}
-        id="navbar"
-      >
-        <PlainButton link="/about" text="About" />
-        <PlainButton link="/activities" text="Activities" />
-        <PlainButton link="/gov" text="Governance" />
-        <PlainButton link="/sponsors" text="Sponsors" />
-        <PlainButton
-          link="https://www.youtube.com/@bgin/videos"
-          text="Videos"
-        />
-      </div>
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-200">
+          <div className="px-4 py-6 space-y-4">
+            <Link href="/about">
+              <div className="text-lg leading-[19px] text-black py-2">About</div>
+            </Link>
+            <Link href="/activities">
+              <div className="text-lg leading-[19px] text-black py-2">Activities</div>
+            </Link>
+            <Link href="/news">
+              <div className="text-lg leading-[19px] text-black py-2">News</div>
+            </Link>
+            <Link href="/gov">
+              <div className="text-lg leading-[19px] text-black py-2">Governance</div>
+            </Link>
+            <Link href="/sponsors">
+              <div className="text-lg leading-[19px] text-black py-2">Sponsors</div>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

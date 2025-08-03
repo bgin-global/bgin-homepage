@@ -15,6 +15,7 @@ import {
   upcomingWGCalls,
 } from "@/contents/upcomingEvents";
 import { useState } from "react";
+import NewsSection from "@/components/NewsSection";
 // ...existing imports and code...
 
 export default function Home() {
@@ -48,6 +49,9 @@ export default function Home() {
       )}
 
       <Hero type={1} />
+
+      {/* Latest News Section */}
+      <NewsSection />
 
       <div className={`${CUSTOM_STYLES.SECTION_CONTAINER.BLUE} items-start`}>
         <SectionTitle title="Next Activities" />
@@ -98,7 +102,8 @@ export default function Home() {
               </>
             }
             link="/activities/block-conference"
-            colorPattern="white"
+            height="h-auto"
+            colorPattern="navy"
           />
           <ItemCard
             title="Working Group"
