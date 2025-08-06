@@ -9,6 +9,8 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 import { projects } from "@/contents/projects";
 import Image from "next/image";
 import ItemCard from "@/components/ItemCard";
+import News from "@/components/News";
+import { allNews } from "@/contents/news";
 import {
   upcomingBlockConference,
   upcomingLayer2Meetup,
@@ -27,7 +29,7 @@ export default function Home() {
       <Header />
 
       {/* What's New Headline */}
-      {showWhatsNew && (
+      {/* {showWhatsNew && (
         <div className="w-full bg-yellow-100 border-b border-yellow-300 py-4 flex justify-center items-center relative">
           <a
             href="/events/20251015-block13"
@@ -45,9 +47,14 @@ export default function Home() {
             ×
           </button>
         </div>
-      )}
+      )} */}
 
       <Hero type={1} />
+
+      <div className={`${CUSTOM_STYLES.SECTION_CONTAINER.BLUE} items-start`}>
+        <SectionTitle title="Latest News & Updates" />
+        <News news={allNews} maxItems={3} />
+      </div>
 
       <div className={`${CUSTOM_STYLES.SECTION_CONTAINER.BLUE} items-start`}>
         <SectionTitle title="Next Activities" />

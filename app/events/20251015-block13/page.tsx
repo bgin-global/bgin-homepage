@@ -198,57 +198,12 @@ export default function Block13Page() {
         </div>
       </section>
 
-      {/* BGIN Overview Block: Headers Inside Cards, Aligned */}
-      <section className="block13-section">
-        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto mb-8">
-          {/* BGIN Value Introduction */}
-            {/* BGIN Value Introduction */}
-            <div className="flex-1 bg-white border border-gray-200 rounded-2xl p-8 shadow-sm flex flex-col items-center justify-start">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-                Founded for Global Standardization
-              </h2>
-              <p className="text-lg text-gray-800 mb-4 text-center font-semibold" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-                Founded in response to the 2019 G20 Osaka Communiqué, BGIN connects open innovation with global standardization.
-              </p>
-              <ul className="mt-2 space-y-2 text-base md:text-lg text-gray-900 text-left w-full font-medium" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-                <li>
-                  <span className="font-semibold text-blue-600">From Regulators to Cipherpunks:</span> A forum for diverse stakeholders
-                </li>
-                <li>
-                  <span className="font-semibold text-green-600">Permissionless Participation:</span> Open discussions for everyone
-                </li>
-                <li>
-                  <span className="font-semibold text-purple-600">International Standardization:</span> Category A Liaison to ISO/TC 307, contributing to national procurement standards under WTO/TBT agreements
-                </li>
-                <li>
-                  <span className="font-semibold text-orange-500">Global Collaboration:</span> Bridging regions and disciplines for impactful change
-                </li>
-              </ul>
-            </div>
-            {/* Block 13: Standardization Activities */}
-            <div className="flex-1 bg-white border border-gray-200 rounded-2xl p-8 shadow-sm flex flex-col items-center justify-start">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-                Block 13: Standardization in Action
-              </h2>
-              <p className="text-lg text-gray-800 mb-4 text-center font-semibold" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-                Block 13 is not just an event—it is an integral part of the standardization process. The work here shapes global standards and drives real change in digital infrastructure.
-              </p>
-              <ul className="list-disc pl-6 space-y-2 text-base md:text-lg text-gray-900 text-left w-full font-medium" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-                <li><span className="text-blue-600 font-semibold">Proposals and review sessions</span> for editing existing standard documents</li>
-                <li><span className="text-green-600 font-semibold">Decisions on publishing</span> mature documents</li>
-                <li><span className="text-purple-600 font-semibold">Proposing and approving</span> new standardization projects</li>
-                <li><span className="text-orange-500 font-semibold">Preliminary discussions</span> to explore new standardization topics</li>
-              </ul>
-            </div>
-        </div>
-      </section>
-
       <div className="block13-section-container">
         {/* Program Section */}
         <section className="block13-section">
           <h2 className="block13-section-title">Program</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2 " style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Program Coming Soon</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">Program Coming Soon</h3>
             <p className="text-blue-700">
               The detailed program schedule is currently being finalized. Please check back soon for updates on sessions, speakers, and timing.
             </p>
@@ -312,7 +267,7 @@ export default function Block13Page() {
 
         {/* Critical Projects Section */}
         <section className="block13-section">
-          <h2 className="block13-section-title">Key Projects</h2>
+          <h2 className="block13-section-title">Key Research Projects</h2>
           <div className="block13-grid block13-grid-3">
             {criticalProjects.map((project) => (
               <div key={project.id} className={`block13-card block13-wg-card ${project.wg.toLowerCase()} flex flex-col`}>
@@ -322,14 +277,14 @@ export default function Block13Page() {
                   </span>
                   <span className={`block13-phase-indicator ${project.phase.toLowerCase()}`}>{project.phase}</span>
                 </div>
-                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3 " style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>{project.title}</h3>
+                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">{project.description}</p>
                 {project.link ? (
                   <Link href={project.link} className="text-blue-600 hover:text-blue-800 font-semibold mt-auto">
                     View Document →
                   </Link>
                 ) : (
-                  <span className="text-gray-400 font-semibold mt-auto " style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
+                  <span className="text-gray-400 font-semibold mt-auto">
                     Document Coming Soon
                   </span>
                 )}
@@ -342,7 +297,7 @@ export default function Block13Page() {
         <section className="block13-section">
           <h2 className="block13-section-title">Featured Publications</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2 " style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Publications Coming Soon</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">Publications Coming Soon</h3>
             <p className="text-blue-700">
               Featured publications for Block 13 are currently being selected. Check the Key Research Projects section above for available documents.
             </p>
@@ -358,14 +313,14 @@ export default function Block13Page() {
         <section className="block13-section">
           <h2 className="block13-section-title">Access & Venue</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2 " style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Venue Details Coming Soon</h3>
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">Venue Details Coming Soon</h3>
             <p className="text-blue-700">
               The specific venue location in Washington, D.C. is currently being finalized. Please check back for updates on the exact address and venue details.
             </p>
           </div>
           <div className="block13-venue-grid">
             <div>
-              <h4 className="font-semibold mb-2" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Location</h4>
+              <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
                 Washington, D.C.<br/>
                 United States
@@ -389,24 +344,13 @@ export default function Block13Page() {
           </div>
         </section>
 
-      {/* Ticket Pricing Info */}
-        <section id="ticket-pricing" className="block13-section">
-        <h2 className="block13-section-title">Ticket Pricing</h2>
-        <ul className="list-disc pl-6 space-y-2 text-base md:text-lg text-gray-900 font-medium" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-          <li><span className="font-semibold">General Admission:</span> 100 USD</li>
-          <li><span className="font-semibold">One-day ticket:</span> 40 USD</li>
-          <li><span className="font-semibold">Online ticket:</span> 50 USD</li>
-          <li><span className="font-semibold">Contributors:</span> Free (for those submitting written contributions to our standardization projects)</li>
-        </ul>
-        </section>
-
         {/* Participation Info */}
         <section id="participation" className="block13-section">
           <div className="block13-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-12">
             <h2 className="block13-section-title">Who Should Join</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Perfect for:</h3>
+                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Perfect for:</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
@@ -431,13 +375,13 @@ export default function Block13Page() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Why It Matters:</h3>
+                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Why It Matters:</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
                   Join the premier forum where blockchain governance decisions are made. Your participation directly impacts 
                   international standards that will shape the future of digital economic networks.
                 </p>
                 <div className="bg-white rounded-xl p-6">
-                  <h4 className="font-semibold mb-2" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Registration Information</h4>
+                  <h4 className="font-semibold mb-2">Registration Information</h4>
                   <p className="text-sm text-gray-600 mb-4">
                     Registration opens soon. Limited capacity - register early to secure your spot.
                   </p>
@@ -543,35 +487,11 @@ export default function Block13Page() {
         {/* Sponsors & Partners */}
         <section className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-          <div className="flex flex-col items-center justify-center mb-6">
-            <h3 className="text-lg font-semibold text-black mb-2" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Sponsors</h3>
-          </div>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <p className="text-blue-700 mb-4">
-              Sponsors for Block 13 are to be determined. Please check back for updates.
+            <h3 className="text-lg font-semibold text-blue-800 mb-2">Sponsors & Partners Coming Soon</h3>
+            <p className="text-blue-700">
+              We are currently finalizing partnerships and sponsorship opportunities for Block 13. Please check back for updates on our event sponsors and partners.
             </p>
-          </div>
-          <div className="flex flex-col items-center justify-center mb-6">
-            <h3 className="text-lg font-semibold text-black mb-2" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Partners</h3>
-          </div>
-          <div className="flex flex-wrap gap-8 items-center justify-center">
-            <a
-              href="https://finpolicy.georgetown.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center"
-            >
-              <Image
-          src="/images/Events/sponsor/psaros.jpeg"
-          alt="Psaros"
-          width={120}
-          height={60}
-          className="object-contain rounded-lg mb-2"
-              />
-              <span className="text-gray-700 font-semibold" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
-          Psaros
-              </span>
-            </a>
           </div>
         </section>
 
@@ -584,8 +504,8 @@ export default function Block13Page() {
                   <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
                     <div className="w-full flex-col flex items-start gap-6">
                       <div className="w-full flex-col flex items-start gap-2 text-white">
-                        <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>Join the Discussion</div>
-                        <div className="text-lg leading-[19px] font-Inter" style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}>
+                        <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
+                        <div className="text-lg leading-[19px] font-Inter">
                           Be part of shaping the future of blockchain governance at BGIN Block 13. 
                           Connect with regulators, technologists, and industry leaders from around the world. 
                           Join our community to stay updated on the latest developments and participate in ongoing discussions.
