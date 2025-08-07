@@ -51,7 +51,7 @@ export default function Block13AnnouncementPage() {
               BGIN Announces Block #13 Conference in Washington, D.C.
             </h1>
             <p className="text-gray-600 text-sm mb-4">
-              December 20, 2024 • BGIN Secretariat
+              August 6, 2025 • Blockchain Governance Initiative Network (BGIN)
             </p>
           </div>
           

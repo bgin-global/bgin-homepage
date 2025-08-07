@@ -1,6 +1,8 @@
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Button from "./Button/Button";
 import { NewsItem } from "@/contents/news";
+import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   news?: NewsItem[];
@@ -59,47 +61,118 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
             
             <div className={`${layout === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl" : "max-w-4xl"} ${layout === "grid" ? "auto-rows-fr" : ""}`}>
               {newsToDisplay.map((item) => (
-                <div key={item.id} className={`bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1 ${layout === "grid" ? "flex flex-col" : ""}`}>
-                  <div className={`${layout === "grid" ? "flex flex-col h-full" : "flex flex-col gap-4"}`}>
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {item.tags.map((tag, index) => (
-                        <span 
-                          key={index}
-                          className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className={`${layout === "grid" ? "flex-col gap-2 mb-3" : "flex justify-between items-start gap-4"}`}>
-                      <h3 className={`${layout === "grid" ? "text-lg" : "text-xl"} font-semibold text-black leading-tight`}>
-                        {item.title}
-                      </h3>
-                      <span className={`text-sm text-gray-500 ${layout === "grid" ? "mt-2" : "whitespace-nowrap"} bg-gray-50 px-3 py-1 rounded-full ${layout === "grid" ? "self-start" : ""}`}>
-                        {new Date(item.date).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'short',
-                          day: 'numeric'
-                        })}
-                      </span>
-                    </div>
-                    
-                    <div className={`${layout === "grid" ? "flex-1 flex flex-col" : ""}`}>
-                      <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700 ${layout === "grid" ? "text-sm mb-3 flex-1" : "mb-4"}`}>
-                        {layout === "grid" ? item.description.substring(0, 150) + "..." : item.description}
-                      </p>
-                      <div className={`flex justify-end ${layout === "grid" ? "mt-auto pt-2" : "mt-4"}`}>
-                        <Button 
-                          link={item.link} 
-                          text="Read More" 
-                          color="black" 
-                        />
+                <Link key={item.id} href={item.link} className="block no-underline">
+                  <div className={`bg-white border border-gray-200 rounded-xl hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1 cursor-pointer ${layout === "grid" ? "flex flex-col overflow-hidden h-full" : "p-6"}`}>
+                    {layout === "grid" ? (
+                      // Grid view layout - vertical card with image next to tags
+                      <div className="flex flex-col h-full">
+                        <div className="p-6">
+                          {/* Top section with image and tags */}
+                          <div className="flex items-start gap-4 mb-4">
+                            {/* Image - positioned on the left and slightly bigger */}
+                            {item.image && (
+                              <div className="w-20 h-20 bg-gray-50 relative overflow-hidden rounded-lg flex-shrink-0">
+                                <Image
+                                  src={item.image}
+                                  alt={item.title}
+                                  fill
+                                  sizes="80px"
+                                  quality={95}
+                                  className="object-cover"
+                                  priority={false}
+                                />
+                              </div>
+                            )}
+                            
+                            {/* Tags - positioned on the right */}
+                            <div className="flex flex-wrap gap-2 flex-1">
+                              {item.tags.map((tag, index) => (
+                                <span 
+                                  key={index}
+                                  className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          
+                          <div className="flex-col gap-2 mb-3">
+                            <h3 className="text-lg font-semibold text-black leading-tight">
+                              {item.title}
+                            </h3>
+                            <div className="mt-3">
+                              <span className="text-sm text-gray-500 bg-gray-50 px-3 py-1 rounded-full">
+                                {new Date(item.date).toLocaleDateString('en-US', {
+                                  year: 'numeric',
+                                  month: 'short',
+                                  day: 'numeric'
+                                })}
+                              </span>
+                            </div>
+                          </div>
+                          
+                          <div className="flex-1 flex flex-col">
+                            <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700 text-sm`}>
+                              {item.description.substring(0, 150)}...
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      // List view layout - horizontal card with image on the left
+                      <div className="flex flex-col gap-4">
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          {item.tags.map((tag, index) => (
+                            <span 
+                              key={index}
+                              className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <div className="flex gap-6">
+                          {/* Image */}
+                          {item.image && (
+                            <div className="w-24 h-24 bg-gray-50 rounded-lg relative overflow-hidden flex-shrink-0">
+                              <Image
+                                src={item.image}
+                                alt={item.title}
+                                fill
+                                sizes="96px"
+                                quality={95}
+                                className="object-cover"
+                                priority={false}
+                              />
+                            </div>
+                          )}
+                          
+                          <div className="flex-1">
+                            <div className="flex justify-between items-start gap-4 mb-4">
+                              <h3 className="text-xl font-semibold text-black leading-tight">
+                                {item.title}
+                              </h3>
+                              <span className="text-sm text-gray-500 whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full">
+                                {new Date(item.date).toLocaleDateString('en-US', {
+                                  year: 'numeric',
+                                  month: 'short',
+                                  day: 'numeric'
+                                })}
+                              </span>
+                            </div>
+                            
+                            <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700`}>
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

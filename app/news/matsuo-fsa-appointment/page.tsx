@@ -51,8 +51,7 @@ export default function MatsuoFSAAppointmentPage() {
               BGIN Chair Shin&apos;ichiro Matsuo Appointed to Japanese Financial Services Agency&apos;s Cryptocurrency System Working Group
             </h1>
             <p className="text-gray-600 text-sm mb-4">
-              FOR IMMEDIATE RELEASE<br />
-              July 31, 2025 • Blockchain Governance Initiative Network (BGIN)
+              August 6, 2025 • Blockchain Governance Initiative Network (BGIN)
             </p>
           </div>
         </div>
