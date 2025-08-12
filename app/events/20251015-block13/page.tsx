@@ -39,7 +39,7 @@ const criticalProjects = [
     description: "Standards and frameworks for blockchain agents, agentic competition, and reputation systems.",
     wg: "IKP",
     phase: "Draft",
-    link: ""
+    link: "https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing"
   },
   {
     id: 5,
@@ -279,7 +279,20 @@ export default function Block13Page() {
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">{project.description}</p>
-                {project.link ? (
+                {project.title === "Agent Standards and Frameworks" ? (
+                  <Link
+                    href="https://lu.ma/tfqvop6t"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block13-btn-primary inline-flex items-center gap-2 mt-auto"
+                  >
+                    Join Webinar
+                    <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </Link>
+                ) : project.link ? (
                   <Link href={project.link} className="text-blue-600 hover:text-blue-800 font-semibold mt-auto">
                     View Document →
                   </Link>
@@ -306,6 +319,118 @@ export default function Block13Page() {
             <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
               View All Past Publications
             </Link>
+          </div>
+        </section>
+
+        {/* Agent GovHack Section (refined) */}
+        <section className="block13-section">
+          <h2 className="block13-section-title">BGIN Agent GovHack</h2>
+          <div className="mb-3">
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3v3M12 18v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M3 12h3M18 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+              Policy → Code
+            </span>
+          </div>
+          <div className="relative">
+            <div className="rounded-2xl bg-white p-6 border border-gray-200">
+              <p className="text-gray-700 max-w-3xl mb-8">
+                A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.
+              </p>
+
+              <div className="grid gap-6 lg:grid-cols-2">
+                {/* Overview */}
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-blue-500">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-100 text-blue-700">
+                      <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 2.89 1.64 4.74 3.2 6.07.66.57 1.17 1.3 1.36 2.14l.14.63h4.6l.14-.63c.19-.84.7-1.57 1.36-2.14C17.36 13.74 19 11.9 19 9a7 7 0 0 0-7-7Zm-2 20h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">Overview</h3>
+                  </div>
+                  <p className="text-gray-700">
+                    Teams translate BGIN standards and policy artifacts into executable code with policy-to-code
+                    pipelines, on-chain attestations, and automated compliance checks—moving from theory to practice
+                    in real time.
+                  </p>
+                </div>
+
+                {/* Event Flow */}
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-purple-500">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-purple-100 text-purple-700">
+                      <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+                      </svg>
+                    </span>
+                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">Event Flow</h3>
+                  </div>
+                  <ol className="list-decimal pl-5 text-gray-700 space-y-2">
+                    <li>
+                      <span className="font-semibold">Day 1 — Governance Ceremony:</span> Key generation opening, standards documentation sprint,
+                      policy-to-code workshops, and team formation around governance challenges.
+                    </li>
+                    <li>
+                      <span className="font-semibold">Day 2 — Build &amp; Validate:</span> 24-hour implementation, live compliance showcase,
+                      sponsor integration reviews, and framework documentation.
+                    </li>
+                  </ol>
+                </div>
+
+                {/* Who Should Join */}
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-emerald-500">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-emerald-100 text-emerald-700">
+                      <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <circle cx="9" cy="7" r="3" stroke="currentColor" strokeWidth="2"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M16 3.13a3 3 0 0 1 0 5.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">Who Should Join</h3>
+                  </div>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>Regulators &amp; Policymakers seeking executable governance</li>
+                    <li>Engineers and Standards Contributors building policy-aware systems</li>
+                    <li>Industry &amp; Protocol Teams validating compliance patterns</li>
+                    <li>Researchers and Students exploring governance automation</li>
+                  </ul>
+                </div>
+
+                {/* What You’ll Gain */}
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-amber-500">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-amber-100 text-amber-700">
+                      <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 21l4-2 4 2V5a4 4 0 1 0-8 0v16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">What You&apos;ll Gain</h3>
+                  </div>
+                  <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                    <li>Policy-to-code prototypes and reusable governance frameworks</li>
+                    <li>Real-time compliance testing and on-chain attestations</li>
+                    <li>Demonstrable, standards-aligned agentic implementations</li>
+                    <li>Collaboration with a multi-stakeholder global community</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <Link
+                  href="https://gamma.app/docs/BGIN-Agent-GovHack-Transforming-Blockchain-Standards-into-Executa-2izvapa1dgz17fs?mode=doc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block13-btn-secondary"
+                >
+                  View GovHack Brief
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
