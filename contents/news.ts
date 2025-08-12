@@ -12,7 +12,7 @@ export const allNews: NewsItem[] = [
   {
     id: "4",
     title: "BGIN Agentic Framework: Archive, Codex and Discourse",
-    description: "Join the IKP Working Group for a webinar introducing BGIN's three-agent architecture (Archive, Codex, Discourse) and how it enables sovereignty-preserving, living governance intelligence. Thu, Aug 28, 2025 • 9:00–10:00 PM GMT+9 • Online.",
+    description: "Join the IKP Working Group for a webinar introducing BGIN's three-agent architecture (Archive, Codex, Discourse) and how it enables sovereignty-preserving, living governance intelligence. Thu, Aug 28, 2025 • 12:00-13:00 UTC • Online.",
     date: "2025-08-12",
     link: "/news/agentic-framework-webinar",
     tags: ["Event", "Working Group"],

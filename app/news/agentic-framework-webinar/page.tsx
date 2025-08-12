@@ -64,7 +64,7 @@ export default function AgenticFrameworkWebinarPage() {
                 <h2 className="text-xl font-semibold text-black mb-2">Webinar Details</h2>
                 <ul className="text-gray-700 space-y-1">
                   <li><strong>Date:</strong> Thursday, August 28, 2025</li>
-                  <li><strong>Time:</strong> 9:00 PM – 10:00 PM (GMT+9)</li>
+                  <li><strong>Time:</strong> 12:00 PM - 13:00 PM (UTC +0)</li>
                   <li><strong>Format:</strong> Online webinar (Zoom) with interactive Q&amp;A</li>
                   <li><strong>Hosted by:</strong> BGIN Identity, Key Management &amp; Privacy (IKP) Working Group</li>
                   <li><strong>Duration:</strong> 60 minutes</li>
