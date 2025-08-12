@@ -10,6 +10,15 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "4",
+    title: "BGIN Agentic Framework: Archive, Codex and Discourse",
+    description: "Join the IKP Working Group for a webinar introducing BGIN's three-agent architecture (Archive, Codex, Discourse) and how it enables sovereignty-preserving, living governance intelligence. Thu, Aug 28, 2025 • 9:00–10:00 PM GMT+9 • Online.",
+    date: "2025-08-12",
+    link: "/news/agentic-framework-webinar",
+    tags: ["Event", "Working Group"],
+  image: "/images/Events/webinar/BGIN Agentic Framework.avif"
+  },
+  {
     id: "1",
     title: "BGIN Chair Shin'ichiro Matsuo Appointed to Japanese Financial Services Agency's Cryptocurrency System Working Group",
     description: "BGIN announces the appointment of its Co-Chair, Professor Shin'ichiro Matsuo, as a member of the Cryptoasset System Working Group under the Financial Services Agency's Financial System Council in Japan.",
