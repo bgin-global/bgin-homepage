@@ -54,15 +54,15 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
   const newsToDisplay = processNewsWithLatestTag(rawNewsToDisplay);
 
   return (
-    <div className="py-16">
-      <div className="flex-col flex items-center h-fit max-w-5xl m-auto px-4">
-        <div className="flex-col w-full flex items-center gap-12">
-          <div className="flex-col flex items-center gap-8 text-black">
+    <div className="py-8 md:py-16">
+      <div className="flex-col flex items-center h-fit w-full max-w-5xl m-auto px-4">
+        <div className="flex-col w-full flex items-center gap-8 md:gap-12">
+          <div className="flex-col flex items-center gap-6 md:gap-8 text-black w-full">
             
-            <div className={`${layout === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl" : "max-w-4xl"} ${layout === "grid" ? "auto-rows-fr" : ""}`}>
+            <div className={`${layout === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full" : "w-full md:max-w-4xl"} ${layout === "grid" ? "auto-rows-fr" : ""}`}>
               {newsToDisplay.map((item) => (
                 <Link key={item.id} href={item.link} className="block no-underline">
-                  <div className={`bg-white border border-gray-200 rounded-xl hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1 cursor-pointer ${layout === "grid" ? "flex flex-col overflow-hidden h-full" : "p-6"}`}>
+                  <div className={`bg-white border border-gray-200 rounded-xl hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 hover:-translate-y-1 cursor-pointer ${layout === "grid" ? "flex flex-col overflow-hidden h-full" : "p-4 md:p-6"}`}>
                     {layout === "grid" ? (
                       // Grid view layout - vertical card with image next to tags
                       <div className="flex flex-col h-full">
@@ -120,29 +120,29 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                         </div>
                       </div>
                     ) : (
-                      // List view layout - horizontal card with image on the left
-                      <div className="flex flex-col gap-4">
+                      // List view layout - responsive for mobile
+                      <div className="flex flex-col gap-3 md:gap-4">
                         {/* Tags */}
-                        <div className="flex flex-wrap gap-2 mb-3">
+                        <div className="flex flex-wrap gap-2 mb-2 md:mb-3">
                           {item.tags.map((tag, index) => (
                             <span 
                               key={index}
-                              className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                              className={`px-2 md:px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
                             >
                               {tag}
                             </span>
                           ))}
                         </div>
                         
-                        <div className="flex gap-6">
+                        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
                           {/* Image */}
                           {item.image && (
-                            <div className="w-24 h-24 bg-gray-50 rounded-lg relative overflow-hidden flex-shrink-0">
+                            <div className="w-full md:w-24 h-48 md:h-24 bg-gray-50 rounded-lg relative overflow-hidden flex-shrink-0">
                               <Image
                                 src={item.image}
                                 alt={item.title}
                                 fill
-                                sizes="96px"
+                                sizes="(max-width: 768px) 100vw, 96px"
                                 quality={95}
                                 className="object-cover"
                                 priority={false}
@@ -151,11 +151,11 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                           )}
                           
                           <div className="flex-1">
-                            <div className="flex justify-between items-start gap-4 mb-4">
-                              <h3 className="text-xl font-semibold text-black leading-tight">
+                            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4 mb-3 md:mb-4">
+                              <h3 className="text-lg md:text-xl font-semibold text-black leading-tight">
                                 {item.title}
                               </h3>
-                              <span className="text-sm text-gray-500 whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full">
+                              <span className="text-sm text-gray-500 md:whitespace-nowrap bg-gray-50 px-3 py-1 rounded-full self-start">
                                 {new Date(item.date).toLocaleDateString('en-US', {
                                   year: 'numeric',
                                   month: 'short',
@@ -164,7 +164,7 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                               </span>
                             </div>
                             
-                            <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700`}>
+                            <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700 text-sm md:text-base`}>
                               {item.description}
                             </p>
                           </div>
