@@ -9,7 +9,8 @@ export default function Layer2Meetup() {
     title: "Layer 2 Meetups @ ETHTokyo & EDCON 2025",
     date: "September 15-19, 2025",
     location: "Tokyo & Osaka, Japan",
-    link: "/activities/layer2-meetup-overview"
+    link: "/activities/layer2-meetup-overview",
+    thumbnail: "/images/Events/Block5.jpeg"
   };
   
   return (
