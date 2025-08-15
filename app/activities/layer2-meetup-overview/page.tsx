@@ -1,0 +1,305 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Layer2MeetupOverview() {
+  return (
+    <main className="min-h-screen bg-white">
+      <Header />
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        {/* Go Back Button */}
+        <div className="mb-6">
+          <Link 
+            href="/activities/layer2-meetup"
+            className="inline-flex items-center text-gray-600 hover:text-gray-900 font-medium"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Layer 2 Meetup Activities
+          </Link>
+        </div>
+
+        {/* Upcoming Events */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">
+            Upcoming Layer 2 Meetups in Japan 2025
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* ETHTokyo Card */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl font-bold text-white">ETHTokyo</h3>
+                  <Image
+                    src="/images/Events/Layer2Japan2025/ethtokyo.png"
+                    alt="ETHTokyo Logo"
+                    width={80}
+                    height={35}
+                    className="object-contain bg-white rounded px-2 py-1"
+                  />
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="mb-4">
+                  <p className="text-gray-600 mb-2">
+                    <strong className="text-gray-900">Date:</strong> September 15, 2025
+                  </p>
+                  <p className="text-gray-600 mb-2">
+                    <strong className="text-gray-900">Time:</strong> 2:00 PM - 4:00 PM (JST)
+                  </p>
+                  <p className="text-gray-600 mb-2">
+                    <strong className="text-gray-900">Location:</strong> Shibuya Parco DG Building, Tokyo
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    <strong className="text-gray-900">Format:</strong> Hybrid (In-person + Remote)
+                  </p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">Focus Topics:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>Privacy Pool Protocol Standardization</li>
+                    <li>Accountable Wallet Protocol Standardization</li>
+                  </ul>
+                </div>
+                
+                <div className="flex gap-3">
+                  <Link 
+                    href="/events/20250915-layer2-ethtokyo" 
+                    className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center"
+                  >
+                    Event Details
+                  </Link>
+                  <Link 
+                    href="https://lu.ma/otb2xfno"
+                    className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold text-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register Now
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* EDCON Card */}
+            <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-2xl font-bold text-white">EDCON 2025</h3>
+                  <Image
+                    src="/images/Events/Layer2Japan2025/edcon.png"
+                    alt="EDCON Logo"
+                    width={100}
+                    height={35}
+                    className="object-contain bg-white rounded px-2 py-1"
+                  />
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="mb-4">
+                  <p className="text-gray-600 mb-2">
+                    <strong className="text-gray-900">Date:</strong> September 16-19, 2025
+                  </p>
+                  <p className="text-gray-600 mb-2">
+                    <strong className="text-gray-900">Duration:</strong> 4-hour session (Date TBD)
+                  </p>
+                  <p className="text-gray-600 mb-2">
+                    <strong className="text-gray-900">Location:</strong> Grand Green Osaka
+                  </p>
+                  <p className="text-gray-600 mb-4">
+                    <strong className="text-gray-900">Format:</strong> In-person
+                  </p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">Focus Topics:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>Privacy Pool & Accountable Wallet Standards</li>
+                    <li>Cybersecurity Information Sharing Framework</li>
+                  </ul>
+                </div>
+                
+                <div className="flex gap-3">
+                  <Link 
+                    href="/events/20250916-layer2-edcon" 
+                    className="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center"
+                  >
+                    Event Details
+                  </Link>
+                  <Link 
+                    href="https://www.edcon.io/en/ticket"
+                    className="flex-1 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors font-semibold text-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register via EDCON
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Attend Section */}
+        <div className="bg-gray-50 rounded-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">
+            Why Attend Layer 2 Meetups?
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-gray-200">
+              <div className="text-3xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                Direct Impact on Standards
+              </h3>
+              <p className="text-gray-600">
+                Your feedback directly influences blockchain standards that will be 
+                submitted to ISO TC307 and other international bodies
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border border-gray-200">
+              <div className="text-3xl mb-4">🤝</div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                Bridge Communities
+              </h3>
+              <p className="text-gray-600">
+                Connect grassroots blockchain engineers with formal standardization 
+                processes typically inaccessible to individuals
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border border-gray-200">
+              <div className="text-3xl mb-4">💡</div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                Shape the Future
+              </h3>
+              <p className="text-gray-600">
+                Contribute to critical protocols for privacy, accountability, and 
+                security in the blockchain ecosystem
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* How It Works */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">
+            How Layer 2 Meetups Work
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                  1
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">Pre-Meetup Preparation</h3>
+                  <p className="text-gray-600">
+                    Draft documents are published on BGIN's Discourse forum. Participants can 
+                    download materials and submit advance questions.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                  2
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">Interactive Sessions</h3>
+                  <p className="text-gray-600">
+                    During the meetup, we present draft standards and facilitate discussions 
+                    with engineers, researchers, and other stakeholders.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                  3
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">Feedback Integration</h3>
+                  <p className="text-gray-600">
+                    Comments and modifications from the meetup are incorporated into the 
+                    standardization documents through our working groups.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                  4
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2 text-gray-900">Standards Publication</h3>
+                  <p className="text-gray-600">
+                    Final standards are approved at BGIN Block meetings and submitted to 
+                    international standardization bodies like ISO.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Be Part of the Standardization Process</h2>
+          <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
+            Join us at our Layer 2 Meetups to contribute your expertise and help shape 
+            the future of blockchain governance
+          </p>
+          
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link 
+              href="https://bgin.discourse.group" 
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join the Discussion Forum
+            </Link>
+            <Link 
+              href="/news/layer2-ethtokyo-edcon-2025" 
+              className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors font-semibold shadow-lg"
+            >
+              Read Full Announcement
+            </Link>
+          </div>
+        </div>
+
+        {/* Related Links */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <h3 className="text-lg font-semibold mb-4 text-gray-900">Related Links</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/activities" className="text-blue-600 hover:text-blue-800">
+              → All BGIN Activities
+            </Link>
+            <Link href="/events/20251015-block13" className="text-blue-600 hover:text-blue-800">
+              → BGIN Block 13 Conference
+            </Link>
+            <Link href="/about" className="text-blue-600 hover:text-blue-800">
+              → About BGIN
+            </Link>
+            <Link href="/join" className="text-blue-600 hover:text-blue-800">
+              → Become a Member
+            </Link>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </main>
+  );
+}
