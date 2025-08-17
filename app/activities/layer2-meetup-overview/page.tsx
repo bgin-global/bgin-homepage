@@ -33,15 +33,15 @@ export default function Layer2MeetupOverview() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* ETHTokyo Card */}
             <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6">
+              <div className="bg-purple-50 border-b-4 border-purple-500 p-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-bold text-white">ETHTokyo</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">ETHTokyo</h3>
                   <Image
                     src="/images/Events/Layer2Japan2025/ethtokyo.png"
                     alt="ETHTokyo Logo"
                     width={80}
                     height={35}
-                    className="object-contain bg-white rounded px-2 py-1"
+                    className="object-contain"
                   />
                 </div>
               </div>
@@ -73,13 +73,13 @@ export default function Layer2MeetupOverview() {
                 <div className="flex gap-3">
                   <Link 
                     href="/events/20250915-layer2-ethtokyo" 
-                    className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center"
+                    className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center"
                   >
                     Event Details
                   </Link>
                   <Link 
                     href="https://lu.ma/otb2xfno"
-                    className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold text-center"
+                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -91,15 +91,15 @@ export default function Layer2MeetupOverview() {
 
             {/* EDCON Card */}
             <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6">
+              <div className="bg-purple-50 border-b-4 border-purple-500 p-6">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-bold text-white">EDCON 2025</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">EDCON 2025</h3>
                   <Image
                     src="/images/Events/Layer2Japan2025/edcon.png"
                     alt="EDCON Logo"
                     width={100}
                     height={35}
-                    className="object-contain bg-white rounded px-2 py-1"
+                    className="object-contain"
                   />
                 </div>
               </div>
@@ -131,13 +131,13 @@ export default function Layer2MeetupOverview() {
                 <div className="flex gap-3">
                   <Link 
                     href="/events/20250916-layer2-edcon" 
-                    className="flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors font-semibold text-center"
+                    className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center"
                   >
                     Event Details
                   </Link>
                   <Link 
                     href="https://www.edcon.io/en/ticket"
-                    className="flex-1 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors font-semibold text-center"
+                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -200,7 +200,7 @@ export default function Layer2MeetupOverview() {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   1
                 </div>
                 <div>
@@ -213,7 +213,7 @@ export default function Layer2MeetupOverview() {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   2
                 </div>
                 <div>
@@ -226,7 +226,7 @@ export default function Layer2MeetupOverview() {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   3
                 </div>
                 <div>
@@ -239,7 +239,7 @@ export default function Layer2MeetupOverview() {
               </div>
               
               <div className="flex items-start">
-                <div className="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4 flex-shrink-0">
                   4
                 </div>
                 <div>
@@ -255,7 +255,7 @@ export default function Layer2MeetupOverview() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
+        <div className="bg-purple-500 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Be Part of the Standardization Process</h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
             Join us at our Layer 2 Meetups to contribute your expertise and help shape 
@@ -265,7 +265,7 @@ export default function Layer2MeetupOverview() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link 
               href="https://bgin.discourse.group" 
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
+              className="bg-white text-gray-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -273,7 +273,7 @@ export default function Layer2MeetupOverview() {
             </Link>
             <Link 
               href="/news/layer2-ethtokyo-edcon-2025" 
-              className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors font-semibold shadow-lg"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold shadow-lg"
             >
               Read Full Announcement
             </Link>

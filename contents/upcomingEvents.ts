@@ -9,7 +9,7 @@ export const upcomingLayer2Meetup = {
   title: "Layer2 Meetup",
   date: "September 15-17, 2025",
   location: "Tokyo & Osaka, Japan",
-  link: "",
+  link: "/activities/layer2-meetup",
 };
 
 export const upcomingWGCalls = [

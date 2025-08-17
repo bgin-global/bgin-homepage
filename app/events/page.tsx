@@ -5,6 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function EventsPage() {
+  // Define consistent colors for each event type
+  const eventTypeColors = {
+    "Block Conference": "bg-indigo-50 border-indigo-500",
+    "Layer 2 Meetup": "bg-purple-50 border-purple-500",
+    "Webinar": "bg-green-50 border-green-500",
+    "Other": "bg-gray-50 border-gray-500"
+  };
+  
+  // Badge colors for event types
+  const eventTypeBadgeColors = {
+    "Block Conference": "bg-indigo-100 text-indigo-700",
+    "Layer 2 Meetup": "bg-purple-100 text-purple-700",
+    "Webinar": "bg-green-100 text-green-700",
+    "Other": "bg-gray-100 text-gray-700"
+  };
+
   const upcomingEvents = [
     {
       id: "ikp-webinar",
@@ -14,7 +30,7 @@ export default function EventsPage() {
       type: "Webinar",
       description: "Join the IKP Working Group for an in-depth discussion on agentic frameworks and their role in blockchain governance.",
       link: "/news/agentic-framework-webinar",
-      color: "from-green-500 to-green-600",
+      color: eventTypeColors["Webinar"],
       registerLink: "https://lu.ma/tfqvop6t"
     },
     {
@@ -25,7 +41,7 @@ export default function EventsPage() {
       type: "Layer 2 Meetup",
       description: "Standardization of Privacy Pool and Accountable Wallet Protocols at ETHTokyo.",
       link: "/events/20250915-layer2-ethtokyo",
-      color: "from-blue-500 to-blue-600",
+      color: eventTypeColors["Layer 2 Meetup"],
       registerLink: "https://lu.ma/otb2xfno"
     },
     {
@@ -34,9 +50,9 @@ export default function EventsPage() {
       date: "September 16-19, 2025",
       time: "4-hour session (TBD)",
       type: "Layer 2 Meetup",
-      description: "Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON.",
+      description: "Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON in Osaka, Japan.",
       link: "/events/20250916-layer2-edcon",
-      color: "from-purple-500 to-purple-600",
+      color: eventTypeColors["Layer 2 Meetup"],
       registerLink: "https://www.edcon.io/en/ticket"
     },
     {
@@ -47,7 +63,7 @@ export default function EventsPage() {
       type: "Block Conference",
       description: "BGIN's 13th General Assembly in Washington, D.C., advancing blockchain governance standards.",
       link: "/events/20251015-block13",
-      color: "from-indigo-500 to-indigo-600",
+      color: eventTypeColors["Block Conference"],
       registerLink: "https://lu.ma/otb2xfno"
     }
   ];
@@ -101,8 +117,8 @@ export default function EventsPage() {
                 key={event.id}
                 className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className={`bg-gradient-to-r ${event.color} p-4`}>
-                  <span className="text-white text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">
+                <div className={`${event.color.split(' ')[0]} border-b-4 ${event.color.split(' ')[1]} p-4`}>
+                  <span className={`text-sm font-semibold px-3 py-1 rounded-full ${eventTypeBadgeColors[event.type as keyof typeof eventTypeBadgeColors] || eventTypeBadgeColors["Other"]}`}>
                     {event.type}
                   </span>
                 </div>
@@ -141,7 +157,7 @@ export default function EventsPage() {
                     {event.registerLink ? (
                       <Link 
                         href={event.registerLink}
-                        className={`flex-1 bg-gradient-to-r ${event.color} text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity font-semibold text-center`}
+                        className={`flex-1 border-2 ${event.color.split(' ')[1]} text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-center`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -193,7 +209,7 @@ export default function EventsPage() {
         </section>
 
         {/* CTA Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
+        <div className="mt-16 bg-blue-600 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Stay Updated on BGIN Events</h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
             Join our community to receive updates about upcoming events, 

@@ -32,7 +32,7 @@ export default function Layer2ETHTokyoEvent() {
           </p>
           <Link 
             href="https://lu.ma/otb2xfno"
-            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg shadow-md"
+            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg shadow-md"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -170,7 +170,7 @@ export default function Layer2ETHTokyoEvent() {
         </div>
 
         {/* Preparation Section */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-12">
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">📚 Preparation & Resources</h2>
           
           <div className="space-y-4 text-gray-700">
@@ -178,7 +178,7 @@ export default function Layer2ETHTokyoEvent() {
               To make the most of this meetup, we recommend reviewing the relevant documentation beforehand:
             </p>
             
-            <div className="bg-white rounded-lg p-6 border border-blue-100">
+            <div className="bg-white rounded-lg p-6 border border-purple-100">
               <h3 className="font-semibold mb-3">Review Documents & Discussion Forum</h3>
               <ul className="space-y-2">
                 <li>Download and review the target standardization documents</li>
@@ -191,7 +191,7 @@ export default function Layer2ETHTokyoEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/t/accountable-wallet-discussion-at-ethtokyo-and-edcon/717" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -201,7 +201,7 @@ export default function Layer2ETHTokyoEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/t/onboarding-guide/130/2" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -211,7 +211,7 @@ export default function Layer2ETHTokyoEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -224,7 +224,7 @@ export default function Layer2ETHTokyoEvent() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-12 text-center text-white">
+        <div className="bg-purple-500 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Join?</h2>
           <p className="text-xl mb-8 opacity-95">
             Be part of shaping the future of blockchain privacy and accountability standards
@@ -233,7 +233,7 @@ export default function Layer2ETHTokyoEvent() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link 
               href="https://lu.ma/otb2xfno"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -241,7 +241,7 @@ export default function Layer2ETHTokyoEvent() {
             </Link>
             <Link 
               href="/activities/layer2-meetup" 
-              className="bg-blue-800 text-white px-8 py-4 rounded-lg hover:bg-blue-900 transition-colors font-semibold text-lg shadow-lg inline-block"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold text-lg shadow-lg inline-block"
             >
               View All Layer 2 Meetups
             </Link>
@@ -256,13 +256,13 @@ export default function Layer2ETHTokyoEvent() {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <h3 className="text-lg font-semibold mb-4 text-gray-900">Related Links</h3>
           <div className="flex gap-6 flex-wrap">
-            <Link href="/news/layer2-ethtokyo-edcon-2025" className="text-blue-600 hover:text-blue-800">
+            <Link href="/news/layer2-ethtokyo-edcon-2025" className="text-purple-600 hover:text-purple-800">
               → Read Full Announcement
             </Link>
-            <Link href="/events/20250916-layer2-edcon" className="text-blue-600 hover:text-blue-800">
+            <Link href="/events/20250916-layer2-edcon" className="text-purple-600 hover:text-purple-800">
               → EDCON Layer 2 Meetup
             </Link>
-            <Link href="/events/20251015-block13" className="text-blue-600 hover:text-blue-800">
+            <Link href="/events/20251015-block13" className="text-purple-600 hover:text-purple-800">
               → BGIN Block 13 Conference
             </Link>
           </div>

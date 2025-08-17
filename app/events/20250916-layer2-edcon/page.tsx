@@ -90,7 +90,7 @@ export default function Layer2EDCONEvent() {
                 <p className="text-gray-600 mb-2">Registration through EDCON required</p>
                 <Link 
                   href="https://www.edcon.io/en/ticket"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -114,7 +114,7 @@ export default function Layer2EDCONEvent() {
                 
                 <Link 
                   href="https://www.google.com/maps/search/?api=1&query=Congres+Square+Grand+Green+Osaka%2C+5-3-51+Nakanoshima%2C+Kita-ku%2C+Osaka+530-0005"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm mt-3"
+                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm mt-3"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -199,7 +199,7 @@ export default function Layer2EDCONEvent() {
         </div>
 
         {/* Preparation Section */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-8 mb-12">
+        <div className="bg-purple-50 border border-purple-200 rounded-lg p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">📚 Preparation & Resources</h2>
           
           <div className="space-y-4 text-gray-700">
@@ -208,7 +208,7 @@ export default function Layer2EDCONEvent() {
               We strongly recommend downloading and reviewing the documents beforehand:
             </p>
             
-            <div className="bg-white rounded-lg p-6 border border-blue-100">
+            <div className="bg-white rounded-lg p-6 border border-purple-100">
               <h3 className="font-semibold mb-3">Pre-Meetup Preparation</h3>
               <ul className="space-y-2">
                 <li>Download and review target standardization documents</li>
@@ -222,7 +222,7 @@ export default function Layer2EDCONEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/t/accountable-wallet-discussion-at-ethtokyo-and-edcon/717" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -232,7 +232,7 @@ export default function Layer2EDCONEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/t/information-sharing-framework-standard/700" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -242,7 +242,7 @@ export default function Layer2EDCONEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/t/onboarding-guide/130/2" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -252,7 +252,7 @@ export default function Layer2EDCONEvent() {
                 <div>
                   <Link 
                     href="https://bgin.discourse.group/" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -265,7 +265,7 @@ export default function Layer2EDCONEvent() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg p-12 text-center text-white">
+        <div className="bg-purple-500 rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Participate?</h2>
           <p className="text-xl mb-8 opacity-95">
             Help shape global standards for blockchain security and privacy
@@ -274,7 +274,7 @@ export default function Layer2EDCONEvent() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link 
               href="https://www.edcon.io/en/ticket"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -282,7 +282,7 @@ export default function Layer2EDCONEvent() {
             </Link>
             <Link 
               href="/activities/layer2-meetup" 
-              className="bg-purple-800 text-white px-8 py-4 rounded-lg hover:bg-purple-900 transition-colors font-semibold text-lg shadow-lg inline-block"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-gray-900 transition-colors font-semibold text-lg shadow-lg inline-block"
             >
               View All Layer 2 Meetups
             </Link>
@@ -297,16 +297,16 @@ export default function Layer2EDCONEvent() {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <h3 className="text-lg font-semibold mb-4 text-gray-900">Related Links</h3>
           <div className="flex gap-6 flex-wrap">
-            <Link href="/news/layer2-ethtokyo-edcon-2025" className="text-blue-600 hover:text-blue-800">
+            <Link href="/news/layer2-ethtokyo-edcon-2025" className="text-purple-600 hover:text-purple-800">
               → Read Full Announcement
             </Link>
-            <Link href="/events/20250915-layer2-ethtokyo" className="text-blue-600 hover:text-blue-800">
+            <Link href="/events/20250915-layer2-ethtokyo" className="text-purple-600 hover:text-purple-800">
               → ETHTokyo Layer 2 Meetup
             </Link>
-            <Link href="/events/20251015-block13" className="text-blue-600 hover:text-blue-800">
+            <Link href="/events/20251015-block13" className="text-purple-600 hover:text-purple-800">
               → BGIN Block 13 Conference
             </Link>
-            <Link href="https://www.edcon.io/" className="text-blue-600 hover:text-blue-800" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.edcon.io/" className="text-purple-600 hover:text-purple-800" target="_blank" rel="noopener noreferrer">
               → EDCON 2025 Official Site
             </Link>
           </div>
