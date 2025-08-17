@@ -10,6 +10,15 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "5",
+    title: "BGIN Announces Layer 2 Meetups at ETHTokyo and EDCON 2025",
+    description: "BGIN will host Layer 2 Meetups at ETHTokyo and EDCON 2025 to advance Privacy Pool, Accountable Wallet, and cybersecurity information sharing standards.",
+    date: "2025-08-16",
+    link: "/news/layer2-ethtokyo-edcon-2025",
+    tags: ["Event", "Conference"],
+    image: "/images/Events/Block5.jpeg"
+  },
+  {
     id: "4",
     title: "BGIN Agentic Framework: Archive, Codex and Discourse",
     description: "Join the IKP Working Group for a webinar introducing BGIN's three-agent architecture (Archive, Codex, Discourse) and how it enables sovereignty-preserving, living governance intelligence. Thu, Aug 28, 2025 • 12:00-13:00 UTC • Online.",

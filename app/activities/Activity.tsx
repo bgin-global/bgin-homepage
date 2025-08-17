@@ -11,6 +11,7 @@ interface Props {
     date: string;
     location: string;
     link: string;
+    thumbnail?: string;
   };
   pastEvents: Event[];
   titleUpcoming: string;
@@ -30,7 +31,7 @@ export default function Activity({
     date: eventUpcoming.date,
     location: eventUpcoming.location,
     description: "Join leading experts, innovators, and stakeholders shaping the future of blockchain governance. <strong style='color: #6890F5;'>Registration is now open!</strong>",
-    thumbnail: "/images/Events/Block3.jpeg", // Using DC-appropriate image for Block #13
+    thumbnail: eventUpcoming.thumbnail || "/images/Events/Block3.jpeg", // Use custom thumbnail or default
     register_link: eventUpcoming.link, // This will be used for registration
     lang: "ENG" as const,
   };

@@ -12,7 +12,9 @@ interface Props {
 }
 
 export default function News({ news = [], maxItems = 3, layout = "list", showViewAllButton = true }: Props) {
-  const displayedNews = news.slice(0, maxItems);
+  // Ensure newest items are first regardless of array order
+  const sortedByDateDesc = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const displayedNews = sortedByDateDesc.slice(0, maxItems);
 
   // Function to automatically add "Latest" tag to the most recent news item
   const processNewsWithLatestTag = (newsItems: NewsItem[]) => {
