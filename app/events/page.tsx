@@ -64,7 +64,7 @@ export default function EventsPage() {
       description: "BGIN's 13th General Assembly in Washington, D.C., advancing blockchain governance standards.",
       link: "/events/20251015-block13",
       color: eventTypeColors["Block Conference"],
-      registerLink: "https://lu.ma/otb2xfno"
+      registerLink: "https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
     }
   ];
 

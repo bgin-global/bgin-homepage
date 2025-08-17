@@ -188,7 +188,7 @@ export default function Block13Page() {
         <div className="block13-hero-content">
           <h1>BGIN Block 13</h1>
           <p>October 15–17, 2025 | Washington, D.C.</p>
-          <a href="#participation" className="block13-btn-primary">
+          <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
             Register Now
             <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -508,11 +508,11 @@ export default function Block13Page() {
                 <div className="bg-white rounded-xl p-6">
                   <h4 className="font-semibold mb-2">Registration Information</h4>
                   <p className="text-sm text-gray-600 mb-4">
-                    Registration opens soon. Limited capacity - register early to secure your spot.
+                    Registration is now open! Limited capacity - register early to secure your spot.
                   </p>
-                  <button className="block13-btn-primary opacity-50 cursor-not-allowed" disabled>
+                  <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
                    	Register Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
