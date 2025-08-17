@@ -90,7 +90,7 @@ export default function Layer2EDCONEvent() {
                 <p className="text-gray-600 mb-2">Registration through EDCON required</p>
                 <Link 
                   href="https://www.edcon.io/en/ticket"
-                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm"
+                  className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -114,7 +114,7 @@ export default function Layer2EDCONEvent() {
                 
                 <Link 
                   href="https://www.google.com/maps/search/?api=1&query=Congres+Square+Grand+Green+Osaka%2C+5-3-51+Nakanoshima%2C+Kita-ku%2C+Osaka+530-0005"
-                  className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium text-sm mt-3"
+                  className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm mt-3"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
