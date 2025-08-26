@@ -29,25 +29,24 @@ export default function Home() {
       <Header />
 
       {/* What's New Headline */}
-      {/* {showWhatsNew && (
-        <div className="w-full bg-yellow-100 border-b border-yellow-300 py-4 flex justify-center items-center relative">
+      {showWhatsNew && (
+        <div className="w-full bg-blue-600 border-b-2 border-blue-700 py-4 flex justify-center items-center relative">
           <a
-            href="/events/20251015-block13"
-            className="text-xl md:text-2xl font-bold text-yellow-900 hover:underline"
+            href="/events/20251015-block13#program"
+            className="text-xl md:text-2xl font-bold text-white hover:underline px-4 text-center"
             style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
           >
-            What&#39;s New: BGIN Block 13 Event Page is Live! Click here for details.
+            <span className="font-normal">NEW:</span> Block 13 Program Released - View the full agenda for Washington D.C. (Oct 15-17, 2025)
           </a>
           <button
             onClick={() => setShowWhatsNew(false)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-yellow-900 text-lg font-bold px-2 py-1 rounded hover:bg-yellow-200"
-            aria-label="Close What's New"
-            style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-lg font-bold px-2 py-1 hover:bg-blue-700 rounded"
+            aria-label="Close announcement"
           >
             ×
           </button>
         </div>
-      )} */}
+      )}
 
       <Hero type={1} />
 
