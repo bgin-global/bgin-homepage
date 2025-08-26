@@ -23,6 +23,14 @@
   --cs-bg: #fee2e2;
   --cs-text: #dc2626;
   
+  --govhack-color: #9333ea; /* Purple - Gov Hack */
+  --govhack-bg: #f3e8ff;
+  --govhack-text: #6b21a8;
+  
+  --general-color: #6b7280; /* Gray - General */
+  --general-bg: #f3f4f6;
+  --general-text: #374151;
+  
   /* Shadow and Border Radius */
   --card-radius: 12px;
   --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -198,14 +206,34 @@
   color: var(--ikp-text);
 }
 
+.block13-wg-badge.face {
+  background: var(--fase-bg);
+  color: var(--fase-text);
+}
+
 .block13-wg-badge.fase {
   background: var(--fase-bg);
   color: var(--fase-text);
 }
 
+.block13-wg-badge.cyber-security {
+  background: var(--cs-bg);
+  color: var(--cs-text);
+}
+
 .block13-wg-badge.cs {
   background: var(--cs-bg);
   color: var(--cs-text);
+}
+
+.block13-wg-badge.gov-hack {
+  background: var(--govhack-bg);
+  color: var(--govhack-text);
+}
+
+.block13-wg-badge.general {
+  background: var(--general-bg);
+  color: var(--general-text);
 }
 
 /* Project Phase Indicators */

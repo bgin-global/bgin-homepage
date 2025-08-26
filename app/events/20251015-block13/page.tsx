@@ -6,8 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import "@/styles/block13.css";
+import { programData } from "@/lib/block13-program-data";
 
-// Sample data - in a real implementation, this would come from a CMS or API
+// Critical projects data
 const criticalProjects = [
   {
     id: 1,
@@ -59,113 +60,107 @@ const criticalProjects = [
   }
 ];
 
-const publications = [
-  {
-    id: 1,
-    title: "Blockchain Governance Framework 2025",
-    summary: "Comprehensive guide to blockchain governance best practices",
-    image: "/images/Events/Block5.jpeg",
-    link: "#"
-  },
-  {
-    id: 2,
-    title: "ISO TC307 Liaison Report",
-    summary: "Latest developments in international blockchain standards",
-    image: "/images/Events/Block6.png", 
-    link: "#"
-  },
-  {
-    id: 3,
-    title: "G20 Implementation Guide",
-    summary: "Implementing G20 Osaka communiqué recommendations",
-    image: "/images/Events/Block7.jpeg",
-    link: "#"
+// Load program from JSON and process it
+const processProgram = () => {
+  const processed: any = {};
+  
+  Object.entries(programData.program).forEach(([day, dayData]) => {
+    processed[day] = dayData.sessions.map(session => ({
+      ...session,
+      // Standardize room names
+      room: session.room
+        .replace('Hairiri', 'Hariri')
+        .replace('HFSC Merman', 'HFSC Herman'),
+      // Format time for open-ended sessions
+      displayTime: session.time.endsWith('-') 
+        ? session.time.replace('-', ' onwards')
+        : session.time,
+      // Generate proper detail page URLs
+      detailPage: session.detailPage.includes('make one') 
+        ? `/events/20251015-block13/sessions/${session.id}`
+        : session.detailPage,
+      // Handle empty fields
+      speakers: session.speakers || 'TBD',
+      moderator: session.moderator || 'TBD',
+      summary: session.summary || 'Details coming soon'
+    }));
+  });
+  
+  return processed;
+};
+
+const program = processProgram();
+const rooms = programData.rooms;
+
+// Helper function to group sessions by time
+const groupSessionsByTime = (sessions: any[]) => {
+  const grouped: { [key: string]: any[] } = {};
+  sessions.forEach(session => {
+    if (!grouped[session.displayTime]) {
+      grouped[session.displayTime] = [];
+    }
+    grouped[session.displayTime].push(session);
+  });
+  return grouped;
+};
+
+// Helper function to group sessions by room
+const groupSessionsByRoom = (sessions: any[]) => {
+  const grouped: { [key: string]: any[] } = {};
+  sessions.forEach(session => {
+    // Keep the full room name for HFSC/Bulldog uncertainty
+    const roomKey = session.room;
+    if (!grouped[roomKey]) {
+      grouped[roomKey] = [];
+    }
+    grouped[roomKey].push(session);
+  });
+  return grouped;
+};
+
+// Image carousel component for rooms with multiple images
+const RoomImageCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  if (!images || images.length === 0) return null;
+  if (typeof images === 'string') {
+    return (
+      <Image
+        src={images}
+        alt="Venue"
+        width={800}
+        height={400}
+        className="w-full h-64 object-cover rounded-t-lg"
+      />
+    );
   }
-];
-
-const sponsors = [
-  { name: "Example Corp", logo: "/images/About/01.svg", website: "https://example.com" },
-  { name: "Tech Partners", logo: "/images/About/02.svg", website: "https://techpartners.com" },
-  { name: "Blockchain Foundation", logo: "/images/About/FINSUM_2019.svg", website: "https://blockchain.org" }
-];
-
-// Program content - to be finalized
-const program = {
-  day1: [
-    {
-      title: "Program details coming soon",
-      time: "TBA",
-      room: "TBA",
-      summary: "Detailed program schedule will be announced closer to the event date",
-      wg: "General",
-      link: "#"
-    }
-  ],
-  day2: [
-    {
-      title: "Program details coming soon",
-      time: "TBA",
-      room: "TBA",
-      summary: "Detailed program schedule will be announced closer to the event date",
-      wg: "General",
-      link: "#"
-    }
-  ],
-  day3: [
-    {
-      title: "Program details coming soon",
-      time: "TBA",
-      room: "TBA",
-      summary: "Detailed program schedule will be announced closer to the event date",
-      wg: "General",
-      link: "#"
-    }
-  ]
+  
+  return (
+    <div className="relative">
+      <Image
+        src={images[currentIndex]}
+        alt="Venue"
+        width={800}
+        height={400}
+        className="w-full h-64 object-cover rounded-t-lg"
+      />
+      {images.length > 1 && (
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
+              }`}
+              aria-label={`View image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
-
-/* 
-// Future program content - uncomment and update when finalized
-const program = {
-  day1: [
-    {
-      title: "Opening Ceremony",
-      time: "09:00-10:00",
-      room: "Main Hall",
-      summary: "Welcome and introduction to Block #13",
-      wg: "General",
-      link: "#"
-    },
-    {
-      title: "Blockchain Forensics Standards Workshop",
-      time: "10:30-12:00", 
-      room: "Room A",
-      summary: "Latest developments in blockchain forensics and analytics",
-      wg: "IKP",
-      link: "#"
-    }
-  ],
-  day2: [
-    {
-      title: "Stablecoin Regulatory Panel", 
-      time: "09:00-10:30",
-      room: "Main Hall",
-      summary: "Policy priorities for stablecoin regulation across jurisdictions",
-      wg: "FASE",
-      link: "#"
-    }
-  ],
-  day3: [
-    {
-      title: "Cybersecurity Information Sharing Workshop",
-      time: "09:00-12:00",
-      room: "Room C", 
-      summary: "Hands-on session on cybersecurity frameworks for blockchain",
-      wg: "CS",
-      link: "#"
-    }
-  ]
-};
-*/
 
 export default function Block13Page() {
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>('day1');
@@ -200,13 +195,22 @@ export default function Block13Page() {
 
       <div className="block13-section-container">
         {/* Program Section */}
-        <section className="block13-section">
+        <section id="program" className="block13-section">
           <h2 className="block13-section-title">Program</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Program Coming Soon</h3>
-            <p className="text-blue-700">
-              The detailed program schedule is currently being finalized. Please check back soon for updates on sessions, speakers, and timing.
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
+            <h3 className="text-lg font-semibold text-amber-800 mb-2">Note: Program is Tentative</h3>
+            <p className="text-amber-700 mb-3">
+              The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
+              <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
+              <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
             </p>
+            <div className="border-t border-amber-300 pt-3 mt-3">
+              <p className="text-amber-800">
+                <strong>Fee Waiver Available:</strong> Contributors who submit papers to any session will have their registration fees waived. 
+                To submit a contribution, please contact your Working Group Chair or email <a href="mailto:bgin_admin@bg2x.org" className="underline hover:text-amber-900">bgin_admin@bg2x.org</a>. 
+                You can also join the discussion on the <a href="https://bgin.discourse.group" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">BGIN Discourse Forum</a>.
+              </p>
+            </div>
           </div>
           
           {/* Day Tabs */}
@@ -243,25 +247,133 @@ export default function Block13Page() {
           </div>
 
           {/* Program Content */}
-          <div className="space-y-4">
-            {program[activeDay].map((session, index) => (
-              <div key={index} className="block13-session-card opacity-60">
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="block13-session-meta">
-                      <span className="block13-session-time">{session.time}</span>
-                      <span className="text-sm text-gray-500">•</span>
-                      <span className="block13-session-room">{session.room}</span>
-                      <span className={`block13-wg-badge ${session.wg.toLowerCase()}`}>
-                        {session.wg}
-                      </span>
+          <div className="space-y-6">
+            {viewMode === 'time' ? (
+              // Time-based view
+              <div className="space-y-6">
+                {Object.entries(groupSessionsByTime(program[activeDay])).map(([time, sessions]: [string, any]) => (
+                  <div key={time} className="space-y-4">
+                    <h3 className="text-lg font-semibold text-gray-700 border-b pb-2">{time}</h3>
+                    <div className="space-y-4">
+                      {sessions.map((session: any, idx: number) => (
+                        <div key={idx} className="block13-session-card">
+                          <div className="flex flex-col">
+                            <div className="block13-session-meta mb-2">
+                              <span className="block13-session-room font-medium">{session.room}</span>
+                              {session.wg !== 'General' && (
+                                <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                                  {session.wg}
+                                </span>
+                              )}
+                            </div>
+                            <Link href={session.detailPage} className="hover:text-blue-600">
+                              <h3 className="block13-session-title text-xl mb-2">{session.title}</h3>
+                            </Link>
+                            <p className="text-gray-600 mb-3">{session.summary}</p>
+                            {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                              <div className="text-sm text-gray-700 space-y-1">
+                                {session.moderator !== 'TBD' && (
+                                  <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                )}
+                                {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
+                                  <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                )}
+                              </div>
+                            )}
+                            {session.documents && session.documents.length > 0 && (
+                              <div className="mt-3">
+                                <p className="text-sm font-semibold text-gray-700 mb-1">Documents:</p>
+                                {session.documents.map((doc: any, docIdx: number) => (
+                                  <a
+                                    key={docIdx}
+                                    href={doc.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-blue-600 hover:underline block"
+                                  >
+                                    📄 {doc.title}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    <h3 className="block13-session-title">{session.title}</h3>
-                    <p className="text-gray-600">{session.summary}</p>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            ) : (
+              // Room-based view
+              <div className="space-y-8">
+                {Object.entries(groupSessionsByRoom(program[activeDay])).map(([roomName, sessions]: [string, any]) => {
+                  const roomData = (rooms as any)[roomName] || Object.values(rooms).find((r: any) => 
+                    r.displayName === roomName || roomName.includes(r.displayName)
+                  );
+                  
+                  return (
+                    <div key={roomName} className="space-y-4">
+                      {/* Room header with image */}
+                      <div className="rounded-lg overflow-hidden bg-white shadow-md">
+                        {roomData?.image && (
+                          <RoomImageCarousel images={roomData.image} />
+                        )}
+                        <div className="p-4 bg-gray-50">
+                          <h3 className="text-xl font-bold">
+                            {roomData?.displayName || roomName}
+                          </h3>
+                          {roomData?.capacity && (
+                            <p className="text-gray-600">Capacity: {roomData.capacity}</p>
+                          )}
+                          {roomData?.externalLink && (
+                            <a
+                              href={roomData.externalLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline text-sm"
+                            >
+                              Visit venue website →
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {/* Sessions in this room */}
+                      <div className="space-y-3 ml-4">
+                        {sessions.map((session: any, idx: number) => (
+                          <div key={idx} className="block13-session-card">
+                            <div className="flex flex-col">
+                              <div className="block13-session-meta mb-2">
+                                <span className="block13-session-time font-bold">{session.displayTime}</span>
+                                {session.wg !== 'General' && (
+                                  <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                                    {session.wg}
+                                  </span>
+                                )}
+                              </div>
+                              <Link href={session.detailPage} className="hover:text-blue-600">
+                                <h4 className="block13-session-title text-lg">{session.title}</h4>
+                              </Link>
+                              <p className="text-gray-600 mt-1">{session.summary}</p>
+                              {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                                <div className="text-sm text-gray-700 mt-2 space-y-1">
+                                  {session.moderator !== 'TBD' && (
+                                    <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                  )}
+                                  {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
+                                    <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </section>
 
@@ -401,7 +513,7 @@ export default function Block13Page() {
                   </ul>
                 </div>
 
-                {/* What You’ll Gain */}
+                {/* What You'll Gain */}
                 <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-amber-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-amber-100 text-amber-700">
@@ -409,7 +521,7 @@ export default function Block13Page() {
                         <path d="M8 21l4-2 4 2V5a4 4 0 1 0-8 0v16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
-                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">What You&apos;ll Gain</h3>
+                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">What You'll Gain</h3>
                   </div>
                   <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>Policy-to-code prototypes and reusable governance frameworks</li>
@@ -437,26 +549,33 @@ export default function Block13Page() {
         {/* Access & Venue Information */}
         <section className="block13-section">
           <h2 className="block13-section-title">Access & Venue</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Venue Details Coming Soon</h3>
-            <p className="text-blue-700">
-              The specific venue location in Washington, D.C. is currently being finalized. Please check back for updates on the exact address and venue details.
-            </p>
-          </div>
           <div className="block13-venue-grid">
             <div>
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
+                Georgetown University<br/>
                 Washington, D.C.<br/>
                 United States
               </p>
-              <p className="text-sm text-gray-500">
-                Specific venue address to be announced
+              
+              <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li><strong>Leavey Program Room</strong> - 72 attendees</li>
+                <li><strong>Leavey Bulldog Alley</strong> - 150 attendees</li>
+                <li><strong>Arrupe Hall</strong> - 50 attendees</li>
+                <li><strong>HFSC Herman Meeting Room</strong> - Board room style</li>
+                <li><strong>Hariri Building</strong> - Rooms 140 & 240</li>
+              </ul>
+              
+              <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
+              <p className="text-sm text-gray-600">
+                <strong>Hilltop Tap Room</strong><br/>
+                Next to HFSC Herman Meeting Room
               </p>
             </div>
             <div className="block13-map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99516.16817810178!2d-77.08493561718749!3d38.89767492345634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%2C%20DC!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.751890487374!2d-77.07525682346969!3d38.90698324613937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b64b36377231%3A0x19c4fa89e632b7ea!2sGeorgetown%20University!5e0!3m2!1sen!2sus!4v1703789456789!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -508,10 +627,19 @@ export default function Block13Page() {
                 <div className="bg-white rounded-xl p-6">
                   <h4 className="font-semibold mb-2">Registration Information</h4>
                   <p className="text-sm text-gray-600 mb-4">
-                    Registration is now open! Limited capacity - register early to secure your spot.
+                    Registration is now open. Limited capacity - register early to secure your spot.
                   </p>
-                  <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
+                  <a 
+                    href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block13-btn-primary inline-flex items-center gap-2"
+                  >
                    	Register Now
+                    <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -620,7 +748,7 @@ export default function Block13Page() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section - Join the Discussion */}
         <section className="block13-section">
           <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
             <div className="flex items-start h-fit max-w-5xl m-auto">
