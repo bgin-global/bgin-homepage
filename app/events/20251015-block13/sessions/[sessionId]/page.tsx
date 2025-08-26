@@ -51,8 +51,8 @@ export default function SessionDetailPage() {
   }
 
   const { session, day } = sessionData;
-  const room = programData.rooms[session.room] || { displayName: session.room };
-  const wg = programData.workingGroups[session.wg];
+  const room = (programData.rooms as any)[session.room] || { displayName: session.room };
+  const wg = (programData.workingGroups as any)[session.wg];
 
   // Format time display
   const displayTime = session.time.endsWith('-') 
@@ -66,11 +66,11 @@ export default function SessionDetailPage() {
       {/* Hero Section with Venue Image */}
       <section className="relative h-64 md:h-80">
         {(() => {
-          const roomData = programData.rooms[session.room] || 
+          const roomData = (programData.rooms as any)[session.room] || 
                           Object.values(programData.rooms).find((r: any) => 
                             session.room.includes(r.displayName)
                           ) || 
-                          programData.rooms["Arrupe Hall"]; // Default fallback
+                          (programData.rooms as any)["Arrupe Hall"]; // Default fallback
           const venueImage = Array.isArray(roomData?.image) ? roomData.image[0] : roomData?.image;
           
           return (
