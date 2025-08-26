@@ -13,6 +13,15 @@ export default function SessionDetailPage() {
 
   // Find the session from the program data
   const findSession = () => {
+    // Special handling for govhack
+    if (sessionId === 'govhack') {
+      // Return the first govhack session as the main one
+      const govhackSession = programData.program.day1.sessions.find((s: any) => s.id === '1-1');
+      if (govhackSession) {
+        return { session: govhackSession, day: programData.program.day1.date };
+      }
+    }
+    
     for (const [day, dayData] of Object.entries(programData.program)) {
       const session = dayData.sessions.find((s: any) => s.id === sessionId);
       if (session) {
@@ -31,7 +40,7 @@ export default function SessionDetailPage() {
         <div className="max-w-4xl mx-auto px-4 py-16">
           <h1 className="text-3xl font-bold mb-4">Session Not Found</h1>
           <p className="text-gray-600 mb-8">The session you're looking for doesn't exist.</p>
-          <Link href="/events/20251015-block13" className="text-blue-600 hover:underline">
+          <Link href="/events/20251015-block13#program" className="text-blue-600 hover:underline">
             ← Back to Block 13 Program
           </Link>
         </div>
@@ -53,40 +62,70 @@ export default function SessionDetailPage() {
     <main className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-12">
-        <div className="max-w-4xl mx-auto px-4">
-          <Link href="/events/20251015-block13" className="text-blue-600 hover:underline text-sm mb-4 inline-block">
-            ← Back to Block 13 Program
-          </Link>
+      {/* Hero Section with Venue Image */}
+      <section className="relative h-64 md:h-80">
+        {(() => {
+          const roomData = programData.rooms[session.room] || 
+                          Object.values(programData.rooms).find((r: any) => 
+                            session.room.includes(r.displayName)
+                          ) || 
+                          programData.rooms["Arrupe Hall"]; // Default fallback
+          const venueImage = Array.isArray(roomData?.image) ? roomData.image[0] : roomData?.image;
           
-          <h1 className="text-4xl font-bold mb-4">{session.title || "TBD"}</h1>
-          
-          <div className="flex flex-wrap gap-4 text-gray-700">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span>{day}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>{displayTime}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span>{room.displayName}</span>
-            </div>
-            {wg && (
-              <div className={`px-3 py-1 rounded-full text-sm font-semibold bg-${wg.color}-100 text-${wg.color}-800`}>
-                {wg.abbreviation}
+          return (
+            <>
+              {venueImage ? (
+                <>
+                  <Image
+                    src={venueImage}
+                    alt={roomData?.displayName || session.room}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50" />
+                </>
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900" />
+              )}
+            </>
+          );
+        })()}
+        <div className="relative z-10 h-full flex flex-col justify-end">
+          <div className="max-w-4xl mx-auto px-4 pb-8 text-white">
+            <Link 
+              href="/events/20251015-block13#program" 
+              className="text-white hover:text-gray-200 text-sm mb-4 inline-block"
+            >
+              ← Back to Block 13 Program
+            </Link>
+            <h1 className="text-4xl font-bold mb-4">{session.title || "TBD"}</h1>
+            <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>{day}</span>
               </div>
-            )}
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>{displayTime}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>{room.displayName}</span>
+              </div>
+              {wg && (
+                <div className="px-3 py-1 rounded-full text-sm font-semibold bg-white/20 text-white border border-white/30">
+                  {wg.abbreviation}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -193,12 +232,12 @@ export default function SessionDetailPage() {
               {wg && (
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h3 className="font-bold mb-3">Working Group</h3>
-                  <h4 className={`text-lg font-semibold text-${wg.color}-700 mb-2`}>{wg.name}</h4>
+                  <h4 className="text-lg font-semibold text-gray-800 mb-2">{wg.name}</h4>
                   <p className="text-sm text-gray-600 mb-3">{wg.description}</p>
                   {wg.chairs && wg.chairs.length > 0 && (
                     <div className="text-sm">
                       <span className="font-semibold">Chairs:</span>
-                      <ul className="mt-1">
+                      <ul className="mt-1 list-none">
                         {wg.chairs.map((chair: string, idx: number) => (
                           <li key={idx}>• {chair}</li>
                         ))}
@@ -222,7 +261,7 @@ export default function SessionDetailPage() {
               {session.relatedProjects && session.relatedProjects.length > 0 && (
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h3 className="font-bold mb-3">Related Projects</h3>
-                  <ul className="space-y-2 text-sm">
+                  <ul className="space-y-2 text-sm list-none">
                     {session.relatedProjects.map((project: string, idx: number) => (
                       <li key={idx} className="text-blue-600">
                         • {project}

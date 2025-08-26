@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "@/styles/block13.css";
 import { programData } from "@/lib/block13-program-data";
 
-// Sample data - in a real implementation, this would come from a CMS or API
+// Critical projects data
 const criticalProjects = [
   {
     id: 1,
@@ -60,36 +60,6 @@ const criticalProjects = [
   }
 ];
 
-const publications = [
-  {
-    id: 1,
-    title: "Blockchain Governance Framework 2025",
-    summary: "Comprehensive guide to blockchain governance best practices",
-    image: "/images/Events/Block5.jpeg",
-    link: "#"
-  },
-  {
-    id: 2,
-    title: "ISO TC307 Liaison Report",
-    summary: "Latest developments in international blockchain standards",
-    image: "/images/Events/Block6.png", 
-    link: "#"
-  },
-  {
-    id: 3,
-    title: "G20 Implementation Guide",
-    summary: "Implementing G20 Osaka communiqué recommendations",
-    image: "/images/Events/Block7.jpeg",
-    link: "#"
-  }
-];
-
-const sponsors = [
-  { name: "Example Corp", logo: "/images/About/01.svg", website: "https://example.com" },
-  { name: "Tech Partners", logo: "/images/About/02.svg", website: "https://techpartners.com" },
-  { name: "Blockchain Foundation", logo: "/images/About/FINSUM_2019.svg", website: "https://blockchain.org" }
-];
-
 // Load program from JSON and process it
 const processProgram = () => {
   const processed: any = {};
@@ -121,336 +91,6 @@ const processProgram = () => {
 
 const program = processProgram();
 const rooms = programData.rooms;
-const workingGroups = programData.workingGroups;
-
-// Old program data for reference
-const oldProgram = {
-  day1: [
-    {
-      title: "Gov Hack",
-      time: "09:00 - 10:30",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      venueImage: "/images/Events/block13/HFSC Herman Meeting Rm.jpeg",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Offline Key Management",
-      time: "09:00 - 10:30",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      venueImage: "/images/Events/block13/Arrupe Hall (Cap 50).jpeg",
-      summary: "Working session on offline key management strategies",
-      wg: "IKP",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (continued)",
-      time: "11:00 - 12:30",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Governance of security supply chain",
-      time: "11:00 - 12:30",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      summary: "Discussion on security supply chain governance",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (continued)",
-      time: "13:30 - 15:00",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Security Target and Protection Profile",
-      time: "13:30 - 15:00",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      summary: "Working session on security targets and protection profiles",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (continued)",
-      time: "15:30 - 17:00",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "ZKP and Privacy Enhanced Authentication (WorldID)",
-      time: "15:30 - 17:00",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      summary: "Zero-Knowledge Proofs and privacy-enhanced authentication technologies",
-      wg: "IKP",
-      link: "#"
-    },
-    {
-      title: "Welcome Reception",
-      time: "17:10 -",
-      room: "Hilltop Tap Room",
-      venue: "Hilltop Tap Room (next to HFSC Herman Meeting Room)",
-      summary: "Welcome reception at Hilltop Tap Room - https://www.hilltoptaproom.com (need sponsor)",
-      wg: "General",
-      link: "https://www.hilltoptaproom.com"
-    }
-  ],
-  day2: [
-    {
-      title: "Gov Hack",
-      time: "09:00 - 10:30",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      venueImage: "/images/Events/block13/Leavey Bulldog Alley (Cap 150).jpeg",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Information Sharing Framework Standard",
-      time: "09:00 - 10:30",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      venueImage: "/images/Events/block13/Arrupe Hall (Cap 50).jpeg",
-      summary: "Standards for information sharing frameworks",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Security Gathering on the Hill",
-      time: "09:00 - 10:30",
-      room: "TBD",
-      venue: "TBD",
-      summary: "Security focused gathering session",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (continued)",
-      time: "11:00 - 12:30",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Crypto Agility and PQC migration",
-      time: "11:00 - 12:30",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      summary: "Cryptographic agility and Post-Quantum Cryptography migration strategies",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Security Gathering on the Hill (continued)",
-      time: "11:00 - 12:30",
-      room: "TBD",
-      venue: "TBD",
-      summary: "Security focused gathering session",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (continued)",
-      time: "13:30 - 15:00",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Information Sharing Framework Standard (continued)",
-      time: "13:30 - 15:00",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      summary: "Standards for information sharing frameworks",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (continued)",
-      time: "15:30 - 17:00",
-      room: "HFSC Herman Meeting Room or Bulldog Alley",
-      venue: "HFSC Herman Meeting Room / Bulldog Alley",
-      summary: "Government Hackathon sessions",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Crypto Agility and PQC migration (continued)",
-      time: "15:30 - 17:00",
-      room: "Arrupe Hall",
-      venue: "Arrupe Hall",
-      summary: "Cryptographic agility and Post-Quantum Cryptography migration strategies",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Reception",
-      time: "17:10 -",
-      room: "Hilltop Tap Room",
-      venue: "Hilltop Tap Room (next to HFSC Herman Meeting Room)",
-      summary: "Evening reception at Hilltop Tap Room - https://www.hilltoptaproom.com (need sponsor)",
-      wg: "General",
-      link: "https://www.hilltoptaproom.com"
-    }
-  ],
-  day3: [
-    {
-      title: "Accountable wallet",
-      time: "09:00 - 10:30",
-      room: "Hariri 140",
-      venue: "Hariri 140",
-      venueImage: "/images/Events/block13/Hairiri - inside 1.jpeg",
-      summary: "Discussion on accountable wallet implementations",
-      wg: "IKP",
-      link: "#"
-    },
-    {
-      title: "Maturity Definitions and Assessment Criteria",
-      time: "09:00 - 10:30",
-      room: "Hariri 240",
-      venue: "Hariri 240",
-      summary: "Defining maturity levels and assessment criteria",
-      wg: "Cyber Security",
-      link: "#"
-    },
-    {
-      title: "Forensics & Analysis",
-      time: "10:45 - 12:15",
-      room: "Hariri 140",
-      venue: "Hariri 140",
-      summary: "Blockchain forensics and analysis methodologies",
-      wg: "IKP",
-      link: "#"
-    },
-    {
-      title: "Illicit Activities Dictionary",
-      time: "10:45 - 12:15",
-      room: "Hariri 240",
-      venue: "Hariri 240",
-      summary: "Developing a comprehensive illicit activities dictionary",
-      wg: "FACE",
-      link: "#"
-    },
-    {
-      title: "Gov Hack Final Presentation",
-      time: "13:15 - 14:30",
-      room: "Hariri 140",
-      venue: "Hariri 140",
-      summary: "Final presentations from Government Hackathon teams",
-      wg: "Gov Hack",
-      link: "#"
-    },
-    {
-      title: "Practical Stablecoin Implementation Guide",
-      time: "13:15 - 14:30",
-      room: "Hariri 240",
-      venue: "Hariri 240",
-      summary: "Guidelines for practical stablecoin implementations",
-      wg: "FACE",
-      link: "#"
-    },
-    {
-      title: "AI Agent Governance - Archive",
-      time: "14:45 - 16:15",
-      room: "Hariri 140",
-      venue: "Hariri 140",
-      summary: "AI Agent governance frameworks and archival systems",
-      wg: "IKP",
-      link: "#"
-    },
-    {
-      title: "Harmonization among Crypto-asset, stablecoin and tokenized deposit",
-      time: "14:45 - 16:15",
-      room: "Hariri 240",
-      venue: "Hariri 240",
-      summary: "Harmonization strategies for crypto-assets, stablecoins, and tokenized deposits",
-      wg: "FACE",
-      link: "#"
-    },
-    {
-      title: "AI Agent Governance - Archive (continued)",
-      time: "16:30 - 18:00",
-      room: "Hariri 140",
-      venue: "Hariri 140",
-      summary: "AI Agent governance frameworks and archival systems",
-      wg: "IKP",
-      link: "#"
-    },
-    {
-      title: "Gov Hack (wrap-up)",
-      time: "16:30 - 18:00",
-      room: "Hariri 240",
-      venue: "Hariri 240",
-      summary: "Government Hackathon wrap-up session",
-      wg: "Gov Hack",
-      link: "#"
-    }
-  ]
-};
-
-/* 
-// Future program content - uncomment and update when finalized
-const program = {
-  day1: [
-    {
-      title: "Opening Ceremony",
-      time: "09:00-10:00",
-      room: "Main Hall",
-      summary: "Welcome and introduction to Block #13",
-      wg: "General",
-      link: "#"
-    },
-    {
-      title: "Blockchain Forensics Standards Workshop",
-      time: "10:30-12:00", 
-      room: "Room A",
-      summary: "Latest developments in blockchain forensics and analytics",
-      wg: "IKP",
-      link: "#"
-    }
-  ],
-  day2: [
-    {
-      title: "Stablecoin Regulatory Panel", 
-      time: "09:00-10:30",
-      room: "Main Hall",
-      summary: "Policy priorities for stablecoin regulation across jurisdictions",
-      wg: "FASE",
-      link: "#"
-    }
-  ],
-  day3: [
-    {
-      title: "Cybersecurity Information Sharing Workshop",
-      time: "09:00-12:00",
-      room: "Room C", 
-      summary: "Hands-on session on cybersecurity frameworks for blockchain",
-      wg: "CS",
-      link: "#"
-    }
-  ]
-};
-*/
 
 // Helper function to group sessions by time
 const groupSessionsByTime = (sessions: any[]) => {
@@ -468,10 +108,12 @@ const groupSessionsByTime = (sessions: any[]) => {
 const groupSessionsByRoom = (sessions: any[]) => {
   const grouped: { [key: string]: any[] } = {};
   sessions.forEach(session => {
-    if (!grouped[session.room]) {
-      grouped[session.room] = [];
+    // Keep the full room name for HFSC/Bulldog uncertainty
+    const roomKey = session.room;
+    if (!grouped[roomKey]) {
+      grouped[roomKey] = [];
     }
-    grouped[session.room].push(session);
+    grouped[roomKey].push(session);
   });
   return grouped;
 };
@@ -553,12 +195,14 @@ export default function Block13Page() {
 
       <div className="block13-section-container">
         {/* Program Section */}
-        <section className="block13-section">
-          <h2 className="block13-section-title">Tentative Program</h2>
+        <section id="program" className="block13-section">
+          <h2 className="block13-section-title">Program</h2>
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-amber-800 mb-2">📋 Note: Program is Tentative</h3>
+            <h3 className="text-lg font-semibold text-amber-800 mb-2">Note: Program is Tentative</h3>
             <p className="text-amber-700">
-              The program below is tentative and subject to change. Final agenda will be posted closer to the event date.
+              The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
+              <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
+              <a href="https://www.linkedin.com/company/bgin-global/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
             </p>
           </div>
           
@@ -610,7 +254,7 @@ export default function Block13Page() {
                             <div className="block13-session-meta mb-2">
                               <span className="block13-session-room font-medium">{session.room}</span>
                               {session.wg !== 'General' && (
-                                <span className={`block13-wg-badge ${workingGroups[session.wg]?.color || 'gray'}`}>
+                                <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                                   {session.wg}
                                 </span>
                               )}
@@ -658,7 +302,7 @@ export default function Block13Page() {
                 {Object.entries(groupSessionsByRoom(program[activeDay])).map(([roomName, sessions]: [string, any]) => {
                   const roomData = Object.values(rooms).find((r: any) => 
                     r.displayName === roomName || roomName.includes(r.displayName)
-                  ) || rooms[roomName];
+                  ) || (rooms as any)[roomName];
                   
                   return (
                     <div key={roomName} className="space-y-4">
@@ -668,7 +312,9 @@ export default function Block13Page() {
                           <RoomImageCarousel images={roomData.image} />
                         )}
                         <div className="p-4 bg-gray-50">
-                          <h3 className="text-xl font-bold">{roomData?.displayName || roomName}</h3>
+                          <h3 className="text-xl font-bold">
+                            {roomData?.displayName || roomName}
+                          </h3>
                           {roomData?.capacity && (
                             <p className="text-gray-600">Capacity: {roomData.capacity}</p>
                           )}
@@ -693,7 +339,7 @@ export default function Block13Page() {
                               <div className="block13-session-meta mb-2">
                                 <span className="block13-session-time font-bold">{session.displayTime}</span>
                                 {session.wg !== 'General' && (
-                                  <span className={`block13-wg-badge ${workingGroups[session.wg]?.color || 'gray'}`}>
+                                  <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                                     {session.wg}
                                   </span>
                                 )}
@@ -860,7 +506,7 @@ export default function Block13Page() {
                   </ul>
                 </div>
 
-                {/* What You’ll Gain */}
+                {/* What You'll Gain */}
                 <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-amber-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-amber-100 text-amber-700">
@@ -868,7 +514,7 @@ export default function Block13Page() {
                         <path d="M8 21l4-2 4 2V5a4 4 0 1 0-8 0v16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
-                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">What You&apos;ll Gain</h3>
+                    <h3 className="text-lg font-semibold leading-none relative -top-0.5">What You'll Gain</h3>
                   </div>
                   <ul className="list-disc pl-5 text-gray-700 space-y-2">
                     <li>Policy-to-code prototypes and reusable governance frameworks</li>
@@ -978,225 +624,15 @@ export default function Block13Page() {
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <h4 className="font-bold text-lg mb-2">Arrupe Hall</h4>
-                <p className="text-gray-600">Historic academic building</p>
+                <p className="text-gray-600">Historic campus building</p>
               </div>
             </div>
           </div>
 
-          <div className="block13-venue-grid">
-            <div>
-              <h4 className="font-semibold mb-2">Location</h4>
-              <p className="text-gray-600 mb-4">
-                Georgetown University<br/>
-                Washington, D.C.<br/>
-                United States
-              </p>
-              <p className="text-sm text-gray-500">
-                Multiple venues across the Georgetown campus
-              </p>
-            </div>
-            <div className="block13-map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.687974655266!2d-77.0774816!3d38.908303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b62c5d7f0f87%3A0x4168e3d5a2c7e92e!2sGeorgetown%20University!5e0!3m2!1sen!2sus!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg"
-              ></iframe>
-            </div>
-          </div>
-        </section>
-
-        {/* Participation Info */}
-        <section id="participation" className="block13-section">
-          <div className="block13-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-12">
-            <h2 className="block13-section-title">Who Should Join</h2>
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Perfect for:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
-                    <span><strong>Regulators & Policymakers:</strong> Shape blockchain governance frameworks</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
-                    <span><strong>Technologists:</strong> Contribute to technical standards development</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
-                    <span><strong>Industry Leaders:</strong> Understand regulatory landscape</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                    <span><strong>Academics & Researchers:</strong> Engage in cutting-edge discussions</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                    <span><strong>Students:</strong> Learn from industry experts and build networks</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Why It Matters:</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Join the premier forum where blockchain governance decisions are made. Your participation directly impacts 
-                  international standards that will shape the future of digital economic networks.
-                </p>
-                <div className="bg-white rounded-xl p-6">
-                  <h4 className="font-semibold mb-2">Registration Information</h4>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Registration is now open! Limited capacity - register early to secure your spot.
-                  </p>
-                  <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
-                   	Register Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Past BGIN Events */}
-        <section className="block13-section">
-          <h2 className="block13-section-title text-center">Past BGIN Events</h2>
-          <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            Explore our journey of building global blockchain governance through previous Block conferences
-          </p>
-          <div className="block13-grid block13-grid-4">
-            <div className="block13-card">
-              <div className="block13-publication-image">
-                <Image
-                  src="/images/Events/Block5.jpeg"
-                  alt="Block 12"
-                  width={200}
-                  height={150}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 12</h4>
-                <p className="block13-publication-summary">March 2-3, 2025 | Shibuya, Tokyo</p>
-                <Link href="/events/20250302-block12" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-            
-            <div className="block13-card">
-              <div className="block13-publication-image">
-                <Image
-                  src="/images/Events/Block3.jpeg"
-                  alt="Block 11"
-                  width={200}
-                  height={150}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 11</h4>
-                <p className="block13-publication-summary">October 21-22, 2024 | Washington, D.C.</p>
-                <Link href="/events/20241025-block11" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-            
-            <div className="block13-card">
-              <div className="block13-publication-image">
-                <Image
-                  src="/images/Events/Block5.jpeg"
-                  alt="Block 10"
-                  width={200}
-                  height={150}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 10</h4>
-                <p className="block13-publication-summary">March 3-6, 2024 | Tokyo, Japan</p>
-                <Link href="/events/20240303-block10" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-            
-            <div className="block13-card">
-              <div className="block13-publication-image">
-                <Image
-                  src="/images/Events/venue/477_collider.jpg"
-                  alt="Block 9"
-                  width={200}
-                  height={150}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 9</h4>
-                <p className="block13-publication-summary">November 19-22, 2023 | Sydney, Australia</p>
-                <Link href="/events/20231119-block9" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link href="/activities/block-conference" className="block13-btn-secondary">
-              View All Block Conferences
+          <div className="text-center">
+            <Link href="/venues" className="block13-btn-secondary">
+              View All Venue Details
             </Link>
-          </div>
-        </section>
-
-        {/* Sponsors & Partners */}
-        <section className="block13-section">
-          <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Sponsors & Partners Coming Soon</h3>
-            <p className="text-blue-700">
-              We are currently finalizing partnerships and sponsorship opportunities for Block 13. Please check back for updates on our event sponsors and partners.
-            </p>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="block13-section">
-          <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
-            <div className="flex items-start h-fit max-w-5xl m-auto">
-              <div className="flex-col flex items-start gap-2.5 py-16">
-                <div className="bg-[#688ff5] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
-                  <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
-                    <div className="w-full flex-col flex items-start gap-6">
-                      <div className="w-full flex-col flex items-start gap-2 text-white">
-                        <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
-                        <div className="text-lg leading-[19px] font-Inter">
-                          Be part of shaping the future of blockchain governance at BGIN Block 13. 
-                          Connect with regulators, technologists, and industry leaders from around the world. 
-                          Join our community to stay updated on the latest developments and participate in ongoing discussions.
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://bgin.discourse.group/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white text-black px-6 py-3 font-medium hover:bg-gray-50 transition-all duration-300 hover:shadow-xl inline-flex items-center gap-2"
-                        style={{borderRadius: '45px'}}
-                      >
-                        Join Our Community
-                        <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </div>

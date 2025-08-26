@@ -344,6 +344,11 @@ export const programData = {
       "capacity": "",
       "image": "/images/Events/block13/HFSC Herman Meeting Rm.jpeg"
     },
+    "HFSC Herman Meeting Room or Bulldog Alley": {
+      "displayName": "HFSC Herman Meeting Room or Bulldog Alley",
+      "capacity": "TBD",
+      "image": ["/images/Events/block13/HFSC Herman Meeting Rm.jpeg", "/images/Events/block13/Leavey Bulldog Alley (Cap 150).jpeg"]
+    },
     "Bulldog Alley": {
       "displayName": "Leavey Bulldog Alley", 
       "capacity": "150 attendees",
@@ -412,7 +417,7 @@ export const programData = {
       "color": "purple",
       "chairs": ["Mitchell Travers", "Shinichiro Matsuo"],
       "description": "Hackathon sessions focused on government and policy applications of blockchain",
-      "documentsLink": "https://gamma.app/docs/BGIN-Block-13-Washington-DC-The-BGINing-of-Agentic-GovHacks-2izvapa1dgz17fs?mode=do"
+      "documentsLink": "https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing"
     },
     "General": {
       "name": "General Session",
