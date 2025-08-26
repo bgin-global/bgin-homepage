@@ -4,8 +4,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/styles/block13.css";
+import { programData } from "@/lib/block13-program-data";
 
 // Sample data - in a real implementation, this would come from a CMS or API
 const criticalProjects = [
@@ -89,35 +90,319 @@ const sponsors = [
   { name: "Blockchain Foundation", logo: "/images/About/FINSUM_2019.svg", website: "https://blockchain.org" }
 ];
 
-// Program content - to be finalized
-const program = {
+// Load program from JSON and process it
+const processProgram = () => {
+  const processed: any = {};
+  
+  Object.entries(programData.program).forEach(([day, dayData]) => {
+    processed[day] = dayData.sessions.map(session => ({
+      ...session,
+      // Standardize room names
+      room: session.room
+        .replace('Hairiri', 'Hariri')
+        .replace('HFSC Merman', 'HFSC Herman'),
+      // Format time for open-ended sessions
+      displayTime: session.time.endsWith('-') 
+        ? session.time.replace('-', ' onwards')
+        : session.time,
+      // Generate proper detail page URLs
+      detailPage: session.detailPage.includes('make one') 
+        ? `/events/20251015-block13/sessions/${session.id}`
+        : session.detailPage,
+      // Handle empty fields
+      speakers: session.speakers || 'TBD',
+      moderator: session.moderator || 'TBD',
+      summary: session.summary || 'Details coming soon'
+    }));
+  });
+  
+  return processed;
+};
+
+const program = processProgram();
+const rooms = programData.rooms;
+const workingGroups = programData.workingGroups;
+
+// Old program data for reference
+const oldProgram = {
   day1: [
     {
-      title: "Program details coming soon",
-      time: "TBA",
-      room: "TBA",
-      summary: "Detailed program schedule will be announced closer to the event date",
-      wg: "General",
+      title: "Gov Hack",
+      time: "09:00 - 10:30",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      venueImage: "/images/Events/block13/HFSC Herman Meeting Rm.jpeg",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
       link: "#"
+    },
+    {
+      title: "Offline Key Management",
+      time: "09:00 - 10:30",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      venueImage: "/images/Events/block13/Arrupe Hall (Cap 50).jpeg",
+      summary: "Working session on offline key management strategies",
+      wg: "IKP",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (continued)",
+      time: "11:00 - 12:30",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "Governance of security supply chain",
+      time: "11:00 - 12:30",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      summary: "Discussion on security supply chain governance",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (continued)",
+      time: "13:30 - 15:00",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "Security Target and Protection Profile",
+      time: "13:30 - 15:00",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      summary: "Working session on security targets and protection profiles",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (continued)",
+      time: "15:30 - 17:00",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "ZKP and Privacy Enhanced Authentication (WorldID)",
+      time: "15:30 - 17:00",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      summary: "Zero-Knowledge Proofs and privacy-enhanced authentication technologies",
+      wg: "IKP",
+      link: "#"
+    },
+    {
+      title: "Welcome Reception",
+      time: "17:10 -",
+      room: "Hilltop Tap Room",
+      venue: "Hilltop Tap Room (next to HFSC Herman Meeting Room)",
+      summary: "Welcome reception at Hilltop Tap Room - https://www.hilltoptaproom.com (need sponsor)",
+      wg: "General",
+      link: "https://www.hilltoptaproom.com"
     }
   ],
   day2: [
     {
-      title: "Program details coming soon",
-      time: "TBA",
-      room: "TBA",
-      summary: "Detailed program schedule will be announced closer to the event date",
-      wg: "General",
+      title: "Gov Hack",
+      time: "09:00 - 10:30",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      venueImage: "/images/Events/block13/Leavey Bulldog Alley (Cap 150).jpeg",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
       link: "#"
+    },
+    {
+      title: "Information Sharing Framework Standard",
+      time: "09:00 - 10:30",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      venueImage: "/images/Events/block13/Arrupe Hall (Cap 50).jpeg",
+      summary: "Standards for information sharing frameworks",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Security Gathering on the Hill",
+      time: "09:00 - 10:30",
+      room: "TBD",
+      venue: "TBD",
+      summary: "Security focused gathering session",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (continued)",
+      time: "11:00 - 12:30",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "Crypto Agility and PQC migration",
+      time: "11:00 - 12:30",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      summary: "Cryptographic agility and Post-Quantum Cryptography migration strategies",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Security Gathering on the Hill (continued)",
+      time: "11:00 - 12:30",
+      room: "TBD",
+      venue: "TBD",
+      summary: "Security focused gathering session",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (continued)",
+      time: "13:30 - 15:00",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "Information Sharing Framework Standard (continued)",
+      time: "13:30 - 15:00",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      summary: "Standards for information sharing frameworks",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (continued)",
+      time: "15:30 - 17:00",
+      room: "HFSC Herman Meeting Room or Bulldog Alley",
+      venue: "HFSC Herman Meeting Room / Bulldog Alley",
+      summary: "Government Hackathon sessions",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "Crypto Agility and PQC migration (continued)",
+      time: "15:30 - 17:00",
+      room: "Arrupe Hall",
+      venue: "Arrupe Hall",
+      summary: "Cryptographic agility and Post-Quantum Cryptography migration strategies",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Reception",
+      time: "17:10 -",
+      room: "Hilltop Tap Room",
+      venue: "Hilltop Tap Room (next to HFSC Herman Meeting Room)",
+      summary: "Evening reception at Hilltop Tap Room - https://www.hilltoptaproom.com (need sponsor)",
+      wg: "General",
+      link: "https://www.hilltoptaproom.com"
     }
   ],
   day3: [
     {
-      title: "Program details coming soon",
-      time: "TBA",
-      room: "TBA",
-      summary: "Detailed program schedule will be announced closer to the event date",
-      wg: "General",
+      title: "Accountable wallet",
+      time: "09:00 - 10:30",
+      room: "Hariri 140",
+      venue: "Hariri 140",
+      venueImage: "/images/Events/block13/Hairiri - inside 1.jpeg",
+      summary: "Discussion on accountable wallet implementations",
+      wg: "IKP",
+      link: "#"
+    },
+    {
+      title: "Maturity Definitions and Assessment Criteria",
+      time: "09:00 - 10:30",
+      room: "Hariri 240",
+      venue: "Hariri 240",
+      summary: "Defining maturity levels and assessment criteria",
+      wg: "Cyber Security",
+      link: "#"
+    },
+    {
+      title: "Forensics & Analysis",
+      time: "10:45 - 12:15",
+      room: "Hariri 140",
+      venue: "Hariri 140",
+      summary: "Blockchain forensics and analysis methodologies",
+      wg: "IKP",
+      link: "#"
+    },
+    {
+      title: "Illicit Activities Dictionary",
+      time: "10:45 - 12:15",
+      room: "Hariri 240",
+      venue: "Hariri 240",
+      summary: "Developing a comprehensive illicit activities dictionary",
+      wg: "FACE",
+      link: "#"
+    },
+    {
+      title: "Gov Hack Final Presentation",
+      time: "13:15 - 14:30",
+      room: "Hariri 140",
+      venue: "Hariri 140",
+      summary: "Final presentations from Government Hackathon teams",
+      wg: "Gov Hack",
+      link: "#"
+    },
+    {
+      title: "Practical Stablecoin Implementation Guide",
+      time: "13:15 - 14:30",
+      room: "Hariri 240",
+      venue: "Hariri 240",
+      summary: "Guidelines for practical stablecoin implementations",
+      wg: "FACE",
+      link: "#"
+    },
+    {
+      title: "AI Agent Governance - Archive",
+      time: "14:45 - 16:15",
+      room: "Hariri 140",
+      venue: "Hariri 140",
+      summary: "AI Agent governance frameworks and archival systems",
+      wg: "IKP",
+      link: "#"
+    },
+    {
+      title: "Harmonization among Crypto-asset, stablecoin and tokenized deposit",
+      time: "14:45 - 16:15",
+      room: "Hariri 240",
+      venue: "Hariri 240",
+      summary: "Harmonization strategies for crypto-assets, stablecoins, and tokenized deposits",
+      wg: "FACE",
+      link: "#"
+    },
+    {
+      title: "AI Agent Governance - Archive (continued)",
+      time: "16:30 - 18:00",
+      room: "Hariri 140",
+      venue: "Hariri 140",
+      summary: "AI Agent governance frameworks and archival systems",
+      wg: "IKP",
+      link: "#"
+    },
+    {
+      title: "Gov Hack (wrap-up)",
+      time: "16:30 - 18:00",
+      room: "Hariri 240",
+      venue: "Hariri 240",
+      summary: "Government Hackathon wrap-up session",
+      wg: "Gov Hack",
       link: "#"
     }
   ]
@@ -167,6 +452,74 @@ const program = {
 };
 */
 
+// Helper function to group sessions by time
+const groupSessionsByTime = (sessions: any[]) => {
+  const grouped: { [key: string]: any[] } = {};
+  sessions.forEach(session => {
+    if (!grouped[session.displayTime]) {
+      grouped[session.displayTime] = [];
+    }
+    grouped[session.displayTime].push(session);
+  });
+  return grouped;
+};
+
+// Helper function to group sessions by room
+const groupSessionsByRoom = (sessions: any[]) => {
+  const grouped: { [key: string]: any[] } = {};
+  sessions.forEach(session => {
+    if (!grouped[session.room]) {
+      grouped[session.room] = [];
+    }
+    grouped[session.room].push(session);
+  });
+  return grouped;
+};
+
+// Image carousel component for rooms with multiple images
+const RoomImageCarousel = ({ images }: { images: string[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  if (!images || images.length === 0) return null;
+  if (typeof images === 'string') {
+    return (
+      <Image
+        src={images}
+        alt="Venue"
+        width={800}
+        height={400}
+        className="w-full h-64 object-cover rounded-t-lg"
+      />
+    );
+  }
+  
+  return (
+    <div className="relative">
+      <Image
+        src={images[currentIndex]}
+        alt="Venue"
+        width={800}
+        height={400}
+        className="w-full h-64 object-cover rounded-t-lg"
+      />
+      {images.length > 1 && (
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
+              }`}
+              aria-label={`View image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 export default function Block13Page() {
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>('day1');
   const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
@@ -201,11 +554,11 @@ export default function Block13Page() {
       <div className="block13-section-container">
         {/* Program Section */}
         <section className="block13-section">
-          <h2 className="block13-section-title">Program</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Program Coming Soon</h3>
-            <p className="text-blue-700">
-              The detailed program schedule is currently being finalized. Please check back soon for updates on sessions, speakers, and timing.
+          <h2 className="block13-section-title">Tentative Program</h2>
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
+            <h3 className="text-lg font-semibold text-amber-800 mb-2">📋 Note: Program is Tentative</h3>
+            <p className="text-amber-700">
+              The program below is tentative and subject to change. Final agenda will be posted closer to the event date.
             </p>
           </div>
           
@@ -243,25 +596,131 @@ export default function Block13Page() {
           </div>
 
           {/* Program Content */}
-          <div className="space-y-4">
-            {program[activeDay].map((session, index) => (
-              <div key={index} className="block13-session-card opacity-60">
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="block13-session-meta">
-                      <span className="block13-session-time">{session.time}</span>
-                      <span className="text-sm text-gray-500">•</span>
-                      <span className="block13-session-room">{session.room}</span>
-                      <span className={`block13-wg-badge ${session.wg.toLowerCase()}`}>
-                        {session.wg}
-                      </span>
+          <div className="space-y-6">
+            {viewMode === 'time' ? (
+              // Time-based view
+              <div className="space-y-6">
+                {Object.entries(groupSessionsByTime(program[activeDay])).map(([time, sessions]: [string, any]) => (
+                  <div key={time} className="space-y-4">
+                    <h3 className="text-lg font-semibold text-gray-700 border-b pb-2">{time}</h3>
+                    <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
+                      {sessions.map((session: any, idx: number) => (
+                        <div key={idx} className="block13-session-card">
+                          <div className="flex flex-col">
+                            <div className="block13-session-meta mb-2">
+                              <span className="block13-session-room font-medium">{session.room}</span>
+                              {session.wg !== 'General' && (
+                                <span className={`block13-wg-badge ${workingGroups[session.wg]?.color || 'gray'}`}>
+                                  {session.wg}
+                                </span>
+                              )}
+                            </div>
+                            <Link href={session.detailPage} className="hover:text-blue-600">
+                              <h3 className="block13-session-title text-xl mb-2">{session.title}</h3>
+                            </Link>
+                            <p className="text-gray-600 mb-3">{session.summary}</p>
+                            {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                              <div className="text-sm text-gray-700 space-y-1">
+                                {session.moderator !== 'TBD' && (
+                                  <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                )}
+                                {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
+                                  <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                )}
+                              </div>
+                            )}
+                            {session.documents && session.documents.length > 0 && (
+                              <div className="mt-3">
+                                <p className="text-sm font-semibold text-gray-700 mb-1">Documents:</p>
+                                {session.documents.map((doc: any, docIdx: number) => (
+                                  <a
+                                    key={docIdx}
+                                    href={doc.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm text-blue-600 hover:underline block"
+                                  >
+                                    📄 {doc.title}
+                                  </a>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    <h3 className="block13-session-title">{session.title}</h3>
-                    <p className="text-gray-600">{session.summary}</p>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            ) : (
+              // Room-based view
+              <div className="space-y-8">
+                {Object.entries(groupSessionsByRoom(program[activeDay])).map(([roomName, sessions]: [string, any]) => {
+                  const roomData = Object.values(rooms).find((r: any) => 
+                    r.displayName === roomName || roomName.includes(r.displayName)
+                  ) || rooms[roomName];
+                  
+                  return (
+                    <div key={roomName} className="space-y-4">
+                      {/* Room header with image */}
+                      <div className="rounded-lg overflow-hidden bg-white shadow-md">
+                        {roomData?.image && (
+                          <RoomImageCarousel images={roomData.image} />
+                        )}
+                        <div className="p-4 bg-gray-50">
+                          <h3 className="text-xl font-bold">{roomData?.displayName || roomName}</h3>
+                          {roomData?.capacity && (
+                            <p className="text-gray-600">Capacity: {roomData.capacity}</p>
+                          )}
+                          {roomData?.externalLink && (
+                            <a
+                              href={roomData.externalLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:underline text-sm"
+                            >
+                              Visit venue website →
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {/* Sessions in this room */}
+                      <div className="space-y-3 ml-4">
+                        {sessions.map((session: any, idx: number) => (
+                          <div key={idx} className="block13-session-card">
+                            <div className="flex flex-col">
+                              <div className="block13-session-meta mb-2">
+                                <span className="block13-session-time font-bold">{session.displayTime}</span>
+                                {session.wg !== 'General' && (
+                                  <span className={`block13-wg-badge ${workingGroups[session.wg]?.color || 'gray'}`}>
+                                    {session.wg}
+                                  </span>
+                                )}
+                              </div>
+                              <Link href={session.detailPage} className="hover:text-blue-600">
+                                <h4 className="block13-session-title text-lg">{session.title}</h4>
+                              </Link>
+                              <p className="text-gray-600 mt-1">{session.summary}</p>
+                              {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                                <div className="text-sm text-gray-700 mt-2 space-y-1">
+                                  {session.moderator !== 'TBD' && (
+                                    <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                  )}
+                                  {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
+                                    <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </section>
 
@@ -434,29 +893,111 @@ export default function Block13Page() {
           </div>
         </section>
 
-        {/* Access & Venue Information */}
+        {/* Venue Locations */}
         <section className="block13-section">
-          <h2 className="block13-section-title">Access & Venue</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Venue Details Coming Soon</h3>
-            <p className="text-blue-700">
-              The specific venue location in Washington, D.C. is currently being finalized. Please check back for updates on the exact address and venue details.
-            </p>
+          <h2 className="block13-section-title">Venue Locations</h2>
+          
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold mb-6">Main Venues</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="block13-card">
+                <Image
+                  src="/images/Events/block13/Leavey Program Room (Cap 72).jpeg"
+                  alt="Leavey Program Room"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h4 className="font-bold text-lg mb-2">Leavey Program Room</h4>
+                <p className="text-gray-600">Capacity: 72 attendees</p>
+                <p className="text-sm text-gray-500 mt-2">Primary venue for Day 1 sessions</p>
+              </div>
+              
+              <div className="block13-card">
+                <Image
+                  src="/images/Events/block13/Leavey Bulldog Alley (Cap 150).jpeg"
+                  alt="Leavey Bulldog Alley"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h4 className="font-bold text-lg mb-2">Leavey Bulldog Alley</h4>
+                <p className="text-gray-600">Capacity: 150 attendees</p>
+                <p className="text-sm text-gray-500 mt-2">Large conference space for major sessions</p>
+              </div>
+              
+              <div className="block13-card">
+                <Image
+                  src="/images/Events/block13/Arrupe Hall (Cap 50).jpeg"
+                  alt="Arrupe Hall"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h4 className="font-bold text-lg mb-2">Arrupe Hall</h4>
+                <p className="text-gray-600">Capacity: 50 attendees</p>
+                <p className="text-sm text-gray-500 mt-2">Intimate setting for working group sessions</p>
+              </div>
+              
+              <div className="block13-card">
+                <Image
+                  src="/images/Events/block13/HFSC Herman Meeting Rm.jpeg"
+                  alt="HFSC Herman Meeting Room"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h4 className="font-bold text-lg mb-2">HFSC Herman Meeting Room</h4>
+                <p className="text-gray-600">Board room style seating</p>
+                <p className="text-sm text-gray-500 mt-2">Executive sessions and industry presentations</p>
+              </div>
+            </div>
           </div>
+
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold mb-6">Building Exteriors</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="block13-card">
+                <Image
+                  src="/images/Events/block13/Hairiri - outisde.png"
+                  alt="Hariri Building Exterior"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h4 className="font-bold text-lg mb-2">Hariri Building</h4>
+                <p className="text-gray-600">Modern conference facility</p>
+              </div>
+              
+              <div className="block13-card">
+                <Image
+                  src="/images/Events/block13/Arrupe Hall - outside.png"
+                  alt="Arrupe Hall Exterior"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h4 className="font-bold text-lg mb-2">Arrupe Hall</h4>
+                <p className="text-gray-600">Historic academic building</p>
+              </div>
+            </div>
+          </div>
+
           <div className="block13-venue-grid">
             <div>
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
+                Georgetown University<br/>
                 Washington, D.C.<br/>
                 United States
               </p>
               <p className="text-sm text-gray-500">
-                Specific venue address to be announced
+                Multiple venues across the Georgetown campus
               </p>
             </div>
             <div className="block13-map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99516.16817810178!2d-77.08493561718749!3d38.89767492345634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%2C%20DC!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.687974655266!2d-77.0774816!3d38.908303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b62c5d7f0f87%3A0x4168e3d5a2c7e92e!2sGeorgetown%20University!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
