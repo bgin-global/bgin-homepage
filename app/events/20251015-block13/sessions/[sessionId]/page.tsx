@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { programData } from "@/lib/block13-program-data";
+import "@/styles/block13.css";
 
 export default function SessionDetailPage() {
   const params = useParams();
@@ -121,9 +122,9 @@ export default function SessionDetailPage() {
                 <span>{room.displayName}</span>
               </div>
               {wg && (
-                <div className="px-3 py-1 rounded-full text-sm font-semibold bg-white/20 text-white border border-white/30">
+                <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                   {wg.abbreviation}
-                </div>
+                </span>
               )}
             </div>
           </div>
@@ -213,7 +214,7 @@ export default function SessionDetailPage() {
             <div className="space-y-6">
               {/* Venue Card */}
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-bold mb-3">Venue Details</h3>
+                <h3 className="font-bold mb-3 text-gray-800">Venue Details</h3>
                 <div className="space-y-2 text-sm text-gray-700">
                   <p><span className="font-semibold">Location:</span> {room.displayName}</p>
                   {room.capacity && (
@@ -231,15 +232,20 @@ export default function SessionDetailPage() {
               {/* Working Group Card */}
               {wg && (
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="font-bold mb-3">Working Group</h3>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-2">{wg.name}</h4>
+                  <h3 className="font-bold mb-3 text-gray-800">Working Group</h3>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                      {wg.abbreviation}
+                    </span>
+                    <h4 className="text-lg font-semibold text-gray-800">{wg.name}</h4>
+                  </div>
                   <p className="text-sm text-gray-600 mb-3">{wg.description}</p>
                   {wg.chairs && wg.chairs.length > 0 && (
-                    <div className="text-sm">
+                    <div className="text-sm text-gray-700">
                       <span className="font-semibold">Chairs:</span>
                       <ul className="mt-1 list-none">
                         {wg.chairs.map((chair: string, idx: number) => (
-                          <li key={idx}>• {chair}</li>
+                          <li key={idx}> {chair}</li>
                         ))}
                       </ul>
                     </div>
@@ -260,11 +266,11 @@ export default function SessionDetailPage() {
               {/* Related Projects */}
               {session.relatedProjects && session.relatedProjects.length > 0 && (
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="font-bold mb-3">Related Projects</h3>
+                  <h3 className="font-bold mb-3 text-gray-800">Related Projects</h3>
                   <ul className="space-y-2 text-sm list-none">
                     {session.relatedProjects.map((project: string, idx: number) => (
                       <li key={idx} className="text-blue-600">
-                        • {project}
+                       {project}
                       </li>
                     ))}
                   </ul>

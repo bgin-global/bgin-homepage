@@ -202,7 +202,7 @@ export default function Block13Page() {
             <p className="text-amber-700">
               The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
               <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
-              <a href="https://www.linkedin.com/company/bgin-global/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
             </p>
           </div>
           
@@ -300,9 +300,9 @@ export default function Block13Page() {
               // Room-based view
               <div className="space-y-8">
                 {Object.entries(groupSessionsByRoom(program[activeDay])).map(([roomName, sessions]: [string, any]) => {
-                  const roomData = Object.values(rooms).find((r: any) => 
+                  const roomData = (rooms as any)[roomName] || Object.values(rooms).find((r: any) => 
                     r.displayName === roomName || roomName.includes(r.displayName)
-                  ) || (rooms as any)[roomName];
+                  );
                   
                   return (
                     <div key={roomName} className="space-y-4">
