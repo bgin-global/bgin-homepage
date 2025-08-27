@@ -86,7 +86,7 @@ export default function About() {
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="BGIN Story" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
-          <div className={CUSTOM_STYLES.DESCRIPTION}>
+          <div className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700`}>
             　At the time when nobody had yet discussed the question of whether
             we would be able to establish blockchain governance adequate for the
             accelerating technological innovation and the rise of autonomous
@@ -98,7 +98,7 @@ export default function About() {
             implement multi-stakeholder governance for blockchain.
           </div>
           <div className="my-2"></div>
-          <div className={CUSTOM_STYLES.DESCRIPTION}>
+          <div className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700`}>
             　Drawing inspiration from the fact that Internet technical
             standards are not only crucial for ensuring interoperability but
             also directly tied to broader public interests—including user

@@ -32,11 +32,11 @@ const ItemReversible = ({
             className={`rounded-lg ${title ? "" : "w-full h-auto"}`}
           />
         </div>
-        {title && <p className={CUSTOM_STYLES.SUBTITLE}>{title}</p>}
+        {title && <p className={`${CUSTOM_STYLES.SUBTITLE} text-gray-800`}>{title}</p>}
       </div>
     </div>
     <div className="w-full md:w-[63%]">
-      <p className={CUSTOM_STYLES.DESCRIPTION}>{description}</p>
+      <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700`}>{description}</p>
     </div>
   </div>
 );
