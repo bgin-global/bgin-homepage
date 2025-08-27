@@ -132,7 +132,7 @@ export default function AgenticFrameworkWebinarPage() {
             <div className="space-y-6">
               <div>
                 <p className="font-medium text-black">🇯🇵 BGIN Workshop at EDCON Osaka</p>
-                <p className="text-gray-700">Date: September 16-19, 2025 • Location: Osaka, Japan</p>
+                <p className="text-gray-700">Date: September 17, 2025 • Location: Osaka, Japan</p>
               </div>
               <div>
                 <p className="font-medium text-black">🇺🇸 Block 13: The BGIN&apos;ing of Agentic Governance</p>

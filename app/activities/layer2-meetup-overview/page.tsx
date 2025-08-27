@@ -107,10 +107,10 @@ export default function Layer2MeetupOverview() {
               <div className="p-6">
                 <div className="mb-4">
                   <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Date:</strong> September 16-19, 2025
+                    <strong className="text-gray-900">Date:</strong> September 17, 2025
                   </p>
                   <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Duration:</strong> 4-hour session (Date TBD)
+                    <strong className="text-gray-900">Time:</strong> 12:30 PM - 4:30 PM (JST)
                   </p>
                   <p className="text-gray-600 mb-2">
                     <strong className="text-gray-900">Location:</strong> Grand Green Osaka
@@ -128,20 +128,34 @@ export default function Layer2MeetupOverview() {
                   </ul>
                 </div>
                 
+                <div className="mb-4 p-3 bg-gray-50 border border-gray-200 rounded-lg">
+                  <p className="text-sm text-gray-600">
+                    <strong>Note:</strong> EDCON registration is also required to attend this meetup
+                  </p>
+                </div>
+                
                 <div className="flex gap-3">
                   <Link 
                     href="/events/20250916-layer2-edcon" 
-                    className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center"
+                    className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
                   >
                     Event Details
                   </Link>
                   <Link 
-                    href="https://www.edcon.io/en/ticket"
-                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"
+                    href="https://luma.com/6bnm90zw"
+                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Register via EDCON
+                    Register (Luma)
+                  </Link>
+                  <Link 
+                    href="https://www.edcon.io/en/ticket"
+                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    EDCON Tickets
                   </Link>
                 </div>
               </div>

@@ -47,13 +47,14 @@ export default function EventsPage() {
     {
       id: "layer2-edcon",
       title: "Layer 2 Meetup @ EDCON 2025",
-      date: "September 16-19, 2025",
-      time: "4-hour session (TBD)",
+      date: "September 17, 2025",
+      time: "12:30 PM - 4:30 PM JST",
       type: "Layer 2 Meetup",
       description: "Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON in Osaka, Japan.",
       link: "/events/20250916-layer2-edcon",
       color: eventTypeColors["Layer 2 Meetup"],
-      registerLink: "https://www.edcon.io/en/ticket"
+      registerLink: "https://luma.com/6bnm90zw",
+      secondaryRegisterLink: "https://www.edcon.io/en/ticket"
     },
     {
       id: "block13",
@@ -150,19 +151,31 @@ export default function EventsPage() {
                   <div className="flex gap-3">
                     <Link 
                       href={event.link}
-                      className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center"
+                      className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
                     >
                       View Details
                     </Link>
                     {event.registerLink ? (
-                      <Link 
-                        href={event.registerLink}
-                        className={`flex-1 border-2 ${event.color.split(' ')[1]} text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-center`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Register
-                      </Link>
+                      <>
+                        <Link 
+                          href={event.registerLink}
+                          className={`flex-1 border-2 ${event.color.split(' ')[1]} text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-center text-sm`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {event.id === "layer2-edcon" ? "BGIN Session" : "Register"}
+                        </Link>
+                        {(event as any).secondaryRegisterLink && (
+                          <Link 
+                            href={(event as any).secondaryRegisterLink}
+                            className={`flex-1 border-2 ${event.color.split(' ')[1]} text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-center text-sm`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            EDCON Ticket
+                          </Link>
+                        )}
+                      </>
                     ) : (
                       <button 
                         className="flex-1 bg-gray-200 text-gray-500 px-4 py-2 rounded-lg cursor-not-allowed font-semibold"

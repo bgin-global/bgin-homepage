@@ -146,7 +146,7 @@ export default function Layer2MeetupNewsShared({ lang }: { lang: Lang }) {
           </h3>
 
           <div className="text-gray-700 space-y-2 mb-6">
-            <p><strong>Date:</strong> September 16-19, 2025 (4-hour half-day session, exact date TBD)</p>
+            <p><strong>Date:</strong> September 17, 2025, 12:30 PM - 4:30 PM (JST)</p>
             <p><strong>Location:</strong> Congres Square Grand Green Osaka</p>
             <p><strong>Themes:</strong></p>
             <ol className="list-decimal list-inside ml-4 space-y-1">
@@ -306,7 +306,7 @@ export default function Layer2MeetupNewsShared({ lang }: { lang: Lang }) {
           </h3>
 
           <div className="text-gray-700 space-y-2 mb-6">
-            <p><strong>日時：</strong> 2025年9月16-19日（4時間の半日セッション、詳細日時未定）</p>
+            <p><strong>日時：</strong> 2025年9月17日 12:30 - 16:30（日本時間）</p>
             <p><strong>場所：</strong> コングレスクエア グラングリーン大阪</p>
             <p><strong>テーマ：</strong></p>
             <ol className="list-decimal list-inside ml-4 space-y-1">

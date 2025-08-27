@@ -58,9 +58,8 @@ export default function Layer2EDCONEvent() {
             <div>
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">📅 Date & Time</h3>
-                <p className="text-gray-600">September 16-19, 2025</p>
-                <p className="text-gray-600">4-hour half-day session</p>
-                <p className="text-gray-500 text-sm">(Exact date and time TBD)</p>
+                <p className="text-gray-600">September 17, 2025</p>
+                <p className="text-gray-600">12:30 PM - 4:30 PM (JST)</p>
               </div>
 
               <div className="mb-6">
@@ -87,15 +86,26 @@ export default function Layer2EDCONEvent() {
 
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">🎫 Registration</h3>
-                <p className="text-gray-600 mb-2">Registration through EDCON required</p>
-                <Link 
-                  href="https://www.edcon.io/en/ticket"
-                  className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register at EDCON 2025 →
-                </Link>
+                <p className="text-gray-600 mb-3">Two registration options available:</p>
+                <div className="space-y-2">
+                  <Link 
+                    href="https://luma.com/6bnm90zw"
+                    className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register for Layer2 Meetup (Luma) →
+                  </Link>
+                  <br />
+                  <Link 
+                    href="https://www.edcon.io/en/ticket"
+                    className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register at EDCON 2025 →
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -272,6 +282,14 @@ export default function Layer2EDCONEvent() {
           </p>
           
           <div className="flex gap-4 justify-center flex-wrap">
+            <Link 
+              href="https://luma.com/6bnm90zw"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register on Luma
+            </Link>
             <Link 
               href="https://www.edcon.io/en/ticket"
               className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
