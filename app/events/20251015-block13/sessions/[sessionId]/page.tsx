@@ -41,7 +41,7 @@ export default function SessionDetailPage() {
         <div className="max-w-4xl mx-auto px-4 py-16">
           <h1 className="text-3xl font-bold mb-4">Session Not Found</h1>
           <p className="text-gray-600 mb-8">The session you're looking for doesn't exist.</p>
-          <Link href="/events/20251015-block13#program" className="text-blue-600 hover:underline">
+          <Link href="/events/20251015-block13#detailed-program" className="text-blue-600 hover:underline">
             ← Back to Block 13 Program
           </Link>
         </div>
@@ -95,7 +95,7 @@ export default function SessionDetailPage() {
         <div className="relative z-10 h-full flex flex-col justify-end">
           <div className="max-w-4xl mx-auto px-4 pb-8 text-white">
             <Link 
-              href="/events/20251015-block13#program" 
+              href="/events/20251015-block13#detailed-program" 
               className="text-white hover:text-gray-200 text-sm mb-4 inline-block"
             >
               ← Back to Block 13 Program
@@ -159,24 +159,24 @@ export default function SessionDetailPage() {
                 )}
               </div>
 
-              {/* Speakers & Moderators */}
+              {/* Session Chair & Main Contributor */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">Speakers & Moderators</h2>
+                <h2 className="text-2xl font-bold mb-4">Session Chair & Main Contributor</h2>
                 <div className="space-y-3">
                   {session.moderator && session.moderator !== "" && session.moderator !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">Moderator</h3>
+                      <h3 className="font-semibold text-gray-700">Session Chair</h3>
                       <p className="text-gray-600">{session.moderator === "" ? "TBD" : session.moderator}</p>
                     </div>
                   )}
                   {session.speakers && session.speakers !== "" && session.speakers !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">Speakers</h3>
+                      <h3 className="font-semibold text-gray-700">Main Contributor</h3>
                       <p className="text-gray-600">{session.speakers === "" ? "TBD" : session.speakers}</p>
                     </div>
                   )}
                   {(!session.moderator || session.moderator === "") && (!session.speakers || session.speakers === "") && (
-                    <p className="text-gray-500">TBD - Speaker information will be announced soon.</p>
+                    <p className="text-gray-500">TBD - Session chair and main contributor information will be announced soon.</p>
                   )}
                 </div>
               </div>

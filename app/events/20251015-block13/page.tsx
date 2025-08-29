@@ -7,160 +7,16 @@ import Link from "next/link";
 import { useState } from "react";
 import "@/styles/block13.css";
 import { programData } from "@/lib/block13-program-data";
+import { criticalProjects } from "@/lib/block13-critical-projects";
+import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block13-helpers";
+import RoomImageCarousel from "@/components/events/block13/RoomImageCarousel";
+import ProgramTimetable from "@/components/events/block13/ProgramTimetable";
 
-// Critical projects data
-const criticalProjects = [
-  {
-    id: 1,
-    title: "Distinguishing Blockchain Forensics from Analytics",
-    description: "Comprehensive standards for blockchain forensics and analytics methodologies",
-    wg: "IKP",
-    phase: "Public Comment",
-    link: "https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?usp=sharing"
-  },
-  {
-    id: 2,
-    title: "Wallet Governance, Policy and Key Management Study Report",
-    description: "Policy framework for wallet governance and key management best practices",
-    wg: "IKP", 
-    phase: "Public Comment",
-    link: "https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=sharing"
-  },
-  {
-    id: 3,
-    title: "Accountable Wallet",
-    description: "Standards for accountable wallet implementations and compliance",
-    wg: "IKP",
-    phase: "Published",
-    link: "https://drive.google.com/file/d/1ehgENeEX2irxosubynJNQXQqElM3EFOu/view?usp=sharing"
-  },
-  {
-    id: 4,
-    title: "Agent Standards and Frameworks",
-    description: "Standards and frameworks for blockchain agents, agentic competition, and reputation systems.",
-    wg: "IKP",
-    phase: "Draft",
-    link: "https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing"
-  },
-  {
-    id: 5,
-    title: "Policy priorities for stablecoin regulation: past, present and future",
-    description: "Comprehensive analysis of stablecoin regulatory frameworks and future directions",
-    wg: "FASE",
-    phase: "Published",
-    link: "https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit?usp=sharing&ouid=115431298069367330711&rtpof=true&sd=true"
-  },
-  {
-    id: 6,
-    title: "Cyber Security Information Sharing Framework",
-    description: "Framework for sharing cybersecurity information across blockchain networks",
-    wg: "CS",
-    phase: "Published",
-    link: "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1740097541251/ba7756650ffa00321f091b05a9de0aae8377ad86"
-  }
-];
 
-// Load program from JSON and process it
-const processProgram = () => {
-  const processed: any = {};
-  
-  Object.entries(programData.program).forEach(([day, dayData]) => {
-    processed[day] = dayData.sessions.map(session => ({
-      ...session,
-      // Standardize room names
-      room: session.room
-        .replace('Hairiri', 'Hariri')
-        .replace('HFSC Merman', 'HFSC Herman'),
-      // Format time for open-ended sessions
-      displayTime: session.time.endsWith('-') 
-        ? session.time.replace('-', ' onwards')
-        : session.time,
-      // Generate proper detail page URLs
-      detailPage: session.detailPage.includes('make one') 
-        ? `/events/20251015-block13/sessions/${session.id}`
-        : session.detailPage,
-      // Handle empty fields
-      speakers: session.speakers || 'TBD',
-      moderator: session.moderator || 'TBD',
-      summary: session.summary || 'Details coming soon'
-    }));
-  });
-  
-  return processed;
-};
-
+// Load and process program data
 const program = processProgram();
 const rooms = programData.rooms;
 
-// Helper function to group sessions by time
-const groupSessionsByTime = (sessions: any[]) => {
-  const grouped: { [key: string]: any[] } = {};
-  sessions.forEach(session => {
-    if (!grouped[session.displayTime]) {
-      grouped[session.displayTime] = [];
-    }
-    grouped[session.displayTime].push(session);
-  });
-  return grouped;
-};
-
-// Helper function to group sessions by room
-const groupSessionsByRoom = (sessions: any[]) => {
-  const grouped: { [key: string]: any[] } = {};
-  sessions.forEach(session => {
-    // Keep the full room name for HFSC/Bulldog uncertainty
-    const roomKey = session.room;
-    if (!grouped[roomKey]) {
-      grouped[roomKey] = [];
-    }
-    grouped[roomKey].push(session);
-  });
-  return grouped;
-};
-
-// Image carousel component for rooms with multiple images
-const RoomImageCarousel = ({ images }: { images: string[] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  if (!images || images.length === 0) return null;
-  if (typeof images === 'string') {
-    return (
-      <Image
-        src={images}
-        alt="Venue"
-        width={800}
-        height={400}
-        className="w-full h-64 object-cover rounded-t-lg"
-      />
-    );
-  }
-  
-  return (
-    <div className="relative">
-      <Image
-        src={images[currentIndex]}
-        alt="Venue"
-        width={800}
-        height={400}
-        className="w-full h-64 object-cover rounded-t-lg"
-      />
-      {images.length > 1 && (
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
-              }`}
-              aria-label={`View image ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
 
 export default function Block13Page() {
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>('day1');
@@ -197,24 +53,30 @@ export default function Block13Page() {
         {/* Program Section */}
         <section id="program" className="block13-section">
           <h2 className="block13-section-title">Program</h2>
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-amber-800 mb-2">Note: Program is Tentative</h3>
-            <p className="text-amber-700 mb-3">
-              The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
-              <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
-              <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
+          <div className="mb-6">
+            <p className="text-gray-700 mb-4">
+              <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.
+              {" "}
+              <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
-            <div className="border-t border-amber-300 pt-3 mt-3">
-              <p className="text-amber-800">
-                <strong>Fee Waiver Available:</strong> Contributors who submit papers to any session will have their registration fees waived. 
-                To submit a contribution, please contact your Working Group Chair or email <a href="mailto:bgin_admin@bg2x.org" className="underline hover:text-amber-900">bgin_admin@bg2x.org</a>. 
-                You can also join the discussion on the <a href="https://bgin.discourse.group" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">BGIN Discourse Forum</a>.
+            
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-800 mb-2">Note: Program is Tentative</h3>
+              <p className="text-blue-700">
+                The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
+                <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">X (Twitter)</a> | 
+                <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">LinkedIn</a>
               </p>
             </div>
           </div>
           
+          {/* Program Timetable */}
+          <div className="mb-8">
+            <ProgramTimetable />
+          </div>
+          
           {/* Day Tabs */}
-          <div className="block13-tabs">
+          <div id="detailed-program" className="block13-tabs scroll-mt-20">
             {[
               { key: 'day1' as const, label: 'Oct 15' },
               { key: 'day2' as const, label: 'Oct 16' }, 
@@ -270,13 +132,13 @@ export default function Block13Page() {
                               <h3 className="block13-session-title text-xl mb-2">{session.title}</h3>
                             </Link>
                             <p className="text-gray-600 mb-3">{session.summary}</p>
-                            {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                            {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                               <div className="text-sm text-gray-700 space-y-1">
-                                {session.moderator !== 'TBD' && (
-                                  <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                {session.sessionChair !== 'TBD' && (
+                                  <p><span className="font-semibold">Session Chair:</span> {session.sessionChair}</p>
                                 )}
-                                {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
-                                  <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
+                                  <p><span className="font-semibold">Main Contributor:</span> {session.contributors}</p>
                                 )}
                               </div>
                             )}
@@ -313,27 +175,146 @@ export default function Block13Page() {
                   
                   return (
                     <div key={roomName} className="space-y-4">
-                      {/* Room header with image */}
+                      {/* Room header with image on right */}
                       <div className="rounded-lg overflow-hidden bg-white shadow-md">
-                        {roomData?.image && (
-                          <RoomImageCarousel images={roomData.image} />
-                        )}
-                        <div className="p-4 bg-gray-50">
-                          <h3 className="text-xl font-bold">
-                            {roomData?.displayName || roomName}
-                          </h3>
-                          {roomData?.capacity && (
-                            <p className="text-gray-600">Capacity: {roomData.capacity}</p>
-                          )}
-                          {roomData?.externalLink && (
-                            <a
-                              href={roomData.externalLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:underline text-sm"
-                            >
-                              Visit venue website →
-                            </a>
+                        <div className="flex flex-col md:flex-row">
+                          {/* Left side - Building info */}
+                          <div className="p-6 md:w-1/2 bg-gray-50">
+                            <h3 className="text-2xl font-bold mb-3">
+                              {roomData?.displayName || roomName}
+                            </h3>
+                            
+                            {/* Building and location info */}
+                            <div className="space-y-2 mb-4">
+                              {roomData?.displayName?.includes('Hariri') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Arrupe') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1575 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Leavey') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1560 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
+                                <div className="text-gray-700">
+                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
+                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                  <br/><br/>
+                                  <span className="font-semibold">Bulldog Alley</span><br/>
+                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1560 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </div>
+                              )}
+                              {(roomData?.displayName?.includes('HFSC') && !(roomData?.displayName?.includes('Bulldog Alley'))) && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
+                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                  <br/><br/>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Hilltop') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Venue:</span> Hilltop Tap Room Located in Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                            </div>
+                            
+                            {roomData?.capacity && roomData.capacity !== 'TBD' && (
+                              <p className="text-gray-600 mb-2">
+                                <span className="font-semibold">Capacity:</span> {roomData.capacity}
+                              </p>
+                            )}
+                            
+                            {roomData?.externalLink && (
+                              <a
+                                href={roomData.externalLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold mt-3"
+                              >
+                                Visit venue website
+                                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M11 3H15.5C15.7761 3 16 3.22386 16 3.5V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M10 9L16 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M13 9V14.5C13 14.7761 12.7761 15 12.5 15H5.5C5.22386 15 5 14.7761 5 14.5V7.5C5 7.22386 5.22386 7 5.5 7H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </a>
+                            )}
+                          </div>
+                          
+                          {/* Right side - Image carousel */}
+                          {roomData?.image && (
+                            <div className="md:w-1/2 h-48 md:h-[300px] relative overflow-hidden">
+                              <RoomImageCarousel images={roomData.image} roomName={roomData?.displayName} />
+                            </div>
                           )}
                         </div>
                       </div>
@@ -355,13 +336,13 @@ export default function Block13Page() {
                                 <h4 className="block13-session-title text-lg">{session.title}</h4>
                               </Link>
                               <p className="text-gray-600 mt-1">{session.summary}</p>
-                              {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                              {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                 <div className="text-sm text-gray-700 mt-2 space-y-1">
-                                  {session.moderator !== 'TBD' && (
-                                    <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                  {session.sessionChair !== 'TBD' && (
+                                    <p><span className="font-semibold">Session Chair:</span> {session.sessionChair}</p>
                                   )}
-                                  {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
-                                    <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                  {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
+                                    <p><span className="font-semibold">Main Contributor:</span> {session.contributors}</p>
                                   )}
                                 </div>
                               )}
@@ -387,24 +368,24 @@ export default function Block13Page() {
                   <span className={`block13-wg-badge ${project.wg.toLowerCase()}`}>
                     {project.wg}
                   </span>
-                  <span className={`block13-phase-indicator ${project.phase.toLowerCase()}`}>{project.phase}</span>
+                  <span className={`block13-phase-indicator ${project.phase.toLowerCase().replace(/\s+/g, '-')}`}>{project.phase}</span>
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed flex-grow">{project.description}</p>
-                {project.title === "Agent Standards and Frameworks" ? (
-                  <Link
-                    href="https://lu.ma/tfqvop6t"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block13-btn-primary inline-flex items-center gap-2 mt-auto"
-                  >
-                    Join Webinar
-                    <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </Link>
-                ) : project.link ? (
+                <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
+                  {project.description.split('Gov Hack').map((part, index, array) => (
+                    index < array.length - 1 ? (
+                      <span key={index}>
+                        {part}
+                        <a href="#govhack" className="text-blue-600 hover:text-blue-800 underline">
+                          Gov Hack
+                        </a>
+                      </span>
+                    ) : (
+                      <span key={index}>{part}</span>
+                    )
+                  ))}
+                </p>
+                {project.link ? (
                   <Link href={project.link} className="text-blue-600 hover:text-blue-800 font-semibold mt-auto">
                     View Document →
                   </Link>
@@ -419,7 +400,7 @@ export default function Block13Page() {
         </section>
 
         {/* Featured Publications */}
-        <section className="block13-section">
+        <section id="publications" className="block13-section">
           <h2 className="block13-section-title">Featured Publications</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Publications Coming Soon</h3>
@@ -435,7 +416,7 @@ export default function Block13Page() {
         </section>
 
         {/* Agent GovHack Section (refined) */}
-        <section className="block13-section">
+        <section id="govhack" className="block13-section">
           <h2 className="block13-section-title">BGIN Agent GovHack</h2>
           <div className="mb-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
@@ -560,17 +541,17 @@ export default function Block13Page() {
               
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Leavey Program Room</strong> - 72 attendees</li>
-                <li><strong>Leavey Bulldog Alley</strong> - 150 attendees</li>
-                <li><strong>Arrupe Hall</strong> - 50 attendees</li>
-                <li><strong>HFSC Herman Meeting Room</strong> - Board room style</li>
-                <li><strong>Hariri Building</strong> - Rooms 140 & 240</li>
+                <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> - 72 attendees</li>
+                <li><strong>Thomas & Dorothy Leavey Center - Bulldog Alley</strong> - 150 attendees</li>
+                <li><strong>Pedro Arrupe, S.J. Hall</strong> - 50 attendees</li>
+                <li><strong>Healey Family Student Center (HFSC) - Herman Meeting Room</strong> - Board room style</li>
+                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240</li>
               </ul>
               
               <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
               <p className="text-sm text-gray-600">
                 <strong>Hilltop Tap Room</strong><br/>
-                Next to HFSC Herman Meeting Room
+                Located in Healey Family Student Center
               </p>
             </div>
             <div className="block13-map-container">
@@ -589,6 +570,79 @@ export default function Block13Page() {
         </section>
 
         {/* Participation Info */}
+        {/* Contribution & Fee Waiver Section */}
+        <section id="contributions" className="block13-section">
+          <h2 className="block13-section-title">Looking to Present Your Work?</h2>
+          <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
+            <p>
+              BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.</strong>
+            </p>
+          </div>
+
+          <div className="block13-grid block13-grid-2">
+            <div className="block13-card">
+              <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">How BGIN Sessions Work</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Foundation Documents</h4>
+                  <p className="text-gray-600 text-sm">Session Chairs provide draft standards and discussion materials as the foundation for collaborative work. <a href="#publications" className="text-blue-600 hover:underline">See featured publications →</a></p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Written Contributions</h4>
+                  <p className="text-gray-600 text-sm">Propose additions, modifications, or alternative approaches in writing prior to the session.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Review & Present</h4>
+                  <p className="text-gray-600 text-sm">Session Chairs review submissions and, if substantial, invite on-site presentations to the global BGIN community.</p>
+                </div>
+                <div className="border-l-4 border-gray-400 pl-4 py-2 mt-4">
+                  <p className="text-sm text-gray-700">
+                    <strong>Timeline:</strong> Contributions close approximately 1 week before sessions to allow participant review.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="block13-card">
+              <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Submit Contribution for Fee Waiver</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">1</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Contact Working Group Chair</h4>
+                    <p className="text-gray-600 text-sm">Reach out to the relevant WG Chair to express interest in contributing. Don't know the WG Chairs or have questions? <a href="https://bgin.discourse.group/t/onboarding-guide/130/2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Join our Discourse and make an inquiry (onboarding guide)</a>.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">2</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Submit Written Contribution</h4>
+                    <p className="text-gray-600 text-sm">Provide your document via email with <a href="mailto:bgin_admin@bg2x.org" className="text-blue-600 hover:underline">bgin_admin@bg2x.org</a> in CC.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Receive 100% Discount Code</h4>
+                    <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 13 registration.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 pt-4 border-t">
+                <a 
+                  href="https://bgin.discourse.group" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block13-btn-secondary"
+                >
+                  Join Discussion on Discourse Forum
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="participation" className="block13-section">
           <div className="block13-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-12">
             <h2 className="block13-section-title">Who Should Join</h2>
@@ -626,8 +680,11 @@ export default function Block13Page() {
                 </p>
                 <div className="bg-white rounded-xl p-6">
                   <h4 className="font-semibold mb-2">Registration Information</h4>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <p className="text-sm text-gray-600 mb-2">
                     Registration is now open. Limited capacity - register early to secure your spot.
+                  </p>
+                  <p className="text-sm text-gray-600 mb-4">
+                    <strong>Contributors:</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">Fee waivers available for those presenting work</a>
                   </p>
                   <a 
                     href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
@@ -740,10 +797,46 @@ export default function Block13Page() {
         {/* Sponsors & Partners */}
         <section className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Sponsors & Partners Coming Soon</h3>
-            <p className="text-blue-700">
-              We are currently finalizing partnerships and sponsorship opportunities for Block 13. Please check back for updates on our event sponsors and partners.
+          
+          {/* Academic Host */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
+            <div className="max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center">
+                <Image
+                  src="/images/Events/sponsor/Georgetown University Psaros Center.png"
+                  alt="Georgetown University Psaros Center"
+                  width={320}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Special Supporters */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
+            <div className="max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center">
+                <Image
+                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
+                  alt="Fintech Association Japan"
+                  width={280}
+                  height={140}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* More sponsors coming soon */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <p className="text-blue-700 text-center">
+              More sponsors are being finalized. If you are interested in sponsoring Block 13, please contact us at{" "}
+              <a href="mailto:bgin_admin@bg2x.org" className="text-blue-800 font-semibold hover:underline">
+                bgin_admin@bg2x.org
+              </a>
             </p>
           </div>
         </section>
