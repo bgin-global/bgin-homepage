@@ -364,21 +364,21 @@ export default function Block13Page() {
                   <span className={`block13-phase-indicator ${project.phase.toLowerCase()}`}>{project.phase}</span>
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4 leading-relaxed flex-grow">{project.description}</p>
-                {project.title === "Agent Standards and Frameworks" ? (
-                  <Link
-                    href="https://lu.ma/tfqvop6t"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block13-btn-primary inline-flex items-center gap-2 mt-auto"
-                  >
-                    Join Webinar
-                    <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </Link>
-                ) : project.link ? (
+                <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
+                  {project.description.split('Gov Hack').map((part, index, array) => (
+                    index < array.length - 1 ? (
+                      <span key={index}>
+                        {part}
+                        <a href="#govhack" className="text-blue-600 hover:text-blue-800 underline">
+                          Gov Hack
+                        </a>
+                      </span>
+                    ) : (
+                      <span key={index}>{part}</span>
+                    )
+                  ))}
+                </p>
+                {project.link ? (
                   <Link href={project.link} className="text-blue-600 hover:text-blue-800 font-semibold mt-auto">
                     View Document →
                   </Link>
@@ -409,7 +409,7 @@ export default function Block13Page() {
         </section>
 
         {/* Agent GovHack Section (refined) */}
-        <section className="block13-section">
+        <section id="govhack" className="block13-section">
           <h2 className="block13-section-title">BGIN Agent GovHack</h2>
           <div className="mb-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
