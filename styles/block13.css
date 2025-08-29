@@ -10,26 +10,36 @@
   --bgin-text-light: #666666;
   --bgin-border: #e5e7eb;
   
-  /* Working Group Colors */
-  --ikp-color: #f59e0b; /* Amber/Yellow - Identity, Key Management & Privacy */
-  --ikp-bg: #fef3c7;
-  --ikp-text: #92400e;
+  /* Working Group Colors - Matching ProgramTimetable */
+  --govhack-color: #fbbf24; /* Yellow - Gov Hack */
+  --govhack-bg: #fef9c3;
+  --govhack-text: #854d0e;
+  --govhack-border: #fcd34d;
   
-  --fase-color: #3b82f6; /* Soft Blue - Financial Application & Smart contract Environment */
-  --fase-bg: #dbeafe;
-  --fase-text: #1e40af;
+  --ikp-color: #3b82f6; /* Blue - Identity, Key Management & Privacy */
+  --ikp-bg: #dbeafe;
+  --ikp-text: #1e40af;
+  --ikp-border: #93c5fd;
   
-  --cs-color: #ef4444; /* Warm Coral/Red - Cyber Security */
-  --cs-bg: #fee2e2;
-  --cs-text: #dc2626;
+  --cs-color: #10b981; /* Green - Cyber Security */
+  --cs-bg: #dcfce7;
+  --cs-text: #166534;
+  --cs-border: #86efac;
   
-  --govhack-color: #9333ea; /* Purple - Gov Hack */
-  --govhack-bg: #f3e8ff;
-  --govhack-text: #6b21a8;
+  --fase-color: #a855f7; /* Purple - Financial Application & Smart contract Environment */
+  --fase-bg: #f3e8ff;
+  --fase-text: #6b21a8;
+  --fase-border: #d8b4fe;
   
   --general-color: #6b7280; /* Gray - General */
   --general-bg: #f3f4f6;
-  --general-text: #374151;
+  --general-text: #1f2937;
+  --general-border: #d1d5db;
+  
+  --tbd-color: #9ca3af; /* Light Gray - TBD */
+  --tbd-bg: #f9fafb;
+  --tbd-text: #4b5563;
+  --tbd-border: #e5e7eb;
   
   /* Shadow and Border Radius */
   --card-radius: 12px;
@@ -175,20 +185,29 @@
 
 /* Working Group Specific Styles */
 .block13-wg-card {
-  border-left: 4px solid var(--ikp-color);
+  border-left: 4px solid var(--general-color);
   position: relative;
+}
+
+.block13-wg-card.gov-hack {
+  border-left-color: var(--govhack-color);
 }
 
 .block13-wg-card.ikp {
   border-left-color: var(--ikp-color);
 }
 
+.block13-wg-card.cyber-security,
+.block13-wg-card.cs {
+  border-left-color: var(--cs-color);
+}
+
 .block13-wg-card.fase {
   border-left-color: var(--fase-color);
 }
 
-.block13-wg-card.cs {
-  border-left-color: var(--cs-color);
+.block13-wg-card.general {
+  border-left-color: var(--general-color);
 }
 
 .block13-wg-badge {
@@ -199,87 +218,94 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-}
-
-.block13-wg-badge.ikp {
-  background: var(--ikp-bg);
-  color: var(--ikp-text);
-}
-
-.block13-wg-badge.face {
-  background: var(--fase-bg);
-  color: var(--fase-text);
-}
-
-.block13-wg-badge.fase {
-  background: var(--fase-bg);
-  color: var(--fase-text);
-}
-
-.block13-wg-badge.cyber-security {
-  background: var(--cs-bg);
-  color: var(--cs-text);
-}
-
-.block13-wg-badge.cs {
-  background: var(--cs-bg);
-  color: var(--cs-text);
+  border: 1px solid;
 }
 
 .block13-wg-badge.gov-hack {
   background: var(--govhack-bg);
   color: var(--govhack-text);
+  border-color: var(--govhack-border);
+}
+
+.block13-wg-badge.ikp {
+  background: var(--ikp-bg);
+  color: var(--ikp-text);
+  border-color: var(--ikp-border);
+}
+
+.block13-wg-badge.cyber-security,
+.block13-wg-badge.cs {
+  background: var(--cs-bg);
+  color: var(--cs-text);
+  border-color: var(--cs-border);
+}
+
+.block13-wg-badge.fase,
+.block13-wg-badge.face {
+  background: var(--fase-bg);
+  color: var(--fase-text);
+  border-color: var(--fase-border);
 }
 
 .block13-wg-badge.general {
   background: var(--general-bg);
   color: var(--general-text);
+  border-color: var(--general-border);
 }
 
-/* Project Phase Indicators */
+.block13-wg-badge.tbd {
+  background: var(--tbd-bg);
+  color: var(--tbd-text);
+  border-color: var(--tbd-border);
+}
+
+/* Project Phase Indicators - High contrast colors for better visibility */
 .block13-phase-indicator {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .block13-phase-indicator.draft {
   background: #fef3c7;
-  color: #92400e;
-  border: 1px solid #f59e0b;
+  color: #713f12;
+  border: 1px solid #d97706;
 }
 
 .block13-phase-indicator.public-comment,
 .block13-phase-indicator.public.comment {
-  background: #dbeafe;
-  color: #1e40af;
-  border: 1px solid #3b82f6;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
 }
 
 .block13-phase-indicator.published {
-  background: #d1fae5;
-  color: #065f46;
-  border: 1px solid #10b981;
+  background: #dcfce7;
+  color: #14532d;
+  border: 1px solid #22c55e;
 }
 
 /* Legacy phase indicators for backward compatibility */
 .block13-phase-indicator.drafting {
   background: #fef3c7;
-  color: #92400e;
+  color: #713f12;
+  border: 1px solid #d97706;
 }
 
 .block13-phase-indicator.proposal {
-  background: #dbeafe;
-  color: #1e40af;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
 }
 
 .block13-phase-indicator.review {
-  background: #d1fae5;
-  color: #065f46;
+  background: #fce7f3;
+  color: #831843;
+  border: 1px solid #ec4899;
 }
 
 /* Grid Layouts */

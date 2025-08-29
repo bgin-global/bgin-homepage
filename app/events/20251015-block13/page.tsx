@@ -60,12 +60,12 @@ export default function Block13Page() {
               <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
             
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-amber-800 mb-2">Note: Program is Tentative</h3>
-              <p className="text-amber-700">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-800 mb-2">Note: Program is Tentative</h3>
+              <p className="text-blue-700">
                 The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
-                <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
-                <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
+                <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">X (Twitter)</a> | 
+                <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">LinkedIn</a>
               </p>
             </div>
           </div>
@@ -368,7 +368,7 @@ export default function Block13Page() {
                   <span className={`block13-wg-badge ${project.wg.toLowerCase()}`}>
                     {project.wg}
                   </span>
-                  <span className={`block13-phase-indicator ${project.phase.toLowerCase()}`}>{project.phase}</span>
+                  <span className={`block13-phase-indicator ${project.phase.toLowerCase().replace(/\s+/g, '-')}`}>{project.phase}</span>
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
@@ -797,10 +797,46 @@ export default function Block13Page() {
         {/* Sponsors & Partners */}
         <section className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">Sponsors & Partners Coming Soon</h3>
-            <p className="text-blue-700">
-              We are currently finalizing partnerships and sponsorship opportunities for Block 13. Please check back for updates on our event sponsors and partners.
+          
+          {/* Academic Host */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
+            <div className="max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center">
+                <Image
+                  src="/images/Events/sponsor/Georgetown University Psaros Center.png"
+                  alt="Georgetown University Psaros Center"
+                  width={320}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Special Supporters */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
+            <div className="max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center">
+                <Image
+                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
+                  alt="Fintech Association Japan"
+                  width={280}
+                  height={140}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* More sponsors coming soon */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <p className="text-blue-700 text-center">
+              More sponsors are being finalized. If you are interested in sponsoring Block 13, please contact us at{" "}
+              <a href="mailto:bgin_admin@bg2x.org" className="text-blue-800 font-semibold hover:underline">
+                bgin_admin@bg2x.org
+              </a>
             </p>
           </div>
         </section>
