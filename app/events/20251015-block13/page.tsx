@@ -7,160 +7,15 @@ import Link from "next/link";
 import { useState } from "react";
 import "@/styles/block13.css";
 import { programData } from "@/lib/block13-program-data";
+import { criticalProjects } from "@/lib/block13-critical-projects";
+import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block13-helpers";
+import RoomImageCarousel from "@/components/events/block13/RoomImageCarousel";
 
-// Critical projects data
-const criticalProjects = [
-  {
-    id: 1,
-    title: "Distinguishing Blockchain Forensics from Analytics",
-    description: "Comprehensive standards for blockchain forensics and analytics methodologies",
-    wg: "IKP",
-    phase: "Public Comment",
-    link: "https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?usp=sharing"
-  },
-  {
-    id: 2,
-    title: "Wallet Governance, Policy and Key Management Study Report",
-    description: "Policy framework for wallet governance and key management best practices",
-    wg: "IKP", 
-    phase: "Public Comment",
-    link: "https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=sharing"
-  },
-  {
-    id: 3,
-    title: "Accountable Wallet",
-    description: "Standards for accountable wallet implementations and compliance",
-    wg: "IKP",
-    phase: "Published",
-    link: "https://drive.google.com/file/d/1ehgENeEX2irxosubynJNQXQqElM3EFOu/view?usp=sharing"
-  },
-  {
-    id: 4,
-    title: "Agent Standards and Frameworks",
-    description: "Standards and frameworks for blockchain agents, agentic competition, and reputation systems.",
-    wg: "IKP",
-    phase: "Draft",
-    link: "https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing"
-  },
-  {
-    id: 5,
-    title: "Policy priorities for stablecoin regulation: past, present and future",
-    description: "Comprehensive analysis of stablecoin regulatory frameworks and future directions",
-    wg: "FASE",
-    phase: "Published",
-    link: "https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit?usp=sharing&ouid=115431298069367330711&rtpof=true&sd=true"
-  },
-  {
-    id: 6,
-    title: "Cyber Security Information Sharing Framework",
-    description: "Framework for sharing cybersecurity information across blockchain networks",
-    wg: "CS",
-    phase: "Published",
-    link: "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1740097541251/ba7756650ffa00321f091b05a9de0aae8377ad86"
-  }
-];
 
-// Load program from JSON and process it
-const processProgram = () => {
-  const processed: any = {};
-  
-  Object.entries(programData.program).forEach(([day, dayData]) => {
-    processed[day] = dayData.sessions.map(session => ({
-      ...session,
-      // Standardize room names
-      room: session.room
-        .replace('Hairiri', 'Hariri')
-        .replace('HFSC Merman', 'HFSC Herman'),
-      // Format time for open-ended sessions
-      displayTime: session.time.endsWith('-') 
-        ? session.time.replace('-', ' onwards')
-        : session.time,
-      // Generate proper detail page URLs
-      detailPage: session.detailPage.includes('make one') 
-        ? `/events/20251015-block13/sessions/${session.id}`
-        : session.detailPage,
-      // Handle empty fields
-      speakers: session.speakers || 'TBD',
-      moderator: session.moderator || 'TBD',
-      summary: session.summary || 'Details coming soon'
-    }));
-  });
-  
-  return processed;
-};
-
+// Load and process program data
 const program = processProgram();
 const rooms = programData.rooms;
 
-// Helper function to group sessions by time
-const groupSessionsByTime = (sessions: any[]) => {
-  const grouped: { [key: string]: any[] } = {};
-  sessions.forEach(session => {
-    if (!grouped[session.displayTime]) {
-      grouped[session.displayTime] = [];
-    }
-    grouped[session.displayTime].push(session);
-  });
-  return grouped;
-};
-
-// Helper function to group sessions by room
-const groupSessionsByRoom = (sessions: any[]) => {
-  const grouped: { [key: string]: any[] } = {};
-  sessions.forEach(session => {
-    // Keep the full room name for HFSC/Bulldog uncertainty
-    const roomKey = session.room;
-    if (!grouped[roomKey]) {
-      grouped[roomKey] = [];
-    }
-    grouped[roomKey].push(session);
-  });
-  return grouped;
-};
-
-// Image carousel component for rooms with multiple images
-const RoomImageCarousel = ({ images }: { images: string[] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  if (!images || images.length === 0) return null;
-  if (typeof images === 'string') {
-    return (
-      <Image
-        src={images}
-        alt="Venue"
-        width={800}
-        height={400}
-        className="w-full h-64 object-cover rounded-t-lg"
-      />
-    );
-  }
-  
-  return (
-    <div className="relative">
-      <Image
-        src={images[currentIndex]}
-        alt="Venue"
-        width={800}
-        height={400}
-        className="w-full h-64 object-cover rounded-t-lg"
-      />
-      {images.length > 1 && (
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
-              }`}
-              aria-label={`View image ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
 
 export default function Block13Page() {
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>('day1');
@@ -313,27 +168,146 @@ export default function Block13Page() {
                   
                   return (
                     <div key={roomName} className="space-y-4">
-                      {/* Room header with image */}
+                      {/* Room header with image on right */}
                       <div className="rounded-lg overflow-hidden bg-white shadow-md">
-                        {roomData?.image && (
-                          <RoomImageCarousel images={roomData.image} />
-                        )}
-                        <div className="p-4 bg-gray-50">
-                          <h3 className="text-xl font-bold">
-                            {roomData?.displayName || roomName}
-                          </h3>
-                          {roomData?.capacity && (
-                            <p className="text-gray-600">Capacity: {roomData.capacity}</p>
-                          )}
-                          {roomData?.externalLink && (
-                            <a
-                              href={roomData.externalLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:underline text-sm"
-                            >
-                              Visit venue website →
-                            </a>
+                        <div className="flex flex-col md:flex-row">
+                          {/* Left side - Building info */}
+                          <div className="p-6 md:w-1/2 bg-gray-50">
+                            <h3 className="text-2xl font-bold mb-3">
+                              {roomData?.displayName || roomName}
+                            </h3>
+                            
+                            {/* Building and location info */}
+                            <div className="space-y-2 mb-4">
+                              {roomData?.displayName?.includes('Hariri') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Arrupe') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1575 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Leavey') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1560 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
+                                <div className="text-gray-700">
+                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
+                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                  <br/><br/>
+                                  <span className="font-semibold">Bulldog Alley</span><br/>
+                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1560 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </div>
+                              )}
+                              {(roomData?.displayName?.includes('HFSC') && !(roomData?.displayName?.includes('Bulldog Alley'))) && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
+                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                  <br/><br/>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Hilltop') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Venue:</span> Hilltop Tap Room Located in Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a 
+                                    href="https://www.google.com/maps/search/?api=1&query=3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                            </div>
+                            
+                            {roomData?.capacity && roomData.capacity !== 'TBD' && (
+                              <p className="text-gray-600 mb-2">
+                                <span className="font-semibold">Capacity:</span> {roomData.capacity}
+                              </p>
+                            )}
+                            
+                            {roomData?.externalLink && (
+                              <a
+                                href={roomData.externalLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold mt-3"
+                              >
+                                Visit venue website
+                                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M11 3H15.5C15.7761 3 16 3.22386 16 3.5V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M10 9L16 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M13 9V14.5C13 14.7761 12.7761 15 12.5 15H5.5C5.22386 15 5 14.7761 5 14.5V7.5C5 7.22386 5.22386 7 5.5 7H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </a>
+                            )}
+                          </div>
+                          
+                          {/* Right side - Image carousel */}
+                          {roomData?.image && (
+                            <div className="md:w-1/2 h-48 md:h-[300px] relative overflow-hidden">
+                              <RoomImageCarousel images={roomData.image} roomName={roomData?.displayName} />
+                            </div>
                           )}
                         </div>
                       </div>
