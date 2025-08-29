@@ -52,18 +52,19 @@ export default function Block13Page() {
         {/* Program Section */}
         <section id="program" className="block13-section">
           <h2 className="block13-section-title">Program</h2>
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-6">
-            <h3 className="text-lg font-semibold text-amber-800 mb-2">Note: Program is Tentative</h3>
-            <p className="text-amber-700 mb-3">
-              The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
-              <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
-              <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
+          <div className="mb-6">
+            <p className="text-gray-700 mb-4">
+              <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.
+              {" "}
+              <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
-            <div className="border-t border-amber-300 pt-3 mt-3">
-              <p className="text-amber-800">
-                <strong>Fee Waiver Available:</strong> Contributors who submit papers to any session will have their registration fees waived. 
-                To submit a contribution, please contact your Working Group Chair or email <a href="mailto:bgin_admin@bg2x.org" className="underline hover:text-amber-900">bgin_admin@bg2x.org</a>. 
-                You can also join the discussion on the <a href="https://bgin.discourse.group" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900">BGIN Discourse Forum</a>.
+            
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">Note: Program is Tentative</h3>
+              <p className="text-amber-700">
+                The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
+                <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">X (Twitter)</a> | 
+                <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-900 ml-1">LinkedIn</a>
               </p>
             </div>
           </div>
@@ -393,7 +394,7 @@ export default function Block13Page() {
         </section>
 
         {/* Featured Publications */}
-        <section className="block13-section">
+        <section id="publications" className="block13-section">
           <h2 className="block13-section-title">Featured Publications</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Publications Coming Soon</h3>
@@ -563,6 +564,79 @@ export default function Block13Page() {
         </section>
 
         {/* Participation Info */}
+        {/* Contribution & Fee Waiver Section */}
+        <section id="contributions" className="block13-section">
+          <h2 className="block13-section-title">Looking to Present Your Work?</h2>
+          <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
+            <p>
+              BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.</strong>
+            </p>
+          </div>
+
+          <div className="block13-grid block13-grid-2">
+            <div className="block13-card">
+              <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">How BGIN Sessions Work</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Foundation Documents</h4>
+                  <p className="text-gray-600 text-sm">Session Chairs provide draft standards and discussion materials as the foundation for collaborative work. <a href="#publications" className="text-blue-600 hover:underline">See featured publications →</a></p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Written Contributions</h4>
+                  <p className="text-gray-600 text-sm">Propose additions, modifications, or alternative approaches in writing prior to the session.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">Review & Present</h4>
+                  <p className="text-gray-600 text-sm">Session Chairs review submissions and, if substantial, invite on-site presentations to the global BGIN community.</p>
+                </div>
+                <div className="border-l-4 border-gray-400 pl-4 py-2 mt-4">
+                  <p className="text-sm text-gray-700">
+                    <strong>Timeline:</strong> Contributions close approximately 1 week before sessions to allow participant review.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="block13-card">
+              <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Submit Contribution for Fee Waiver</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">1</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Contact Working Group Chair</h4>
+                    <p className="text-gray-600 text-sm">Reach out to the relevant WG Chair to express interest in contributing. Don't know the WG Chairs or have questions? <a href="https://bgin.discourse.group/t/onboarding-guide/130/2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Join our Discourse and make an inquiry (onboarding guide)</a>.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">2</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Submit Written Contribution</h4>
+                    <p className="text-gray-600 text-sm">Provide your document via email with <a href="mailto:bgin_admin@bg2x.org" className="text-blue-600 hover:underline">bgin_admin@bg2x.org</a> in CC.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-800">Receive 100% Discount Code</h4>
+                    <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 13 registration.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 pt-4 border-t">
+                <a 
+                  href="https://bgin.discourse.group" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block13-btn-secondary"
+                >
+                  Join Discussion on Discourse Forum
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="participation" className="block13-section">
           <div className="block13-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-12">
             <h2 className="block13-section-title">Who Should Join</h2>
@@ -600,8 +674,11 @@ export default function Block13Page() {
                 </p>
                 <div className="bg-white rounded-xl p-6">
                   <h4 className="font-semibold mb-2">Registration Information</h4>
-                  <p className="text-sm text-gray-600 mb-4">
+                  <p className="text-sm text-gray-600 mb-2">
                     Registration is now open. Limited capacity - register early to secure your spot.
+                  </p>
+                  <p className="text-sm text-gray-600 mb-4">
+                    <strong>Contributors:</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">Fee waivers available for those presenting work</a>
                   </p>
                   <a 
                     href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
