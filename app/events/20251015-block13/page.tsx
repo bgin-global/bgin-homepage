@@ -125,13 +125,13 @@ export default function Block13Page() {
                               <h3 className="block13-session-title text-xl mb-2">{session.title}</h3>
                             </Link>
                             <p className="text-gray-600 mb-3">{session.summary}</p>
-                            {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                            {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                               <div className="text-sm text-gray-700 space-y-1">
-                                {session.moderator !== 'TBD' && (
-                                  <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                {session.sessionChair !== 'TBD' && (
+                                  <p><span className="font-semibold">Session Chair:</span> {session.sessionChair}</p>
                                 )}
-                                {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
-                                  <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
+                                  <p><span className="font-semibold">Main Contributor:</span> {session.contributors}</p>
                                 )}
                               </div>
                             )}
@@ -329,13 +329,13 @@ export default function Block13Page() {
                                 <h4 className="block13-session-title text-lg">{session.title}</h4>
                               </Link>
                               <p className="text-gray-600 mt-1">{session.summary}</p>
-                              {(session.moderator !== 'TBD' || session.speakers !== 'TBD') && (
+                              {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                 <div className="text-sm text-gray-700 mt-2 space-y-1">
-                                  {session.moderator !== 'TBD' && (
-                                    <p><span className="font-semibold">Moderator:</span> {session.moderator}</p>
+                                  {session.sessionChair !== 'TBD' && (
+                                    <p><span className="font-semibold">Session Chair:</span> {session.sessionChair}</p>
                                   )}
-                                  {session.speakers !== 'TBD' && session.speakers !== 'Optional - List of speakers' && (
-                                    <p><span className="font-semibold">Speakers:</span> {session.speakers}</p>
+                                  {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
+                                    <p><span className="font-semibold">Main Contributor:</span> {session.contributors}</p>
                                   )}
                                 </div>
                               )}
@@ -534,17 +534,17 @@ export default function Block13Page() {
               
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Leavey Program Room</strong> - 72 attendees</li>
-                <li><strong>Leavey Bulldog Alley</strong> - 150 attendees</li>
-                <li><strong>Arrupe Hall</strong> - 50 attendees</li>
-                <li><strong>HFSC Herman Meeting Room</strong> - Board room style</li>
-                <li><strong>Hariri Building</strong> - Rooms 140 & 240</li>
+                <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> - 72 attendees</li>
+                <li><strong>Thomas & Dorothy Leavey Center - Bulldog Alley</strong> - 150 attendees</li>
+                <li><strong>Pedro Arrupe, S.J. Hall</strong> - 50 attendees</li>
+                <li><strong>Healey Family Student Center (HFSC) - Herman Meeting Room</strong> - Board room style</li>
+                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240</li>
               </ul>
               
               <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
               <p className="text-sm text-gray-600">
                 <strong>Hilltop Tap Room</strong><br/>
-                Next to HFSC Herman Meeting Room
+                Located in Healey Family Student Center
               </p>
             </div>
             <div className="block13-map-container">

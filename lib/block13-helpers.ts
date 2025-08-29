@@ -19,9 +19,9 @@ export const processProgram = () => {
       detailPage: session.detailPage.includes('make one') 
         ? `/events/20251015-block13/sessions/${session.id}`
         : session.detailPage,
-      // Handle empty fields
-      speakers: session.speakers || 'TBD',
-      moderator: session.moderator || 'TBD',
+      // Handle empty fields and map to BGIN structure
+      contributors: session.speakers || 'TBD',
+      sessionChair: session.moderator || 'TBD',
       summary: session.summary || 'Details coming soon'
     }));
   });

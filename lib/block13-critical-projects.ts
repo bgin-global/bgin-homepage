@@ -44,7 +44,7 @@ export const criticalProjects = [
     title: "Cyber Security Information Sharing Framework",
     description: "Framework for sharing cybersecurity information across blockchain networks",
     wg: "CS",
-    phase: "Published",
+    phase: "Public Comment",
     link: "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1740097541251/ba7756650ffa00321f091b05a9de0aae8377ad86"
   }
 ];

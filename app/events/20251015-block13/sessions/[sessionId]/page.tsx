@@ -159,24 +159,24 @@ export default function SessionDetailPage() {
                 )}
               </div>
 
-              {/* Speakers & Moderators */}
+              {/* Session Chair & Main Contributor */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">Speakers & Moderators</h2>
+                <h2 className="text-2xl font-bold mb-4">Session Chair & Main Contributor</h2>
                 <div className="space-y-3">
                   {session.moderator && session.moderator !== "" && session.moderator !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">Moderator</h3>
+                      <h3 className="font-semibold text-gray-700">Session Chair</h3>
                       <p className="text-gray-600">{session.moderator === "" ? "TBD" : session.moderator}</p>
                     </div>
                   )}
                   {session.speakers && session.speakers !== "" && session.speakers !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">Speakers</h3>
+                      <h3 className="font-semibold text-gray-700">Main Contributor</h3>
                       <p className="text-gray-600">{session.speakers === "" ? "TBD" : session.speakers}</p>
                     </div>
                   )}
                   {(!session.moderator || session.moderator === "") && (!session.speakers || session.speakers === "") && (
-                    <p className="text-gray-500">TBD - Speaker information will be announced soon.</p>
+                    <p className="text-gray-500">TBD - Session chair and main contributor information will be announced soon.</p>
                   )}
                 </div>
               </div>
