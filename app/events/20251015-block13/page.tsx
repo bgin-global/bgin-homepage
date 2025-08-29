@@ -10,6 +10,7 @@ import { programData } from "@/lib/block13-program-data";
 import { criticalProjects } from "@/lib/block13-critical-projects";
 import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block13-helpers";
 import RoomImageCarousel from "@/components/events/block13/RoomImageCarousel";
+import ProgramTimetable from "@/components/events/block13/ProgramTimetable";
 
 
 // Load and process program data
@@ -69,8 +70,13 @@ export default function Block13Page() {
             </div>
           </div>
           
+          {/* Program Timetable */}
+          <div className="mb-8">
+            <ProgramTimetable />
+          </div>
+          
           {/* Day Tabs */}
-          <div className="block13-tabs">
+          <div id="detailed-program" className="block13-tabs scroll-mt-20">
             {[
               { key: 'day1' as const, label: 'Oct 15' },
               { key: 'day2' as const, label: 'Oct 16' }, 
