@@ -10,22 +10,22 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "6",
+    title: "BGIN Block #13 Program Released - Washington D.C.",
+    description: "BGIN has released the tentative program for Block #13 in Washington D.C. (October 15-17, 2025). The three-day conference will feature Gov Hack sessions, working group meetings on IKP, FASE, and Cyber Security topics, and presentations on key research projects including agent standards, accountable wallets, and blockchain forensics.",
+    date: "2025-08-29",
+    link: "/news/block13-program-release",
+    tags: ["Conference", "Event"],
+    image: "/images/Events/Block3.jpeg"
+  },
+  {
     id: "5",
     title: "BGIN Announces Layer 2 Meetups at ETHTokyo and EDCON 2025",
     description: "BGIN will host Layer 2 Meetups at ETHTokyo and EDCON 2025 to advance Privacy Pool, Accountable Wallet, and cybersecurity information sharing standards.",
     date: "2025-08-16",
     link: "/news/layer2-ethtokyo-edcon-2025",
-    tags: ["Event", "Conference"],
+    tags: ["Conference", "Event"],
     image: "/images/Events/Block5.jpeg"
-  },
-  {
-    id: "4",
-    title: "BGIN Agentic Framework: Archive, Codex and Discourse",
-    description: "Join the IKP Working Group for a webinar introducing BGIN's three-agent architecture (Archive, Codex, Discourse) and how it enables sovereignty-preserving, living governance intelligence. Thu, Aug 28, 2025 • 12:00-13:00 UTC • Online.",
-    date: "2025-08-12",
-    link: "/news/agentic-framework-webinar",
-    tags: ["Event", "Working Group"],
-  image: "/images/Events/webinar/BGIN Agentic Framework.avif"
   },
   {
     id: "1",

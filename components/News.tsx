@@ -16,20 +16,25 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
   const sortedByDateDesc = [...news].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   const displayedNews = sortedByDateDesc.slice(0, maxItems);
 
-  // Function to automatically add "Latest" tag to the most recent news item
-  const processNewsWithLatestTag = (newsItems: NewsItem[]) => {
+  // Function to automatically add "New" tag to news items from the last 2 weeks
+  const processNewsWithNewTag = (newsItems: NewsItem[]) => {
     if (newsItems.length === 0) return newsItems;
+    
+    // Get the date 2 weeks ago
+    const twoWeeksAgo = new Date();
+    twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
     
     // Sort by date to find the most recent
     const sortedNews = [...newsItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
     
-    return sortedNews.map((item, index) => {
-      if (index === 0) {
-        // Add "Latest" tag to the most recent item if it doesn't already have it
-        const hasLatestTag = item.tags.includes("Latest");
+    return sortedNews.map((item) => {
+      const itemDate = new Date(item.date);
+      // Add "New" tag to items from the last 2 weeks if they don't already have it
+      if (itemDate >= twoWeeksAgo) {
+        const hasNewTag = item.tags.includes("New");
         return {
           ...item,
-          tags: hasLatestTag ? item.tags : ["Latest", ...item.tags]
+          tags: hasNewTag ? item.tags : ["New", ...item.tags]
         };
       }
       return item;
@@ -39,7 +44,6 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
   // Function to get tag color styling
   const getTagStyle = (tag: string) => {
     const tagStyles: { [key: string]: string } = {
-      "Latest": "bg-red-100 text-red-800 border-red-200",
       "Conference": "bg-blue-100 text-blue-800 border-blue-200",
       "Working Group": "bg-green-100 text-green-800 border-green-200",
       "Event": "bg-purple-100 text-purple-800 border-purple-200",
@@ -53,7 +57,7 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
 
 
   const rawNewsToDisplay = displayedNews;
-  const newsToDisplay = processNewsWithLatestTag(rawNewsToDisplay);
+  const newsToDisplay = processNewsWithNewTag(rawNewsToDisplay);
 
   return (
     <div className="py-8 md:py-16">
@@ -89,12 +93,21 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                             {/* Tags - positioned on the right */}
                             <div className="flex flex-wrap gap-2 flex-1">
                               {item.tags.map((tag, index) => (
-                                <span 
-                                  key={index}
-                                  className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
-                                >
-                                  {tag}
-                                </span>
+                                tag === "New" ? (
+                                  <span 
+                                    key={index}
+                                    className="text-red-600 text-xs font-bold uppercase tracking-wide"
+                                  >
+                                    {tag}
+                                  </span>
+                                ) : (
+                                  <span 
+                                    key={index}
+                                    className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                                  >
+                                    {tag}
+                                  </span>
+                                )
                               ))}
                             </div>
                           </div>
@@ -127,12 +140,21 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-2 md:mb-3">
                           {item.tags.map((tag, index) => (
-                            <span 
-                              key={index}
-                              className={`px-2 md:px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
-                            >
-                              {tag}
-                            </span>
+                            tag === "New" ? (
+                              <span 
+                                key={index}
+                                className="text-red-600 text-xs font-bold uppercase tracking-wide"
+                              >
+                                {tag}
+                              </span>
+                            ) : (
+                              <span 
+                                key={index}
+                                className={`px-2 md:px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                              >
+                                {tag}
+                              </span>
+                            )
                           ))}
                         </div>
                         

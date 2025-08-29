@@ -41,7 +41,7 @@ export default function SessionDetailPage() {
         <div className="max-w-4xl mx-auto px-4 py-16">
           <h1 className="text-3xl font-bold mb-4">Session Not Found</h1>
           <p className="text-gray-600 mb-8">The session you're looking for doesn't exist.</p>
-          <Link href="/events/20251015-block13#program" className="text-blue-600 hover:underline">
+          <Link href="/events/20251015-block13#detailed-program" className="text-blue-600 hover:underline">
             ← Back to Block 13 Program
           </Link>
         </div>
@@ -95,7 +95,7 @@ export default function SessionDetailPage() {
         <div className="relative z-10 h-full flex flex-col justify-end">
           <div className="max-w-4xl mx-auto px-4 pb-8 text-white">
             <Link 
-              href="/events/20251015-block13#program" 
+              href="/events/20251015-block13#detailed-program" 
               className="text-white hover:text-gray-200 text-sm mb-4 inline-block"
             >
               ← Back to Block 13 Program

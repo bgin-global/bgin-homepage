@@ -21,18 +21,8 @@ export default function EventsPage() {
     "Other": "bg-gray-100 text-gray-700"
   };
 
+  // Simply define upcoming events directly - no IKP webinar
   const upcomingEvents = [
-    {
-      id: "ikp-webinar",
-      title: "IKP WG Agentic Framework Webinar",
-      date: "August 28, 2025",
-      time: "12:00 PM - 13:00 PM UTC",
-      type: "Webinar",
-      description: "Join the IKP Working Group for an in-depth discussion on agentic frameworks and their role in blockchain governance.",
-      link: "/news/agentic-framework-webinar",
-      color: eventTypeColors["Webinar"],
-      registerLink: "https://lu.ma/tfqvop6t"
-    },
     {
       id: "layer2-ethtokyo",
       title: "Layer 2 Meetup @ ETHTokyo",
@@ -209,7 +199,7 @@ export default function EventsPage() {
         </section>
 
         {/* CTA Section */}
-        <div className="mt-16 bg-blue-600 rounded-lg p-12 text-center text-white">
+        <div className="mt-16 bg-[#688ff5] rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Stay Updated on BGIN Events</h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
             Join our community to receive updates about upcoming events, 
@@ -218,7 +208,7 @@ export default function EventsPage() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link 
               href="https://bgin.discourse.group"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
+              className="bg-white text-[#688ff5] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
             >
               Join Discussion Forum
             </Link>
