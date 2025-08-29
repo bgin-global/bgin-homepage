@@ -13,7 +13,7 @@ export default function IKPWebinarSuccessPage() {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="text-4xl font-bold mb-4 text-gray-900">
-            IKP WG Successfully Hosts Agentic Framework Webinar
+            IKP WG Hosts Agentic Framework Webinar
           </h1>
           <div className="flex items-center gap-4 text-gray-600 mb-6">
             <time dateTime="2025-08-30">August 30, 2025</time>

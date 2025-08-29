@@ -10,11 +10,20 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "8",
+    title: "BGIN August 2025 Newsletter Now Available",
+    description: "Our August newsletter features comprehensive updates on Block #13 preparations, the IKP Agentic Framework webinar, upcoming Layer 2 meetups at ETHTokyo and EDCON, and the latest developments across all working groups.",
+    date: "2025-09-01",
+    link: "/images/Activities/BGIN%20August%202025%20Newsletter.pdf",
+    tags: ["Publication", "Working Group"],
+    image: "/images/Activities/BGIN August 2025 Newsletter.png"
+  },
+  {
     id: "7",
     title: "IKP WG Hosts Agentic Framework Webinar",
     description: "The IKP Working Group successfully hosted the 'BGIN'ing of Agentic Governance' webinar on August 28, 2025, sparking meaningful discussions on the BGIN Agentic Framework (Archive, Codex, and Discourse). The session generated valuable feedback that will shape upcoming presentations at EDCON Osaka and Block #13 in Washington D.C.",
     date: "2025-08-29",
-    link: "/news/ikp-webinar-success",
+    link: "/news/ikp-webinar",
     tags: ["Working Group", "Event"],
     image: "/images/Events/webinar/BGIN Agentic Framework.avif"
   },
