@@ -113,17 +113,17 @@ export default function Layer2EDCONEvent() {
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">📍 Venue Location</h3>
                 <p className="text-gray-600 font-medium">Congres Square Grand Green Osaka</p>
-                <p className="text-gray-600">5-3-51 Nakanoshima, Kita-ku</p>
-                <p className="text-gray-600">Osaka 530-0005, Japan</p>
+                <p className="text-gray-600">5-54 Ofukacho, Kita Ward</p>
+                <p className="text-gray-600">Osaka 530-0011, Japan</p>
                 
                 <div className="mt-3">
-                  <p className="text-sm text-gray-500 mb-1">• Near Nakanoshima Station</p>
-                  <p className="text-sm text-gray-500 mb-1">• Accessible via Keihan Nakanoshima Line</p>
+                  <p className="text-sm text-gray-500 mb-1">• Near Osaka Station</p>
+                  <p className="text-sm text-gray-500 mb-1">• Accessible via JR, Osaka Metro, and private railways</p>
                   <p className="text-sm text-gray-500">• Multiple transit options available</p>
                 </div>
                 
                 <Link 
-                  href="https://www.google.com/maps/search/?api=1&query=Congres+Square+Grand+Green+Osaka%2C+5-3-51+Nakanoshima%2C+Kita-ku%2C+Osaka+530-0005"
+                  href="https://maps.google.com/?q=Grand+Green+Osaka,+5-54+Ofukacho,+Kita+Ward,+Osaka+530-0011"
                   className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm mt-3"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -134,7 +134,7 @@ export default function Layer2EDCONEvent() {
               
               <div className="h-[250px] rounded-lg overflow-hidden shadow-md">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.4631852691674!2d135.48904171523832!3d34.69350648043612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6e6222a4ce9%3A0x5c0416d390c2f4f2!2sGrand%20Green%20Osaka!5e0!3m2!1sen!2sjp!4v1736426543210!5m2!1sen!2sjp"
+                  src="https://maps.google.com/maps?q=Grand+Green+Osaka,+5-54+Ofukacho,+Kita+Ward,+Osaka+530-0011&t=&z=17&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
