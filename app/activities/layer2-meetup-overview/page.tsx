@@ -34,32 +34,34 @@ export default function Layer2MeetupOverview() {
             {/* ETHTokyo Card */}
             <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="bg-purple-50 border-b-4 border-purple-500 p-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-bold text-gray-900">ETHTokyo</h3>
-                  <Image
-                    src="/images/Events/Layer2Japan2025/ethtokyo.png"
-                    alt="ETHTokyo Logo"
-                    width={80}
-                    height={35}
-                    className="object-contain"
-                  />
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900">ETHTokyo</h3>
               </div>
               
               <div className="p-6">
-                <div className="mb-4">
-                  <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Date:</strong> September 15, 2025
-                  </p>
-                  <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Time:</strong> 2:00 PM - 4:00 PM (JST)
-                  </p>
-                  <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Location:</strong> Shibuya Parco DG Building, Tokyo
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    <strong className="text-gray-900">Format:</strong> Hybrid (In-person + Remote)
-                  </p>
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex-1">
+                    <p className="text-gray-600 mb-2">
+                      <strong className="text-gray-900">Date:</strong> September 15, 2025
+                    </p>
+                    <p className="text-gray-600 mb-2">
+                      <strong className="text-gray-900">Time:</strong> 2:00 PM - 4:00 PM (JST)
+                    </p>
+                    <p className="text-gray-600 mb-2">
+                      <strong className="text-gray-900">Location:</strong> Shibuya Parco DG Building, Tokyo
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                      <strong className="text-gray-900">Format:</strong> Hybrid (In-person + Remote)
+                    </p>
+                  </div>
+                  <div className="ml-4 flex-shrink-0">
+                    <Image
+                      src="/images/Events/Layer2Japan2025/ethtokyo.png"
+                      alt="ETHTokyo Logo"
+                      width={100}
+                      height={45}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
                 
                 <div className="mb-6">
@@ -100,32 +102,34 @@ export default function Layer2MeetupOverview() {
             {/* EDCON Card */}
             <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="bg-purple-50 border-b-4 border-purple-500 p-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-bold text-gray-900">EDCON 2025</h3>
-                  <Image
-                    src="/images/Events/Layer2Japan2025/edcon.png"
-                    alt="EDCON Logo"
-                    width={100}
-                    height={35}
-                    className="object-contain"
-                  />
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900">EDCON 2025</h3>
               </div>
               
               <div className="p-6">
-                <div className="mb-4">
-                  <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Date:</strong> September 17, 2025
-                  </p>
-                  <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Time:</strong> 12:00 PM - 4:00 PM (JST)
-                  </p>
-                  <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Location:</strong> Grand Green Osaka
-                  </p>
-                  <p className="text-gray-600 mb-4">
-                    <strong className="text-gray-900">Format:</strong> In-person
-                  </p>
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex-1">
+                    <p className="text-gray-600 mb-2">
+                      <strong className="text-gray-900">Date:</strong> September 17, 2025
+                    </p>
+                    <p className="text-gray-600 mb-2">
+                      <strong className="text-gray-900">Time:</strong> 12:00 PM - 4:00 PM (JST)
+                    </p>
+                    <p className="text-gray-600 mb-2">
+                      <strong className="text-gray-900">Location:</strong> Grand Green Osaka
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                      <strong className="text-gray-900">Format:</strong> In-person
+                    </p>
+                  </div>
+                  <div className="ml-4 flex-shrink-0">
+                    <Image
+                      src="/images/Events/Layer2Japan2025/bgin luma x EDCON.png"
+                      alt="BGIN Luma x EDCON"
+                      width={140}
+                      height={50}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
                 
                 <div className="mb-6">

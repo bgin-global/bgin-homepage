@@ -51,19 +51,12 @@ export default function Layer2EDCONEvent() {
         </div>
 
         {/* Event Logos */}
-        <div className="flex items-center justify-center gap-12 mb-16 p-8 bg-gray-50 rounded-lg">
+        <div className="flex items-center justify-center mb-16 p-8 bg-gray-50 rounded-lg">
           <Image
-            src="/images/Logo/BGIN_horizontal_01_black.png"
-            alt="BGIN Logo"
-            width={180}
-            height={70}
-            className="object-contain"
-          />
-          <Image
-            src="/images/Events/Layer2Japan2025/edcon.png"
-            alt="EDCON Logo"
-            width={180}
-            height={70}
+            src="/images/Events/Layer2Japan2025/bgin luma x EDCON.png"
+            alt="BGIN Luma x EDCON"
+            width={400}
+            height={150}
             className="object-contain"
           />
         </div>

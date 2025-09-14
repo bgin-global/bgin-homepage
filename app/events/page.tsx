@@ -33,7 +33,8 @@ export default function EventsPage() {
       link: "/events/20250915-layer2-ethtokyo",
       color: eventTypeColors["Layer 2 Meetup"],
       registerLink: "https://lu.ma/otb2xfno",
-      secondaryRegisterLink: "https://app.moongate.id/e/ethtokyo2025"
+      secondaryRegisterLink: "https://app.moongate.id/e/ethtokyo2025",
+      image: "/images/Events/Layer2Japan2025/ethtokyo.png"
     },
     {
       id: "layer2-edcon",
@@ -45,7 +46,8 @@ export default function EventsPage() {
       link: "/events/20250916-layer2-edcon",
       color: eventTypeColors["Layer 2 Meetup"],
       registerLink: "https://luma.com/6bnm90zw",
-      secondaryRegisterLink: "https://www.edcon.io/en/ticket"
+      secondaryRegisterLink: "https://www.edcon.io/en/ticket",
+      image: "/images/Events/Layer2Japan2025/bgin luma x EDCON.png"
     },
     {
       id: "block13",
@@ -56,7 +58,8 @@ export default function EventsPage() {
       description: "BGIN's 13th General Assembly in Washington, D.C., advancing blockchain governance standards.",
       link: "/events/20251015-block13",
       color: eventTypeColors["Block Conference"],
-      registerLink: "https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
+      registerLink: "https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator",
+      image: "/images/Events/Block3.jpeg"
     }
   ];
 
@@ -116,23 +119,39 @@ export default function EventsPage() {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">
-                    {event.title}
-                  </h3>
-                  
-                  <div className="mb-4 space-y-1">
-                    <p className="text-gray-600 flex items-center">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      {event.date}
-                    </p>
-                    <p className="text-gray-600 flex items-center">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      {event.time}
-                    </p>
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2 text-gray-900">
+                        {event.title}
+                      </h3>
+                      
+                      <div className="space-y-1">
+                        <p className="text-gray-600 flex items-center">
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          {event.date}
+                        </p>
+                        <p className="text-gray-600 flex items-center">
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          {event.time}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {(event as any).image && (
+                      <div className="ml-4 flex-shrink-0">
+                        <Image
+                          src={(event as any).image}
+                          alt={event.title}
+                          width={event.id === "block13" ? 160 : 100}
+                          height={event.id === "block13" ? 80 : 50}
+                          className="object-contain"
+                        />
+                      </div>
+                    )}
                   </div>
                   
                   <div className="text-gray-600 mb-6 text-sm">
