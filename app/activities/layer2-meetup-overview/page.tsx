@@ -73,17 +73,25 @@ export default function Layer2MeetupOverview() {
                 <div className="flex gap-3">
                   <Link 
                     href="/events/20250915-layer2-ethtokyo" 
-                    className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center"
+                    className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
                   >
                     Event Details
                   </Link>
                   <Link 
                     href="https://lu.ma/otb2xfno"
-                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center"
+                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Register Now
+                    Register (BGIN)
+                  </Link>
+                  <Link 
+                    href="https://app.moongate.id/e/ethtokyo2025"
+                    className="flex-1 border-2 border-purple-500 text-purple-600 px-4 py-2 rounded-lg hover:bg-purple-50 transition-colors font-semibold text-center text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ETHTokyo Ticket
                   </Link>
                 </div>
               </div>
@@ -110,7 +118,7 @@ export default function Layer2MeetupOverview() {
                     <strong className="text-gray-900">Date:</strong> September 17, 2025
                   </p>
                   <p className="text-gray-600 mb-2">
-                    <strong className="text-gray-900">Time:</strong> 12:30 PM - 4:30 PM (JST)
+                    <strong className="text-gray-900">Time:</strong> 12:00 PM - 4:00 PM (JST)
                   </p>
                   <p className="text-gray-600 mb-2">
                     <strong className="text-gray-900">Location:</strong> Grand Green Osaka
@@ -147,7 +155,7 @@ export default function Layer2MeetupOverview() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Register (Luma)
+                    Register (BGIN)
                   </Link>
                   <Link 
                     href="https://www.edcon.io/en/ticket"
@@ -155,7 +163,7 @@ export default function Layer2MeetupOverview() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    EDCON Tickets
+                    Register (EDCON)
                   </Link>
                 </div>
               </div>

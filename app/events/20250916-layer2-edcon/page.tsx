@@ -27,9 +27,27 @@ export default function Layer2EDCONEvent() {
           <h1 className="text-5xl font-bold mb-4 text-gray-900">
             Layer 2 Meetup @ EDCON 2025
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 mb-6">
             Privacy Pool & Cybersecurity Information Sharing Standards
           </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link 
+              href="https://luma.com/6bnm90zw"
+              className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg shadow-md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register (BGIN)
+            </Link>
+            <Link 
+              href="https://www.edcon.io/en/ticket"
+              className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg shadow-md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register (EDCON)
+            </Link>
+          </div>
         </div>
 
         {/* Event Logos */}
@@ -59,7 +77,7 @@ export default function Layer2EDCONEvent() {
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">📅 Date & Time</h3>
                 <p className="text-gray-600">September 17, 2025</p>
-                <p className="text-gray-600">12:30 PM - 4:30 PM (JST)</p>
+                <p className="text-gray-600">12:00 PM - 4:00 PM JST</p>
               </div>
 
               <div className="mb-6">

@@ -29,18 +29,19 @@ export default function EventsPage() {
       date: "September 15, 2025",
       time: "2:00 PM - 4:00 PM JST",
       type: "Layer 2 Meetup",
-      description: "Standardization of Privacy Pool and Accountable Wallet Protocols at ETHTokyo.",
+      description: "Standardization of Privacy Pool and Accountable Wallet Protocols at ETHTokyo. A separate EthTokyo ticket is optional, but we highly recommend attending.",
       link: "/events/20250915-layer2-ethtokyo",
       color: eventTypeColors["Layer 2 Meetup"],
-      registerLink: "https://lu.ma/otb2xfno"
+      registerLink: "https://lu.ma/otb2xfno",
+      secondaryRegisterLink: "https://app.moongate.id/e/ethtokyo2025"
     },
     {
       id: "layer2-edcon",
       title: "Layer 2 Meetup @ EDCON 2025",
       date: "September 17, 2025",
-      time: "12:30 PM - 4:30 PM JST",
+      time: "12:00 PM - 4:00 PM JST",
       type: "Layer 2 Meetup",
-      description: "Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON in Osaka, Japan.",
+      description: "Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON in Osaka, Japan. Separate EDCON registration is required.",
       link: "/events/20250916-layer2-edcon",
       color: eventTypeColors["Layer 2 Meetup"],
       registerLink: "https://luma.com/6bnm90zw",
@@ -134,9 +135,19 @@ export default function EventsPage() {
                     </p>
                   </div>
                   
-                  <p className="text-gray-600 mb-6 text-sm">
-                    {event.description}
-                  </p>
+                  <div className="text-gray-600 mb-6 text-sm">
+                    {event.id === "layer2-edcon" ? (
+                      <>
+                        Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON in Osaka, Japan. <strong>Separate EDCON registration is required.</strong>
+                      </>
+                    ) : event.id === "layer2-ethtokyo" ? (
+                      <>
+                        Standardization of Privacy Pool and Accountable Wallet Protocols at ETHTokyo. <strong>A separate ETHTokyo ticket is optional,</strong> but we highly recommend attending.
+                      </>
+                    ) : (
+                      event.description
+                    )}
+                  </div>
                   
                   <div className="flex gap-3">
                     <Link 
@@ -153,7 +164,7 @@ export default function EventsPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {event.id === "layer2-edcon" ? "BGIN Session" : "Register"}
+                          {event.id === "layer2-edcon" ? "Register (BGIN)" : "Register"}
                         </Link>
                         {(event as any).secondaryRegisterLink && (
                           <Link 
@@ -162,7 +173,7 @@ export default function EventsPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            EDCON Ticket
+                            {event.id === "layer2-edcon" ? "Register (EDCON)" : "ETHTokyo Ticket"}
                           </Link>
                         )}
                       </>

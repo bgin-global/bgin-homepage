@@ -30,14 +30,16 @@ export default function Layer2ETHTokyoEvent() {
           <p className="text-xl text-gray-600 mb-6">
             Standardization of Privacy Pool and Accountable Wallet Protocols
           </p>
-          <Link 
-            href="https://lu.ma/otb2xfno"
-            className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg shadow-md"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Register Now - Free Event
-          </Link>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link 
+              href="https://lu.ma/otb2xfno"
+              className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg shadow-md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register on Luma
+            </Link>
+          </div>
         </div>
 
         {/* Event Logos */}
@@ -92,6 +94,30 @@ export default function Layer2ETHTokyoEvent() {
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">🏢 Venue Sponsor</h3>
                 <p className="text-gray-600">Digital Garage</p>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">🎫 Registration</h3>
+                <p className="text-gray-600 mb-3">Two registration options available:</p>
+                <div className="space-y-2">
+                  <Link 
+                    href="https://lu.ma/otb2xfno"
+                    className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register for Layer2 Meetup (Luma) →
+                  </Link>
+                  <br />
+                  <Link 
+                    href="https://app.moongate.id/e/ethtokyo2025"
+                    className="inline-flex items-center text-blue-600 hover:text-purple-800 font-medium text-sm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Register for ETHTokyo 2025 (Optional to attend Layer2 Meetup) →
+                  </Link>
+                </div>
               </div>
             </div>
 
@@ -237,7 +263,15 @@ export default function Layer2ETHTokyoEvent() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Register Now on Luma
+              Register on Luma
+            </Link>
+            <Link 
+              href="https://app.moongate.id/e/ethtokyo2025"
+              className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register for ETHTokyo 2025
             </Link>
             <Link 
               href="/activities/layer2-meetup" 

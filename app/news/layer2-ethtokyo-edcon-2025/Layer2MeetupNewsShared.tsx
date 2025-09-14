@@ -117,7 +117,7 @@ export default function Layer2MeetupNewsShared({ lang }: { lang: Lang }) {
           </h3>
 
           <div className="text-gray-700 space-y-4 mb-6">
-            <p><strong>Date:</strong> September 15, 2025, 2 pm - 4 pm (JST)</p>
+            <p><strong>Date:</strong> September 15, 2025, 2:00 pm - 4:00 pm (JST)</p>
             <p><strong>Location:</strong> Shibuya Parco DG Bldg., 15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan</p>
             <p><strong>Theme:</strong> Standardization of Privacy Pool and Accountable Wallet Protocols</p>
           </div>
@@ -146,7 +146,7 @@ export default function Layer2MeetupNewsShared({ lang }: { lang: Lang }) {
           </h3>
 
           <div className="text-gray-700 space-y-2 mb-6">
-            <p><strong>Date:</strong> September 17, 2025, 12:30 PM - 4:30 PM (JST)</p>
+            <p><strong>Date:</strong> September 17, 2025, 12:00 PM - 4:00 PM (JST)</p>
             <p><strong>Location:</strong> Congres Square Grand Green Osaka</p>
             <p><strong>Themes:</strong></p>
             <ol className="list-decimal list-inside ml-4 space-y-1">
