@@ -56,6 +56,7 @@ export default function Activities() {
             }
             link="/activities/block-conference"
             colorPattern="white"
+            isNew={true}
           />
           <ItemCard
             title="Layer2 Meetup"
@@ -81,7 +82,6 @@ export default function Activities() {
             }
             link="/activities/layer2-meetup"
             colorPattern="blue"
-            isNew={true}
           />
           <ItemCard
             title="Working Group"

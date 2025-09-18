@@ -21,34 +21,8 @@ export default function EventsPage() {
     "Other": "bg-gray-100 text-gray-700"
   };
 
-  // Simply define upcoming events directly - no IKP webinar
+  // Simply define upcoming events directly - Layer2 meetups have passed
   const upcomingEvents = [
-    {
-      id: "layer2-ethtokyo",
-      title: "Layer 2 Meetup @ ETHTokyo",
-      date: "September 15, 2025",
-      time: "2:00 PM - 4:00 PM JST",
-      type: "Layer 2 Meetup",
-      description: "Standardization of Privacy Pool and Accountable Wallet Protocols at ETHTokyo. A separate EthTokyo ticket is optional, but we highly recommend attending.",
-      link: "/events/20250915-layer2-ethtokyo",
-      color: eventTypeColors["Layer 2 Meetup"],
-      registerLink: "https://lu.ma/otb2xfno",
-      secondaryRegisterLink: "https://app.moongate.id/e/ethtokyo2025",
-      image: "/images/Events/Layer2Japan2025/ethtokyo.png"
-    },
-    {
-      id: "layer2-edcon",
-      title: "Layer 2 Meetup @ EDCON 2025",
-      date: "September 17, 2025",
-      time: "12:00 PM - 4:00 PM JST",
-      type: "Layer 2 Meetup",
-      description: "Privacy Pool & Cybersecurity Information Sharing Standards discussion at EDCON in Osaka, Japan. Separate EDCON registration is required.",
-      link: "/events/20250916-layer2-edcon",
-      color: eventTypeColors["Layer 2 Meetup"],
-      registerLink: "https://luma.com/6bnm90zw",
-      secondaryRegisterLink: "https://www.edcon.io/en/ticket",
-      image: "/images/Events/Layer2Japan2025/bgin luma x EDCON.png"
-    },
     {
       id: "block13",
       title: "BGIN Block #13",

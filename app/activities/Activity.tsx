@@ -12,7 +12,7 @@ interface Props {
     location: string;
     link: string;
     thumbnail?: string;
-  };
+  } | null;
   pastEvents: Event[];
   titleUpcoming: string;
   titlePast: string;
@@ -24,8 +24,8 @@ export default function Activity({
   titleUpcoming,
   titlePast,
 }: Props) {
-  // Convert upcoming event to Event format
-  const upcomingEventAsEvent: Event = {
+  // Convert upcoming event to Event format if it exists
+  const upcomingEventAsEvent: Event | null = eventUpcoming ? {
     id: "upcoming-registration", // Special ID to identify this as upcoming
     title: eventUpcoming.title,
     date: eventUpcoming.date,
@@ -34,18 +34,20 @@ export default function Activity({
     thumbnail: eventUpcoming.thumbnail || "/images/Events/Block3.jpeg", // Use custom thumbnail or default
     register_link: eventUpcoming.link, // This will be used for registration
     lang: "ENG" as const,
-  };
+  } : null;
 
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
-        <SectionTitle title={titleUpcoming} />
-        <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
-          <ItemEvent event={upcomingEventAsEvent} />
+      {upcomingEventAsEvent && (
+        <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
+          <SectionTitle title={titleUpcoming} />
+          <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
+            <ItemEvent event={upcomingEventAsEvent} />
+          </div>
         </div>
-      </div>
+      )}
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
         <SectionTitle title={titlePast} />
