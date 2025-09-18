@@ -55,7 +55,7 @@ export const programData = {
         },
         {
           "id": "1-4",
-          "title": "Security Target and Protection Profile ",
+          "title": "Information Sharing Framework Standard",
           "time": "13:30 - 15:00",
           "room": "Arrupe Hall",
           "summary": "",
@@ -64,8 +64,14 @@ export const programData = {
           "moderator": "",
           "detailPage": "make one just say TBD for uncertain information",
           "agenda": [],
-          "documents": [],
-          "relatedProjects": []
+          "documents": [
+            {
+              "title": "Cyber Security Information Sharing Framework",
+              "link": "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1740097541251/ba7756650ffa00321f091b05a9de0aae8377ad86",
+              "type": "Mural Flowchart"
+            }
+          ],
+          "relatedProjects": ["Cyber Security Information Sharing Framework"]
         },
         {
           "id": "1-5",
@@ -138,7 +144,7 @@ export const programData = {
         },
         {
           "id": "2-3",
-          "title": "Information Sharing Framework Standard",
+          "title": "Security Target and Protection Profile",
           "time": "13:30 - 15:00",
           "room": "Arrupe Hall",
           "summary": "",
@@ -146,15 +152,7 @@ export const programData = {
           "speakers": "",
           "moderator": "",
           "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
-          "documents": [
-            {
-              "title": "Cyber Security Information Sharing Framework",
-              "link": "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1740097541251/ba7756650ffa00321f091b05a9de0aae8377ad86",
-              "type": "Mural Flowchart"
-            }
-          ],
-          "relatedProjects": ["Cyber Security Information Sharing Framework"]
+          "agenda": []
         },
         {
           "id": "2-4",
