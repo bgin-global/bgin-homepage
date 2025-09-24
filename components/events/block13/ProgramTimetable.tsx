@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { programData } from '@/lib/block13-program-data';
 
 const ProgramTimetable = () => {
@@ -152,13 +153,22 @@ const ProgramTimetable = () => {
                           }
                           lastGovHackSession = session;
                           
+                          const isClickable = session.detailPage && !session.detailPage.includes('make one');
                           return (
-                            <td 
+                            <td
                               key={time}
                               colSpan={govHackSpan}
-                              className={`border border-gray-300 p-2 text-center ${getSessionColor(session.wg)}`}
+                              className={`border border-gray-300 p-2 text-center transition-all duration-200 ${getSessionColor(session.wg)} ${
+                                isClickable ? 'hover:shadow-lg hover:transform hover:-translate-y-1 cursor-pointer' : ''
+                              }`}
                             >
-                              <div className="text-sm font-medium">{session.title.replace('(Day 1)', '').replace('(Day 2)', '').trim()}</div>
+                              {isClickable ? (
+                                <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
+                                  {session.title.replace('(Day 1)', '').replace('(Day 2)', '').trim()}
+                                </Link>
+                              ) : (
+                                <div className="text-sm font-medium">{session.title.replace('(Day 1)', '').replace('(Day 2)', '').trim()}</div>
+                              )}
                             </td>
                           );
                         } else {
@@ -169,13 +179,22 @@ const ProgramTimetable = () => {
                       
                       // Handle other spanning sessions (like Security Gathering)
                       if (session?.isSpanning) {
+                        const isClickable = session.detailPage && !session.detailPage.includes('make one');
                         return (
-                          <td 
+                          <td
                             key={time}
                             colSpan={session.spanCount}
-                            className={`border border-gray-300 p-2 text-center ${getSessionColor(session.wg)}`}
+                            className={`border border-gray-300 p-2 text-center transition-all duration-200 ${getSessionColor(session.wg)} ${
+                              isClickable ? 'hover:shadow-lg hover:transform hover:-translate-y-1 cursor-pointer' : ''
+                            }`}
                           >
-                            <div className="text-sm font-medium">{session.title}</div>
+                            {isClickable ? (
+                              <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
+                                {session.title}
+                              </Link>
+                            ) : (
+                              <div className="text-sm font-medium">{session.title}</div>
+                            )}
                           </td>
                         );
                       }
@@ -186,9 +205,21 @@ const ProgramTimetable = () => {
                       }
                       
                       if (session) {
+                        const isClickable = session.detailPage && !session.detailPage.includes('make one');
                         return (
-                          <td key={time} className={`border border-gray-300 p-2 ${getSessionColor(session.wg)}`}>
-                            <div className="text-sm font-medium">{session.title}</div>
+                          <td
+                            key={time}
+                            className={`border border-gray-300 p-2 transition-all duration-200 ${getSessionColor(session.wg)} ${
+                              isClickable ? 'hover:shadow-lg hover:transform hover:-translate-y-1 cursor-pointer' : ''
+                            }`}
+                          >
+                            {isClickable ? (
+                              <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
+                                {session.title}
+                              </Link>
+                            ) : (
+                              <div className="text-sm font-medium">{session.title}</div>
+                            )}
                           </td>
                         );
                       }
@@ -207,6 +238,14 @@ const ProgramTimetable = () => {
 
   return (
     <div className="w-full">
+      <style jsx>{`
+        a {
+          text-decoration: none !important;
+        }
+        a:hover {
+          text-decoration: none !important;
+        }
+      `}</style>
       <div className="mb-6">
         <h3 className="text-lg font-semibold mb-3">Program Overview</h3>
         <p className="text-gray-600 mb-4">

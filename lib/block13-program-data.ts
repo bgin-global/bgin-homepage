@@ -209,17 +209,31 @@ export const programData = {
         },
         {
           "id": "3-2",
-          "title": "Maturity Definitions and Assessment Criteria",
+          "title": "Establishing Technical Metrics to Evaluate the 'Decentralization' of Blockchain Networks",
           "time": "9:00 - 10:30",
           "room": "Hariri 240",
-          "summary": "This session serves as a clarity act as we discuss the report by James Angel. Discussions will include topics around the degrees of decentralization, SEC and other jurisdictions, and potential calls for input.",
+          "summary": "A critical discussion addressing the gap between regulatory concepts of 'maturity' and 'decentralization' and the technically verifiable metrics needed to evaluate them. This session explores how major jurisdictions (US, Japan, UK, EU) are developing frameworks that use blockchain decentralization as a basis for legal classification, while establishing common vocabulary, standardized evaluation methodologies, and dynamic assessment models for measuring network control, token distribution, and genuine utility.",
           "wg": "FASE",
-          "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
-          "documents": [],
-          "relatedProjects": []
+          "speakers": "Takuya Kobori",
+          "moderator": "TBD",
+          "detailPage": "/events/20251015-block13/sessions/3-2",
+          "agenda": [
+            "Establishing common vocabulary for technical parameters (control, diversification, utility)",
+            "Measuring network control beyond token-based voting power",
+            "Evaluating token distribution and beneficial ownership",
+            "Demonstrating genuine utility vs speculative demand",
+            "Standardizing evaluation methodologies (Nakamoto Coefficient, Gini coefficient, network topology)",
+            "Developing dynamic assessment models for forks and governance changes",
+            "Bridging the gap between legal principles and technical reality"
+          ],
+          "documents": [
+            {
+              "title": "Session Documentation",
+              "link": "https://docs.google.com/document/d/1BjpudKr3BbWxr7E20VFEV8a207__AUG0yUjjO_EIczA/edit?usp=sharing",
+              "type": "Google Doc"
+            }
+          ],
+          "relatedProjects": ["Decentralization Metrics Framework"]
         },
         {
           "id": "3-3",
@@ -243,17 +257,31 @@ export const programData = {
         },
         {
           "id": "3-4",
-          "title": "Illicit Activities Dictionary",
+          "title": "Toward a Common Lexicon for Harmful On-Chain Activities",
           "time": "10:45 - 12:15",
           "room": "Hariri 240",
-          "summary": "This section takes up illicit activities and regulations, featuring input from Chainalysis and potentially members of JFSA, OFAC, FINCEN, and FATF.",
+          "summary": "Developing a standardized, open-source lexicon for harmful on-chain activities to bridge the gap between policy goals and technical reality. This session addresses the critical need for consistent definitions across jurisdictions and VASPs, covering activities from market manipulation and rug pulls to phishing scams, while creating a practical framework that enhances user protection, improves compliance efficiency, and enables better global collaboration between regulators and law enforcement.",
           "wg": "FASE",
-          "speakers": "",
+          "speakers": "Takuya Kobori",
           "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
-          "documents": [],
-          "relatedProjects": []
+          "detailPage": "/events/20251015-block13/sessions/3-4",
+          "agenda": [
+            "Establishing foundational dictionary of harmful on-chain activities",
+            "Differentiating wash trading from legitimate high-frequency trading",
+            "Distinguishing rug pulls from legitimate project failures",
+            "Defining smart contract exploits vs intended game-theoretic mechanics",
+            "Developing classification framework based on technical execution and impact",
+            "Creating a living document adaptable to evolving threats",
+            "Building consensus across jurisdictions (US, EU, UK, Japan) and VASPs"
+          ],
+          "documents": [
+            {
+              "title": "Session Documentation",
+              "link": "https://docs.google.com/document/d/1Bt9lQyemrwleMAbEAFg98zQKOMYMaPiYTI_5QZ0SWpY/edit?usp=sharing",
+              "type": "Google Doc"
+            }
+          ],
+          "relatedProjects": ["Common Lexicon for Harmful On-Chain Activities"]
         },
         {
           "id": "3-5",

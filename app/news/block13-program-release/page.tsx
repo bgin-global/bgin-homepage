@@ -68,7 +68,7 @@ export default function Block13ProgramReleasePage() {
                 <li><strong>IKP (Identity, Key Management & Privacy):</strong> Sessions on ZKP and Privacy Enhanced Authentication, 
                 Accountable Wallet, Forensics & Analysis, and AI Agent Governance</li>
                 <li><strong>FASE (Financial Application & Smart contract Environment):</strong> Maturity Definitions, 
-                Illicit Activities Dictionary, Practical Stablecoin Implementation, and Harmonization discussions</li>
+                Toward a Common Lexicon for Harmful On-Chain Activities, Practical Stablecoin Implementation, and Harmonization discussions</li>
                 <li><strong>Cyber Security:</strong> Offline Key Management, Governance of Security Supply Chain, 
                 and Security Target and Protection Profile sessions</li>
               </ul>
