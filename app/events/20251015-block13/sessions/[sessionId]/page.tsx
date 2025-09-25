@@ -22,11 +22,12 @@ export default function SessionDetailPage() {
         return { session: govhackSession, day: programData.program.day1.date };
       }
     }
-    
+
     for (const [day, dayData] of Object.entries(programData.program)) {
-      const session = dayData.sessions.find((s: any) => s.id === sessionId);
+      const sessions = (dayData as any).sessions;
+      const session = sessions.find((s: any) => s.id === sessionId);
       if (session) {
-        return { session, day: dayData.date };
+        return { session, day: (dayData as any).date };
       }
     }
     return null;
