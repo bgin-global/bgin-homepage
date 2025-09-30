@@ -142,10 +142,10 @@ export default function Block13Page() {
                                 )}
                               </div>
                             )}
-                            {session.documents && session.documents.length > 0 && (
+                            {session.documents && session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').length > 0 && (
                               <div className="mt-3">
                                 <p className="text-sm font-semibold text-gray-700 mb-1">Documents:</p>
-                                {session.documents.map((doc: any, docIdx: number) => (
+                                {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, docIdx: number) => (
                                   <a
                                     key={docIdx}
                                     href={doc.link}
@@ -372,12 +372,12 @@ export default function Block13Page() {
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
-                  {project.description.split('Gov Hack').map((part, index, array) => (
+                  {project.description.split('BGIN Agent Hack').map((part, index, array) => (
                     index < array.length - 1 ? (
                       <span key={index}>
                         {part}
                         <a href="#govhack" className="text-blue-600 hover:text-blue-800 underline">
-                          Gov Hack
+                          BGIN Agent Hack
                         </a>
                       </span>
                     ) : (
@@ -415,9 +415,9 @@ export default function Block13Page() {
           </div>
         </section>
 
-        {/* Agent GovHack Section (refined) */}
+        {/* Agent BGIN Agent Hack Section (refined) */}
         <section id="govhack" className="block13-section">
-          <h2 className="block13-section-title">BGIN Agent GovHack</h2>
+          <h2 className="block13-section-title">BGIN Agent Hack</h2>
           <div className="mb-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -513,16 +513,16 @@ export default function Block13Page() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center gap-4 mt-8">
+              {/* <div className="flex items-center justify-center gap-4 mt-8">
                 <Link
                   href="https://gamma.app/docs/BGIN-Agent-GovHack-Transforming-Blockchain-Standards-into-Executa-2izvapa1dgz17fs?mode=doc"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block13-btn-secondary"
                 >
-                  View GovHack Brief
+                  View BGIN Agent Hack Brief
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

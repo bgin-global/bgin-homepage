@@ -58,7 +58,7 @@ export default function Block13ProgramReleasePage() {
           
           <ul className="list-disc pl-6 space-y-2 mb-6 text-gray-700">
             <li>
-              <strong>Gov Hack (Days 1-3):</strong> A multi-day hackathon where policy discussions 
+              <strong>BGIN Agent Hack (Days 1-3):</strong> A multi-day hackathon where policy discussions 
               turn into working software through agent-mediated standards and programmable governance. 
               Includes final presentations on Day 3.
             </li>

@@ -30,7 +30,7 @@ export const allNews: NewsItem[] = [
   {
     id: "6",
     title: "BGIN Block #13 Program Released - Washington D.C.",
-    description: "BGIN has released the tentative program for Block #13 in Washington D.C. (October 15-17, 2025). The three-day conference will feature Gov Hack sessions, working group meetings on IKP, FASE, and Cyber Security topics, and presentations on key research projects including agent standards, accountable wallets, and blockchain forensics.",
+    description: "BGIN has released the tentative program for Block #13 in Washington D.C. (October 15-17, 2025). The three-day conference will feature BGIN Agent Hack sessions, working group meetings on IKP, FASE, and Cyber Security topics, and presentations on key research projects including agent standards, accountable wallets, and blockchain forensics.",
     date: "2025-08-29",
     link: "/news/block13-program-release",
     tags: ["Conference", "Event"],

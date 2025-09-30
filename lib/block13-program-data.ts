@@ -5,19 +5,19 @@ export const programData = {
       "sessions": [
         {
           "id": "1-1",
-          "title": "Gov Hack (Day 1)",
+          "title": "BGIN Agent Hack (Day 1)",
           "time": "09:00 - 17:00",
           "room": "HFSC Herman Meeting Room or Bulldog Alley",
           "summary": "A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.",
-          "wg": "Gov Hack",
+          "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
           "detailPage": "/events/20251015-block13/sessions/govhack",
           "agenda": [],
           "documents": [
             {
-              "title": "Gov Hack Brief",
-              "link": "https://gamma.app/docs/BGIN-Block-13-Washington-DC-The-BGINing-of-Agentic-GovHacks-2izvapa1dgz17fs?mode=doc",
+              "title": "BGIN Agent Hack Brief",
+              "link": "", // Gamma link commented out
               "type": "gamma document"
             }
           ],
@@ -108,19 +108,19 @@ export const programData = {
       "sessions": [
         {
           "id": "2-1",
-          "title": "Gov Hack (Day 2)",
+          "title": "BGIN Agent Hack (Day 2)",
           "time": "09:00 - 17:00",
           "room": "HFSC Herman Meeting Room or Bulldog Alley",
           "summary": "A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.",
-          "wg": "Gov Hack",
+          "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
           "detailPage": "/events/20251015-block13/sessions/govhack",
           "agenda": [],
           "documents": [
             {
-              "title": "Gov Hack Brief",
-              "link": "https://gamma.app/docs/BGIN-Block-13-Washington-DC-The-BGINing-of-Agentic-GovHacks-2izvapa1dgz17fs?mode=doc",
+              "title": "BGIN Agent Hack Brief",
+              "link": "", // Gamma link commented out
               "type": "gamma document"
             }
           ],
@@ -285,19 +285,19 @@ export const programData = {
         },
         {
           "id": "3-5",
-          "title": "Gov Hack Final Presentation",
+          "title": "BGIN Agent Hack Final Presentation",
           "time": "13:15 - 14:30",
           "room": "Hariri 140",
-          "summary": "Presenting the solution from Gov Hack",
-          "wg": "Gov Hack",
+          "summary": "Presenting the solution from BGIN Agent Hack",
+          "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
           "detailPage": "/events/20251015-block13/sessions/govhack",
           "agenda": [],
           "documents": [
             {
-              "title": "Gov Hack Brief",
-              "link": "https://gamma.app/docs/BGIN-Block-13-Washington-DC-The-BGINing-of-Agentic-GovHacks-2izvapa1dgz17fs?mode=doc",
+              "title": "BGIN Agent Hack Brief",
+              "link": "", // Gamma link commented out
               "type": "gamma document"
             }
           ],
@@ -437,9 +437,9 @@ export const programData = {
       "description": "Examines financial applications, stablecoins, and socio-economic impacts of blockchain technology",
       "documentsLink": "https://bgin-global.org/activities/working-groups"
     },
-    "Gov Hack": {
+    "BGIN Agent Hack": {
       "name": "Governance Hackathon",
-      "abbreviation": "Gov Hack",
+      "abbreviation": "BGIN Agent Hack",
       "color": "purple",
       "chairs": ["Mitchell Travers", "Shinichiro Matsuo"],
       "description": "Hackathon sessions focused on government and policy applications of blockchain",

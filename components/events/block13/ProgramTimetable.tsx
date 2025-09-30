@@ -7,7 +7,7 @@ import { programData } from '@/lib/block13-program-data';
 const ProgramTimetable = () => {
   // Color mapping for working groups
   const wgColors: { [key: string]: string } = {
-    'Gov Hack': 'bg-yellow-100 border-yellow-300',
+    'BGIN Agent Hack': 'bg-yellow-100 border-yellow-300',
     'IKP': 'bg-blue-100 border-blue-300',
     'Cyber Security': 'bg-green-100 border-green-300',
     'CS': 'bg-green-100 border-green-300',
@@ -65,11 +65,11 @@ const ProgramTimetable = () => {
       }
       
       // Handle sessions spanning multiple time slots
-      if (session.title.includes('Gov Hack') && session.time === '09:00 - 17:00') {
-        // Gov Hack spans the entire day
+      if (session.title.includes('BGIN Agent Hack') && session.time === '09:00 - 17:00') {
+        // BGIN Agent Hack spans the entire day
         dayTimeSlots.forEach(time => {
           if (time !== '17:10 -') {
-            grid[roomKey][time] = { ...session, isGovHack: true };
+            grid[roomKey][time] = { ...session, isBGINAgentHack: true };
           }
         });
       } else if (session.title === 'Security Gathering on the Hill' && session.time === '9:00 - 12:30') {
@@ -122,9 +122,9 @@ const ProgramTimetable = () => {
             </thead>
             <tbody>
               {dayRooms.map(room => {
-                const isGovHackRoom = room.includes('HFSC') || room.includes('Bulldog');
-                let govHackSpan = 0;
-                let lastGovHackSession: any = null;
+                const isBGINAgentHackRoom = room.includes('HFSC') || room.includes('Bulldog');
+                let bginAgentHackSpan = 0;
+                let lastBGINAgentHackSession: any = null;
                 
                 return (
                   <tr key={room}>
@@ -139,25 +139,25 @@ const ProgramTimetable = () => {
                     {dayTimeSlots.map((time, index) => {
                       const session = grid[room]?.[time];
                       
-                      // Handle Gov Hack spanning
-                      if (session?.isGovHack) {
-                        if (govHackSpan === 0) {
-                          // Count how many consecutive Gov Hack sessions
-                          govHackSpan = 0;
+                      // Handle BGIN Agent Hack spanning
+                      if (session?.isBGINAgentHack) {
+                        if (bginAgentHackSpan === 0) {
+                          // Count how many consecutive BGIN Agent Hack sessions
+                          bginAgentHackSpan = 0;
                           for (let i = index; i < dayTimeSlots.length; i++) {
-                            if (grid[room]?.[dayTimeSlots[i]]?.isGovHack) {
-                              govHackSpan++;
+                            if (grid[room]?.[dayTimeSlots[i]]?.isBGINAgentHack) {
+                              bginAgentHackSpan++;
                             } else {
                               break;
                             }
                           }
-                          lastGovHackSession = session;
+                          lastBGINAgentHackSession = session;
                           
                           const isClickable = session.detailPage && !session.detailPage.includes('make one');
                           return (
                             <td
                               key={time}
-                              colSpan={govHackSpan}
+                              colSpan={bginAgentHackSpan}
                               className={`border border-gray-300 p-2 text-center transition-all duration-200 ${getSessionColor(session.wg)} ${
                                 isClickable ? 'hover:shadow-lg hover:transform hover:-translate-y-1 cursor-pointer' : ''
                               }`}
@@ -172,7 +172,7 @@ const ProgramTimetable = () => {
                             </td>
                           );
                         } else {
-                          govHackSpan--;
+                          bginAgentHackSpan--;
                           return null;
                         }
                       }
@@ -264,7 +264,7 @@ const ProgramTimetable = () => {
         <div className="flex flex-wrap gap-3 mb-4">
           <div className="text-sm font-medium">Working Groups:</div>
           <div className="flex flex-wrap gap-2">
-            <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">Gov Hack</span>
+            <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">BGIN Agent Hack</span>
             <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">IKP</span>
             <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300">Cyber Security</span>
             <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300">FASE</span>

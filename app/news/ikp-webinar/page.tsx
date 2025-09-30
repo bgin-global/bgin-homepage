@@ -101,18 +101,18 @@ export default function IKPWebinarSuccessPage() {
                   <span className="text-gray-600 text-sm block">Passcode: ?+^H8eat</span>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
+              {/* <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
                 <div>
-                  <a href="https://gamma.app/docs/BGINing-of-Agentic-Governance-Building-the-Governance-to-Code-Hac-r35vz2du5w9w5sv?mode=doc" 
+                  <a href="https://gamma.app/docs/BGINing-of-Agentic-Governance-Building-the-Governance-to-Code-Hac-r35vz2du5w9w5sv?mode=doc"
                     target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
                     Presentation Slides
                   </a>
                   <span className="text-gray-600 text-sm block">Full presentation deck from the webinar</span>
                 </div>
-              </li>
+              </li> */}
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -204,7 +204,7 @@ export default function IKPWebinarSuccessPage() {
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                 <div>
                   <strong>Block #13 Washington D.C.</strong> - October 15-17, 2025<br/>
-                  <span className="text-gray-600 text-sm">AI Agent Governance sessions and Gov Hack presentations</span>
+                  <span className="text-gray-600 text-sm">AI Agent Governance sessions and BGIN Agent Hack presentations</span>
                 </div>
               </li>
             </ul>

@@ -1,6 +1,6 @@
 // Working Group Color Scheme - Consistent across all Block 13 pages
 export const wgColors: { [key: string]: string } = {
-  'Gov Hack': 'bg-yellow-100 border-yellow-300 text-yellow-800',
+  'BGIN Agent Hack': 'bg-yellow-100 border-yellow-300 text-yellow-800',
   'IKP': 'bg-blue-100 border-blue-300 text-blue-800',
   'Cyber Security': 'bg-green-100 border-green-300 text-green-800',
   'CS': 'bg-green-100 border-green-300 text-green-800',

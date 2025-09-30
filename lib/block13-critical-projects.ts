@@ -26,7 +26,7 @@ export const criticalProjects = [
   {
     id: 4,
     title: "Agent Standards and Frameworks",
-    description: "Standards and frameworks for blockchain agents, agentic competition, and reputation systems. Highly relevant to the Gov Hack.",
+    description: "Standards and frameworks for blockchain agents, agentic competition, and reputation systems. Highly relevant to the BGIN Agent Hack.",
     wg: "IKP",
     phase: "Draft",
     link: "https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing"
