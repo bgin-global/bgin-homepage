@@ -75,7 +75,7 @@ export const programData = {
         },
         {
           "id": "1-5",
-          "title": "ZKP and Privacy Enhanced Authentication (WorldID)",
+          "title": "ZKP and Privacy Enhanced Authentication",
           "time": "15:30 - 17:00",
           "room": "Arrupe Hall",
           "summary": "",

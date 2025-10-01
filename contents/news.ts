@@ -9,15 +9,15 @@ export interface NewsItem {
 }
 
 export const allNews: NewsItem[] = [
-  {
-    id: "8",
-    title: "BGIN August 2025 Newsletter Now Available",
-    description: "Our August newsletter features comprehensive updates on Block #13 preparations, the IKP Agentic Framework webinar, upcoming Layer 2 meetups at ETHTokyo and EDCON, and the latest developments across all working groups.",
-    date: "2025-09-01",
-    link: "/images/Activities/BGIN%20August%202025%20Newsletter.pdf",
-    tags: ["Publication", "Working Group"],
-    image: "/images/Activities/BGIN August 2025 Newsletter.png"
-  },
+  // {
+  //   id: "8",
+  //   title: "BGIN August 2025 Newsletter Now Available",
+  //   description: "Our August newsletter features comprehensive updates on Block #13 preparations, the IKP Agentic Framework webinar, upcoming Layer 2 meetups at ETHTokyo and EDCON, and the latest developments across all working groups.",
+  //   date: "2025-09-01",
+  //   link: "/images/Activities/BGIN%20August%202025%20Newsletter.pdf",
+  //   tags: ["Publication", "Working Group"],
+  //   image: "/images/Activities/BGIN August 2025 Newsletter.png"
+  // },
   {
     id: "7",
     title: "IKP WG Hosts Agentic Framework Webinar",
@@ -63,13 +63,13 @@ export const allNews: NewsItem[] = [
     tags: ["Conference", "Event"],
     image: "/images/Events/Block3.jpeg"
   },
-  {
-    id: "3",
-    title: "BGIN July 2025 Newsletter Now Available",
-    description: "Our July newsletter features updates on recent working group activities, upcoming conferences, regulatory insights, and community highlights from around the globe.",
-    date: "2025-08-03",
-    link: "/images/Activities/BGIN%20July%202025%20WG%20Newsletter.pdf",
-    tags: ["Publication", "Working Group"],
-    image: "/images/Activities/BGIN July 2025 WG Newsletter.png"
-  }
+  // {
+  //   id: "3",
+  //   title: "BGIN July 2025 Newsletter Now Available",
+  //   description: "Our July newsletter features updates on recent working group activities, upcoming conferences, regulatory insights, and community highlights from around the globe.",
+  //   date: "2025-08-03",
+  //   link: "/images/Activities/BGIN%20July%202025%20WG%20Newsletter.pdf",
+  //   tags: ["Publication", "Working Group"],
+  //   image: "/images/Activities/BGIN July 2025 WG Newsletter.png"
+  // }
 ]
