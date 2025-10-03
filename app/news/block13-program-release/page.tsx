@@ -74,7 +74,7 @@ export default function Block13ProgramReleasePage() {
               </ul>
             </li>
             <li>
-              <strong>Welcome Reception:</strong> October 15 evening at Hilltop Tap Room
+              <strong>Welcome Reception:</strong> October 15 evening at the Georgetown University Faculty Club Restaurant
             </li>
           </ul>
 
@@ -95,8 +95,8 @@ export default function Block13ProgramReleasePage() {
           <h3 className="text-xl font-bold mt-6 mb-3 text-gray-900">Venues</h3>
           
           <p className="text-gray-700 mb-4">
-            Sessions will be held across multiple Georgetown University venues including:
-            HFSC Herman Meeting Room, Bulldog Alley, Arrupe Hall, and the Hariri Building (Rooms 140 & 240).
+            Sessions will be held across multiple Georgetown University venues including the Leavey Center’s Program Room,
+            Arrupe Hall, the Hariri Building (Rooms 140 & 240), and the Georgetown University Faculty Club Restaurant for the reception.
           </p>
 
           <h3 className="text-xl font-bold mt-6 mb-3 text-gray-900">Fee Waiver Available</h3>

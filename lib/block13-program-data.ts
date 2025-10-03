@@ -6,8 +6,8 @@ export const programData = {
         {
           "id": "1-1",
           "title": "BGIN Agent Hack (Day 1)",
-          "time": "09:00 - 17:00",
-          "room": "HFSC Herman Meeting Room or Bulldog Alley",
+          "time": "08:30 - 17:00",
+          "room": "Leavey Program Room",
           "summary": "A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.",
           "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
@@ -91,7 +91,7 @@ export const programData = {
           "id": "1-6",
           "title": "Welcome Reception",
           "time": "17:10-",
-          "room": "Hilltop Tap Room (next to HFSC Merman Meeting Room)",
+          "room": "Georgetown University Faculty Club Restaurant",
           "summary": "",
           "wg": "General",
           "speakers": "",
@@ -109,8 +109,8 @@ export const programData = {
         {
           "id": "2-1",
           "title": "BGIN Agent Hack (Day 2)",
-          "time": "09:00 - 17:00",
-          "room": "HFSC Herman Meeting Room or Bulldog Alley",
+          "time": "08:30 - 18:00",
+          "room": "Leavey Program Room",
           "summary": "A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.",
           "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
@@ -161,20 +161,6 @@ export const programData = {
           "room": "Arrupe Hall",
           "summary": "",
           "wg": "IKP",
-          "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
-          "documents": [],
-          "relatedProjects": []
-        },
-        {
-          "id": "2-5",
-          "title": "Reception",
-          "time": "17:10 -",
-          "room": "Hilltop Tap Room (next to HFSC Merman Meeting Room)",
-          "summary": "",
-          "wg": "General",
           "speakers": "",
           "moderator": "",
           "detailPage": "make one just say TBD for uncertain information",
@@ -385,6 +371,11 @@ export const programData = {
       "capacity": "72 attendees",
       "image": "/images/Events/block13/Leavey Program Room (Cap 72).jpeg"
     },
+    "Georgetown University Faculty Club Restaurant": {
+      "displayName": "Georgetown University Faculty Club Restaurant",
+      "capacity": "Reception venue",
+      "image": null
+    },
     "Arrupe Hall": {
       "displayName": "Arrupe Hall",
       "capacity": "50 attendees",
@@ -399,12 +390,6 @@ export const programData = {
       "displayName": "Hariri Building - Room 240",
       "capacity": "",
       "image": ["/images/Events/block13/Hairiri - inside 1.jpeg", "/images/Events/block13/Hairiri - inside 2.png", "/images/Events/block13/Hairiri - outisde.png"]
-    },
-    "Hilltop Tap Room": {
-      "displayName": "Hilltop Tap Room",
-      "capacity": "Reception venue",
-      "image": null,
-      "externalLink": "https://www.hilltoptaproom.com"
     },
     "TBD": {
       "displayName": "To Be Determined",

@@ -271,18 +271,10 @@ export default function Block13Page() {
                                   <br/><br/>
                                 </p>
                               )}
-                              {roomData?.displayName?.includes('Hilltop') && (
+                              {roomData?.displayName?.includes('Faculty Club') && (
                                 <p className="text-gray-700">
-                                  <span className="font-semibold">Venue:</span> Hilltop Tap Room Located in Healey Family Student Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a 
-                                    href="https://www.google.com/maps/search/?api=1&query=3700+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    New South, 3700 Tondorf Rd, Washington, DC 20057
-                                  </a>
+                                  <span className="font-semibold">Venue:</span> Georgetown University Faculty Club Restaurant<br/>
+                                  <span className="font-semibold">Location details:</span> To be announced
                                 </p>
                               )}
                             </div>
@@ -541,17 +533,15 @@ export default function Block13Page() {
               
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> - 72 attendees</li>
-                <li><strong>Thomas & Dorothy Leavey Center - Bulldog Alley</strong> - 150 attendees</li>
-                <li><strong>Pedro Arrupe, S.J. Hall</strong> - 50 attendees</li>
-                <li><strong>Healey Family Student Center (HFSC) - Herman Meeting Room</strong> - Board room style</li>
-                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240</li>
+                <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> (BGIN Agent Hack)</li>
+                <li><strong>Pedro Arrupe, S.J. Hall</strong> (Working Group Sessions)</li>
+                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240 (Working Group Sessions)</li>
               </ul>
               
               <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
               <p className="text-sm text-gray-600">
-                <strong>Hilltop Tap Room</strong><br/>
-                Located in Healey Family Student Center
+                <strong>Georgetown University Faculty Club Restaurant</strong><br/>
+                Located adjacent to the Leavey Center
               </p>
             </div>
             <div className="block13-map-container">

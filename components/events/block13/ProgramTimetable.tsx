@@ -23,14 +23,14 @@ const ProgramTimetable = () => {
   // Define time slots for each day
   const timeSlots = {
     day1: ['9:00 - 10:30', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00', '17:10 -'],
-    day2: ['9:00 - 10:30', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00', '17:10 -'],
+    day2: ['9:00 - 10:30', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00', '17:00 - 18:00'],
     day3: ['9:00 - 10:30', '10:45 - 12:15', '13:15 - 14:30', '14:45 - 16:15', '16:30 - 18:00']
   };
 
   // Define rooms for each day
   const rooms = {
-    day1: ['HFSC Herman Meeting Room or Bulldog Alley', 'Arrupe Hall', 'Hilltop Tap Room'],
-    day2: ['HFSC Herman Meeting Room or Bulldog Alley', 'Arrupe Hall', 'TBD', 'Hilltop Tap Room'],
+    day1: ['Leavey Program Room', 'Arrupe Hall', 'Georgetown University Faculty Club Restaurant'],
+    day2: ['Leavey Program Room', 'Arrupe Hall', 'TBD'],
     day3: ['Hariri 140', 'Hariri 240']
   };
 
@@ -56,19 +56,17 @@ const ProgramTimetable = () => {
       // Handle room name variations
       if (roomKey.includes('HFSC') && roomKey.includes('Bulldog')) {
         roomKey = 'HFSC Herman Meeting Room or Bulldog Alley';
-      } else if (roomKey.includes('Hilltop')) {
-        roomKey = 'Hilltop Tap Room';
       } else if (roomKey.includes('Hariri') && roomKey.includes('140')) {
         roomKey = 'Hariri 140';
       } else if (roomKey.includes('Hariri') && roomKey.includes('240')) {
         roomKey = 'Hariri 240';
       }
-      
+
       // Handle sessions spanning multiple time slots
-      if (session.title.includes('BGIN Agent Hack') && session.time === '09:00 - 17:00') {
+      if (session.title.startsWith('BGIN Agent Hack (Day')) {
         // BGIN Agent Hack spans the entire day
         dayTimeSlots.forEach(time => {
-          if (time !== '17:10 -') {
+          if (!time.startsWith('17:10')) {
             grid[roomKey][time] = { ...session, isBGINAgentHack: true };
           }
         });
@@ -122,7 +120,6 @@ const ProgramTimetable = () => {
             </thead>
             <tbody>
               {dayRooms.map(room => {
-                const isBGINAgentHackRoom = room.includes('HFSC') || room.includes('Bulldog');
                 let bginAgentHackSpan = 0;
                 let lastBGINAgentHackSession: any = null;
                 
