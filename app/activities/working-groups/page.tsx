@@ -1,3 +1,4 @@
+"use client";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
@@ -5,28 +6,49 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 import ItemWG from "@/components/ItemWG";
 import NewsletterList from "@/components/NewsletterList";
 import { workingGroups } from "@/contents/workingGroups";
+import { useState } from "react";
 
 export default function WorkingGroups() {
+  const [isNewsletterExpanded, setIsNewsletterExpanded] = useState(false);
+
   return (
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
       {/* Newsletter Section */}
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
-        <SectionTitle title="Monthly Newsletters" />
-        <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
-          <div className="mb-6">
-            <p className="text-lg leading-[24px] font-Inter text-gray-700 text-center max-w-3xl mx-auto">
-              Stay updated with the latest developments across all BGIN working groups through our monthly newsletters 
-              featuring progress reports, key findings, and upcoming initiatives.
-            </p>
-          </div>
-          <NewsletterList />
+      <div className={`bg-white w-full h-fit ${isNewsletterExpanded ? 'pb-32' : 'pb-8'}`}>
+        <div className="w-full max-w-5xl flex justify-between items-start text-black mx-auto py-8 px-6 xl:px-0">
+          <button
+            onClick={() => setIsNewsletterExpanded(!isNewsletterExpanded)}
+            className="w-full flex items-center justify-between text-left group"
+          >
+            <div className={CUSTOM_STYLES.TITLE.LEFT}>Monthly Newsletters</div>
+            <svg
+              className={`w-8 h-8 transition-transform flex-shrink-0 ml-4 ${isNewsletterExpanded ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
         </div>
+
+        {isNewsletterExpanded && (
+          <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
+            <div className="mb-6">
+              <p className="text-lg leading-[24px] font-Inter text-gray-700 text-center max-w-3xl mx-auto">
+                Stay updated with the latest developments across all BGIN working groups through our monthly newsletters
+                featuring progress reports, key findings, and upcoming initiatives.
+              </p>
+            </div>
+            <NewsletterList />
+          </div>
+        )}
       </div>
 
       {/* Calendar Section */}
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.WHITE}>
+      <div className="bg-white w-full pb-32 h-fit">
         <SectionTitle title="Working Group Meeting Calendar" />
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-lg text-gray-700 text-center mb-8 max-w-3xl mx-auto">

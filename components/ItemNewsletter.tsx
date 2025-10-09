@@ -11,7 +11,7 @@ export default function ItemNewsletter(props: Props) {
   const [isExpanded, setIsExpanded] = useState(isLatest);
 
   return (
-    <div className="bg-white w-full flex flex-col p-6 rounded-3xl border border-white border-opacity-[0.5] hover:shadow-lg transition-all duration-300">
+    <div className="bg-white w-full flex flex-col p-6 rounded-3xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300">
       {/* Header - Always Visible */}
       <div 
         className="flex flex-col lg:flex-row items-start lg:items-center gap-4 cursor-pointer"
