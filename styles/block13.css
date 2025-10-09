@@ -189,7 +189,8 @@
   position: relative;
 }
 
-.block13-wg-card.gov-hack {
+.block13-wg-card.gov-hack,
+.block13-wg-card.bgin-agent-hack {
   border-left-color: var(--govhack-color);
 }
 
@@ -221,7 +222,8 @@
   border: 1px solid;
 }
 
-.block13-wg-badge.gov-hack {
+.block13-wg-badge.gov-hack,
+.block13-wg-badge.bgin-agent-hack {
   background: var(--govhack-bg);
   color: var(--govhack-text);
   border-color: var(--govhack-border);

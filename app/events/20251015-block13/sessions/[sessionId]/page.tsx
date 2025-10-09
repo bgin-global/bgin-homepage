@@ -150,11 +150,37 @@ export default function SessionDetailPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Agenda</h2>
                 {session.agenda && session.agenda.length > 0 ? (
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                    {session.agenda.map((item: string, idx: number) => (
-                      <li key={idx}>{item}</li>
-                    ))}
-                  </ol>
+                  <div className="space-y-3 text-gray-700">
+                    {session.agenda.map((item: string, idx: number) => {
+                      // Empty line for spacing
+                      if (item.trim() === '') {
+                        return <div key={idx} className="h-2"></div>;
+                      }
+
+                      // Main section (starts with number)
+                      if (/^\d+\./.test(item.trim())) {
+                        return <div key={idx} className="text-lg font-semibold text-gray-900 mt-4 mb-2">{item}</div>;
+                      }
+
+                      // Sub-section A), B), C)
+                      if (/^\s+[A-Z]\)/.test(item)) {
+                        return <div key={idx} className="text-base font-semibold text-gray-800 ml-4 mt-3 mb-1">{item}</div>;
+                      }
+
+                      // Bullet point with •
+                      if (item.trim().startsWith('•')) {
+                        return <div key={idx} className="text-base text-gray-700 ml-4">{item}</div>;
+                      }
+
+                      // Sub-bullet point with -
+                      if (item.trim().startsWith('-')) {
+                        return <div key={idx} className="text-sm text-gray-600 ml-8">{item}</div>;
+                      }
+
+                      // Default
+                      return <div key={idx} className="text-base text-gray-700">{item}</div>;
+                    })}
+                  </div>
                 ) : (
                   <p className="text-gray-500">TBD - Agenda will be posted closer to the event date.</p>
                 )}
