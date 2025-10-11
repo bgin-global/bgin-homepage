@@ -686,11 +686,20 @@ export default function Block13Page() {
           {/* Sustaining Sponsors */}
           <div className="mb-10">
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Sustaining Sponsors</h3>
-            <div className="max-w-md mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
                 <Image
                   src="/images/Events/sponsor/jpCryptoIsac.jpg"
                   alt="JP Crypto ISAC"
+                  width={200}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
+                <Image
+                  src="/images/Events/sponsor/DG.jpeg"
+                  alt="Digital Garage"
                   width={200}
                   height={100}
                   className="object-contain"
