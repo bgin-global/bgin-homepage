@@ -14,16 +14,7 @@ export default function SessionDetailPage() {
 
   // Find the session from the program data
   const findSession = () => {
-    // Special handling for govhack
-    if (sessionId === 'govhack') {
-      // Return the first govhack session as the main one
-      const govhackSession = programData.program.day1.sessions.find((s: any) => s.id === '1-1');
-      if (govhackSession) {
-        return { session: govhackSession, day: programData.program.day1.date };
-      }
-    }
-
-    for (const [day, dayData] of Object.entries(programData.program)) {
+    for (const [, dayData] of Object.entries(programData.program)) {
       const sessions = (dayData as any).sessions;
       const session = sessions.find((s: any) => s.id === sessionId);
       if (session) {
@@ -182,7 +173,38 @@ export default function SessionDetailPage() {
                     })}
                   </div>
                 ) : (
-                  <p className="text-gray-500">TBD - Agenda will be posted closer to the event date.</p>
+                  <div className="space-y-4">
+                    {session.title && session.title.includes("Agent Hack") ? (
+                      <>
+                        <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                          <iframe
+                            src="https://block13-agent-hack.vercel.app/"
+                            style={{ border: 0 }}
+                            width="100%"
+                            height="600"
+                            frameBorder="0"
+                            title="BGIN Agent Hack Preview"
+                            className="w-full"
+                          />
+                        </div>
+                        <div className="text-center">
+                          <a
+                            href="https://block13-agent-hack.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                          >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Open Full Website
+                          </a>
+                        </div>
+                      </>
+                    ) : (
+                      <p className="text-gray-500">Full agenda will be posted closer to the event date.</p>
+                    )}
+                  </div>
                 )}
               </div>
 

@@ -390,18 +390,7 @@ export default function Block13Page() {
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
-                  {project.description.split('BGIN Agent Hack').map((part, index, array) => (
-                    index < array.length - 1 ? (
-                      <span key={index}>
-                        {part}
-                        <a href="#govhack" className="text-blue-600 hover:text-blue-800 underline">
-                          BGIN Agent Hack
-                        </a>
-                      </span>
-                    ) : (
-                      <span key={index}>{part}</span>
-                    )
-                  ))}
+                  {project.description}
                 </p>
                 {project.link ? (
                   <Link href={project.link} className="text-blue-600 hover:text-blue-800 font-semibold mt-auto">
@@ -415,10 +404,17 @@ export default function Block13Page() {
               </div>
             ))}
           </div>
+
+          {/* View All Publications Button */}
+          <div className="text-center mt-8">
+            <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
+              View All Past Publications
+            </Link>
+          </div>
         </section>
 
-        {/* Featured Publications */}
-        <section id="publications" className="block13-section">
+        {/* Featured Publications - Commented out as per request */}
+        {/* <section id="publications" className="block13-section">
           <h2 className="block13-section-title">Featured Publications</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Publications Coming Soon</h3>
@@ -431,7 +427,7 @@ export default function Block13Page() {
               View All Past Publications
             </Link>
           </div>
-        </section>
+        </section> */}
 
         {/* Agent BGIN Agent Hack Section (refined) */}
         <section id="govhack" className="block13-section">
@@ -444,6 +440,7 @@ export default function Block13Page() {
               Policy → Code
             </span>
           </div>
+          {/* Original content commented out - replaced with iframe preview
           <div className="relative">
             <div className="rounded-2xl bg-white p-6 border border-gray-200">
               <p className="text-gray-700 max-w-3xl mb-8">
@@ -451,7 +448,6 @@ export default function Block13Page() {
               </p>
 
               <div className="grid gap-6 lg:grid-cols-2">
-                {/* Overview */}
                 <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-blue-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-100 text-blue-700">
@@ -468,7 +464,6 @@ export default function Block13Page() {
                   </p>
                 </div>
 
-                {/* Event Flow */}
                 <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-purple-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-purple-100 text-purple-700">
@@ -491,7 +486,6 @@ export default function Block13Page() {
                   </ol>
                 </div>
 
-                {/* Who Should Join */}
                 <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-emerald-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-emerald-100 text-emerald-700">
@@ -512,7 +506,6 @@ export default function Block13Page() {
                   </ul>
                 </div>
 
-                {/* What You'll Gain */}
                 <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-amber-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-amber-100 text-amber-700">
@@ -530,17 +523,35 @@ export default function Block13Page() {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+          */}
 
-              {/* <div className="flex items-center justify-center gap-4 mt-8">
-                <Link
-                  href="https://gamma.app/docs/BGIN-Agent-GovHack-Transforming-Blockchain-Standards-into-Executa-2izvapa1dgz17fs?mode=doc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block13-btn-secondary"
-                >
-                  View BGIN Agent Hack Brief
-                </Link>
-              </div> */}
+          {/* Interactive preview of BGIN Agent Hack website */}
+          <div className="relative">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <iframe
+                src="https://block13-agent-hack.vercel.app/"
+                style={{ border: 0 }}
+                width="100%"
+                height="800"
+                frameBorder="0"
+                title="BGIN Agent Hack Preview"
+                className="w-full"
+              />
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href="https://block13-agent-hack.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Open Full Website
+              </a>
             </div>
           </div>
         </section>
@@ -556,14 +567,14 @@ export default function Block13Page() {
                 Washington, D.C.<br/>
                 United States
               </p>
-              
+
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> (BGIN Agent Hack)</li>
                 <li><strong>Pedro Arrupe, S.J. Hall</strong> (Working Group Sessions)</li>
                 <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240 (Working Group Sessions)</li>
               </ul>
-              
+
               <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
               <p className="text-sm text-gray-600">
                 <strong>Georgetown University Faculty Club Restaurant</strong><br/>
@@ -583,6 +594,111 @@ export default function Block13Page() {
               ></iframe>
             </div>
           </div>
+        </section>
+
+        {/* Sponsors & Partners */}
+        <section className="block13-section">
+          <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
+
+          {/* Sustaining Sponsors */}
+          <div className="mb-10">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Sustaining Sponsors</h3>
+            <div className="max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
+                <Image
+                  src="/images/Events/sponsor/jpCryptoIsac.jpg"
+                  alt="JP Crypto ISAC"
+                  width={200}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Event Sponsors */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/DeCurret.png"
+                  alt="DeCurret DCP"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/NRI.png"
+                  alt="NRI"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/MUFG.jpeg"
+                  alt="MUFG"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/Penguin.png"
+                  alt="Penguin Securities"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Academic Host & Special Supporters - Side by Side */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center mb-8">
+            {/* Academic Host */}
+            <div className="flex-1 max-w-md">
+              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
+                <Image
+                  src="/images/Events/sponsor/Georgetown University Psaros Center.png"
+                  alt="Georgetown University Psaros Center"
+                  width={320}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Special Supporters */}
+            <div className="flex-1 max-w-md">
+              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
+                <Image
+                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
+                  alt="Fintech Association Japan"
+                  width={280}
+                  height={140}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* More sponsors coming soon
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <p className="text-blue-700 text-center">
+              More sponsors are being finalized. If you are interested in sponsoring Block 13, please contact us at{" "}
+              <a href="mailto:bgin_admin@bg2x.org" className="text-blue-800 font-semibold hover:underline">
+                bgin_admin@bg2x.org
+              </a>
+            </p>
+          </div> */}
         </section>
 
         {/* Participation Info */}
@@ -808,111 +924,6 @@ export default function Block13Page() {
               View All Block Conferences
             </Link>
           </div>
-        </section>
-
-        {/* Sponsors & Partners */}
-        <section className="block13-section">
-          <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-
-          {/* Sustaining Sponsors */}
-          <div className="mb-10">
-            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Sustaining Sponsors</h3>
-            <div className="max-w-md mx-auto">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
-                <Image
-                  src="/images/Events/sponsor/jpCryptoIsac.jpg"
-                  alt="JP Crypto ISAC"
-                  width={200}
-                  height={100}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Event Sponsors */}
-          <div className="mb-12">
-            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
-                <Image
-                  src="/images/Events/sponsor/DeCurret.png"
-                  alt="DeCurret DCP"
-                  width={180}
-                  height={90}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
-                <Image
-                  src="/images/Events/sponsor/NRI.png"
-                  alt="NRI"
-                  width={180}
-                  height={90}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
-                <Image
-                  src="/images/Events/sponsor/MUFG.jpeg"
-                  alt="MUFG"
-                  width={180}
-                  height={90}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
-                <Image
-                  src="/images/Events/sponsor/Penguin.png"
-                  alt="Penguin Securities"
-                  width={180}
-                  height={90}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Academic Host & Special Supporters - Side by Side */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center mb-8">
-            {/* Academic Host */}
-            <div className="flex-1 max-w-md">
-              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
-                <Image
-                  src="/images/Events/sponsor/Georgetown University Psaros Center.png"
-                  alt="Georgetown University Psaros Center"
-                  width={320}
-                  height={160}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Special Supporters */}
-            <div className="flex-1 max-w-md">
-              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
-                <Image
-                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
-                  alt="Fintech Association Japan"
-                  width={280}
-                  height={140}
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-          
-          {/* More sponsors coming soon
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <p className="text-blue-700 text-center">
-              More sponsors are being finalized. If you are interested in sponsoring Block 13, please contact us at{" "}
-              <a href="mailto:bgin_admin@bg2x.org" className="text-blue-800 font-semibold hover:underline">
-                bgin_admin@bg2x.org
-              </a>
-            </p>
-          </div> */}
         </section>
 
         {/* CTA Section - Join the Discussion */}

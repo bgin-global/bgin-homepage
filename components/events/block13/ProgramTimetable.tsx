@@ -50,7 +50,7 @@ const ProgramTimetable = () => {
 
     // Fill grid with sessions
     const sessions = programData.program[day].sessions;
-    sessions.forEach(session => {
+    sessions.forEach((session: any) => {
       let roomKey = session.room;
       
       // Handle room name variations
@@ -121,8 +121,7 @@ const ProgramTimetable = () => {
             <tbody>
               {dayRooms.map(room => {
                 let bginAgentHackSpan = 0;
-                let lastBGINAgentHackSession: any = null;
-                
+
                 return (
                   <tr key={room}>
                     <td className="border border-gray-300 p-2 text-sm font-medium bg-gray-50 align-top">
@@ -148,8 +147,7 @@ const ProgramTimetable = () => {
                               break;
                             }
                           }
-                          lastBGINAgentHackSession = session;
-                          
+
                           const isClickable = session.detailPage && !session.detailPage.includes('make one');
                           return (
                             <td
@@ -234,55 +232,51 @@ const ProgramTimetable = () => {
   };
 
   return (
-    <div className="w-full">
-      <style jsx>{`
-        a {
-          text-decoration: none !important;
-        }
-        a:hover {
-          text-decoration: none !important;
-        }
-      `}</style>
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold mb-3">Program Overview</h3>
-        <p className="text-gray-600 mb-4">
-          Below is the program overview. For detailed session information, please refer to the 
-          {" "}<a 
-            href="#detailed-program" 
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('detailed-program')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="text-blue-600 hover:underline cursor-pointer"
-          >detailed program below</a>.
-        </p>
-        
-        {/* Legend */}
-        <div className="flex flex-wrap gap-3 mb-4">
-          <div className="text-sm font-medium">Working Groups:</div>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">BGIN Agent Hack</span>
-            <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">IKP</span>
-            <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300">Cyber Security</span>
-            <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300">FASE</span>
-            <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300">General</span>
+    <div className="w-full flex justify-center">
+      <div className="max-w-7xl w-full px-4">
+        <style jsx>{`
+          a {
+            text-decoration: none !important;
+          }
+          a:hover {
+            text-decoration: none !important;
+          }
+        `}</style>
+        <div className="mb-6">
+          {/* <h3 className="text-lg font-semibold mb-3">Program Overview</h3>
+          <p className="text-gray-600 mb-4">
+            Below is the program overview. For detailed session information, please refer to the
+            {" "}<a
+              href="#detailed-program"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('detailed-program')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-blue-600 hover:underline cursor-pointer"
+            >detailed program below</a>.
+          </p> */}
+
+          {/* Legend */}
+          <div className="flex flex-wrap gap-3 mb-4">
+            <div className="text-sm font-medium">Working Groups:</div>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">BGIN Agent Hack</span>
+              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">IKP</span>
+              <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300">Cyber Security</span>
+              <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300">FASE</span>
+              <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300">General</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Day 1 */}
-      {renderDay('day1', 'Day 1', 'October 15, 2025')}
-      
-      {/* Day 2 */}
-      {renderDay('day2', 'Day 2', 'October 16, 2025')}
-      
-      {/* Day 3 */}
-      {renderDay('day3', 'Day 3', 'October 17, 2025')}
-      
-      <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-        <p className="text-sm text-gray-600">
-          <strong>Note:</strong> The timetable above provides a quick overview. Scroll down for complete session details including descriptions, session chairs, and contributors.
-        </p>
+        {/* Day 1 */}
+        {renderDay('day1', 'Day 1', 'October 15, 2025')}
+
+        {/* Day 2 */}
+        {renderDay('day2', 'Day 2', 'October 16, 2025')}
+
+        {/* Day 3 */}
+        {renderDay('day3', 'Day 3', 'October 17, 2025')}
       </div>
     </div>
   );

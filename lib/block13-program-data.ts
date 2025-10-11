@@ -12,15 +12,9 @@ export const programData = {
           "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
-          "detailPage": "/events/20251015-block13/sessions/govhack",
+          "detailPage": "/events/20251015-block13/sessions/1-1",
           "agenda": [],
-          "documents": [
-            {
-              "title": "BGIN Agent Hack Brief",
-              "link": "", // Gamma link commented out
-              "type": "gamma document"
-            }
-          ],
+          "documents": [],
           "relatedProjects": [
             "Agent Standards and Frameworks"
           ]
@@ -111,19 +105,13 @@ export const programData = {
           "title": "BGIN Agent Hack (Day 2)",
           "time": "08:30 - 18:00",
           "room": "Leavey Program Room",
-          "summary": "A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.",
+          "summary": "Continuation of the hackathon where teams build and validate their policy-to-code implementations, with 24-hour implementation sprints, live compliance showcases, and sponsor integration reviews.",
           "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
-          "detailPage": "/events/20251015-block13/sessions/govhack",
+          "detailPage": "/events/20251015-block13/sessions/2-1",
           "agenda": [],
-          "documents": [
-            {
-              "title": "BGIN Agent Hack Brief",
-              "link": "", // Gamma link commented out
-              "type": "gamma document"
-            }
-          ],
+          "documents": [],
           "relatedProjects": [
             "Agent Standards and Frameworks"
           ]
@@ -345,19 +333,13 @@ export const programData = {
           "title": "BGIN Agent Hack Final Presentation",
           "time": "13:15 - 14:30",
           "room": "Hariri 140",
-          "summary": "Presenting the solution from BGIN Agent Hack",
+          "summary": "Final presentations where hackathon teams showcase their solutions, make their pitches to judges and the BGIN community, and compete for prizes. This is the culmination of the two-day Agent Hack event.",
           "wg": "BGIN Agent Hack",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
-          "detailPage": "/events/20251015-block13/sessions/govhack",
+          "detailPage": "/events/20251015-block13/sessions/3-5",
           "agenda": [],
-          "documents": [
-            {
-              "title": "BGIN Agent Hack Brief",
-              "link": "", // Gamma link commented out
-              "type": "gamma document"
-            }
-          ],
+          "documents": [],
           "relatedProjects": [
             "Agent Standards and Frameworks"
           ]
@@ -494,8 +476,8 @@ export const programData = {
       "documentsLink": "https://bgin-global.org/activities/working-groups"
     },
     "BGIN Agent Hack": {
-      "name": "Governance Hackathon",
-      "abbreviation": "BGIN Agent Hack",
+      "name": "BGIN Agent Hack",
+      "abbreviation": "Agent Hack",
       "color": "yellow",
       "chairs": ["Mitchell Travers", "Shinichiro Matsuo"],
       "description": "Hackathon sessions focused on government and policy applications of blockchain",
