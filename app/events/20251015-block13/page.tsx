@@ -47,6 +47,19 @@ export default function Block13Page() {
 
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>(getDefaultDay());
   const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
+  const [expandedSessions, setExpandedSessions] = useState<Set<string>>(new Set());
+
+  const toggleSessionExpansion = (sessionId: string) => {
+    setExpandedSessions(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(sessionId)) {
+        newSet.delete(sessionId);
+      } else {
+        newSet.add(sessionId);
+      }
+      return newSet;
+    });
+  };
 
   return (
     <main className="block13-page min-h-screen bg-white w-screen">
@@ -118,19 +131,35 @@ export default function Block13Page() {
             ))}
           </div>
 
-          {/* View Toggle */}
-          <div className="block13-toggle-group">
+          {/* View Toggle and Expand Controls */}
+          <div className="flex justify-between items-center mb-4">
+            <div className="block13-toggle-group">
+              <button
+                onClick={() => setViewMode('time')}
+                className={`block13-toggle ${viewMode === 'time' ? 'active' : ''}`}
+              >
+                By Time
+              </button>
+              <button
+                onClick={() => setViewMode('room')}
+                className={`block13-toggle ${viewMode === 'room' ? 'active' : ''}`}
+              >
+                By Room
+              </button>
+            </div>
             <button
-              onClick={() => setViewMode('time')}
-              className={`block13-toggle ${viewMode === 'time' ? 'active' : ''}`}
+              onClick={() => setExpandedSessions(expandedSessions.size > 0 ? new Set() : new Set(
+                viewMode === 'time'
+                  ? Object.entries(groupSessionsByTime(program[activeDay])).flatMap(([time, sessions]: [string, any]) =>
+                      sessions.map((_: any, idx: number) => `${activeDay}-${time}-${idx}`)
+                    )
+                  : Object.entries(groupSessionsByRoom(program[activeDay])).flatMap(([roomName, sessions]: [string, any]) =>
+                      sessions.map((_: any, idx: number) => `${activeDay}-room-${roomName}-${idx}`)
+                    )
+              ))}
+              className="text-sm text-blue-600 hover:text-blue-800 font-medium"
             >
-              By Time
-            </button>
-            <button
-              onClick={() => setViewMode('room')}
-              className={`block13-toggle ${viewMode === 'room' ? 'active' : ''}`}
-            >
-              By Room
+              {expandedSessions.size > 0 ? 'Collapse All' : 'Expand All'}
             </button>
           </div>
 
@@ -140,53 +169,80 @@ export default function Block13Page() {
               // Time-based view
               <div className="space-y-6">
                 {Object.entries(groupSessionsByTime(program[activeDay])).map(([time, sessions]: [string, any]) => (
-                  <div key={time} className="space-y-4">
-                    <h3 className="text-lg font-semibold text-gray-700 border-b pb-2">{time}</h3>
-                    <div className="space-y-4">
-                      {sessions.map((session: any, idx: number) => (
-                        <div key={idx} className="block13-session-card">
-                          <div className="flex flex-col">
-                            <div className="block13-session-meta mb-2">
-                              <span className="block13-session-room font-medium">{session.room}</span>
-                              {session.wg !== 'General' && (
-                                <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
-                                  {session.wg}
-                                </span>
+                  <div key={time} className="space-y-3">
+                    <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
+                    <div className="space-y-2">
+                      {sessions.map((session: any, idx: number) => {
+                        const sessionKey = `${activeDay}-${time}-${idx}`;
+                        const isExpanded = expandedSessions.has(sessionKey);
+
+                        return (
+                          <div key={idx} className="block13-session-card cursor-pointer" onClick={() => toggleSessionExpansion(sessionKey)}>
+                            <div className="flex flex-col">
+                              <div className="flex flex-row justify-between items-start mb-1">
+                                <div className="flex items-center gap-2 flex-grow">
+                                  <svg
+                                    className={`w-4 h-4 text-gray-500 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </svg>
+                                  <h3 className="block13-session-title">{session.title}</h3>
+                                </div>
+                                <div className="flex items-center gap-2 ml-3 flex-shrink-0">
+                                  <span className="text-sm text-gray-600 font-medium">{session.room}</span>
+                                  {session.wg !== 'General' && (
+                                    <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                                      {session.wg}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+
+                              {isExpanded && (
+                                <>
+                                  <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
+                                  {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
+                                    <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
+                                      {session.sessionChair !== 'TBD' && (
+                                        <span><span className="font-semibold">Chair:</span> {session.sessionChair}</span>
+                                      )}
+                                      {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
+                                        <span><span className="font-semibold">Contributor:</span> {session.contributors}</span>
+                                      )}
+                                    </div>
+                                  )}
+                                  {session.documents && session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').length > 0 && (
+                                    <div className="mt-2 flex items-center gap-2 flex-wrap">
+                                      {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, docIdx: number) => (
+                                        <a
+                                          key={docIdx}
+                                          href={doc.link}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-xs text-blue-600 hover:underline"
+                                          onClick={(e) => e.stopPropagation()}
+                                        >
+                                          📄 {doc.title}
+                                        </a>
+                                      ))}
+                                    </div>
+                                  )}
+                                  <Link
+                                    href={session.detailPage}
+                                    className="text-sm text-blue-600 hover:underline mt-2 inline-block"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    View full session details →
+                                  </Link>
+                                </>
                               )}
                             </div>
-                            <Link href={session.detailPage} className="hover:text-blue-600">
-                              <h3 className="block13-session-title text-xl mb-2">{session.title}</h3>
-                            </Link>
-                            <p className="text-gray-600 mb-3">{session.summary}</p>
-                            {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
-                              <div className="text-sm text-gray-700 space-y-1">
-                                {session.sessionChair !== 'TBD' && (
-                                  <p><span className="font-semibold">Session Chair:</span> {session.sessionChair}</p>
-                                )}
-                                {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
-                                  <p><span className="font-semibold">Main Contributor:</span> {session.contributors}</p>
-                                )}
-                              </div>
-                            )}
-                            {session.documents && session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').length > 0 && (
-                              <div className="mt-3">
-                                <p className="text-sm font-semibold text-gray-700 mb-1">Documents:</p>
-                                {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, docIdx: number) => (
-                                  <a
-                                    key={docIdx}
-                                    href={doc.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-sm text-blue-600 hover:underline block"
-                                  >
-                                    📄 {doc.title}
-                                  </a>
-                                ))}
-                              </div>
-                            )}
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -195,10 +251,10 @@ export default function Block13Page() {
               // Room-based view
               <div className="space-y-8">
                 {Object.entries(groupSessionsByRoom(program[activeDay])).map(([roomName, sessions]: [string, any]) => {
-                  const roomData = (rooms as any)[roomName] || Object.values(rooms).find((r: any) => 
+                  const roomData = (rooms as any)[roomName] || Object.values(rooms).find((r: any) =>
                     r.displayName === roomName || roomName.includes(r.displayName)
                   );
-                  
+
                   return (
                     <div key={roomName} className="space-y-4">
                       {/* Room header with image on right */}
@@ -209,14 +265,14 @@ export default function Block13Page() {
                             <h3 className="text-2xl font-bold mb-3">
                               {roomData?.displayName || roomName}
                             </h3>
-                            
+
                             {/* Building and location info */}
                             <div className="space-y-2 mb-4">
                               {roomData?.displayName?.includes('Hariri') && (
                                 <p className="text-gray-700">
                                   <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
                                   <span className="font-semibold">Address:</span>{' '}
-                                  <a 
+                                  <a
                                     href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -230,7 +286,7 @@ export default function Block13Page() {
                                 <p className="text-gray-700">
                                   <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
                                   <span className="font-semibold">Address:</span>{' '}
-                                  <a 
+                                  <a
                                     href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -244,7 +300,7 @@ export default function Block13Page() {
                                 <p className="text-gray-700">
                                   <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
                                   <span className="font-semibold">Address:</span>{' '}
-                                  <a 
+                                  <a
                                     href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -259,7 +315,7 @@ export default function Block13Page() {
                                   <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
                                   <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
                                   <span className="font-semibold">Address:</span>{' '}
-                                  <a 
+                                  <a
                                     href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -271,7 +327,7 @@ export default function Block13Page() {
                                   <span className="font-semibold">Bulldog Alley</span><br/>
                                   <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
                                   <span className="font-semibold">Address:</span>{' '}
-                                  <a 
+                                  <a
                                     href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -286,7 +342,7 @@ export default function Block13Page() {
                                   <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
                                   <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
                                   <span className="font-semibold">Address:</span>{' '}
-                                  <a 
+                                  <a
                                     href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -304,13 +360,13 @@ export default function Block13Page() {
                                 </p>
                               )}
                             </div>
-                            
+
                             {roomData?.capacity && roomData.capacity !== 'TBD' && (
                               <p className="text-gray-600 mb-2">
                                 <span className="font-semibold">Capacity:</span> {roomData.capacity}
                               </p>
                             )}
-                            
+
                             {roomData?.externalLink && (
                               <a
                                 href={roomData.externalLink}
@@ -327,7 +383,7 @@ export default function Block13Page() {
                               </a>
                             )}
                           </div>
-                          
+
                           {/* Right side - Image carousel */}
                           {roomData?.image && (
                             <div className="md:w-1/2 h-48 md:h-[300px] relative overflow-hidden">
@@ -339,34 +395,61 @@ export default function Block13Page() {
                       
                       {/* Sessions in this room */}
                       <div className="space-y-3 ml-4">
-                        {sessions.map((session: any, idx: number) => (
-                          <div key={idx} className="block13-session-card">
-                            <div className="flex flex-col">
-                              <div className="block13-session-meta mb-2">
-                                <span className="block13-session-time font-bold">{session.displayTime}</span>
-                                {session.wg !== 'General' && (
-                                  <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
-                                    {session.wg}
-                                  </span>
+                        {sessions.map((session: any, idx: number) => {
+                          const sessionKey = `${activeDay}-room-${roomName}-${idx}`;
+                          const isExpanded = expandedSessions.has(sessionKey);
+
+                          return (
+                            <div key={idx} className="block13-session-card cursor-pointer" onClick={() => toggleSessionExpansion(sessionKey)}>
+                              <div className="flex flex-col">
+                                <div className="flex flex-row justify-between items-start mb-1">
+                                  <div className="flex items-center gap-2 flex-grow">
+                                    <svg
+                                      className={`w-4 h-4 text-gray-500 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
+                                      fill="none"
+                                      stroke="currentColor"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                    <h4 className="block13-session-title">{session.title}</h4>
+                                  </div>
+                                  <div className="flex items-center gap-2 ml-3 flex-shrink-0">
+                                    <span className="text-sm font-bold text-gray-800">{session.displayTime}</span>
+                                    {session.wg !== 'General' && (
+                                      <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                                        {session.wg}
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+
+                                {isExpanded && (
+                                  <>
+                                    <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
+                                    {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
+                                      <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
+                                        {session.sessionChair !== 'TBD' && (
+                                          <span><span className="font-semibold">Chair:</span> {session.sessionChair}</span>
+                                        )}
+                                        {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
+                                          <span><span className="font-semibold">Contributor:</span> {session.contributors}</span>
+                                        )}
+                                      </div>
+                                    )}
+                                    <Link
+                                      href={session.detailPage}
+                                      className="text-sm text-blue-600 hover:underline mt-2 inline-block"
+                                      onClick={(e) => e.stopPropagation()}
+                                    >
+                                      View full session details →
+                                    </Link>
+                                  </>
                                 )}
                               </div>
-                              <Link href={session.detailPage} className="hover:text-blue-600">
-                                <h4 className="block13-session-title text-lg">{session.title}</h4>
-                              </Link>
-                              <p className="text-gray-600 mt-1">{session.summary}</p>
-                              {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
-                                <div className="text-sm text-gray-700 mt-2 space-y-1">
-                                  {session.sessionChair !== 'TBD' && (
-                                    <p><span className="font-semibold">Session Chair:</span> {session.sessionChair}</p>
-                                  )}
-                                  {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
-                                    <p><span className="font-semibold">Main Contributor:</span> {session.contributors}</p>
-                                  )}
-                                </div>
-                              )}
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   );
