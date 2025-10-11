@@ -56,7 +56,7 @@ export default function WorkingGroups() {
           </p>
           <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
             <iframe
-              src="https://calendar.google.com/calendar/embed?src=c_d38853647205142770f21aebe1128f01c976bcb622145adf653f4f7dc3f12dfe%40group.calendar.google.com&ctz=UTC&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&height=600"
+              src="https://calendar.google.com/calendar/embed?src=c_d38853647205142770f21aebe1128f01c976bcb622145adf653f4f7dc3f12dfe%40group.calendar.google.com&ctz=UTC&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=1&height=600"
               style={{ border: 0 }}
               width="100%"
               height="600"

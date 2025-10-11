@@ -813,12 +813,72 @@ export default function Block13Page() {
         {/* Sponsors & Partners */}
         <section className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-          
-          {/* Academic Host */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
+
+          {/* Sustaining Sponsors */}
+          <div className="mb-10">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Sustaining Sponsors</h3>
             <div className="max-w-md mx-auto">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
+                <Image
+                  src="/images/Events/sponsor/jpCryptoIsac.jpg"
+                  alt="JP Crypto ISAC"
+                  width={200}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Event Sponsors */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/DeCurret.png"
+                  alt="DeCurret DCP"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/NRI.png"
+                  alt="NRI"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/MUFG.jpeg"
+                  alt="MUFG"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/Penguin.png"
+                  alt="Penguin Securities"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Academic Host & Special Supporters - Side by Side */}
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center mb-8">
+            {/* Academic Host */}
+            <div className="flex-1 max-w-md">
+              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
                 <Image
                   src="/images/Events/sponsor/Georgetown University Psaros Center.png"
                   alt="Georgetown University Psaros Center"
@@ -828,13 +888,11 @@ export default function Block13Page() {
                 />
               </div>
             </div>
-          </div>
-          
-          {/* Special Supporters */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
-            <div className="max-w-md mx-auto">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center">
+
+            {/* Special Supporters */}
+            <div className="flex-1 max-w-md">
+              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
                 <Image
                   src="/images/Events/sponsor/fintech_assoc_japan.jpg"
                   alt="Fintech Association Japan"
@@ -846,7 +904,7 @@ export default function Block13Page() {
             </div>
           </div>
           
-          {/* More sponsors coming soon */}
+          {/* More sponsors coming soon
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <p className="text-blue-700 text-center">
               More sponsors are being finalized. If you are interested in sponsoring Block 13, please contact us at{" "}
@@ -854,7 +912,7 @@ export default function Block13Page() {
                 bgin_admin@bg2x.org
               </a>
             </p>
-          </div>
+          </div> */}
         </section>
 
         {/* CTA Section - Join the Discussion */}
