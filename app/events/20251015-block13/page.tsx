@@ -181,14 +181,15 @@ export default function Block13Page() {
                                       {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, docIdx: number) => (
                                         <span
                                           key={docIdx}
-                                          className="text-xs text-blue-600 hover:underline cursor-pointer"
+                                          className="document-link text-xs text-blue-600 hover:text-blue-800 cursor-pointer inline-flex items-center gap-1"
                                           onClick={(e) => {
                                             e.preventDefault();
                                             e.stopPropagation();
                                             window.open(doc.link, '_blank');
                                           }}
                                         >
-                                          {session.wg === 'BGIN Agent Hack' && doc.type === 'Website' ? '🔗' : '📄'} {doc.title}
+                                          <span className="no-underline">{session.wg === 'BGIN Agent Hack' && doc.type === 'Website' ? '🔗' : '📄'}</span>
+                                          <span className="underline">{doc.title}</span>
                                         </span>
                                       ))}
                                     </div>
@@ -379,6 +380,24 @@ export default function Block13Page() {
                                         {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
                                           <span><span className="font-semibold">Main Contributor:</span> {session.contributors}</span>
                                         )}
+                                      </div>
+                                    )}
+                                    {session.documents && session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').length > 0 && (
+                                      <div className="mt-2 flex items-center gap-2 flex-wrap">
+                                        {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, docIdx: number) => (
+                                          <span
+                                            key={docIdx}
+                                            className="document-link text-xs text-blue-600 hover:text-blue-800 cursor-pointer inline-flex items-center gap-1"
+                                            onClick={(e) => {
+                                              e.preventDefault();
+                                              e.stopPropagation();
+                                              window.open(doc.link, '_blank');
+                                            }}
+                                          >
+                                            <span className="no-underline">{session.wg === 'BGIN Agent Hack' && doc.type === 'Website' ? '🔗' : '📄'}</span>
+                                            <span className="underline">{doc.title}</span>
+                                          </span>
+                                        ))}
                                       </div>
                                     )}
                                 </div>

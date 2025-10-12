@@ -397,11 +397,29 @@ a .block13-session-card * {
   text-decoration: none !important;
 }
 
+/* Exception for document links - they should keep their styling */
+a .block13-session-card .document-link {
+  text-decoration: none !important;
+  color: #6890F5 !important; /* BGIN primary blue - neon-ish blue */
+}
+
+a .block13-session-card .document-link .underline {
+  text-decoration: underline !important;
+}
+
+a .block13-session-card .document-link .no-underline {
+  text-decoration: none !important;
+}
+
+a .block13-session-card .document-link:hover {
+  color: #5a7de8 !important; /* BGIN primary hover - slightly darker */
+}
+
 /* Ensure all text in linked session cards maintains proper color */
 a.block .block13-session-card h3,
 a.block .block13-session-card h4,
 a.block .block13-session-card p,
-a.block .block13-session-card span {
+a.block .block13-session-card span:not(.document-link) {
   color: inherit;
   text-decoration: none;
 }
