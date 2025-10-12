@@ -34,6 +34,20 @@ export default function EventsPage() {
       color: eventTypeColors["Block Conference"],
       registerLink: "https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator",
       image: "/images/Events/Block3.jpeg"
+    },
+    {
+      id: "layer2-sf",
+      title: "Layer 2 Meetup @ San Francisco",
+      date: "October 23, 2025",
+      time: "12:00 - 5:00 PM PDT",
+      type: "Layer 2 Meetup",
+      description: "Join BGIN's Layer 2 Meetup in San Francisco as part of Open Source AI Week. Exchange ideas on blockchain governance with developers, regulators, business entities, and academia.",
+      link: "/events/20251023-layer2-sf",
+      color: eventTypeColors["Layer 2 Meetup"],
+      // venue: "717 Market St #100, San Francisco, CA 94103",
+      // venueLink: "https://maps.app.goo.gl/2NtvrwvLeU8yrzfu6",
+      registerLink: "https://luma.com/46pvoj1t?tk=ccPj5D",
+      image: "/images/Events/San Francisco.jpg"
     }
   ];
 
@@ -112,6 +126,21 @@ export default function EventsPage() {
                           </svg>
                           {event.time}
                         </p>
+                        {(event as any).venue && (
+                          <p className="text-gray-600 flex items-start">
+                            <svg className="w-4 h-4 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            {(event as any).venueLink ? (
+                              <a href={(event as any).venueLink} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                {(event as any).venue}
+                              </a>
+                            ) : (
+                              (event as any).venue
+                            )}
+                          </p>
+                        )}
                       </div>
                     </div>
                     
@@ -120,8 +149,8 @@ export default function EventsPage() {
                         <Image
                           src={(event as any).image}
                           alt={event.title}
-                          width={event.id === "block13" ? 160 : 100}
-                          height={event.id === "block13" ? 80 : 50}
+                          width={160}
+                          height={80}
                           className="object-contain"
                         />
                       </div>
