@@ -14,7 +14,13 @@ export const programData = {
           "moderator": "Mitchell Travers",
           "detailPage": "/events/20251015-block13/sessions/1-1",
           "agenda": [],
-          "documents": [],
+          "documents": [
+            {
+              "title": "BGIN Agent Hack",
+              "link": "https://block13-agent-hack.vercel.app/",
+              "type": "Website"
+            }
+          ],
           "relatedProjects": [
             "Agent Standards and Frameworks"
           ]
@@ -60,10 +66,20 @@ export const programData = {
           "agenda": [],
           "documents": [
             {
-              "title": "Cyber Security Information Sharing Framework",
-              "link": "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1740097541251/ba7756650ffa00321f091b05a9de0aae8377ad86",
-              "type": "Mural Flowchart"
-            }
+              "title": "Cyber Security Information Sharing Framework (ISO Proposal Draft)",
+              "link": "https://bgin.discourse.group/uploads/short-url/jhZDXafaFJCkgPnVbs7Yu4JwGG1.docx",
+              "type": "Word Document"
+            },
+            {
+              "title": "BGIN Cybersecurity Vulnerability & Threat Information Sharing Framework ",
+              "link": "https://app.mural.co/t/blockchaingovernanceinitiati4922/m/blockchaingovernanceinitiati4922/1738868971396/a1b25de3e4cebf0007984101737f476870ca3633",
+              "type": "Mural Board"
+            },
+            {
+              "title": "Stake Holder Chart",
+              "link": "https://docs.google.com/document/d/1oaVXEeBFiSMj5r0itl9tFMBxQVhgFOIu4_xerRmU4ww/edit?tab=t.0",
+              "type": "Google Doc"
+            },
           ],
           "relatedProjects": ["Cyber Security Information Sharing Framework"]
         },
@@ -72,14 +88,23 @@ export const programData = {
           "title": "ZKP and Privacy Enhanced Authentication",
           "time": "15:30 - 17:00",
           "room": "Arrupe Hall",
-          "summary": "",
+          "summary": "The finalization of the BGIN ZKP and its applications paper, followed by short presentations and discussion on World ID protocols and potential standards BGIN can propose.",
           "wg": "IKP",
-          "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
-          "documents": [],
-          "relatedProjects": []
+          "speakers": "World Foundation, Leona Hioki",
+          "moderator": "Mitchell Travers, Haruki Oyama",
+          "detailPage": "/events/20251015-block13/sessions/1-5",
+          "agenda": [
+            "20min Presentation on BGIN ZKP and its application - paper finalization",
+            "70min Short presentation followed by discussion on World ID protocols and potential standards BGIN can propose and work on"
+          ],
+          "documents": [
+            {
+              "title": "ZKP and its Application",
+              "link": "https://docs.google.com/document/d/1rt0BTEQXF_7p_R_cAAvG2By4AtWpfbhW/edit?usp=drive_link&ouid=115431298069367330711&rtpof=true&sd=true",
+              "type": "Google Doc"
+            }
+          ],
+          "relatedProjects": ["ZKP and its Application"]
         },
         {
           "id": "1-6",
@@ -111,7 +136,13 @@ export const programData = {
           "moderator": "Mitchell Travers",
           "detailPage": "/events/20251015-block13/sessions/2-1",
           "agenda": [],
-          "documents": [],
+          "documents": [
+            {
+              "title": "BGIN Agent Hack",
+              "link": "https://block13-agent-hack.vercel.app/",
+              "type": "Website"
+            }
+          ],
           "relatedProjects": [
             "Agent Standards and Frameworks"
           ]
@@ -144,17 +175,27 @@ export const programData = {
         },
         {
           "id": "2-4",
-          "title": "Crypto Agility and PQC migration ",
+          "title": "Crypto Agility and PQC migration",
           "time": "15:30 - 17:00",
           "room": "Arrupe Hall",
-          "summary": "",
+          "summary": "Discussions on Bitcoin quantum security, Ethereum BLS signatures, and the current post-quantum cryptography landscape. The session explores quantum threats to existing blockchain systems and migration strategies to quantum-resistant algorithms.",
           "wg": "IKP",
-          "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
-          "documents": [],
-          "relatedProjects": []
+          "speakers": "Kigen Fukuda",
+          "moderator": "Shin'ichiro Matsuo",
+          "detailPage": "/events/20251015-block13/sessions/2-4",
+          "agenda": [
+            "20min - Bitcoin quantum security discussion",
+            "20min - Ethereum BLS signature presentation",
+            "20min - Current PQC landscape presentation by Kigen Fukuda"
+          ],
+          "documents": [
+            {
+              "title": "Post-Quantum Blockchain: Transition Landscape Amidst Evolving Complexity",
+              "link": "https://eprint.iacr.org/2025/1626",
+              "type": "PDF"
+            }
+          ],
+          "relatedProjects": ["Post-Quantum Blockchain: Transition Landscape Amidst Evolving Complexity"]
         }
       ]
     },
@@ -166,12 +207,15 @@ export const programData = {
           "title": "Accountable wallet",
           "time": "9:00 - 10:30",
           "room": "Hariri 140",
-          "summary": "Standards for accountable wallet implementations and compliance",
+          "summary": "Discussions on the BGIN Accountable Wallet paper and privacy pools watcher conversation, focusing on standards for accountable wallet implementations and compliance.",
           "wg": "IKP",
           "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
+          "moderator": "Mitchell Travers, Kigen Fukuda",
+          "detailPage": "/events/20251015-block13/sessions/3-1",
+          "agenda": [
+            "30min - BGIN Accountable Wallet paper discussion",
+            "60min - Privacy pools watcher conversation and implementation standards"
+          ],
           "documents": [
             {
               "title": "Accountable Wallet",
@@ -189,7 +233,7 @@ export const programData = {
           "summary": "A critical discussion addressing the gap between regulatory concepts of 'maturity' and 'decentralization' and the technically verifiable metrics needed to evaluate them. This session explores how major jurisdictions (US, Japan, UK, EU) are developing frameworks that use blockchain decentralization as a basis for legal classification, while establishing common vocabulary, standardized evaluation methodologies, and dynamic assessment models for measuring network control, token distribution, and genuine utility.",
           "wg": "FASE",
           "speakers": "Takuya Kobori",
-          "moderator": "TBD",
+          "moderator": "Amanda Wick",
           "detailPage": "/events/20251015-block13/sessions/3-2",
           "agenda": [
             "1. Introduction",
@@ -237,29 +281,34 @@ export const programData = {
           ],
           "documents": [
             {
-              "title": "Session Documentation",
+              "title": "Discussion Points for Evaluating Blockchain Decentralization",
               "link": "https://docs.google.com/document/d/1MRMJhtVsV9MSOoOKHeXOmOkdGMCdqmc-d1YeDE6FUdo/edit?tab=t.0#heading=h.3g6uwk5h8iev",
               "type": "Google Doc"
             }
           ],
-          "relatedProjects": ["Decentralization Metrics Framework"]
+          "relatedProjects": []
         },
         {
           "id": "3-3",
           "title": "Forensics & Analysis",
           "time": "10:45 - 12:15",
           "room": "Hariri 140",
-          "summary": "Comprehensive standards for blockchain forensics and analytics methodologies",
+          "summary": "Push the BGIN document on distinguishing blockchain forensics from analytics to finalization and proceed to the next step with the project.",
           "wg": "IKP",
           "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
+          "moderator": "Mitchell Travers, Amanda Wick",
+          "detailPage": "/events/20251015-block13/sessions/3-3",
+          "agenda": [
+            "Review current state of the BGIN document",
+            "Discuss and update the scope of the document",
+            "Push document to finalization",
+            "Define next steps for the project"
+          ],
           "documents": [
             {
               "title": "Distinguishing Blockchain Forensics from Analytics",
-              "link": "https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?tab=t.0#heading=h.oer5qfrxhu03",
-              "type": "PDF"
+              "link": "https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?tab=t.0",
+              "type": "Google Doc"
             }
           ],
           "relatedProjects": ["Distinguishing Blockchain Forensics from Analytics"]
@@ -321,7 +370,7 @@ export const programData = {
           ],
           "documents": [
             {
-              "title": "Session Documentation",
+              "title": "Discussion Points for Harmful Activities in Crypto-Asset Markets",
               "link": "https://docs.google.com/document/d/1w25eODwBcXORXxKw4ngjGTtCZI4IPgFa8feWIT2J0eg/edit?tab=t.0#heading=h.h2drzpbu3jlx",
               "type": "Google Doc"
             }
@@ -339,7 +388,13 @@ export const programData = {
           "moderator": "Mitchell Travers",
           "detailPage": "/events/20251015-block13/sessions/3-5",
           "agenda": [],
-          "documents": [],
+          "documents": [
+            {
+              "title": "BGIN Agent Hack",
+              "link": "https://block13-agent-hack.vercel.app/",
+              "type": "Website"
+            }
+          ],
           "relatedProjects": [
             "Agent Standards and Frameworks"
           ]
@@ -349,12 +404,11 @@ export const programData = {
           "title": "AI Agent Governance - Archive",
           "time": "14:45 - 18:00",
           "room": "Hariri 140",
-          "summary": "Discussion on the governance of AI agents and their implications",
+          "summary": "Discussion on the governance of AI agents and their implications along with members of the Kwaai Foundation and Linux Foundation. This session explores the intersection of AI and blockchain governance, addressing challenges and opportunities in managing autonomous agents within the governance of decentralized systems.",
           "wg": "IKP",
           "speakers": "Optional - List of speakers",
           "moderator": "Mitchell Travers",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
+          "detailPage": "/events/20251015-block13/sessions/3-6",
           "documents": [
             {
               "title": "Beyond Static Governance towards Living Intelligence",
@@ -371,34 +425,45 @@ export const programData = {
           "title": "Practical Stablecoin Implementation Guide",
           "time": "14:45 - 16:15",
           "room": "Hariri 240",
-          "summary": "Extension of IKP WG's Current Paper on stablecoin",
+          "summary": "Extension of IKP WG's current paper on stablecoin regulation. This session offers a comparative analysis of stablecoin regulatory regimes in the European Union and the United Arab Emirates, examining diverse policy drivers, identifying potential gaps, and providing forward-looking perspectives on anticipated legal reforms including emerging proposals in the United States.",
           "wg": "FASE",
-          "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
-          "agenda": [],
+          "speakers": "Joseph Beverley",
+          "moderator": "Chloe White",
+          "detailPage": "/events/20251015-block13/sessions/3-7",
+          "agenda": [
+            "Overview of key events that catalyzed regulators' decision-making on stablecoin policy priorities",
+            "Comparative analysis of EU and UAE stablecoin regulatory regimes",
+            "Examination of policy drivers and motives behind virtual asset regulations",
+            "Identification of potential policy gaps and issues requiring further examination",
+            "Forward-looking perspective on anticipated legal reforms, including US proposals"
+          ],
           "documents": [
             {
-              "title": "Distinguishing Blockchain Forensics from Analytics",
-              "link": "https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?tab=t.0#heading=h.oer5qfrxhu03",
-              "type": "PDF"
+              "title": "Policy priorities for stablecoin regulation: past, present and future",
+              "link": "https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit#heading=h.gjdgxs",
+              "type": "Google Doc"
             }
           ],
-          "relatedProjects": ["Distinguishing Blockchain Forensics from Analytics"]
+          "relatedProjects": ["Policy priorities for stablecoin regulation: past, present and future"]
         },
         {
           "id": "3-8",
           "title": "Harmonization among Crypto-asset, stablecoin and tokenized deposit",
           "time": "16:30 - 18:00",
           "room": "Hariri 240",
-          "summary": "Deals with JPM, Illicit activities, AML/CFT, Financial Stability.",
+          "summary": "A comprehensive discussion on achieving regulatory harmonization across different digital asset classes including crypto-assets, stablecoins, and tokenized deposits. This session addresses critical topics including JPMCoin and other bank-issued digital currencies, illicit activities detection and prevention, AML/CFT compliance frameworks, and financial stability considerations. The discussion aims to identify commonalities and distinctions between these asset classes to develop coherent regulatory approaches that balance innovation with risk management.",
           "wg": "FASE",
           "speakers": "",
-          "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
+          "moderator": "Carole House",
+          "detailPage": "/events/20251015-block13/sessions/3-8",
           "agenda": [],
-          "documents": [],
-          "relatedProjects": []
+          "documents": [
+            {
+              "title": "BGIN Block#12 Meeting Report",
+              "link": "https://docs.google.com/document/d/1QvdmZHA8kROJtabdDuRQ4IRnun71x0fy/edit#heading=h.30j0zll",
+              "type": "Google Doc"
+            }
+          ],
         }
       ]
     }
@@ -479,7 +544,7 @@ export const programData = {
       "name": "BGIN Agent Hack",
       "abbreviation": "Agent Hack",
       "color": "yellow",
-      "chairs": ["Mitchell Travers", "Shinichiro Matsuo"],
+      "chairs": ["Mitchell Travers"],
       "description": "Hackathon sessions focused on government and policy applications of blockchain",
       "documentsLink": "https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing"
     },

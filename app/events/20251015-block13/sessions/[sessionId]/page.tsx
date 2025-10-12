@@ -201,9 +201,7 @@ export default function SessionDetailPage() {
                           </a>
                         </div>
                       </>
-                    ) : (
-                      <p className="text-gray-500">Full agenda will be posted closer to the event date.</p>
-                    )}
+                    ) : null}
                   </div>
                 )}
               </div>
@@ -299,16 +297,6 @@ export default function SessionDetailPage() {
                       </ul>
                     </div>
                   )}
-                  {wg.documentsLink && (
-                    <a
-                      href={wg.documentsLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline text-sm mt-3 inline-block"
-                    >
-                      View WG Documents →
-                    </a>
-                  )}
                 </div>
               )}
 
@@ -318,8 +306,8 @@ export default function SessionDetailPage() {
                   <h3 className="font-bold mb-3 text-gray-800">Related Projects</h3>
                   <ul className="space-y-2 text-sm list-none">
                     {session.relatedProjects.map((project: string, idx: number) => (
-                      <li key={idx} className="text-blue-600">
-                       {project}
+                      <li key={idx} className="text-gray-700">
+                        {project}
                       </li>
                     ))}
                   </ul>

@@ -47,19 +47,6 @@ export default function Block13Page() {
 
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>(getDefaultDay());
   const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
-  const [expandedSessions, setExpandedSessions] = useState<Set<string>>(new Set());
-
-  const toggleSessionExpansion = (sessionId: string) => {
-    setExpandedSessions(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(sessionId)) {
-        newSet.delete(sessionId);
-      } else {
-        newSet.add(sessionId);
-      }
-      return newSet;
-    });
-  };
 
   return (
     <main className="block13-page min-h-screen bg-white w-screen">
@@ -99,14 +86,14 @@ export default function Block13Page() {
               <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
             
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            {/* <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-800 mb-2">Note: Program is Tentative</h3>
               <p className="text-blue-700">
                 The program below is tentative and subject to change. Final agenda will be posted closer to the event date. Follow our socials: 
                 <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">X (Twitter)</a> | 
                 <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">LinkedIn</a>
               </p>
-            </div>
+            </div> */}
           </div>
           
           {/* Program Timetable */}
@@ -147,20 +134,6 @@ export default function Block13Page() {
                 By Room
               </button>
             </div>
-            <button
-              onClick={() => setExpandedSessions(expandedSessions.size > 0 ? new Set() : new Set(
-                viewMode === 'time'
-                  ? Object.entries(groupSessionsByTime(program[activeDay])).flatMap(([time, sessions]: [string, any]) =>
-                      sessions.map((_: any, idx: number) => `${activeDay}-${time}-${idx}`)
-                    )
-                  : Object.entries(groupSessionsByRoom(program[activeDay])).flatMap(([roomName, sessions]: [string, any]) =>
-                      sessions.map((_: any, idx: number) => `${activeDay}-room-${roomName}-${idx}`)
-                    )
-              ))}
-              className="text-sm text-blue-600 hover:text-blue-800 font-medium"
-            >
-              {expandedSessions.size > 0 ? 'Collapse All' : 'Expand All'}
-            </button>
           </div>
 
           {/* Program Content */}
@@ -173,22 +146,12 @@ export default function Block13Page() {
                     <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
                     <div className="space-y-2">
                       {sessions.map((session: any, idx: number) => {
-                        const sessionKey = `${activeDay}-${time}-${idx}`;
-                        const isExpanded = expandedSessions.has(sessionKey);
-
                         return (
-                          <div key={idx} className="block13-session-card cursor-pointer" onClick={() => toggleSessionExpansion(sessionKey)}>
-                            <div className="flex flex-col">
+                          <Link key={idx} href={session.detailPage} className="block no-underline">
+                            <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
+                              <div className="flex flex-col">
                               <div className="flex flex-row justify-between items-start mb-1">
                                 <div className="flex items-center gap-2 flex-grow">
-                                  <svg
-                                    className={`w-4 h-4 text-gray-500 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                  </svg>
                                   <h3 className="block13-session-title">{session.title}</h3>
                                 </div>
                                 <div className="flex items-center gap-2 ml-3 flex-shrink-0">
@@ -201,46 +164,38 @@ export default function Block13Page() {
                                 </div>
                               </div>
 
-                              {isExpanded && (
-                                <>
-                                  <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
+                              {/* Always show session details */}
+                              <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
                                   {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                     <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                       {session.sessionChair !== 'TBD' && (
                                         <span><span className="font-semibold">Chair:</span> {session.sessionChair}</span>
                                       )}
                                       {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
-                                        <span><span className="font-semibold">Contributor:</span> {session.contributors}</span>
+                                        <span><span className="font-semibold">Main Contributor:</span> {session.contributors}</span>
                                       )}
                                     </div>
                                   )}
                                   {session.documents && session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').length > 0 && (
                                     <div className="mt-2 flex items-center gap-2 flex-wrap">
                                       {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, docIdx: number) => (
-                                        <a
+                                        <span
                                           key={docIdx}
-                                          href={doc.link}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="text-xs text-blue-600 hover:underline"
-                                          onClick={(e) => e.stopPropagation()}
+                                          className="text-xs text-blue-600 hover:underline cursor-pointer"
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            window.open(doc.link, '_blank');
+                                          }}
                                         >
-                                          📄 {doc.title}
-                                        </a>
+                                          {session.wg === 'BGIN Agent Hack' && doc.type === 'Website' ? '🔗' : '📄'} {doc.title}
+                                        </span>
                                       ))}
                                     </div>
                                   )}
-                                  <Link
-                                    href={session.detailPage}
-                                    className="text-sm text-blue-600 hover:underline mt-2 inline-block"
-                                    onClick={(e) => e.stopPropagation()}
-                                  >
-                                    View full session details →
-                                  </Link>
-                                </>
-                              )}
+                              </div>
                             </div>
-                          </div>
+                          </Link>
                         );
                       })}
                     </div>
@@ -396,22 +351,12 @@ export default function Block13Page() {
                       {/* Sessions in this room */}
                       <div className="space-y-3 ml-4">
                         {sessions.map((session: any, idx: number) => {
-                          const sessionKey = `${activeDay}-room-${roomName}-${idx}`;
-                          const isExpanded = expandedSessions.has(sessionKey);
-
                           return (
-                            <div key={idx} className="block13-session-card cursor-pointer" onClick={() => toggleSessionExpansion(sessionKey)}>
-                              <div className="flex flex-col">
+                            <Link key={idx} href={session.detailPage} className="block no-underline">
+                              <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
+                                <div className="flex flex-col">
                                 <div className="flex flex-row justify-between items-start mb-1">
                                   <div className="flex items-center gap-2 flex-grow">
-                                    <svg
-                                      className={`w-4 h-4 text-gray-500 transition-transform ${isExpanded ? 'rotate-90' : ''}`}
-                                      fill="none"
-                                      stroke="currentColor"
-                                      viewBox="0 0 24 24"
-                                    >
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
                                     <h4 className="block13-session-title">{session.title}</h4>
                                   </div>
                                   <div className="flex items-center gap-2 ml-3 flex-shrink-0">
@@ -424,30 +369,21 @@ export default function Block13Page() {
                                   </div>
                                 </div>
 
-                                {isExpanded && (
-                                  <>
-                                    <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
+                                {/* Always show session details */}
+                                <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
                                     {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                       <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                         {session.sessionChair !== 'TBD' && (
                                           <span><span className="font-semibold">Chair:</span> {session.sessionChair}</span>
                                         )}
                                         {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
-                                          <span><span className="font-semibold">Contributor:</span> {session.contributors}</span>
+                                          <span><span className="font-semibold">Main Contributor:</span> {session.contributors}</span>
                                         )}
                                       </div>
                                     )}
-                                    <Link
-                                      href={session.detailPage}
-                                      className="text-sm text-blue-600 hover:underline mt-2 inline-block"
-                                      onClick={(e) => e.stopPropagation()}
-                                    >
-                                      View full session details →
-                                    </Link>
-                                  </>
-                                )}
+                                </div>
                               </div>
-                            </div>
+                            </Link>
                           );
                         })}
                       </div>
@@ -615,10 +551,9 @@ export default function Block13Page() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               <iframe
                 src="https://block13-agent-hack.vercel.app/"
-                style={{ border: 0 }}
                 width="100%"
                 height="800"
-                frameBorder="0"
+                style={{ border: 0 }}
                 title="BGIN Agent Hack Preview"
                 className="w-full"
               />
