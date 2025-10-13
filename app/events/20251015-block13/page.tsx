@@ -665,7 +665,7 @@ export default function Block13Page() {
           {/* Event Sponsors */}
           <div className="mb-12">
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
                 <Image
                   src="/images/Events/sponsor/DeCurret.png"
@@ -675,7 +675,7 @@ export default function Block13Page() {
                   className="object-contain"
                 />
               </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+              {/* <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
                 <Image
                   src="/images/Events/sponsor/NRI.png"
                   alt="NRI"
@@ -683,7 +683,7 @@ export default function Block13Page() {
                   height={90}
                   className="object-contain"
                 />
-              </div>
+              </div> */}
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
                 <Image
                   src="/images/Events/sponsor/MUFG.jpeg"
@@ -697,6 +697,24 @@ export default function Block13Page() {
                 <Image
                   src="/images/Events/sponsor/Penguin.png"
                   alt="Penguin Securities"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/World.png"
+                  alt="World"
+                  width={180}
+                  height={90}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 flex items-center justify-center min-h-[140px]">
+                <Image
+                  src="/images/Events/sponsor/VerifyVasp.png"
+                  alt="VerifyVASP"
                   width={180}
                   height={90}
                   className="object-contain"
