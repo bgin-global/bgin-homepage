@@ -594,7 +594,7 @@ export default function Block13Page() {
         </section>
 
         {/* Access & Venue Information */}
-        <section className="block13-section">
+        <section id="access-venue" className="block13-section">
           <h2 className="block13-section-title">Access & Venue</h2>
           <div className="block13-venue-grid">
             <div>
@@ -608,8 +608,8 @@ export default function Block13Page() {
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> (BGIN Agent Hack)</li>
-                <li><strong>Pedro Arrupe, S.J. Hall</strong> (Working Group Sessions)</li>
-                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240 (Working Group Sessions)</li>
+                <li><strong>Pedro Arrupe, S.J. Hall</strong> (Main Sessions (Day 1, 2))</li>
+                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240 (Main Sessions (Day 3))</li>
               </ul>
 
               <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>

@@ -14,7 +14,7 @@ export default function Block13AccessPage() {
         {/* Simple Header Section */}
         <div className="bg-white py-12 border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Link href="/events/20251015-block13" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors">
+            <Link href="/events/20251015-block13#access-venue" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors">
               <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
@@ -202,7 +202,7 @@ export default function Block13AccessPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/events/20251015-block13"
+                  href="/events/20251015-block13#access-venue"
                   className="block13-btn-secondary"
                 >
                   <svg className="mr-2 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
