@@ -735,12 +735,11 @@ export default function Block13Page() {
             </div>
           </div>
 
-          {/* Academic Host & Special Supporters - Side by Side */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center mb-8">
-            {/* Academic Host */}
-            <div className="flex-1 max-w-md">
-              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Academic Host</h3>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
+          {/* Academic Hosts */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Academic Hosts</h3>
+            <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
                 <Image
                   src="/images/Events/sponsor/Georgetown University Psaros Center.png"
                   alt="Georgetown University Psaros Center"
@@ -749,12 +748,24 @@ export default function Block13Page() {
                   className="object-contain"
                 />
               </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
+                <div className="text-center">
+                  <h4 className="text-gray-700 font-medium text-lg">Georgetown University<br/>Department of Computer Science</h4>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
+                <div className="text-center">
+                  <h4 className="text-gray-700 font-medium text-lg">CyberSMART Research Centre</h4>
+                </div>
+              </div>
             </div>
+          </div>
 
-            {/* Special Supporters */}
-            <div className="flex-1 max-w-md">
-              <h3 className="text-xl font-semibold text-center mb-4 text-gray-800">Special Supporters</h3>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px]">
+          {/* Special Supporters */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Special Supporters</h3>
+            <div className="flex justify-center max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px] w-full">
                 <Image
                   src="/images/Events/sponsor/fintech_assoc_japan.jpg"
                   alt="Fintech Association Japan"
