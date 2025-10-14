@@ -111,7 +111,7 @@ export default function Block13AccessPage() {
                   className="w-full h-64 object-cover mb-4 rounded-lg"
                 />
                 <h3 className="text-xl font-semibold mb-2">Leavey Program Room</h3>
-                <p className="text-gray-600">Capacity: 72 | Main session venue</p>
+                <p className="text-gray-600">Capacity: 72 | BGIN Agent Hack (Day 1, 2)</p>
               </div>
 
               {/* Arrupe Hall */}
@@ -124,7 +124,7 @@ export default function Block13AccessPage() {
                   className="w-full h-64 object-cover mb-4 rounded-lg"
                 />
                 <h3 className="text-xl font-semibold mb-2">Pedro Arrupe Hall</h3>
-                <p className="text-gray-600">Capacity: 50 | Working group sessions</p>
+                <p className="text-gray-600">Capacity: 50 | Main Sessions (Day 1, 2)</p>
               </div>
 
               {/* Hariri Building */}
@@ -137,7 +137,7 @@ export default function Block13AccessPage() {
                   className="w-full h-64 object-cover mb-4 rounded-lg"
                 />
                 <h3 className="text-xl font-semibold mb-2">Rafik B. Hariri Building</h3>
-                <p className="text-gray-600">Rooms 140 & 240 | Breakout sessions</p>
+                <p className="text-gray-600">Rooms 140 & 240 | Main Sessions (Day 3)</p>
               </div>
 
               {/* Faculty Club */}
@@ -150,7 +150,7 @@ export default function Block13AccessPage() {
                   className="w-full h-64 object-cover mb-4 rounded-lg"
                 />
                 <h3 className="text-xl font-semibold mb-2">Faculty Club Restaurant</h3>
-                <p className="text-gray-600">Networking lunches and receptions</p>
+                <p className="text-gray-600">Networking and reception (Day 1)</p>
               </div>
             </div>
 
