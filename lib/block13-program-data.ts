@@ -44,13 +44,19 @@ export const programData = {
           "title": "Governance of security supply chain",
           "time": "11:00 - 12:30",
           "room": "Arrupe Hall",
-          "summary": "",
+          "summary": "Session to standardize JP CryptoISAC's vendor guidelines within BGIN framework.",
           "wg": "Cyber Security",
           "speakers": "",
           "moderator": "",
-          "detailPage": "make one just say TBD for uncertain information",
+          "detailPage": "/events/20251015-block13/sessions/1-3",
           "agenda": [],
-          "documents": [],
+          "documents": [
+            {
+              "title": "JP CryptoISAC Grassroots-Driven Approaches to Information Sharing",
+              "link": "/images/Events/block13/JPCrypto-ISAC_10152025Presentation.pptx",
+              "type": "PowerPoint"
+            }
+          ],
           "relatedProjects": []
         },
         {
