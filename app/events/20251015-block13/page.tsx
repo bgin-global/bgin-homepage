@@ -22,27 +22,28 @@ export default function Block13Page() {
   // Determine default day based on current date
   const getDefaultDay = (): 'day1' | 'day2' | 'day3' => {
     const today = new Date();
-    const oct15 = new Date('2025-10-15');
-    const oct16 = new Date('2025-10-16');
-    const oct17 = new Date('2025-10-17');
-    const oct18 = new Date('2025-10-18');
 
-    // Remove time component for date comparison
-    today.setHours(0, 0, 0, 0);
-    oct15.setHours(0, 0, 0, 0);
-    oct16.setHours(0, 0, 0, 0);
-    oct17.setHours(0, 0, 0, 0);
-    oct18.setHours(0, 0, 0, 0);
+    // Get today's date in EST timezone (where the venue is)
+    const todayEST = new Date(today.toLocaleString("en-US", {timeZone: "America/New_York"}));
 
-    if (today < oct16) {
-      return 'day1'; // Before and up to Oct 15
-    } else if (today < oct17) {
-      return 'day2'; // Oct 16
-    } else if (today < oct18) {
-      return 'day3'; // Oct 17
-    } else {
-      return 'day1'; // After Oct 17, default back to day 1
+    // Extract just the date parts
+    const year = todayEST.getFullYear();
+    const month = todayEST.getMonth(); // 0-indexed (October = 9)
+    const day = todayEST.getDate();
+
+    // Check for Block 13 dates in 2025
+    if (year === 2025 && month === 9) { // October 2025
+      if (day === 15) {
+        return 'day1';
+      } else if (day === 16) {
+        return 'day2';
+      } else if (day === 17) {
+        return 'day3';
+      }
     }
+
+    // Default to day 1 for any other date
+    return 'day1';
   };
 
   const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>(getDefaultDay());
