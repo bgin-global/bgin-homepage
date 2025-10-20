@@ -10,6 +10,15 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "9",
+    title: "Join BGIN Layer 2 Meetup at San Francisco - October 23",
+    description: "BGIN will host a Layer 2 Meetup in San Francisco on October 23, 2025, as part of Open Source AI Week. The event features presentations on Block #13 outcomes, AgentHack review, panel discussions, and collaborative workshops on blockchain governance frameworks.",
+    date: "2025-10-20",
+    link: "/news/layer2-sf-meetup",
+    tags: ["Event", "Conference"],
+    image: "/images/Events/SanFrancisco.jpg"
+  },
+  {
     id: "8",
     title: "BGIN August 2025 Newsletter Now Available",
     description: "Our August newsletter features comprehensive updates on Block #13 preparations, the IKP Agentic Framework webinar, upcoming Layer 2 meetups at ETHTokyo and EDCON, and the latest developments across all working groups.",
