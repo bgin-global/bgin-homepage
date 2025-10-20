@@ -30,7 +30,7 @@ export default function Activity({
     title: eventUpcoming.title,
     date: eventUpcoming.date,
     location: eventUpcoming.location,
-    description: "Join leading experts, innovators, and stakeholders shaping the future of blockchain governance. <strong style='color: #6890F5;'>Registration is now open!</strong>",
+    description: "Join leading experts, innovators, and stakeholders shaping the future of blockchain governance.",
     thumbnail: eventUpcoming.thumbnail || "/images/Events/Block3.jpeg", // Use custom thumbnail or default
     register_link: eventUpcoming.link, // This will be used for registration
     lang: "ENG" as const,

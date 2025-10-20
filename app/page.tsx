@@ -21,7 +21,12 @@ import { useState } from "react";
 
 export default function Home() {
   const layer2Upcoming = upcomingLayer2Meetup;
-  const blockUpcoming = upcomingBlockConference;
+  const blockUpcoming = upcomingBlockConference as {
+    title: string;
+    date: string;
+    location: string;
+    link: string;
+  } | null;
   const wgCallUpcoming = upcomingWGCalls;
   const [showWhatsNew, setShowWhatsNew] = useState(true);
   return (
@@ -30,13 +35,13 @@ export default function Home() {
 
       {/* What's New Headline */}
       {showWhatsNew && (
-        <div className="w-full bg-blue-600 border-b-2 border-blue-700 py-4 flex justify-center items-center relative">
+        <div className="w-full bg-red-600 border-b-2 border-red-700 py-4 flex justify-center items-center relative">
           <a
-            href="/events/20251015-block13#program"
+            href="/events/20251023-layer2-sf"
             className="text-xl md:text-2xl font-bold text-white hover:underline px-4 text-center"
             style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
           >
-            <span className="font-normal">NEW:</span> Block 13 Program Released - View the full agenda for Washington D.C. (Oct 15-17, 2025)
+            <span className="font-normal">NEW:</span> Join us for the Layer2 Meetup at San Fransisco on October 23! 
           </a>
           <button
             onClick={() => setShowWhatsNew(false)}
@@ -94,18 +99,30 @@ export default function Home() {
           />
         </div>
         <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
-          <ItemCard
-            title={blockUpcoming.title}
-            subtitle={`@${blockUpcoming.location}`}
-            description={
-              <>
-                <p className="mb-0">Date: {blockUpcoming.date}</p>
-                <p className="mb-0">Location: {blockUpcoming.location}</p>
-              </>
-            }
-            link="/activities/block-conference"
-            colorPattern="white"
-          />
+          {blockUpcoming ? (
+            <ItemCard
+              title={blockUpcoming.title}
+              subtitle={`@${blockUpcoming.location}`}
+              description={
+                <>
+                  <p className="mb-0">Date: {blockUpcoming.date}</p>
+                  <p className="mb-0">Location: {blockUpcoming.location}</p>
+                </>
+              }
+              link={blockUpcoming.link || "/activities/block-conference"}
+              colorPattern="white"
+            />
+          ) : (
+            <ItemCard
+              title="Next Block Conference"
+              subtitle="To be announced"
+              description={
+                <p className="mb-0">Details coming soon. Check our past conferences for previous events.</p>
+              }
+              link="/activities/block-conference"
+              colorPattern="white"
+            />
+          )}
           <ItemCard
             title="Working Group"
             subtitle="　"

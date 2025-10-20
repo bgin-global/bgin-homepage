@@ -44,36 +44,73 @@ export default function ItemEvent(props: Props) {
             {props.event.id === "upcoming-registration" ? (
               // Special registration button - full width and bigger
               <div className="w-full mb-4">
-                <a
-                  href={props.event.register_link || "/events/" + props.event.id}
-                  className="bg-[#6890F5] hover:bg-[#5a7de8] flex justify-center items-center gap-3 px-8 py-5 rounded-full border border-[#6890F5] w-full transition-colors"
-                  target={props.event.register_link?.startsWith("http") ? "_blank" : undefined}
-                  rel={props.event.register_link?.startsWith("http") ? "noopener noreferrer" : undefined}
-                >
-                  <div className="text-white text-xl font-semibold">Registration & Details</div>
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                {!props.event.register_link || props.event.register_link === "#" ? (
+                  // Disabled button when no link available
+                  <button
+                    className="bg-gray-300 flex justify-center items-center gap-3 px-8 py-5 rounded-full border border-gray-300 w-full cursor-not-allowed"
+                    disabled
                   >
-                    <path
-                      d="M4.58325 11H17.4166"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M11 4.58325L17.4167 10.9999L11 17.4166"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
+                    <div className="text-gray-500 text-xl font-semibold">
+                      Details Coming Soon
+                    </div>
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.58325 11H17.4166"
+                        stroke="#9CA3AF"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M11 4.58325L17.4167 10.9999L11 17.4166"
+                        stroke="#9CA3AF"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                ) : (
+                  // Active link when register_link exists
+                  <a
+                    href={props.event.register_link}
+                    className="bg-[#6890F5] hover:bg-[#5a7de8] flex justify-center items-center gap-3 px-8 py-5 rounded-full border border-[#6890F5] w-full transition-colors"
+                    target={props.event.register_link?.startsWith("http") ? "_blank" : undefined}
+                    rel={props.event.register_link?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  >
+                    <div className="text-white text-xl font-semibold">
+                      Registration & Details
+                    </div>
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.58325 11H17.4166"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M11 4.58325L17.4167 10.9999L11 17.4166"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                )}
               </div>
             ) : (
               // Regular button grid for other events

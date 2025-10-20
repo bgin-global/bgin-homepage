@@ -22,19 +22,21 @@ export default function EventsPage() {
   };
 
   // Simply define upcoming events directly - Layer2 meetups have passed
-  const upcomingEvents = [
-    {
-      id: "block13",
-      title: "BGIN Block #13",
-      date: "October 15-17, 2025",
-      time: "Full Conference",
-      type: "Block Conference",
-      description: "BGIN's 13th General Assembly in Washington, D.C., advancing blockchain governance standards.",
-      link: "/events/20251015-block13",
-      color: eventTypeColors["Block Conference"],
-      registerLink: "https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator",
-      image: "/images/Events/Block3.jpeg"
-    },
+  const upcomingEvents: Array<{
+    id: string;
+    title: string;
+    date: string;
+    time: string;
+    type: string;
+    description: string;
+    link: string | null;
+    color: string;
+    venue?: string;
+    venueLink?: string;
+    registerLink?: string;
+    secondaryRegisterLink?: string;
+    image?: string;
+  }> = [
     {
       id: "layer2-sf",
       title: "Layer 2 Meetup @ San Francisco",
@@ -48,7 +50,20 @@ export default function EventsPage() {
       // venueLink: "https://maps.app.goo.gl/2NtvrwvLeU8yrzfu6",
       registerLink: "https://luma.com/46pvoj1t?tk=ccPj5D",
       image: "/images/Events/San Francisco.jpg"
-    }
+    },
+    {
+      id: "block14",
+      title: "BGIN Block #14 Meeting",
+      date: "March 1-2, 2026",
+      time: "TBD",
+      type: "Block Conference",
+      description: "Join us for BGIN Block #14 in Tokyo, Japan. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
+      link: null, // Placeholder link since details are not yet available
+      color: eventTypeColors["Block Conference"],
+      venue: "Tokyo, Japan",
+      // registerLink will be added when registration opens
+      image: "/images/Events/Block5.jpeg"
+    },
   ];
 
   const pastEventCategories = [
@@ -56,7 +71,7 @@ export default function EventsPage() {
       title: "Block Conferences",
       description: "BGIN General Assemblies and major conferences",
       link: "/activities/block-conference",
-      count: "12 past events"
+      count: "13 past events"
     },
     {
       title: "Layer 2 Meetups",
@@ -172,12 +187,21 @@ export default function EventsPage() {
                   </div>
                   
                   <div className="flex gap-3">
-                    <Link 
-                      href={event.link}
-                      className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
-                    >
-                      View Details
-                    </Link>
+                    {!event.link ? (
+                      <button
+                        className="flex-1 bg-gray-200 text-gray-500 px-4 py-2 rounded-lg cursor-not-allowed font-semibold text-center text-sm"
+                        disabled
+                      >
+                        Details Coming Soon
+                      </button>
+                    ) : (
+                      <Link
+                        href={event.link}
+                        className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
+                      >
+                        View Details
+                      </Link>
+                    )}
                     {event.registerLink ? (
                       <>
                         <Link 

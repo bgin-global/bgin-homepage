@@ -30,11 +30,18 @@ function getNextBiweeklyMeeting(dayOfWeek: number, hour: number, startDate: Date
   return `${timeStr} Universal Time, ${dateStr}`;
 }
 
-export const upcomingBlockConference = {
-  title: "BGIN Block #13 Meeting",
-  date: "October 15-17, 2025",
-  location: "Washington, D.C., USA",
-  link: "/events/20251015-block13",
+export const upcomingBlockConference: {
+  title: string;
+  date: string;
+  location: string;
+  link: string | null;
+  thumbnail?: string;
+} = {
+  title: "BGIN Block #14 Meeting",
+  date: "March 1-2, 2026",
+  location: "Tokyo, Japan",
+  link: null, // Details page not yet available
+  thumbnail: "/images/Events/Block5.jpeg",
 };
 
 export const upcomingLayer2Meetup = {

@@ -45,15 +45,27 @@ export default function Layer2SanFranciscoEvent() {
           </div>
         </div>
 
-        {/* Event Logos */}
-        <div className="flex items-center justify-center gap-12 mb-16 p-8 bg-gray-50 rounded-lg">
-          <Image
-            src="/images/Logo/BGIN_horizontal_01_black.png"
-            alt="BGIN Logo"
-            width={200}
-            height={70}
-            className="object-contain"
-          />
+        {/* Event Image and Logos */}
+        <div className="mb-12">
+          <div className="max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/images/Events/San Francisco.jpg"
+              alt="San Francisco"
+              width={800}
+              height={400}
+              className="w-full h-auto object-cover"
+              priority
+            />
+          </div>
+          <div className="flex items-center justify-center gap-12 p-8 bg-gray-50 rounded-lg">
+            <Image
+              src="/images/Logo/BGIN_horizontal_01_black.png"
+              alt="BGIN Logo"
+              width={200}
+              height={70}
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Event Details Card */}
@@ -145,6 +157,53 @@ export default function Layer2SanFranciscoEvent() {
           </div>
         </div>
 
+        {/* Program Section - Moved up and updated with actual schedule */}
+        <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-8 mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">📋 Program Schedule</h2>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-500 pl-6 py-3">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-semibold text-gray-800">BGIN Intro Presentation</h3>
+                <span className="text-gray-600 font-medium">12:00 - 12:30</span>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-purple-500 pl-6 py-3">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-semibold text-gray-800">BGIN Block 13 + AgentHack in Review → What's Next</h3>
+                <span className="text-gray-600 font-medium">12:30 - 13:00</span>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-green-500 pl-6 py-3">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-semibold text-gray-800">Panel / Roundtable</h3>
+                <span className="text-gray-600 font-medium">13:00 - 13:30</span>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-yellow-500 pl-6 py-3">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-semibold text-gray-800">Open Workshop on AgentHack Outcomes → Collaboration Time</h3>
+                <span className="text-gray-600 font-medium">13:30 - 15:00</span>
+              </div>
+            </div>
+
+            <div className="border-l-4 border-red-500 pl-6 py-3">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-semibold text-gray-800">Networking</h3>
+                <span className="text-gray-600 font-medium">15:00 - 17:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-blue-700">
+              <strong>Note:</strong> All times are in Pacific Daylight Time (PDT). The program starts at 12:00 PM (noon).
+            </p>
+          </div>
+        </div>
+
         {/* About Section */}
         <div className="bg-gray-50 rounded-lg p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900">About BGIN and This Meetup</h2>
@@ -194,65 +253,9 @@ export default function Layer2SanFranciscoEvent() {
           </div>
         </div>
 
-        {/* Join Community Section */}
-        <div className="bg-purple-50 border border-purple-200 rounded-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">🌐 Join Our Community</h2>
-
-          <div className="space-y-4 text-gray-700">
-            <p>
-              Join our community to stay updated on the latest developments and participate in ongoing discussions.
-            </p>
-
-            <div className="bg-white rounded-lg p-6 border border-purple-100">
-              <h3 className="font-semibold mb-3">Stay Connected</h3>
-
-              <div className="space-y-3">
-                <div>
-                  <Link
-                    href="https://bgin-global.org"
-                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    🌐 Visit BGIN Website →
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    href="https://bgin.discourse.group/"
-                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    💬 Join BGIN Discourse Forum →
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    href="/activities/layer2-meetup-overview"
-                    className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
-                  >
-                    📅 View All Layer 2 Meetups →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Program Section */}
-        <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">📋 Program</h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-            <p className="text-gray-700">
-              The detailed program agenda will be announced closer to the event date.
-              Please check back for updates or join our community forums for the latest information.
-            </p>
-          </div>
-        </div>
 
         {/* Sponsors Section */}
-        <div className="bg-gray-50 rounded-lg p-8">
+        <div className="bg-gray-50 rounded-lg p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">Event Sponsor</h2>
           <div className="flex flex-col items-center">
             <div className="bg-white p-6 rounded-lg">
@@ -264,6 +267,25 @@ export default function Layer2SanFranciscoEvent() {
                 className="object-contain"
               />
             </div>
+          </div>
+        </div>
+
+        {/* Stay Updated Section */}
+        <div className="bg-[#688ff5] rounded-lg p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Stay Updated on BGIN Events</h2>
+          <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
+            Join our community to receive updates about upcoming events,
+            working group sessions, and governance initiatives
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link
+              href="https://bgin.discourse.group"
+              className="bg-white text-[#688ff5] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Discussion Forum
+            </Link>
           </div>
         </div>
       </div>
