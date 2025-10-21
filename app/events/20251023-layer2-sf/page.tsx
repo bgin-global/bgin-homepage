@@ -87,10 +87,7 @@ export default function Layer2SanFranciscoEvent() {
 
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">🌐 Format</h3>
-                <p className="text-gray-600">Hybrid Event</p>
-                <p className="text-gray-500 text-sm mt-2">
-                  While the program is hybrid, we strongly suggest people participate in the program onsite
-                </p>
+                <p className="text-gray-600">Onsite Event</p>
               </div>
 
               <div className="mb-6">

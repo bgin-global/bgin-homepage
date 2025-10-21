@@ -61,7 +61,7 @@ export default function Layer2SFMeetupNews() {
             <p className="mb-6 text-gray-700 text-lg">
               The Blockchain Governance Initiative Network (BGIN) is excited to announce its upcoming Layer 2 Meetup
               in San Francisco on <strong className="text-gray-900">October 23, 2025</strong>, from <strong className="text-gray-900">12:00 PM to 5:00 PM PDT</strong>.
-              This hybrid event is part of the Open Source AI Week and offers a unique opportunity for
+              This onsite event is part of the Open Source AI Week and offers a unique opportunity for
               stakeholders to engage in meaningful discussions about blockchain governance.
             </p>
 
@@ -103,8 +103,7 @@ export default function Layer2SFMeetupNews() {
             </div>
 
             <p className="mb-6 text-gray-700 text-lg">
-              Registration is free but required. The event is hybrid, though onsite participation is strongly
-              encouraged for the full experience.
+              Registration is free but required. The event is onsite only.
             </p>
 
             <h3 className="text-xl font-semibold mt-8 mb-4 text-gray-900">Who Should Attend</h3>
