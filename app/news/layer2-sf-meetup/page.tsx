@@ -45,7 +45,7 @@ export default function Layer2SFMeetupNews() {
           {/* Featured Image */}
           <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/Events/San Francisco.jpg"
+              src="/images/Events/SanFrancisco.jpg"
               alt="San Francisco"
               width={896}
               height={500}
