@@ -49,7 +49,7 @@ export default function EventsPage() {
       // venue: "717 Market St #100, San Francisco, CA 94103",
       // venueLink: "https://maps.app.goo.gl/2NtvrwvLeU8yrzfu6",
       registerLink: "https://luma.com/46pvoj1t?tk=ccPj5D",
-      image: "/images/Events/San Francisco.jpg"
+      image: "/images/Events/SanFrancisco.jpg"
     },
     {
       id: "block14",

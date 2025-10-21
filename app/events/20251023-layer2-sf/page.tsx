@@ -49,7 +49,7 @@ export default function Layer2SanFranciscoEvent() {
         <div className="mb-12">
           <div className="max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/Events/San Francisco.jpg"
+              src="/images/Events/SanFrancisco.jpg"
               alt="San Francisco"
               width={800}
               height={400}
