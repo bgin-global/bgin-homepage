@@ -34,7 +34,7 @@ export default function Home() {
       <Header />
 
       {/* What's New Headline */}
-      {showWhatsNew && (
+      {/* {showWhatsNew && (
         <div className="w-full bg-red-600 border-b-2 border-red-700 py-4 flex justify-center items-center relative">
           <a
             href="/events/20251023-layer2-sf"
@@ -51,7 +51,7 @@ export default function Home() {
             ×
           </button>
         </div>
-      )}
+      )} */}
 
       <Hero type={1} />
 

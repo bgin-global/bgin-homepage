@@ -2,8 +2,21 @@ import { getSortedEvents } from "@/lib/fetch-events";
 import Activity from "../Activity";
 
 export default function Layer2Meetup() {
-  const upcomingEvents = getSortedEvents("layer2-meetups", "FUTURE");
+  const upcomingEventsRaw = getSortedEvents("layer2-meetups", "FUTURE");
   const pastEvents = getSortedEvents("layer2-meetups", "PAST");
+
+  // Force specific events into the past list even if their date is in the future
+  const manuallyPastEventIds = new Set(["20251023-layer2-sf"]);
+  const manuallyPastEvents = upcomingEventsRaw.filter((event) =>
+    manuallyPastEventIds.has(event.id)
+  );
+  const upcomingEvents = upcomingEventsRaw.filter(
+    (event) => !manuallyPastEventIds.has(event.id)
+  );
+
+  const updatedPastEvents = [...pastEvents, ...manuallyPastEvents].sort((a, b) =>
+    new Date(a.date) < new Date(b.date) ? 1 : -1
+  );
 
   // Get the first upcoming event if available
   const upcomingEvent = upcomingEvents.length > 0 ? {
@@ -17,7 +30,7 @@ export default function Layer2Meetup() {
   return (
     <Activity
       eventUpcoming={upcomingEvent}
-      pastEvents={pastEvents}
+      pastEvents={updatedPastEvents}
       titleUpcoming="Upcoming Layer2 Meetup"
       titlePast="Past Layer2 Meetups"
     />

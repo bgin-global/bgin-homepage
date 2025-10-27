@@ -52,17 +52,17 @@ export const upcomingLayer2Meetup = {
 };
 
 // Dynamic WG Calls - automatically calculated
-// IKP WG: Bi-weekly on Tuesdays at 12pm UTC (starting from a known Tuesday)
-// FASE WG: Bi-weekly on Thursdays at 11am UTC (starting from a known Thursday)
+// IKP WG: Bi-weekly on Thursdays at 12pm UTC (starting from a known Thursday)
+// FASE WG: Bi-weekly on Wednesdays at 11am UTC (starting from a known Wednesday)
 // Cyber Security WG: As necessary (shown as TBD)
 export const upcomingWGCalls = [
   {
     wgTitle: "IKP WG",
-    date: getNextBiweeklyMeeting(2, 12, new Date('2025-01-07')), // Tuesday = 2, starting from Jan 7, 2025
+    date: getNextBiweeklyMeeting(4, 12, new Date('2025-01-09')), // Thursday = 4, starting from Jan 9, 2025
   },
   {
     wgTitle: "FASE WG", 
-    date: getNextBiweeklyMeeting(4, 11, new Date('2025-01-09')), // Thursday = 4, starting from Jan 9, 2025
+    date: getNextBiweeklyMeeting(3, 11, new Date('2025-01-08')), // Wednesday = 3, starting from Jan 8, 2025
   },
   {
     wgTitle: "Cyber Security WG",

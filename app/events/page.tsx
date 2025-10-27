@@ -38,20 +38,6 @@ export default function EventsPage() {
     image?: string;
   }> = [
     {
-      id: "layer2-sf",
-      title: "Layer 2 Meetup @ San Francisco",
-      date: "October 23, 2025",
-      time: "12:00 - 5:00 PM PDT",
-      type: "Layer 2 Meetup",
-      description: "Join BGIN's Layer 2 Meetup in San Francisco as part of Open Source AI Week. Exchange ideas on blockchain governance with developers, regulators, business entities, and academia.",
-      link: "/events/20251023-layer2-sf",
-      color: eventTypeColors["Layer 2 Meetup"],
-      // venue: "717 Market St #100, San Francisco, CA 94103",
-      // venueLink: "https://maps.app.goo.gl/2NtvrwvLeU8yrzfu6",
-      registerLink: "https://luma.com/46pvoj1t?tk=ccPj5D",
-      image: "/images/Events/SanFrancisco.jpg"
-    },
-    {
       id: "block14",
       title: "BGIN Block #14 Meeting",
       date: "March 1-2, 2026",

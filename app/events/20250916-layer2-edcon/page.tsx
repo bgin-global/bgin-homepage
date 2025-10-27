@@ -12,13 +12,13 @@ export default function Layer2EDCONEvent() {
         {/* Go Back Button */}
         <div className="mb-6">
           <Link 
-            href="/activities/layer2-meetup-overview"
+            href="/activities/layer2-meetup"
             className="inline-flex items-center text-gray-600 hover:text-gray-900 font-medium"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Layer 2 Meetups Overview
+            Back to Layer 2 Meetups
           </Link>
         </div>
 

@@ -2,11 +2,20 @@ import Image from "next/image";
 import { Event } from "@/lib/fetch-events";
 import Button from "./Button/Button";
 
+const REPORT_BUTTON_EXCLUSIONS = new Set([
+  "20250916-layer2-edcon",
+  "20250915-layer2-ethtokyo",
+]);
+
 interface Props {
   event: Event;
 }
 
 export default function ItemEvent(props: Props) {
+  const shouldShowReportButton = Boolean(
+    props.event.report_url && !REPORT_BUTTON_EXCLUSIONS.has(props.event.id)
+  );
+
   return (
     <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
       <div className="w-full h-[300px] flex items-start gap-2.5 rounded-xl">
@@ -131,7 +140,7 @@ export default function ItemEvent(props: Props) {
                 ) : (
                   <></>
                 )}
-                {props.event.report_url && (
+                {shouldShowReportButton && (
                   <Button
                     link={props.event.report_url}
                     text="report"
