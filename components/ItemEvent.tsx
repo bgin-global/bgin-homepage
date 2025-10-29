@@ -12,9 +12,10 @@ interface Props {
 }
 
 export default function ItemEvent(props: Props) {
-  const shouldShowReportButton = Boolean(
+  const reportUrl =
     props.event.report_url && !REPORT_BUTTON_EXCLUSIONS.has(props.event.id)
-  );
+      ? props.event.report_url
+      : null;
 
   return (
     <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
@@ -140,14 +141,14 @@ export default function ItemEvent(props: Props) {
                 ) : (
                   <></>
                 )}
-                {shouldShowReportButton && (
+                {reportUrl ? (
                   <Button
-                    link={props.event.report_url}
+                    link={reportUrl}
                     text="report"
                     color="white"
                     withArrow={true}
                   />
-                )}
+                ) : null}
               </div>
             )}
           </div>
