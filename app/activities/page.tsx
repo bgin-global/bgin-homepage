@@ -117,7 +117,8 @@ export default function Activities() {
             return (
               <ItemList
                 key={project.title}
-                title={`${project.date}, ${project.title}`}
+                title={project.title}
+                subtitle={project.date}
                 link={project.link}
               />
             );

@@ -1,10 +1,11 @@
 import Button from "./Button/Button";
 import { CUSTOM_STYLES } from "@/styles/custom";
+import { ReactNode } from "react";
 
 interface Props {
   title: string;
   thumbnail: string;
-  description: string;
+  description: ReactNode;
   buttonTitle: string;
   buttonJumpTo: string;
   withImage?: boolean;
