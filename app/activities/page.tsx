@@ -3,10 +3,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SectionTitle from "@/components/SectionTitle";
 import { CUSTOM_STYLES } from "@/styles/custom";
-import SectionSubtitle from "@/components/SectionSubtitle";
-import ItemBlock from "@/components/ItemBlock";
-import ItemList from "@/components/ItemList";
-import { projects } from "@/contents/projects";
+import Button from "@/components/Button/Button";
 import ItemCard from "@/components/ItemCard";
 import Image from "next/image";
 
@@ -103,44 +100,16 @@ export default function Activities() {
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Projects" />
-        <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
-          <div className={CUSTOM_STYLES.DESCRIPTION}>
-            BGIN has created documents that contribute to sound blockchain
-            governance, helping different stakeholders generate shared
-            understandings and potentially leading to standards creation.
+        <div className="w-full max-w-5xl m-auto px-6 xl:px-0 flex flex-col gap-6 text-black">
+          <p className={CUSTOM_STYLES.DESCRIPTION}>
+            BGIN coordinates multi-stakeholder research that moves from
+            ideation to published guidance. Explore how ideas raised in our
+            working groups evolve into reference materials for regulators,
+            industry, and academia.
+          </p>
+          <div className="max-w-xs">
+            <Button link="/projects" text="View Projects" color="black" />
           </div>
-        </div>        
-        <SectionSubtitle title="Published" />
-
-        <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
-          {projects.published.map((project) => {
-            return (
-              <ItemList
-                key={project.title}
-                title={project.title}
-                subtitle={project.date}
-                link={project.link}
-              />
-            );
-          })}
-        </ul>
-
-        <SectionSubtitle title="Projects in progress" />
-
-        <div className={CUSTOM_STYLES.SECTION_FLEX.TWO}>
-          {projects.inProgress.map((project) => {
-            return (
-              <ItemBlock
-                key={project.title}
-                title={project.title}
-                thumbnail=""
-                description={project.description}
-                withImage={false}
-                buttonTitle="Reference"
-                buttonJumpTo={project.reference}
-              />
-            );
-          })}
         </div>
       </div>
 
