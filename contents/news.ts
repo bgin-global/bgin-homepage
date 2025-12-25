@@ -10,6 +10,15 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "10",
+    title: "BGIN Block #13 Meeting Reports Published",
+    description: "BGIN has published comprehensive meeting reports from Block #13 (October 15-17, 2025). The reports are organized by working group and include detailed summaries, presentations, and outcomes from all sessions across Cyber Security, IKP, FASE, and BGIN Agent Hack initiatives.",
+    date: "2025-10-20",
+    link: "/news/block13-meeting-reports",
+    tags: ["Publication", "Report"],
+    image: "/images/Events/Block3.jpeg"
+  },
+  {
     id: "9",
     title: "Join BGIN Layer 2 Meetup at San Francisco - October 23",
     description: "BGIN will host a Layer 2 Meetup in San Francisco on October 23, 2025, as part of Open Source AI Week. The event features presentations on Block #13 outcomes, AgentHack review, panel discussions, and collaborative workshops on blockchain governance frameworks.",

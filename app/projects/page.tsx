@@ -40,7 +40,29 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4 mt-12 space-y-4">
+        {/* Featured Block 13 Meeting Reports */}
+        <div className="w-full max-w-5xl m-auto px-10 xl:px-4 mt-8 mb-8">
+          <Link href="/events/20251015-block13/meeting-reports">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-600 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                    Block 13 Meeting Reports
+                  </h3>
+                  <p className="text-blue-700 text-sm">
+                    Comprehensive meeting reports from BGIN Block 13 (October 15-17, 2025), organized by Working Groups with session details and PDFs.
+                  </p>
+                </div>
+                <svg width="24" height="24" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-blue-600 flex-shrink-0 ml-4">
+                  <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </Link>
+        </div>
+
+        <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4 space-y-4">
           {projects.published.map((published) => (
             <ItemList
               key={`${published.title}-${published.date ?? "no-date"}`}

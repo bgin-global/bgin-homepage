@@ -59,6 +59,11 @@ export const projects: {
   ],
   published: [
     {
+      title: "Block 13 Meeting Reports",
+      date: "October 15-17 2025",
+      link: "/events/20251015-block13/meeting-reports",
+    },
+    {
       title: "Wallet Governance",
       date: "December 3 2025",
       link: "https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=drive_link",

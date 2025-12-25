@@ -445,10 +445,15 @@ export default function Block13Page() {
           </div>
 
           {/* View All Publications Button */}
-          <div className="text-center mt-8">
-            <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
-              View All Past Publications
+          <div className="text-center mt-8 space-y-4">
+            <Link href="/events/20251015-block13/meeting-reports" className="block13-btn-primary inline-block">
+              View Block 13 Meeting Reports
             </Link>
+            <div>
+              <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
+                View All Past Publications
+              </Link>
+            </div>
           </div>
         </section>
 
