@@ -67,17 +67,18 @@ export default function Governance() {
 
         <SectionSubtitle title="Other governance documents" />
 
-                <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
-                  {governanceDocuments.map((doc) => {
-                    return (
-                      <ItemList
-                        key={doc.title}
-                        title={`${doc.date}, ${doc.title}`}
-                        link={doc.link}
-                      />
-                    );
-                  })}
-                </ul>
+        <ul className="w-full text-black max-w-5xl m-auto px-10 xl:px-4">
+          {governanceDocuments.map((doc) => {
+            return (
+              <ItemList
+                key={doc.title}
+                title={doc.title}
+                subtitle={doc.date}
+                link={doc.link}
+              />
+            );
+          })}
+        </ul>
       </div>
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Our Members" />
