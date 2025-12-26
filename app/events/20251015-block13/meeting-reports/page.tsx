@@ -63,7 +63,7 @@ const meetingReports = {
     {
       sessionId: "3-1-2",
       title: "Establishing Technical Metrics to Evaluate the 'Decentralization' of Blockchain Networks",
-      pdfUrl: "/pdfs/block13/3-1-2 Establishing Technical Metrics to Evaluate the 'Decentralization' of Blockchain Networks.pdf",
+      pdfUrl: "/pdfs/block13/3-1-2 Establishing Technical Metrics to Evaluate the Decentralization of Blockchain Networks.pdf",
       sessionUrl: "/events/20251015-block13/sessions/3-2"
     },
     {
