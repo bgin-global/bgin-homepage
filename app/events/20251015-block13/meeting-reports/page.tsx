@@ -55,7 +55,7 @@ const meetingReports = {
     {
       sessionId: "3-2",
       title: "Forensics & Analysis + Toward a Common Lexicon for Harmful On-Chain Activities",
-      pdfUrl: "/pdfs/block13/3-2 Forensics & Analysis + Toward a Common Lexicon for Harmful On-Chain Activities .pdf",
+      pdfUrl: "/pdfs/block13/3-2 Forensics and Analysis Toward a Common Lexicon for Harmful On-Chain Activities.pdf",
       sessionUrl: "/events/20251015-block13/sessions/3-3"
     }
   ],
