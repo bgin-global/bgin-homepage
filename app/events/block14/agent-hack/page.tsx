@@ -1,13 +1,12 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import "@/styles/block14.css";
+import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import '@/styles/block14.css';
 
 // EventBrite registration link
-const EVENTBRITE_LINK = "https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator";
+const EVENTBRITE_LINK = 'https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator';
 
 export default function Block14AgentHackPage() {
   return (

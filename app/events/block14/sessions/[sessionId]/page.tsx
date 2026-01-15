@@ -18,14 +18,16 @@ export default function SessionDetailPage() {
     
     for (const [dayKey, dayData] of Object.entries(programData.program)) {
       const sessions = (dayData as any).sessions;
-      sessions.forEach((session: any, index: number) => {
-        allSessions.push({
-          session,
-          day: (dayData as any).date,
-          dayKey,
-          index
+      if (Array.isArray(sessions)) {
+        sessions.forEach((session: any, index: number) => {
+          allSessions.push({
+            session,
+            day: (dayData as any).date,
+            dayKey,
+            index
+          });
         });
-      });
+      }
     }
     
     const currentIndex = allSessions.findIndex(item => item.session.id === sessionId);
@@ -59,16 +61,16 @@ export default function SessionDetailPage() {
   const { current, previous, next } = sessionData;
   const session = current.session;
   const day = current.day;
-  const room = (programData.rooms as any)[session.room] || { displayName: session.room };
+  const room = (programData.rooms as any)[session.room] || { displayName: session.room || 'TBD' };
   const wg = (programData.workingGroups as any)[session.wg];
 
   // Format time display
-  const displayTime = session.time.endsWith('-') 
+  const displayTime = session.time && typeof session.time === 'string' && session.time.endsWith('-') 
     ? session.time.replace('-', ' onwards')
-    : session.time;
+    : session.time || 'TBD';
 
   // Format speakers and moderator
-  const formatPeople = (people: string) => {
+  const formatPeople = (people: string | undefined) => {
     if (!people || people === "" || people === "TBD" || people === "Optional - List of speakers") {
       return null;
     }
@@ -118,7 +120,7 @@ export default function SessionDetailPage() {
                 </svg>
                 <span>{room.displayName}</span>
               </div>
-              {wg && (
+              {wg && session.wg && (
                 <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                   {wg.abbreviation}
                 </span>
@@ -228,11 +230,11 @@ export default function SessionDetailPage() {
               </div>
 
               {/* Documents */}
-              {session.documents && session.documents.length > 0 && (
+              {session.documents && session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').length > 0 && (
                 <div className="bg-white rounded-lg border border-gray-200 p-6">
                   <h2 className="text-2xl font-bold mb-4 text-gray-900">Related Documents</h2>
                   <div className="space-y-3">
-                    {session.documents.map((doc: any, idx: number) => (
+                    {session.documents.filter((doc: any) => doc.link && doc.link.trim() !== '').map((doc: any, idx: number) => (
                       <a
                         key={idx}
                         href={doc.link}
@@ -302,7 +304,7 @@ export default function SessionDetailPage() {
               </div>
 
               {/* Working Group Card */}
-              {wg && (
+              {wg && session.wg && (
                 <div className="bg-gray-50 rounded-lg border border-gray-200 p-6">
                   <h3 className="font-bold mb-3 text-gray-800 text-lg">Working Group</h3>
                   <div className="flex items-center gap-3 mb-3">

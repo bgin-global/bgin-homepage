@@ -1,7 +1,6 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "@/styles/block14.css";

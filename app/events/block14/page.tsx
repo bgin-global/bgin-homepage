@@ -117,7 +117,7 @@ export default function Block14Page() {
 
           {/* Program Content */}
           <div className="space-y-6">
-            {program[activeDay] && program[activeDay].length > 0 ? (
+            {program[activeDay] && Array.isArray(program[activeDay]) && program[activeDay].length > 0 ? (
               viewMode === 'time' ? (
                 // Time-based view
                 <div className="space-y-6">
@@ -135,8 +135,8 @@ export default function Block14Page() {
                                       <h3 className="block13-session-title">{session.title}</h3>
                                     </div>
                                     <div className="flex items-center gap-2 ml-3 flex-shrink-0">
-                                      <span className="text-sm text-gray-600 font-medium">{session.room}</span>
-                                      {session.wg !== 'General' && (
+                                      <span className="text-sm text-gray-600 font-medium">{session.room || 'TBD'}</span>
+                                      {session.wg && session.wg !== 'General' && (
                                         <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                                           {session.wg}
                                         </span>
@@ -164,7 +164,9 @@ export default function Block14Page() {
                                           onClick={(e) => {
                                             e.preventDefault();
                                             e.stopPropagation();
-                                            window.open(doc.link, '_blank');
+                                            if (doc.link) {
+                                              window.open(doc.link, '_blank');
+                                            }
                                           }}
                                         >
                                           <span className="no-underline">📄</span>
@@ -230,8 +232,8 @@ export default function Block14Page() {
                                         <h4 className="block13-session-title">{session.title}</h4>
                                       </div>
                                       <div className="flex items-center gap-2 ml-3 flex-shrink-0">
-                                        <span className="text-sm font-bold text-gray-800">{session.displayTime}</span>
-                                        {session.wg !== 'General' && (
+                                        <span className="text-sm font-bold text-gray-800">{session.displayTime || session.time || 'TBD'}</span>
+                                        {session.wg && session.wg !== 'General' && (
                                           <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                                             {session.wg}
                                           </span>
@@ -259,7 +261,9 @@ export default function Block14Page() {
                                             onClick={(e) => {
                                               e.preventDefault();
                                               e.stopPropagation();
+                                              if (doc.link) {
                                               window.open(doc.link, '_blank');
+                                            }
                                             }}
                                           >
                                             <span className="no-underline">📄</span>
@@ -294,12 +298,12 @@ export default function Block14Page() {
           <h2 className="block13-section-title">Key Research Projects</h2>
           <div className="block13-grid block13-grid-3">
             {criticalProjects.map((project) => (
-              <div key={project.id} className={`block13-card block13-wg-card ${project.wg.toLowerCase()} flex flex-col`}>
+              <div key={project.id} className={`block13-card block13-wg-card ${project.wg?.toLowerCase() || 'general'} flex flex-col`}>
                 <div className="flex justify-between items-start mb-4">
-                  <span className={`block13-wg-badge ${project.wg.toLowerCase()}`}>
-                    {project.wg}
+                  <span className={`block13-wg-badge ${project.wg?.toLowerCase() || 'general'}`}>
+                    {project.wg || 'General'}
                   </span>
-                  <span className={`block13-phase-indicator ${project.phase.toLowerCase().replace(/\s+/g, '-')}`}>{project.phase}</span>
+                  <span className={`block13-phase-indicator ${project.phase?.toLowerCase().replace(/\s+/g, '-') || 'tbd'}`}>{project.phase || 'TBD'}</span>
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
