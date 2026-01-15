@@ -44,7 +44,7 @@ export default function EventsPage() {
       date: "March 1-2, 2026",
       time: "TBD",
       type: "Block Conference",
-      description: "Join us for BGIN Block #14 in Tokyo, Japan. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
+      description: "Join us for BGIN Block #144 in Tokyo, Japan. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
       link: "/events/block14",
       color: eventTypeColors["Block Conference"],
       venue: "Tokyo, Japan",
