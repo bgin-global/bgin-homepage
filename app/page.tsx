@@ -55,6 +55,30 @@ export default function Home() {
 
       <Hero type={1} />
 
+      {/* Block 14 Announcement Banner */}
+      {showWhatsNew && (
+        <div className="w-full bg-gradient-to-r from-blue-600 to-blue-700 border-b-2 border-blue-800 py-4 flex justify-center items-center relative">
+          <a
+            href="/events/block14"
+            className="text-xl md:text-2xl font-bold text-white hover:underline px-4 text-center flex items-center gap-3"
+            style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
+          >
+            <span className="font-normal">NEW:</span> 
+            <span>BGIN Block 14 is now open! Join us in Tokyo, Japan on March 1-2, 2026</span>
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <button
+            onClick={() => setShowWhatsNew(false)}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-lg font-bold px-2 py-1 hover:bg-blue-800 rounded transition-colors"
+            aria-label="Close announcement"
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       <div className={`${CUSTOM_STYLES.SECTION_CONTAINER.BLUE} items-start`}>
         <SectionTitle title="Latest News & Updates" />
         <News news={allNews} maxItems={3} />
