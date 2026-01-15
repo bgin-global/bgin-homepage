@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -182,7 +183,7 @@ export default function EventsPage() {
                       </button>
                     ) : (
                       <Link
-                        href={event.link}
+                        href={event.link as string}
                         className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
                       >
                         View Details

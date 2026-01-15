@@ -40,7 +40,7 @@ export const upcomingBlockConference: {
   title: "BGIN Block #14 Meeting",
   date: "March 1-2, 2026",
   location: "Tokyo, Japan",
-  link: "/events/block14",
+  link: null, // Details page not yet available
   thumbnail: "/images/Events/Block5.jpeg",
 };
 
