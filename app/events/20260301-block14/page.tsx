@@ -642,8 +642,8 @@ export default function Block14Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
                 <Image
-                  src="/images/sponsors/swiss-embassy.png"
-                  alt="Swiss Embassy"
+                  src="/images/Events/sponsor/DG.jpeg"
+                  alt="Digital Garage"
                   width={200}
                   height={100}
                   className="object-contain"
@@ -651,8 +651,8 @@ export default function Block14Page() {
               </div>
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
                 <Image
-                  src="/images/sponsors/jpCryptoIsac.jpg"
-                  alt="JP Crypto ISAC"
+                  src="/images/Events/sponsor/jpCryptoIsac.jpg"
+                  alt="JP Crypto-ISAC"
                   width={200}
                   height={100}
                   className="object-contain"
@@ -664,61 +664,13 @@ export default function Block14Page() {
           {/* Event Sponsors */}
           <div className="mb-12">
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
-            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto mb-4">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/DeCurret.png"
-                  alt="DeCurret DCP"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
+                <p className="text-2xl font-semibold text-gray-800 text-center">Swiss Embassy</p>
               </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/NRI.png"
-                  alt="NRI"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/MUFG.jpeg"
-                  alt="MUFG"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/Penguin.png"
-                  alt="Penguin Securities"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/World.png"
-                  alt="World"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/VerifyVasp.png"
-                  alt="VerifyVASP"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
+            </div>
+            <div className="text-center text-gray-600 italic">
+              More to be announced
             </div>
           </div>
 
@@ -728,13 +680,7 @@ export default function Block14Page() {
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Special Supporters</h3>
             <div className="flex justify-center max-w-md mx-auto">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px] w-full">
-                <Image
-                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
-                  alt="Fintech Association Japan"
-                  width={280}
-                  height={140}
-                  className="object-contain"
-                />
+                <p className="text-gray-600 italic text-center">To be announced</p>
               </div>
             </div>
           </div>
