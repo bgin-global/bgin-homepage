@@ -18,13 +18,14 @@ const program = processProgram();
 const rooms = programData.rooms;
 
 
-export default function Block13Page() {
+export default function Block14Page() {
   // Determine default day based on current date
-  const getDefaultDay = (): 'day1' | 'day2' | 'day3' => {
+  const getDefaultDay = (): 'day1' | 'day2'  => {
     const today = new Date();
 
     // Get today's date in EST timezone (where the venue is)
     const todayEST = new Date(today.toLocaleString("en-US", {timeZone: "America/New_York"}));
+    const todayJST = new Date(today.toLocaleString("en-US", {timeZone: "Asia/Tokyo"}));
 
     // Extract just the date parts
     const year = todayEST.getFullYear();
@@ -144,7 +145,7 @@ export default function Block13Page() {
               <div className="space-y-6">
                 {Object.entries(groupSessionsByTime(program[activeDay])).map(([time, sessions]: [string, any]) => (
                   <div key={time} className="space-y-3">
-                    <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
+                    <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time} <span className="text-xs text-gray-500">(JST)</span></h3>
                     <div className="space-y-2">
                       {sessions.map((session: any, idx: number) => {
                         return (
