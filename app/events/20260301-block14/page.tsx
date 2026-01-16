@@ -64,7 +64,7 @@ export default function Block14Page() {
         <div className="block13-hero-content">
           <h1>BGIN Block 14</h1>
           <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
-          <a href="TBD" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
+          <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
             Register Now
             <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -868,7 +868,7 @@ export default function Block14Page() {
                     <strong>Contributors:</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">Fee waivers available for those presenting work</a>
                   </p>
                   <a 
-                    href="TBD"
+                    href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block13-btn-primary inline-flex items-center gap-2"

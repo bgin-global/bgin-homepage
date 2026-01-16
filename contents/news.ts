@@ -10,6 +10,15 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "11",
+    title: "BGIN Block #14 Page Launched and Registration Now Open",
+    description: "BGIN is pleased to announce that the Block #14 event page is now live and registration is open. Join us in Tokyo, Japan from March 1-2, 2026 for the 14th general meeting. The event will feature working group sessions, presentations on key projects, and discussions on blockchain governance standards. Registration is available through Eventbrite.",
+    date: "2026-01-16",
+    link: "/events/20260301-block14",
+    tags: ["Conference", "Event"],
+    image: "/images/Events/Block5.jpeg"
+  },
+  {
     id: "10",
     title: "BGIN Block #13 Meeting Reports Published",
     description: "BGIN has published comprehensive meeting reports from Block #13 (October 15-17, 2025). The reports are organized by working group and include detailed summaries, presentations, and outcomes from all sessions across Cyber Security, IKP, FASE, and BGIN Agent Hack initiatives.",
