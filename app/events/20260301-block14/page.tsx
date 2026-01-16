@@ -101,6 +101,109 @@ export default function Block14Page() {
         </div>
       </section>
 
+      {/* What is Block Meeting Section */}
+      <section className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">What is Block Meeting?</h2>
+              </div>
+              <div className="space-y-4 text-gray-700">
+                <p className="text-lg leading-relaxed">
+                  <strong className="text-blue-700">BGIN Block Meetings</strong> are premier multi-stakeholder gatherings that bring together developers, regulators, businesses, academics, and civil society to advance blockchain governance frameworks.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  These meetings establish a <strong className="text-indigo-700">common platform for dialogue</strong> where diverse stakeholders who rarely collaborate can engage in meaningful discussions about identity, privacy, key management, and governance challenges in permissionless blockchain ecosystems.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Block Meetings drive <strong className="text-purple-700">concrete outcomes</strong> through working group sessions, critical project discussions, and collaborative problem-solving that shapes the future of blockchain technology.
+                </p>
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-5 text-white shadow-lg">
+                  <div className="flex items-start gap-3 mb-3">
+                    <svg className="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2">Standards Development Practitioner Conference</h3>
+                      <p className="text-blue-50 leading-relaxed">
+                        Block Meetings are <strong>practitioner conferences that produce standards as deliverables</strong>. Through BGIN, we develop standards that serve as a critical stepping stone toward international standards—like ISO TC307—that governments and industry follow worldwide.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600 mt-6">
+                  <p className="text-base font-semibold text-gray-800 mb-2">Why You Should Attend:</p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Shape the future of blockchain governance alongside global leaders</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Network with regulators, developers, and industry experts from around the world</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>Contribute to critical projects that address real-world blockchain challenges</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white rounded-lg p-6 shadow-md text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-gray-800 mb-2">Multi-Stakeholder</h3>
+                <p className="text-sm text-gray-600">Diverse perspectives from all sectors</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md text-center">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-gray-800 mb-2">Global Network</h3>
+                <p className="text-sm text-gray-600">International collaboration</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-gray-800 mb-2">Action-Oriented</h3>
+                <p className="text-sm text-gray-600">Concrete outcomes & solutions</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-gray-800 mb-2">Inclusive</h3>
+                <p className="text-sm text-gray-600">Open to all stakeholders</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="block13-section-container">
         {/* Program Section */}
         <section id="program" className="block13-section">
