@@ -513,6 +513,45 @@ export default function Block14Page() {
 
         </section>
 
+        {/* Stablecoin Payment Initiative Section */}
+        <section id="stablecoin-payment" className="block13-section">
+          <h2 className="block13-section-title">Stablecoin Payment Initiative</h2>
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-6 mb-6">
+            <p className="text-gray-700 max-w-3xl mb-4">
+              Following the enactment of stablecoin regulations in Japan, the United States, and other jurisdictions, 
+              BGIN has decided to accept registration fees and event sponsor fees in stablecoins (USDC). This initiative 
+              represents a practical application of regulatory frameworks in real-world blockchain governance scenarios.
+            </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+              <h3 className="font-semibold text-blue-900 mb-2">Trial Implementation at Block 14</h3>
+              <p className="text-blue-800 text-sm mb-3">
+                At Block 14, BGIN will conduct a trial of accepting stablecoin payments in USDC for registration fees and 
+                sponsor contributions. This trial will provide valuable insights into the practical implementation 
+                of stablecoin-based payment systems in an international governance context.
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+              <h3 className="font-semibold text-purple-900 mb-2">Session: Practical Stablecoin Implementation Guide</h3>
+              <p className="text-purple-800 text-sm mb-3">
+                The trial results, along with technical, operational, and regulatory-supervisory challenges, will be 
+                discussed in detail at the following session:
+              </p>
+              <Link 
+                href="/events/20260301-block14/sessions/2-10" 
+                className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-900 font-semibold transition-colors"
+              >
+                <span>FASE: Practical Stablecoin Implementation Guide</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <p className="text-purple-700 text-xs mt-2">
+                Day 2, 15:30 - 17:00 | Room B
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Related Events Section */}
         <section id="related-events" className="block13-section">
           <h2 className="block13-section-title">Related Events</h2>
