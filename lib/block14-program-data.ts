@@ -110,9 +110,9 @@ export const programData = {
         {
           "id": "1-8",
           "title": "Agent Hack",
-          "time": "9:20 - 17:00",
+          "time": "9:20 - 17:00 (Day 1), 9:20 - 15:00 (Day 2)",
           "room": "Open Space",
-          "summary": "BGIN Agent Hack session",
+          "summary": "A focused hackathon at Block 14 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding. This session runs across both Day 1 and Day 2.",
           "wg": "Agentic AI",
           "speakers": "",
           "moderator": "",
@@ -267,7 +267,7 @@ export const programData = {
           "wg": "Agentic AI",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/20260301-block14/sessions/2-8",
+          "detailPage": "/events/20260301-block14/sessions/1-8",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Agent Standards and Frameworks"]
