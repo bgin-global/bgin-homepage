@@ -72,8 +72,8 @@ export default function Block14Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="block13-hero">
-        <div className="absolute inset-0 z-[2]">
+      <section className="block13-hero" style={{ position: 'relative' }}>
+        <div className="absolute inset-0" style={{ zIndex: 1, pointerEvents: 'none' }}>
           {heroImages.map((src, index) => (
             <Image
               key={src}
@@ -87,11 +87,11 @@ export default function Block14Page() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-black bg-opacity-40 z-[10]"></div>
-        <div className="block13-hero-content relative z-[30]">
+        <div className="absolute inset-0 bg-black bg-opacity-40" style={{ zIndex: 2, pointerEvents: 'none' }}></div>
+        <div className="block13-hero-content" style={{ position: 'relative', zIndex: 50 }}>
           <h1>BGIN Block 14</h1>
           <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
-          <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
+          <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary" style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}>
             Register Now
             <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
