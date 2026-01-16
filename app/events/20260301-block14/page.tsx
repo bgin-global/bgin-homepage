@@ -5,12 +5,12 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import "@/styles/block13.css";
-import { programData } from "@/lib/block13-program-data";
-import { criticalProjects } from "@/lib/block13-critical-projects";
-import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block13-helpers";
-import RoomImageCarousel from "@/components/events/block13/RoomImageCarousel";
-import ProgramTimetable from "@/components/events/block13/ProgramTimetable";
+import "@/styles/block14.css";
+import { programData } from "@/lib/block14-program-data";
+import { criticalProjects } from "@/lib/block14-critical-projects";
+import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block14-helpers";
+import RoomImageCarousel from "@/components/events/block14/RoomImageCarousel";
+import ProgramTimetable from "@/components/events/block14/ProgramTimetable";
 
 
 // Load and process program data
@@ -18,7 +18,7 @@ const program = processProgram();
 const rooms = programData.rooms;
 
 
-export default function Block13Page() {
+export default function block14Page() {
   // Determine default day based on current date
   const getDefaultDay = (): 'day1' | 'day2' | 'day3' => {
     const today = new Date();
@@ -50,11 +50,11 @@ export default function Block13Page() {
   const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
 
   return (
-    <main className="block13-page min-h-screen bg-white w-screen">
+    <main className="block14-page min-h-screen bg-white w-screen">
       <Header />
 
       {/* Hero Section */}
-      <section className="block13-hero">
+      <section className="block14-hero">
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <Image
           src="/images/Events/Block3.jpeg"
@@ -63,10 +63,10 @@ export default function Block13Page() {
           className="object-cover"
           priority
         />
-        <div className="block13-hero-content">
+        <div className="block14-hero-content">
           <h1>BGIN Block 13</h1>
           <p>October 15–17, 2025 | Washington, D.C.</p>
-          <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
+          <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block14-btn-primary">
             Register Now
             <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -76,10 +76,10 @@ export default function Block13Page() {
         </div>
       </section>
 
-      <div className="block13-section-container">
+      <div className="block14-section-container">
         {/* Program Section */}
-        <section id="program" className="block13-section">
-          <h2 className="block13-section-title">Program</h2>
+        <section id="program" className="block14-section">
+          <h2 className="block14-section-title">Program</h2>
           <div className="mb-6">
             <p className="text-gray-700 mb-4">
               <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.
@@ -103,7 +103,7 @@ export default function Block13Page() {
           </div>
           
           {/* Day Tabs */}
-          <div id="detailed-program" className="block13-tabs scroll-mt-20">
+          <div id="detailed-program" className="block14-tabs scroll-mt-20">
             {[
               { key: 'day1' as const, label: 'Oct 15' },
               { key: 'day2' as const, label: 'Oct 16' }, 
@@ -112,7 +112,7 @@ export default function Block13Page() {
               <button
                 key={day.key}
                 onClick={() => setActiveDay(day.key)}
-                className={`block13-tab ${activeDay === day.key ? 'active' : ''}`}
+                className={`block14-tab ${activeDay === day.key ? 'active' : ''}`}
               >
                 {day.label}
               </button>
@@ -121,16 +121,16 @@ export default function Block13Page() {
 
           {/* View Toggle and Expand Controls */}
           <div className="flex justify-between items-center mb-4">
-            <div className="block13-toggle-group">
+            <div className="block14-toggle-group">
               <button
                 onClick={() => setViewMode('time')}
-                className={`block13-toggle ${viewMode === 'time' ? 'active' : ''}`}
+                className={`block14-toggle ${viewMode === 'time' ? 'active' : ''}`}
               >
                 By Time
               </button>
               <button
                 onClick={() => setViewMode('room')}
-                className={`block13-toggle ${viewMode === 'room' ? 'active' : ''}`}
+                className={`block14-toggle ${viewMode === 'room' ? 'active' : ''}`}
               >
                 By Room
               </button>
@@ -149,16 +149,16 @@ export default function Block13Page() {
                       {sessions.map((session: any, idx: number) => {
                         return (
                           <Link key={idx} href={session.detailPage} className="block no-underline">
-                            <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
+                            <div className="block14-session-card cursor-pointer hover:shadow-md transition-shadow">
                               <div className="flex flex-col">
                               <div className="flex flex-row justify-between items-start mb-1">
                                 <div className="flex items-center gap-2 flex-grow">
-                                  <h3 className="block13-session-title">{session.title}</h3>
+                                  <h3 className="block14-session-title">{session.title}</h3>
                                 </div>
                                 <div className="flex items-center gap-2 ml-3 flex-shrink-0">
                                   <span className="text-sm text-gray-600 font-medium">{session.room}</span>
                                   {session.wg !== 'General' && (
-                                    <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                                    <span className={`block14-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                                       {session.wg}
                                     </span>
                                   )}
@@ -355,16 +355,16 @@ export default function Block13Page() {
                         {sessions.map((session: any, idx: number) => {
                           return (
                             <Link key={idx} href={session.detailPage} className="block no-underline">
-                              <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
+                              <div className="block14-session-card cursor-pointer hover:shadow-md transition-shadow">
                                 <div className="flex flex-col">
                                 <div className="flex flex-row justify-between items-start mb-1">
                                   <div className="flex items-center gap-2 flex-grow">
-                                    <h4 className="block13-session-title">{session.title}</h4>
+                                    <h4 className="block14-session-title">{session.title}</h4>
                                   </div>
                                   <div className="flex items-center gap-2 ml-3 flex-shrink-0">
                                     <span className="text-sm font-bold text-gray-800">{session.displayTime}</span>
                                     {session.wg !== 'General' && (
-                                      <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
+                                      <span className={`block14-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                                         {session.wg}
                                       </span>
                                     )}
@@ -416,16 +416,16 @@ export default function Block13Page() {
         </section>
 
         {/* Critical Projects Section */}
-        <section className="block13-section">
-          <h2 className="block13-section-title">Key Research Projects</h2>
-          <div className="block13-grid block13-grid-3">
+        <section className="block14-section">
+          <h2 className="block14-section-title">Key Research Projects</h2>
+          <div className="block14-grid block14-grid-3">
             {criticalProjects.map((project) => (
-              <div key={project.id} className={`block13-card block13-wg-card ${project.wg.toLowerCase()} flex flex-col`}>
+              <div key={project.id} className={`block14-card block14-wg-card ${project.wg.toLowerCase()} flex flex-col`}>
                 <div className="flex justify-between items-start mb-4">
-                  <span className={`block13-wg-badge ${project.wg.toLowerCase()}`}>
+                  <span className={`block14-wg-badge ${project.wg.toLowerCase()}`}>
                     {project.wg}
                   </span>
-                  <span className={`block13-phase-indicator ${project.phase.toLowerCase().replace(/\s+/g, '-')}`}>{project.phase}</span>
+                  <span className={`block14-phase-indicator ${project.phase.toLowerCase().replace(/\s+/g, '-')}`}>{project.phase}</span>
                 </div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
@@ -446,11 +446,11 @@ export default function Block13Page() {
 
           {/* View All Publications Button */}
           <div className="text-center mt-8 space-y-4">
-            <Link href="/events/20251015-block13/meeting-reports" className="block13-btn-primary inline-block">
+            <Link href="/events/20251015-block14/meeting-reports" className="block14-btn-primary inline-block">
               View Block 13 Meeting Reports
             </Link>
             <div>
-              <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
+              <Link href="https://bgin-global.org/activities" className="block14-btn-secondary">
                 View All Past Publications
               </Link>
             </div>
@@ -458,8 +458,8 @@ export default function Block13Page() {
         </section>
 
         {/* Featured Publications - Commented out as per request */}
-        {/* <section id="publications" className="block13-section">
-          <h2 className="block13-section-title">Featured Publications</h2>
+        {/* <section id="publications" className="block14-section">
+          <h2 className="block14-section-title">Featured Publications</h2>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Publications Coming Soon</h3>
             <p className="text-blue-700">
@@ -467,15 +467,15 @@ export default function Block13Page() {
             </p>
           </div>
           <div className="text-center">
-            <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
+            <Link href="https://bgin-global.org/activities" className="block14-btn-secondary">
               View All Past Publications
             </Link>
           </div>
         </section> */}
 
         {/* Agent BGIN Agent Hack Section (refined) */}
-        <section id="govhack" className="block13-section">
-          <h2 className="block13-section-title">BGIN Agent Hack</h2>
+        <section id="govhack" className="block14-section">
+          <h2 className="block14-section-title">BGIN Agent Hack</h2>
           <div className="mb-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -492,7 +492,7 @@ export default function Block13Page() {
               </p>
 
               <div className="grid gap-6 lg:grid-cols-2">
-                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-blue-500">
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block14-card border-t-4 border-t-blue-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-100 text-blue-700">
                       <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -508,7 +508,7 @@ export default function Block13Page() {
                   </p>
                 </div>
 
-                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-purple-500">
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block14-card border-t-4 border-t-purple-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-purple-100 text-purple-700">
                       <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -530,7 +530,7 @@ export default function Block13Page() {
                   </ol>
                 </div>
 
-                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-emerald-500">
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block14-card border-t-4 border-t-emerald-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-emerald-100 text-emerald-700">
                       <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -550,7 +550,7 @@ export default function Block13Page() {
                   </ul>
                 </div>
 
-                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block13-card border-t-4 border-t-amber-500">
+                <div className="relative bg-white border border-gray-200 rounded-xl p-6 block14-card border-t-4 border-t-amber-500">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-amber-100 text-amber-700">
                       <svg aria-hidden="true" className="block" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -575,7 +575,7 @@ export default function Block13Page() {
           <div className="relative">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               <iframe
-                src="https://block13-agent-hack.vercel.app/"
+                src="https://block14-agent-hack.vercel.app/"
                 width="100%"
                 height="800"
                 style={{ border: 0 }}
@@ -585,7 +585,7 @@ export default function Block13Page() {
             </div>
             <div className="text-center mt-4">
               <a
-                href="https://block13-agent-hack.vercel.app/"
+                href="https://block14-agent-hack.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
@@ -600,9 +600,9 @@ export default function Block13Page() {
         </section>
 
         {/* Access & Venue Information */}
-        <section id="access-venue" className="block13-section">
-          <h2 className="block13-section-title">Access & Venue</h2>
-          <div className="block13-venue-grid">
+        <section id="access-venue" className="block14-section">
+          <h2 className="block14-section-title">Access & Venue</h2>
+          <div className="block14-venue-grid">
             <div>
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
@@ -626,7 +626,7 @@ export default function Block13Page() {
 
               <div className="mt-6">
                 <Link
-                  href="/events/20251015-block13/access"
+                  href="/events/20251015-block14/access"
                   className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -636,7 +636,7 @@ export default function Block13Page() {
                 </Link>
               </div>
             </div>
-            <div className="block13-map-container">
+            <div className="block14-map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.751890487374!2d-77.07525682346969!3d38.90698324613937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b64b36377231%3A0x19c4fa89e632b7ea!2sGeorgetown%20University!5e0!3m2!1sen!2sus!4v1703789456789!5m2!1sen!2sus"
                 width="100%"
@@ -652,8 +652,8 @@ export default function Block13Page() {
         </section>
 
         {/* Sponsors & Partners */}
-        <section className="block13-section">
-          <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
+        <section className="block14-section">
+          <h2 className="block14-section-title text-center">Sponsors & Partners</h2>
 
           {/* Sustaining Sponsors */}
           <div className="mb-10">
@@ -796,16 +796,16 @@ export default function Block13Page() {
 
         {/* Participation Info */}
         {/* Contribution & Fee Waiver Section */}
-        <section id="contributions" className="block13-section">
-          <h2 className="block13-section-title">Looking to Present Your Work?</h2>
+        <section id="contributions" className="block14-section">
+          <h2 className="block14-section-title">Looking to Present Your Work?</h2>
           <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
             <p>
               BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.</strong>
             </p>
           </div>
 
-          <div className="block13-grid block13-grid-2">
-            <div className="block13-card">
+          <div className="block14-grid block14-grid-2">
+            <div className="block14-card">
               <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">How BGIN Sessions Work</h3>
               <div className="space-y-4">
                 <div>
@@ -828,7 +828,7 @@ export default function Block13Page() {
               </div>
             </div>
 
-            <div className="block13-card">
+            <div className="block14-card">
               <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Submit Contribution for Fee Waiver</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -859,7 +859,7 @@ export default function Block13Page() {
                   href="https://bgin.discourse.group" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block13-btn-secondary"
+                  className="block14-btn-secondary"
                 >
                   Join Discussion on Discourse Forum
                 </a>
@@ -868,9 +868,9 @@ export default function Block13Page() {
           </div>
         </section>
 
-        <section id="participation" className="block13-section">
-          <div className="block13-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-12">
-            <h2 className="block13-section-title">Who Should Join</h2>
+        <section id="participation" className="block14-section">
+          <div className="block14-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 lg:p-12">
+            <h2 className="block14-section-title">Who Should Join</h2>
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Perfect for:</h3>
@@ -915,7 +915,7 @@ export default function Block13Page() {
                     href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block13-btn-primary inline-flex items-center gap-2"
+                    className="block14-btn-primary inline-flex items-center gap-2"
                   >
                    	Register Now
                     <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -930,14 +930,14 @@ export default function Block13Page() {
         </section>
 
         {/* Past BGIN Events */}
-        <section className="block13-section">
-          <h2 className="block13-section-title text-center">Past BGIN Events</h2>
+        <section className="block14-section">
+          <h2 className="block14-section-title text-center">Past BGIN Events</h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
             Explore our journey of building global blockchain governance through previous Block conferences
           </p>
-          <div className="block13-grid block13-grid-4">
-            <div className="block13-card">
-              <div className="block13-publication-image">
+          <div className="block14-grid block14-grid-4">
+            <div className="block14-card">
+              <div className="block14-publication-image">
                 <Image
                   src="/images/Events/Block5.jpeg"
                   alt="Block 12"
@@ -946,17 +946,17 @@ export default function Block13Page() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 12</h4>
-                <p className="block13-publication-summary">March 2-3, 2025 | Shibuya, Tokyo</p>
+              <div className="block14-publication-content">
+                <h4 className="block14-publication-title">BGIN Block 12</h4>
+                <p className="block14-publication-summary">March 2-3, 2025 | Shibuya, Tokyo</p>
                 <Link href="/events/20250302-block12" className="text-blue-600 hover:text-blue-800 font-semibold">
                   Learn More →
                 </Link>
               </div>
             </div>
             
-            <div className="block13-card">
-              <div className="block13-publication-image">
+            <div className="block14-card">
+              <div className="block14-publication-image">
                 <Image
                   src="/images/Events/Block3.jpeg"
                   alt="Block 11"
@@ -965,17 +965,17 @@ export default function Block13Page() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 11</h4>
-                <p className="block13-publication-summary">October 21-22, 2024 | Washington, D.C.</p>
+              <div className="block14-publication-content">
+                <h4 className="block14-publication-title">BGIN Block 11</h4>
+                <p className="block14-publication-summary">October 21-22, 2024 | Washington, D.C.</p>
                 <Link href="/events/20241025-block11" className="text-blue-600 hover:text-blue-800 font-semibold">
                   Learn More →
                 </Link>
               </div>
             </div>
             
-            <div className="block13-card">
-              <div className="block13-publication-image">
+            <div className="block14-card">
+              <div className="block14-publication-image">
                 <Image
                   src="/images/Events/Block5.jpeg"
                   alt="Block 10"
@@ -984,17 +984,17 @@ export default function Block13Page() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 10</h4>
-                <p className="block13-publication-summary">March 3-6, 2024 | Tokyo, Japan</p>
+              <div className="block14-publication-content">
+                <h4 className="block14-publication-title">BGIN Block 10</h4>
+                <p className="block14-publication-summary">March 3-6, 2024 | Tokyo, Japan</p>
                 <Link href="/events/20240303-block10" className="text-blue-600 hover:text-blue-800 font-semibold">
                   Learn More →
                 </Link>
               </div>
             </div>
             
-            <div className="block13-card">
-              <div className="block13-publication-image">
+            <div className="block14-card">
+              <div className="block14-publication-image">
                 <Image
                   src="/images/Events/venue/477_collider.jpg"
                   alt="Block 9"
@@ -1003,9 +1003,9 @@ export default function Block13Page() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 9</h4>
-                <p className="block13-publication-summary">November 19-22, 2023 | Sydney, Australia</p>
+              <div className="block14-publication-content">
+                <h4 className="block14-publication-title">BGIN Block 9</h4>
+                <p className="block14-publication-summary">November 19-22, 2023 | Sydney, Australia</p>
                 <Link href="/events/20231119-block9" className="text-blue-600 hover:text-blue-800 font-semibold">
                   Learn More →
                 </Link>
@@ -1013,14 +1013,14 @@ export default function Block13Page() {
             </div>
           </div>
           <div className="text-center mt-8">
-            <Link href="/activities/block-conference" className="block13-btn-secondary">
+            <Link href="/activities/block-conference" className="block14-btn-secondary">
               View All Block Conferences
             </Link>
           </div>
         </section>
 
         {/* CTA Section - Join the Discussion */}
-        <section className="block13-section">
+        <section className="block14-section">
           <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
             <div className="flex items-start h-fit max-w-5xl m-auto">
               <div className="flex-col flex items-start gap-2.5 py-16">
