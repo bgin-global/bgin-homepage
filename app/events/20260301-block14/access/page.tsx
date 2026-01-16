@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "@/styles/block14.css";
 
-export default function Block14AccessPage() {
+export default function block14AccessPage() {
   return (
     <>
       <Header />
@@ -37,12 +37,11 @@ export default function Block14AccessPage() {
                 Dragon Gate
               </h3>
               <p className="text-gray-700 mb-4">
-              DRAGON GATE Shibuya PARCO DG Building<br />
-              15-1 Udagawacho, Shibuya, Tokyo<br />
-              Japan
+                3700 O St NW<br />
+                Washington, DC 20057<br />
+                United States
               </p>
 
-          {/* Event Venues
               <h4 className="font-semibold mb-2 mt-6">Event Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li><strong>Leavey Center - Program Room</strong> (Capacity: 72) - BGIN Agent Hack (Day 1, 2)</li>
@@ -50,18 +49,16 @@ export default function Block14AccessPage() {
                 <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240 - Main Sessions (Day 3)</li>
                 <li><strong>Leavey Center - Faculty Club Restaurant</strong> - Networking and reception (Day 1)</li>
               </ul>
-          */}
-
             </div>
           </section>
 
-          {/* Campus Map 
-          <section className="block414-section">
+          {/* Campus Map */}
+          <section className="block14-section">
             <h2 className="block14-section-title">Campus Map</h2>
             <div className="block14-card">
               <div className="mb-4">
                 <p className="text-gray-700">
-                  Overview of Georgetown University campus showing the location of all Block 14 event venues
+                  Overview of Georgetown University campus showing the location of all Block 13 event venues
                 </p>
               </div>
               <div className="relative w-full rounded-lg overflow-hidden shadow-lg">
@@ -75,9 +72,8 @@ export default function Block14AccessPage() {
               </div>
             </div>
           </section>
-          */}
 
-          {/* Leavey Center Floor Plan 
+          {/* Leavey Center Floor Plan */}
           <section className="block14-section">
             <h2 className="block14-section-title">Leavey Center Floor Plan</h2>
             <div className="block14-card">
@@ -97,18 +93,14 @@ export default function Block14AccessPage() {
               </div>
             </div>
           </section>
-          */}
 
-
-          {/* Room Photos 
+          {/* Room Photos */}
           <section className="block14-section">
             <h2 className="block14-section-title">Venue Rooms</h2>
-            */}
 
-
-            {/* Main Rooms Grid 
+            {/* Main Rooms Grid */}
             <div className="block14-grid block14-grid-2 mb-8">
-              {/* Leavey Program Room
+              {/* Leavey Program Room */}
               <div className="block14-card overflow-hidden">
                 <Image
                   src="/images/Events/block14/Program_Room.jpeg"
@@ -121,9 +113,7 @@ export default function Block14AccessPage() {
                 <p className="text-gray-600">Capacity: 72 | BGIN Agent Hack (Day 1, 2)</p>
               </div>
 
-              */}
-
-              {/* Arrupe Hall
+              {/* Arrupe Hall */}
               <div className="block14-card overflow-hidden">
                 <Image
                   src="/images/Events/block14/Aurppe_1.jpeg"
@@ -135,10 +125,8 @@ export default function Block14AccessPage() {
                 <h3 className="text-xl font-semibold mb-2">Pedro Arrupe Hall</h3>
                 <p className="text-gray-600">Capacity: 50 | Main Sessions (Day 1, 2)</p>
               </div>
-              */}
 
-
-              {/* Hariri Building
+              {/* Hariri Building */}
               <div className="block14-card overflow-hidden">
                 <Image
                   src="/images/Events/block14/Hariri_1.jpeg"
@@ -150,10 +138,8 @@ export default function Block14AccessPage() {
                 <h3 className="text-xl font-semibold mb-2">Rafik B. Hariri Building</h3>
                 <p className="text-gray-600">Rooms 140 & 240 | Main Sessions (Day 3)</p>
               </div>
-              */}
 
-
-              {/* Faculty Club
+              {/* Faculty Club */}
               <div className="block14-card overflow-hidden">
                 <Image
                   src="/images/Events/block14/Faculty_Club_Restaurant.jpeg"
@@ -166,9 +152,8 @@ export default function Block14AccessPage() {
                 <p className="text-gray-600">Networking and reception (Day 1)</p>
               </div>
             </div>
-            */}
 
-            {/* Additional Room Photos
+            {/* Additional Room Photos */}
             <h3 className="text-2xl font-semibold mb-6">Additional Venue Views</h3>
             <div className="block14-grid block14-grid-3">
               <div className="block14-card overflow-hidden">
@@ -206,19 +191,17 @@ export default function Block14AccessPage() {
 
             </div>
           </section>
-          */}
-
 
           {/* Back to main page CTA */}
           <section className="block14-section">
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Join Block 14?</h2>
+              <h2 className="text-3xl font-bold mb-4">Ready to Join Block 13?</h2>
               <p className="text-gray-700 mb-6">
-                Register now to secure your spot at BGIN Block 14
+                Register now to secure your spot at BGIN Block 13
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/events/20260301-block14#access-venue"
+                  href="/events/20251015-block14#access-venue"
                   className="block14-btn-secondary"
                 >
                   <svg className="mr-2 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,7 +210,7 @@ export default function Block14AccessPage() {
                   Back to Event Page
                 </Link>
                 <a
-                  href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator"
+                  href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block14-btn-primary"

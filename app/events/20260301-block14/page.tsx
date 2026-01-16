@@ -18,7 +18,7 @@ const program = processProgram();
 const rooms = programData.rooms;
 
 
-export default function block14Page() {
+export default function Block14Page() {
   // Determine default day based on current date
   const getDefaultDay = (): 'day1' | 'day2' | 'day3' => {
     const today = new Date();
