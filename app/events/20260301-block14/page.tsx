@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import "@/styles/block14.css";
-import { programData } from "@/lib/block13-program-data";
+import { programData } from "@/lib/block14-program-data";
 import { criticalProjects } from "@/lib/block13-critical-projects";
 import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block13-helpers";
 import RoomImageCarousel from "@/components/events/block13/RoomImageCarousel";

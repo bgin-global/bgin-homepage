@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { programData } from "@/lib/block13-program-data";
+import { programData } from "@/lib/block14-program-data";
 import "@/styles/block13.css";
 
 export default function SessionDetailPage() {
