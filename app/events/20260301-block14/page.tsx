@@ -1,16 +1,16 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
+import React, { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import "@/styles/block13.css";
-import { programData } from "@/lib/block13-program-data";
-import { criticalProjects } from "@/lib/block13-critical-projects";
-import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block13-helpers";
-import RoomImageCarousel from "@/components/events/block13/RoomImageCarousel";
-import ProgramTimetable from "@/components/events/block13/ProgramTimetable";
+import { programData } from "@/lib/block14-program-data";
+import { criticalProjects } from "@/lib/block14-critical-projects";
+import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block14-helpers";
+import RoomImageCarousel from "@/components/events/block14/RoomImageCarousel";
+import ProgramTimetable from "@/components/events/block14/ProgramTimetable";
 
 
 // Load and process program data
@@ -18,27 +18,25 @@ const program = processProgram();
 const rooms = programData.rooms;
 
 
-export default function Block13Page() {
+export default function Block14Page() {
   // Determine default day based on current date
-  const getDefaultDay = (): 'day1' | 'day2' | 'day3' => {
+  const getDefaultDay = (): 'day1' | 'day2' => {
     const today = new Date();
 
-    // Get today's date in EST timezone (where the venue is)
-    const todayEST = new Date(today.toLocaleString("en-US", {timeZone: "America/New_York"}));
+    // Get today's date in JST timezone (where the venue is)
+    const todayJST = new Date(today.toLocaleString("en-US", {timeZone: "Asia/Tokyo"}));
 
     // Extract just the date parts
-    const year = todayEST.getFullYear();
-    const month = todayEST.getMonth(); // 0-indexed (October = 9)
-    const day = todayEST.getDate();
+    const year = todayJST.getFullYear();
+    const month = todayJST.getMonth(); // 0-indexed (March = 2)
+    const day = todayJST.getDate();
 
-    // Check for Block 13 dates in 2025
-    if (year === 2025 && month === 9) { // October 2025
-      if (day === 15) {
+    // Check for Block 14 dates in 2026
+    if (year === 2026 && month === 2) { // March 2026
+      if (day === 1) {
         return 'day1';
-      } else if (day === 16) {
+      } else if (day === 2) {
         return 'day2';
-      } else if (day === 17) {
-        return 'day3';
       }
     }
 
@@ -46,8 +44,28 @@ export default function Block13Page() {
     return 'day1';
   };
 
-  const [activeDay, setActiveDay] = useState<'day1' | 'day2' | 'day3'>(getDefaultDay());
+  const [activeDay, setActiveDay] = useState<'day1' | 'day2'>(getDefaultDay());
   const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
+  
+  // Hero image carousel
+  const heroImages = [
+    "/images/Events/Block5.jpeg",
+    "/images/Events/venue/session_photo_1.jpeg",
+    "/images/Events/venue/session_photo_2.jpeg",
+    "/images/Events/venue/session_photo_3.jpeg",
+    "/images/Events/venue/DragonGate_RoomA.jpg",
+    "/images/Events/venue/Shibuya_Crossing.jpeg"
+  ];
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
+
+  // Auto-rotate hero images every 8 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroImage((prev: number) => (prev + 1) % heroImages.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   return (
     <main className="block13-page min-h-screen bg-white w-screen">
@@ -55,18 +73,25 @@ export default function Block13Page() {
 
       {/* Hero Section */}
       <section className="block13-hero">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <Image
-          src="/images/Events/Block3.jpeg"
-          alt="Washington D.C."
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="block13-hero-content">
-          <h1>BGIN Block 13</h1>
-          <p>October 15–17, 2025 | Washington, D.C.</p>
-          <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+        <div className="absolute inset-0">
+          {heroImages.map((src, index) => (
+            <Image
+              key={src}
+              src={src}
+              alt={index === 0 ? "Shibuya, Tokyo" : `BGIN Block 14 - Image ${index + 1}`}
+              fill
+              className={`object-cover transition-opacity duration-1000 ${
+                index === currentHeroImage ? 'opacity-100' : 'opacity-0'
+              }`}
+              priority={index === 0}
+            />
+          ))}
+        </div>
+        <div className="block13-hero-content relative z-20">
+          <h1>BGIN Block 14</h1>
+          <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
+          <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
             Register Now
             <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -82,10 +107,16 @@ export default function Block13Page() {
           <h2 className="block13-section-title">Program</h2>
           <div className="mb-6">
             <p className="text-gray-700 mb-4">
-              <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.
+              <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 14 receive complete registration fee waivers.
               {" "}
               <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-4">
+              <h3 className="text-lg font-semibold text-blue-800 mb-2">Part of Japan Fintech Week</h3>
+              <p className="text-blue-700">
+                BGIN Block 14 is held during <a href="https://www.fsa.go.jp/policy/japanfintechweek/2026/index_en.html" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900">Japan Fintech Week</a>, bringing together regulators, technologists, and industry leaders from around the world.
+              </p>
+            </div>
             
             {/* <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-800 mb-2">Note: Program is Tentative</h3>
@@ -105,9 +136,8 @@ export default function Block13Page() {
           {/* Day Tabs */}
           <div id="detailed-program" className="block13-tabs scroll-mt-20">
             {[
-              { key: 'day1' as const, label: 'Oct 15' },
-              { key: 'day2' as const, label: 'Oct 16' }, 
-              { key: 'day3' as const, label: 'Oct 17' }
+              { key: 'day1' as const, label: 'Mar 1' },
+              { key: 'day2' as const, label: 'Mar 2' }
             ].map((day) => (
               <button
                 key={day.key}
@@ -183,13 +213,13 @@ export default function Block13Page() {
                                         <span
                                           key={docIdx}
                                           className="document-link text-xs text-blue-600 hover:text-blue-800 cursor-pointer inline-flex items-center gap-1"
-                                          onClick={(e) => {
+                                          onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
                                             e.preventDefault();
                                             e.stopPropagation();
                                             window.open(doc.link, '_blank');
                                           }}
                                         >
-                                          <span className="no-underline">{session.wg === 'BGIN Agent Hack' && doc.type === 'Website' ? '🔗' : '📄'}</span>
+                                          <span className="no-underline">{session.wg === 'Agentic AI' && doc.type === 'Website' ? '🔗' : '📄'}</span>
                                           <span className="underline">{doc.title}</span>
                                         </span>
                                       ))}
@@ -225,97 +255,21 @@ export default function Block13Page() {
 
                             {/* Building and location info */}
                             <div className="space-y-2 mb-4">
-                              {roomData?.displayName?.includes('Hariri') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
-                                  </a>
-                                </p>
-                              )}
-                              {roomData?.displayName?.includes('Arrupe') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    1575 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                </p>
-                              )}
-                              {roomData?.displayName?.includes('Leavey') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    1560 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                </p>
-                              )}
-                              {(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
-                                <div className="text-gray-700">
-                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
-                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    New South, 3700 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                  <br/><br/>
-                                  <span className="font-semibold">Bulldog Alley</span><br/>
-                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    1560 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                </div>
-                              )}
-                              {(roomData?.displayName?.includes('HFSC') && !(roomData?.displayName?.includes('Bulldog Alley'))) && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
-                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    New South, 3700 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                  <br/><br/>
-                                </p>
-                              )}
-                              {roomData?.displayName?.includes('Faculty Club') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Venue:</span> Georgetown University Faculty Club Restaurant<br/>
-                                  <span className="font-semibold">Location details:</span> To be announced
-                                </p>
-                              )}
+                              <p className="text-gray-700">
+                                <span className="font-semibold">Building:</span> Shibuya Parco DG Bldg. (Shibuya Parco Dragon Gate Building)<br/>
+                                <span className="font-semibold">Floor:</span> 18th Floor<br/>
+                                <span className="font-semibold">Address:</span>{' '}
+                                <a
+                                  href="https://maps.app.goo.gl/iZc37UYCEVfbgGCt6"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-600 hover:text-blue-800 underline"
+                                >
+                                  15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan
+                                </a>
+                                <br/>
+                                <span className="text-sm text-gray-600 mt-2 block">Same venue as Block 12</span>
+                              </p>
                             </div>
 
                             {roomData?.capacity && roomData.capacity !== 'TBD' && (
@@ -389,13 +343,13 @@ export default function Block13Page() {
                                           <span
                                             key={docIdx}
                                             className="document-link text-xs text-blue-600 hover:text-blue-800 cursor-pointer inline-flex items-center gap-1"
-                                            onClick={(e) => {
+                                            onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
                                               e.preventDefault();
                                               e.stopPropagation();
                                               window.open(doc.link, '_blank');
                                             }}
                                           >
-                                            <span className="no-underline">{session.wg === 'BGIN Agent Hack' && doc.type === 'Website' ? '🔗' : '📄'}</span>
+                                            <span className="no-underline">{session.wg === 'Agentic AI' && doc.type === 'Website' ? '🔗' : '📄'}</span>
                                             <span className="underline">{doc.title}</span>
                                           </span>
                                         ))}
@@ -446,8 +400,8 @@ export default function Block13Page() {
 
           {/* View All Publications Button */}
           <div className="text-center mt-8 space-y-4">
-            <Link href="/events/20251015-block13/meeting-reports" className="block13-btn-primary inline-block">
-              View Block 13 Meeting Reports
+            <Link href="/events/20260301-block14/meeting-reports" className="block13-btn-primary inline-block">
+              View Block 14 Meeting Reports
             </Link>
             <div>
               <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
@@ -473,16 +427,29 @@ export default function Block13Page() {
           </div>
         </section> */}
 
-        {/* Agent BGIN Agent Hack Section (refined) */}
-        <section id="govhack" className="block13-section">
-          <h2 className="block13-section-title">BGIN Agent Hack</h2>
+        {/* Agentic AI Working Group Section */}
+        <section id="agentic-ai" className="block13-section">
+          <h2 className="block13-section-title">Agentic AI Working Group</h2>
           <div className="mb-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-blue-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
+            <span className="inline-flex items-center gap-2 rounded-full bg-yellow-700 text-white px-3 py-1 text-xs font-semibold shadow-sm">
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 3v3M12 18v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M3 12h3M18 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              Policy → Code
+              AI Agent Governance
             </span>
+          </div>
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-6 mb-6">
+            <p className="text-gray-700 max-w-3xl mb-4">
+              The Agentic AI Working Group focuses on AI agent governance and security information sharing platforms. 
+              At Block 14, we will host the BGIN Agent Hack, where policy discussions turn into working software through agent-mediated standards and programmable governance.
+            </p>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <h3 className="font-semibold text-yellow-900 mb-2">BGIN Agent Hack</h3>
+              <p className="text-yellow-900 text-sm">
+                A focused hackathon where teams build and validate policy-to-code implementations. 
+                The Agent Hack will run in the Open Space throughout both days of Block 14.
+              </p>
+            </div>
           </div>
           {/* Original content commented out - replaced with iframe preview
           <div className="relative">
@@ -571,30 +538,66 @@ export default function Block13Page() {
           </div>
           */}
 
-          {/* Interactive preview of BGIN Agent Hack website */}
-          <div className="relative">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-              <iframe
-                src="https://block13-agent-hack.vercel.app/"
-                width="100%"
-                height="800"
-                style={{ border: 0 }}
-                title="BGIN Agent Hack Preview"
-                className="w-full"
-              />
+        </section>
+
+        {/* Stablecoin Payment Initiative Section */}
+        <section id="stablecoin-payment" className="block13-section">
+          <h2 className="block13-section-title">Stablecoin Payment Initiative</h2>
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-6 mb-6">
+            <p className="text-gray-700 max-w-3xl mb-4">
+              Following the enactment of stablecoin regulations in Japan, the United States, and other jurisdictions, 
+              BGIN has decided to accept registration fees and event sponsor fees in stablecoins (USDC). This initiative 
+              represents a practical application of regulatory frameworks in real-world blockchain governance scenarios.
+            </p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+              <h3 className="font-semibold text-blue-900 mb-2">Trial Implementation at Block 14</h3>
+              <p className="text-blue-800 text-sm mb-3">
+                At Block 14, BGIN will conduct a trial of accepting stablecoin payments in USDC for registration fees and 
+                sponsor contributions. This trial will provide valuable insights into the practical implementation 
+                of stablecoin-based payment systems in an international governance context.
+              </p>
             </div>
-            <div className="text-center mt-4">
-              <a
-                href="https://block13-agent-hack.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+              <h3 className="font-semibold text-purple-900 mb-2">Session: Practical Stablecoin Implementation Guide</h3>
+              <p className="text-purple-800 text-sm mb-3">
+                The trial results, along with technical, operational, and regulatory-supervisory challenges, will be 
+                discussed in detail at the following session:
+              </p>
+              <Link 
+                href="/events/20260301-block14/sessions/2-10" 
+                className="inline-flex items-center gap-2 text-purple-700 hover:text-purple-900 font-semibold transition-colors"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <span>FASE: Practical Stablecoin Implementation Guide</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-                Open Full Website
-              </a>
+              </Link>
+              <p className="text-purple-700 text-xs mt-2">
+                Day 2, 15:30 - 17:00 | Room B
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Events Section */}
+        <section id="related-events" className="block13-section">
+          <h2 className="block13-section-title">Related Events</h2>
+          <div className="block13-grid block13-grid-2">
+            <div className="block13-card">
+              <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">FSA Blockchain Roundtable</h3>
+              <p className="text-gray-600 mb-4">
+                <strong>Date:</strong> February 27, 2026 (afternoon)<br/>
+                <strong>Description:</strong> Closed roundtable on DeFi AML/privacy and exchange cybersecurity hosted by the Financial Services Agency.
+              </p>
+              <p className="text-sm text-gray-500">Link: TBD</p>
+            </div>
+            <div className="block13-card">
+              <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">Fin/Sum</h3>
+              <p className="text-gray-600 mb-4">
+                <strong>Date:</strong> March 3-6, 2026<br/>
+                <strong>Description:</strong> Financial Services Agency session during Japan Fintech Week.
+              </p>
+              <p className="text-sm text-gray-500">Link: TBD</p>
             </div>
           </div>
         </section>
@@ -606,27 +609,32 @@ export default function Block13Page() {
             <div>
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
-                Georgetown University<br/>
-                Washington, D.C.<br/>
-                United States
+                Shibuya Parco DG Bldg.<br/>
+                (Shibuya Parco Dragon Gate Building)<br/>
+                18th Floor<br/>
+                Shibuya, Tokyo, Japan
+              </p>
+
+              <h4 className="font-semibold mb-2 mt-6">Address</h4>
+              <p className="text-sm text-gray-600 mb-4">
+                15-1 Udagawa-cho, Shibuya-ku<br/>
+                Tokyo 150-0042, Japan
               </p>
 
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Thomas & Dorothy Leavey Center - Program Room</strong> (BGIN Agent Hack)</li>
-                <li><strong>Pedro Arrupe, S.J. Hall</strong> (Main Sessions (Day 1, 2))</li>
-                <li><strong>Rafik B. Hariri Building</strong> - Rooms 140 & 240 (Main Sessions (Day 3))</li>
+                <li><strong>Room A</strong> - Main Sessions</li>
+                <li><strong>Room B</strong> - Main Sessions</li>
+                <li><strong>Open Space</strong> - BGIN Agent Hack</li>
               </ul>
 
-              <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
-              <p className="text-sm text-gray-600">
-                <strong>Georgetown University Faculty Club Restaurant</strong><br/>
-                Located adjacent to the Leavey Center
+              <p className="text-sm text-gray-600 mt-4 italic">
+                Same venue as Block 12
               </p>
 
               <div className="mt-6">
                 <Link
-                  href="/events/20251015-block13/access"
+                  href="/events/20260301-block14/access"
                   className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -638,7 +646,7 @@ export default function Block13Page() {
             </div>
             <div className="block13-map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.751890487374!2d-77.07525682346969!3d38.90698324613937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b64b36377231%3A0x19c4fa89e632b7ea!2sGeorgetown%20University!5e0!3m2!1sen!2sus!4v1703789456789!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.5!2d139.6993!3d35.6621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca82a94fa3b%3A0x6b0458b11c0bb3d4!2sDigital%20Garage!5e0!3m2!1sen!2sjp!4v1736426543210!5m2!1sen!2sjp"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -661,8 +669,8 @@ export default function Block13Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
                 <Image
-                  src="/images/Events/sponsor/jpCryptoIsac.jpg"
-                  alt="JP Crypto ISAC"
+                  src="/images/Events/sponsor/DG.jpeg"
+                  alt="Digital Garage"
                   width={200}
                   height={100}
                   className="object-contain"
@@ -670,8 +678,8 @@ export default function Block13Page() {
               </div>
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[160px]">
                 <Image
-                  src="/images/Events/sponsor/DG.jpeg"
-                  alt="Digital Garage"
+                  src="/images/Events/sponsor/jpCryptoIsac.jpg"
+                  alt="JP Crypto-ISAC"
                   width={200}
                   height={100}
                   className="object-contain"
@@ -683,102 +691,23 @@ export default function Block13Page() {
           {/* Event Sponsors */}
           <div className="mb-12">
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
-            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto mb-4">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/DeCurret.png"
-                  alt="DeCurret DCP"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
+                <p className="text-2xl font-semibold text-gray-800 text-center">Swiss Embassy</p>
               </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/NRI.png"
-                  alt="NRI"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/MUFG.jpeg"
-                  alt="MUFG"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/Penguin.png"
-                  alt="Penguin Securities"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/World.png"
-                  alt="World"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <Image
-                  src="/images/Events/sponsor/VerifyVasp.png"
-                  alt="VerifyVASP"
-                  width={220}
-                  height={110}
-                  className="object-contain"
-                />
-              </div>
+            </div>
+            <div className="text-center text-gray-600 italic">
+              More to be announced
             </div>
           </div>
 
-          {/* Academic Hosts */}
-          <div className="mb-12">
-            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Academic Hosts</h3>
-            <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
-                <Image
-                  src="/images/Events/sponsor/Georgetown University Psaros Center.png"
-                  alt="Georgetown University Psaros Center"
-                  width={320}
-                  height={160}
-                  className="object-contain"
-                />
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
-                <div className="text-center">
-                  <h4 className="text-gray-700 font-medium text-lg">Georgetown University<br/>Department of Computer Science</h4>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
-                <div className="text-center">
-                  <h4 className="text-gray-700 font-medium text-lg">CyberSMART Research Centre</h4>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Special Supporters */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Special Supporters</h3>
             <div className="flex justify-center max-w-md mx-auto">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px] w-full">
-                <Image
-                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
-                  alt="Fintech Association Japan"
-                  width={280}
-                  height={140}
-                  className="object-contain"
-                />
+                <p className="text-gray-600 italic text-center">To be announced</p>
               </div>
             </div>
           </div>
@@ -800,7 +729,7 @@ export default function Block13Page() {
           <h2 className="block13-section-title">Looking to Present Your Work?</h2>
           <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
             <p>
-              BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.</strong>
+              BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 14 receive complete registration fee waivers.</strong>
             </p>
           </div>
 
@@ -849,7 +778,7 @@ export default function Block13Page() {
                   <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Receive 100% Discount Code</h4>
-                    <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 13 registration.</p>
+                    <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 14 registration.</p>
                   </div>
                 </div>
               </div>
@@ -912,7 +841,7 @@ export default function Block13Page() {
                     <strong>Contributors:</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">Fee waivers available for those presenting work</a>
                   </p>
                   <a 
-                    href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
+                    href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block13-btn-primary inline-flex items-center gap-2"
@@ -936,6 +865,25 @@ export default function Block13Page() {
             Explore our journey of building global blockchain governance through previous Block conferences
           </p>
           <div className="block13-grid block13-grid-4">
+            <div className="block13-card">
+              <div className="block13-publication-image">
+                <Image
+                  src="/images/Events/Block3.jpeg"
+                  alt="Block 13"
+                  width={200}
+                  height={150}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="block13-publication-content">
+                <h4 className="block13-publication-title">BGIN Block 13</h4>
+                <p className="block13-publication-summary">October 15-17, 2025 | Washington, D.C.</p>
+                <Link href="/events/20251015-block13" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+            
             <div className="block13-card">
               <div className="block13-publication-image">
                 <Image
@@ -992,25 +940,6 @@ export default function Block13Page() {
                 </Link>
               </div>
             </div>
-            
-            <div className="block13-card">
-              <div className="block13-publication-image">
-                <Image
-                  src="/images/Events/venue/477_collider.jpg"
-                  alt="Block 9"
-                  width={200}
-                  height={150}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="block13-publication-content">
-                <h4 className="block13-publication-title">BGIN Block 9</h4>
-                <p className="block13-publication-summary">November 19-22, 2023 | Sydney, Australia</p>
-                <Link href="/events/20231119-block9" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Learn More →
-                </Link>
-              </div>
-            </div>
           </div>
           <div className="text-center mt-8">
             <Link href="/activities/block-conference" className="block13-btn-secondary">
@@ -1030,7 +959,7 @@ export default function Block13Page() {
                       <div className="w-full flex-col flex items-start gap-2 text-white">
                         <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
                         <div className="text-lg leading-[19px] font-Inter">
-                          Be part of shaping the future of blockchain governance at BGIN Block 13. 
+                          Be part of shaping the future of blockchain governance at BGIN Block 14. 
                           Connect with regulators, technologists, and industry leaders from around the world. 
                           Join our community to stay updated on the latest developments and participate in ongoing discussions.
                         </div>

@@ -12,7 +12,7 @@ export const programData = {
           "wg": "General",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-1",
+          "detailPage": "/events/20260301-block14/sessions/1-1",
           "agenda": [],
           "documents": [],
           "relatedProjects": []
@@ -26,7 +26,7 @@ export const programData = {
           "wg": "Cyber Security",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-2",
+          "detailPage": "/events/20260301-block14/sessions/1-2",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Cyber Security Information Sharing Framework"]
@@ -40,7 +40,7 @@ export const programData = {
           "wg": "Agentic AI",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-3",
+          "detailPage": "/events/20260301-block14/sessions/1-3",
           "agenda": [],
           "documents": [],
           "relatedProjects": []
@@ -54,7 +54,7 @@ export const programData = {
           "wg": "Cyber Security",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-4",
+          "detailPage": "/events/20260301-block14/sessions/1-4",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Cyber Security Information Sharing Framework"]
@@ -68,7 +68,7 @@ export const programData = {
           "wg": "FASE",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-5",
+          "detailPage": "/events/20260301-block14/sessions/1-5",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Harmonization among Crypto-asset, stablecoin and tokenized deposit"]
@@ -82,7 +82,7 @@ export const programData = {
           "wg": "IKP",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-6",
+          "detailPage": "/events/20260301-block14/sessions/1-6",
           "agenda": [],
           "documents": [
             {
@@ -102,7 +102,7 @@ export const programData = {
           "wg": "FASE",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-7",
+          "detailPage": "/events/20260301-block14/sessions/1-7",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Establishing Technical Metrics to evaluate the decentralization of the blockchain network"]
@@ -116,7 +116,7 @@ export const programData = {
           "wg": "Agentic AI",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-8",
+          "detailPage": "/events/20260301-block14/sessions/1-8",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Agent Standards and Frameworks"]
@@ -130,7 +130,7 @@ export const programData = {
           "wg": "IKP",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-9",
+          "detailPage": "/events/20260301-block14/sessions/1-9",
           "agenda": [],
           "documents": [
             {
@@ -150,7 +150,7 @@ export const programData = {
           "wg": "General",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/1-10",
+          "detailPage": "/events/20260301-block14/sessions/1-10",
           "agenda": [],
           "documents": [],
           "relatedProjects": []
@@ -162,14 +162,14 @@ export const programData = {
       "sessions": [
         {
           "id": "2-1",
-          "title": "Announcement of Blockchain Technology Competition (METI. Japanese Government)",
+          "title": "Announcement of Blockchain Technology Competition",
           "time": "09:00 - 9:20",
           "room": "Room A",
           "summary": "Announcement of blockchain technology competition by the Ministry of Economy, Trade and Industry",
           "wg": "General",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-1",
+          "detailPage": "/events/20260301-block14/sessions/2-1",
           "agenda": [],
           "documents": [],
           "relatedProjects": []
@@ -183,7 +183,7 @@ export const programData = {
           "wg": "Cyber Security",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-2",
+          "detailPage": "/events/20260301-block14/sessions/2-2",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["ST/PP (Security Target/Protection Profile)"]
@@ -197,7 +197,7 @@ export const programData = {
           "wg": "IKP",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-3",
+          "detailPage": "/events/20260301-block14/sessions/2-3",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["PQC Migration"]
@@ -211,7 +211,7 @@ export const programData = {
           "wg": "Cyber Security",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-4",
+          "detailPage": "/events/20260301-block14/sessions/2-4",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Governance of the security supply chain"]
@@ -225,7 +225,7 @@ export const programData = {
           "wg": "IKP",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-5",
+          "detailPage": "/events/20260301-block14/sessions/2-5",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Privacy Enhanced Authentication", "Offline Key Management"]
@@ -239,7 +239,7 @@ export const programData = {
           "wg": "Cyber Security",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-6",
+          "detailPage": "/events/20260301-block14/sessions/2-6",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Offline Key Management"]
@@ -253,7 +253,7 @@ export const programData = {
           "wg": "IKP",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-7",
+          "detailPage": "/events/20260301-block14/sessions/2-7",
           "agenda": [],
           "documents": [],
           "relatedProjects": []
@@ -267,7 +267,7 @@ export const programData = {
           "wg": "Agentic AI",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-8",
+          "detailPage": "/events/20260301-block14/sessions/2-8",
           "agenda": [],
           "documents": [],
           "relatedProjects": ["Agent Standards and Frameworks"]
@@ -281,7 +281,7 @@ export const programData = {
           "wg": "General",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-9",
+          "detailPage": "/events/20260301-block14/sessions/2-9",
           "agenda": [],
           "documents": [],
           "relatedProjects": []
@@ -295,7 +295,7 @@ export const programData = {
           "wg": "FASE",
           "speakers": "",
           "moderator": "",
-          "detailPage": "/events/block14/sessions/2-10",
+          "detailPage": "/events/20260301-block14/sessions/2-10",
           "agenda": [],
           "documents": [
             {
@@ -313,19 +313,19 @@ export const programData = {
     "Room A": {
       "displayName": "Shibuya Parco DG Bldg. - Room A",
       "capacity": "TBD",
-      "image": "/images/Events/block14/room-a.jpg",
+      "image": "/images/Events/venue/DragonGate_RoomA.jpg",
       "address": "15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan"
     },
     "Room B": {
       "displayName": "Shibuya Parco DG Bldg. - Room B",
       "capacity": "TBD",
-      "image": "/images/Events/block14/room-b.jpg",
+      "image": "/images/Events/venue/DragonGate_RoomB.jpeg",
       "address": "15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan"
     },
     "Open Space": {
       "displayName": "Shibuya Parco DG Bldg. - Open Space",
       "capacity": "TBD",
-      "image": "/images/Events/block14/open-space.jpg",
+      "image": "/images/Events/venue/DragonGate_RoomA.jpg",
       "address": "15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan"
     },
     "TBD": {

@@ -34,14 +34,14 @@ export default function Home() {
       <Header />
 
       {/* What's New Headline */}
-      {/* {showWhatsNew && (
+      {showWhatsNew && (
         <div className="w-full bg-red-600 border-b-2 border-red-700 py-4 flex justify-center items-center relative">
           <a
-            href="/events/20251023-layer2-sf"
+            href="/events/20260301-block14"
             className="text-xl md:text-2xl font-bold text-white hover:underline px-4 text-center"
             style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
           >
-            <span className="font-normal">NEW:</span> Join us for the Layer2 Meetup at San Fransisco on October 23! 
+            <span className="font-normal">NEW:</span> BGIN Block #14 page is now live and registration is open! Join us in Tokyo, March 1-2, 2026
           </a>
           <button
             onClick={() => setShowWhatsNew(false)}
@@ -51,7 +51,7 @@ export default function Home() {
             ×
           </button>
         </div>
-      )} */}
+      )}
 
       <Hero type={1} />
 

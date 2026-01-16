@@ -44,10 +44,10 @@ export default function EventsPage() {
       time: "TBD",
       type: "Block Conference",
       description: "Join us for BGIN Block #14 in Tokyo, Japan. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
-      link: null, // Placeholder link since details are not yet available
+      link: "/events/20260301-block14",
       color: eventTypeColors["Block Conference"],
       venue: "Tokyo, Japan",
-      // registerLink will be added when registration opens
+      registerLink: "https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator",
       image: "/images/Events/Block5.jpeg"
     },
   ];
