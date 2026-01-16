@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import { getEventData } from "@/lib/fetch-events";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function EventPage({
   params,
@@ -12,11 +13,25 @@ export default async function EventPage({
 }) {
   let event;
   if (params.slug != null && typeof params.slug === "string") {
-    if (params.slug.includes("block")) {
-      event = await getEventData("block-conferences", params.slug);
-    } else {
-      event = await getEventData("layer2-meetups", params.slug);
+    try {
+      if (params.slug.includes("block")) {
+        event = await getEventData("block-conferences", params.slug);
+      } else {
+        event = await getEventData("layer2-meetups", params.slug);
+      }
+    } catch (error: any) {
+      // File not found error - show 404 page
+      if (error?.code === "ENOENT" || error?.errno === -2) {
+        notFound();
+      }
+      // Re-throw other errors
+      throw error;
     }
+  }
+
+  // If event is still null/undefined after try-catch, show 404
+  if (!event) {
+    notFound();
   }
 
   return (
