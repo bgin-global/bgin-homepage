@@ -225,83 +225,75 @@ export default function Block14Page() {
 
                             {/* Building and location info */}
                             <div className="space-y-2 mb-4">
-                              {/*
-{roomData?.displayName?.includes('Hariri') && (
-  <p className="text-gray-700">
-    <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
-    <span className="font-semibold">Address:</span>{' '}
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 underline"
-    >
-      37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
-    </a>
-  </p>
-)}
-*/}
-                              {/*
-{roomData?.displayName?.includes('Arrupe') && (
-  <p className="text-gray-700">
-    <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
-    <span className="font-semibold">Address:</span>{' '}
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 underline"
-    >
-      1575 Tondorf Rd, Washington, DC 20057
-    </a>
-  </p>
-)}
-*/}
-                              {/*
-{roomData?.displayName?.includes('Leavey') && (
-  <p className="text-gray-700">
-    <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
-    <span className="font-semibold">Address:</span>{' '}
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 underline"
-    >
-      1560 Tondorf Rd, Washington, DC 20057
-    </a>
-  </p>
-)}
-*/}
-                              {{/*
-(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
-  <div className="text-gray-700">
-    <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
-    <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
-    <span className="font-semibold">Address:</span>{' '}
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 underline"
-    >
-      New South, 3700 Tondorf Rd, Washington, DC 20057
-    </a>
-    <br/><br/>
-    <span className="font-semibold">Bulldog Alley</span><br/>
-    <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
-    <span className="font-semibold">Address:</span>{' '}
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:text-blue-800 underline"
-    >
-      1560 Tondorf Rd, Washington, DC 20057
-    </a>
-  </div>
-)}
-*/}
+                              {roomData?.displayName?.includes('Hariri') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a
+                                    href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Arrupe') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a
+                                    href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1575 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {roomData?.displayName?.includes('Leavey') && (
+                                <p className="text-gray-700">
+                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a
+                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1560 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </p>
+                              )}
+                              {(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
+                                <div className="text-gray-700">
+                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
+                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a
+                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    New South, 3700 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                  <br/><br/>
+                                  <span className="font-semibold">Bulldog Alley</span><br/>
+                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+                                  <span className="font-semibold">Address:</span>{' '}
+                                  <a
+                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    1560 Tondorf Rd, Washington, DC 20057
+                                  </a>
+                                </div>
+                              )}
                               {(roomData?.displayName?.includes('HFSC') && !(roomData?.displayName?.includes('Bulldog Alley'))) && (
                                 <p className="text-gray-700">
                                   <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
