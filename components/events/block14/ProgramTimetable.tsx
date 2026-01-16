@@ -189,9 +189,9 @@ const ProgramTimetable = () => {
             <div className="text-sm font-medium">Working Groups:</div>
             <div className="flex flex-wrap gap-2">
               <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">Agentic AI</span>
-              <span className="px-2 py-1 text-xs rounded bg-amber-100 border border-amber-300">IKP</span>
-              <span className="px-2 py-1 text-xs rounded bg-red-100 border border-red-300">Cyber Security</span>
-              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">FASE</span>
+              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">IKP</span>
+              <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300">Cyber Security</span>
+              <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300">FASE</span>
               <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300">General</span>
             </div>
           </div>

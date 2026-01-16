@@ -162,7 +162,7 @@ export const programData = {
       "sessions": [
         {
           "id": "2-1",
-          "title": "Announcement of Blockchain Technology Competition (METI. Japanese Government)",
+          "title": "Announcement of Blockchain Technology Competition",
           "time": "09:00 - 9:20",
           "room": "Room A",
           "summary": "Announcement of blockchain technology competition by the Ministry of Economy, Trade and Industry",
