@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from "@/components/Header";
@@ -80,7 +79,6 @@ export default function Block14AccessPage() {
 
           {/* Leavey Center Floor Plan 
           <section className="block14-section">
-
             <h2 className="block14-section-title">Leavey Center Floor Plan</h2>
             <div className="block14-card">
               <div className="mb-4">
