@@ -10,32 +10,32 @@ export default function Block13AccessPage() {
   return (
     <>
       <Header />
-      <main className="block13-page min-h-screen bg-white w-screen">
+      <main className="block14-page min-h-screen bg-white w-screen">
         {/* Simple Header Section */}
         <div className="bg-white py-12 border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Link href="/events/20251015-block13#access-venue" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors">
+            <Link href="/events/20260301-block14#access-venue" className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors">
               <svg className="mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
-              Back to Block 13
+              Back to Block 14
             </Link>
             <h1 className="text-4xl font-bold font-FamiljenGrotesk text-gray-900">Access & Venue Information</h1>
-            <p className="mt-2 text-xl text-gray-600">BGIN Block 13 | Georgetown University</p>
+            <p className="mt-2 text-xl text-gray-600">BGIN Block 14 | Dragon Gate</p>
           </div>
         </div>
 
         <div className="block13-section-container">
           {/* Venue Overview */}
-          <section className="block13-section">
-            <h2 className="block13-section-title">Venue Overview</h2>
-            <div className="block13-card">
+          <section className="block14-section">
+            <h2 className="block14-section-title">Venue Overview</h2>
+            <div className="bloc-card">
               <h3 className="text-xl font-semibold mb-3 flex items-center">
                 <svg className="mr-2 h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                Georgetown University
+                Dragon Gate
               </h3>
               <p className="text-gray-700 mb-4">
                 3700 O St NW<br />
