@@ -14,6 +14,27 @@ export default function SessionDetailPage() {
 
   // Find the session from the program data
   const findSession = () => {
+    // Special handling for AgentHack (1-8) - it spans both days
+    if (sessionId === "1-8") {
+      const day1Data = (programData.program as any).day1;
+      const day2Data = (programData.program as any).day2;
+      const day1Session = day1Data.sessions.find((s: any) => s.id === "1-8");
+      const day2Session = day2Data.sessions.find((s: any) => s.id === "2-8");
+      
+      if (day1Session) {
+        // Merge information from both days
+        return { 
+          session: {
+            ...day1Session,
+            time: "9:20 - 17:00 (Day 1), 9:20 - 15:00 (Day 2)",
+            summary: day1Session.summary || "A focused hackathon at Block 14 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding. This session runs across both Day 1 and Day 2."
+          }, 
+          day: `${day1Data.date} & ${day2Data.date}` 
+        };
+      }
+    }
+    
+    // Regular session lookup
     for (const [, dayData] of Object.entries(programData.program)) {
       const sessions = (dayData as any).sessions;
       const session = sessions.find((s: any) => s.id === sessionId);
@@ -175,13 +196,32 @@ export default function SessionDetailPage() {
                 ) : (
                   <div className="space-y-4">
                     {session.title && session.title.includes("Agent Hack") ? (
-                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                        <h3 className="font-semibold text-yellow-800 mb-2">BGIN Agent Hack</h3>
-                        <p className="text-yellow-700 text-sm">
-                          This session is part of the BGIN Agent Hack, running in the Open Space throughout Block 14. 
-                          For more information about the Agent Hack, please visit the Agentic AI Working Group section on the main event page.
-                        </p>
-                      </div>
+                      <>
+                        <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+                          <iframe
+                            src="https://block13-agent-hack.vercel.app/"
+                            style={{ border: 0 }}
+                            width="100%"
+                            height="600"
+                            frameBorder="0"
+                            title="BGIN Agent Hack Preview"
+                            className="w-full"
+                          />
+                        </div>
+                        <div className="text-center">
+                          <a
+                            href="https://block13-agent-hack.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+                          >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            Open Full Website
+                          </a>
+                        </div>
+                      </>
                     ) : (
                       <p className="text-gray-500">Agenda details will be available soon.</p>
                     )}

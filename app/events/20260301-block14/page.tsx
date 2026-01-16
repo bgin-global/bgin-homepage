@@ -73,8 +73,7 @@ export default function Block14Page() {
 
       {/* Hero Section */}
       <section className="block13-hero">
-        <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-[2]">
           {heroImages.map((src, index) => (
             <Image
               key={src}
@@ -88,7 +87,8 @@ export default function Block14Page() {
             />
           ))}
         </div>
-        <div className="block13-hero-content relative z-20">
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-[10]"></div>
+        <div className="block13-hero-content relative z-[30]">
           <h1>BGIN Block 14</h1>
           <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
           <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
@@ -256,7 +256,7 @@ export default function Block14Page() {
                             {/* Building and location info */}
                             <div className="space-y-2 mb-4">
                               <p className="text-gray-700">
-                                <span className="font-semibold">Building:</span> Shibuya Parco DG Bldg. (Shibuya Parco Dragon Gate Building)<br/>
+                                <span className="font-semibold">Building:</span> Shibuya Parco DG Bldg.<br/>
                                 <span className="font-semibold">Floor:</span> 18th Floor<br/>
                                 <span className="font-semibold">Address:</span>{' '}
                                 <a
@@ -610,7 +610,6 @@ export default function Block14Page() {
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
                 Shibuya Parco DG Bldg.<br/>
-                (Shibuya Parco Dragon Gate Building)<br/>
                 18th Floor<br/>
                 Shibuya, Tokyo, Japan
               </p>

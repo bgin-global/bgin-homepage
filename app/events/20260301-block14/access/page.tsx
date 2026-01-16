@@ -49,7 +49,7 @@ export default function Block14AccessPage() {
                 Shibuya Parco DG Bldg.
               </h3>
               <p className="text-gray-700 mb-4">
-                Shibuya Parco Dragon Gate Building<br />
+                Shibuya Parco DG Bldg.<br />
                 18th Floor<br />
                 15-1 Udagawa-cho, Shibuya-ku<br />
                 Tokyo 150-0042, Japan
@@ -145,8 +145,13 @@ export default function Block14AccessPage() {
             <div className="block13-grid block13-grid-2 mb-8">
               {/* Room A */}
               <div className="block13-card overflow-hidden">
-                <div className="w-full h-64 bg-gray-200 mb-4 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Room A Image</p>
+                <div className="relative w-full h-64 mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/Events/venue/DragonGate_RoomA.jpg"
+                    alt="Room A"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Room A</h3>
                 <p className="text-gray-600">Main Sessions</p>
@@ -154,8 +159,13 @@ export default function Block14AccessPage() {
 
               {/* Room B */}
               <div className="block13-card overflow-hidden">
-                <div className="w-full h-64 bg-gray-200 mb-4 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Room B Image</p>
+                <div className="relative w-full h-64 mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/Events/venue/DragonGate_RoomB.jpeg"
+                    alt="Room B"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Room B</h3>
                 <p className="text-gray-600">Main Sessions</p>
@@ -163,8 +173,13 @@ export default function Block14AccessPage() {
 
               {/* Open Space */}
               <div className="block13-card overflow-hidden">
-                <div className="w-full h-64 bg-gray-200 mb-4 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500">Open Space Image</p>
+                <div className="relative w-full h-64 mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/Events/venue/DragonGate_RoomA.jpg"
+                    alt="Open Space"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Open Space</h3>
                 <p className="text-gray-600">BGIN Agent Hack</p>
