@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { programData } from "@/lib/block13-program-data";
+import { programData } from "@/lib/block14-program-data";
 import "@/styles/block13.css";
 
 export default function SessionDetailPage() {
@@ -33,8 +33,8 @@ export default function SessionDetailPage() {
         <div className="max-w-4xl mx-auto px-4 py-16">
           <h1 className="text-3xl font-bold mb-4">Session Not Found</h1>
           <p className="text-gray-600 mb-8">The session you're looking for doesn't exist.</p>
-          <Link href="/events/20251015-block13#detailed-program" className="text-blue-600 hover:underline">
-            ← Back to Block 13 Program
+          <Link href="/events/20260301-block14#detailed-program" className="text-blue-600 hover:underline">
+            ← Back to Block 14 Program
           </Link>
         </div>
         <Footer />
@@ -62,7 +62,7 @@ export default function SessionDetailPage() {
                           Object.values(programData.rooms).find((r: any) => 
                             session.room.includes(r.displayName)
                           ) || 
-                          (programData.rooms as any)["Arrupe Hall"]; // Default fallback
+                          (programData.rooms as any)["Room A"]; // Default fallback
           const venueImage = Array.isArray(roomData?.image) ? roomData.image[0] : roomData?.image;
           
           return (
@@ -87,10 +87,10 @@ export default function SessionDetailPage() {
         <div className="relative z-10 h-full flex flex-col justify-end">
           <div className="max-w-4xl mx-auto px-4 pb-8 text-white">
             <Link 
-              href="/events/20251015-block13#detailed-program" 
+              href="/events/20260301-block14#detailed-program" 
               className="text-white hover:text-gray-200 text-sm mb-4 inline-block"
             >
-              ← Back to Block 13 Program
+              ← Back to Block 14 Program
             </Link>
             <h1 className="text-4xl font-bold mb-4">{session.title || "TBD"}</h1>
             <div className="flex flex-wrap gap-4">
@@ -175,33 +175,16 @@ export default function SessionDetailPage() {
                 ) : (
                   <div className="space-y-4">
                     {session.title && session.title.includes("Agent Hack") ? (
-                      <>
-                        <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                          <iframe
-                            src="https://block13-agent-hack.vercel.app/"
-                            style={{ border: 0 }}
-                            width="100%"
-                            height="600"
-                            frameBorder="0"
-                            title="BGIN Agent Hack Preview"
-                            className="w-full"
-                          />
-                        </div>
-                        <div className="text-center">
-                          <a
-                            href="https://block13-agent-hack.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
-                          >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                            Open Full Website
-                          </a>
-                        </div>
-                      </>
-                    ) : null}
+                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                        <h3 className="font-semibold text-yellow-800 mb-2">BGIN Agent Hack</h3>
+                        <p className="text-yellow-700 text-sm">
+                          This session is part of the BGIN Agent Hack, running in the Open Space throughout Block 14. 
+                          For more information about the Agent Hack, please visit the Agentic AI Working Group section on the main event page.
+                        </p>
+                      </div>
+                    ) : (
+                      <p className="text-gray-500">Agenda details will be available soon.</p>
+                    )}
                   </div>
                 )}
               </div>
@@ -264,15 +247,15 @@ export default function SessionDetailPage() {
                 <h3 className="font-bold mb-3 text-gray-800">Venue Details</h3>
                 <div className="space-y-2 text-sm text-gray-700">
                   <p><span className="font-semibold">Location:</span> {room.displayName}</p>
-                  {room.capacity && (
+                  {room.capacity && room.capacity !== 'TBD' && (
                     <p><span className="font-semibold">Capacity:</span> {room.capacity}</p>
                   )}
                   {room.address && (
                     <p><span className="font-semibold">Address:</span> {room.address}</p>
                   )}
-                  {room.accessibility && (
-                    <p><span className="font-semibold">Accessibility:</span> {room.accessibility}</p>
-                  )}
+                  <p className="text-xs text-gray-500 mt-2">
+                    Shibuya Parco DG Bldg., 18th Floor
+                  </p>
                 </div>
               </div>
 

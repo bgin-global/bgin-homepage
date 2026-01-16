@@ -1,10 +1,10 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
+import React, { useState } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import "@/styles/block13.css";
 import { programData } from "@/lib/block14-program-data";
 import { criticalProjects } from "@/lib/block14-critical-projects";
@@ -186,7 +186,7 @@ export default function Block14Page() {
                                         <span
                                           key={docIdx}
                                           className="document-link text-xs text-blue-600 hover:text-blue-800 cursor-pointer inline-flex items-center gap-1"
-                                          onClick={(e) => {
+                                          onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
                                             e.preventDefault();
                                             e.stopPropagation();
                                             window.open(doc.link, '_blank');
@@ -316,7 +316,7 @@ export default function Block14Page() {
                                           <span
                                             key={docIdx}
                                             className="document-link text-xs text-blue-600 hover:text-blue-800 cursor-pointer inline-flex items-center gap-1"
-                                            onClick={(e) => {
+                                            onClick={(e: React.MouseEvent<HTMLSpanElement>) => {
                                               e.preventDefault();
                                               e.stopPropagation();
                                               window.open(doc.link, '_blank');
