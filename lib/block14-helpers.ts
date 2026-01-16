@@ -15,7 +15,7 @@ export const processProgram = () => {
         : session.time,
       // Generate proper detail page URLs
       detailPage: session.detailPage.includes('make one') 
-        ? `/events/block14/sessions/${session.id}`
+        ? `/events/20260301-block14/sessions/${session.id}`
         : session.detailPage,
       // Handle empty fields and map to BGIN structure
       contributors: session.speakers || 'TBD',
