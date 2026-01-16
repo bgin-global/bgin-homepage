@@ -175,7 +175,7 @@ export default function Block14AccessPage() {
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">Shopping</h4>
                   <p className="text-gray-600 text-sm">
-                    Shibuya is one of Tokyo's major shopping districts, with numerous department stores, boutiques, and entertainment facilities nearby.
+                    Shibuya is one of the major shopping districts in Tokyo, with numerous department stores, boutiques, and entertainment facilities nearby.
                   </p>
                 </div>
                 <div>
