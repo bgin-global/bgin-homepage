@@ -404,7 +404,7 @@ export default function Block14Page() {
         <section id="agentic-ai" className="block13-section">
           <h2 className="block13-section-title">Agentic AI Working Group</h2>
           <div className="mb-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-yellow-500 text-white px-3 py-1 text-xs font-semibold shadow-sm">
+            <span className="inline-flex items-center gap-2 rounded-full bg-yellow-700 text-white px-3 py-1 text-xs font-semibold shadow-sm">
               <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 3v3M12 18v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M3 12h3M18 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
@@ -417,8 +417,8 @@ export default function Block14Page() {
               At Block 14, we will host the BGIN Agent Hack, where policy discussions turn into working software through agent-mediated standards and programmable governance.
             </p>
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-              <h3 className="font-semibold text-yellow-800 mb-2">BGIN Agent Hack</h3>
-              <p className="text-yellow-700 text-sm">
+              <h3 className="font-semibold text-yellow-900 mb-2">BGIN Agent Hack</h3>
+              <p className="text-yellow-900 text-sm">
                 A focused hackathon where teams build and validate policy-to-code implementations. 
                 The Agent Hack will run in the Open Space throughout both days of Block 14.
               </p>
