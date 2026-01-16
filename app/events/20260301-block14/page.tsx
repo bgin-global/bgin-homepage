@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -46,6 +46,26 @@ export default function Block14Page() {
 
   const [activeDay, setActiveDay] = useState<'day1' | 'day2'>(getDefaultDay());
   const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
+  
+  // Hero image carousel
+  const heroImages = [
+    "/images/Events/Block5.jpeg",
+    "/images/Events/venue/session_photo_1.jpeg",
+    "/images/Events/venue/session_photo_2.jpeg",
+    "/images/Events/venue/session_photo_3.jpeg",
+    "/images/Events/venue/DragonGate_RoomA.jpg",
+    "/images/Events/venue/Shibuya_Crossing.jpeg"
+  ];
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
+
+  // Auto-rotate hero images every 8 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroImage((prev: number) => (prev + 1) % heroImages.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   return (
     <main className="block13-page min-h-screen bg-white w-screen">
@@ -53,15 +73,22 @@ export default function Block14Page() {
 
       {/* Hero Section */}
       <section className="block13-hero">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <Image
-          src="/images/Events/Block5.jpeg"
-          alt="Shibuya, Tokyo"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="block13-hero-content">
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+        <div className="absolute inset-0">
+          {heroImages.map((src, index) => (
+            <Image
+              key={src}
+              src={src}
+              alt={index === 0 ? "Shibuya, Tokyo" : `BGIN Block 14 - Image ${index + 1}`}
+              fill
+              className={`object-cover transition-opacity duration-1000 ${
+                index === currentHeroImage ? 'opacity-100' : 'opacity-0'
+              }`}
+              priority={index === 0}
+            />
+          ))}
+        </div>
+        <div className="block13-hero-content relative z-20">
           <h1>BGIN Block 14</h1>
           <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
           <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">

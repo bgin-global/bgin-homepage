@@ -30,6 +30,17 @@ export default function Block14AccessPage() {
           <section className="block13-section">
             <h2 className="block13-section-title">Venue Overview</h2>
             <div className="block13-card">
+              <div className="mb-6">
+                <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/Events/venue/Shibuya_DG_Building.jpeg"
+                    alt="Shibuya Parco DG Bldg."
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
               <h3 className="text-xl font-semibold mb-3 flex items-center">
                 <svg className="mr-2 h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

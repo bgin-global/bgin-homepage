@@ -313,19 +313,19 @@ export const programData = {
     "Room A": {
       "displayName": "Shibuya Parco DG Bldg. - Room A",
       "capacity": "TBD",
-      "image": "/images/Events/block14/room-a.jpg",
+      "image": "/images/Events/venue/DragonGate_RoomA.jpg",
       "address": "15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan"
     },
     "Room B": {
       "displayName": "Shibuya Parco DG Bldg. - Room B",
       "capacity": "TBD",
-      "image": "/images/Events/block14/room-b.jpg",
+      "image": "/images/Events/venue/DragonGate_RoomB.jpeg",
       "address": "15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan"
     },
     "Open Space": {
       "displayName": "Shibuya Parco DG Bldg. - Open Space",
       "capacity": "TBD",
-      "image": "/images/Events/block14/open-space.jpg",
+      "image": "/images/Events/venue/DragonGate_RoomA.jpg",
       "address": "15-1 Udagawa-cho, Shibuya-ku, Tokyo 150-0042, Japan"
     },
     "TBD": {
