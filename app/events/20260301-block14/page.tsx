@@ -32,7 +32,7 @@ export default function Block14Page() {
     const month = todayEST.getMonth(); // 0-indexed (October = 9)
     const day = todayEST.getDate();
 
-    // Check for Block 13 dates in 2025
+    // Check for Block 14 dates in 2025
     if (year === 2025 && month === 9) { // October 2025
       if (day === 15) {
         return 'day1';
@@ -59,14 +59,14 @@ export default function Block14Page() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <Image
           src="/images/Events/Block3.jpeg"
-          alt="Washington D.C."
+          alt="Shibuya, Tokyo"
           fill
           className="object-cover"
           priority
         />
         <div className="block13-hero-content">
-          <h1>BGIN Block 13</h1>
-          <p>October 15–17, 2025 | Washington, D.C.</p>
+          <h1>BGIN Block 14</h1>
+          <p>March 1–2, 2026 | Shibuya, Tokyo</p>
           <a href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary">
             Register Now
             <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,7 +83,7 @@ export default function Block14Page() {
           <h2 className="block13-section-title">Program</h2>
           <div className="mb-6">
             <p className="text-gray-700 mb-4">
-              <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.
+              <strong>Fee Waiver Available:</strong> Contributors who submit written contributions and present at Block 14 receive complete registration fee waivers.
               {" "}
               <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
@@ -106,9 +106,8 @@ export default function Block14Page() {
           {/* Day Tabs */}
           <div id="detailed-program" className="block13-tabs scroll-mt-20">
             {[
-              { key: 'day1' as const, label: 'Oct 15' },
-              { key: 'day2' as const, label: 'Oct 16' }, 
-              { key: 'day3' as const, label: 'Oct 17' }
+              { key: 'day1' as const, label: 'Mar 1' },
+              { key: 'day2' as const, label: 'Mar 2' }
             ].map((day) => (
               <button
                 key={day.key}
@@ -226,75 +225,83 @@ export default function Block14Page() {
 
                             {/* Building and location info */}
                             <div className="space-y-2 mb-4">
-                              {roomData?.displayName?.includes('Hariri') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
-                                  </a>
-                                </p>
-                              )}
-                              {roomData?.displayName?.includes('Arrupe') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    1575 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                </p>
-                              )}
-                              {roomData?.displayName?.includes('Leavey') && (
-                                <p className="text-gray-700">
-                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    1560 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                </p>
-                              )}
-                              {(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
-                                <div className="text-gray-700">
-                                  <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
-                                  <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    New South, 3700 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                  <br/><br/>
-                                  <span className="font-semibold">Bulldog Alley</span><br/>
-                                  <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
-                                  <span className="font-semibold">Address:</span>{' '}
-                                  <a
-                                    href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-600 hover:text-blue-800 underline"
-                                  >
-                                    1560 Tondorf Rd, Washington, DC 20057
-                                  </a>
-                                </div>
-                              )}
+                              {/*
+{roomData?.displayName?.includes('Hariri') && (
+  <p className="text-gray-700">
+    <span className="font-semibold">Building:</span> Rafik B. Hariri Building<br/>
+    <span className="font-semibold">Address:</span>{' '}
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=37th+and+O+Streets+Rafik+B+Hariri+Building+Washington+DC+20057"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 underline"
+    >
+      37th and O Streets, Rafik B. Hariri Building, Washington, DC 20057
+    </a>
+  </p>
+)}
+*/}
+                              {/*
+{roomData?.displayName?.includes('Arrupe') && (
+  <p className="text-gray-700">
+    <span className="font-semibold">Building:</span> Pedro Arrupe, S.J. Hall<br/>
+    <span className="font-semibold">Address:</span>{' '}
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=1575+Tondorf+Rd+Washington+DC+20057"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 underline"
+    >
+      1575 Tondorf Rd, Washington, DC 20057
+    </a>
+  </p>
+)}
+*/}
+                              {/*
+{roomData?.displayName?.includes('Leavey') && (
+  <p className="text-gray-700">
+    <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+    <span className="font-semibold">Address:</span>{' '}
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 underline"
+    >
+      1560 Tondorf Rd, Washington, DC 20057
+    </a>
+  </p>
+)}
+*/}
+                              {{/*
+(roomData?.displayName?.includes('HFSC') && roomData?.displayName?.includes('Bulldog Alley')) && (
+  <div className="text-gray-700">
+    <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
+    <span className="font-semibold">Building:</span> Healey Family Student Center<br/>
+    <span className="font-semibold">Address:</span>{' '}
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=New+South+3700+Tondorf+Rd+Washington+DC+20057"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 underline"
+    >
+      New South, 3700 Tondorf Rd, Washington, DC 20057
+    </a>
+    <br/><br/>
+    <span className="font-semibold">Bulldog Alley</span><br/>
+    <span className="font-semibold">Building:</span> Thomas & Dorothy Leavey Center<br/>
+    <span className="font-semibold">Address:</span>{' '}
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=1560+Tondorf+Rd+Washington+DC+20057"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:text-blue-800 underline"
+    >
+      1560 Tondorf Rd, Washington, DC 20057
+    </a>
+  </div>
+)}
+*/}
                               {(roomData?.displayName?.includes('HFSC') && !(roomData?.displayName?.includes('Bulldog Alley'))) && (
                                 <p className="text-gray-700">
                                   <span className="font-semibold">HFSC Herman Meeting Room</span><br/>
@@ -313,7 +320,7 @@ export default function Block14Page() {
                               )}
                               {roomData?.displayName?.includes('Faculty Club') && (
                                 <p className="text-gray-700">
-                                  <span className="font-semibold">Venue:</span> Georgetown University Faculty Club Restaurant<br/>
+                                  <span className="font-semibold">Venue:</span> Shibuya Parco DG Bldg. Faculty Club Restaurant<br/>
                                   <span className="font-semibold">Location details:</span> To be announced
                                 </p>
                               )}
@@ -448,7 +455,7 @@ export default function Block14Page() {
           {/* View All Publications Button */}
           <div className="text-center mt-8 space-y-4">
             <Link href="/events/20251015-block13/meeting-reports" className="block13-btn-primary inline-block">
-              View Block 13 Meeting Reports
+              View Block 14 Meeting Reports
             </Link>
             <div>
               <Link href="https://bgin-global.org/activities" className="block13-btn-secondary">
@@ -464,7 +471,7 @@ export default function Block14Page() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Publications Coming Soon</h3>
             <p className="text-blue-700">
-              Featured publications for Block 13 are currently being selected. Check the Key Research Projects section above for available documents.
+              Featured publications for Block 14 are currently being selected. Check the Key Research Projects section above for available documents.
             </p>
           </div>
           <div className="text-center">
@@ -489,7 +496,7 @@ export default function Block14Page() {
           <div className="relative">
             <div className="rounded-2xl bg-white p-6 border border-gray-200">
               <p className="text-gray-700 max-w-3xl mb-8">
-                A focused hackathon at Block 13 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.
+                A focused hackathon at Block 14 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding.
               </p>
 
               <div className="grid gap-6 lg:grid-cols-2">
@@ -607,9 +614,9 @@ export default function Block14Page() {
             <div>
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
-                Georgetown University<br/>
-                Washington, D.C.<br/>
-                United States
+                Shibuya Parco DG Bldg.<br/>
+                Shibuya, Tokyo<br/>
+                Japan
               </p>
 
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
@@ -621,7 +628,7 @@ export default function Block14Page() {
 
               <h4 className="font-semibold mb-2 mt-6">Reception Venue</h4>
               <p className="text-sm text-gray-600">
-                <strong>Georgetown University Faculty Club Restaurant</strong><br/>
+                <strong>Shibuya Parco DG Bldg. Faculty Club Restaurant</strong><br/>
                 Located adjacent to the Leavey Center
               </p>
 
@@ -787,7 +794,7 @@ export default function Block14Page() {
           {/* More sponsors coming soon
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
             <p className="text-blue-700 text-center">
-              More sponsors are being finalized. If you are interested in sponsoring Block 13, please contact us at{" "}
+              More sponsors are being finalized. If you are interested in sponsoring Block 14, please contact us at{" "}
               <a href="mailto:bgin_admin@bg2x.org" className="text-blue-800 font-semibold hover:underline">
                 bgin_admin@bg2x.org
               </a>
@@ -801,7 +808,7 @@ export default function Block14Page() {
           <h2 className="block13-section-title">Looking to Present Your Work?</h2>
           <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
             <p>
-              BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.</strong>
+              BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 14 receive complete registration fee waivers.</strong>
             </p>
           </div>
 
@@ -850,7 +857,7 @@ export default function Block14Page() {
                   <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Receive 100% Discount Code</h4>
-                    <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 13 registration.</p>
+                    <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 14 registration.</p>
                   </div>
                 </div>
               </div>
@@ -1031,7 +1038,7 @@ export default function Block14Page() {
                       <div className="w-full flex-col flex items-start gap-2 text-white">
                         <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
                         <div className="text-lg leading-[19px] font-Inter">
-                          Be part of shaping the future of blockchain governance at BGIN Block 13. 
+                          Be part of shaping the future of blockchain governance at BGIN Block 14. 
                           Connect with regulators, technologists, and industry leaders from around the world. 
                           Join our community to stay updated on the latest developments and participate in ongoing discussions.
                         </div>
