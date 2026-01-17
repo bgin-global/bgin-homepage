@@ -48,9 +48,17 @@ export function getJapaneseTitle(englishTitle: string, type: 'session' | 'projec
 
 // Helper function to format title with Japanese subtitle
 export function formatTitleWithJP(englishTitle: string, type: 'session' | 'project' = 'session'): string {
-  const jpTitle = getJapaneseTitle(englishTitle, type);
+  if (!englishTitle || typeof englishTitle !== 'string') return englishTitle || '';
+  const mapping = type === 'session' ? sessionTitlesJP : projectTitlesJP;
+  const jpTitle = mapping[englishTitle.trim()];
   if (jpTitle) {
     return `${englishTitle} / ${jpTitle}`;
+  }
+  // Try to find a match with trimmed title
+  const trimmedTitle = englishTitle.trim();
+  const trimmedMatch = mapping[trimmedTitle];
+  if (trimmedMatch) {
+    return `${englishTitle} / ${trimmedMatch}`;
   }
   return englishTitle;
 }
