@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import { programData } from "@/lib/block14-program-data";
 import "@/styles/block13.css";
 
-export default function SessionDetailPage() {
+export default function SessionDetailPageJP() {
   const params = useParams();
   const sessionId = params?.sessionId as string;
 
@@ -26,8 +26,8 @@ export default function SessionDetailPage() {
         return { 
           session: {
             ...day1Session,
-            time: "9:20 - 17:00 (Day 1), 9:20 - 15:00 (Day 2)",
-            summary: day1Session.summary || "A focused hackathon at Block 14 where policy discussions turn into working software through agent-mediated standards and programmable governance. Agents build; people align on shared understanding. This session runs across both Day 1 and Day 2."
+            time: "9:20 - 17:00 (1日目), 9:20 - 15:00 (2日目)",
+            summary: day1Session.summary || "Block 14での集中型ハッカソンで、政策議論がエージェント媒介の標準とプログラム可能なガバナンスを通じて動作するソフトウェアに変わります。エージェントが構築し、人々は共通の理解に合意します。このセッションは1日目と2日目の両方で開催されます。"
           }, 
           day: `${day1Data.date} & ${day2Data.date}` 
         };
@@ -52,10 +52,10 @@ export default function SessionDetailPage() {
       <main className="min-h-screen bg-white">
         <Header />
         <div className="max-w-4xl mx-auto px-4 py-16">
-          <h1 className="text-3xl font-bold mb-4">Session Not Found</h1>
-          <p className="text-gray-600 mb-8">The session you're looking for doesn't exist.</p>
-          <Link href="/events/20260301-block14#detailed-program" className="text-blue-600 hover:underline">
-            ← Back to Block 14 Program
+          <h1 className="text-3xl font-bold mb-4">セッションが見つかりません</h1>
+          <p className="text-gray-600 mb-8">お探しのセッションは存在しません。</p>
+          <Link href="/events/20260301-block14/jp#detailed-program" className="text-blue-600 hover:underline">
+            ← Block 14プログラムに戻る
           </Link>
         </div>
         <Footer />
@@ -69,7 +69,7 @@ export default function SessionDetailPage() {
 
   // Format time display
   const displayTime = session.time.endsWith('-') 
-    ? session.time.replace('-', ' onwards')
+    ? session.time.replace('-', ' 以降')
     : session.time;
 
   return (
@@ -109,16 +109,16 @@ export default function SessionDetailPage() {
           <div className="max-w-4xl mx-auto px-4 pb-8 text-white">
             <div className="flex items-center justify-between mb-4">
               <Link 
-                href="/events/20260301-block14#detailed-program" 
+                href="/events/20260301-block14/jp#detailed-program" 
                 className="text-white hover:text-gray-200 text-sm inline-block"
               >
-                ← Back to Block 14 Program
+                ← Block 14プログラムに戻る
               </Link>
               <Link
-                href={`/events/20260301-block14/jp/sessions/${sessionId}`}
+                href={`/events/20260301-block14/sessions/${sessionId}`}
                 className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
               >
-                日本語
+                English
               </Link>
             </div>
             <h1 className="text-4xl font-bold mb-4">{session.title || "TBD"}</h1>
@@ -160,15 +160,15 @@ export default function SessionDetailPage() {
             <div className="md:col-span-2 space-y-8">
               {/* Summary */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">Session Overview</h2>
+                <h2 className="text-2xl font-bold mb-4">セッション概要</h2>
                 <p className="text-gray-700 leading-relaxed">
-                  {session.summary || "Detailed session information will be available soon."}
+                  {session.summary || "詳細なセッション情報は間もなく利用可能になります。"}
                 </p>
               </div>
 
               {/* Agenda */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">Agenda</h2>
+                <h2 className="text-2xl font-bold mb-4">アジェンダ</h2>
                 {session.agenda && session.agenda.length > 0 ? (
                   <div className="space-y-3 text-gray-700">
                     {session.agenda.map((item: string, idx: number) => {
@@ -226,12 +226,12 @@ export default function SessionDetailPage() {
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
-                            Open Full Website
+                            完全なウェブサイトを開く
                           </a>
                         </div>
                       </>
                     ) : (
-                      <p className="text-gray-500">Agenda details will be available soon.</p>
+                      <p className="text-gray-500">アジェンダの詳細は間もなく利用可能になります。</p>
                     )}
                   </div>
                 )}
@@ -239,22 +239,22 @@ export default function SessionDetailPage() {
 
               {/* Session Chair & Main Contributor */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">Session Chair & Main Contributor</h2>
+                <h2 className="text-2xl font-bold mb-4">セッション議長 & 主要貢献者</h2>
                 <div className="space-y-3">
                   {session.moderator && session.moderator !== "" && session.moderator !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">Session Chair</h3>
-                      <p className="text-gray-600">{session.moderator === "" ? "TBD" : session.moderator}</p>
+                      <h3 className="font-semibold text-gray-700">セッション議長</h3>
+                      <p className="text-gray-600">{session.moderator === "" ? "未定" : session.moderator}</p>
                     </div>
                   )}
                   {session.speakers && session.speakers !== "" && session.speakers !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">Main Contributor</h3>
-                      <p className="text-gray-600">{session.speakers === "" ? "TBD" : session.speakers}</p>
+                      <h3 className="font-semibold text-gray-700">主要貢献者</h3>
+                      <p className="text-gray-600">{session.speakers === "" ? "未定" : session.speakers}</p>
                     </div>
                   )}
                   {(!session.moderator || session.moderator === "") && (!session.speakers || session.speakers === "") && (
-                    <p className="text-gray-500">TBD - Session chair and main contributor information will be announced soon.</p>
+                    <p className="text-gray-500">未定 - セッション議長と主要貢献者の情報は間もなく発表されます。</p>
                   )}
                 </div>
               </div>
@@ -262,7 +262,7 @@ export default function SessionDetailPage() {
               {/* Documents */}
               {session.documents && session.documents.length > 0 && (
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">Related Documents</h2>
+                  <h2 className="text-2xl font-bold mb-4">関連文書</h2>
                   <div className="space-y-3">
                     {session.documents.map((doc: any, idx: number) => (
                       <a
@@ -275,7 +275,7 @@ export default function SessionDetailPage() {
                         <div className="flex items-start justify-between">
                           <div>
                             <h3 className="font-semibold text-blue-600 hover:underline">{doc.title}</h3>
-                            <p className="text-sm text-gray-500 mt-1">Type: {doc.type}</p>
+                            <p className="text-sm text-gray-500 mt-1">種類：{doc.type}</p>
                           </div>
                           <svg className="w-5 h-5 text-gray-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -292,17 +292,17 @@ export default function SessionDetailPage() {
             <div className="space-y-6">
               {/* Venue Card */}
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="font-bold mb-3 text-gray-800">Venue Details</h3>
+                <h3 className="font-bold mb-3 text-gray-800">会場詳細</h3>
                 <div className="space-y-2 text-sm text-gray-700">
-                  <p><span className="font-semibold">Location:</span> {room.displayName}</p>
+                  <p><span className="font-semibold">場所：</span> {room.displayName}</p>
                   {room.capacity && room.capacity !== 'TBD' && (
-                    <p><span className="font-semibold">Capacity:</span> {room.capacity}</p>
+                    <p><span className="font-semibold">収容人数：</span> {room.capacity}</p>
                   )}
                   {room.address && (
-                    <p><span className="font-semibold">Address:</span> {room.address}</p>
+                    <p><span className="font-semibold">住所：</span> {room.address}</p>
                   )}
                   <p className="text-xs text-gray-500 mt-2">
-                    Shibuya Parco DG Bldg., 18th Floor
+                    渋谷パルコDGビル、18階
                   </p>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default function SessionDetailPage() {
               {/* Working Group Card */}
               {wg && (
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="font-bold mb-3 text-gray-800">Working Group</h3>
+                  <h3 className="font-bold mb-3 text-gray-800">ワーキンググループ</h3>
                   <div className="flex items-center gap-3 mb-3">
                     <span className={`block13-wg-badge ${session.wg.toLowerCase().replace(/\s+/g, '-')}`}>
                       {wg.abbreviation}
@@ -320,7 +320,7 @@ export default function SessionDetailPage() {
                   <p className="text-sm text-gray-600 mb-3">{wg.description}</p>
                   {wg.chairs && wg.chairs.length > 0 && (
                     <div className="text-sm text-gray-700">
-                      <span className="font-semibold">Chairs:</span>
+                      <span className="font-semibold">議長：</span>
                       <ul className="mt-1 list-none">
                         {wg.chairs.map((chair: string, idx: number) => (
                           <li key={idx}> {chair}</li>
@@ -334,7 +334,7 @@ export default function SessionDetailPage() {
               {/* Related Projects */}
               {session.relatedProjects && session.relatedProjects.length > 0 && (
                 <div className="bg-gray-50 rounded-lg p-6">
-                  <h3 className="font-bold mb-3 text-gray-800">Related Projects</h3>
+                  <h3 className="font-bold mb-3 text-gray-800">関連プロジェクト</h3>
                   <ul className="space-y-2 text-sm list-none">
                     {session.relatedProjects.map((project: string, idx: number) => (
                       <li key={idx} className="text-gray-700">
