@@ -234,7 +234,7 @@ export default function Block14PageJP() {
           
           {/* Program Timetable */}
           <div className="mb-8">
-            <ProgramTimetable />
+            <ProgramTimetable formatTitle={formatTitleWithJP} />
           </div>
           
           {/* Day Tabs */}
