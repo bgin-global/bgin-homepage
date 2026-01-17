@@ -9,6 +9,7 @@ import "@/styles/block13.css";
 import { programData } from "@/lib/block14-program-data";
 import { criticalProjects } from "@/lib/block14-critical-projects";
 import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block14-helpers";
+import { formatTitleWithJP, getJapaneseTitle } from "@/lib/block14-japanese-titles";
 import RoomImageCarousel from "@/components/events/block14/RoomImageCarousel";
 import ProgramTimetable from "@/components/events/block14/ProgramTimetable";
 
@@ -287,7 +288,9 @@ export default function Block14PageJP() {
                               <div className="flex flex-col">
                               <div className="flex flex-row justify-between items-start mb-1">
                                 <div className="flex items-center gap-2 flex-grow">
-                                  <h3 className="block13-session-title">{session.title}</h3>
+                                  <h3 className="block13-session-title">
+                                    {formatTitleWithJP(session.title, 'session')}
+                                  </h3>
                                 </div>
                                 <div className="flex items-center gap-2 ml-3 flex-shrink-0">
                                   <span className="text-sm text-gray-600 font-medium">{session.room}</span>
@@ -417,7 +420,9 @@ export default function Block14PageJP() {
                                 <div className="flex flex-col">
                                 <div className="flex flex-row justify-between items-start mb-1">
                                   <div className="flex items-center gap-2 flex-grow">
-                                    <h4 className="block13-session-title">{session.title}</h4>
+                                    <h4 className="block13-session-title">
+                                      {formatTitleWithJP(session.title, 'session')}
+                                    </h4>
                                   </div>
                                   <div className="flex items-center gap-2 ml-3 flex-shrink-0">
                                     <span className="text-sm font-bold text-gray-800">{session.displayTime}</span>
@@ -485,7 +490,9 @@ export default function Block14PageJP() {
                   </span>
                   <span className={`block13-phase-indicator ${project.phase.toLowerCase().replace(/\s+/g, '-')}`}>{project.phase}</span>
                 </div>
-                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">{project.title}</h3>
+                <h3 className="text-xl font-bold font-FamiljenGrotesk mb-3">
+                  {formatTitleWithJP(project.title, 'project')}
+                </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
