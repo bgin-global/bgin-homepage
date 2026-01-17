@@ -721,7 +721,7 @@ export default function Block14PageJP() {
 
         {/* Contribution & Fee Waiver Section */}
         <section id="contributions" className="block13-section">
-          <h2 className="block13-section-title">あなたの研究を発表しませんか？</h2>
+          <h2 className="block13-section-title">あなたの提案や研究を発表しませんか？</h2>
           <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
             <p>
               BGINは協調的な標準化プロセスに従います。<strong>Block 14で書面による貢献を提出し、発表する貢献者は、登録費が完全に免除されます。</strong>
