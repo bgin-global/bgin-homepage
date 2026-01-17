@@ -5,7 +5,15 @@ import Link from 'next/link';
 import { programData } from '@/lib/block14-program-data';
 import { getWGColorClasses } from '@/lib/block14-wg-colors';
 
-const ProgramTimetable = () => {
+interface ProgramTimetableProps {
+  formatTitle?: (title: string, type?: 'session' | 'project') => string;
+}
+
+const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle }) => {
+  // Default formatTitle function (no formatting)
+  const formatTitleFn = formatTitle 
+    ? (title: string, type?: 'session' | 'project') => formatTitle(title, type)
+    : ((title: string, type?: 'session' | 'project') => title);
   // Define time slots for each day (based on Block14 program)
   const timeSlots = {
     day1: ['09:00 - 09:20', '09:20 - 10:50', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00', '17:00-'],
@@ -127,10 +135,10 @@ const ProgramTimetable = () => {
                             >
                               {isClickable ? (
                                 <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
-                                  {session.title}
+                                  {formatTitleFn(session.title, 'session')}
                                 </Link>
                               ) : (
-                                <div className="text-sm font-medium">{session.title}</div>
+                                <div className="text-sm font-medium">{formatTitleFn(session.title, 'session')}</div>
                               )}
                             </td>
                           );
@@ -151,10 +159,10 @@ const ProgramTimetable = () => {
                           >
                             {isClickable ? (
                               <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
-                                {session.title}
+                                {formatTitleFn(session.title, 'session')}
                               </Link>
                             ) : (
-                              <div className="text-sm font-medium">{session.title}</div>
+                              <div className="text-sm font-medium">{formatTitleFn(session.title, 'session')}</div>
                             )}
                           </td>
                         );
