@@ -224,6 +224,49 @@ export default function Block14AccessPageJP() {
             </div>
           </section>
 
+          {/* Registration & Payment */}
+          <section className="block13-section">
+            <h2 className="block13-section-title">登録・お支払い</h2>
+            <div className="block13-card">
+              <p className="text-gray-700 mb-4">
+                カード（Eventbrite）または<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceから登録いただけます。下記からお選びください。<strong>登録にはEthereumネットワーク上のUSDCのみをご利用いただけます。</strong>
+              </p>
+              <div className="flex flex-wrap gap-3 mb-4">
+                <a
+                  href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block13-btn-primary inline-flex items-center gap-2"
+                >
+                  登録（Eventbrite）
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
+              <h3 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
+                <span style={{ color: '#1e5fa8' }}>USDCで登録</span>
+              </h3>
+              <div className="grid gap-2 sm:grid-cols-2">
+                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>一般（2日間）</span>
+                  <span className="font-semibold">$100</span>
+                </a>
+                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>一般（1日目）</span>
+                  <span className="font-semibold">$60</span>
+                </a>
+                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>一般（2日目）</span>
+                  <span className="font-semibold">$60</span>
+                </a>
+                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>リモート参加</span>
+                  <span className="font-semibold">$30</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
           {/* Back to main page CTA */}
           <section className="block13-section">
             <div className="text-center">
@@ -231,7 +274,7 @@ export default function Block14AccessPageJP() {
               <p className="text-gray-700 mb-6">
                 Japan Fintech Week期間中のBGIN Block 14で席を確保するために、今すぐ登録してください
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
                 <Link
                   href="/events/20260301-block14/jp#access-venue"
                   className="block13-btn-secondary"
@@ -247,11 +290,19 @@ export default function Block14AccessPageJP() {
                   rel="noopener noreferrer"
                   className="block13-btn-primary"
                 >
-                  今すぐ登録
+                  登録（Eventbrite）
                   <svg className="ml-2 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </a>
+                <Link
+                  href="/events/20260301-block14/jp#stablecoin-payment"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]"
+                  style={{ backgroundColor: '#2775CA' }}
+                >
+                  <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
+                  USDCで登録
+                </Link>
               </div>
             </div>
           </section>

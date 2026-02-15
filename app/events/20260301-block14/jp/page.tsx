@@ -93,13 +93,19 @@ export default function Block14PageJP() {
           <h1>BGIN Block 14</h1>
           <p>2026年3月1日–2日 | 渋谷、東京 | Japan Fintech Week</p>
           <div className="flex flex-col items-center gap-4">
-            <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary" style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}>
-              今すぐ登録
-              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
+            <div className="flex flex-wrap justify-center gap-3" style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}>
+              <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary inline-flex items-center gap-2">
+                今すぐ登録（Eventbrite）
+                <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e5fa8] hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+                <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={28} height={28} className="flex-shrink-0" />
+                USDCで登録
+              </a>
+            </div>
             <Link
               href="/events/20260301-block14"
               className="bg-white text-blue-600 px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
@@ -108,6 +114,22 @@ export default function Block14PageJP() {
               English
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* What's New */}
+      <section className="text-white py-4 px-4 border-b-2 border-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
+          <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
+          <span className="text-blue-200">|</span>
+          <span className="text-base md:text-lg">
+            <strong>USDCで登録が可能になりました。</strong> Block 14の登録を<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceから行えます。Eventbriteと同じチケット種別をご用意しています。
+          </span>
+          <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
+            <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
+            USDCで登録
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          </a>
         </div>
       </section>
 
@@ -549,18 +571,48 @@ export default function Block14PageJP() {
         </section>
 
         {/* Stablecoin Payment Initiative Section */}
-        <section id="stablecoin-payment" className="block13-section">
+        <section id="stablecoin-payment" className="block13-section scroll-mt-24">
           <h2 className="block13-section-title">ステーブルコイン決済イニシアティブ</h2>
           <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-6 mb-6">
             <p className="text-gray-700 max-w-3xl mb-4">
               日本、米国、その他の管轄区域でステーブルコイン規制が制定されたことを受け、
-              BGINは登録費とイベントスポンサーフィーをステーブルコイン（USDC）で受け取ることを決定しました。このイニシアティブは、
+              BGINは登録費とイベントスポンサーフィーをステーブルコイン（<strong>Ethereum上のUSDC</strong>）で受け取ることを決定しました。このイニシアティブは、
               現実世界のブロックチェーンガバナンスシナリオにおける規制フレームワークの実践的な応用を表しています。
             </p>
+            <div className="rounded-lg p-4 mb-4 border-2 border-[#2775CA]/30 bg-[#2775CA]/5">
+              <h3 className="font-semibold mb-2 flex items-center gap-2">
+                <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
+                <span style={{ color: '#1e5fa8' }}>USDCで登録（利用可能）</span>
+              </h3>
+              <p className="text-gray-700 text-sm mb-3">
+                Block 14の登録を<strong>Ethereum上のUSDC</strong>でCoinbase Commerceから行えます。下記のチケット種別からお選びください。
+              </p>
+              <p className="text-sm font-semibold mb-3" style={{ color: '#1e5fa8' }}>
+                重要：登録にはEthereumネットワーク上のUSDCのみをご利用いただけます。
+              </p>
+              <div className="grid gap-2 sm:grid-cols-2">
+                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>一般（2日間）</span>
+                  <span className="font-semibold">$100</span>
+                </a>
+                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>一般（1日目）</span>
+                  <span className="font-semibold">$60</span>
+                </a>
+                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>一般（2日目）</span>
+                  <span className="font-semibold">$60</span>
+                </a>
+                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                  <span>リモート参加</span>
+                  <span className="font-semibold">$30</span>
+                </a>
+              </div>
+            </div>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
               <h3 className="font-semibold text-blue-900 mb-2">Block 14での試行実施</h3>
               <p className="text-blue-800 text-sm mb-3">
-                Block 14では、BGINは登録費とスポンサー貢献についてUSDCでのステーブルコイン決済の試行を実施します。
+                Block 14では、BGINは登録費とスポンサー貢献についてEthereum上のUSDCでのステーブルコイン決済の試行を実施します。
                 この試行は、国際的なガバナンスコンテキストにおけるステーブルコインベースの決済システムの実践的な実装に関する
                 貴重な洞察を提供します。
               </p>
@@ -832,21 +884,30 @@ export default function Block14PageJP() {
                   <p className="text-sm text-gray-600 mb-2">
                     登録は現在受付中です。定員に限りがあります - 早めに登録して席を確保してください。
                   </p>
+                  <p className="text-sm text-gray-600 mb-2">
+                    カード（Eventbrite）または<a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>Ethereum上のUSDC（ステーブルコイン）</a>で登録いただけます。
+                  </p>
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>貢献者：</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">研究を発表する方には参加費免除が利用可能</a>
                   </p>
-                  <a 
-                    href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block13-btn-primary inline-flex items-center gap-2"
-                  >
-                    今すぐ登録
-                    <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
+                  <div className="flex flex-wrap gap-3">
+                    <a 
+                      href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block13-btn-primary inline-flex items-center gap-2"
+                    >
+                      登録（Eventbrite）
+                      <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                    <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+                      <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
+                      USDCで登録
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
