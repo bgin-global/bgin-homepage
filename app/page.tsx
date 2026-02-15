@@ -41,7 +41,7 @@ export default function Home() {
             className="text-xl md:text-2xl font-bold text-white hover:underline px-4 text-center"
             style={{ fontFamily: 'Trebuchet MS, Arial, sans-serif' }}
           >
-            <span className="font-normal">What&apos;s New:</span> BGIN Block #14 — Registration open. <strong>Pay with USDC on Ethereum</strong> (stablecoin) or card. Tokyo, March 1-2, 2026
+            <span className="font-normal">What&apos;s New:</span> BGIN Block #14 — Registration open. <strong>Register with USDC on Ethereum</strong> (stablecoin) or card. Tokyo, March 1-2, 2026
           </a>
           <button
             onClick={() => setShowWhatsNew(false)}

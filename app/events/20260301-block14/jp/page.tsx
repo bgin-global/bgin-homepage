@@ -103,7 +103,7 @@ export default function Block14PageJP() {
               </a>
               <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e5fa8] hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={28} height={28} className="flex-shrink-0" />
-                USDCで支払う
+                USDCで登録
               </a>
             </div>
             <Link
@@ -123,11 +123,11 @@ export default function Block14PageJP() {
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
           <span className="text-blue-200">|</span>
           <span className="text-base md:text-lg">
-            <strong>USDC支払いが可能になりました。</strong> Block 14の登録を<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceからお支払いいただけます。Eventbriteと同じチケット種別をご用意しています。
+            <strong>USDCで登録が可能になりました。</strong> Block 14の登録を<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceから行えます。Eventbriteと同じチケット種別をご用意しています。
           </span>
           <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
             <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
-            USDCで支払う
+            USDCで登録
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </a>
         </div>
@@ -582,13 +582,13 @@ export default function Block14PageJP() {
             <div className="rounded-lg p-4 mb-4 border-2 border-[#2775CA]/30 bg-[#2775CA]/5">
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e5fa8' }}>USDCで支払う（利用可能）</span>
+                <span style={{ color: '#1e5fa8' }}>USDCで登録（利用可能）</span>
               </h3>
               <p className="text-gray-700 text-sm mb-3">
-                Block 14の登録を<strong>Ethereum上のUSDC</strong>でCoinbase Commerceからお支払いいただけます。下記のチケット種別からお選びください。
+                Block 14の登録を<strong>Ethereum上のUSDC</strong>でCoinbase Commerceから行えます。下記のチケット種別からお選びください。
               </p>
               <p className="text-sm font-semibold mb-3" style={{ color: '#1e5fa8' }}>
-                重要：お支払いにはEthereumネットワーク上のUSDCのみをご利用いただけます。
+                重要：登録にはEthereumネットワーク上のUSDCのみをご利用いただけます。
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
                 <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
@@ -885,7 +885,7 @@ export default function Block14PageJP() {
                     登録は現在受付中です。定員に限りがあります - 早めに登録して席を確保してください。
                   </p>
                   <p className="text-sm text-gray-600 mb-2">
-                    カード（Eventbrite）または<a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>Ethereum上のUSDC（ステーブルコイン）</a>でお支払いいただけます。
+                    カード（Eventbrite）または<a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>Ethereum上のUSDC（ステーブルコイン）</a>で登録いただけます。
                   </p>
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>貢献者：</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">研究を発表する方には参加費免除が利用可能</a>
@@ -905,7 +905,7 @@ export default function Block14PageJP() {
                     </a>
                     <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
                       <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
-                      USDCで支払う
+                      USDCで登録
                     </a>
                   </div>
                 </div>

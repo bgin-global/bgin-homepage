@@ -227,7 +227,7 @@ export default function Block14AccessPage() {
             <h2 className="block13-section-title">Registration & Payment</h2>
             <div className="block13-card">
               <p className="text-gray-700 mb-4">
-                Pay by card (Eventbrite) or in <strong>USDC on Ethereum</strong> (stablecoin) via Coinbase Commerce. Choose your option below. <strong>We accept USDC on the Ethereum network only.</strong>
+                Register by card (Eventbrite) or in <strong>USDC on Ethereum</strong> (stablecoin) via Coinbase Commerce. Choose your option below. <strong>We accept USDC on the Ethereum network only.</strong>
               </p>
               <div className="flex flex-wrap gap-3 mb-4">
                 <a
@@ -242,7 +242,7 @@ export default function Block14AccessPage() {
               </div>
               <h3 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e5fa8' }}>Pay with USDC</span>
+                <span style={{ color: '#1e5fa8' }}>Register with USDC</span>
               </h3>
               <div className="grid gap-2 sm:grid-cols-2">
                 <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
@@ -299,7 +299,7 @@ export default function Block14AccessPage() {
                   style={{ backgroundColor: '#2775CA' }}
                 >
                   <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                  Pay with USDC
+                  Register with USDC
                 </Link>
               </div>
             </div>

@@ -102,7 +102,7 @@ export default function Block14Page() {
               </a>
               <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e5fa8] hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={28} height={28} className="flex-shrink-0" />
-                Pay with USDC
+                Register with USDC
               </a>
             </div>
             <Link
@@ -122,7 +122,7 @@ export default function Block14Page() {
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
           <span className="text-blue-200">|</span>
           <span className="text-base md:text-lg">
-            <strong>USDC payment is now available.</strong> Pay your Block 14 registration in <strong>USDC on Ethereum</strong> (stablecoin) via Coinbase Commerce — same options as Eventbrite.
+            <strong>Register with USDC now available.</strong> Complete your Block 14 registration in <strong>USDC on Ethereum</strong> (stablecoin) via Coinbase Commerce — same options as Eventbrite.
           </span>
           <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
             <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
@@ -686,10 +686,10 @@ export default function Block14Page() {
             <div className="rounded-lg p-4 mb-4 border-2 border-[#2775CA]/30 bg-[#2775CA]/5">
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e5fa8' }}>Pay with USDC (now available)</span>
+                <span style={{ color: '#1e5fa8' }}>Register with USDC (now available)</span>
               </h3>
               <p className="text-gray-700 text-sm mb-3">
-                You can pay your Block 14 registration in <strong>USDC on Ethereum</strong> via Coinbase Commerce. Choose your ticket type below:
+                You can register in <strong>USDC on Ethereum</strong> via Coinbase Commerce. Choose your ticket type below:
               </p>
               <p className="text-sm font-semibold mb-3" style={{ color: '#1e5fa8' }}>
                 Important: We accept USDC on the Ethereum network only.
@@ -1001,7 +1001,7 @@ export default function Block14Page() {
                     Registration is now open. Limited capacity - register early to secure your spot.
                   </p>
                   <p className="text-sm text-gray-600 mb-2">
-                    Pay by card (Eventbrite) or <a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>USDC on Ethereum (stablecoin)</a>.
+                    Register by card (Eventbrite) or <a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>USDC on Ethereum (stablecoin)</a>.
                   </p>
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>Contributors:</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">Fee waivers available for those presenting work</a>
@@ -1021,7 +1021,7 @@ export default function Block14Page() {
                     </a>
                     <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
                       <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
-                      Pay with USDC
+                      Register with USDC
                     </a>
                   </div>
                 </div>

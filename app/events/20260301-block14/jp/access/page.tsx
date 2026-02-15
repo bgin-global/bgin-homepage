@@ -229,7 +229,7 @@ export default function Block14AccessPageJP() {
             <h2 className="block13-section-title">登録・お支払い</h2>
             <div className="block13-card">
               <p className="text-gray-700 mb-4">
-                カード（Eventbrite）または<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceからお支払いいただけます。下記からお選びください。<strong>お支払いにはEthereumネットワーク上のUSDCのみをご利用いただけます。</strong>
+                カード（Eventbrite）または<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceから登録いただけます。下記からお選びください。<strong>登録にはEthereumネットワーク上のUSDCのみをご利用いただけます。</strong>
               </p>
               <div className="flex flex-wrap gap-3 mb-4">
                 <a
@@ -244,7 +244,7 @@ export default function Block14AccessPageJP() {
               </div>
               <h3 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e5fa8' }}>USDCで支払う</span>
+                <span style={{ color: '#1e5fa8' }}>USDCで登録</span>
               </h3>
               <div className="grid gap-2 sm:grid-cols-2">
                 <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
@@ -301,7 +301,7 @@ export default function Block14AccessPageJP() {
                   style={{ backgroundColor: '#2775CA' }}
                 >
                   <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                  USDCで支払う
+                  USDCで登録
                 </Link>
               </div>
             </div>
