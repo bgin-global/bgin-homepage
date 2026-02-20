@@ -115,15 +115,17 @@ export default function SessionDetailPageJP() {
               >
                 ← Block 14プログラムに戻る
               </Link>
-              <Link
-                href={`/events/20260301-block14/sessions/${sessionId}`}
-                className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
-              >
-                English
-              </Link>
+              {!(session as any).jpOnly && (
+                <Link
+                  href={`/events/20260301-block14/sessions/${sessionId}`}
+                  className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  English
+                </Link>
+              )}
             </div>
             <h1 className="text-4xl font-bold mb-4">
-              {session.title ? formatTitleWithJP(session.title, 'session') : "TBD"}
+              {(session as any).jpOnly ? (session.title || "TBD") : (session.title ? formatTitleWithJP(session.title, 'session') : "TBD")}
             </h1>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2">
@@ -164,7 +166,7 @@ export default function SessionDetailPageJP() {
               {/* Summary */}
               <div>
                 <h2 className="text-2xl font-bold mb-4">セッション概要</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                   {session.summary || "詳細なセッション情報は間もなく利用可能になります。"}
                 </p>
               </div>
@@ -242,11 +244,11 @@ export default function SessionDetailPageJP() {
 
               {/* Session Chair & Main Contributor */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">セッション議長 & 主要貢献者</h2>
+                <h2 className="text-2xl font-bold mb-4">セッションチェア & 主要貢献者</h2>
                 <div className="space-y-3">
                   {session.moderator && session.moderator !== "" && session.moderator !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">セッション議長</h3>
+                      <h3 className="font-semibold text-gray-700">セッションチェア</h3>
                       <p className="text-gray-600">{session.moderator === "" ? "未定" : session.moderator}</p>
                     </div>
                   )}

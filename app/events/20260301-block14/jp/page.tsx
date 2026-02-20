@@ -14,8 +14,8 @@ import RoomImageCarousel from "@/components/events/block14/RoomImageCarousel";
 import ProgramTimetable from "@/components/events/block14/ProgramTimetable";
 
 
-// Load and process program data
-const program = processProgram();
+// Load and process program data (include Japanese-only sessions e.g. 2-11)
+const program = processProgram(true);
 const rooms = programData.rooms;
 
 
@@ -256,7 +256,7 @@ export default function Block14PageJP() {
           
           {/* Program Timetable */}
           <div className="mb-8">
-            <ProgramTimetable formatTitle={formatTitleWithJP} />
+            <ProgramTimetable formatTitle={formatTitleWithJP} includeJpOnly />
           </div>
           
           {/* Day Tabs */}
@@ -329,7 +329,7 @@ export default function Block14PageJP() {
                                   {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                     <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                       {session.sessionChair !== 'TBD' && (
-                                        <span><span className="font-semibold">議長：</span> {session.sessionChair}</span>
+                                        <span><span className="font-semibold">セッションチェア：</span> {session.sessionChair}</span>
                                       )}
                                       {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
                                         <span><span className="font-semibold">主要貢献者：</span> {session.contributors}</span>
@@ -461,7 +461,7 @@ export default function Block14PageJP() {
                                     {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                       <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                         {session.sessionChair !== 'TBD' && (
-                                          <span><span className="font-semibold">議長：</span> {session.sessionChair}</span>
+                                          <span><span className="font-semibold">セッションチェア：</span> {session.sessionChair}</span>
                                         )}
                                         {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
                                           <span><span className="font-semibold">主要貢献者：</span> {session.contributors}</span>
