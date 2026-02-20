@@ -115,15 +115,17 @@ export default function SessionDetailPageJP() {
               >
                 ← Block 14プログラムに戻る
               </Link>
-              <Link
-                href={`/events/20260301-block14/sessions/${sessionId}`}
-                className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
-              >
-                English
-              </Link>
+              {!(session as any).jpOnly && (
+                <Link
+                  href={`/events/20260301-block14/sessions/${sessionId}`}
+                  className="bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  English
+                </Link>
+              )}
             </div>
             <h1 className="text-4xl font-bold mb-4">
-              {session.title ? formatTitleWithJP(session.title, 'session') : "TBD"}
+              {(session as any).jpOnly ? (session.title || "TBD") : (session.title ? formatTitleWithJP(session.title, 'session') : "TBD")}
             </h1>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2">

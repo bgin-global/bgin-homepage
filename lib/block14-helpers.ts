@@ -1,13 +1,15 @@
 import { programData } from "./block14-program-data";
 
-// Process program data
-export const processProgram = () => {
+// Process program data. When includeJpOnly is false, sessions with jpOnly: true are excluded (for English page).
+export const processProgram = (includeJpOnly = false) => {
   const processed: any = {};
   
   Object.entries(programData.program).forEach(([day, dayData]) => {
-    processed[day] = dayData.sessions.map(session => ({
+    const sessions = includeJpOnly
+      ? dayData.sessions
+      : dayData.sessions.filter((s: any) => !s.jpOnly);
+    processed[day] = sessions.map((session: any) => ({
       ...session,
-      // Standardize room names
       room: session.room,
       // Format time for open-ended sessions
       displayTime: session.time.endsWith('-') 

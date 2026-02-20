@@ -305,6 +305,21 @@ export const programData = {
             }
           ],
           "relatedProjects": ["Practical Stablecoin Implementation Guide"]
+        },
+        {
+          "id": "2-11",
+          "title": "BGIN Block 14 重要セッション振り返り（日本語のみ）",
+          "time": "17:10 - 18:10",
+          "room": "Room A",
+          "summary": "Block 14の重要セッションの振り返りを日本語で行います。日本人参加者向けのセッションです。",
+          "wg": "General",
+          "speakers": "",
+          "moderator": "",
+          "detailPage": "/events/20260301-block14/jp/sessions/2-11",
+          "jpOnly": true,
+          "agenda": [],
+          "documents": [],
+          "relatedProjects": []
         }
       ]
     }

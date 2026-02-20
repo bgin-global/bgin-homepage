@@ -63,6 +63,31 @@ export default function SessionDetailPage() {
     );
   }
 
+  // Japanese-only sessions: show message and link to Japanese page
+  if ((sessionData.session as any).jpOnly) {
+    return (
+      <main className="min-h-screen bg-white">
+        <Header />
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <h1 className="text-3xl font-bold mb-4">Japanese Only Session</h1>
+          <p className="text-gray-600 mb-6">This session is offered in Japanese only.</p>
+          <Link
+            href={`/events/20260301-block14/jp/sessions/${sessionId}`}
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+          >
+            View Japanese session page →
+          </Link>
+          <p className="mt-8">
+            <Link href="/events/20260301-block14#detailed-program" className="text-blue-600 hover:underline">
+              ← Back to Block 14 Program
+            </Link>
+          </p>
+        </div>
+        <Footer />
+      </main>
+    );
+  }
+
   const { session, day } = sessionData;
   const room = (programData.rooms as any)[session.room] || { displayName: session.room };
   const wg = (programData.workingGroups as any)[session.wg];

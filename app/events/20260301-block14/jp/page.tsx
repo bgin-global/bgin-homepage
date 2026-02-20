@@ -14,8 +14,8 @@ import RoomImageCarousel from "@/components/events/block14/RoomImageCarousel";
 import ProgramTimetable from "@/components/events/block14/ProgramTimetable";
 
 
-// Load and process program data
-const program = processProgram();
+// Load and process program data (include Japanese-only sessions e.g. 2-11)
+const program = processProgram(true);
 const rooms = programData.rooms;
 
 
@@ -256,7 +256,7 @@ export default function Block14PageJP() {
           
           {/* Program Timetable */}
           <div className="mb-8">
-            <ProgramTimetable formatTitle={formatTitleWithJP} />
+            <ProgramTimetable formatTitle={formatTitleWithJP} includeJpOnly />
           </div>
           
           {/* Day Tabs */}
