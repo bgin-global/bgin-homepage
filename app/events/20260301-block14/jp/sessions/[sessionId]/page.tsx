@@ -166,7 +166,7 @@ export default function SessionDetailPageJP() {
               {/* Summary */}
               <div>
                 <h2 className="text-2xl font-bold mb-4">セッション概要</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                   {session.summary || "詳細なセッション情報は間もなく利用可能になります。"}
                 </p>
               </div>
@@ -244,11 +244,11 @@ export default function SessionDetailPageJP() {
 
               {/* Session Chair & Main Contributor */}
               <div>
-                <h2 className="text-2xl font-bold mb-4">セッション議長 & 主要貢献者</h2>
+                <h2 className="text-2xl font-bold mb-4">セッションチェア & 主要貢献者</h2>
                 <div className="space-y-3">
                   {session.moderator && session.moderator !== "" && session.moderator !== "Optional - List of speakers" && (
                     <div>
-                      <h3 className="font-semibold text-gray-700">セッション議長</h3>
+                      <h3 className="font-semibold text-gray-700">セッションチェア</h3>
                       <p className="text-gray-600">{session.moderator === "" ? "未定" : session.moderator}</p>
                     </div>
                   )}

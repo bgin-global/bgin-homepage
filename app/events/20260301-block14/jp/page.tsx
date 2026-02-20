@@ -329,7 +329,7 @@ export default function Block14PageJP() {
                                   {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                     <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                       {session.sessionChair !== 'TBD' && (
-                                        <span><span className="font-semibold">議長：</span> {session.sessionChair}</span>
+                                        <span><span className="font-semibold">セッションチェア：</span> {session.sessionChair}</span>
                                       )}
                                       {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
                                         <span><span className="font-semibold">主要貢献者：</span> {session.contributors}</span>
@@ -461,7 +461,7 @@ export default function Block14PageJP() {
                                     {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                       <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                         {session.sessionChair !== 'TBD' && (
-                                          <span><span className="font-semibold">議長：</span> {session.sessionChair}</span>
+                                          <span><span className="font-semibold">セッションチェア：</span> {session.sessionChair}</span>
                                         )}
                                         {session.contributors !== 'TBD' && session.contributors !== 'Optional - List of speakers' && (
                                           <span><span className="font-semibold">主要貢献者：</span> {session.contributors}</span>
