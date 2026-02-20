@@ -1,25 +1,26 @@
 import { programData } from "./block14-program-data";
 
+/** Session may have jpOnly for Japanese-only sessions (e.g. 2-11). */
+type SessionWithJpOnly = { jpOnly?: boolean; [key: string]: unknown };
+
 // Process program data. When includeJpOnly is false, sessions with jpOnly: true are excluded (for English page).
 export const processProgram = (includeJpOnly = false) => {
-  const processed: any = {};
+  const processed: Record<string, unknown[]> = {};
   
   Object.entries(programData.program).forEach(([day, dayData]) => {
+    const allSessions = (dayData as { sessions: SessionWithJpOnly[] }).sessions;
     const sessions = includeJpOnly
-      ? dayData.sessions
-      : dayData.sessions.filter((s: any) => !s.jpOnly);
-    processed[day] = sessions.map((session: any) => ({
+      ? allSessions
+      : allSessions.filter((s) => !s.jpOnly);
+    processed[day] = sessions.map((session: SessionWithJpOnly) => ({
       ...session,
       room: session.room,
-      // Format time for open-ended sessions
-      displayTime: session.time.endsWith('-') 
-        ? session.time.replace('-', ' onwards')
+      displayTime: String(session.time).endsWith('-')
+        ? String(session.time).replace('-', ' onwards')
         : session.time,
-      // Generate proper detail page URLs
-      detailPage: session.detailPage.includes('make one') 
+      detailPage: String(session.detailPage).includes('make one')
         ? `/events/20260301-block14/sessions/${session.id}`
         : session.detailPage,
-      // Handle empty fields and map to BGIN structure
       contributors: session.speakers || 'TBD',
       sessionChair: session.moderator || 'TBD',
       summary: session.summary || 'Details coming soon'
