@@ -31,7 +31,7 @@ export const programData = {
           "summary": "Part one of a two-session deep dive into cyber security information sharing frameworks for blockchain ecosystems. This session establishes foundational concepts, examines the current threat landscape, and maps regulatory requirements and compliance considerations for cross-organisational threat intelligence sharing. Participants will review privacy-preserving approaches and discuss barriers to effective information exchange.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": "Tomofumi Okubo, Mitchell Travers",
+          "moderator": " Mitchell Travers, Carole House",
           "detailPage": "/events/20260301-block14/sessions/1-2",
           "agenda": [
             "1. Current state of cyber threat intelligence sharing in blockchain ecosystems",
@@ -72,7 +72,7 @@ export const programData = {
           "summary": "Part two continues with technical frameworks and practical implementation strategies for cross-organisational threat intelligence sharing. This session moves from analysis to action, examining established standards such as STIX/TAXII and their blockchain-specific adaptations, alongside the Security AI Agent Project and trust frameworks for sharing partners.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": "Tomofumi Okubo, Mitchell Travers",
+          "moderator": "Mitchell Travers, Carole House",
           "detailPage": "/events/20260301-block14/sessions/1-4",
           "agenda": [
             "1. Technical standards for threat intelligence exchange",
@@ -284,7 +284,7 @@ export const programData = {
           "summary": "Development of Security Target (ST) and Protection Profile (PP) standards for blockchain systems, aligned with Common Criteria and industry standards. This session adapts established evaluation methodologies to address the unique security requirements of decentralised architectures — including wallet security targets, smart contract security profiles, and cryptographic key lifecycle management.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": "Shin'ichiro Matsuo",
+          "moderator": "Julien Bringer",
           "detailPage": "/events/20260301-block14/sessions/2-2",
           "agenda": [
             "1. Common Criteria overview and relevance to blockchain",
@@ -327,7 +327,7 @@ export const programData = {
           "summary": "Examining security considerations across the blockchain software supply chain, from development tools to deployment infrastructure. This session works toward governance frameworks for supply chain integrity, addressing code signing, dependency management, auditing, and standardised vendor guidelines within the BGIN framework.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": "Tomofumi Okubo",
+          "moderator": "Julien Bringer",
           "detailPage": "/events/20260301-block14/sessions/2-4",
           "agenda": [
             "1. Blockchain supply chain attack vectors",
@@ -369,7 +369,7 @@ export const programData = {
           "summary": "Best practices and technical approaches for offline key management in high-security environments. Critical for institutional custody, cold storage, and key ceremony implementations. This session examines hardware security modules, air-gapped signing environments, multi-party computation for offline keys, and recovery procedures — including the connection to the Agent Hack's Swordsman key backup and recovery architecture.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": "Tomofumi Okubo",
+          "moderator": " Julien Bringer",
           "detailPage": "/events/20260301-block14/sessions/2-6",
           "agenda": [
             "1. Threat models for key storage",
@@ -428,7 +428,7 @@ export const programData = {
           "summary": "Exploring the intersection of blockchain systems with securities law requirements, focusing on audit frameworks, assurance standards, and risk management practices for compliant operations. Discussion will address on-chain versus off-chain audit trails, regulatory reporting considerations, and international coordination challenges for practitioners navigating emerging digital asset classification frameworks.",
           "wg": "General",
           "speakers": "",
-          "moderator": "Shin'ichiro Matsuo",
+          "moderator": "Mitsuhiko Maruyama",
           "detailPage": "/events/20260301-block14/sessions/2-9",
           "agenda": [
             "1. Securities law landscape for digital assets",
