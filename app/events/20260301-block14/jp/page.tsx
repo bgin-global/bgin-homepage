@@ -134,8 +134,31 @@ export default function Block14PageJP() {
         </div>
       </section>
 
+      {/* Jump to section links - sticky so it stays visible while scrolling */}
+      <nav className="sticky top-0 z-30 bg-gray-100 border-b border-gray-200 py-3 px-4 shadow-sm" aria-label="セクションへ移動">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <a href="#what-is-block-meeting" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Block Meetingとは？</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#program" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">プログラム</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#critical-projects" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">主要プロジェクト</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#agentic-ai" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Agentic AI</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#stablecoin-payment" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">ステーブルコイン</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#related-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">関連イベント</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#access-venue" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">アクセス・会場</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#contributions" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">貢献方法</a>
+          <span className="text-gray-300" aria-hidden="true">|</span>
+          <a href="#participation" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">参加情報</a>
+        </div>
+      </nav>
+
       {/* What is Block Meeting Section */}
-      <section className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+      <section id="what-is-block-meeting" className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -502,7 +525,7 @@ export default function Block14PageJP() {
         </section>
 
         {/* Critical Projects Section */}
-        <section className="block13-section">
+        <section id="critical-projects" className="block13-section scroll-mt-24">
           <h2 className="block13-section-title">主要プロジェクト</h2>
           <div className="block13-grid block13-grid-3">
             {criticalProjects.map((project) => (
