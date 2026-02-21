@@ -57,8 +57,8 @@ export const workingGroups: WorkingGroup[] = [
     group_name: "Cybersecurity (CS) Working Group",
     co_chairs: [
       {
-        name: "Tomofumi Okubo",
-        job: "Penguin Securities",
+        name: "Takaya Sugino",
+        job: "",
       },
     ],
     description:

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { programData } from "@/lib/block14-program-data";
 import { formatTitleWithJP } from "@/lib/block14-japanese-titles";
+import { getDisplaySummaryJP, getDisplayAgendaJP } from "@/lib/block14-japanese-session-content";
 import "@/styles/block13.css";
 
 export default function SessionDetailPageJP() {
@@ -23,14 +24,14 @@ export default function SessionDetailPageJP() {
       const day2Session = day2Data.sessions.find((s: any) => s.id === "2-8");
       
       if (day1Session) {
-        // Merge information from both days
-        return { 
+        const summaryJP = getDisplaySummaryJP("1-8", day1Session.summary || "");
+        return {
           session: {
             ...day1Session,
             time: "9:20 - 17:00 (1日目), 9:20 - 15:00 (2日目)",
-            summary: day1Session.summary || "Block 14での集中型ハッカソンで、政策議論がエージェント媒介の標準とプログラム可能なガバナンスを通じて動作するソフトウェアに変わります。エージェントが構築し、人々は共通の理解に合意します。このセッションは1日目と2日目の両方で開催されます。"
-          }, 
-          day: `${day1Data.date} & ${day2Data.date}` 
+            summary: summaryJP || "Block 14での集中型ハッカソンで、政策議論がエージェント媒介の標準とプログラム可能なガバナンスを通じて動作するソフトウェアに変わります。エージェントが構築し、人々は共通の理解に合意します。このセッションは1日目と2日目の両方で開催されます。",
+          },
+          day: `${day1Data.date} & ${day2Data.date}`,
         };
       }
     }
@@ -67,6 +68,15 @@ export default function SessionDetailPageJP() {
   const { session, day } = sessionData;
   const room = (programData.rooms as any)[session.room] || { displayName: session.room };
   const wg = (programData.workingGroups as any)[session.wg];
+
+  // 日本語版表示用：日本語のみセッション(2-11)はそのまま、それ以外は日本語訳を使用
+  const isJpOnly = (session as any).jpOnly === true;
+  const displaySummary = isJpOnly
+    ? (session.summary || "詳細なセッション情報は間もなく利用可能になります。")
+    : getDisplaySummaryJP(sessionId, session.summary || "");
+  const displayAgenda = isJpOnly
+    ? (session.agenda || [])
+    : getDisplayAgendaJP(sessionId, session.agenda || []);
 
   // Format time display
   const displayTime = session.time.endsWith('-') 
@@ -167,16 +177,16 @@ export default function SessionDetailPageJP() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">セッション概要</h2>
                 <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-                  {session.summary || "詳細なセッション情報は間もなく利用可能になります。"}
+                  {displaySummary}
                 </p>
               </div>
 
               {/* Agenda */}
               <div>
                 <h2 className="text-2xl font-bold mb-4">アジェンダ</h2>
-                {session.agenda && session.agenda.length > 0 ? (
+                {displayAgenda && displayAgenda.length > 0 ? (
                   <div className="space-y-3 text-gray-700">
-                    {session.agenda.map((item: string, idx: number) => {
+                    {displayAgenda.map((item: string, idx: number) => {
                       // Empty line for spacing
                       if (item.trim() === '') {
                         return <div key={idx} className="h-2"></div>;
@@ -343,7 +353,7 @@ export default function SessionDetailPageJP() {
                   <ul className="space-y-2 text-sm list-none">
                     {session.relatedProjects.map((project: string, idx: number) => (
                       <li key={idx} className="text-gray-700">
-                        {project}
+                        {formatTitleWithJP(project, "project")}
                       </li>
                     ))}
                   </ul>

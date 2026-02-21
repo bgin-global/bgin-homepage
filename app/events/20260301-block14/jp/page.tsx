@@ -256,7 +256,7 @@ export default function Block14PageJP() {
           
           {/* Program Timetable */}
           <div className="mb-8">
-            <ProgramTimetable formatTitle={formatTitleWithJP} includeJpOnly />
+            <ProgramTimetable formatTitle={formatTitleWithJP} includeJpOnly useJpSessionLinks />
           </div>
           
           {/* Day Tabs */}
