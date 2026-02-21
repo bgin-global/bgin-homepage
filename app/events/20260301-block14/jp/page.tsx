@@ -617,6 +617,21 @@ export default function Block14PageJP() {
                 貴重な洞察を提供します。
               </p>
             </div>
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <h3 className="font-semibold text-gray-900 mb-2">実店舗ステーブルコイン決済の実証実験 — 同じビルで実施中</h3>
+              <p className="text-gray-800 text-sm mb-3">
+                Block 14 の会期中、同じビル内で実店舗におけるステーブルコイン決済の実証実験が行われています。参加者の皆様もぜひご利用ください。
+              </p>
+              <ul className="text-sm text-gray-700 space-y-1 mb-3 list-disc list-inside">
+                <li><strong>実施店舗:</strong> Pangaea Cafe &amp; Bar（渋谷パルコDGビル 10階 — Block 14 会場の18階と同じビルです）</li>
+                <li><strong>実施日時:</strong> 平日 14時以降（2026年3月2日まで）</li>
+                <li><strong>対象アセット:</strong> 米ドル建てステーブルコイン「USDC」（Baseチェーン）、日本円建てステーブルコイン「JPYC」（Polygon）</li>
+                <li><strong>利用ウォレット:</strong> Base App（USDC）、マイナウォレット（JPYC）</li>
+              </ul>
+              <p className="text-gray-700 text-sm">
+                <a href="https://prtimes.jp/main/html/rd/p/000000456.000023393.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">プレスリリース（PR TIMES）</a>
+              </p>
+            </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
               <h3 className="font-semibold text-purple-900 mb-2">セッション：実践的ステーブルコイン実装ガイド</h3>
               <p className="text-purple-800 text-sm mb-3">

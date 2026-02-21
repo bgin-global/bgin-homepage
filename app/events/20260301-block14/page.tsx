@@ -721,6 +721,21 @@ export default function Block14Page() {
                 of stablecoin-based payment systems in an international governance context.
               </p>
             </div>
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4">
+              <h3 className="font-semibold text-gray-900 mb-2">In-store stablecoin payment pilot — same building</h3>
+              <p className="text-gray-800 text-sm mb-3">
+                During the Block 14 event period, an in-store stablecoin payment proof-of-concept is being conducted in the same building. You are welcome to use it.
+              </p>
+              <ul className="text-sm text-gray-700 space-y-1 mb-3 list-disc list-inside">
+                <li><strong>Venue:</strong> Pangaea Cafe &amp; Bar (10th floor, Shibuya Parco DG Bldg. — same building as Block 14, which is on the 18th floor)</li>
+                <li><strong>Period:</strong> Weekdays, from 2:00 p.m. (runs through 2 March 2026)</li>
+                <li><strong>Accepted assets:</strong> USDC (Base chain) and JPYC (Polygon)</li>
+                <li><strong>Wallets:</strong> Base App (USDC), Myna Wallet (JPYC)</li>
+              </ul>
+              <p className="text-gray-700 text-sm">
+                <a href="https://prtimes.jp/main/html/rd/p/000000456.000023393.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Press release (PR TIMES, in Japanese)</a>
+              </p>
+            </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
               <h3 className="font-semibold text-purple-900 mb-2">Session: Practical Stablecoin Implementation Guide</h3>
               <p className="text-purple-800 text-sm mb-3">
