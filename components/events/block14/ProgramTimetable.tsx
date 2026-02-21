@@ -9,9 +9,17 @@ interface ProgramTimetableProps {
   formatTitle?: (title: string, type?: 'session' | 'project') => string;
   /** When true, include Japanese-only sessions (e.g. 2-11) and extend Day 2 with 17:10-18:10 slot */
   includeJpOnly?: boolean;
+  /** When true, session links point to Japanese detail pages (/jp/sessions/) */
+  useJpSessionLinks?: boolean;
 }
 
-const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includeJpOnly }) => {
+const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includeJpOnly, useJpSessionLinks }) => {
+  const getSessionDetailHref = (session: any) => {
+    if (useJpSessionLinks && session?.id) {
+      return `/events/20260301-block14/jp/sessions/${session.id}`;
+    }
+    return session?.detailPage ?? '#';
+  };
   // Default formatTitle function (no formatting)
   const formatTitleFn = formatTitle 
     ? (title: string, type?: 'session' | 'project') => formatTitle(title, type)
@@ -138,7 +146,7 @@ const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includ
                               }`}
                             >
                               {isClickable ? (
-                                <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
+                                <Link href={getSessionDetailHref(session)} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
                                   {formatTitleFn(session.title, 'session')}
                                 </Link>
                               ) : (
@@ -162,7 +170,7 @@ const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includ
                             }`}
                           >
                             {isClickable ? (
-                              <Link href={session.detailPage} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
+                              <Link href={getSessionDetailHref(session)} className="text-sm font-medium block h-full w-full no-underline hover:no-underline">
                                 {formatTitleFn(session.title, 'session')}
                               </Link>
                             ) : (
