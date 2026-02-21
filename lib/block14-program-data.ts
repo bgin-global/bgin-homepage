@@ -535,7 +535,7 @@ export const programData = {
       "name": "Cybersecurity Working Group",
       "abbreviation": "CS",
       "color": "red",
-      "chairs": ["Tomofumi Okubo", "Takaya Sugino"],
+      "chairs": ["Takaya Sugino"],
       "description": "Addresses security frameworks, threat intelligence, and cybersecurity standards for blockchain systems",
       "documentsLink": "https://bgin-global.org/activities/working-groups"
     },
@@ -543,7 +543,7 @@ export const programData = {
       "name": "Cybersecurity Working Group",
       "abbreviation": "CS",
       "color": "red",
-      "chairs": ["Tomofumi Okubo", "Takaya Sugino"],
+      "chairs": ["Takaya Sugino"],
       "description": "Addresses security frameworks, threat intelligence, and cybersecurity standards for blockchain systems",
       "documentsLink": "https://bgin-global.org/activities/working-groups"
     },
