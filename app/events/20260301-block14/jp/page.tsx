@@ -10,6 +10,7 @@ import { programData } from "@/lib/block14-program-data";
 import { criticalProjects } from "@/lib/block14-critical-projects";
 import { processProgram, groupSessionsByTime, groupSessionsByRoom } from "@/lib/block14-helpers";
 import { formatTitleWithJP, getJapaneseTitle } from "@/lib/block14-japanese-titles";
+import { getDisplaySummaryJP } from "@/lib/block14-japanese-session-content";
 import RoomImageCarousel from "@/components/events/block14/RoomImageCarousel";
 import ProgramTimetable from "@/components/events/block14/ProgramTimetable";
 
@@ -324,8 +325,8 @@ export default function Block14PageJP() {
                                 </div>
                               </div>
 
-                              {/* Always show session details */}
-                              <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
+                              {/* Always show session details — 日本語概要を表示 */}
+                              <p className="text-sm text-gray-600 mb-2">{session.jpOnly ? session.summary : getDisplaySummaryJP(session.id, session.summary)}</p>
                                   {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                     <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                       {session.sessionChair !== 'TBD' && (
@@ -456,8 +457,8 @@ export default function Block14PageJP() {
                                   </div>
                                 </div>
 
-                                {/* Always show session details */}
-                                <p className="text-sm text-gray-600 mb-2">{session.summary}</p>
+                                {/* Always show session details — 日本語概要を表示 */}
+                                <p className="text-sm text-gray-600 mb-2">{session.jpOnly ? session.summary : getDisplaySummaryJP(session.id, session.summary)}</p>
                                     {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
                                       <div className="text-xs text-gray-700 flex flex-wrap gap-3 mb-2">
                                         {session.sessionChair !== 'TBD' && (
