@@ -134,8 +134,8 @@ export default function Block14PageJP() {
         </div>
       </section>
 
-      {/* Jump to section links */}
-      <nav className="bg-gray-100 border-b border-gray-200 py-3 px-4" aria-label="セクションへ移動">
+      {/* Jump to section links - sticky so it stays visible while scrolling */}
+      <nav className="sticky top-0 z-30 bg-gray-100 border-b border-gray-200 py-3 px-4 shadow-sm" aria-label="セクションへ移動">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           <a href="#program" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">プログラム</a>
           <span className="text-gray-300" aria-hidden="true">|</span>
