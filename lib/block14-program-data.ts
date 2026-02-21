@@ -31,7 +31,7 @@ export const programData = {
           "summary": "Part one of a two-session deep dive into cyber security information sharing frameworks for blockchain ecosystems. This session establishes foundational concepts, examines the current threat landscape, and maps regulatory requirements and compliance considerations for cross-organisational threat intelligence sharing. Participants will review privacy-preserving approaches and discuss barriers to effective information exchange.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": " Mitchell Travers, Carole House",
+          "moderator": "Carole House, Mitchell Travers",
           "detailPage": "/events/20260301-block14/sessions/1-2",
           "agenda": [
             "1. Current state of cyber threat intelligence sharing in blockchain ecosystems",
@@ -72,7 +72,7 @@ export const programData = {
           "summary": "Part two continues with technical frameworks and practical implementation strategies for cross-organisational threat intelligence sharing. This session moves from analysis to action, examining established standards such as STIX/TAXII and their blockchain-specific adaptations, alongside the Security AI Agent Project and trust frameworks for sharing partners.",
           "wg": "Cyber Security",
           "speakers": "",
-          "moderator": "Mitchell Travers, Carole House",
+          "moderator": "Carole House, Mitchell Travers",
           "detailPage": "/events/20260301-block14/sessions/1-4",
           "agenda": [
             "1. Technical standards for threat intelligence exchange",
