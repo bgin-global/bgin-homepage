@@ -72,7 +72,7 @@ export default function Block14Page() {
       <Header />
 
       {/* Hero Section */}
-      <section className="block13-hero" style={{ position: 'relative' }}>
+      <section id="registration" className="block13-hero" style={{ position: 'relative' }}>
         <div className="absolute inset-0" style={{ zIndex: 1, pointerEvents: 'none' }}>
           {heroImages.map((src, index) => (
             <Image
@@ -168,6 +168,16 @@ export default function Block14Page() {
           <a href="#related-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Related Events</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#access-venue" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Access &amp; Venue</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#sponsors" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Sponsors &amp; Partners</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#contributions" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Fee Waiver</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#participation" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Target Participants</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Past BGIN Events</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#registration" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Register</a>
         </div>
       </nav>
 
@@ -877,7 +887,7 @@ export default function Block14Page() {
         </section>
 
         {/* Sponsors & Partners */}
-        <section className="block13-section">
+        <section id="sponsors" className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
 
           {/* Sustaining Sponsors */}
@@ -1085,7 +1095,7 @@ export default function Block14Page() {
         </section>
 
         {/* Past BGIN Events */}
-        <section className="block13-section">
+        <section id="past-events" className="block13-section">
           <h2 className="block13-section-title text-center">Past BGIN Events</h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
             Explore our journey of building global blockchain governance through previous Block conferences

@@ -74,7 +74,7 @@ export default function Block14PageJP() {
       <Header />
 
       {/* Hero Section */}
-      <section className="block13-hero" style={{ position: 'relative' }}>
+      <section id="registration" className="block13-hero" style={{ position: 'relative' }}>
         <div className="absolute inset-0" style={{ zIndex: 1, pointerEvents: 'none' }}>
           {heroImages.map((src, index) => (
             <Image
@@ -161,7 +161,7 @@ export default function Block14PageJP() {
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#program" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">プログラム</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
-          <a href="#critical-projects" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">重要研究プロジェクト</a>
+          <a href="#critical-projects" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">主要プロジェクト</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#agentic-ai" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Agentic AI</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
@@ -170,6 +170,16 @@ export default function Block14PageJP() {
           <a href="#related-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">関連イベント</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#access-venue" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">アクセス・会場</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#sponsors" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">スポンサー & パートナー</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#contributions" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">参加費免除</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#participation" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">想定参加者</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">過去のBGINイベント</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#registration" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">登録</a>
         </div>
       </nav>
 
@@ -773,7 +783,7 @@ export default function Block14PageJP() {
         </section>
 
         {/* Sponsors & Partners */}
-        <section className="block13-section">
+        <section id="sponsors" className="block13-section">
           <h2 className="block13-section-title text-center">スポンサー & パートナー</h2>
 
           {/* Sustaining Sponsors */}
@@ -970,7 +980,7 @@ export default function Block14PageJP() {
         </section>
 
         {/* Past BGIN Events */}
-        <section className="block13-section">
+        <section id="past-events" className="block13-section">
           <h2 className="block13-section-title text-center">過去のBGINイベント</h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
             過去のBlock会議を通じて、グローバルブロックチェーンガバナンスを構築してきた歩みを探索してください
