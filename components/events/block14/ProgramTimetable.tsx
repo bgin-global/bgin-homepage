@@ -208,11 +208,11 @@ const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includ
           <div className="flex flex-wrap gap-3 mb-4">
             <div className="text-sm font-medium">Working Groups:</div>
             <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">Agentic AI</span>
-              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">IKP</span>
-              <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300">Cyber Security</span>
-              <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300">FASE</span>
-              <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300">General</span>
+              <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300 text-yellow-800">Agentic AI</span>
+              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300 text-blue-800">IKP</span>
+              <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300 text-green-800">Cyber Security</span>
+              <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300 text-purple-800">FASE</span>
+              <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300 text-gray-800">General</span>
             </div>
           </div>
         </div>
