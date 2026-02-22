@@ -8,7 +8,7 @@ export const programData = {
           "title": "Opening Plenary",
           "time": "09:00 - 09:20",
           "room": "Room A",
-          "summary": "Welcome and orientation to BGIN Block 14, held during Japan Fintech Week in Shibuya, Tokyo. This plenary provides a recap of Block 13 outcomes, an overview of the two-day agenda, and status updates from each Working Group. Special focus on the Block 14 AI Agent Hack initiative and the 'Three Graphs, One Identity' architecture being deployed across the event.",
+          "summary": "Welcome and orientation to BGIN Block 14. This plenary provides a recap of Block 13 outcomes, an overview of the two-day agenda, and status updates from each Working Group.",
           "wg": "General",
           "speakers": "",
           "moderator": "Shin'ichiro Matsuo",
@@ -17,8 +17,7 @@ export const programData = {
             "1. Welcome remarks and logistics",
             "2. Block 13 recap and key outcomes",
             "3. Block 14 objectives and program structure",
-            "4. Introduction to the BGIN AI Agent Hack",
-            "5. Working Group updates (IKP, FASE, Cyber Security, Agentic AI)"
+            "4. Working Group updates (IKP, FASE, Cyber Security, Agentic AI)"
           ],
           "documents": [],
           "relatedProjects": []
