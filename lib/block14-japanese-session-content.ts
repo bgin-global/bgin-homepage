@@ -10,7 +10,7 @@ export type SessionContentJP = {
 
 const sessionSummariesJP: Record<string, string> = {
   "1-1":
-    "Japan Fintech Week 期間中、東京・渋谷で開催する BGIN Block 14 への歓迎とオリエンテーションです。本プレナリーでは Block 13 の成果の振り返り、2日間のアジェンダ概要、各ワーキンググループの状況報告を行います。Block 14 AI Agent Hack イニシアチブおよび本イベント全体で展開する「Three Graphs, One Identity」アーキテクチャに特に焦点を当てます。",
+    "BGIN Block 14 への歓迎とオリエンテーションです。本プレナリーでは Block 13 の成果の振り返り、2日間のアジェンダ概要、各ワーキンググループの状況報告を行います。",
   "1-2":
     "ブロックチェーンエコシステムにおけるサイバーセキュリティ情報共有フレームワークの2回シリーズの第1回。本セッションでは基礎概念の確立、現在の脅威の全体像の検証、組織横断的な脅威インテリジェンス共有における規制要件とコンプライアンスの考慮事項の整理を行います。プライバシーを保護するアプローチのレビューと、効果的な情報交換を妨げる障壁について議論します。",
   "1-3":
@@ -56,8 +56,7 @@ const sessionAgendasJP: Record<string, string[]> = {
     "1. 歓迎の挨拶と諸連絡",
     "2. Block 13 の振り返りと主な成果",
     "3. Block 14 の目的とプログラム構成",
-    "4. BGIN AI Agent Hack の紹介",
-    "5. ワーキンググループ更新（IKP、FASE、Cyber Security、Agentic AI）",
+    "4. ワーキンググループ更新（IKP、FASE、Cyber Security、Agentic AI）",
   ],
   "1-2": [
     "1. ブロックチェーンエコシステムにおけるサイバー脅威インテリジェンス共有の現状",
