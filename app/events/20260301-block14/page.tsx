@@ -175,7 +175,7 @@ export default function Block14Page() {
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#participation" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Target Participants</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
-          <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Past BGIN Events</a>
+          <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Past BGIN Block Meetings</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#registration" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Register</a>
           <span className="text-gray-500 pl-2 ml-2 border-l border-gray-300" aria-hidden="true"></span>
@@ -1096,9 +1096,9 @@ export default function Block14Page() {
           </div>
         </section>
 
-        {/* Past BGIN Events */}
+        {/* Past BGIN Block Meetings */}
         <section id="past-events" className="block13-section">
-          <h2 className="block13-section-title text-center">Past BGIN Events</h2>
+          <h2 className="block13-section-title text-center">Past BGIN Block Meetings</h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
             Explore our journey of building global blockchain governance through previous Block conferences
           </p>

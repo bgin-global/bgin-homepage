@@ -177,7 +177,7 @@ export default function Block14PageJP() {
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#participation" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">想定参加者</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
-          <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">過去のBGINイベント</a>
+          <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">過去のBGIN Block Meetings</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#registration" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">登録</a>
           <span className="text-gray-500 pl-2 ml-2 border-l border-gray-300" aria-hidden="true"></span>
@@ -981,9 +981,9 @@ export default function Block14PageJP() {
           </div>
         </section>
 
-        {/* Past BGIN Events */}
+        {/* Past BGIN Block Meetings */}
         <section id="past-events" className="block13-section">
-          <h2 className="block13-section-title text-center">過去のBGINイベント</h2>
+          <h2 className="block13-section-title text-center">過去のBGIN Block Meetings</h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
             過去のBlock会議を通じて、グローバルブロックチェーンガバナンスを構築してきた歩みを探索してください
           </p>
