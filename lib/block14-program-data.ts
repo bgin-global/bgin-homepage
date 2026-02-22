@@ -89,18 +89,17 @@ export const programData = {
           "title": "FASE: Harmonization among Crypto-asset, stablecoin and tokenized deposit",
           "time": "11:00 - 12:30",
           "room": "Room B",
-          "summary": "A comprehensive discussion on achieving regulatory harmonization across different digital asset classes including crypto-assets, stablecoins, and tokenised deposits. This session explores the ecosystem in which these asset classes coexist, the underlying business and industry structures that support them, and how regulation and innovation should co-evolve to sustain healthy market development. Drawing on the Japanese regulatory experience and international precedents, participants will work toward a common analytical model that clarifies the boundaries and interdependencies between these rapidly converging categories.",
+          "summary": "Regulatory frameworks for blockchain-related financial services—crypto-assets, stablecoins, tokenized deposits—are being established in jurisdictions worldwide. At the same time, these discussions have raised serious questions about whether blockchain-based financial services can be sound and sustainable, and whether they are viable as an industry structure. Without a shared understanding of a model for the blockchain industry structure, it is not possible to define the details and standards of regulatory supervision in technical, operational, and governance dimensions. This project aims to produce a document that provides a shared view of the industry structure as a basis for regulatory and supervisory debate in each country by summer 2026. This session will kick off that discussion using a discussion paper grounded in the current situation in Japan and will summarize the outcome as a meeting report.",
           "wg": "FASE",
           "speakers": "",
           "moderator": "Shin'ichiro Matsuo",
           "detailPage": "/events/20260301-block14/sessions/1-5",
           "agenda": [
-            "1. Definitional clarity: crypto-asset versus stablecoin versus tokenised deposit",
-            "2. Mapping the ecosystem: how these asset classes interact",
-            "3. Business and industry structures underpinning the digital asset ecosystem",
-            "4. Regulatory arbitrage and harmonization challenges across jurisdictions",
-            "5. Cross-border payment implications and interoperability requirements",
-            "6. Recommendations for policy alignment"
+            "1. Current understanding of blockchain-based financial services (5 min)",
+            "2. Presentation of the discussion paper toward establishing an industry structure model (25 min)",
+            "3. IMF analysis on stablecoins (10 min)",
+            "4. Discussion on the discussion paper (45 min)",
+            "5. Wrap-up and future roadmap (5 min)"
           ],
           "documents": [
             {
