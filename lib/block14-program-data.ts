@@ -148,22 +148,22 @@ export const programData = {
           "title": "FASE: Establishing Technical Metrics to Evaluate the 'Decentralization' of Blockchain Networks",
           "time": "13:30 - 15:00",
           "room": "Room B",
-          "summary": "In major jurisdictions, regulatory classification of crypto-assets often relies on concepts like decentralisation and maturity, yet these concepts are not always workable as practical tests. This session develops quantitative and qualitative metrics for assessing blockchain network decentralisation, exploring situations where off-chain factors and other relevant considerations pose challenges in making classification assessments. The goal is to produce a framework that regulators, auditors, and network operators can apply consistently.",
+          "summary": "In the consideration of regulatory frameworks for crypto-assets, the degree of decentralisation is a key maturity factor under the US Clarity Act. In Japan, it has been reported that the review of the transition under the Financial Instruments and Exchange Act is moving toward classifying crypto-assets into two types, driven by the approach to regulatory supervision. This session aims to develop decentralisation metrics and establish a framework that regulators, auditors, and network operators can apply consistently. The project will compile a report on categories and classification methods appropriate for blockchain and crypto-assets, building on current thinking in various countries.",
           "wg": "FASE",
           "speakers": "",
           "moderator": "Joseph Beverley",
           "detailPage": "/events/20260301-block14/sessions/1-7",
           "agenda": [
-            "1. Why decentralisation metrics matter for regulation and classification",
-            "2. Existing measurement approaches and their limitations",
-            "3. Proposed technical metrics framework",
+            "1. Classification under the US Clarity Act (15 min)",
+            "2. Classification in Japan's review of the transition under the Financial Instruments and Exchange Act (15 min)",
+            "3. Category concepts, classification methods and their limitations (20 min)",
+            "4. Technical metrics framework (20 min)",
             "   • Node distribution and geographic spread",
             "   • Validator/miner concentration",
             "   • Protocol governance participation",
             "   • Code contribution diversity",
-            "4. Off-chain factors that complicate on-chain assessments",
-            "5. Case study applications to live blockchain networks",
-            "6. Toward a BGIN decentralisation assessment standard"
+            "5. Off-chain factors that complicate on-chain assessment (10 min)",
+            "6. Toward a BGIN decentralisation assessment standard (10 min)"
           ],
           "documents": [
             {
