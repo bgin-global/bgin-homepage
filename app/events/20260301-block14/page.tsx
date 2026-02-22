@@ -91,6 +91,12 @@ export default function Block14Page() {
         <div className="block13-hero-content" style={{ position: 'relative', zIndex: 50 }}>
           <h1>BGIN Block 14</h1>
           <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
+          <p className="text-lg md:text-xl font-semibold text-white drop-shadow-md mt-2 flex items-center justify-center gap-2 flex-wrap">
+            <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+              <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+              Hybrid event — Remote participation available
+            </span>
+          </p>
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-wrap justify-center gap-3" style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}>
               <a href="https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" className="block13-btn-primary inline-flex items-center gap-2">
@@ -113,6 +119,20 @@ export default function Block14Page() {
               日本語
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Hybrid / Remote participation banner */}
+      <section className="bg-emerald-600 text-white py-4 px-4 border-b-2 border-emerald-700 shadow-md" aria-label="Participation format">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
+          <span className="font-bold text-lg md:text-xl uppercase tracking-wide flex items-center gap-2">
+            <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></path></svg>
+            Hybrid event
+          </span>
+          <span className="text-emerald-100">|</span>
+          <span className="text-base md:text-lg">
+            <strong>Remote participation is available.</strong> Join online from anywhere. Connection details (Zoom/streaming) will be sent to registered participants before the event.
+          </span>
         </div>
       </section>
 
