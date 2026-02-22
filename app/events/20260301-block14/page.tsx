@@ -92,7 +92,7 @@ export default function Block14Page() {
           <h1>BGIN Block 14</h1>
           <p>March 1–2, 2026 | Shibuya, Tokyo | Japan Fintech Week</p>
           <p className="text-lg md:text-xl font-semibold text-white drop-shadow-md mt-2 flex items-center justify-center gap-2 flex-wrap">
-            <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border-2 border-white/80" style={{ backgroundColor: 'rgba(0,0,0,0.65)' }}>
               <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
               Hybrid event — Remote participation available
             </span>
@@ -123,13 +123,13 @@ export default function Block14Page() {
       </section>
 
       {/* Hybrid / Remote participation banner */}
-      <section className="bg-emerald-600 text-white py-4 px-4 border-b-2 border-emerald-700 shadow-md" aria-label="Participation format">
-        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
+      <section className="py-4 px-4 border-b-2 shadow-md" style={{ backgroundColor: '#0f766e', borderColor: '#0d9488' }} aria-label="Participation format">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center text-white">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide flex items-center gap-2">
             <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             Hybrid event
           </span>
-          <span className="text-emerald-100">|</span>
+          <span className="text-teal-200" style={{ color: '#99f6e4' }}>|</span>
           <span className="text-base md:text-lg">
             <strong>Remote participation is available.</strong> Join online from anywhere. Connection details (Zoom/streaming) will be sent to registered participants before the event.
           </span>
@@ -140,11 +140,11 @@ export default function Block14Page() {
       <section className="text-white py-4 px-4 border-b-2 border-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
-          <span className="text-blue-200">|</span>
+          <span className="text-white/90">|</span>
           <span className="text-base md:text-lg">
             <strong>Register with USDC now available.</strong> Complete your Block 14 registration in <strong>USDC on Ethereum</strong> (stablecoin) via Coinbase Commerce — same options as Eventbrite.
           </span>
-          <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
+          <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg border border-white/50 bg-white/30 hover:bg-white/40 transition-colors text-white">
             <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
             Pay with USDC
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -152,8 +152,27 @@ export default function Block14Page() {
         </div>
       </section>
 
+      {/* Jump to section links - sticky so it stays visible while scrolling */}
+      <nav className="sticky top-0 z-30 bg-gray-100 border-b border-gray-200 py-3 px-4 shadow-sm" aria-label="Jump to section">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <a href="#what-is-block-meeting" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">What is Block Meeting?</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#program" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Program</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#critical-projects" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Key Research Projects</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#agentic-ai" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Agentic AI</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#stablecoin-payment" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Stablecoin</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#related-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Related Events</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#access-venue" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Access &amp; Venue</a>
+        </div>
+      </nav>
+
       {/* What is Block Meeting Section */}
-      <section className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+      <section id="what-is-block-meeting" className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -182,7 +201,7 @@ export default function Block14Page() {
                     </svg>
                     <div>
                       <h3 className="text-xl font-bold mb-2">Standards Development Practitioner Conference</h3>
-                      <p className="text-blue-50 leading-relaxed">
+                      <p className="text-white leading-relaxed">
                         Block Meetings are <strong>practitioner conferences that produce standards as deliverables</strong>. Through BGIN, we develop standards that serve as a critical stepping stone toward international standards—like ISO TC307—that governments and industry follow worldwide.
                       </p>
                     </div>
@@ -524,7 +543,7 @@ export default function Block14Page() {
         </section>
 
         {/* Critical Projects Section */}
-        <section className="block13-section">
+        <section id="critical-projects" className="block13-section">
           <h2 className="block13-section-title">Key Research Projects</h2>
           <div className="block13-grid block13-grid-3">
             {criticalProjects.map((project) => (

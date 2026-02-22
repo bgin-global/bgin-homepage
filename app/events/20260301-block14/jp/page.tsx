@@ -94,7 +94,7 @@ export default function Block14PageJP() {
           <h1>BGIN Block 14</h1>
           <p>2026年3月1日–2日 | 渋谷、東京 | Japan Fintech Week</p>
           <p className="text-lg md:text-xl font-semibold text-white drop-shadow-md mt-2 flex items-center justify-center gap-2 flex-wrap">
-            <span className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border-2 border-white/80" style={{ backgroundColor: 'rgba(0,0,0,0.65)' }}>
               <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
               ハイブリッド開催 — リモート参加可能
             </span>
@@ -125,13 +125,13 @@ export default function Block14PageJP() {
       </section>
 
       {/* Hybrid / Remote participation banner */}
-      <section className="bg-emerald-600 text-white py-4 px-4 border-b-2 border-emerald-700 shadow-md" aria-label="参加形式">
-        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
+      <section className="py-4 px-4 border-b-2 shadow-md" style={{ backgroundColor: '#0f766e', borderColor: '#0d9488' }} aria-label="参加形式">
+        <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center text-white">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide flex items-center gap-2">
             <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             ハイブリッド開催
           </span>
-          <span className="text-emerald-100">|</span>
+          <span style={{ color: '#99f6e4' }}>|</span>
           <span className="text-base md:text-lg">
             <strong>リモート参加が可能です。</strong> オンラインでご参加いただけます。接続方法（Zoom等）は登録者にイベント前に別途お送りします。
           </span>
@@ -142,11 +142,11 @@ export default function Block14PageJP() {
       <section className="text-white py-4 px-4 border-b-2 border-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
-          <span className="text-blue-200">|</span>
+          <span className="text-white/90">|</span>
           <span className="text-base md:text-lg">
             <strong>USDCで登録が可能になりました。</strong> Block 14の登録を<strong>Ethereum上のUSDC</strong>（ステーブルコイン）でCoinbase Commerceから行えます。Eventbriteと同じチケット種別をご用意しています。
           </span>
-          <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
+          <a href="#stablecoin-payment" className="inline-flex items-center gap-2 font-semibold underline hover:no-underline ml-1 px-3 py-1.5 rounded-lg border border-white/50 bg-white/30 hover:bg-white/40 transition-colors text-white">
             <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
             USDCで登録
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -154,8 +154,27 @@ export default function Block14PageJP() {
         </div>
       </section>
 
+      {/* Jump to section links - sticky */}
+      <nav className="sticky top-0 z-30 bg-gray-100 border-b border-gray-200 py-3 px-4 shadow-sm" aria-label="セクションへジャンプ">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          <a href="#what-is-block-meeting" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Block Meetingとは？</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#program" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">プログラム</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#critical-projects" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">重要研究プロジェクト</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#agentic-ai" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">Agentic AI</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#stablecoin-payment" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">ステーブルコイン</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#related-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">関連イベント</a>
+          <span className="text-gray-500" aria-hidden="true">|</span>
+          <a href="#access-venue" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">アクセス・会場</a>
+        </div>
+      </nav>
+
       {/* What is Block Meeting Section */}
-      <section className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+      <section id="what-is-block-meeting" className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -184,7 +203,7 @@ export default function Block14PageJP() {
                     </svg>
                     <div>
                       <h3 className="text-xl font-bold mb-2">標準策定の実務者会議</h3>
-                      <p className="text-blue-50 leading-relaxed">
+                      <p className="text-white leading-relaxed">
                         Block Meetingsは、<strong>成果物として標準を作る実務者会議</strong>です。BGINを通じて、私たちはISO TC307のように政府や産業界が世界中でフォローする国際標準への重要なステップとなる標準を開発しています。
                       </p>
                     </div>
@@ -522,7 +541,7 @@ export default function Block14PageJP() {
         </section>
 
         {/* Critical Projects Section */}
-        <section className="block13-section">
+        <section id="critical-projects" className="block13-section">
           <h2 className="block13-section-title">主要プロジェクト</h2>
           <div className="block13-grid block13-grid-3">
             {criticalProjects.map((project) => (
