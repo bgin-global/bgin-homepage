@@ -180,6 +180,8 @@ export default function Block14PageJP() {
           <a href="#past-events" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">過去のBGINイベント</a>
           <span className="text-gray-500" aria-hidden="true">|</span>
           <a href="#registration" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors">登録</a>
+          <span className="text-gray-500 pl-2 ml-2 border-l border-gray-300" aria-hidden="true"></span>
+          <Link href="/events/20260301-block14" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-1.5 rounded-md hover:bg-white transition-colors ml-auto">English</Link>
         </div>
       </nav>
 
