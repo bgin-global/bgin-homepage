@@ -919,24 +919,147 @@ export default function Block14Page() {
 
           {/* Event Sponsors */}
           <div className="mb-12">
-            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Event Sponsors</h3>
-            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto mb-4">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
-                <p className="text-2xl font-semibold text-gray-800 text-center">Swiss Embassy</p>
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">
+              Event Sponsors
+            </h3>
+
+            {/* Tier 1 */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-center mb-4 text-gray-800">
+                Tier 1
+              </h4>
+              <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/World.png"
+                    alt="World Foundation"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
               </div>
             </div>
-            <div className="text-center text-gray-600 italic">
-              More to be announced
+
+            {/* Tier 2 */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-center mb-4 text-gray-800">
+                Tier 2
+              </h4>
+              <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/MUFG.jpeg"
+                    alt="MUFG"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <p className="text-2xl font-semibold text-gray-800 text-center">
+                    Swiss Embassy
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tier 3 */}
+            <div className="mb-4">
+              <h4 className="text-lg font-semibold text-center mb-4 text-gray-800">
+                Tier 3
+              </h4>
+              <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/bitbank.png"
+                    alt="BitBank"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/DeCurret.png"
+                    alt="DeCurret DCP"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/mercari.png"
+                    alt="Mercari"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/NRI.png"
+                    alt="NRI"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
+                <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-[260px]">
+                  <Image
+                    src="/images/Events/sponsor/VerifyVasp.png"
+                    alt="VerifyVASP"
+                    width={220}
+                    height={120}
+                    className="object-contain max-h-[120px]"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-
-          {/* Special Supporters */}
+          {/* Networking Reception Sponsor */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Special Supporters</h3>
-            <div className="flex justify-center max-w-md mx-auto">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center min-h-[200px] w-full">
-                <p className="text-gray-600 italic text-center">To be announced</p>
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">
+              Networking Reception Sponsor
+            </h3>
+            <div className="flex justify-center max-w-3xl mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[180px] w-full">
+                <Image
+                  src="/images/Events/sponsor/fintech_assoc_japan.jpg"
+                  alt="FinTech Association Japan"
+                  width={260}
+                  height={120}
+                  className="object-contain max-h-[120px]"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Supporting Organizations */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">
+              Supporting Organizations
+            </h3>
+            <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[160px] w-[240px]">
+                <Image
+                  src="/images/Events/sponsor/JVCEA.png"
+                  alt="JVCEA"
+                  width={220}
+                  height={100}
+                  className="object-contain max-h-[100px]"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[160px] w-[240px]">
+                <Image
+                  src="/images/Events/sponsor/N-Avenue.png"
+                  alt="N.Avenue"
+                  width={220}
+                  height={100}
+                  className="object-contain max-h-[100px]"
+                />
               </div>
             </div>
           </div>
