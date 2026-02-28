@@ -16,6 +16,7 @@ export const sessionTitlesJP: { [key: string]: string } = {
   "IKP: Crypto Agility and PQC Migration": "IKP：暗号アジリティとPQC移行",
   "Security: Governance of security supply chain": "セキュリティ：セキュリティサプライチェーンのガバナンス",
   "IKP: Privacy Enhanced Authentication and Key Management (competition)": "IKP：プライバシー強化認証と鍵管理（コンペティション）",
+  "Keynote by the Financial Services Agency": "金融庁によるキーノート",
   "Security: Offline Key Management": "セキュリティ：オフライン鍵管理",
   "IKP: Proof of Personhood": "IKP：人格証明（Proof of Personhood）",
   "Audit: securities law and regulation - assurances / risk management": "監査：証券法と規制 - 保証 / リスク管理",

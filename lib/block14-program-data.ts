@@ -392,9 +392,23 @@ export const programData = {
           "relatedProjects": ["Privacy Enhanced Authentication", "Offline Key Management"]
         },
         {
+          "id": "2-keynote",
+          "title": "Keynote by the Financial Services Agency",
+          "time": "13:30 - 13:50",
+          "room": "Room A",
+          "summary": "Keynote address by the Financial Services Agency (FSA) of Japan.",
+          "wg": "General",
+          "speakers": "",
+          "moderator": "",
+          "detailPage": "/events/20260301-block14/sessions/2-keynote",
+          "agenda": [],
+          "documents": [],
+          "relatedProjects": []
+        },
+        {
           "id": "2-6",
           "title": "Security: Offline Key Management",
-          "time": "13:30 - 15:00",
+          "time": "13:50 - 15:20",
           "room": "Room A",
           "summary": "Best practices and technical approaches for offline key management in high-security environments. Critical for institutional custody, cold storage, and key ceremony implementations. This session examines hardware security modules, air-gapped signing environments, multi-party computation for offline keys, and recovery procedures — including the connection to the Agent Hack's Swordsman key backup and recovery architecture.",
           "wg": "Cyber Security",
@@ -415,7 +429,7 @@ export const programData = {
         {
           "id": "2-7",
           "title": "IKP: Proof of Personhood",
-          "time": "13:30 - 15:00",
+          "time": "13:50 - 15:20",
           "room": "Room B",
           "summary": "As AI agents become increasingly capable of impersonating human behaviour, proving that a participant is a unique real person — without sacrificing privacy — becomes essential for governance, voting, and trust systems. This session advances the Proof of Personhood working group item through case study presentations from World ID, the First Person Project, and Human.Tech, alongside a new theoretical contribution: the three-graph, one-trajectory model for personhood verification. Participants will evaluate the trade-offs between scalability, privacy, and Sybil resistance across biometric, social graph, and credential-based mechanisms.",
           "wg": "IKP",

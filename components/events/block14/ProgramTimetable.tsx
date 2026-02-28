@@ -24,12 +24,12 @@ const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includ
   const formatTitleFn = formatTitle 
     ? (title: string, type?: 'session' | 'project') => formatTitle(title, type)
     : ((title: string, type?: 'session' | 'project') => title);
-  // Define time slots for each day (based on Block14 program). Day 2 gains 17:10-18:10 when includeJpOnly.
+  // Define time slots for each day (based on Block14 program). Day 2: 13:30-13:50 FSA keynote (Room A), then 13:50-15:20 sessions. Day 2 gains 17:10-18:10 when includeJpOnly.
   const timeSlots = {
     day1: ['09:00 - 09:20', '09:20 - 10:50', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00', '17:00-'],
     day2: includeJpOnly
-      ? ['09:00 - 9:20', '09:20 - 10:50', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00', '17:10 - 18:10']
-      : ['09:00 - 9:20', '09:20 - 10:50', '11:00 - 12:30', '13:30 - 15:00', '15:30 - 17:00']
+      ? ['09:00 - 9:20', '09:20 - 10:50', '11:00 - 12:30', '13:30 - 13:50', '13:50 - 15:20', '15:30 - 17:00', '17:10 - 18:10']
+      : ['09:00 - 9:20', '09:20 - 10:50', '11:00 - 12:30', '13:30 - 13:50', '13:50 - 15:20', '15:30 - 17:00']
   };
 
   // Define rooms for each day
