@@ -101,7 +101,39 @@ export const programData = {
             "4. Discussion on the discussion paper (45 min)",
             "5. Wrap-up and future roadmap (5 min)"
           ],
+          "agendaLinks": {
+            "1": [
+              { "title": "Discussion paper toward establishing an industry structure model", "link": "/pdfs/block14/blockchain-business-structure_02252026.pdf" }
+            ],
+            "2": [
+              { "title": "Departmental Paper 0072 — Understanding Stablecoins", "link": "https://www.imf.org/en/publications/departmental-papers/issues/2025/12/02/understanding-stablecoins-570602" },
+              { "title": "Blog — How Stablecoins Can Improve Payments and Global Finance", "link": "https://www.imf.org/en/blogs/articles/2025/12/04/how-stablecoins-can-improve-payments-and-global-finance" }
+            ],
+            "3": [
+              { "title": "JVCEA comments and edits on the discussion paper", "link": "/pdfs/block14/jvcea_changes_packet.pdf" }
+            ]
+          },
           "documents": [
+            {
+              "title": "Discussion paper toward establishing an industry structure model",
+              "link": "/pdfs/block14/blockchain-business-structure_02252026.pdf",
+              "type": "PDF"
+            },
+            {
+              "title": "IMF — Departmental Paper 0072: Understanding Stablecoins",
+              "link": "https://www.imf.org/en/publications/departmental-papers/issues/2025/12/02/understanding-stablecoins-570602",
+              "type": "External"
+            },
+            {
+              "title": "IMF Blog — How Stablecoins Can Improve Payments and Global Finance",
+              "link": "https://www.imf.org/en/blogs/articles/2025/12/04/how-stablecoins-can-improve-payments-and-global-finance",
+              "type": "External"
+            },
+            {
+              "title": "JVCEA comments and edits on the discussion paper",
+              "link": "/pdfs/block14/jvcea_changes_packet.pdf",
+              "type": "PDF"
+            },
             {
               "title": "BGIN Block #13 Meeting Report — Harmonization among Crypto-asset, Stablecoin and Tokenized Deposit",
               "link": "https://bgin-global.org/pdfs/block13/3-5%20Harmonization%20among%20Crypto-asset,%20stablecoin%20and%20tokenized%20deposit%20.pdf",
