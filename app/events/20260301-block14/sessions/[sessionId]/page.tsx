@@ -197,6 +197,8 @@ export default function SessionDetailPage() {
                 {session.agenda && session.agenda.length > 0 ? (
                   <div className="space-y-3 text-gray-700">
                     {session.agenda.map((item: string, idx: number) => {
+                      const agendaLinks = (session as any).agendaLinks;
+                      const links = agendaLinks && agendaLinks[String(idx)] as { title: string; link: string }[] | undefined;
                       // Empty line for spacing
                       if (item.trim() === '') {
                         return <div key={idx} className="h-2"></div>;
@@ -204,7 +206,22 @@ export default function SessionDetailPage() {
 
                       // Main section (starts with number)
                       if (/^\d+\./.test(item.trim())) {
-                        return <div key={idx} className="text-lg font-semibold text-gray-900 mt-4 mb-2">{item}</div>;
+                        return (
+                          <div key={idx}>
+                            <div className="text-lg font-semibold text-gray-900 mt-4 mb-2">{item}</div>
+                            {links && links.length > 0 && (
+                              <ul className="ml-4 mb-2 space-y-1 list-none">
+                                {links.map((l: { title: string; link: string }, i: number) => (
+                                  <li key={i}>
+                                    <a href={l.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-base">
+                                      • {l.title}
+                                    </a>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        );
                       }
 
                       // Sub-section A), B), C)
