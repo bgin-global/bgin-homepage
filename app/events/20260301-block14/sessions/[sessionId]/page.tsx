@@ -306,25 +306,31 @@ export default function SessionDetailPage() {
                 <div>
                   <h2 className="text-2xl font-bold mb-4">Related Documents</h2>
                   <div className="space-y-3">
-                    {session.documents.map((doc: any, idx: number) => (
-                      <a
-                        key={idx}
-                        href={doc.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-4 border rounded-lg hover:bg-gray-50 transition-colors"
-                      >
-                        <div className="flex items-start justify-between">
-                          <div>
-                            <h3 className="font-semibold text-blue-600 hover:underline">{doc.title}</h3>
-                            <p className="text-sm text-gray-500 mt-1">Type: {doc.type}</p>
+                    {session.documents.map((doc: any, idx: number) => {
+                      const Wrapper = doc.link ? "a" : "div";
+                      const wrapperProps = doc.link
+                        ? { href: doc.link, target: "_blank", rel: "noopener noreferrer" }
+                        : {};
+                      return (
+                        <Wrapper
+                          key={idx}
+                          {...wrapperProps}
+                          className="block p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                        >
+                          <div className="flex items-start justify-between">
+                            <div>
+                              <h3 className={`font-semibold ${doc.link ? "text-blue-600 hover:underline" : "text-gray-800"}`}>{doc.title}</h3>
+                              <p className="text-sm text-gray-500 mt-1">Type: {doc.type}</p>
+                            </div>
+                            {doc.link && (
+                              <svg className="w-5 h-5 text-gray-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                            )}
                           </div>
-                          <svg className="w-5 h-5 text-gray-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </div>
-                      </a>
-                    ))}
+                        </Wrapper>
+                      );
+                    })}
                   </div>
                 </div>
               )}

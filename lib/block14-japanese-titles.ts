@@ -22,6 +22,7 @@ export const sessionTitlesJP: { [key: string]: string } = {
   "Audit: securities law and regulation - assurances / risk management": "監査：証券法と規制 - 保証 / リスク管理",
   "FASE: Practical Stablecoin Implementation Guide": "FASE：実践的ステーブルコイン実装ガイド",
   "Policy priorities for stablecoin regulation: past, present and future": "ステーブルコイン規制の政策優先事項：過去、現在、未来",
+  "Stablecoin Toolkit: Financial and Market Dimensions": "ステーブルコインツールキット：金融・市場の観点",
 };
 
 export const projectTitlesJP: { [key: string]: string } = {

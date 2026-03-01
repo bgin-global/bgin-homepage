@@ -490,24 +490,27 @@ export const programData = {
           "title": "FASE: Practical Stablecoin Implementation Guide",
           "time": "15:30 - 17:00",
           "room": "Room B",
-          "summary": "Building on FASE's published comparative analysis of stablecoin regulatory regimes, this session examines policy approaches in the European Union and the United Arab Emirates alongside emerging legislative proposals in the United States. The discussion identifies potential regulatory gaps, assesses diverse policy drivers across jurisdictions, and provides forward-looking perspectives on anticipated legal reforms. Complementing the regulatory analysis, this session also addresses the practical challenges of using stablecoins in real-world settings as adoption expands — informed in part by BGIN's own trial of USDC payments for Block 14 registration — and considers potential solutions.",
+          "summary": "This session will first identify the practical challenges involved in using stablecoins in real-world settings as adoption begins to expand, and will consider potential solutions. This session will also ensure time for finalisation of FASE WG's current paper on stablecoin regulation, including a live edit of the current document to reduce the scope by minimising US policy uncertainty in the drafting process.",
           "wg": "FASE",
-          "speakers": "",
+          "speakers": "FASE Co-Chairs, FASE Members, BGIN Steering Committee representatives, BGIN members",
           "moderator": "Chloe White",
           "detailPage": "/events/20260301-block14/sessions/2-10",
           "agenda": [
-            "1. Stablecoin architecture patterns and implementation considerations",
-            "2. Comparative analysis: EU and UAE regulatory frameworks",
-            "3. Emerging US legislative proposals and anticipated reforms",
-            "4. Reserve management, transparency, and attestation requirements",
-            "5. Block 14 USDC payment trial: operational insights and lessons learned",
-            "6. Forward-looking perspectives and guide updates"
+            "Case Study: Feedback on USDC integration by BGIN",
+            "Presentation: \"Risk Matrix - Stablecoins as the financial system for Agentic AI\"",
+            "Finalisation of regulation paper (see Documents below)",
+            "3A. Wharton Stablecoin Toolkit: Financial and Market Dimensions (see Documents below)"
           ],
           "documents": [
             {
               "title": "Policy priorities for stablecoin regulation: past, present and future",
               "link": "https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit",
               "type": "Google Doc"
+            },
+            {
+              "title": "Stablecoin Toolkit: Financial and Market Dimensions",
+              "link": "",
+              "type": "Wharton"
             }
           ],
           "relatedProjects": ["Practical Stablecoin Implementation Guide"]
