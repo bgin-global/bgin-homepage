@@ -10,7 +10,7 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
-    id: "11",
+    id: "12",
     title: "BGIN Block #14 Page Launched and Registration Now Open",
     description: "BGIN is pleased to announce that the Block #14 event page is now live and registration is open. Join us in Tokyo, Japan from March 1-2, 2026 for the 14th general meeting. The event will feature working group sessions, presentations on key projects, and discussions on blockchain governance standards. Registration is available through Eventbrite.",
     date: "2026-01-16",
