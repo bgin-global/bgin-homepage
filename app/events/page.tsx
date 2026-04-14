@@ -38,17 +38,17 @@ export default function EventsPage() {
     image?: string;
   }> = [
     {
-      id: "block14",
-      title: "BGIN Block #14 Meeting",
-      date: "March 1-2, 2026",
+      id: "block15",
+      title: "BGIN Block #15 Meeting",
+      date: "TBD",
       time: "TBD",
       type: "Block Conference",
-      description: "Join us for BGIN Block #14 in Tokyo, Japan. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
-      link: "/events/20260301-block14",
+      description: "Join us for BGIN Block #15. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
+      link: null,
       color: eventTypeColors["Block Conference"],
-      venue: "Tokyo, Japan",
-      registerLink: "https://www.eventbrite.com/e/bgin-block-14-tickets-1980456894885?aff=oddtdtcreator",
-      image: "/images/Events/Block5.jpeg"
+      venue: "TBD",
+      registerLink: undefined,
+      image: "/images/Events/Block3.jpeg"
     },
   ];
 
@@ -57,7 +57,7 @@ export default function EventsPage() {
       title: "Block Conferences",
       description: "BGIN General Assemblies and major conferences",
       link: "/activities/block-conference",
-      count: "13 past events"
+      count: "14 past events"
     },
     {
       title: "Layer 2 Meetups",

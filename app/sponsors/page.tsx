@@ -21,7 +21,7 @@ export default function Sponsors() {
         <SectionTitle title="Our Sponsors" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
           <div className={CUSTOM_STYLES.DESCRIPTION}>
-            Our sponsors’ support empowers our mission as a non-profit
+            Our sponsors' support empowers our mission as a non-profit
             organization and fosters innovation and collaboration within the
             blockchain community. Together with our sponsors, we can drive
             meaningful change and create a lasting impact.
@@ -63,21 +63,6 @@ export default function Sponsors() {
               colorPattern="white"
             />
           })}
-        </div>
-        <div className="w-full max-w-5xl m-auto px-6 xl:px-0 py-8">
-          <div className={`${CUSTOM_STYLES.DESCRIPTION} pb-6`}>
-            Please feel free to contact us (
-            <span className="text-[#E46060]">
-              bgin_admin@bg2x.org
-            </span>
-            ) if you are interested in sponsoring BGIN!
-          </div>
-          <div className={CUSTOM_STYLES.DESCRIPTION}>
-            Your support not only empowers our mission as a non-profit
-            organization but also fosters innovation and collaboration within
-            the blockchain community. Together, we can drive meaningful change
-            and create a lasting impact.
-          </div>
         </div>
         <SectionSubtitle title="How we use funds" />
         <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
