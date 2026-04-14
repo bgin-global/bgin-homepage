@@ -21,7 +21,7 @@ export default function Sponsors() {
         <SectionTitle title="Our Sponsors" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
           <div className={CUSTOM_STYLES.DESCRIPTION}>
-            Our sponsors' support empowers our mission as a non-profit
+            Our sponsors&apos; support empowers our mission as a non-profit
             organization and fosters innovation and collaboration within the
             blockchain community. Together with our sponsors, we can drive
             meaningful change and create a lasting impact.
