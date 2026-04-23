@@ -107,6 +107,9 @@ function Header() {
           <Link href="/projects">
             <div className="text-lg leading-[19px] text-black">Projects</div>
           </Link>
+          <Link href="/publications">
+            <div className="text-lg leading-[19px] text-black">Publications</div>
+          </Link>
           <Link href="/events">
             <div className="text-lg leading-[19px] text-black">Events</div>
           </Link>
@@ -143,6 +146,7 @@ function Header() {
         <PlainButton link="/events" text="Events" />
         <PlainButton link="/news" text="News" />
         <PlainButton link="/gov" text="Governance" />
+        <PlainButton link="/publications" text="Publications" />
         <PlainButton link="/sponsors" text="Sponsors" />
         <PlainButton
           link="https://www.youtube.com/@bgin/videos"

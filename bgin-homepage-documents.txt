@@ -1,0 +1,598 @@
+================================================================
+bgin-homepage からアクセスできる全書類データ
+================================================================
+調査日: 2026-04-14
+対象リポジトリ: bgin-homepage (branch: hosomi01)
+================================================================
+
+
+================================================================
+一、リポジトリに直接含まれている書類ファイル（計36件）
+================================================================
+
+------------------------------------------------------------
+Block 13 発表資料 PDF
+場所: public/pdfs/block13/ および contents/events/block-conferences/block13/ (重複)
+------------------------------------------------------------
+1-1 Offline Key Management.pdf
+1-2 Governance of Security Supply Chain.pdf
+1-3 Information Sharing Framework Standard.pdf
+1-4 ZKP and Privacy Enhanced Authentication.pdf
+2-1 Security Target and Protection Profile.pdf
+2-2 Crypto Agility and PQC Migration.pdf
+3-1-1 Accountable Wallets.pdf
+3-1-2 Establishing Technical Metrics to Evaluate the Decentralization of Blockchain Networks.pdf
+3-2 Forensics and Analysis Toward a Common Lexicon for Harmful On-Chain Activities.pdf
+3-3 BGIN Agent Hack Final Presentation.pdf
+3-4 Practical Stablecoin Implementation Guide.pdf
+3-5 Harmonization among Crypto-asset, stablecoin and tokenized deposit.pdf
+
+------------------------------------------------------------
+Block 14 資料 PDF
+場所: public/pdfs/block14/
+------------------------------------------------------------
+blockchain-business-structure_02252026.pdf
+jvcea_changes_packet.pdf
+
+------------------------------------------------------------
+ニュースレター PDF
+場所: public/images/Activities/
+------------------------------------------------------------
+BGIN August 2025 Newsletter.pdf
+BGIN July 2025 Newsletter.pdf
+BGIN June 2025 WG Newsletter.pdf
+BGIN May 2025 WG Newsletter.pdf
+
+------------------------------------------------------------
+Layer2 Japan 2025 イベント資料
+場所: public/images/Events/Layer2Japan2025/
+------------------------------------------------------------
+BGIN_Layer2_Meetup_ETHTOKYO_EDCON_NEWS_Release_J.pdf
+Layer2 Meet Up@Eth Tokyo.pdf
+Layer2Meetup_ETHTOYKO_EDCON_NEWS_Release_E.pdf
+
+------------------------------------------------------------
+Block 13 イベント・スポンサー資料
+場所: public/images/Events/
+------------------------------------------------------------
+block13/BGIN Block 13 Program - Tentative Program.pdf       [PDF]
+block13/JPCrypto-ISAC_10152025Presentation.pptx             [PowerPoint]
+sponsor/VerifyVasp.pdf                                      [PDF]
+
+
+================================================================
+二、Google Drive / Google Docs リンク先の書類
+================================================================
+
+------------------------------------------------------------
+ガバナンス文書
+ソース: contents/governanceDocs.ts, app/gov/page.tsx
+------------------------------------------------------------
+[1] ByLaw
+    形式: Google Docs
+    日付: November 2024
+    URL: https://docs.google.com/document/d/1DpBbV6pSnzAj-VaudlDujySmgY2lfshm/edit?usp=sharing
+
+[2] BGIN Steering Committee Member Duties Description
+    形式: Google Docs
+    日付: November 2024
+    URL: https://docs.google.com/document/d/1DwKC2NbiIwqXLRRgmI0biFi6Rdy7BfwG0tcyVVe6KFg/edit?usp=sharing
+
+[3] A BGIN Steering Committee Charter
+    形式: Google Docs
+    日付: November 2024
+    URL: https://docs.google.com/document/d/1f5a6j2v3p0d9mUDQKR3cU19KfXP_I0GlNvpeT6B80mw/edit?usp=sharing
+
+[4] [DRAFT] BLOCKCHAIN GOVERNANCE INITIATIVE NETWORK PROCESS DOCUMENT
+    形式: Google Docs (Word)
+    日付: November 2024
+    URL: https://docs.google.com/document/d/1PFrH0dul1iYvKnEX18NPVkJfw2zEy71E/edit?usp=sharing
+
+[5] [DRAFT] BLOCKCHAIN GOVERNANCE INITIATIVE NETWORK INTELLECTUAL PROPERTY RIGHTS POLICY
+    形式: Google Docs (Word)
+    日付: November 2024
+    URL: https://docs.google.com/document/d/1fpBudAFVCWhWBseh8jaQOTe0cEWY3M7Z/edit?usp=sharing
+
+[6] BGIN Group Guidelines and Procedures
+    形式: Google Docs
+    日付: November 2024
+    URL: https://docs.google.com/document/d/1qAfWkCA9z50Nmz1u9DQhZ94iZWQ19yR-tbFmXZcFMSM/edit?usp=sharing
+
+[7] BGIN Note Well
+    形式: PDF (20200611 BGIN Note Well.pdf)
+    日付: June 10, 2020
+    URL: https://drive.google.com/file/d/1CtNVWIVZ5NRvhrmg69-cOHQCnSnm50z8/view?usp=sharing
+
+[8] BGIN Code of Conduct
+    形式: PDF (20200611 BGIN Code of Conduct.pdf)
+    日付: June 10, 2020
+    URL: https://drive.google.com/file/d/1trquGfy023upJC3n9znBsZGZyUCzXYyP/view?usp=sharing
+
+------------------------------------------------------------
+公開プロジェクト Study Reports
+ソース: contents/projects.ts (published)
+------------------------------------------------------------
+[1] Block 13 Meeting Reports
+    日付: October 2025
+    リンク: /events/20251015-block13/meeting-reports (内部ページ)
+    ※内部ページ経由でBlock 13 PDF 12件にアクセス可能
+
+[2] Wallet Governance, Policy and Key Management Study Report
+    日付: December 3, 2025
+    URL: https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=drive_link
+
+[3] ZKP and its Application
+    日付: December 3, 2025
+    URL: https://drive.google.com/drive/folders/1wEOhN-tcuWk9RiwrItYS6jRS7Fp_Qi3V?usp=drive_link
+    フォルダ内ファイル:
+      - BGIN SR 0011_zkp_study_v2_publishstage (Google Docs, 235KB)
+      - BGIN-ZKPdoc.docx (Word, 311KB)
+
+[4] Layer2 Governance
+    日付: December 3, 2025
+    URL: https://drive.google.com/drive/folders/14nX6N775xMnAg05vFNkeuKgTkLhVRI4f?usp=drive_link
+    フォルダ内ファイル:
+      - Past Events & Meetings (Google Docs)
+      - 240920_Co-Creation: Regulatory Uncertainty For LN Businesses.pptx (PowerPoint, 5KB)
+      - 241020_Layer2 Meetup at San Francisco (Google Slides, 13.2MB)
+      - 241023_Layer2 Governance_Block11.docx (Word, 1.2MB)
+      - BGIN_WD_SR00___ Layer2 Governance.docx (Word, 744KB)
+
+[5] Soul Bound Token (SBT)
+    日付: December 3, 2025
+    URL: https://drive.google.com/drive/folders/1UqkmJQkgmCA05-w-BP8at4moS79fHcdU?usp=drive_link
+    ※フォルダ空（要ログイン）
+
+[6] Potential Points of Failure of Stablecoins and DeFi
+    日付: July 24, 2023
+    URL: https://drive.google.com/drive/folders/1uRRCeaC0pwtP5_t_sH9An7JeN-5zYm-1?usp=sharing
+    フォルダ内ファイル:
+      - 20230329_Stablecoin_and_Defi.pdf (286KB)
+      - 20230724_PoF_of_Stablecoins.pdf (1.4MB)
+
+[7] Study Report on Selective Disclosure: Overview and Classifications
+    日付: April 28, 2023
+    URL: https://drive.google.com/drive/folders/1PiYadrwKENQ0wtk4SpbMKSPWN4j_O5_C?usp=sharing
+    フォルダ内ファイル:
+      - 20230428_Selective_Disclosure.pdf (400KB)
+
+[8] Proposal of Principles of DeFi Disclosure and Regulation
+    日付: February 13, 2023
+    URL: https://drive.google.com/drive/folders/1BHAOmPlWSi6AEm3FLef9xxtk74gFUggg?usp=sharing
+    フォルダ内ファイル:
+      - 20230213_Defi_Disclosure.pdf (1.7MB)
+
+[9] Soulbound Tokens (SBTs) Study Report Part 1
+    日付: February 1, 2023
+    URL: https://drive.google.com/drive/folders/1qavS-AxWDc5KP2swGXmiUpr241mYfTMo?usp=drive_link
+    フォルダ内ファイル:
+      - 20230201_SBT.pdf (8.5MB)
+
+[10] Incident Response of Decentralized Custody; A Case Study
+    日付: June 6, 2022
+    URL: https://drive.google.com/drive/folders/1feQ6wU8CfuTdtnkrtiO8Qi2olJpCH2bz?usp=drive_link
+    フォルダ内ファイル:
+      - 20220606_Custody.pdf (2.1MB)
+
+[11] NFT Study Report Part 1: Introduction and Use Cases
+    日付: June 6, 2022
+    URL: https://drive.google.com/drive/folders/1kjmfgpC5tC_4xPCjjnhPXO_Hqa3b14wl?usp=drive_link
+    フォルダ内ファイル:
+      - 20220606_NFT.pdf (5.1MB)
+
+[12] Study Report for Ransomware Reaction
+    日付: April 21, 2022
+    URL: https://drive.google.com/drive/folders/1Rb4Ygxvp6fgd4rdB08mALx7kedrNZWl-?usp=sharing
+    フォルダ内ファイル:
+      - 20220421_Ransomware.pdf (4.3MB)
+
+[13] Present and Future of a Decentralized Financial System and the Associated Regulatory Considerations
+    日付: January 1, 2021
+    URL: https://drive.google.com/drive/folders/1rD4XHLhDZCVV6si9OvLZ8vhiU-Kqc9Gg?usp=drive_link
+    フォルダ内ファイル:
+      - 20210101_Defi.pdf (1.5MB)
+
+[14] 2020 Online Meeting Report
+    日付: June 18, 2020
+    URL: https://drive.google.com/drive/u/0/folders/1dKDWefmNVskSNLK8UUEpEYyeXLof2Qr4
+    フォルダ内ファイル:
+      - 20200OnlineMeetingReport.pdf (137KB)
+
+------------------------------------------------------------
+進行中プロジェクト
+ソース: contents/projects.ts (inProgress)
+------------------------------------------------------------
+[1] Blockchain Analysis Challenges
+    WG: IKP WG
+    URL: https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb
+    フォルダ内ファイル:
+      - 250126_Learning from Bitcoin Fog Case.pptx (PowerPoint, 142KB)
+      - BGIN IKP Working Group Distinguishing Blockchain Forensics from Analytics (Google Docs, 806KB)
+      - Blockchain Forensics vs Analytics Research - interview doc (Google Docs, 7KB)
+      - Distinguishing Blockchain Forensics from Analytics 2025jan30_working docs (Google Docs, 20KB)
+
+[2] Accountable Wallet
+    WG: IKP WG
+    URL: https://drive.google.com/drive/folders/1wOoJNpeTvJ1VEPoJXgDUZ8ebysn0efWK?usp=drive_link
+    フォルダ内ファイル:
+      - Draft_BGIN - Accountable Wallet.pdf (3.8MB, 2025/01/27)
+      - Copy of Draft_BGIN - Accountable Wallet.pdf (3.8MB, 2025/07/16)
+
+[3] AI and Blockchain
+    WG: FASE WG
+    URL: https://drive.google.com/drive/folders/1-ngWvRGQ_5N36Mr0Pgh119tGIGmCExSu?usp=drive_link
+    フォルダ内ファイル:
+      - 241013 BGIN _ Block#11 AI & Blockchain Governance.pdf (469KB)
+
+[4] Stablecoin Research
+    WG: FASE WG
+    URL: https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z
+    フォルダ内ファイル:
+      - Stablecoin regulation comparison v1.docx (Word, 218KB, 2025/08/27)
+      - Stablecoin regulation comparison v2.docx (Word, 496KB, 2025/11/05)
+
+[5] Cyber Security Standards
+    WG: CS WG
+    URL: https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link
+    フォルダ内ファイル:
+      - Past Block meetings & Layer2 meetups (サブフォルダ)
+      - WG Documents (サブフォルダ)
+      - WG Meetings (サブフォルダ)
+      - BGIN Cybersecurity Working Group Charter (Google Docs, 422KB)
+      - Link to the WG co-working sheet (Google Docs, 1KB)
+
+------------------------------------------------------------
+Block 13 クリティカルプロジェクト文書
+ソース: lib/block13-critical-projects.ts
+------------------------------------------------------------
+[1] Distinguishing Blockchain Forensics from Analytics
+    フェーズ: Public Comment | WG: IKP
+    URL: https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?usp=sharing
+
+[2] Wallet Governance, Policy and Key Management Study Report
+    フェーズ: Public Comment | WG: IKP
+    URL: https://docs.google.com/document/d/12bn-bXRaqs0syEX2lX_k-yXWeFlgnh38iv1Onu_Kwuc/edit?usp=sharing
+
+[3] Accountable Wallet
+    フェーズ: Published | WG: IKP
+    URL: https://drive.google.com/file/d/1ehgENeEX2irxosubynJNQXQqElM3EFOu/view?usp=sharing
+    ファイル名: Draft_BGIN - Accountable Wallet.pdf
+
+[4] Agent Standards and Frameworks ("Beyond Static Governance towards Living Intelligence")
+    フェーズ: Draft | WG: IKP
+    URL: https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing
+
+[5] Policy priorities for stablecoin regulation: past, present and future
+    フェーズ: Published | WG: FASE
+    URL: https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit?usp=sharing
+
+------------------------------------------------------------
+Block 13 各セッション資料
+ソース: lib/block13-program-data.ts
+------------------------------------------------------------
+Session 1-4: Information Sharing Framework Standard
+  - Cyber Security Information Sharing Framework (ISO Proposal Draft)
+    形式: Word (.docx) ※Discourse上ホスト
+    URL: https://bgin.discourse.group/uploads/short-url/jhZDXafaFJCkgPnVbs7Yu4JwGG1.docx
+  - Stake Holder Chart
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/1oaVXEeBFiSMj5r0itl9tFMBxQVhgFOIu4_xerRmU4ww/edit?tab=t.0
+
+Session 1-5: ZKP and Privacy Enhanced Authentication
+  - ZKP and its Application
+    形式: Google Docs (Word)
+    URL: https://docs.google.com/document/d/1rt0BTEQXF_7p_R_cAAvG2By4AtWpfbhW/edit?usp=drive_link
+
+Session 3-2: Establishing Technical Metrics to Evaluate the 'Decentralization' of Blockchain Networks
+  - Discussion Points for Evaluating Blockchain Decentralization
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/1MRMJhtVsV9MSOoOKHeXOmOkdGMCdqmc-d1YeDE6FUdo/edit?tab=t.0
+
+Session 3-3: Forensics & Analysis
+  - Distinguishing Blockchain Forensics from Analytics
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit?tab=t.0
+
+Session 3-4: Toward a Common Lexicon for Harmful On-Chain Activities
+  - Discussion Points for Harmful Activities in Crypto-Asset Markets
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/1w25eODwBcXORXxKw4ngjGTtCZI4IPgFa8feWIT2J0eg/edit?tab=t.0
+
+Session 3-6: AI Agent Governance
+  - Beyond Static Governance towards Living Intelligence
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/1Xjqq2vKkoKZSvqVvSPU-AhCVkyBqHHvK2QYTfUluJ0Y/edit?usp=sharing
+
+Session 3-7: Practical Stablecoin Implementation Guide
+  - Policy priorities for stablecoin regulation: past, present and future
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit
+
+Session 3-8: Harmonization among Crypto-asset, stablecoin and tokenized deposit
+  - BGIN Block#12 Meeting Report
+    形式: Google Docs
+    URL: https://docs.google.com/document/d/1QvdmZHA8kROJtabdDuRQ4IRnun71x0fy/edit
+
+Session 2-4: Crypto Agility and PQC Migration
+  - Post-Quantum Blockchain: Transition Landscape Amidst Evolving Complexity
+    形式: 外部PDF (eprint.iacr.org)
+    URL: https://eprint.iacr.org/2025/1626
+
+------------------------------------------------------------
+ワーキンググループ文書フォルダ
+ソース: contents/workingGroups.ts
+------------------------------------------------------------
+IKP WG (IAM, Key Management and Privacy Working Group)
+  URL: https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing
+  フォルダ内:
+    サブフォルダ:
+      - IKP_Accountable Wallet
+      - IKP_Forensics or Analysis
+      - IKP_Layer2 Governance
+      - IKP_Proof of Personhood
+      - IKP_Soulbound Token
+      - IKP_Wallet Governance
+      - IKP_ZKP and its Application
+      - Meeting Recordings
+      - Meeting_Report
+    Google Docs:
+      - BGIN SR 0014_Proof of Personhood: Biometrics, Systems + Agent Duality as Personhood Preservation Mechanism
+      - BGIN Taxonomy of Harmful Activities Working Study Charter
+      - IKP Working Group
+      - IKP-WG Meeting Agenda (2025-01-30)
+
+FASE WG (Financial Applications & Social Economics Working Group)
+  URL: https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link
+  フォルダ内:
+    - Meeting Recordings (サブフォルダ)
+    - FACE_AI and Blockchain Governance (Google Docs)
+    - FACE_Financial Stability of Decentralized Finance (Google Docs)
+    - FASE_Stablecoins (Google Docs)
+    - FACE Working Group (Google Docs)
+    - FACE-WG Meeting Agenda (2025-01-29).docx (Word, 11KB)
+
+CS WG (Cybersecurity Working Group)
+  URL: https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link
+  フォルダ内:
+    サブフォルダ:
+      - CS_Cybersecurity Standards
+        サブフォルダ:
+          - Past Block meetings & Layer2 meetups
+          - WG Documents
+          - WG Meetings
+    Google Docs:
+      - BGIN Cybersecurity Working Group Charter (422KB)
+      - Link to the WG co-working sheet (1KB)
+
+IGWG (Internal Governance Working Group)
+  URL: https://drive.google.com/drive/folders/1pFY5QUKUPqZbAIdR_T0bDBRcsCoiyZKb?usp=drive_link
+  ※空フォルダまたは要ログイン
+
+Kintsugi Study Group
+  URL: https://drive.google.com/drive/folders/1CwC9A9flbyuR34AE_kI3y2h5PM_eUJjI?usp=drive_link
+  ※空フォルダまたは要ログイン
+
+------------------------------------------------------------
+ブロックカンファレンス 会議報告書 (Drive フォルダ)
+ソース: 各 block*.md の report_url
+------------------------------------------------------------
+Block 1 (2020/11/23)
+  URL: https://drive.google.com/drive/u/0/folders/1iz2Nw66il5TpVfbHG4acOK68jqPmvXj6
+  ファイル:
+    - Block1MeetingrReport.pdf (143KB)
+
+Block 4 (2021/11/02)
+  URL: https://drive.google.com/drive/u/0/folders/19_K3LYE08np1-mcMtxJOl7lGD14hz8wI
+  ファイル:
+    - Block4MeetingrReport.pdf (2.2MB)
+
+Block 8 (2023/05/04)
+  URL: https://drive.google.com/drive/u/0/folders/1SOydxYkqz6CMCJotUfW1BP4LeV5_zEZD
+  ファイル:
+    - Block8MeetingrReport.pdf (339KB)
+
+Block 9 (2023/11/19)
+  URL: https://drive.google.com/drive/u/0/folders/100FWmP-eR9T7luLmHRP_Fl-x6WQ1PU22
+  ファイル (8件):
+    - Accountable Wallet MR.pdf (232KB)
+    - CBDC and Privacy MR.pdf (232KB)
+    - Digital Identity MR.pdf (232KB)
+    - Potential Failure of Stablecoin MR.pdf (233KB)
+    - Smart Contract Security, Governance, and Impact of AI MR.pdf (229KB)
+    - Transparency of dApps and Sound DeFi.pdf (230KB)
+    - Worldcoin MR.pdf (245KB)
+    - ZKP and its Application MR.pdf (234KB)
+
+Block 10 (2024/03/03)
+  URL: https://drive.google.com/drive/u/0/folders/1VKWqgVAS7XWrDAg91866xP7gQltho9t7
+  サブフォルダ:
+    - Day 1 (Sunday, March 3rd 2024)
+    - Day 2 (Monday, March 4th 2024)
+    - Day 3 (Tuesday, March 5th 2024)
+  ※各Day内の詳細ファイルは要ログイン
+
+Block 11 (2024/10/21)
+  URL: https://drive.google.com/drive/u/0/folders/1yK7gRPNmUQ6ztVuswsXD3WYaPmvssIbl
+  ファイル (9件、いずれも Word .docx):
+    - AI and Blockchain Governance.docx (184KB)
+    - CryptoISACs with BGIN.docx (189KB)
+    - Cybersecurity Information Sharing Alignment.docx (195KB)
+    - FTX Collapse and Capital Risk Framework.docx (180KB)
+    - Innovation and Challenges of Blockchain Analysis.docx (188KB)
+    - Institutional Adoption and Regulatory Frontier for Emerging Technologies.docx (192KB)
+    - L2 Governance.docx (172KB)
+    - Tokenization Initiatives.docx (187KB)
+    - Wallet Governance.docx (184KB)
+
+Block 12 (2025/03/02)
+  URL: https://drive.google.com/drive/folders/1iV8GR0mgGNN-rbT_uXmz-hqCjT4eZGAw?usp=drive_link
+  ファイル (13件、いずれも Word .docx):
+    - BGIN Block#12 MR Block#12 Tokyo, JAPAN.docx (350KB)
+    - BGIN Block#12 MR Cybersecurity Education.docx (172KB)
+    - BGIN Block#12 MR Cybersecurity Information Sharing Framework.docx (175KB)
+    - BGIN Block#12 MR Development of ST/PP.docx (172KB)
+    - BGIN Block#12 MR Financial Stability Risk within Decentralized Financial System.docx (172KB)
+    - BGIN Block#12 MR Layer2 Governance.docx (175KB)
+    - BGIN Block#12 MR Lessons in Smart Contract Security.docx (253KB)
+    - BGIN Block#12 MR Stablecoin Challenges.docx (172KB)
+    - BGIN Block#12 MR Blockchain Analysis and Forensic Analysis.docx (178KB)
+    - BGIN Block#12 MR The Mutual Impact and Improved Outcome of AI & Blockchain.docx (178KB)
+    - BGIN Block#12 MR Tokenization Iniatives.docx (189KB)
+    - BGIN Block#12 MR Transition to Post-Quantum Cryptography / Crypto Agility.docx (170KB)
+    - BGIN Block#12 MR Wallet Governance / Accountable Wallet.docx (196KB)
+
+------------------------------------------------------------
+ブロックカンファレンス アジェンダ文書
+ソース: 各 block*.md 内リンク
+------------------------------------------------------------
+Block 11 Agenda (Tentative)
+  URL: https://docs.google.com/document/d/1FnhMT15haFmjbLM9jqncO5F729310srY/edit
+
+Block 12 Agenda (Tentative)
+  URL: https://docs.google.com/document/d/1TYrHfH0iVjBsC6nAC7_EWt-TgmKqotjW/edit
+
+Block 4 Meeting Report (Google Docs 版)
+  URL: https://docs.google.com/document/d/1ifotO-UfE7G6ZnhBRftcKWJB2IhE_n2aiUkmwW-4AxA/edit
+
+------------------------------------------------------------
+Block 1 セッション別発表資料
+ソース: contents/events/block-conferences/20201123-block1.md
+------------------------------------------------------------
+Draft Code of Conduct
+  URL: https://drive.google.com/file/d/1cE_EJaYqSaxBd8VvHqxCf9TPx7hhHGZ5/view?usp=sharing
+
+Draft Note Well
+  URL: https://drive.google.com/file/d/1g3go9z6-88_cFdj1KXF7afYV92cKam8b/view?usp=sharing
+
+Presentation Slides (Day 1 Opening Plenary)
+  URL: https://drive.google.com/file/d/1e6ZbaWSxBy7Jq1VVWTxXDmdRfSGBNgH3/view?usp=sharing
+
+Tutorial Session 1 Slides (Yuta Takanashi, JFSA)
+  URL: https://drive.google.com/file/d/1i3LpGHCbhQtPDarGmjuE7ZFCB3bFVOhi/view?usp=sharing
+
+Discussion Materials (BGIN organization and roadmap)
+  URL: https://drive.google.com/file/d/1OsVTAj7QBMW-N9mg-cyUoXvUi78onAvp/view
+
+Draft Roadmap
+  URL: https://docs.google.com/document/d/1XKE0giEbPLAW_aNgO6pfxZ_5zogwO1sjJCcJlt_xCQI/edit?usp=sharing
+
+Closing Plenary Presentation Slides
+  URL: https://drive.google.com/file/d/1i0FNroB6foCsr2xJozBuSrsHckw96LTo/view?usp=sharing
+
+------------------------------------------------------------
+Block 2 セッション別発表資料
+ソース: contents/events/block-conferences/20210308-block2.md
+------------------------------------------------------------
+Draft Code of Conduct (Block 1 と同一ファイル)
+  URL: https://drive.google.com/file/d/1cE_EJaYqSaxBd8VvHqxCf9TPx7hhHGZ5/view?usp=sharing
+
+Draft Note Well (Block 1 と同一ファイル)
+  URL: https://drive.google.com/file/d/1g3go9z6-88_cFdj1KXF7afYV92cKam8b/view?usp=sharing
+
+Welcome & Introductions Slides
+  URL: https://drive.google.com/file/d/1bVhcgrGgc97pZV9j2oFrwJNVUO-T5Xd1/view?usp=sharing
+
+James Angel Presentation Slides (Georgetown University)
+  URL: https://drive.google.com/file/d/1O-i-_R-mJa-058fcn-gvLtQBWG_nzZnC/view?usp=sharing
+
+Jack Gavigan Presentation Slides (Zcash Foundation)
+  URL: https://drive.google.com/file/d/1zxqJ9CIZhcsbCeiSzW2q7GrAP7ofzwAW/view?usp=sharing
+
+Frederic de Vaulx Presentation (Prometheus Computing LLC)
+  URL: https://github.com/fdevaulx/presentations/blob/main/bgin/BGIN_Block2_Talk_March_2021.pdf
+  ※GitHub上のPDF
+
+------------------------------------------------------------
+Layer2 Meetup 会議報告書 (Drive フォルダ)
+ソース: 各 layer2*.md の report_url
+------------------------------------------------------------
+Layer2@Tokyo (2024/09/20)
+  URL: https://drive.google.com/drive/u/0/folders/1aXAIBfBZtYtZUdex1oaCpe9my2BQXKrn
+  ファイル (3件):
+    - BGIN Layer2Meetup@Tokyo Meeting Report_Cybersecurity Information-Sharing.docx (173KB)
+    - BGIN Layer2Meetup@Tokyo Meeting Report_Regulatory Uncertainty for Lightning Business.docx (414KB)
+    - BGIN Layer2Meetup@Tokyo Meeting Report_Wallet Governance.docx (172KB)
+
+Layer2@Sydney (2024/10/02)
+  URL: https://drive.google.com/drive/u/0/folders/1yYZoCz4OdqEbgnYAlPfaqEEKcEvHuSYD
+  ファイル (1件):
+    - BGIN Layer2Meetup@Sydney Meeting Report_Cybersecurity Information-Sharing.docx (171KB)
+
+Layer2@SF (2024/10/15)
+  URL: https://drive.google.com/drive/u/0/folders/1GskLOY-IhQpN5sLTKLgIfem3FyNv_8lP
+  ファイル (2件):
+    - BGIN Layer2Meetup@SF Meeting Report_Cybersecurity Information-Sharing.docx (176KB)
+    - Transcript (Google Docs, 149KB)
+
+
+================================================================
+三、その他の外部文書リンク
+================================================================
+
+[1] BGIN Block2 Talk March 2021 (Frederic de Vaulx, Prometheus Computing LLC)
+    形式: PDF (GitHub)
+    URL: https://github.com/fdevaulx/presentations/blob/main/bgin/BGIN_Block2_Talk_March_2021.pdf
+    ソース: contents/events/block-conferences/20210308-block2.md
+
+[2] FSA Research Paper on BGIN (英語版 1)
+    形式: 外部PDF (fsa.go.jp)
+    URL: https://www.fsa.go.jp/en/policy/bgin/ResearchPaper_qunie_en.pdf
+    ソース: contents/events/block-conferences/block10/program.md
+
+[3] FSA Research Paper on BGIN (英語版 2)
+    形式: 外部PDF (fsa.go.jp)
+    URL: https://www.fsa.go.jp/policy/bgin/Research_Paper_QUNIE_en.pdf
+    ソース: contents/events/block-conferences/block10/program.md
+
+[4] Post-Quantum Blockchain: Transition Landscape Amidst Evolving Complexity
+    形式: 外部PDF (eprint.iacr.org)
+    URL: https://eprint.iacr.org/2025/1626
+    ソース: lib/block13-program-data.ts (Session 2-4)
+
+[5] IKP WG Webinar Feedback Form
+    形式: Google Forms
+    URL: https://docs.google.com/forms/d/e/1FAIpQLSdN9Ddggd6mIdlYebyDfJrTx61fupVBVrRB4JNXJdgTWpIAjw/viewform
+    ソース: app/news/ikp-webinar/page.tsx
+
+[6] Block 1 Registration Form
+    形式: Google Forms
+    URL: https://docs.google.com/forms/d/1FsXqiBV2rIRS4Qq28Ub5kKlDAD9QLITbSk8WN96nbxU/viewform
+    ソース: contents/events/block-conferences/20201123-block1.md
+
+[7] Block 2 Registration Form
+    形式: Google Forms
+    URL: https://docs.google.com/forms/d/e/1FAIpQLSfaRfMkOmX835ovAu4DOEsJBcAUGHACAD1zG7srOw0eUWqOrA/viewform
+    ソース: contents/events/block-conferences/20210308-block2.md
+
+
+================================================================
+四、未確認・アクセス不可のもの
+================================================================
+
+以下は存在が確認されているが、ログイン要求等により内容の詳細を確認できなかったもの:
+
+- Block 10 Day 1 / Day 2 / Day 3 フォルダ内のファイル一覧
+- IKP WG サブフォルダ内の詳細
+    (IKP_Accountable Wallet, IKP_Forensics or Analysis, IKP_Proof of Personhood,
+     IKP_Soulbound Token, IKP_Wallet Governance, Meeting Recordings, Meeting_Report)
+- IGWG フォルダ (空またはログイン必須)
+- Kintsugi Study Group フォルダ (空またはログイン必須)
+- CS WG サブフォルダ (Past Block meetings, WG Documents, WG Meetings) 内の詳細
+
+Block 14 クリティカルプロジェクト (lib/block14-critical-projects.ts) で
+link: "TBD" となっているもの (未公開):
+  - Cyber Security Information Sharing Framework
+  - Security AI Agent Project
+  - Offline Key Management
+  - ST/PP (Security Target/Protection Profile)
+  - Governance of the security supply chain
+  - PQC Migration
+  - Privacy Enhanced Authentication
+  - Illicit Activities
+  - Establishing Technical Metrics to evaluate the decentralization of the blockchain network
+  - Harmonization among Crypto-asset, stablecoin and tokenized deposit
+  - Agent Standards and Frameworks
+
+================================================================
+END OF REPORT
+================================================================
