@@ -1,9 +1,9 @@
 "use client";
 
-import { Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { documents } from "@/contents/documents";
-import type { DocumentAuthor, DocumentLanguage, DocumentWhat, DocumentState } from "@/contents/documents";
+import type { DocumentAuthor, DocumentLanguage, DocumentWhat } from "@/contents/documents";
 
 const AUTHOR_OPTIONS: DocumentAuthor[] = ["IKP", "FASE", "CS", "IGWP", "KSG", "Other"];
 const LANGUAGE_OPTIONS: DocumentLanguage[] = ["EN", "JP"];
@@ -15,7 +15,6 @@ const WHAT_OPTIONS: DocumentWhat[] = [
   "working_doc",
   "other",
 ];
-const STATE_OPTIONS: DocumentState[] = ["draft", "final", "other"];
 
 const WHAT_LABELS: Record<DocumentWhat, string> = {
   meeting_report: "Meeting Report",
@@ -70,25 +69,49 @@ function SelectFilter({
   );
 }
 
+function PreviewModal({ url, onClose }: { url: string; onClose: () => void }) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-4xl h-[85vh] bg-white rounded-xl shadow-2xl flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200">
+          <span className="text-sm font-semibold text-gray-700">Preview</span>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-700 text-2xl font-bold leading-none px-1"
+            aria-label="Close preview"
+          >
+            &times;
+          </button>
+        </div>
+        <iframe src={url} className="flex-1 w-full rounded-b-xl" title="Document Preview" />
+      </div>
+    </div>
+  );
+}
+
 function DocumentTableInner() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
   const fAuthor = searchParams.get("author") ?? "";
   const fLanguage = searchParams.get("language") ?? "";
   const fWhat = searchParams.get("what") ?? "";
-  const fState = searchParams.get("state") ?? "";
   const fWhere = searchParams.get("where") ?? "";
   const fWhenFrom = searchParams.get("when_from") ?? "";
   const fWhenTo = searchParams.get("when_to") ?? "";
 
   const hasDateFilter = fWhenFrom !== "" || fWhenTo !== "";
 
-  // Dynamic where options – derived from data, sorted
   const whereOptions = Array.from(new Set(documents.map((d) => d.where))).sort(
     (a, b) => {
-      // Sort: Block ## numerically first, then Layer2, then Other
       const aBlock = a.match(/^Block (\d+)$/);
       const bBlock = b.match(/^Block (\d+)$/);
       if (aBlock && bBlock) return Number(aBlock[1]) - Number(bBlock[1]);
@@ -100,7 +123,6 @@ function DocumentTableInner() {
     }
   );
 
-  // When options for dropdowns (exclude "unclear"), sorted chronologically
   const whenOptions = Array.from(
     new Set(documents.filter((d) => d.when !== "unclear").map((d) => d.when))
   ).sort();
@@ -109,7 +131,6 @@ function DocumentTableInner() {
     if (fAuthor && doc.author !== fAuthor) return false;
     if (fLanguage && doc.language !== fLanguage) return false;
     if (fWhat && doc.what !== fWhat) return false;
-    if (fState && doc.state !== fState) return false;
     if (fWhere && doc.where !== fWhere) return false;
     if (hasDateFilter) {
       if (doc.when === "unclear") return false;
@@ -133,11 +154,14 @@ function DocumentTableInner() {
     router.push(pathname, { scroll: false });
   }
 
-  const hasActiveFilter =
-    fAuthor || fLanguage || fWhat || fState || fWhere || fWhenFrom || fWhenTo;
+  const hasActiveFilter = fAuthor || fLanguage || fWhat || fWhere || fWhenFrom || fWhenTo;
 
   return (
     <div className="w-full max-w-5xl mx-auto px-4 xl:px-0">
+      {previewUrl && (
+        <PreviewModal url={previewUrl} onClose={() => setPreviewUrl(null)} />
+      )}
+
       {/* Filters */}
       <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6 shadow-sm">
         <div className="flex flex-wrap gap-4 items-end">
@@ -164,14 +188,6 @@ function DocumentTableInner() {
             labelFn={(v) => WHAT_LABELS[v as DocumentWhat]}
           />
           <SelectFilter
-            label="State"
-            paramKey="state"
-            options={STATE_OPTIONS}
-            value={fState}
-            onChange={updateParam}
-            labelFn={(v) => v.charAt(0).toUpperCase() + v.slice(1)}
-          />
-          <SelectFilter
             label="Event"
             paramKey="where"
             options={whereOptions}
@@ -189,7 +205,7 @@ function DocumentTableInner() {
               onChange={(e) => updateParam("when_from", e.target.value)}
               className="border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 min-w-[120px]"
             >
-              <option value="">–</option>
+              <option value=""> - </option>
               {whenOptions.map((w) => (
                 <option key={w} value={w}>
                   {w}
@@ -206,7 +222,7 @@ function DocumentTableInner() {
               onChange={(e) => updateParam("when_to", e.target.value)}
               className="border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 min-w-[120px]"
             >
-              <option value="">–</option>
+              <option value=""> - </option>
               {whenOptions.map((w) => (
                 <option key={w} value={w}>
                   {w}
@@ -243,19 +259,20 @@ function DocumentTableInner() {
         <table className="w-full text-sm text-left">
           <thead>
             <tr className="bg-blue-700 text-white">
-              <th className="px-4 py-3 font-semibold w-[35%]">Title</th>
-              <th className="px-4 py-3 font-semibold">Event</th>
-              <th className="px-4 py-3 font-semibold">Date</th>
-              <th className="px-4 py-3 font-semibold">WG</th>
-              <th className="px-4 py-3 font-semibold">Lang</th>
-              <th className="px-4 py-3 font-semibold">Type</th>
-              <th className="px-4 py-3 font-semibold">State</th>
+              <th className="px-4 py-3 font-semibold whitespace-nowrap">ID</th>
+              <th className="px-4 py-3 font-semibold">Title</th>
+              <th className="px-4 py-3 font-semibold w-[130px]">Event</th>
+              <th className="px-4 py-3 font-semibold whitespace-nowrap">Date</th>
+              <th className="px-4 py-3 font-semibold whitespace-nowrap">WG</th>
+              <th className="px-4 py-3 font-semibold whitespace-nowrap">Lang</th>
+              <th className="px-4 py-3 font-semibold w-[110px]">Type</th>
+              <th className="px-4 py-3 font-semibold whitespace-nowrap">Actions</th>
             </tr>
           </thead>
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-4 py-8 text-center text-gray-400">
+                <td colSpan={8} className="px-4 py-8 text-center text-gray-400">
                   No documents match the selected filters.
                 </td>
               </tr>
@@ -265,17 +282,13 @@ function DocumentTableInner() {
                   key={`${doc.path}-${i}`}
                   className={i % 2 === 0 ? "bg-white" : "bg-blue-50"}
                 >
-                  <td className="px-4 py-3 font-medium">
-                    <a
-                      href={buildHref(doc.path)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-700 hover:text-blue-900 hover:underline"
-                    >
-                      {doc.title}
-                    </a>
+                  <td className="px-4 py-3 font-medium text-gray-900">
+                    {doc.id}
                   </td>
-                  <td className="px-4 py-3 text-gray-700 whitespace-nowrap">
+                  <td className="px-4 py-3 font-medium text-gray-900">
+                    {doc.title}
+                  </td>
+                  <td className="px-4 py-3 text-gray-700">
                     {doc.where}
                   </td>
                   <td className="px-4 py-3 text-gray-700 whitespace-nowrap">
@@ -291,17 +304,21 @@ function DocumentTableInner() {
                     {WHAT_LABELS[doc.what]}
                   </td>
                   <td className="px-4 py-3">
-                    <span
-                      className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold ${
-                        doc.state === "draft"
-                          ? "bg-yellow-100 text-yellow-800"
-                          : doc.state === "final"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-gray-100 text-gray-600"
-                      }`}
-                    >
-                      {doc.state}
-                    </span>
+                    <div className="flex gap-2">
+                      <a
+                        href={buildHref(doc.path)}
+                        download
+                        className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
+                      >
+                        Download
+                      </a>
+                      <button
+                        onClick={() => setPreviewUrl(buildHref(doc.path))}
+                        className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
+                      >
+                        Preview
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))
