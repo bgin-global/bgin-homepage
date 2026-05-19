@@ -40,13 +40,13 @@ export default function EventsPage() {
     {
       id: "block15",
       title: "BGIN Block #15 Meeting",
-      date: "TBD",
-      time: "TBD",
+      date: "2026 Oct. 15 - 16",
+      time: "9:00 - 17:00",
       type: "Block Conference",
       description: "Join us for BGIN Block #15. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
-      link: null,
+      link: "events/20261015-block15",
       color: eventTypeColors["Block Conference"],
-      venue: "TBD",
+      venue: "Washington, D.C.",
       registerLink: undefined,
       image: "/images/Events/Block3.jpeg"
     },
