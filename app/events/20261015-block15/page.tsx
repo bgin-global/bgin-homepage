@@ -27,7 +27,6 @@ export default function Block15Page() {
 
   const heroImages = [
     "/images/Events/Block3.jpeg",
-    "/images/Events/Block5.jpeg",
   ];
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
 
@@ -112,7 +111,7 @@ export default function Block15Page() {
           </p>
           <div className="flex flex-col items-center gap-4">
             <div className="flex flex-wrap justify-center gap-3" style={{ position: 'relative', zIndex: 51, pointerEvents: 'auto' }}>
-              <a href="" className="block13-btn-primary inline-flex items-center gap-2">
+              <a href="https://www.eventbrite.com/e/bgin-block15-tickets-1990274282957" className="block13-btn-primary inline-flex items-center gap-2">
                 Register Now (Eventbrite)
                 <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -447,8 +446,8 @@ export default function Block15Page() {
 
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Room A</strong> - Main Sessions</li>
-                <li><strong>Room B</strong> - Main Sessions</li>
+                <li><strong>Room A (TBD)</strong> - Main Sessions</li>
+                <li><strong>Room B (TBD)</strong> - Main Sessions</li>
               </ul>
 
               <p className="text-sm text-gray-600 mt-4 italic">
