@@ -54,7 +54,7 @@ export default function NextWGCallPage() {
 
           <div className="grid md:grid-cols-2 gap-4 my-6">
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Session 1</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">FASE WG call</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -65,7 +65,7 @@ export default function NextWGCallPage() {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <span className="font-semibold">Time / Link:</span>{" "}
+                    <span className="font-semibold">Time / Link:</span>11:00 AM UTC
                     <span className="text-gray-500 italic">To be shared via mailing list</span>
                   </div>
                 </li>
@@ -73,7 +73,7 @@ export default function NextWGCallPage() {
             </div>
 
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-900">Session 2</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-900">IKP WG call</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -84,7 +84,7 @@ export default function NextWGCallPage() {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <span className="font-semibold">Time / Link:</span>{" "}
+                    <span className="font-semibold">Time / Link:</span>12:00 PM UTC
                     <span className="text-gray-500 italic">To be shared via mailing list</span>
                   </div>
                 </li>
@@ -110,7 +110,7 @@ export default function NextWGCallPage() {
 
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
             <p className="text-blue-900 mb-2">
-              Details on how to join the sessions will be shared via our official communication channels. To receive meeting invitations, precise timing slots, and calendar updates directly, please ensure you are subscribed to the BGIN Working Group mailing list.
+              Details on how to join the sessions will be shared via our official communication channels. To receive meeting invitations, precise timing slots, and calendar updates directly, please ensure you are subscribed to the BGIN Mailing List and following us on LinkedIn and X (Twitter).
             </p>
           </div>
 
