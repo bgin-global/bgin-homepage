@@ -13,7 +13,7 @@ export default function NextWGCallPage() {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="text-4xl font-bold mb-4 text-gray-900">
-            Join the Next BGIN Working Group Call
+            Join the Next BGIN Working Group Calls
           </h1>
           <div className="flex items-center gap-4 text-gray-600 mb-6">
             <time dateTime="2026-05-27">May 27, 2026</time>
@@ -41,7 +41,7 @@ export default function NextWGCallPage() {
         {/* Article Content */}
         <div className="text-gray-900">
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-            BGIN invites all interested participants to join the upcoming Working Group call.
+            BGIN invites all interested participants to join our upcoming Working Group calls.
             Whether you are a technologist, policymaker, researcher, or practitioner, your
             perspective is valuable. Come contribute to the development of open governance
             standards for blockchain ecosystems.
@@ -52,23 +52,44 @@ export default function NextWGCallPage() {
             Schedule
           </h2>
 
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold">Date & Time:</span>{" "}
-                  <span className="text-gray-500">TBD</span>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <span className="font-semibold">Meeting Link:</span>{" "}
-                  <span className="text-gray-500">TBD</span>
-                </div>
-              </li>
-            </ul>
+          <div className="grid md:grid-cols-2 gap-4 my-6">
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Session 1</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold">Date:</span> Wednesday, June 3, 2026
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold">Time / Link:</span>{" "}
+                    <span className="text-gray-500 italic">To be shared via mailing list</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Session 2</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold">Date:</span> Thursday, June 4, 2026
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-semibold">Time / Link:</span>{" "}
+                    <span className="text-gray-500 italic">To be shared via mailing list</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Agenda */}
@@ -77,7 +98,9 @@ export default function NextWGCallPage() {
           </h2>
 
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-6">
-            <p className="text-gray-500 italic">Agenda to be announced. Please check back closer to the meeting date.</p>
+            <p className="text-gray-600">
+              The sessions will focus on ongoing tracking of Working Group progress, key updates on blockchain governance standards, and open floor discussions for collaborative inputs. A detailed agenda will be updated here and circulated to the network shortly.
+            </p>
           </div>
 
           {/* How to Join */}
@@ -86,20 +109,18 @@ export default function NextWGCallPage() {
           </h2>
 
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
-            <p className="text-blue-700 mb-4">
-              Details on how to join the session will be shared here. To receive meeting
-              invitations and updates directly, subscribe to the working group mailing list.
+            <p className="text-blue-900 mb-2">
+              Details on how to join the sessions will be shared via our official communication channels. To receive meeting invitations, precise timing slots, and calendar updates directly, please ensure you are subscribed to the BGIN Working Group mailing list.
             </p>
-            <p className="text-blue-700 italic">TBD</p>
           </div>
 
           {/* About the Working Group */}
           <h3 className="text-xl font-bold mt-8 mb-3 text-gray-900">
-            About the Working Group
+            About BGIN
           </h3>
 
           <p className="text-gray-700 mb-4">
-            TBD
+            The Blockchain Governance Initiative Network (BGIN) aims to provide an open, neutral, and balanced forum for all stakeholders—including developers, regulators, business entities, and consumers—to deepen common understanding and collaborate on sustainable ecosystem governance.
           </p>
         </div>
 
