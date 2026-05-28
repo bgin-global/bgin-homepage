@@ -10,6 +10,16 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+  id: "12",
+  title: "Next WG is coming in 2026/xx/xx, xx:xx",
+  description: "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+  date: "2026-05-27",
+  link: "/news/260527-next-wg-test",
+  tags: ["Working Group", "Event"],
+  image: "/images/logo/BGIN_logomark_black.png"
+
+  },
+  {
     id: "11",
     title: "BGIN Block #14 Page Launched and Registration Now Open",
     description: "BGIN is pleased to announce that the Block #14 event page is now live and registration is open. Join us in Tokyo, Japan from March 1-2, 2026 for the 14th general meeting. The event will feature working group sessions, presentations on key projects, and discussions on blockchain governance standards. Registration is available through Eventbrite.",
