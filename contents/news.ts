@@ -16,7 +16,7 @@ export const allNews: NewsItem[] = [
   date: "2026-05-27",
   link: "/news/260527-next-wg-test",
   tags: ["Working Group", "Event"],
-  image: "/images/logo/BGIN_logomark_black.png"
+  image: "/images/Logo/BGIN_logomark_black.png"
 
   },
   {
