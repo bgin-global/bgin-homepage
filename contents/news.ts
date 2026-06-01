@@ -11,7 +11,7 @@ export interface NewsItem {
 export const allNews: NewsItem[] = [
   {
   id: "12",
-  title: "Next WG is coming in 2026/xx/xx, xx:xx",
+  title: "Next WG is coming in June 3rd, and 4th",
   description: "[Announcement] A BGIN working group meeting will be held. Click here for details.",
   date: "2026-05-27",
   link: "/news/260527-next-wg-test",
