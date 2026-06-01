@@ -17,7 +17,6 @@ export default function IKPWebinarSuccessPage() {
           </h1>
           <div className="flex items-center gap-4 text-gray-600 mb-6">
             <time dateTime="2025-08-30">August 30, 2025</time>
-            <span>•</span>
             <div className="flex gap-2">
               <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
                 Working Group
