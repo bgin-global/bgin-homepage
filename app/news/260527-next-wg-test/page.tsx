@@ -31,7 +31,7 @@ export default function NextWGCallPage() {
         {/* Hero Image */}
         <div className="relative w-full h-40 mb-8 rounded-lg overflow-hidden bg-gray-50">
           <Image
-            src="/images/logo/BGIN_horizontal_01_black.png"
+            src="/images/Logo/BGIN_horizontal_01_black.png"
             alt="BGIN Working Group"
             fill
             className="object-contain p-8"
