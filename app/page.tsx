@@ -103,19 +103,10 @@ export default function Home() {
           )}
           <ItemCard
             title="Working Group"
-            subtitle="　"
+            subtitle=" "
             description={
-              <>
-                {wgCallUpcoming.map((wg, index) => {
-                  return (
-                    <div key={index} className="mb-2">
-                      <p>{wg.wgTitle}</p>
-                      <p>Date: {wg.date}</p>
-                    </div>
-                  );
-                })}
-              </>
-            }
+                <p className="mb-0">Click below to check the schedule.</p>
+              }
             link="/activities/working-groups"
             colorPattern="navy"
           />
