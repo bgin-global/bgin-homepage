@@ -2,20 +2,20 @@
 function getNextBiweeklyMeeting(dayOfWeek: number, hour: number, startDate: Date): string {
   const today = new Date();
   const next = new Date(startDate);
-  
+
   // Set the time
   next.setUTCHours(hour, 0, 0, 0);
-  
+
   // Calculate days until the target day of week
   while (next.getUTCDay() !== dayOfWeek) {
     next.setDate(next.getDate() + 1);
   }
-  
+
   // If the calculated date is in the past, add 14 days until we get a future date
   while (next <= today) {
     next.setDate(next.getDate() + 14);
   }
-  
+
   // Format the date
   const options: Intl.DateTimeFormatOptions = {
     month: 'long',
@@ -23,16 +23,9 @@ function getNextBiweeklyMeeting(dayOfWeek: number, hour: number, startDate: Date
     year: 'numeric',
     timeZone: 'UTC'
   };
-  
   const dateStr = next.toLocaleDateString('en-US', options);
   const timeStr = hour === 12 ? '12pm' : hour === 11 ? '11am' : `${hour}:00`;
-  
   return `${timeStr} Universal Time, ${dateStr}`;
-}
-
-// Utility: check if a date is in July 2026
-function isJuly2026(date: Date): boolean {
-  return date.getUTCFullYear() === 2026 && date.getUTCMonth() === 6;
 }
 
 export const upcomingBlockConference: {
@@ -62,33 +55,12 @@ export const upcomingLayer2Meetup = {
 export const upcomingWGCalls = [
   {
     wgTitle: "IKP WG",
-    date: (() => {
-      const today = new Date();
-
-      //July schedule
-      if(isJuly2026(today)) {
-        return "WG calls will be taking place on July 2, 16, 30 from 13:00-14:00 UTC";
-      }
-
-      //biweekly calculation
-      return getNextBiweeklyMeeting(4, 12, new Date('2025-01-09')), 
-        // Thursday = 4, starting from Jan 9, 2025
-    })(),
+    date: getNextBiweeklyMeeting(4, 12, new Date('2025-01-09')), // Thursday = 4, starting from Jan 9, 2025
   },
-  
+
   {
     wgTitle: "FASE WG", 
-    date: (() => {
-      const today = new Date();
-
-      //FASE WG break during July 2026
-      if (isJuly2026(today)) {
-        return "FASE WG is on a break during the month of July 2026";
-      }
-      
-      return getNextBiweeklyMeeting(3, 11, new Date('2025-01-08')), 
-        // Wednesday = 3, starting from Jan 8, 2025
-    })(),
+    date: getNextBiweeklyMeeting(3, 11, new Date('2025-01-08')), // Wednesday = 3, starting from Jan 8, 2025
   },
   {
     wgTitle: "Cyber Security WG",
