@@ -1,6 +1,6 @@
 # Sitewide IA rollout
 
-English design brief for aligning the rest of [bgin-global.org](https://bgin-global.org) with the Projects / Publications information architecture. Companion docs: [`content-model.md`](./content-model.md), [`content-ia-handover.md`](./content-ia-handover.md).
+English design brief for aligning the rest of [bgin-global.org](https://bgin-global.org) with the Projects / Publications information architecture. Companion docs: [`content-model.md`](./content-model.md), [`content-ia-handover.md`](./content-ia-handover.md). Latest ship notes: [`session-2026-08-05-log.md`](./session-2026-08-05-log.md), [`session-2026-08-05-handover.md`](./session-2026-08-05-handover.md).
 
 ## Decision
 
