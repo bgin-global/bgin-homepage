@@ -79,9 +79,9 @@ export default function Home() {
             </a>
             <Link
               href={BLOCK15_PAGE}
-              className="text-sm font-medium text-blue-100 underline underline-offset-2 hover:text-white"
+              className="inline-flex justify-center items-center px-5 py-3 rounded-md border border-white text-white text-sm font-semibold hover:bg-white/10"
             >
-              Event details →
+              Event details
             </Link>
           </div>
         </div>

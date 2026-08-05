@@ -1,4 +1,5 @@
 import { CUSTOM_STYLES } from "@/styles/custom";
+import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
@@ -8,8 +9,18 @@ interface Props {
 export default function Hero({ type }: Props) {
   return (
     <div className="flex-col flex items-start pt-10 pb-8 h-fit max-w-5xl m-auto">
-      <div className="flex-col w-full flex items-center gap-4 px-4">
+      <div className="flex-col w-full flex items-center gap-5 px-4">
         <div className="flex-col flex items-center gap-3 text-black max-w-3xl text-center">
+          {/* Horizontal lockup — brand reads without nav */}
+          <Image
+            src="/images/Logo/BGIN_horizontal_01_black.png"
+            alt="BGIN — Blockchain Governance Initiative Network"
+            width={720}
+            height={160}
+            className="w-full max-w-md md:max-w-lg h-auto"
+            priority
+          />
+
           <h1 className={CUSTOM_STYLES.TYPE.DISPLAY}>
             Neutral multi-stakeholder dialogue for blockchain technology and
             governance standards.

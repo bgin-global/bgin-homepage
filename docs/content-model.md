@@ -117,6 +117,20 @@ One primary filled action per view. Do not compete campaign, join, and orient CT
 
 Rules: (1) How to join must not re-primary Register or stack Browse/Start as buttons. (2) Register href prefers Eventbrite (`BLOCK15_REGISTER`) for one-click signup; event page is tertiary “details”. (3) After Block 15, demote or remove campaign primary and keep Discourse as the standing secondary.
 
+## Block meeting photo hero (travel motivation)
+
+Block event pages may use a **full-bleed place photo hero** (same pattern as Block 14). Purpose: make in-person travel feel worth it — not decoration.
+
+**Carousel order (place-first):**
+1. City / landmark identity (e.g. D.C. skyline, Shibuya Crossing)
+2. Venue exterior (building you will enter)
+3. Optional: rooms **with people / activity** — not empty meeting-room stills
+
+**Do:** dark scrim for type contrast; one Primary Register CTA; Hybrid as a small chip; USDC as footnote text only with comfortable line-height.  
+**Don’t:** empty conference rooms; payment/sponsor logos as competing hero buttons; bright photos that kill copy contrast.
+
+Reference: Block 14 `heroImages` in `app/events/20260301-block14/page.tsx`; Block 15 in `app/events/20261015-block15/page.tsx`.
+
 ## Typography
 
 Faces load in `app/layout.tsx` via `next/font` (do not `@import` Google Fonts in CSS):
