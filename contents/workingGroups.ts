@@ -66,7 +66,7 @@ export const workingGroups: WorkingGroup[] = [
     subscribe_url: "https://groups.google.com/g/bgin-cybersecurity-working-group",
     document_url:
       "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
-    community_url: " ",
+    community_url: "https://bgin.discourse.group/c/working-group-s/cyber-security/32",
     inactive: false,
   },
   {

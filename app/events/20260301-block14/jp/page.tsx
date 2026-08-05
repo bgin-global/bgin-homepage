@@ -108,7 +108,7 @@ export default function Block14PageJP() {
                   <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </a>
-              <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e5fa8] hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+              <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e40af] hover:bg-[#1e40af]" style={{ backgroundColor: '#1d4ed8' }}>
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={28} height={28} className="flex-shrink-0" />
                 USDCで登録
               </a>
@@ -125,13 +125,13 @@ export default function Block14PageJP() {
       </section>
 
       {/* Hybrid / Remote participation banner */}
-      <section className="py-4 px-4 border-b-2 shadow-md" style={{ backgroundColor: '#0f766e', borderColor: '#0d9488' }} aria-label="参加形式">
+      <section className="py-4 px-4 border-b-2 shadow-md" style={{ backgroundColor: '#1e3a8a', borderColor: '#1e40af' }} aria-label="参加形式">
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center text-white">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide flex items-center gap-2">
             <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             ハイブリッド開催
           </span>
-          <span style={{ color: '#99f6e4' }}>|</span>
+          <span style={{ color: '#bfdbfe' }}>|</span>
           <span className="text-base md:text-lg">
             <strong>リモート参加が可能です。</strong> オンラインでご参加いただけます。接続方法（Zoom等）は登録者にイベント前に別途お送りします。
           </span>
@@ -139,7 +139,7 @@ export default function Block14PageJP() {
       </section>
 
       {/* What's New */}
-      <section className="text-white py-4 px-4 border-b-2 border-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+      <section className="text-white py-4 px-4 border-b-2 border-[#1e40af]" style={{ backgroundColor: '#1d4ed8' }}>
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
           <span className="text-white/90">|</span>
@@ -186,7 +186,7 @@ export default function Block14PageJP() {
       </nav>
 
       {/* What is Block Meeting Section */}
-      <section id="what-is-block-meeting" className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+      <section id="what-is-block-meeting" className="block13-section bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -203,12 +203,12 @@ export default function Block14PageJP() {
                   <strong className="text-blue-700">BGIN Block Meetings</strong>は、開発者、規制当局、事業者、学術関係者、市民社会を集め、ブロックチェーンガバナンスのフレームワークを推進する、主要なマルチステークホルダー会議です。
                 </p>
                 <p className="text-lg leading-relaxed">
-                  これらの会議は、通常は協力しない多様なステークホルダーが、パーミッションレスブロックチェーンエコシステムにおけるアイデンティティ、プライバシー、鍵管理、ガバナンスの課題について有意義な議論を行う<strong className="text-indigo-700">共通の対話プラットフォーム</strong>を確立します。
+                  これらの会議は、通常は協力しない多様なステークホルダーが、パーミッションレスブロックチェーンエコシステムにおけるアイデンティティ、プライバシー、鍵管理、ガバナンスの課題について有意義な議論を行う<strong className="text-blue-800">共通の対話プラットフォーム</strong>を確立します。
                 </p>
                 <p className="text-lg leading-relaxed">
                   Block Meetingsは、ワーキンググループセッション、重要プロジェクトの議論、協調的な問題解決を通じて、ブロックチェーン技術の未来を形作る<strong className="text-purple-700">具体的な成果</strong>を生み出します。
                 </p>
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-5 text-white shadow-lg">
+                <div className="bg-blue-700 rounded-lg p-5 text-white shadow-lg">
                   <div className="flex items-start gap-3 mb-3">
                     <svg className="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -257,8 +257,8 @@ export default function Block14PageJP() {
                 <p className="text-sm text-gray-600">全セクターからの多様な視点</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md text-center">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
@@ -631,31 +631,31 @@ export default function Block14PageJP() {
               BGINは登録費とイベントスポンサーフィーをステーブルコイン（<strong>Ethereum上のUSDC</strong>）で受け取ることを決定しました。このイニシアティブは、
               現実世界のブロックチェーンガバナンスシナリオにおける規制フレームワークの実践的な応用を表しています。
             </p>
-            <div className="rounded-lg p-4 mb-4 border-2 border-[#2775CA]/30 bg-[#2775CA]/5">
+            <div className="rounded-lg p-4 mb-4 border-2 border-[#1d4ed8]/30 bg-[#1d4ed8]/5">
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e5fa8' }}>USDCで登録（利用可能）</span>
+                <span style={{ color: '#1e40af' }}>USDCで登録（利用可能）</span>
               </h3>
               <p className="text-gray-700 text-sm mb-3">
                 Block 14の登録を<strong>Ethereum上のUSDC</strong>でCoinbase Commerceから行えます。下記のチケット種別からお選びください。
               </p>
-              <p className="text-sm font-semibold mb-3" style={{ color: '#1e5fa8' }}>
+              <p className="text-sm font-semibold mb-3" style={{ color: '#1e40af' }}>
                 重要：登録にはEthereumネットワーク上のUSDCのみをご利用いただけます。
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
-                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>一般（2日間）</span>
                   <span className="font-semibold">$100</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>一般（1日目）</span>
                   <span className="font-semibold">$60</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>一般（2日目）</span>
                   <span className="font-semibold">$60</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>リモート参加</span>
                   <span className="font-semibold">$30</span>
                 </a>
@@ -962,7 +962,7 @@ export default function Block14PageJP() {
         {/* Contribution & Fee Waiver Section */}
         <section id="contributions" className="block13-section">
           <h2 className="block13-section-title">あなたの提案や研究を発表しませんか？</h2>
-          <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
+          <div className="bg-[#1d4ed8] text-white rounded-lg p-6 mb-6">
             <p>
               BGINは協調的な標準化プロセスに従います。<strong>Block 14で書面による貢献を提出し、発表する貢献者は、登録費が完全に免除されます。</strong>
             </p>
@@ -996,21 +996,21 @@ export default function Block14PageJP() {
               <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">参加費免除のために貢献を提出</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">1</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">1</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">ワーキンググループ議長に連絡</h4>
                     <p className="text-gray-600 text-sm">関連するWG議長に連絡して、貢献への関心を表明してください。WG議長がわからない場合や質問がある場合は、<a href="https://bgin.discourse.group/t/onboarding-guide/130/2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Discourseに参加して問い合わせてください（オンボーディングガイド）</a>。</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">2</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">2</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">書面による貢献を提出</h4>
                     <p className="text-gray-600 text-sm">メールで文書を提供し、<a href="mailto:bgin_admin@bg2x.org" className="text-blue-600 hover:underline">bgin_admin@bg2x.org</a>をCCに入れてください。</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">3</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">100%割引コードを受け取る</h4>
                     <p className="text-gray-600 text-sm">Block 14登録用の完全な参加費免除コードを取得してください。</p>
@@ -1073,7 +1073,7 @@ export default function Block14PageJP() {
                     登録は現在受付中です。定員に限りがあります - 早めに登録して席を確保してください。
                   </p>
                   <p className="text-sm text-gray-600 mb-2">
-                    カード（Eventbrite）または<a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>Ethereum上のUSDC（ステーブルコイン）</a>で登録いただけます。
+                    カード（Eventbrite）または<a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#1d4ed8' }}>Ethereum上のUSDC（ステーブルコイン）</a>で登録いただけます。
                   </p>
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>貢献者：</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">研究を発表する方には参加費免除が利用可能</a>
@@ -1091,7 +1091,7 @@ export default function Block14PageJP() {
                         <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </a>
-                    <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+                    <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e40af]" style={{ backgroundColor: '#1d4ed8' }}>
                       <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
                       USDCで登録
                     </a>
@@ -1197,12 +1197,12 @@ export default function Block14PageJP() {
           <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
             <div className="flex items-start h-fit max-w-5xl m-auto">
               <div className="flex-col flex items-start gap-2.5 py-16">
-                <div className="bg-[#688ff5] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
+                <div className="bg-[#1d4ed8] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
                   <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
                     <div className="w-full flex-col flex items-start gap-6">
                       <div className="w-full flex-col flex items-start gap-2 text-white">
                         <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">議論に参加</div>
-                        <div className="text-lg leading-[19px] font-Inter">
+                        <div className="text-lg leading-7 font-Inter">
                           BGIN Block 14でブロックチェーンガバナンスの未来を形作る一員になりましょう。
                           世界中の規制当局、技術者、業界リーダーとつながりましょう。
                           コミュニティに参加して、最新の開発情報を入手し、継続的な議論に参加してください。

@@ -14,7 +14,7 @@ export const roadmaps: RoadmapData[] = [
     title: "Blockchain Roundtable",
     description:
       "Hosted by the Financial Services Agency of Japan, the discussions among academia and regulators from different countries provided an opportunity for multi-stakeholder discussions on privacy, anonymization technologies, and governance issues of blockchain.",
-    bgColor: "bg-[#6890F5]",
+    bgColor: "bg-blue-700",
     textColor: "text-white",
   },
   {
@@ -23,7 +23,7 @@ export const roadmaps: RoadmapData[] = [
     description:
       "The 2019 G20 Osaka summit was the fourteenth meeting of the G20, a forum of 19 countries and the EU that together represent most of the world economy",
     highlightImageSrc: "/images/About/G20_OSAKA.svg",
-    bgColor: "bg-[#F0F4FE]",
+    bgColor: "bg-gray-50",
     textColor: "text-black",
   },
   {
@@ -32,7 +32,7 @@ export const roadmaps: RoadmapData[] = [
     description:
       "Key persons from different stakeholder groups discussed detailed issues and design of multi-stakeholder governance.",
     imageSrc: "/images/About/FINSUM_2019.svg",
-    bgColor: "bg-[#6890F5]",
+    bgColor: "bg-blue-700",
     textColor: "text-white",
   },
   {
@@ -40,7 +40,7 @@ export const roadmaps: RoadmapData[] = [
     title: "BG2C - Special Online Broadcasting Panel Discussion",
     description:
       'Dr. Shin\'ichiro Matsuo made public the launch of "Blockchain Governance Initiative Network", BGIN.',
-    bgColor: "bg-[#F0F4FE]",
+    bgColor: "bg-gray-50",
     textColor: "text-black",
   },
 ];

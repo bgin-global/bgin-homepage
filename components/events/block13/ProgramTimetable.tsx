@@ -3,22 +3,11 @@
 import React from 'react';
 import Link from 'next/link';
 import { programData } from '@/lib/block13-program-data';
+import { getWGColorClasses } from '@/lib/block14-wg-colors';
+import { WG_IDENTITY } from '@/contents/wgIdentity';
 
 const ProgramTimetable = () => {
-  // Color mapping for working groups
-  const wgColors: { [key: string]: string } = {
-    'BGIN Agent Hack': 'bg-yellow-100 border-yellow-300',
-    'IKP': 'bg-blue-100 border-blue-300',
-    'Cyber Security': 'bg-green-100 border-green-300',
-    'CS': 'bg-green-100 border-green-300',
-    'FASE': 'bg-purple-100 border-purple-300',
-    'General': 'bg-gray-100 border-gray-300',
-    'TBD': 'bg-gray-50 border-gray-200'
-  };
-
-  const getSessionColor = (wg: string) => {
-    return wgColors[wg] || wgColors['General'];
-  };
+  const getSessionColor = (wg: string) => getWGColorClasses(wg);
 
   // Define time slots for each day
   const timeSlots = {
@@ -261,9 +250,9 @@ const ProgramTimetable = () => {
             <div className="text-sm font-medium">Working Groups:</div>
             <div className="flex flex-wrap gap-2">
               <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300">BGIN Agent Hack</span>
-              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300">IKP</span>
-              <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300">Cyber Security</span>
-              <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300">FASE</span>
+              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.ikp.chip}`}>IKP</span>
+              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.cs.chip}`}>Cyber Security</span>
+              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.fase.chip}`}>FASE</span>
               <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300">General</span>
             </div>
           </div>

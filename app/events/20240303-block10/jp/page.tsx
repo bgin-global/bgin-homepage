@@ -42,7 +42,7 @@ export default async function Page() {
           <div>ENG</div>
         </Link>
 
-        <div className="text-base leading-[17px] font-Inter font-semibold">
+        <div className="text-base leading-6 font-Inter font-semibold">
           <div>
             {event?.date}
             {event?.date_until ? ` 〜 ${event?.date_until}` : ""}

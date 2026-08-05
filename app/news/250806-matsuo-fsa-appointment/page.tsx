@@ -9,12 +9,12 @@ export default function MatsuoFSAAppointmentPage() {
   // Function to get tag color styling (same as News component)
   const getTagStyle = (tag: string) => {
     const tagStyles: { [key: string]: string } = {
-      "Latest": "bg-red-100 text-red-800 border-red-200",
+      "Latest": "bg-blue-50 text-blue-900 border-blue-200",
       "Conference": "bg-blue-100 text-blue-800 border-blue-200",
       "Working Group": "bg-green-100 text-green-800 border-green-200",
-      "Event": "bg-purple-100 text-purple-800 border-purple-200",
-      "Standards": "bg-orange-100 text-orange-800 border-orange-200",
-      "New Project": "bg-indigo-100 text-indigo-800 border-indigo-200"
+      "Event": "bg-gray-100 text-gray-700 border-gray-200",
+      "Standards": "bg-gray-100 text-gray-700 border-gray-200",
+      "New Project": "bg-gray-100 text-gray-700 border-gray-200"
     };
     return tagStyles[tag] || "bg-gray-100 text-gray-800 border-gray-200";
   };
@@ -60,7 +60,7 @@ export default function MatsuoFSAAppointmentPage() {
       {/* Article Content */}
       <div className="py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="prose prose-lg max-w-none">
+          <div className="bgin-prose prose prose-lg">
             
             <h2 className={`${CUSTOM_STYLES.SUBTITLE} text-black mt-8 mb-6`}>
               Executive Summary

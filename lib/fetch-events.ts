@@ -40,7 +40,7 @@ export function getSortedEvents(
   const today = Date.now();
   const fileNames = fs
     .readdirSync(directory(type), { withFileTypes: true })
-    .filter((f) => f.isFile())
+    .filter((f) => f.isFile() && f.name.endsWith(".md"))
     .map((f) => f.name);
   const allPostsData: Event[] = fileNames
     .map((fileName) => {
@@ -65,6 +65,8 @@ export function getSortedEvents(
       return event;
     })
     .filter((event) => {
+      // Skip macOS junk / incomplete frontmatter (e.g. .DS_Store mis-read as a file)
+      if (!event.title || !event.date || !event.thumbnail) return false;
       if (event.lang !== "ENG") return false;
       if (direction === "ALL") return true;
       const eventDate = Date.parse(event.date_until || event.date);

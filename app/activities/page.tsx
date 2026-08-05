@@ -18,6 +18,24 @@ export default function Activities() {
           <div className={CUSTOM_STYLES.DESCRIPTION}>
             The "Block" Conferences, which serve as BGIN's General Meeting, are the main conferences aimed at launching projects, reviewing ongoing initiatives, and delivering final reports. Detailed discussions on projects take place in the Working Group meetings. In other words, we build "transactions" in the Working Groups, while the "Block" Conference serves to "generate and validate blocks." on "Layer 1". Additionally, we hold "Layer 2" Meetups colocated with other community-hosted conferences to gather input for our projects. The discussions at these meetups are then "rolled up" to "Layer 1."
           </div>
+          <p className="text-sm text-gray-800 -mt-2">
+            What you&apos;ll find here: how BGIN organises work. Next steps:{" "}
+            <a href="/projects" className="underline font-medium">
+              Projects
+            </a>
+            {" · "}
+            <a href="/events" className="underline font-medium">
+              Events
+            </a>
+            {" · "}
+            <a href="/publications" className="underline font-medium">
+              Publications
+            </a>
+            {" · "}
+            <a href="/start" className="underline font-medium">
+              Start here
+            </a>
+          </p>
           <Image
             src="/images/Activities/structure.svg"
             alt="structures of our activities"

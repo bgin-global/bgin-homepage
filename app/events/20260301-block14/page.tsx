@@ -106,7 +106,7 @@ export default function Block14Page() {
                   <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </a>
-              <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e5fa8] hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+              <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow-md hover:shadow-lg transition-all border-2 border-[#1e40af] hover:bg-[#1e40af]" style={{ backgroundColor: '#1d4ed8' }}>
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={28} height={28} className="flex-shrink-0" />
                 Register with USDC
               </a>
@@ -123,13 +123,13 @@ export default function Block14Page() {
       </section>
 
       {/* Hybrid / Remote participation banner */}
-      <section className="py-4 px-4 border-b-2 shadow-md" style={{ backgroundColor: '#0f766e', borderColor: '#0d9488' }} aria-label="Participation format">
+      <section className="py-4 px-4 border-b-2 shadow-md" style={{ backgroundColor: '#1e3a8a', borderColor: '#1e40af' }} aria-label="Participation format">
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center text-white">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide flex items-center gap-2">
             <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             Hybrid event
           </span>
-          <span className="text-teal-200" style={{ color: '#99f6e4' }}>|</span>
+          <span className="text-teal-200" style={{ color: '#bfdbfe' }}>|</span>
           <span className="text-base md:text-lg">
             <strong>Remote participation is available.</strong> Join online from anywhere. Connection details (Zoom/streaming) will be sent to registered participants before the event.
           </span>
@@ -137,7 +137,7 @@ export default function Block14Page() {
       </section>
 
       {/* What's New */}
-      <section className="text-white py-4 px-4 border-b-2 border-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+      <section className="text-white py-4 px-4 border-b-2 border-[#1e40af]" style={{ backgroundColor: '#1d4ed8' }}>
         <div className="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-3 text-center">
           <span className="font-bold text-lg md:text-xl uppercase tracking-wide">What&apos;s New</span>
           <span className="text-white/90">|</span>
@@ -184,7 +184,7 @@ export default function Block14Page() {
       </nav>
 
       {/* What is Block Meeting Section */}
-      <section id="what-is-block-meeting" className="block13-section bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+      <section id="what-is-block-meeting" className="block13-section bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
@@ -201,12 +201,12 @@ export default function Block14Page() {
                   <strong className="text-blue-700">BGIN Block Meetings</strong> are premier multi-stakeholder gatherings that bring together developers, regulators, businesses, academics, and civil society to advance blockchain governance frameworks.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  These meetings establish a <strong className="text-indigo-700">common platform for dialogue</strong> where diverse stakeholders who rarely collaborate can engage in meaningful discussions about identity, privacy, key management, and governance challenges in permissionless blockchain ecosystems.
+                  These meetings establish a <strong className="text-blue-800">common platform for dialogue</strong> where diverse stakeholders who rarely collaborate can engage in meaningful discussions about identity, privacy, key management, and governance challenges in permissionless blockchain ecosystems.
                 </p>
                 <p className="text-lg leading-relaxed">
                   Block Meetings drive <strong className="text-purple-700">concrete outcomes</strong> through working group sessions, critical project discussions, and collaborative problem-solving that shapes the future of blockchain technology.
                 </p>
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg p-5 text-white shadow-lg">
+                <div className="bg-blue-700 rounded-lg p-5 text-white shadow-lg">
                   <div className="flex items-start gap-3 mb-3">
                     <svg className="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -255,8 +255,8 @@ export default function Block14Page() {
                 <p className="text-sm text-gray-600">Diverse perspectives from all sectors</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md text-center">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
@@ -734,31 +734,31 @@ export default function Block14Page() {
               BGIN has decided to accept registration fees and event sponsor fees in stablecoins (<strong>USDC on Ethereum</strong>). This initiative 
               represents a practical application of regulatory frameworks in real-world blockchain governance scenarios.
             </p>
-            <div className="rounded-lg p-4 mb-4 border-2 border-[#2775CA]/30 bg-[#2775CA]/5">
+            <div className="rounded-lg p-4 mb-4 border-2 border-[#1d4ed8]/30 bg-[#1d4ed8]/5">
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e5fa8' }}>Register with USDC (now available)</span>
+                <span style={{ color: '#1e40af' }}>Register with USDC (now available)</span>
               </h3>
               <p className="text-gray-700 text-sm mb-3">
                 You can register in <strong>USDC on Ethereum</strong> via Coinbase Commerce. Choose your ticket type below:
               </p>
-              <p className="text-sm font-semibold mb-3" style={{ color: '#1e5fa8' }}>
+              <p className="text-sm font-semibold mb-3" style={{ color: '#1e40af' }}>
                 Important: We accept USDC on the Ethereum network only.
               </p>
               <div className="grid gap-2 sm:grid-cols-2">
-                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>General (2 days)</span>
                   <span className="font-semibold">$100</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>General (Day 1)</span>
                   <span className="font-semibold">$60</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>General (Day 2)</span>
                   <span className="font-semibold">$60</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
+                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
                   <span>Remote</span>
                   <span className="font-semibold">$30</span>
                 </a>
@@ -1079,7 +1079,7 @@ export default function Block14Page() {
         {/* Contribution & Fee Waiver Section */}
         <section id="contributions" className="block13-section">
           <h2 className="block13-section-title">Looking to Present Your Work?</h2>
-          <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
+          <div className="bg-[#1d4ed8] text-white rounded-lg p-6 mb-6">
             <p>
               BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 14 receive complete registration fee waivers.</strong>
             </p>
@@ -1113,21 +1113,21 @@ export default function Block14Page() {
               <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Submit Contribution for Fee Waiver</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">1</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">1</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Contact Working Group Chair</h4>
                     <p className="text-gray-600 text-sm">Reach out to the relevant WG Chair to express interest in contributing. Don't know the WG Chairs or have questions? <a href="https://bgin.discourse.group/t/onboarding-guide/130/2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Join our Discourse and make an inquiry (onboarding guide)</a>.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">2</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">2</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Submit Written Contribution</h4>
                     <p className="text-gray-600 text-sm">Provide your document via email with <a href="mailto:bgin_admin@bg2x.org" className="text-blue-600 hover:underline">bgin_admin@bg2x.org</a> in CC.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">3</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Receive 100% Discount Code</h4>
                     <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 14 registration.</p>
@@ -1190,7 +1190,7 @@ export default function Block14Page() {
                     Registration is now open. Limited capacity - register early to secure your spot.
                   </p>
                   <p className="text-sm text-gray-600 mb-2">
-                    Register by card (Eventbrite) or <a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#2775CA' }}>USDC on Ethereum (stablecoin)</a>.
+                    Register by card (Eventbrite) or <a href="#stablecoin-payment" className="font-semibold underline hover:no-underline" style={{ color: '#1d4ed8' }}>USDC on Ethereum (stablecoin)</a>.
                   </p>
                   <p className="text-sm text-gray-600 mb-4">
                     <strong>Contributors:</strong> <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline">Fee waivers available for those presenting work</a>
@@ -1208,7 +1208,7 @@ export default function Block14Page() {
                         <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </a>
-                    <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]" style={{ backgroundColor: '#2775CA' }}>
+                    <a href="#stablecoin-payment" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e40af]" style={{ backgroundColor: '#1d4ed8' }}>
                       <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={22} height={22} className="flex-shrink-0" />
                       Register with USDC
                     </a>
@@ -1314,12 +1314,12 @@ export default function Block14Page() {
           <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
             <div className="flex items-start h-fit max-w-5xl m-auto">
               <div className="flex-col flex items-start gap-2.5 py-16">
-                <div className="bg-[#688ff5] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
+                <div className="bg-[#1d4ed8] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
                   <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
                     <div className="w-full flex-col flex items-start gap-6">
                       <div className="w-full flex-col flex items-start gap-2 text-white">
                         <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
-                        <div className="text-lg leading-[19px] font-Inter">
+                        <div className="text-lg leading-7 font-Inter">
                           Be part of shaping the future of blockchain governance at BGIN Block 14. 
                           Connect with regulators, technologists, and industry leaders from around the world. 
                           Join our community to stay updated on the latest developments and participate in ongoing discussions.

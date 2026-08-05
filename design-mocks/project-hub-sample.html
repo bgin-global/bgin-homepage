@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BGIN Project Hub — All Projects Sample</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --blue-soft: #3b82f6;
+      --blue-wash: #eff6ff;
+      --blue-band: #dbeafe;
+      --ink: #111827;
+      --muted: #4b5563;
+      --line: #e5e7eb;
+      --surface: #f8fafc;
+      --ok-bg: #ecfdf5;
+      --ok-fg: #065f46;
+      --ok-bd: #a7f3d0;
+      --dev-bg: #fffbeb;
+      --dev-fg: #92400e;
+      --dev-bd: #fcd34d;
+      --prog-bg: #eff6ff;
+      --prog-fg: #1e40af;
+      --prog-bd: #bfdbfe;
+      --max: 1120px;
+      --prose: 42rem;
+      /* WG identity — sync with contents/wgIdentity.ts */
+      --wg-ikp: #0369a1;
+      --wg-ikp-soft: #f0f9ff;
+      --wg-cs: #047857;
+      --wg-cs-soft: #ecfdf5;
+      --wg-fase: #6d28d9;
+      --wg-fase-soft: #f5f3ff;
+      --wg-agentic: #b45309;
+      --wg-agentic-soft: #fffbeb;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.55;
+    }
+    a { color: var(--blue); }
+    h1, h2, h3, .brand {
+      font-family: "Familjen Grotesk", Inter, sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    /* Mock chrome */
+    .mock-banner {
+      background: #111827;
+      color: #e5e7eb;
+      font-size: 13px;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .mock-banner strong { color: #fff; }
+    /* Listing view (WG → Project). Detail pages stay clean. */
+    .listing {
+      display: none;
+      padding: 36px 0 72px;
+    }
+    .listing.active { display: block; }
+    .listing-intro {
+      max-width: 40rem;
+      margin-bottom: 28px;
+    }
+    .listing-intro h1 {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      margin: 0 0 10px;
+    }
+    .listing-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .picker {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .picker-row {
+      padding: 18px 20px;
+    }
+    .picker-row + .picker-row {
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .picker-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 12px;
+    }
+    .nav-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .wg-tab,
+    .project-tab {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+    }
+    .wg-tab small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+    .wg-tab[aria-selected="true"] {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
+    .wg-tab[data-wg="ikp"] { border-left: 4px solid var(--wg-ikp); }
+    .wg-tab[data-wg="cs"] { border-left: 4px solid var(--wg-cs); }
+    .wg-tab[data-wg="fase"] { border-left: 4px solid var(--wg-fase); }
+    .wg-tab[data-wg="agentic"] { border-left: 4px solid var(--wg-agentic); }
+    .wg-tab[data-wg="ikp"][aria-selected="true"] {
+      background: var(--wg-ikp-soft); border-color: var(--wg-ikp); color: var(--ink);
+    }
+    .wg-tab[data-wg="cs"][aria-selected="true"] {
+      background: var(--wg-cs-soft); border-color: var(--wg-cs); color: var(--ink);
+    }
+    .wg-tab[data-wg="fase"][aria-selected="true"] {
+      background: var(--wg-fase-soft); border-color: var(--wg-fase); color: var(--ink);
+    }
+    .wg-tab[data-wg="agentic"][aria-selected="true"] {
+      background: var(--wg-agentic-soft); border-color: var(--wg-agentic); color: var(--ink);
+    }
+    .wg-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
+      border: 1px solid;
+    }
+    .wg-chip::before {
+      content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor;
+    }
+    .wg-chip.ikp { color: var(--wg-ikp); background: var(--wg-ikp-soft); border-color: #7dd3fc; }
+    .wg-chip.cs { color: var(--wg-cs); background: var(--wg-cs-soft); border-color: #6ee7b7; }
+    .wg-chip.fase { color: var(--wg-fase); background: var(--wg-fase-soft); border-color: #c4b5fd; }
+    .wg-chip.agentic { color: var(--wg-agentic); background: var(--wg-agentic-soft); border-color: #fcd34d; }
+    .page[data-wg="ikp"] .wrap.hero { border-left: 4px solid var(--wg-ikp); background: var(--wg-ikp-soft); padding-left: 20px; }
+    .page[data-wg="cs"] .wrap.hero { border-left: 4px solid var(--wg-cs); background: var(--wg-cs-soft); padding-left: 20px; }
+    .page[data-wg="fase"] .wrap.hero { border-left: 4px solid var(--wg-fase); background: var(--wg-fase-soft); padding-left: 20px; }
+    .page[data-wg="agentic"] .wrap.hero { border-left: 4px solid var(--wg-agentic); background: var(--wg-agentic-soft); padding-left: 20px; }
+    .project-tab[data-wg="ikp"] { border-left: 3px solid var(--wg-ikp); }
+    .project-tab[data-wg="cs"] { border-left: 3px solid var(--wg-cs); }
+    .project-tab[data-wg="fase"] { border-left: 3px solid var(--wg-fase); }
+    .project-tab[data-wg="agentic"] { border-left: 3px solid var(--wg-agentic); }
+    .project-tab {
+      border-radius: 8px;
+      min-width: 12rem;
+    }
+    .project-tab strong {
+      display: block;
+      color: inherit;
+      font-size: 14px;
+    }
+    .project-tab span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+    .project-tab:hover {
+      border-color: var(--blue-soft);
+      color: var(--ink);
+    }
+    .project-tabs-panel[hidden] { display: none !important; }
+    .nav-empty {
+      font-size: 14px;
+      color: #9ca3af;
+      margin: 0;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 14px;
+    }
+    .back-link:hover { color: var(--blue); }
+
+    /* Site chrome (simplified) */
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+    .site-header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand {
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background: var(--blue-soft);
+    }
+    .nav {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .nav span { cursor: default; }
+    .nav .active { color: var(--ink); font-weight: 600; }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero / L1 */
+    .hero {
+      padding: 28px 0 8px;
+    }
+    .crumb {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .crumb a { color: var(--muted); text-decoration: none; }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .chip::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .chip-progress { background: var(--prog-bg); color: var(--prog-fg); border-color: var(--prog-bd); }
+    .chip-dev { background: var(--dev-bg); color: var(--dev-fg); border-color: var(--dev-bd); }
+    .chip-pub { background: var(--ok-bg); color: var(--ok-fg); border-color: var(--ok-bd); }
+    .chip-meta {
+      background: var(--surface);
+      color: var(--muted);
+      border-color: var(--line);
+    }
+    .chip-meta::before { display: none; }
+
+    h1 {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+    .lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 46rem;
+      margin: 0 0 20px;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-secondary { background: #fff; color: var(--ink); border-color: #cbd5e1; }
+    .btn-ghost { background: var(--blue-wash); color: var(--prog-fg); }
+    .ext::after {
+      content: " ↗";
+      font-size: 0.85em;
+      opacity: 0.7;
+    }
+
+    /* Layout: main + TOC */
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 40px;
+      align-items: start;
+      padding-bottom: 64px;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { order: -1; position: static !important; }
+      .nav { display: none; }
+    }
+
+    .toc {
+      position: sticky;
+      top: 24px;
+      font-size: 13px;
+      padding: 14px 0;
+    }
+    .toc summary,
+    .toc h2 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #9ca3af;
+      margin: 0 0 10px;
+      font-weight: 600;
+      list-style: none;
+      cursor: default;
+    }
+    .toc summary { cursor: pointer; }
+    .toc summary::-webkit-details-marker { display: none; }
+    .toc nav { display: flex; flex-direction: column; }
+    .toc a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 5px 0 5px 10px;
+      border-left: 2px solid var(--line);
+    }
+    .toc a:hover, .toc a.current {
+      color: var(--ink);
+      border-left-color: var(--blue);
+      font-weight: 500;
+    }
+    @media (max-width: 900px) {
+      .toc details {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 12px;
+        background: var(--surface);
+        margin-bottom: 8px;
+      }
+      .toc summary { margin-bottom: 0; }
+      .toc details[open] summary { margin-bottom: 8px; }
+      .toc details:not([open]) nav { display: none; }
+    }
+    @media (min-width: 901px) {
+      .toc summary { pointer-events: none; }
+      .toc details nav { display: flex !important; }
+    }
+    :focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+    }
+    section, .glance { scroll-margin-top: 24px; }
+
+    /* At a glance */
+    .glance {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 36px;
+      background: #fff;
+    }
+    .glance-title {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px 16px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      margin: 0;
+      font-family: Inter, sans-serif;
+      letter-spacing: 0;
+    }
+    .glance dl {
+      margin: 0;
+      display: grid;
+    }
+    .glance .row {
+      display: grid;
+      grid-template-columns: 11rem 1fr;
+      gap: 12px;
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .glance .row:first-of-type { border-top: 0; }
+    .glance dt {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .glance dd { margin: 0; }
+    @media (max-width: 640px) {
+      .glance .row { grid-template-columns: 1fr; gap: 4px; }
+    }
+
+    section {
+      margin-bottom: 40px;
+      max-width: var(--prose);
+      scroll-margin-top: 88px;
+    }
+    section h2 {
+      font-size: 1.35rem;
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+    section p { margin: 0 0 12px; color: #374151; font-size: 15px; }
+    section ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: #374151;
+      font-size: 15px;
+    }
+    section li { margin-bottom: 6px; }
+
+    /* Documents table */
+    .docs {
+      width: 100%;
+      max-width: none;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .docs th {
+      text-align: left;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #9ca3af;
+      font-weight: 600;
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .docs td {
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    .docs tr:hover td { background: #fafafa; }
+    .type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--blue-wash);
+      color: var(--prog-fg);
+      white-space: nowrap;
+    }
+    .type-mr { background: #f3f4f6; color: #374151; }
+    .type-draft { background: var(--dev-bg); color: var(--dev-fg); }
+    .type-road { background: #f5f3ff; color: #5b21b6; }
+    .docs a { font-weight: 500; text-decoration: none; }
+    .docs a:hover { text-decoration: underline; }
+    .when { color: var(--muted); white-space: nowrap; }
+
+    /* Roadmap — vertical list */
+    .roadmap-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 36rem;
+      border-left: 2px solid var(--line);
+    }
+    .roadmap-list li {
+      position: relative;
+      padding: 0 0 18px 18px;
+    }
+    .roadmap-list li:last-child { padding-bottom: 0; }
+    .roadmap-list li::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #cbd5e1;
+    }
+    .roadmap-list li.done::before { border-color: var(--blue-soft); background: var(--blue-wash); }
+    .roadmap-list li.now::before { border-color: var(--blue); background: var(--blue); }
+    .roadmap-list .when-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .roadmap-list .what {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .roadmap-list .badge-now {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--prog-fg);
+      background: var(--blue-wash);
+      padding: 2px 6px;
+      border-radius: 4px;
+      vertical-align: 1px;
+    }
+    .roadmap-list li.now .what { color: var(--prog-fg); }
+
+    /* Inset / related */
+    .inset {
+      border-left: 4px solid var(--blue-soft);
+      background: var(--blue-wash);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      color: #1f2937;
+      max-width: none;
+    }
+    .inset h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      font-family: Inter, sans-serif;
+      letter-spacing: 0;
+    }
+    .inset ul { margin: 8px 0 0; padding-left: 1.1rem; }
+    .inset li { margin-bottom: 4px; }
+
+    .related-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 36rem;
+    }
+    .related-list li {
+      border-top: 1px solid var(--line);
+    }
+    .related-list li:last-child { border-bottom: 1px solid var(--line); }
+    .related-list a {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .related-list a:hover { color: var(--blue); }
+    .related-list .meta {
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+      padding: 28px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    /* Upcoming meetings: type + date + short plan */
+    .meetings {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: none;
+    }
+    .meeting {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fff;
+    }
+    .meeting-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 12px;
+      margin-bottom: 8px;
+    }
+    .meeting-type {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--prog-fg);
+      background: var(--blue-wash);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .meeting-type.wg { color: var(--ok-fg); background: var(--ok-bg); }
+    .meeting-type.l2 { color: #6b21a8; background: #f5f3ff; }
+    .meeting-type.gdc { color: var(--prog-fg); background: var(--blue-wash); }
+    .meeting.priority {
+      border-color: var(--blue-band);
+      border-left: 4px solid var(--blue);
+    }
+    .meeting-session-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 6px;
+    }
+    .meeting-title {
+      font-family: "Familjen Grotesk", Inter, sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .meeting-when {
+      font-size: 13px;
+      color: var(--muted);
+      margin-left: auto;
+    }
+    @media (max-width: 640px) {
+      .meeting-when { margin-left: 0; width: 100%; }
+    }
+    .meeting-plan {
+      margin: 0;
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.55;
+      white-space: pre-line;
+    }
+    .meeting-plan + .meeting-link {
+      margin-top: 8px;
+    }
+    .meeting-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .meeting-link:hover { text-decoration: underline; }
+    .meeting.empty .meeting-plan {
+      color: #9ca3af;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="mock-banner">
+    <strong>Sample v4 — all active projects</strong> (15 hubs from Block critical projects + related tracks).
+    Backups: v1 / v2 / v3.
+  </div>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="#" id="brand-home"><span class="brand-mark" aria-hidden="true"></span> BGIN</a>
+      <nav class="nav" aria-label="Primary">
+        <span>About</span>
+        <span>Activities</span>
+        <span class="active">Projects</span>
+        <span>Events</span>
+        <span>News</span>
+      </nav>
+    </div>
+  </header>
+
+  <div id="listing" class="listing active">
+    <div class="wrap">
+      <div class="listing-intro">
+        <h1>Projects</h1>
+        <p>Select a working group, then open a project hub for status, documents, and how to participate. Sample covers 15 active hubs. Finished study reports (e.g. NFT) live under Publications — not here.</p>
+        <p style="margin-top:12px;font-size:14px;color:#4b5563">
+          Past publications from <strong id="past-pubs-wg-label">IKP</strong> →
+          <a class="ext" id="past-pubs-link" href="https://bgin-global.org/publications?author=IKP" target="_blank" rel="noopener">View in Publications</a>
+          ·
+          <a class="ext" href="https://bgin-global.org/publications?what=study_report" target="_blank" rel="noopener">All study reports</a>
+          ·
+          <a class="ext" href="https://bgin-global.org/publications/nft-study-report-part-1" target="_blank" rel="noopener">NFT example</a>
+          ·
+          <a class="ext" href="https://bgin-global.org/start" target="_blank" rel="noopener">Start here</a>
+        </p>
+      </div>
+      <div class="picker" aria-label="Browse projects by working group">
+        <div class="picker-row">
+          <span class="picker-label">1. Working Group</span>
+          <div class="nav-chips" role="tablist" aria-label="Working groups">
+            <button type="button" class="wg-tab" role="tab" aria-selected="true" data-wg="ikp">IKP<small>Key Management &amp; Privacy · 4 projects</small></button><button type="button" class="wg-tab" role="tab" aria-selected="false" data-wg="cs">Cyber Security<small>Standards &amp; operations · 5 projects</small></button><button type="button" class="wg-tab" role="tab" aria-selected="false" data-wg="fase">FASE<small>Finance &amp; economics · 5 projects</small></button><button type="button" class="wg-tab" role="tab" aria-selected="false" data-wg="agentic">Agentic AI<small>AI agent governance · 1 projects</small></button>
+          </div>
+        </div>
+        <div class="picker-row">
+          <span class="picker-label">2. Project</span>
+          <div class="nav-chips project-tabs-panel" data-wg-panel="ikp" role="list"><button type="button" class="project-tab" data-target="pqc"><strong>PQC Migration</strong><span>Preparing blockchain systems for post-quantum cryptography: crypto agili…</span></button><button type="button" class="project-tab" data-target="accountable-wallet"><strong>Accountable Wallet</strong><span>Designing mechanisms that allow wallet holders to prove they are not inv…</span></button><button type="button" class="project-tab" data-target="forensics"><strong>Forensics &amp; Analysis</strong><span>Forensics and Analysis</span></button><button type="button" class="project-tab" data-target="privacy-auth"><strong>Privacy Enhanced Auth</strong><span>Privacy Enhanced Authentication</span></button></div><div class="nav-chips project-tabs-panel" data-wg-panel="cs" role="list" hidden><button type="button" class="project-tab" data-target="cs"><strong>Info Sharing Framework</strong><span>Cybersecurity Information Sharing Framework</span></button><button type="button" class="project-tab" data-target="agent"><strong>Security AI Agent</strong><span>An agentic approach to cybersecurity information sharing for crypto — bu…</span></button><button type="button" class="project-tab" data-target="stpp"><strong>ST / PP</strong><span>Security Target &amp; Protection Profile (ST/PP)</span></button><button type="button" class="project-tab" data-target="offline-key"><strong>Offline Key Management</strong><span>Standards and good practices for offline key management systems in block…</span></button><button type="button" class="project-tab" data-target="supply-chain"><strong>Security Supply Chain</strong><span>Governance of the Security Supply Chain</span></button></div><div class="nav-chips project-tabs-panel" data-wg-panel="fase" role="list" hidden><button type="button" class="project-tab" data-target="stablecoin"><strong>Stablecoin Guide</strong><span>Practical Stablecoin Implementation Guide</span></button><button type="button" class="project-tab" data-target="harmonization"><strong>Harmonization</strong><span>Harmonization among Crypto-asset, Stablecoin and Tokenized Deposit</span></button><button type="button" class="project-tab" data-target="illicit"><strong>Illicit Activities</strong><span>Illicit Activities (Common Lexicon)</span></button><button type="button" class="project-tab" data-target="metrics"><strong>Decentralization Metrics</strong><span>Technical Metrics for Decentralization</span></button><button type="button" class="project-tab" data-target="ai-blockchain"><strong>AI + Blockchain</strong><span>AI and Blockchain</span></button></div><div class="nav-chips project-tabs-panel" data-wg-panel="agentic" role="list" hidden><button type="button" class="project-tab" data-target="agent-standards"><strong>Agent Standards</strong><span>Agent Standards and Frameworks</span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="pqc" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / IKP / PQC Migration</div>
+      <div class="chips"><span class="chip chip-progress">In Progress</span></div>
+      <h1>PQC Migration</h1>
+      <p class="lead">Preparing blockchain systems for post-quantum cryptography: crypto agility, migration playbooks, and neutral evaluation infrastructure — coordinated internationally through BGIN.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary ext" href="https://globaldigitalcollaboration.org/gdc26?day=sept-2-3" target="_blank" rel="noopener">GDC26 session</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="pqc-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>IKP — IAM, Key Management and Privacy</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#pqc-documents">Block 14 MR: Crypto Agility and PQC Migration</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd><strong>GDC26</strong> (2–3 Sep) → Block 15 (Oct)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Practical guidance on PQC migration for blockchain stacks · Crypto-agility architecture patterns (hybrid / algorithm agility) · Inputs to neutral evaluation and measurement (testbed coordination)</dd></div>
+          </dl>
+        </div>
+        <section id="pqc-overview"><h2>Overview</h2><p>Preparing blockchain systems for post-quantum cryptography: crypto agility, migration playbooks, and neutral evaluation infrastructure — coordinated internationally through BGIN.</p></section>
+        <section id="pqc-deliverables"><h2>Expected deliverables</h2><ul><li>Practical guidance on PQC migration for blockchain stacks</li><li>Crypto-agility architecture patterns (hybrid / algorithm agility)</li><li>Inputs to neutral evaluation and measurement (testbed coordination)</li><li>Session outcomes and meeting reports from Block meetings</li></ul></section>
+        <section id="pqc-status"><h2>Current status</h2><p>Dedicated sessions ran at Block 13 and Block 14. Outreach to researchers and ecosystem partners is underway for Block 15 participation and related evaluation discussions.</p></section>
+        <section id="pqc-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 14 MR: Crypto Agility and PQC Migration</a></td><td class="when">2026/03</td></tr><tr><td><span class="type type-draft">Draft</span></td><td><a href="#">Block 14 MR: Crypto Agility and PQC Migration (Draft)</a></td><td class="when">2026/03</td></tr><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 13: Crypto Agility and PQC Migration</a></td><td class="when">2025/10</td></tr></tbody></table></section>
+        <section id="pqc-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 deep dive</div></li><li class="now"><div class="when-label">2–3 Sep 2026</div><div class="what">GDC26 Geneva <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15 (Washington, D.C.)</div></li><li><div class="when-label">Dec 2026</div><div class="what">Related SSR workshop track</div></li><li><div class="when-label">2027+</div><div class="what">Public migration guidance</div></li></ul></section>
+        <section id="pqc-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting priority">
+              <div class="meeting-head">
+                <span class="meeting-type gdc">GDC breakout</span>
+                <span class="meeting-title">GDC26 · Geneva</span>
+                <span class="meeting-when">2–3 Sep 2026 · times TBA</span>
+              </div>
+              <p class="meeting-session-title">Post-Quantum Cryptography Migration on DLTs: Deployment, Agility &amp; Governance</p>
+              <p class="meeting-plan">Compare DLT/wallet PQC migration roadmaps (hybrid signatures, staged rollout, infra trade-offs).
+Document deployment gaps and policy alignment across public and private speakers.
+Capture outcomes that feed BGIN Block #15 dialogue with NIST (Oct 2026).</p>
+              <a class="meeting-link ext" href="https://globaldigitalcollaboration.org/gdc26?day=sept-2-3" target="_blank" rel="noopener">GDC26 programme (2&amp;3 Sep) →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">IKP Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">IKP on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="pqc-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discourse (IKP)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15 and GDC26</li>
+        </ul></section>
+        <section id="pqc-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="cs">Info Sharing Framework <span class="meta">Cyber Security</span></a></li><li><a href="#" data-switch="stpp">ST / PP <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+        <section id="pqc-related-init">
+          <h2>Related initiatives</h2>
+          <div class="inset">
+            <h3>Not hosted by BGIN — shown for coordination context</h3>
+            <ul>
+              <li><strong>NEDO/METI technology competition</strong> on PQC migration and advanced key management (hosted by NEDO/METI, not BGIN).</li>
+              <li><strong>SSR 2026 PQC workshop track</strong> (Baltimore) — related research venue; separate PC/paper process.</li>
+              <li>BGIN’s role: international multi-stakeholder coordination and neutral testbed collaboration.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#pqc-glance">At a glance</a>
+            <a href="#pqc-overview">Overview</a>
+            <a href="#pqc-deliverables">Deliverables</a>
+            <a href="#pqc-status">Status</a>
+            <a href="#pqc-documents">Documents</a>
+            <a href="#pqc-roadmap">Roadmap</a>
+            <a href="#pqc-upcoming">Upcoming</a>
+            <a href="#pqc-participate">Participate</a>
+            <a href="#pqc-related">Related projects</a>
+            <a href="#pqc-related-init">Related initiatives</a>
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="accountable-wallet" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / IKP / Accountable Wallet</div>
+      <div class="chips"><span class="chip chip-pub">Published</span></div>
+      <h1>Accountable Wallet</h1>
+      <p class="lead">Designing mechanisms that allow wallet holders to prove they are not involved in illicit activities while preserving privacy — addressing compliance gaps that regulation alone cannot solve.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#accountable-wallet-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="accountable-wallet-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>IKP — IAM, Key Management and Privacy</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#accountable-wallet-documents">Accountable Wallet (published package)</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Accountable wallet standards and implementation guidance · Privacy-preserving proof / verification patterns · Meeting reports and published draft package</dd></div>
+          </dl>
+        </div>
+        <section id="accountable-wallet-overview"><h2>Overview</h2><p>Designing mechanisms that allow wallet holders to prove they are not involved in illicit activities while preserving privacy — addressing compliance gaps that regulation alone cannot solve.</p></section>
+        <section id="accountable-wallet-deliverables"><h2>Expected deliverables</h2><ul><li>Accountable wallet standards and implementation guidance</li><li>Privacy-preserving proof / verification patterns</li><li>Meeting reports and published draft package</li></ul></section>
+        <section id="accountable-wallet-status"><h2>Current status</h2><p>Published deliverable available. Continues to inform wallet assurance discussions (including adjacency to ST/PP and GDC certification themes).</p></section>
+        <section id="accountable-wallet-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Published</span></td><td><a href="https://drive.google.com/file/d/1ehgENeEX2irxosubynJNQXQqElM3EFOu/view" class="ext" target="_blank" rel="noopener">Accountable Wallet (published package)</a></td><td class="when">—</td></tr><tr><td><span class="type">Reference</span></td><td><a href="https://drive.google.com/drive/folders/1wOoJNpeTvJ1VEPoJXgDUZ8ebysn0efWK?usp=drive_link" class="ext" target="_blank" rel="noopener">Working folder</a></td><td class="when">—</td></tr></tbody></table></section>
+        <section id="accountable-wallet-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">2025</div><div class="what">Draft &amp; Block sessions</div></li><li class="done"><div class="when-label">2025–26</div><div class="what">Published package</div></li><li class="now"><div class="when-label">Oct 2026</div><div class="what">Block 15 follow-on <span class="badge-now">Current</span></div></li></ul></section>
+        <section id="accountable-wallet-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">IKP Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">IKP on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="accountable-wallet-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discourse (IKP)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="accountable-wallet-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="pqc">PQC Migration <span class="meta">IKP</span></a></li><li><a href="#" data-switch="privacy-auth">Privacy Enhanced Auth <span class="meta">IKP</span></a></li><li><a href="#" data-switch="stpp">ST / PP <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#accountable-wallet-glance">At a glance</a>
+            <a href="#accountable-wallet-overview">Overview</a>
+            <a href="#accountable-wallet-deliverables">Deliverables</a>
+            <a href="#accountable-wallet-status">Status</a>
+            <a href="#accountable-wallet-documents">Documents</a>
+            <a href="#accountable-wallet-roadmap">Roadmap</a>
+            <a href="#accountable-wallet-upcoming">Upcoming</a>
+            <a href="#accountable-wallet-participate">Participate</a>
+            <a href="#accountable-wallet-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="forensics" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / IKP / Forensics &amp; Analysis</div>
+      <div class="chips"><span class="chip chip-progress">Public Comment</span></div>
+      <h1>Forensics and Analysis</h1>
+      <p class="lead">Distinguishing blockchain forensics from analytics — clarifying methods, client education, evidence practices, and the impact of privacy tech and off-chain activity.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#forensics-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="forensics-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>IKP — IAM, Key Management and Privacy</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#forensics-documents">Distinguishing blockchain forensics from analytics</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Common framing of forensics vs analytics · Guidance for VASPs / investigators / educators · Public-comment document iterations</dd></div>
+          </dl>
+        </div>
+        <section id="forensics-overview"><h2>Overview</h2><p>Distinguishing blockchain forensics from analytics — clarifying methods, client education, evidence practices, and the impact of privacy tech and off-chain activity.</p></section>
+        <section id="forensics-deliverables"><h2>Expected deliverables</h2><ul><li>Common framing of forensics vs analytics</li><li>Guidance for VASPs / investigators / educators</li><li>Public-comment document iterations</li></ul></section>
+        <section id="forensics-status"><h2>Current status</h2><p>Public Comment phase. Document under review; Block and WG discussions continue to refine lexicon and practice notes.</p></section>
+        <section id="forensics-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Public comment</span></td><td><a href="https://docs.google.com/document/d/1Of9E5govjRFNRjdyvHQIeV42LHegUGC1dRoFYreQk8E/edit" class="ext" target="_blank" rel="noopener">Distinguishing blockchain forensics from analytics</a></td><td class="when">—</td></tr><tr><td><span class="type">Reference</span></td><td><a href="https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb" class="ext" target="_blank" rel="noopener">Working folder</a></td><td class="when">—</td></tr></tbody></table></section>
+        <section id="forensics-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">2025</div><div class="what">Research &amp; interviews</div></li><li class="now"><div class="when-label">2026</div><div class="what">Public comment <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15 integration</div></li></ul></section>
+        <section id="forensics-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">IKP Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">IKP on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="forensics-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discourse (IKP)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="forensics-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="illicit">Illicit Activities <span class="meta">FASE</span></a></li><li><a href="#" data-switch="accountable-wallet">Accountable Wallet <span class="meta">IKP</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#forensics-glance">At a glance</a>
+            <a href="#forensics-overview">Overview</a>
+            <a href="#forensics-deliverables">Deliverables</a>
+            <a href="#forensics-status">Status</a>
+            <a href="#forensics-documents">Documents</a>
+            <a href="#forensics-roadmap">Roadmap</a>
+            <a href="#forensics-upcoming">Upcoming</a>
+            <a href="#forensics-participate">Participate</a>
+            <a href="#forensics-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="privacy-auth" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / IKP / Privacy Enhanced Auth</div>
+      <div class="chips"><span class="chip chip-progress">In Progress</span></div>
+      <h1>Privacy Enhanced Authentication</h1>
+      <p class="lead">Privacy-preserving authentication mechanisms for blockchain and digital-identity contexts, connecting selective disclosure, credentials, and key management practice.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#privacy-auth-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="privacy-auth-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>IKP — IAM, Key Management and Privacy</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#privacy-auth-documents">IKP working documents</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Authentication patterns with privacy guarantees · Alignment notes with IKP identity / key management work · Meeting reports and working drafts</dd></div>
+          </dl>
+        </div>
+        <section id="privacy-auth-overview"><h2>Overview</h2><p>Privacy-preserving authentication mechanisms for blockchain and digital-identity contexts, connecting selective disclosure, credentials, and key management practice.</p></section>
+        <section id="privacy-auth-deliverables"><h2>Expected deliverables</h2><ul><li>Authentication patterns with privacy guarantees</li><li>Alignment notes with IKP identity / key management work</li><li>Meeting reports and working drafts</li></ul></section>
+        <section id="privacy-auth-status"><h2>Current status</h2><p>In progress under IKP. Building on prior BGIN work on selective disclosure and identity layers.</p></section>
+        <section id="privacy-auth-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Reference</span></td><td><a href="https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing" class="ext" target="_blank" rel="noopener">IKP working documents</a></td><td class="when">—</td></tr></tbody></table></section>
+        <section id="privacy-auth-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="now"><div class="when-label">Ongoing</div><div class="what">Draft patterns <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15 session inputs</div></li></ul></section>
+        <section id="privacy-auth-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">IKP Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">IKP on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="privacy-auth-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/ikp-wg/8" target="_blank" rel="noopener">Discourse (IKP)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="privacy-auth-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="accountable-wallet">Accountable Wallet <span class="meta">IKP</span></a></li><li><a href="#" data-switch="pqc">PQC Migration <span class="meta">IKP</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#privacy-auth-glance">At a glance</a>
+            <a href="#privacy-auth-overview">Overview</a>
+            <a href="#privacy-auth-deliverables">Deliverables</a>
+            <a href="#privacy-auth-status">Status</a>
+            <a href="#privacy-auth-documents">Documents</a>
+            <a href="#privacy-auth-roadmap">Roadmap</a>
+            <a href="#privacy-auth-upcoming">Upcoming</a>
+            <a href="#privacy-auth-participate">Participate</a>
+            <a href="#privacy-auth-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="cs" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / Cyber Security / Info Sharing Framework</div>
+      <div class="chips"><span class="chip chip-pub">Published / ISO path</span></div>
+      <h1>Cybersecurity Information Sharing Framework</h1>
+      <p class="lead">A multi-stakeholder framework for sharing cyber threat and vulnerability information across the crypto ecosystem — advancing toward international standardization, with operational links to ISAC communities.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#cs-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="cs-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>Cyber Security</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#cs-documents">BGIN Information Sharing Framework (Aug 2025)</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Information Sharing Framework (standards-oriented document) · Alignment notes with Crypto-ISAC / regional ISAC practices · Meeting reports and working drafts from Block and Layer2 sessions</dd></div>
+          </dl>
+        </div>
+        <section id="cs-overview"><h2>Overview</h2><p>A multi-stakeholder framework for sharing cyber threat and vulnerability information across the crypto ecosystem — advancing toward international standardization, with operational links to ISAC communities.</p></section>
+        <section id="cs-deliverables"><h2>Expected deliverables</h2><ul><li>Information Sharing Framework (standards-oriented document)</li><li>Alignment notes with Crypto-ISAC / regional ISAC practices</li><li>Meeting reports and working drafts from Block and Layer2 sessions</li></ul></section>
+        <section id="cs-status"><h2>Current status</h2><p>Framework published (Aug 2025); ISO standardization path in progress. Block 14 sessions captured operational feedback; Agent workstream continues the implementation layer.</p></section>
+        <section id="cs-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Framework</span></td><td><a href="#">BGIN Information Sharing Framework (Aug 2025)</a></td><td class="when">2025/08</td></tr><tr><td><span class="type type-road">Roadmap</span></td><td><a href="#">BGIN Cybersecurity Roadmap</a></td><td class="when">—</td></tr><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 14 MR: Cyber Security Information Sharing (1)/(2)</a></td><td class="when">2026/03</td></tr><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Layer2 Meetup MRs (Tokyo / Sydney / SF)</a></td><td class="when">2024–25</td></tr></tbody></table></section>
+        <section id="cs-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Aug 2025</div><div class="what">Framework PDF published</div></li><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 CS sessions</div></li><li class="now"><div class="when-label">2026</div><div class="what">ISO path + ISAC feedback <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="cs-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">Cyber Security Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Cyber Security on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="cs-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discourse (Cyber Security)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="cs-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="agent">Security AI Agent <span class="meta">Implementation</span></a></li><li><a href="#" data-switch="stpp">ST / PP <span class="meta">Cyber Security</span></a></li><li><a href="#" data-switch="supply-chain">Security Supply Chain <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#cs-glance">At a glance</a>
+            <a href="#cs-overview">Overview</a>
+            <a href="#cs-deliverables">Deliverables</a>
+            <a href="#cs-status">Status</a>
+            <a href="#cs-documents">Documents</a>
+            <a href="#cs-roadmap">Roadmap</a>
+            <a href="#cs-upcoming">Upcoming</a>
+            <a href="#cs-participate">Participate</a>
+            <a href="#cs-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="agent" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / Cyber Security / Security AI Agent</div>
+      <div class="chips"><span class="chip chip-dev">In Development</span></div>
+      <h1>Security AI Agent</h1>
+      <p class="lead">An agentic approach to cybersecurity information sharing for crypto — building tooling on top of the Information Sharing Framework, with partners across research and ISAC communities.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary ext" href="https://globaldigitalcollaboration.org/gdc26?day=sept-2-3" target="_blank" rel="noopener">GDC26 session</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="agent-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>Cyber Security</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#agent-documents">See Documents</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd><strong>GDC26</strong> (2–3 Sep) → Block 15 (Oct)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Reference architecture / prototype for agent-assisted sharing · Integration notes against the Information Sharing Framework · Demo and working-group materials at Block meetings</dd></div>
+          </dl>
+        </div>
+        <section id="agent-overview"><h2>Overview</h2><p>An agentic approach to cybersecurity information sharing for crypto — building tooling on top of the Information Sharing Framework, with partners across research and ISAC communities.</p></section>
+        <section id="agent-deliverables"><h2>Expected deliverables</h2><ul><li>Reference architecture / prototype for agent-assisted sharing</li><li>Integration notes against the Information Sharing Framework</li><li>Demo and working-group materials at Block meetings</li></ul></section>
+        <section id="agent-status"><h2>Current status</h2><p>In Development. Discussed in Block 14 Cyber Security sessions alongside STIX/TAXII adaptations and trust frameworks for sharing partners.</p></section>
+        <section id="agent-documents" style="max-width:none"><h2>Documents</h2><p class="note" style="margin:0">No standalone public package listed yet — see Discourse and related project hubs.</p></section>
+        <section id="agent-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 CS sessions</div></li><li class="now"><div class="when-label">2–3 Sep 2026</div><div class="what">GDC26 Geneva <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15 + NIST / MITRE dialogue</div></li><li><div class="when-label">2026–27</div><div class="what">Pilots / PoC iteration</div></li></ul></section>
+        <section id="agent-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting priority">
+              <div class="meeting-head">
+                <span class="meeting-type gdc">GDC breakout</span>
+                <span class="meeting-title">GDC26 · Geneva</span>
+                <span class="meeting-when">2–3 Sep 2026 · times TBA</span>
+              </div>
+              <p class="meeting-session-title">Vulnerability Handling in the Agentic AI Era: Sharing, Triage &amp; Multistakeholder Cooperation</p>
+              <p class="meeting-plan">Shape AI-era triage practices amid alert floods; define v0 high-value data elements.
+Connect Security Agentic AI PoC with the Information Sharing Framework and ISAC-style models.
+Produce inputs for multistakeholder pilots and Block #15 dialogue with NIST and MITRE.</p>
+              <a class="meeting-link ext" href="https://globaldigitalcollaboration.org/gdc26?day=sept-2-3" target="_blank" rel="noopener">GDC26 programme (2&amp;3 Sep) →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">Cyber Security Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Cyber Security on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="agent-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discourse (Cyber Security)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15 and GDC26</li>
+        </ul></section>
+        <section id="agent-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="cs">Info Sharing Framework <span class="meta">Standards</span></a></li><li><a href="#" data-switch="agent-standards">Agent Standards <span class="meta">Agentic AI</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#agent-glance">At a glance</a>
+            <a href="#agent-overview">Overview</a>
+            <a href="#agent-deliverables">Deliverables</a>
+            <a href="#agent-status">Status</a>
+            <a href="#agent-documents">Documents</a>
+            <a href="#agent-roadmap">Roadmap</a>
+            <a href="#agent-upcoming">Upcoming</a>
+            <a href="#agent-participate">Participate</a>
+            <a href="#agent-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="stpp" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / Cyber Security / ST / PP</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Security Target &amp; Protection Profile (ST/PP)</h1>
+      <p class="lead">Developing Security Target (ST) and Protection Profile (PP) standards for blockchain systems, adapting Common Criteria–aligned evaluation methods to wallets, smart contracts, and cryptographic key lifecycle management.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary ext" href="https://globaldigitalcollaboration.org/gdc26?day=sept-2-3" target="_blank" rel="noopener">GDC26 session</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="stpp-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>Cyber Security</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#stpp-documents">Block 14 MR: Security Target and Protection Profile</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd><strong>GDC26</strong> (2–3 Sep) → Block 15 (Oct)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Draft Security Targets for priority blockchain components · Protection Profile development methodology notes · Smart contract security profile considerations</dd></div>
+          </dl>
+        </div>
+        <section id="stpp-overview"><h2>Overview</h2><p>Developing Security Target (ST) and Protection Profile (PP) standards for blockchain systems, adapting Common Criteria–aligned evaluation methods to wallets, smart contracts, and cryptographic key lifecycle management.</p></section>
+        <section id="stpp-deliverables"><h2>Expected deliverables</h2><ul><li>Draft Security Targets for priority blockchain components</li><li>Protection Profile development methodology notes</li><li>Smart contract security profile considerations</li><li>Certification pathway options for multi-stakeholder review</li></ul></section>
+        <section id="stpp-status"><h2>Current status</h2><p>Draft development through Block 12–14. Common Criteria relevance, component-level targets, and certification pathways under active discussion ahead of Block 15.</p></section>
+        <section id="stpp-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 14 MR: Security Target and Protection Profile</a></td><td class="when">2026/03</td></tr><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 13: Security Target and Protection Profile</a></td><td class="when">2025/10</td></tr><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 12 MR: Development of ST/PP</a></td><td class="when">2025/03</td></tr></tbody></table></section>
+        <section id="stpp-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 deep dive</div></li><li class="now"><div class="when-label">2–3 Sep 2026</div><div class="what">GDC26 Geneva <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15 + lab outreach</div></li><li><div class="when-label">2026–27</div><div class="what">ST/PP draft package</div></li></ul></section>
+        <section id="stpp-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting priority">
+              <div class="meeting-head">
+                <span class="meeting-type gdc">GDC breakout</span>
+                <span class="meeting-title">GDC26 · Geneva</span>
+                <span class="meeting-when">2–3 Sep 2026 · times TBA</span>
+              </div>
+              <p class="meeting-session-title">Wallet Security Assurance: ST/PP and Convergence</p>
+              <p class="meeting-plan">Map BGIN ST/PP patterns to FIDO, OpenID, and GlobalPlatform assurance schemes.
+List top conformity-assessment gaps for regulators, labs, and implementers.
+Plan evaluation-lab outreach before BGIN Block #15.</p>
+              <a class="meeting-link ext" href="https://globaldigitalcollaboration.org/gdc26?day=sept-2-3" target="_blank" rel="noopener">GDC26 programme (2&amp;3 Sep) →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">Cyber Security Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Cyber Security on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="stpp-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discourse (Cyber Security)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15 and GDC26</li>
+        </ul></section>
+        <section id="stpp-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="cs">Info Sharing Framework <span class="meta">Cyber Security</span></a></li><li><a href="#" data-switch="accountable-wallet">Accountable Wallet <span class="meta">IKP</span></a></li><li><a href="#" data-switch="offline-key">Offline Key Management <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#stpp-glance">At a glance</a>
+            <a href="#stpp-overview">Overview</a>
+            <a href="#stpp-deliverables">Deliverables</a>
+            <a href="#stpp-status">Status</a>
+            <a href="#stpp-documents">Documents</a>
+            <a href="#stpp-roadmap">Roadmap</a>
+            <a href="#stpp-upcoming">Upcoming</a>
+            <a href="#stpp-participate">Participate</a>
+            <a href="#stpp-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="offline-key" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / Cyber Security / Offline Key Management</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Offline Key Management</h1>
+      <p class="lead">Standards and good practices for offline key management systems in blockchain contexts — covering custody patterns, operational controls, and assurance expectations.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#offline-key-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="offline-key-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>Cyber Security</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#offline-key-documents">Offline Key Management Draft Report (Block 14)</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Offline key management guidance · Operational control checklists · Meeting reports from Block sessions</dd></div>
+          </dl>
+        </div>
+        <section id="offline-key-overview"><h2>Overview</h2><p>Standards and good practices for offline key management systems in blockchain contexts — covering custody patterns, operational controls, and assurance expectations.</p></section>
+        <section id="offline-key-deliverables"><h2>Expected deliverables</h2><ul><li>Offline key management guidance</li><li>Operational control checklists</li><li>Meeting reports from Block sessions</li></ul></section>
+        <section id="offline-key-status"><h2>Current status</h2><p>Draft. Discussed in Cyber Security WG sessions; review threads active on Discourse after Block 14.</p></section>
+        <section id="offline-key-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type type-draft">Draft report</span></td><td><a href="https://bgin.discourse.group/t/request-for-review-offline-key-management-draft-report-block-14/939" class="ext" target="_blank" rel="noopener">Offline Key Management Draft Report (Block 14)</a></td><td class="when">2026/03</td></tr></tbody></table></section>
+        <section id="offline-key-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 draft</div></li><li class="now"><div class="when-label">2026</div><div class="what">WG review <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="offline-key-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">Cyber Security Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Cyber Security on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="offline-key-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discourse (Cyber Security)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="offline-key-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="stpp">ST / PP <span class="meta">Cyber Security</span></a></li><li><a href="#" data-switch="pqc">PQC Migration <span class="meta">IKP</span></a></li><li><a href="#" data-switch="supply-chain">Security Supply Chain <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#offline-key-glance">At a glance</a>
+            <a href="#offline-key-overview">Overview</a>
+            <a href="#offline-key-deliverables">Deliverables</a>
+            <a href="#offline-key-status">Status</a>
+            <a href="#offline-key-documents">Documents</a>
+            <a href="#offline-key-roadmap">Roadmap</a>
+            <a href="#offline-key-upcoming">Upcoming</a>
+            <a href="#offline-key-participate">Participate</a>
+            <a href="#offline-key-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="supply-chain" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / Cyber Security / Security Supply Chain</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Governance of the Security Supply Chain</h1>
+      <p class="lead">Governance frameworks for security across the blockchain software supply chain — from development tools to deployment infrastructure, including vendor guidelines within the BGIN framework.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#supply-chain-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="supply-chain-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>Cyber Security</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#supply-chain-documents">Governance of security supply chain Draft Report (Block 14)</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Supply-chain governance notes · Vendor guideline patterns · Meeting reports and draft reports</dd></div>
+          </dl>
+        </div>
+        <section id="supply-chain-overview"><h2>Overview</h2><p>Governance frameworks for security across the blockchain software supply chain — from development tools to deployment infrastructure, including vendor guidelines within the BGIN framework.</p></section>
+        <section id="supply-chain-deliverables"><h2>Expected deliverables</h2><ul><li>Supply-chain governance notes</li><li>Vendor guideline patterns</li><li>Meeting reports and draft reports</li></ul></section>
+        <section id="supply-chain-status"><h2>Current status</h2><p>Draft. Block 14 session materials under review; coordination with broader CS workstreams continues.</p></section>
+        <section id="supply-chain-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type type-draft">Draft report</span></td><td><a href="https://bgin.discourse.group/t/request-for-review-governance-of-security-supply-chain-draft-report-block-14/938" class="ext" target="_blank" rel="noopener">Governance of security supply chain Draft Report (Block 14)</a></td><td class="when">2026/03</td></tr></tbody></table></section>
+        <section id="supply-chain-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 draft</div></li><li class="now"><div class="when-label">2026</div><div class="what">WG review <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="supply-chain-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">Cyber Security Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Cyber Security on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="supply-chain-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/cyber-security/32" target="_blank" rel="noopener">Discourse (Cyber Security)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="supply-chain-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="cs">Info Sharing Framework <span class="meta">Cyber Security</span></a></li><li><a href="#" data-switch="offline-key">Offline Key Management <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#supply-chain-glance">At a glance</a>
+            <a href="#supply-chain-overview">Overview</a>
+            <a href="#supply-chain-deliverables">Deliverables</a>
+            <a href="#supply-chain-status">Status</a>
+            <a href="#supply-chain-documents">Documents</a>
+            <a href="#supply-chain-roadmap">Roadmap</a>
+            <a href="#supply-chain-upcoming">Upcoming</a>
+            <a href="#supply-chain-participate">Participate</a>
+            <a href="#supply-chain-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="stablecoin" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / FASE / Stablecoin Guide</div>
+      <div class="chips"><span class="chip chip-pub">Published</span></div>
+      <h1>Practical Stablecoin Implementation Guide</h1>
+      <p class="lead">Comparative analysis of stablecoin regulatory regimes and practical implementation guidance for policymakers and industry.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#stablecoin-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="stablecoin-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>FASE — Financial Applications &amp; Social Economics</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#stablecoin-documents">Practical Stablecoin Implementation Guide</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Practical Stablecoin Implementation Guide · Comparative regulatory analysis · Meeting reports</dd></div>
+          </dl>
+        </div>
+        <section id="stablecoin-overview"><h2>Overview</h2><p>Comparative analysis of stablecoin regulatory regimes and practical implementation guidance for policymakers and industry.</p></section>
+        <section id="stablecoin-deliverables"><h2>Expected deliverables</h2><ul><li>Practical Stablecoin Implementation Guide</li><li>Comparative regulatory analysis</li><li>Meeting reports</li></ul></section>
+        <section id="stablecoin-status"><h2>Current status</h2><p>Published guide available. Continues to inform FASE discussions on harmonization and tokenized deposits.</p></section>
+        <section id="stablecoin-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Published</span></td><td><a href="https://docs.google.com/document/d/14zFyWp90aObG-FGAHdTcd1npwH3iY3ew/edit" class="ext" target="_blank" rel="noopener">Practical Stablecoin Implementation Guide</a></td><td class="when">—</td></tr><tr><td><span class="type">Reference</span></td><td><a href="https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z" class="ext" target="_blank" rel="noopener">Stablecoin research folder</a></td><td class="when">—</td></tr></tbody></table></section>
+        <section id="stablecoin-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">2025–26</div><div class="what">Guide published</div></li><li class="now"><div class="when-label">Oct 2026</div><div class="what">Block 15 follow-on <span class="badge-now">Current</span></div></li></ul></section>
+        <section id="stablecoin-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">FASE Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">FASE on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="stablecoin-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discourse (FASE)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="stablecoin-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="harmonization">Harmonization <span class="meta">FASE</span></a></li><li><a href="#" data-switch="illicit">Illicit Activities <span class="meta">FASE</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#stablecoin-glance">At a glance</a>
+            <a href="#stablecoin-overview">Overview</a>
+            <a href="#stablecoin-deliverables">Deliverables</a>
+            <a href="#stablecoin-status">Status</a>
+            <a href="#stablecoin-documents">Documents</a>
+            <a href="#stablecoin-roadmap">Roadmap</a>
+            <a href="#stablecoin-upcoming">Upcoming</a>
+            <a href="#stablecoin-participate">Participate</a>
+            <a href="#stablecoin-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="harmonization" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / FASE / Harmonization</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Harmonization among Crypto-asset, Stablecoin and Tokenized Deposit</h1>
+      <p class="lead">Regulatory and industry-structure harmonization across crypto-assets, stablecoins, and tokenized deposits — clarifying models for sustainable ecosystems.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#harmonization-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="harmonization-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>FASE — Financial Applications &amp; Social Economics</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#harmonization-documents">Harmonization Draft Report (Block 14)</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Discussion paper / draft report on industry structure · Harmonization recommendations · Meeting reports</dd></div>
+          </dl>
+        </div>
+        <section id="harmonization-overview"><h2>Overview</h2><p>Regulatory and industry-structure harmonization across crypto-assets, stablecoins, and tokenized deposits — clarifying models for sustainable ecosystems.</p></section>
+        <section id="harmonization-deliverables"><h2>Expected deliverables</h2><ul><li>Discussion paper / draft report on industry structure</li><li>Harmonization recommendations</li><li>Meeting reports</li></ul></section>
+        <section id="harmonization-status"><h2>Current status</h2><p>Draft. Block 14 materials under review; Japanese discussion-paper work feeds international FASE sessions.</p></section>
+        <section id="harmonization-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type type-draft">Draft report</span></td><td><a href="https://bgin.discourse.group/t/request-for-review-harmonization-crypto-asset-stablecoin-tokenized-deposit-draft-report-block-14/936" class="ext" target="_blank" rel="noopener">Harmonization Draft Report (Block 14)</a></td><td class="when">2026/03</td></tr></tbody></table></section>
+        <section id="harmonization-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 draft</div></li><li class="now"><div class="when-label">2026</div><div class="what">WG review <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="harmonization-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">FASE Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">FASE on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="harmonization-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discourse (FASE)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="harmonization-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="stablecoin">Stablecoin Guide <span class="meta">FASE</span></a></li><li><a href="#" data-switch="metrics">Decentralization Metrics <span class="meta">FASE</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#harmonization-glance">At a glance</a>
+            <a href="#harmonization-overview">Overview</a>
+            <a href="#harmonization-deliverables">Deliverables</a>
+            <a href="#harmonization-status">Status</a>
+            <a href="#harmonization-documents">Documents</a>
+            <a href="#harmonization-roadmap">Roadmap</a>
+            <a href="#harmonization-upcoming">Upcoming</a>
+            <a href="#harmonization-participate">Participate</a>
+            <a href="#harmonization-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="illicit" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / FASE / Illicit Activities</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Illicit Activities (Common Lexicon)</h1>
+      <p class="lead">Building a common lexicon for harmful on-chain activities to improve shared understanding among industry, investigators, and policymakers.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#illicit-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="illicit-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>FASE — Financial Applications &amp; Social Economics</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#illicit-documents">FASE working documents</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Common lexicon draft · Cross-WG alignment with forensics / analysis · Meeting reports</dd></div>
+          </dl>
+        </div>
+        <section id="illicit-overview"><h2>Overview</h2><p>Building a common lexicon for harmful on-chain activities to improve shared understanding among industry, investigators, and policymakers.</p></section>
+        <section id="illicit-deliverables"><h2>Expected deliverables</h2><ul><li>Common lexicon draft</li><li>Cross-WG alignment with forensics / analysis</li><li>Meeting reports</li></ul></section>
+        <section id="illicit-status"><h2>Current status</h2><p>Draft. Coordinated with IKP forensics/analysis discussions.</p></section>
+        <section id="illicit-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Reference</span></td><td><a href="https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link" class="ext" target="_blank" rel="noopener">FASE working documents</a></td><td class="when">—</td></tr></tbody></table></section>
+        <section id="illicit-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="now"><div class="when-label">2026</div><div class="what">Lexicon drafting <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="illicit-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">FASE Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">FASE on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="illicit-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discourse (FASE)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="illicit-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="forensics">Forensics &amp; Analysis <span class="meta">IKP</span></a></li><li><a href="#" data-switch="stablecoin">Stablecoin Guide <span class="meta">FASE</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#illicit-glance">At a glance</a>
+            <a href="#illicit-overview">Overview</a>
+            <a href="#illicit-deliverables">Deliverables</a>
+            <a href="#illicit-status">Status</a>
+            <a href="#illicit-documents">Documents</a>
+            <a href="#illicit-roadmap">Roadmap</a>
+            <a href="#illicit-upcoming">Upcoming</a>
+            <a href="#illicit-participate">Participate</a>
+            <a href="#illicit-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="metrics" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / FASE / Decentralization Metrics</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Technical Metrics for Decentralization</h1>
+      <p class="lead">Establishing technical metrics to evaluate the decentralization of blockchain networks — measurable criteria for researchers, operators, and policymakers.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#metrics-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="metrics-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>FASE — Financial Applications &amp; Social Economics</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#metrics-documents">Metrics Evaluate Decentralization Draft Report (Block 14)</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Metrics framework draft · Evaluation methodology notes · Meeting reports</dd></div>
+          </dl>
+        </div>
+        <section id="metrics-overview"><h2>Overview</h2><p>Establishing technical metrics to evaluate the decentralization of blockchain networks — measurable criteria for researchers, operators, and policymakers.</p></section>
+        <section id="metrics-deliverables"><h2>Expected deliverables</h2><ul><li>Metrics framework draft</li><li>Evaluation methodology notes</li><li>Meeting reports</li></ul></section>
+        <section id="metrics-status"><h2>Current status</h2><p>Draft. Block 14 draft report under review on Discourse.</p></section>
+        <section id="metrics-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type type-draft">Draft report</span></td><td><a href="https://bgin.discourse.group/t/request-for-review-metrics-evaluate-decentralization-draft-report-block-14/937" class="ext" target="_blank" rel="noopener">Metrics Evaluate Decentralization Draft Report (Block 14)</a></td><td class="when">2026/03</td></tr></tbody></table></section>
+        <section id="metrics-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 draft</div></li><li class="now"><div class="when-label">2026</div><div class="what">WG review <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="metrics-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">FASE Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">FASE on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="metrics-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discourse (FASE)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="metrics-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="harmonization">Harmonization <span class="meta">FASE</span></a></li><li><a href="#" data-switch="agent-standards">Agent Standards <span class="meta">Agentic AI</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#metrics-glance">At a glance</a>
+            <a href="#metrics-overview">Overview</a>
+            <a href="#metrics-deliverables">Deliverables</a>
+            <a href="#metrics-status">Status</a>
+            <a href="#metrics-documents">Documents</a>
+            <a href="#metrics-roadmap">Roadmap</a>
+            <a href="#metrics-upcoming">Upcoming</a>
+            <a href="#metrics-participate">Participate</a>
+            <a href="#metrics-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="agent-standards" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / Agentic AI / Agent Standards</div>
+      <div class="chips"><span class="chip chip-progress">In Progress · Draft</span></div>
+      <h1>Agent Standards and Frameworks</h1>
+      <p class="lead">Standards and frameworks for blockchain agents — covering agentic competition, reputation, identity/delegation patterns, and governance of autonomous actors.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/21" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#agent-standards-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="agent-standards-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>Agentic AI</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#agent-standards-documents">Agentic AI / Block session materials</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Agent standards / framework notes · Reputation and delegation patterns · Meeting reports and Block session outcomes</dd></div>
+          </dl>
+        </div>
+        <section id="agent-standards-overview"><h2>Overview</h2><p>Standards and frameworks for blockchain agents — covering agentic competition, reputation, identity/delegation patterns, and governance of autonomous actors.</p></section>
+        <section id="agent-standards-deliverables"><h2>Expected deliverables</h2><ul><li>Agent standards / framework notes</li><li>Reputation and delegation patterns</li><li>Meeting reports and Block session outcomes</li></ul></section>
+        <section id="agent-standards-status"><h2>Current status</h2><p>Draft under Agentic AI WG. Connects to FASE (AI + Blockchain) and CS Security AI Agent implementation work.</p></section>
+        <section id="agent-standards-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Reference</span></td><td><a href="https://bgin.discourse.group/c/working-group-s/21" class="ext" target="_blank" rel="noopener">Agentic AI / Block session materials</a></td><td class="when">—</td></tr></tbody></table></section>
+        <section id="agent-standards-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 AI + Blockchain sessions</div></li><li class="now"><div class="when-label">2026</div><div class="what">Framework drafting <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="agent-standards-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">Agentic AI Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/21" target="_blank" rel="noopener">Agentic AI on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="agent-standards-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/21" target="_blank" rel="noopener">Discourse (Agentic AI)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="agent-standards-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="agent">Security AI Agent <span class="meta">Cyber Security</span></a></li><li><a href="#" data-switch="metrics">Decentralization Metrics <span class="meta">FASE</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#agent-standards-glance">At a glance</a>
+            <a href="#agent-standards-overview">Overview</a>
+            <a href="#agent-standards-deliverables">Deliverables</a>
+            <a href="#agent-standards-status">Status</a>
+            <a href="#agent-standards-documents">Documents</a>
+            <a href="#agent-standards-roadmap">Roadmap</a>
+            <a href="#agent-standards-upcoming">Upcoming</a>
+            <a href="#agent-standards-participate">Participate</a>
+            <a href="#agent-standards-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <div id="ai-blockchain" class="page" role="tabpanel">
+    <div class="wrap hero">
+      <a href="#" class="back-link" data-back>← All projects</a>
+      <div class="crumb">Projects / FASE / AI + Blockchain</div>
+      <div class="chips"><span class="chip chip-progress">In Progress</span></div>
+      <h1>AI and Blockchain</h1>
+      <p class="lead">Exploring synergies and risks at the intersection of AI and blockchain — governance, DeFi applications, and regulatory considerations for AI-driven financial activity.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discuss on Discourse</a>
+        <a class="btn btn-secondary" href="#ai-blockchain-documents">Latest documents</a>
+      </div>
+    </div>
+    <div class="wrap layout">
+      <main>
+        <div class="glance" id="ai-blockchain-glance">
+          <h2 class="glance-title">At a glance</h2>
+          <dl>
+            <div class="row"><dt>Working Group</dt><dd>FASE — Financial Applications &amp; Social Economics</dd></div>
+            <div class="row"><dt>Latest document</dt><dd><a href="#ai-blockchain-documents">Working folder</a></dd></div>
+            <div class="row"><dt>Next milestone</dt><dd>Block 15 (15–16 Oct 2026, DC)</dd></div>
+            <div class="row"><dt>Primary deliverables</dt><dd>Discussion notes and meeting reports · Use-case inventory · Inputs to Agentic AI standards work</dd></div>
+          </dl>
+        </div>
+        <section id="ai-blockchain-overview"><h2>Overview</h2><p>Exploring synergies and risks at the intersection of AI and blockchain — governance, DeFi applications, and regulatory considerations for AI-driven financial activity.</p></section>
+        <section id="ai-blockchain-deliverables"><h2>Expected deliverables</h2><ul><li>Discussion notes and meeting reports</li><li>Use-case inventory</li><li>Inputs to Agentic AI standards work</li></ul></section>
+        <section id="ai-blockchain-status"><h2>Current status</h2><p>Active discussion track across FASE and Agentic AI joint sessions (including Block 14).</p></section>
+        <section id="ai-blockchain-documents" style="max-width:none"><h2>Documents</h2><table class="docs"><thead><tr><th>Type</th><th>Title</th><th>When</th></tr></thead><tbody><tr><td><span class="type">Reference</span></td><td><a href="https://drive.google.com/drive/folders/1-ngWvRGQ_5N36Mr0Pgh119tGIGmCExSu?usp=drive_link" class="ext" target="_blank" rel="noopener">Working folder</a></td><td class="when">—</td></tr><tr><td><span class="type type-mr">Meeting report</span></td><td><a href="#">Block 14 MR: AI and Blockchain (Agentic)</a></td><td class="when">2026/03</td></tr></tbody></table></section>
+        <section id="ai-blockchain-roadmap"><h2>Roadmap</h2><ul class="roadmap-list"><li class="done"><div class="when-label">Mar 2026</div><div class="what">Block 14 joint sessions</div></li><li class="now"><div class="when-label">2026</div><div class="what">Continued WG work <span class="badge-now">Current</span></div></li><li><div class="when-label">Oct 2026</div><div class="what">Block 15</div></li></ul></section>
+        <section id="ai-blockchain-upcoming" style="max-width:none"><h2>Upcoming meetings</h2><div class="meetings">
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type">Block meeting</span>
+                <span class="meeting-title">BGIN Block 15</span>
+                <span class="meeting-when">15–16 Oct 2026 · Washington, D.C.</span>
+              </div>
+              <p class="meeting-plan">Advance this project’s open questions using the latest drafts and prior Block outcomes.
+Collect stakeholder feedback and assign owners for next deliverables.
+Confirm materials and contributors for the Block 15 program.</p>
+              <a class="meeting-link" href="/events/20261015-block15">Event page →</a>
+            </article>
+
+            <article class="meeting">
+              <div class="meeting-head">
+                <span class="meeting-type wg">WG call</span>
+                <span class="meeting-title">FASE Working Group</span>
+                <span class="meeting-when">Announced on Discourse</span>
+              </div>
+              <p class="meeting-plan">Review open comments on the latest draft or meeting report.
+Prep agenda items and contributors for upcoming Block / GDC milestones.
+Coordinate cross-WG handoffs where needed.</p>
+              <a class="meeting-link ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">FASE on Discourse →</a>
+            </article>
+
+            <article class="meeting empty">
+              <div class="meeting-head">
+                <span class="meeting-type l2">Layer2 meetup</span>
+                <span class="meeting-title">Next Layer2 Meetup</span>
+                <span class="meeting-when">TBD</span>
+              </div>
+              <p class="meeting-plan">Add 2–4 lines here when a Layer2 meetup will cover this project.</p>
+            </article></div></section>
+        <section id="ai-blockchain-participate"><h2>How to participate</h2><ul>
+          <li>Join discussions on <a class="ext" href="https://bgin.discourse.group/c/working-group-s/fase/9" target="_blank" rel="noopener">Discourse (FASE)</a></li>
+          <li>Review the latest documents and comment on open issues</li>
+          <li>Contribute at Block 15</li>
+        </ul></section>
+        <section id="ai-blockchain-related"><h2>Related projects</h2><ul class="related-list"><li><a href="#" data-switch="agent-standards">Agent Standards <span class="meta">Agentic AI</span></a></li><li><a href="#" data-switch="agent">Security AI Agent <span class="meta">Cyber Security</span></a></li></ul></section>
+        
+      </main>
+      <aside class="toc" aria-label="On this page">
+        <details open>
+          <summary>On this page</summary>
+          <nav>
+            <a href="#ai-blockchain-glance">At a glance</a>
+            <a href="#ai-blockchain-overview">Overview</a>
+            <a href="#ai-blockchain-deliverables">Deliverables</a>
+            <a href="#ai-blockchain-status">Status</a>
+            <a href="#ai-blockchain-documents">Documents</a>
+            <a href="#ai-blockchain-roadmap">Roadmap</a>
+            <a href="#ai-blockchain-upcoming">Upcoming</a>
+            <a href="#ai-blockchain-participate">Participate</a>
+            <a href="#ai-blockchain-related">Related projects</a>
+            
+          </nav>
+        </details>
+      </aside>
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    BGIN project hub sample v4 · 15 projects · design-mocks/project-hub-sample.html
+  </footer>
+
+  <script>
+    const listing = document.getElementById("listing");
+    const pages = document.querySelectorAll(".page");
+    const wgTabs = document.querySelectorAll(".wg-tab");
+    const projectPanels = document.querySelectorAll("[data-wg-panel]");
+    const projectTabs = document.querySelectorAll(".project-tab");
+    const projectToWg = {
+      "pqc": "ikp",
+      "accountable-wallet": "ikp",
+      "forensics": "ikp",
+      "privacy-auth": "ikp",
+      "cs": "cs",
+      "agent": "cs",
+      "stpp": "cs",
+      "offline-key": "cs",
+      "supply-chain": "cs",
+      "stablecoin": "fase",
+      "harmonization": "fase",
+      "illicit": "fase",
+      "metrics": "fase",
+      "agent-standards": "agentic",
+      "ai-blockchain": "fase"
+    };
+
+    const pastPubsByWg = {
+      ikp: { label: "IKP", href: "https://bgin-global.org/publications?author=IKP" },
+      cs: { label: "Cyber Security", href: "https://bgin-global.org/publications?author=CS" },
+      fase: { label: "FASE", href: "https://bgin-global.org/publications?author=FASE" },
+      agentic: { label: "Agentic AI", href: "https://bgin-global.org/publications?theme=agentic-ai" }
+    };
+
+    const wgChipLabel = { ikp: "IKP", cs: "Cyber Security", fase: "FASE", agentic: "Agentic AI" };
+
+    // Apply WG identity attrs for listing cards + hub heroes
+    projectTabs.forEach((tab) => {
+      const wg = projectToWg[tab.dataset.target];
+      if (wg) tab.setAttribute("data-wg", wg);
+    });
+    pages.forEach((page) => {
+      const wg = projectToWg[page.id];
+      if (!wg) return;
+      page.setAttribute("data-wg", wg);
+      const chips = page.querySelector(".chips");
+      if (chips && !chips.querySelector(".wg-chip")) {
+        const chip = document.createElement("span");
+        chip.className = `wg-chip ${wg}`;
+        chip.textContent = wgChipLabel[wg] || wg;
+        chips.prepend(chip);
+      }
+    });
+
+    function selectWg(wgId) {
+      wgTabs.forEach((t) => t.setAttribute("aria-selected", t.dataset.wg === wgId ? "true" : "false"));
+      projectPanels.forEach((panel) => {
+        panel.hidden = panel.getAttribute("data-wg-panel") !== wgId;
+      });
+      const past = pastPubsByWg[wgId];
+      const labelEl = document.getElementById("past-pubs-wg-label");
+      const linkEl = document.getElementById("past-pubs-link");
+      if (past && labelEl && linkEl) {
+        labelEl.textContent = past.label;
+        linkEl.href = past.href;
+      }
+    }
+
+    function showListing() {
+      listing.classList.add("active");
+      pages.forEach((p) => p.classList.remove("active"));
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function showProject(id) {
+      const wgId = projectToWg[id];
+      if (wgId) selectWg(wgId);
+      listing.classList.remove("active");
+      pages.forEach((p) => p.classList.toggle("active", p.id === id));
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      requestAnimationFrame(updateToc);
+    }
+
+    wgTabs.forEach((t) => t.addEventListener("click", () => selectWg(t.dataset.wg)));
+    projectTabs.forEach((t) => t.addEventListener("click", () => showProject(t.dataset.target)));
+    document.querySelectorAll("[data-back], #brand-home").forEach((el) => {
+      el.addEventListener("click", (e) => { e.preventDefault(); showListing(); });
+    });
+    document.querySelectorAll("[data-switch]").forEach((el) => {
+      el.addEventListener("click", (e) => { e.preventDefault(); showProject(el.getAttribute("data-switch")); });
+    });
+
+    function activePage() { return document.querySelector(".page.active"); }
+    function updateToc() {
+      const page = activePage();
+      if (!page) return;
+      const tocLinks = [...page.querySelectorAll(".toc nav a[href^='#']")];
+      const sections = tocLinks.map((a) => document.getElementById(a.getAttribute("href").slice(1))).filter(Boolean);
+      let current = sections[0];
+      const y = window.scrollY + 80;
+      for (const section of sections) { if (section.offsetTop <= y) current = section; }
+      tocLinks.forEach((a) => {
+        a.classList.toggle("current", current && a.getAttribute("href") === `#${current.id}`);
+      });
+    }
+    window.addEventListener("scroll", updateToc, { passive: true });
+  </script>
+</body>
+</html>

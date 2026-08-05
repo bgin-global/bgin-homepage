@@ -55,7 +55,7 @@ export default function Layer2SFMeetupNews() {
           </div>
 
           {/* Article Content */}
-          <div className="max-w-none">
+          <div className="bgin-prose">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">BGIN Layer 2 Meetup Comes to San Francisco</h2>
 
             <p className="mb-6 text-gray-700 text-lg">

@@ -268,7 +268,7 @@ export default function Layer2SanFranciscoEvent() {
         </div>
 
         {/* Stay Updated Section */}
-        <div className="bg-[#688ff5] rounded-lg p-12 text-center text-white">
+        <div className="bg-[#1d4ed8] rounded-lg p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Stay Updated on BGIN Events</h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
             Join our community to receive updates about upcoming events,
@@ -277,7 +277,7 @@ export default function Layer2SanFranciscoEvent() {
           <div className="flex gap-4 justify-center flex-wrap">
             <Link
               href="https://bgin.discourse.group"
-              className="bg-white text-[#688ff5] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
+              className="bg-white text-[#1d4ed8] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
             >

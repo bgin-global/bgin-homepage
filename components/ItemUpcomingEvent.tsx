@@ -21,8 +21,8 @@ export default function ItemUpcomingEvent({
       </h1>
       <h2 className={`${CUSTOM_STYLES.TITLE.LEFT} mb-4`}>@{location}</h2>
       <div className="flex items-center justify-between">
-        <span className={`${CUSTOM_STYLES.TITLE.LEFT} text-[#D3CC2F]`}>
-          Register NOW!!
+        <span className={`${CUSTOM_STYLES.TITLE.LEFT} text-blue-700`}>
+          Register now
         </span>
         <div>
           <Button link={link} text="Registration" color="gold" />

@@ -17,11 +17,11 @@ interface Props {
 const backgroundColor = (colorPattern: COLOR_PATTERN): string => {
   switch (colorPattern) {
     case "white":
-      return "bg-[#F0F4FE]";
+      return "bg-gray-50 border border-gray-200";
     case "blue":
-      return "bg-[#6890F5]";
+      return "bg-blue-700";
     case "navy":
-      return "bg-[#002060]";
+      return "bg-blue-900";
   }
 };
 
@@ -72,7 +72,7 @@ export default function ItemCard({
               <div className="flex-row flex items-start gap-2">
                 <div className={CUSTOM_STYLES.SUBTITLE}>{title}</div>
                 {isNew && (
-                  <div className={CUSTOM_STYLES.SUBTITLE + " text-[#D3CC2F]"}>
+                  <div className={CUSTOM_STYLES.SUBTITLE + " text-blue-200"}>
                     NEW!
                   </div>
                 )}
@@ -82,7 +82,7 @@ export default function ItemCard({
               )}
             </div>
 
-            <div className="flex-col flex items-start gap-1 text-base leading-[17px] font-Inter">
+            <div className="flex-col flex items-start gap-1 text-base leading-6 font-Inter">
               {description}
             </div>
           </div>

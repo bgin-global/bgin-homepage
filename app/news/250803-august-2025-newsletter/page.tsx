@@ -43,7 +43,7 @@ export default function August2025NewsletterPage() {
             </div>
 
             {/* Newsletter Content */}
-            <div className="prose prose-lg max-w-none">
+            <div className="bgin-prose prose prose-lg">
               <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
                 <h2 className="text-xl font-semibold text-blue-900 mb-2">Dear BGIN Community,</h2>
                 <p className="text-blue-800 mb-0">

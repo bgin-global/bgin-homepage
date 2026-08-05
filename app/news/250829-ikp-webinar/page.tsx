@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import WgChip from "@/components/WgChip";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,11 +18,12 @@ export default function IKPWebinarSuccessPage() {
           </h1>
           <div className="flex items-center gap-4 text-gray-600 mb-6">
             <time dateTime="2025-08-30">August 30, 2025</time>
-            <div className="flex gap-2">
-              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+            <div className="flex flex-wrap gap-2 items-center">
+              <WgChip wg="ikp" />
+              <span className="bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">
                 Working Group
               </span>
-              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">
                 Event
               </span>
             </div>
@@ -39,7 +41,7 @@ export default function IKPWebinarSuccessPage() {
         </div>
 
         {/* Article Content */}
-        <div className="text-gray-900">
+        <div className="bgin-prose text-gray-900">
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             The IKP Working Group successfully hosted the "BGIN'ing of Agentic Governance" 
             webinar on August 28, 2025, bringing together experts and stakeholders to explore 
@@ -224,7 +226,7 @@ export default function IKPWebinarSuccessPage() {
 
         {/* Back to News */}
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <Link href="/news" className="text-[#688ff5] hover:text-[#5a7de8] font-medium">
+          <Link href="/news" className="text-blue-700 hover:text-blue-800 font-medium">
             ← Back to News
           </Link>
         </div>

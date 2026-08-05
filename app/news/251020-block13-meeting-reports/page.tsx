@@ -40,7 +40,7 @@ export default function Block13MeetingReportsPage() {
         </div>
 
         {/* Article Content */}
-        <div className="text-gray-900">
+        <div className="bgin-prose text-gray-900">
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             BGIN is pleased to announce the publication of comprehensive meeting reports from Block #13, 
             held in Washington D.C. from October 15-17, 2025. These detailed reports capture the discussions, 
