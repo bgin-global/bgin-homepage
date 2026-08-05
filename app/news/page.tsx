@@ -18,22 +18,8 @@ export default function NewsPage() {
               News & Updates
             </h1>
             <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-600 max-w-2xl mx-auto`}>
-              Announcements and updates from BGIN. For documents to read or cite,
-              use Publications; for ongoing workstreams, use Projects.
-            </p>
-            <p className="mt-3 text-sm text-gray-500">
-              What you&apos;ll find here: dated news items.{" "}
-              <a href="/publications" className="text-blue-700 underline">
-                Publications
-              </a>
-              {" · "}
-              <a href="/projects" className="text-blue-700 underline">
-                Projects
-              </a>
-              {" · "}
-              <a href="/start" className="text-blue-700 underline">
-                Start here
-              </a>
+              Stay up to date with the latest news, announcements, and developments from BGIN. 
+              Discover our research findings, conference updates, and working group activities.
             </p>
           </div>
         </div>

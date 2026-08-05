@@ -38,10 +38,11 @@ export default function ItemEvent(props: Props) {
         </div>
         <div className="w-full flex-col flex items-start gap-6 bgin-button">
           <div className="w-full flex-col flex items-start gap-2 text-black">
-            <div className="text-base leading-6 font-Inter pb-4">
-              {props.event.description}
-            </div>
-            <div className="flex-col flex items-start gap-1 text-base leading-6 font-Inter font-semibold">
+            <div 
+              className="text-base leading-[17px] font-Inter pb-4"
+              dangerouslySetInnerHTML={{ __html: props.event.description }}
+            />
+            <div className="flex-col flex items-start gap-1 text-base leading-[17px] font-Inter font-semibold">
               <div>Location: {props.event.location}</div>
               <div>
                 Date: {props.event.date}
@@ -89,7 +90,7 @@ export default function ItemEvent(props: Props) {
                   // Active link when register_link exists
                   <a
                     href={props.event.register_link}
-                    className="bg-blue-700 hover:bg-blue-800 flex justify-center items-center gap-3 px-8 py-5 rounded-full border border-blue-700 w-full transition-colors"
+                    className="bg-[#6890F5] hover:bg-[#5a7de8] flex justify-center items-center gap-3 px-8 py-5 rounded-full border border-[#6890F5] w-full transition-colors"
                     target={props.event.register_link?.startsWith("http") ? "_blank" : undefined}
                     rel={props.event.register_link?.startsWith("http") ? "noopener noreferrer" : undefined}
                   >

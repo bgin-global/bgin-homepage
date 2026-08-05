@@ -9,12 +9,12 @@ export default function Block15AnnouncementPage() {
   // Function to get tag color styling (same as News component)
   const getTagStyle = (tag: string) => {
     const tagStyles: { [key: string]: string } = {
-      "Latest": "bg-blue-50 text-blue-900 border-blue-200",
+      "Latest": "bg-red-100 text-red-800 border-red-200",
       "Conference": "bg-blue-100 text-blue-800 border-blue-200",
       "Working Group": "bg-green-100 text-green-800 border-green-200",
-      "Event": "bg-gray-100 text-gray-700 border-gray-200",
-      "Standards": "bg-gray-100 text-gray-700 border-gray-200",
-      "Announcement": "bg-gray-100 text-gray-700 border-gray-200"
+      "Event": "bg-purple-100 text-purple-800 border-purple-200",
+      "Standards": "bg-orange-100 text-orange-800 border-orange-200",
+      "Announcement": "bg-yellow-100 text-yellow-800 border-yellow-200"
     };
     return tagStyles[tag] || "bg-gray-100 text-gray-800 border-gray-200";
   };
@@ -72,7 +72,7 @@ export default function Block15AnnouncementPage() {
       {/* Article Content */}
       <div className="py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bgin-prose prose prose-lg">
+          <div className="prose prose-lg max-w-none">
             
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               <strong>May 27, 2026</strong> - The Blockchain Governance Initiative Network (BGIN) is pleased to announce the 15th general meeting, <strong>Block #15</strong>, to be held in <strong>Washington, D.C.</strong> from <strong>October 15-16, 2026</strong>.
@@ -175,15 +175,7 @@ export default function Block15AnnouncementPage() {
               Registration and More Information
             </h2>
             <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700 mb-8`}>
-              <strong>Update (Aug 2026):</strong> Registration is now open. See{" "}
-              <a href="/news/260804-block15-registration-open" className="text-blue-600 hover:underline">
-                Block #15 Registration Now Open
-              </a>{" "}
-              or the{" "}
-              <a href="/events/20261015-block15" className="text-blue-600 hover:underline">
-                Block 15 event page
-              </a>
-              .
+              Registration details and the full program will be announced around late 2026. For more information about Block #15 and to stay updated on registration, please visit our <a href="/events/20261015-block15" className="text-blue-600 hover:underline">events page</a> or contact the BGIN Secretariat.
             </p>
 
             <hr className="border-gray-300 my-8" />

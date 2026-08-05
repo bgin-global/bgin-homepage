@@ -1,37 +1,17 @@
 import { WorkingGroup } from "@/contents/workingGroups";
-import type { WgId } from "@/contents/projectHubs";
-import {
-  WG_IDENTITY_NEUTRAL,
-  getWgIdentity,
-} from "@/contents/wgIdentity";
-import WgChip from "@/components/WgChip";
 
 interface Props {
   workingGroup: WorkingGroup;
-  wgId?: WgId | null;
 }
 
 export default function ItemWG(props: Props) {
-  const identity = props.wgId
-    ? getWgIdentity(props.wgId)
-    : null;
-  const accentHex = identity?.hex ?? WG_IDENTITY_NEUTRAL.hex;
-
   return (
-    <div
-      className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5] border-l-4"
-      style={{ borderLeftColor: accentHex }}
-    >
+    <div className="bg-white w-full flex flex-col lg:flex-row items-start gap-12 p-6 rounded-3xl border border-white border-opacity-[0.5]">
       <div className="h-full lg:w-full flex-col flex items-start gap-6">
         <div className="text-3xl leading-[48px] font-medium text-black font-FamiljenGrotesk">
           {props.workingGroup.group_name}{" "}
-          {props.wgId && (
-            <span className="inline-block align-middle mr-2">
-              <WgChip wg={props.wgId} />
-            </span>
-          )}
           <span
-            className={`px-4 py-2 border border-solid rounded-full text-base ${props.workingGroup.inactive
+            className={`px-4 py-2 border border-solid rounded-full ${props.workingGroup.inactive
               ? "border-red-700 text-red-700"
               : "border-green-700 text-green-700"
               }`}
@@ -59,7 +39,7 @@ export default function ItemWG(props: Props) {
                     </svg>
 
                     <div className="flex-col flex justify-center items-start">
-                      <div className="text-base leading-6">{chair.name}</div>
+                      <div className="text-base leading-[17px]">{chair.name}</div>
                       <div className="text-xs leading-[18px]">{chair.job}</div>
                     </div>
                   </div>
@@ -71,7 +51,7 @@ export default function ItemWG(props: Props) {
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Description
             </div>
-            <div className="text-base leading-6 font-Inter">
+            <div className="text-base leading-[17px] font-Inter">
               {props.workingGroup.description}
             </div>
           </div>

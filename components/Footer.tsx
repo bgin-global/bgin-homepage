@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="text-xl font-medium font-FamiljenGrotesk">
               Contact Info
             </div>
-            <div className="flex-col flex items-start gap-6 text-lg leading-7 font-Inter">
+            <div className="flex-col flex items-start gap-6 text-lg leading-[19px] font-Inter">
               <div className="flex-col flex items-start gap-6">
                 <div className="flex items-start gap-2">
                   <svg
@@ -134,7 +134,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-screen flex justify-center items-center p-4 text-base leading-relaxed text-black font-Inter border-t border-black">
+      <div className="w-screen flex justify-center items-center p-4 text-base leading-[19px] text-black font-Inter border-t border-black">
         <div>© Copyright 2023 by BGIN</div>
       </div>
     </div>

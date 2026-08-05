@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import { programData } from '@/lib/block14-program-data';
 import { getWGColorClasses } from '@/lib/block14-wg-colors';
-import { WG_IDENTITY, WG_IDENTITY_NEUTRAL } from '@/contents/wgIdentity';
 
 interface ProgramTimetableProps {
   formatTitle?: (title: string, type?: 'session' | 'project') => string;
@@ -209,11 +208,11 @@ const ProgramTimetable: React.FC<ProgramTimetableProps> = ({ formatTitle, includ
           <div className="flex flex-wrap gap-3 mb-4">
             <div className="text-sm font-medium">Working Groups:</div>
             <div className="flex flex-wrap gap-2">
-              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.agentic.chip}`}>Agentic AI</span>
-              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.ikp.chip}`}>IKP</span>
-              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.cs.chip}`}>Cyber Security</span>
-              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY.fase.chip}`}>FASE</span>
-              <span className={`px-2 py-1 text-xs rounded ${WG_IDENTITY_NEUTRAL.chip}`}>General</span>
+              <span className="px-2 py-1 text-xs rounded bg-yellow-100 border border-yellow-300 text-yellow-800">Agentic AI</span>
+              <span className="px-2 py-1 text-xs rounded bg-blue-100 border border-blue-300 text-blue-800">IKP</span>
+              <span className="px-2 py-1 text-xs rounded bg-green-100 border border-green-300 text-green-800">Cyber Security</span>
+              <span className="px-2 py-1 text-xs rounded bg-purple-100 border border-purple-300 text-purple-800">FASE</span>
+              <span className="px-2 py-1 text-xs rounded bg-gray-100 border border-gray-300 text-gray-800">General</span>
             </div>
           </div>
         </div>

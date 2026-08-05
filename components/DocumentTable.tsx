@@ -2,19 +2,8 @@
 
 import { useState, Suspense } from "react";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
-import Link from "next/link";
-import type {
-  DocumentAuthor,
-  DocumentLanguage,
-  DocumentWhat,
-  PublicationStatus,
-} from "@/contents/documents";
-import { THEMES, THEME_LABELS, type Theme } from "@/contents/themes";
-import {
-  documentPdfHref,
-  getEnrichedDocuments,
-  type EnrichedDocument,
-} from "@/lib/publications";
+import { documents } from "@/contents/documents";
+import type { DocumentAuthor, DocumentLanguage, DocumentWhat } from "@/contents/documents";
 
 const AUTHOR_OPTIONS: DocumentAuthor[] = ["IKP", "FASE", "CS", "IGWP", "KSG", "Other"];
 const LANGUAGE_OPTIONS: DocumentLanguage[] = ["EN", "JP"];
@@ -26,7 +15,6 @@ const WHAT_OPTIONS: DocumentWhat[] = [
   "working_doc",
   "other",
 ];
-const STATUS_OPTIONS: PublicationStatus[] = ["Current", "Superseded", "Historical"];
 
 const WHAT_LABELS: Record<DocumentWhat, string> = {
   meeting_report: "Meeting Report",
@@ -36,6 +24,14 @@ const WHAT_LABELS: Record<DocumentWhat, string> = {
   working_doc: "Working Doc",
   other: "Other",
 };
+
+function buildHref(path: string): string {
+  const encoded = path
+    .split("/")
+    .map((seg) => encodeURIComponent(seg))
+    .join("/");
+  return `/documents/${encoded}`;
+}
 
 function SelectFilter({
   label,
@@ -104,7 +100,6 @@ function DocumentTableInner() {
   const router = useRouter();
   const pathname = usePathname();
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const docs = getEnrichedDocuments();
 
   const fAuthor = searchParams.get("author") ?? "";
   const fLanguage = searchParams.get("language") ?? "";
@@ -112,12 +107,10 @@ function DocumentTableInner() {
   const fWhere = searchParams.get("where") ?? "";
   const fWhenFrom = searchParams.get("when_from") ?? "";
   const fWhenTo = searchParams.get("when_to") ?? "";
-  const fStatus = searchParams.get("status") ?? "";
-  const fTheme = searchParams.get("theme") ?? "";
 
   const hasDateFilter = fWhenFrom !== "" || fWhenTo !== "";
 
-  const whereOptions = Array.from(new Set(docs.map((d) => d.where))).sort(
+  const whereOptions = Array.from(new Set(documents.map((d) => d.where))).sort(
     (a, b) => {
       const aBlock = a.match(/^Block (\d+)$/);
       const bBlock = b.match(/^Block (\d+)$/);
@@ -131,16 +124,14 @@ function DocumentTableInner() {
   );
 
   const whenOptions = Array.from(
-    new Set(docs.filter((d) => d.when !== "unclear").map((d) => d.when))
+    new Set(documents.filter((d) => d.when !== "unclear").map((d) => d.when))
   ).sort();
 
-  const filtered = docs.filter((doc: EnrichedDocument) => {
+  const filtered = documents.filter((doc) => {
     if (fAuthor && doc.author !== fAuthor) return false;
     if (fLanguage && doc.language !== fLanguage) return false;
     if (fWhat && doc.what !== fWhat) return false;
     if (fWhere && doc.where !== fWhere) return false;
-    if (fStatus && doc.status !== fStatus) return false;
-    if (fTheme && !doc.themes.includes(fTheme as Theme)) return false;
     if (hasDateFilter) {
       if (doc.when === "unclear") return false;
       if (fWhenFrom && doc.when < fWhenFrom) return false;
@@ -163,15 +154,7 @@ function DocumentTableInner() {
     router.push(pathname, { scroll: false });
   }
 
-  const hasActiveFilter =
-    fAuthor ||
-    fLanguage ||
-    fWhat ||
-    fWhere ||
-    fWhenFrom ||
-    fWhenTo ||
-    fStatus ||
-    fTheme;
+  const hasActiveFilter = fAuthor || fLanguage || fWhat || fWhere || fWhenFrom || fWhenTo;
 
   return (
     <div className="w-full max-w-5xl mx-auto px-4 xl:px-0">
@@ -179,6 +162,7 @@ function DocumentTableInner() {
         <PreviewModal url={previewUrl} onClose={() => setPreviewUrl(null)} />
       )}
 
+      {/* Filters */}
       <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6 shadow-sm">
         <div className="flex flex-wrap gap-4 items-end">
           <SelectFilter
@@ -204,21 +188,6 @@ function DocumentTableInner() {
             labelFn={(v) => WHAT_LABELS[v as DocumentWhat]}
           />
           <SelectFilter
-            label="Status"
-            paramKey="status"
-            options={STATUS_OPTIONS}
-            value={fStatus}
-            onChange={updateParam}
-          />
-          <SelectFilter
-            label="Theme"
-            paramKey="theme"
-            options={[...THEMES]}
-            value={fTheme}
-            onChange={updateParam}
-            labelFn={(v) => THEME_LABELS[v as Theme]}
-          />
-          <SelectFilter
             label="Event"
             paramKey="where"
             options={whereOptions}
@@ -226,6 +195,7 @@ function DocumentTableInner() {
             onChange={updateParam}
           />
 
+          {/* When range */}
           <div className="flex flex-col gap-1">
             <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
               From (YYYY/MM)
@@ -278,18 +248,19 @@ function DocumentTableInner() {
         )}
       </div>
 
+      {/* Count */}
       <p className="text-sm text-gray-500 mb-3">
         {filtered.length} document{filtered.length !== 1 ? "s" : ""} found
         {hasActiveFilter ? " (filtered)" : ""}
       </p>
 
+      {/* Table */}
       <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
         <table className="w-full text-sm text-left">
           <thead>
             <tr className="bg-blue-700 text-white">
               <th className="px-4 py-3 font-semibold whitespace-nowrap">ID</th>
               <th className="px-4 py-3 font-semibold">Title</th>
-              <th className="px-4 py-3 font-semibold w-[100px]">Status</th>
               <th className="px-4 py-3 font-semibold w-[130px]">Event</th>
               <th className="px-4 py-3 font-semibold whitespace-nowrap">Date</th>
               <th className="px-4 py-3 font-semibold whitespace-nowrap">WG</th>
@@ -301,69 +272,56 @@ function DocumentTableInner() {
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={9} className="px-4 py-8 text-center text-gray-400">
+                <td colSpan={8} className="px-4 py-8 text-center text-gray-400">
                   No documents match the selected filters.
                 </td>
               </tr>
             ) : (
-              filtered.map((doc, i) => {
-                const href = documentPdfHref(doc);
-                return (
-                  <tr
-                    key={`${doc.path}-${i}`}
-                    className={i % 2 === 0 ? "bg-white" : "bg-blue-50"}
-                  >
-                    <td className="px-4 py-3 font-medium text-gray-900">
-                      {doc.id}
-                    </td>
-                    <td className="px-4 py-3 font-medium text-gray-900">
-                      {doc.slug ? (
-                        <Link
-                          href={`/publications/${doc.slug}`}
-                          className="text-blue-800 hover:underline"
-                        >
-                          {doc.title}
-                        </Link>
-                      ) : (
-                        doc.title
-                      )}
-                    </td>
-                    <td className="px-4 py-3 text-gray-700 whitespace-nowrap text-xs">
-                      {doc.status}
-                    </td>
-                    <td className="px-4 py-3 text-gray-700">{doc.where}</td>
-                    <td className="px-4 py-3 text-gray-700 whitespace-nowrap">
-                      {doc.when}
-                    </td>
-                    <td className="px-4 py-3">
-                      <span className="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
-                        {doc.author}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 text-gray-700">{doc.language}</td>
-                    <td className="px-4 py-3 text-gray-600">
-                      {WHAT_LABELS[doc.what]}
-                    </td>
-                    <td className="px-4 py-3">
-                      <div className="flex gap-2">
-                        <a
-                          href={href}
-                          download
-                          className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
-                        >
-                          Download
-                        </a>
-                        <button
-                          onClick={() => setPreviewUrl(href)}
-                          className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
-                        >
-                          Preview
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })
+              filtered.map((doc, i) => (
+                <tr
+                  key={`${doc.path}-${i}`}
+                  className={i % 2 === 0 ? "bg-white" : "bg-blue-50"}
+                >
+                  <td className="px-4 py-3 font-medium text-gray-900">
+                    {doc.id}
+                  </td>
+                  <td className="px-4 py-3 font-medium text-gray-900">
+                    {doc.title}
+                  </td>
+                  <td className="px-4 py-3 text-gray-700">
+                    {doc.where}
+                  </td>
+                  <td className="px-4 py-3 text-gray-700 whitespace-nowrap">
+                    {doc.when}
+                  </td>
+                  <td className="px-4 py-3">
+                    <span className="inline-block px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                      {doc.author}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3 text-gray-700">{doc.language}</td>
+                  <td className="px-4 py-3 text-gray-600">
+                    {WHAT_LABELS[doc.what]}
+                  </td>
+                  <td className="px-4 py-3">
+                    <div className="flex gap-2">
+                      <a
+                        href={buildHref(doc.path)}
+                        download
+                        className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors whitespace-nowrap"
+                      >
+                        Download
+                      </a>
+                      <button
+                        onClick={() => setPreviewUrl(buildHref(doc.path))}
+                        className="inline-flex items-center px-2.5 py-1 rounded text-xs font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors whitespace-nowrap"
+                      >
+                        Preview
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))
             )}
           </tbody>
         </table>

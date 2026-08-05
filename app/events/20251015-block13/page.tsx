@@ -798,7 +798,7 @@ export default function Block13Page() {
         {/* Contribution & Fee Waiver Section */}
         <section id="contributions" className="block13-section">
           <h2 className="block13-section-title">Looking to Present Your Work?</h2>
-          <div className="bg-[#1d4ed8] text-white rounded-lg p-6 mb-6">
+          <div className="bg-[#688ff5] text-white rounded-lg p-6 mb-6">
             <p>
               BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 13 receive complete registration fee waivers.</strong>
             </p>
@@ -832,21 +832,21 @@ export default function Block13Page() {
               <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Submit Contribution for Fee Waiver</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">1</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">1</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Contact Working Group Chair</h4>
                     <p className="text-gray-600 text-sm">Reach out to the relevant WG Chair to express interest in contributing. Don't know the WG Chairs or have questions? <a href="https://bgin.discourse.group/t/onboarding-guide/130/2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Join our Discourse and make an inquiry (onboarding guide)</a>.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">2</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">2</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Submit Written Contribution</h4>
                     <p className="text-gray-600 text-sm">Provide your document via email with <a href="mailto:bgin_admin@bg2x.org" className="text-blue-600 hover:underline">bgin_admin@bg2x.org</a> in CC.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#1d4ed8] text-white text-sm font-semibold flex-shrink-0">3</span>
+                  <span className="inline-flex items-center justify-center min-w-[32px] w-8 h-8 rounded-full bg-[#688ff5] text-white text-sm font-semibold flex-shrink-0">3</span>
                   <div>
                     <h4 className="font-semibold text-gray-800">Receive 100% Discount Code</h4>
                     <p className="text-gray-600 text-sm">Get your complete fee waiver code for Block 13 registration.</p>
@@ -1024,12 +1024,12 @@ export default function Block13Page() {
           <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
             <div className="flex items-start h-fit max-w-5xl m-auto">
               <div className="flex-col flex items-start gap-2.5 py-16">
-                <div className="bg-[#1d4ed8] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
+                <div className="bg-[#688ff5] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
                   <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
                     <div className="w-full flex-col flex items-start gap-6">
                       <div className="w-full flex-col flex items-start gap-2 text-white">
                         <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
-                        <div className="text-lg leading-7 font-Inter">
+                        <div className="text-lg leading-[19px] font-Inter">
                           Be part of shaping the future of blockchain governance at BGIN Block 13. 
                           Connect with regulators, technologists, and industry leaders from around the world. 
                           Join our community to stay updated on the latest developments and participate in ongoing discussions.

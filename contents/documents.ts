@@ -1,5 +1,3 @@
-import type { Theme } from "./themes";
-
 export type DocumentWhere =
   | `Block ${number}`
   | `Layer2 meetup ${number} @${string}`
@@ -14,9 +12,6 @@ export type DocumentWhat =
   | "working_doc"
   | "other";
 
-/** Publication lifecycle for read/cite UX (see docs/content-model.md). */
-export type PublicationStatus = "Current" | "Superseded" | "Historical";
-
 export interface Document {
   id: string;
   title: string;
@@ -26,12 +21,6 @@ export interface Document {
   author: DocumentAuthor;
   language: DocumentLanguage;
   what: DocumentWhat;
-  /** When set, document has a landing page at /publications/[slug]. */
-  slug?: string;
-  status?: PublicationStatus;
-  themes?: Theme[];
-  summary?: string;
-  relatedProjectSlugs?: string[];
 }
 
 export const documents: Document[] = [
@@ -1727,11 +1716,6 @@ export const documents: Document[] = [
     author: "Other",
     language: "EN",
     what: "study_report",
-    slug: "defi-present-and-future",
-    status: "Historical",
-    themes: ["defi"],
-    summary:
-      "Early BGIN study on decentralized finance and associated regulatory considerations. Read and cite here; not an active project hub.",
   },
   {
     id: "sr_003",
@@ -1742,11 +1726,6 @@ export const documents: Document[] = [
     author: "Other",
     language: "EN",
     what: "study_report",
-    slug: "decentralized-custody-incident-response",
-    status: "Historical",
-    themes: ["custody", "cybersecurity"],
-    summary:
-      "Case study on incident response for decentralized custody. Historical publication; not an active project hub.",
   },
   {
     id: "sr_005",
@@ -1757,11 +1736,6 @@ export const documents: Document[] = [
     author: "Other",
     language: "EN",
     what: "study_report",
-    slug: "nft-study-report-part-1",
-    status: "Historical",
-    themes: ["nft"],
-    summary:
-      "Introduction and use cases for NFTs. Completed study report — browse under Publications, not Projects.",
   },
   {
     id: "sr_006",
@@ -1772,11 +1746,6 @@ export const documents: Document[] = [
     author: "Other",
     language: "EN",
     what: "study_report",
-    slug: "ransomware-reaction",
-    status: "Historical",
-    themes: ["ransomware", "cybersecurity"],
-    summary:
-      "Study report on ransomware reaction practices. Historical publication; not an active project hub.",
   },
   {
     id: "sr_007",
@@ -1787,12 +1756,6 @@ export const documents: Document[] = [
     author: "IKP",
     language: "EN",
     what: "study_report",
-    slug: "selective-disclosure",
-    status: "Historical",
-    themes: ["privacy", "identity"],
-    summary:
-      "Overview and classifications of selective disclosure. Related themes continue in IKP privacy / auth work.",
-    relatedProjectSlugs: ["privacy-enhanced-auth"],
   },
   {
     id: "sr_008",
@@ -1803,11 +1766,6 @@ export const documents: Document[] = [
     author: "IKP",
     language: "EN",
     what: "study_report",
-    slug: "sbt-study-report-part-1",
-    status: "Historical",
-    themes: ["sbt", "identity", "nft"],
-    summary:
-      "Study report on soulbound tokens and social identity layers. Historical publication; not an active project hub.",
   },
   {
     id: "sr_010",
@@ -1818,15 +1776,9 @@ export const documents: Document[] = [
     author: "FASE",
     language: "EN",
     what: "study_report",
-    slug: "defi-disclosure-principles",
-    status: "Historical",
-    themes: ["defi", "governance"],
-    summary:
-      "Proposed principles for DeFi disclosure and regulation. Historical FASE publication.",
-    relatedProjectSlugs: ["stablecoin-guide", "harmonization"],
   },
   {
-    id: "sr_010b",
+    id: "sr_010",
     title: "Wallet Governance and Key Management Study Report",
     path: "study-reports/Wallet_Governance_Key_Management_Study_Report.pdf",
     where: "Other",
@@ -1834,15 +1786,9 @@ export const documents: Document[] = [
     author: "IKP",
     language: "EN",
     what: "study_report",
-    slug: "wallet-governance-key-management",
-    status: "Current",
-    themes: ["wallet", "governance"],
-    summary:
-      "Study report on wallet governance and key management. Related active work includes Accountable Wallet and offline key management.",
-    relatedProjectSlugs: ["accountable-wallet", "offline-key-management"],
   },
   {
-    id: "sr_009",
+    id: "sr_",
     title: "Study Report: Present and Future of Stablecoin and DeFi",
     path: "study-reports/stablecoins-defi/20230329_Stablecoin_and_Defi.pdf",
     where: "Other",
@@ -1850,12 +1796,6 @@ export const documents: Document[] = [
     author: "FASE",
     language: "EN",
     what: "study_report",
-    slug: "stablecoin-and-defi-present-future",
-    status: "Historical",
-    themes: ["stablecoin", "defi"],
-    summary:
-      "Study on the present and future of stablecoins and DeFi. See also active FASE stablecoin and harmonization hubs.",
-    relatedProjectSlugs: ["stablecoin-guide", "harmonization"],
   },
   {
     id: "sr_011",
@@ -1866,15 +1806,9 @@ export const documents: Document[] = [
     author: "FASE",
     language: "EN",
     what: "study_report",
-    slug: "stablecoin-defi-points-of-failure",
-    status: "Historical",
-    themes: ["stablecoin", "defi"],
-    summary:
-      "Analysis of potential points of failure for stablecoins and DeFi. Historical study; related themes continue in FASE hubs.",
-    relatedProjectSlugs: ["stablecoin-guide"],
   },
   {
-    id: "sr_012",
+    id: "sr_011",
     title: "ZKP Study Report (BGIN SR 0011) v2",
     path: "study-reports/zkp/BGIN SR 0011_zkp_study_v2_publishstage.pdf",
     where: "Other",
@@ -1882,14 +1816,9 @@ export const documents: Document[] = [
     author: "IKP",
     language: "EN",
     what: "study_report",
-    slug: "zkp-study-report-v2",
-    status: "Current",
-    themes: ["zkp", "privacy"],
-    summary:
-      "Published ZKP study report (BGIN SR 0011) v2. Read and cite under Publications.",
   },
   {
-    id: "sr_012-draft",
+    id: "sr_011",
     title: "ZKP Study Report (Draft)",
     path: "study-reports/zkp/BGIN-ZKPdoc.pdf",
     where: "Other",
@@ -1897,11 +1826,6 @@ export const documents: Document[] = [
     author: "IKP",
     language: "EN",
     what: "study_report",
-    slug: "zkp-study-report-draft",
-    status: "Superseded",
-    themes: ["zkp", "privacy"],
-    summary:
-      "Earlier draft of the ZKP study. Prefer the v2 publish-stage report for citation.",
   },
 
   // ===== Governance Doc =====

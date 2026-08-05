@@ -45,18 +45,6 @@ export default function About() {
       <Header />
       <Hero type={2} />
 
-      <div className="max-w-5xl mx-auto px-6 py-6">
-        <p className="text-sm text-gray-700 text-center">
-          What you&apos;ll find here: who BGIN is and our principles — not live
-          project status. Participation is permissionless (no membership). To
-          join work or read reports,{" "}
-          <a href="/start" className="underline font-medium text-blue-800">
-            Start here
-          </a>
-          .
-        </p>
-      </div>
-
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
           <Image

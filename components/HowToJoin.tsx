@@ -1,52 +1,35 @@
 import { CUSTOM_STYLES } from "@/styles/custom";
-import Link from "next/link";
+import Button from "./Button/Button";
+import Image from "next/image";
 
 function HowToJoin() {
   return (
-    <div className="bg-white w-full border-b border-gray-200 px-4 py-16">
-      <div className="max-w-5xl m-auto rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-10">
-        <div className="max-w-2xl">
-          <h2 className={`${CUSTOM_STYLES.TITLE.LEFT} text-black mb-3`}>
-            Anyone can participate
-          </h2>
-          <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700 mb-2`}>
-            BGIN is not a membership club. Participation is{" "}
-            <strong className="text-gray-900">permissionless</strong> — join
-            the discussion, contribute to a project, or attend a meeting without
-            an application or invitation gate.
-          </p>
-          <p className="text-sm text-gray-600 mb-6">
-            Start on Discourse (official working forum), open a{" "}
-            <Link href="/projects" className="text-blue-700 underline">
-              project hub
-            </Link>{" "}
-            for status and documents, or use{" "}
-            <Link href="/start" className="text-blue-700 underline">
-              Start here
-            </Link>{" "}
-            if you are new. Block meeting registration stays in the header and
-            campaign band above.
-          </p>
-          <a
-            href="https://bgin.discourse.group/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex px-4 py-2 rounded-md border border-blue-700 text-blue-800 text-sm font-medium hover:bg-blue-50"
-          >
-            Work on Discourse
-          </a>
-          <p className="mt-4 text-sm text-gray-700">
-            <Link
-              href="/projects"
-              className="text-blue-700 underline font-medium"
-            >
-              Browse all projects →
-            </Link>
-            {" · "}
-            <Link href="/start" className="text-blue-700 underline font-medium">
-              New here? Start here →
-            </Link>
-          </p>
+    <div className="bg-white w-full flex-col flex items-center pb-32 h-fit px-4 xl:px-0">
+      <div className="flex items-start h-fit max-w-5xl m-auto">
+        <div className="flex-col flex items-start gap-2.5 py-32">
+          <div className="bg-[#688ff5] w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-xl border border-white border-opacity-[0.5]">
+            <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
+              <div className="w-full flex-col flex items-start gap-6">
+                <div className="w-full flex-col flex items-start gap-2 text-white">
+                  <div className={CUSTOM_STYLES.TITLE.LEFT}>How to Join</div>
+                  <div className={CUSTOM_STYLES.DESCRIPTION}>
+                    Joining our organization is easy! Simply visit our website
+                    and fill out the membership application. Once your
+                    application is approved, you will gain access to a variety
+                    of resources and opportunities to connect with other
+                    Blockchain enthusiasts.
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Button
+                  link="https://bgin.discourse.group/"
+                  text="Join Our Community"
+                  color="white"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

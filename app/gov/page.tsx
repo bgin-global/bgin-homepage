@@ -22,14 +22,6 @@ export default function Governance() {
             ensuring that the voices and opinions of BGINners are actively
             incorporated into the decision-making process.
           </div>
-          <p className="text-sm text-gray-700 mt-4">
-            What you&apos;ll find here: institutional structure and governance
-            documents — not project status hubs. New here?{" "}
-            <a href="/start" className="underline font-medium text-blue-800">
-              Start here
-            </a>
-            .
-          </p>
         </div>
         <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
           <Image

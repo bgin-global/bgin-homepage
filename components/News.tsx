@@ -1,8 +1,6 @@
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Button from "./Button/Button";
-import WgChip from "@/components/WgChip";
 import { NewsItem } from "@/contents/news";
-import { wgIdFromTag } from "@/contents/wgIdentity";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -45,37 +43,18 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
 
   // Function to get tag color styling
   const getTagStyle = (tag: string) => {
-    // Neutral house style; Latest is the only accent.
-    if (tag === "Latest" || tag === "New") {
-      return "bg-blue-50 text-blue-900 border-blue-200";
-    }
-    return "bg-gray-100 text-gray-700 border-gray-200";
+    const tagStyles: { [key: string]: string } = {
+      "Conference": "bg-blue-100 text-blue-800 border-blue-200",
+      "Working Group": "bg-green-100 text-green-800 border-green-200",
+      "Event": "bg-purple-100 text-purple-800 border-purple-200",
+      "Standards": "bg-orange-100 text-orange-800 border-orange-200",
+      "New Project": "bg-yellow-100 text-yellow-800 border-yellow-200",
+      "Publication": "bg-indigo-100 text-indigo-800 border-indigo-200",
+    };
+    return tagStyles[tag] || "bg-gray-100 text-gray-800 border-gray-200";
   };
 
-  const renderTag = (tag: string, index: number, compact = false) => {
-    if (tag === "New") {
-      return (
-        <span
-          key={index}
-          className="text-red-600 text-xs font-bold uppercase tracking-wide"
-        >
-          {tag}
-        </span>
-      );
-    }
-    const wg = wgIdFromTag(tag);
-    if (wg) {
-      return <WgChip key={index} wg={wg} label={tag} />;
-    }
-    return (
-      <span
-        key={index}
-        className={`${compact ? "px-2 md:px-3" : "px-3"} py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
-      >
-        {tag}
-      </span>
-    );
-  };
+
 
   const rawNewsToDisplay = displayedNews;
   const newsToDisplay = processNewsWithNewTag(rawNewsToDisplay);
@@ -113,7 +92,23 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                             
                             {/* Tags - positioned on the right */}
                             <div className="flex flex-wrap gap-2 flex-1">
-                              {item.tags.map((tag, index) => renderTag(tag, index))}
+                              {item.tags.map((tag, index) => (
+                                tag === "New" ? (
+                                  <span 
+                                    key={index}
+                                    className="text-red-600 text-xs font-bold uppercase tracking-wide"
+                                  >
+                                    {tag}
+                                  </span>
+                                ) : (
+                                  <span 
+                                    key={index}
+                                    className={`px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                                  >
+                                    {tag}
+                                  </span>
+                                )
+                              ))}
                             </div>
                           </div>
                           
@@ -144,9 +139,23 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
                       <div className="flex flex-col gap-3 md:gap-4">
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-2 md:mb-3">
-                          {item.tags.map((tag, index) =>
-                            renderTag(tag, index, true)
-                          )}
+                          {item.tags.map((tag, index) => (
+                            tag === "New" ? (
+                              <span 
+                                key={index}
+                                className="text-red-600 text-xs font-bold uppercase tracking-wide"
+                              >
+                                {tag}
+                              </span>
+                            ) : (
+                              <span 
+                                key={index}
+                                className={`px-2 md:px-3 py-1 rounded-full text-xs font-medium border ${getTagStyle(tag)}`}
+                              >
+                                {tag}
+                              </span>
+                            )
+                          ))}
                         </div>
                         
                         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
@@ -193,11 +202,10 @@ export default function News({ news = [], maxItems = 3, layout = "list", showVie
 
             {showViewAllButton && (
               <div className="mt-4">
-                <Button
-                  link="/news"
-                  text="View All News"
-                  color="black"
-                  size="sm"
+                <Button 
+                  link="/news" 
+                  text="View All News" 
+                  color="black" 
                 />
               </div>
             )}

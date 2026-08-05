@@ -242,22 +242,22 @@ export default function Block14AccessPage() {
               </div>
               <h3 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1e40af' }}>Register with USDC</span>
+                <span style={{ color: '#1e5fa8' }}>Register with USDC</span>
               </h3>
               <div className="grid gap-2 sm:grid-cols-2">
-                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
+                <a href="https://commerce.coinbase.com/checkout/6a876dc0-7ee9-4d1d-a84f-82b3d7e7accb" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
                   <span>General (2 days)</span>
                   <span className="font-semibold">$100</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
+                <a href="https://commerce.coinbase.com/checkout/a0d9f683-5f9a-4f04-9356-7874cf263775" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
                   <span>General (Day 1)</span>
                   <span className="font-semibold">$60</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
+                <a href="https://commerce.coinbase.com/checkout/4b106a82-a7d2-46ee-b1b2-3e8f09ed8dc3" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
                   <span>General (Day 2)</span>
                   <span className="font-semibold">$60</span>
                 </a>
-                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#1d4ed8]/40 px-4 py-3 font-medium hover:bg-[#1d4ed8]/10 transition-colors" style={{ color: '#1e40af' }}>
+                <a href="https://commerce.coinbase.com/checkout/dda4d579-5f7c-4cbd-a031-1e1db88bbf01" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center rounded-lg bg-white border border-[#2775CA]/40 px-4 py-3 font-medium hover:bg-[#2775CA]/10 transition-colors" style={{ color: '#1e5fa8' }}>
                   <span>Remote</span>
                   <span className="font-semibold">$30</span>
                 </a>
@@ -295,8 +295,8 @@ export default function Block14AccessPage() {
                 </a>
                 <Link
                   href="/events/20260301-block14#stablecoin-payment"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e40af]"
-                  style={{ backgroundColor: '#1d4ed8' }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-white shadow hover:shadow-md transition-all hover:bg-[#1e5fa8]"
+                  style={{ backgroundColor: '#2775CA' }}
                 >
                   <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
                   Register with USDC

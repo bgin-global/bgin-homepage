@@ -6,8 +6,6 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 import ItemWG from "@/components/ItemWG";
 import NewsletterList from "@/components/NewsletterList";
 import { workingGroups } from "@/contents/workingGroups";
-import { wgIdFromGroupName } from "@/contents/hubSchedules";
-import WgProjectLinks from "@/components/WgProjectLinks";
 import { useState } from "react";
 
 export default function WorkingGroups() {
@@ -39,7 +37,7 @@ export default function WorkingGroups() {
         {isNewsletterExpanded && (
           <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
             <div className="mb-6">
-              <p className="text-lg leading-7 font-Inter text-gray-700 text-center max-w-3xl mx-auto">
+              <p className="text-lg leading-[24px] font-Inter text-gray-700 text-center max-w-3xl mx-auto">
                 Stay updated with the latest developments across all BGIN working groups through our monthly newsletters
                 featuring progress reports, key findings, and upcoming initiatives.
               </p>
@@ -87,37 +85,9 @@ export default function WorkingGroups() {
       {/* Working Groups Section */}
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="Working Groups" />
-        <div className="w-full max-w-5xl m-auto px-6 xl:px-0 mb-8">
-          <p className={`${CUSTOM_STYLES.DESCRIPTION} text-black`}>
-            Each working group hosts active project hubs and past publications.
-            To join ongoing work see{" "}
-            <a href="/projects" className="underline font-medium">
-              Projects
-            </a>
-            ; to read finished reports see{" "}
-            <a href="/publications" className="underline font-medium">
-              Publications
-            </a>
-            . New here?{" "}
-            <a href="/start" className="underline font-medium">
-              Start here
-            </a>
-            .
-          </p>
-        </div>
         <div className={CUSTOM_STYLES.SECTION_FLEX.ONE}>
           {workingGroups.map((workingGroup, index) => {
-            const wgId = wgIdFromGroupName(workingGroup.group_name);
-            return (
-              <div key={index} className="w-full">
-                <ItemWG workingGroup={workingGroup} wgId={wgId} />
-                {wgId && (
-                  <div className="bg-white rounded-b-3xl px-6 pb-6 -mt-2 border border-t-0 border-white border-opacity-50">
-                    <WgProjectLinks wgId={wgId} />
-                  </div>
-                )}
-              </div>
-            );
+            return <ItemWG key={index} workingGroup={workingGroup} />;
           })}
         </div>
       </div>
