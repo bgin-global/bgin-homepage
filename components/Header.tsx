@@ -2,36 +2,62 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import PlainButton from "./Button/PlainButton";
-import Button from "./Button/Button";
+import { BLOCK15_PAGE, BLOCK15_REGISTER } from "@/contents/block15Promo";
+import DiscourseGuideLink from "@/components/DiscourseGuideLink";
+
+const NAV_LINKS: { href: string; label: string; external?: boolean }[] = [
+  { href: "/start", label: "Start here" },
+  { href: "/about", label: "About" },
+  { href: "/activities", label: "Activities" },
+  { href: "/projects", label: "Projects" },
+  { href: "/publications", label: "Publications" },
+  { href: "/events", label: "Events" },
+  { href: "/news", label: "News" },
+  { href: "/gov", label: "Governance" },
+  { href: "/sponsors", label: "Sponsors" },
+  {
+    href: "https://www.youtube.com/@bgin/videos",
+    label: "Videos",
+    external: true,
+  },
+];
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className={`${isOpen ? "" : "border border-b-black"
-        } static w-screen bg-white`}
+      className={`${isOpen ? "" : "border border-b-black"} static w-screen bg-white`}
     >
-      <div className="flex justify-between items-center p-4 max-w-5xl m-auto">
-        <Link href="/">
+      <div className="flex justify-between items-center gap-6 p-4 max-w-5xl m-auto">
+        <Link
+          href="/"
+          className="shrink-0 mr-1 inline-flex items-center cursor-pointer"
+          aria-label="BGIN home"
+        >
           <Image
             src="/images/Header/Logo.svg"
-            alt="Logo"
-            className="h-[44px] w-[44px]"
-            width={44}
-            height={44}
+            alt="BGIN"
+            className="h-9 w-9 pointer-events-none"
+            width={36}
+            height={36}
+            priority
           />
         </Link>
 
-        <div className="flex lg:hidden justify-center items-center gap-6 bgin-button">
-          <div>
-            <Button
-              link="https://bgin.discourse.group/"
-              text="Join Us"
-              color="black"
-              withArrow={false}
-            />
-          </div>
+        {/* Mobile: only campaign primary + discourse secondary */}
+        <div className="flex lg:hidden justify-center items-center gap-2">
+          <DiscourseGuideLink
+            label="Discourse"
+            className="px-3 py-2"
+          />
+          <a
+            href={BLOCK15_REGISTER}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex px-3 py-2 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
+          >
+            Register
+          </a>
           <button
             type="button"
             className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -95,63 +121,80 @@ function Header() {
           </button>
         </div>
 
-        <div className="hidden lg:flex justify-center items-center gap-6 bgin-button">
-          <Link href="/about">
-            <div className="text-lg leading-[19px] text-black">About</div>
-          </Link>
-          <Link href="/activities">
-            <div className="text-lg leading-[19px] text-black">
-              Activities
-            </div>
-          </Link>
-          <Link href="/projects">
-            <div className="text-lg leading-[19px] text-black">Projects</div>
-          </Link>
-          <Link href="/publications">
-            <div className="text-lg leading-[19px] text-black">Publications</div>
-          </Link>
-          <Link href="/events">
-            <div className="text-lg leading-[19px] text-black">Events</div>
-          </Link>
-          <Link href="/news">
-            <div className="text-lg leading-[19px] text-black">News</div>
-          </Link>
-          <Link href="/gov">
-            <div className="text-lg leading-[19px] text-black">
-              Governance
-            </div>
-          </Link>
-          <Link href="/sponsors">
-            <div className="text-lg leading-[19px] text-black">Sponsors</div>
-          </Link>
-          <div>
-            <Button
-              link="https://bgin.discourse.group/"
-              text="Join Us"
-              color="black"
-              withArrow={false}
-            />
-          </div>
+        <div className="hidden lg:flex justify-center items-center gap-3">
+          {NAV_LINKS.filter((l) => l.href !== "https://www.youtube.com/@bgin/videos").map(
+            (item) => (
+              <Link key={item.href} href={item.href}>
+                <span className="text-sm font-medium text-gray-700 hover:text-blue-700">
+                  {item.label}
+                </span>
+              </Link>
+            )
+          )}
+          <DiscourseGuideLink />
+          <a
+            href={BLOCK15_REGISTER}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex px-3.5 py-1.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
+          >
+            Register Block 15
+          </a>
         </div>
       </div>
 
       <div
-        className={`${isOpen ? "" : "hidden"
-          } lg:hidden flex-1 flex-col w-full h-screen flex items-end gap-2 bg-sub`}
+        className={`${
+          isOpen ? "" : "hidden"
+        } lg:hidden flex-1 flex-col w-full h-screen flex items-stretch gap-1 bg-gray-50 px-4 py-4`}
         id="navbar"
       >
-        <PlainButton link="/about" text="About" />
-        <PlainButton link="/activities" text="Activities" />
-        <PlainButton link="/projects" text="Projects" />
-        <PlainButton link="/events" text="Events" />
-        <PlainButton link="/news" text="News" />
-        <PlainButton link="/gov" text="Governance" />
-        <PlainButton link="/publications" text="Publications" />
-        <PlainButton link="/sponsors" text="Sponsors" />
-        <PlainButton
-          link="https://www.youtube.com/@bgin/videos"
-          text="Videos"
+        <a
+          href={BLOCK15_REGISTER}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex justify-center px-4 py-2.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800 mb-1"
+          onClick={() => setIsOpen(false)}
+        >
+          Register Block 15
+        </a>
+        <DiscourseGuideLink
+          className="justify-center px-4 py-2 mb-3"
+          onClick={() => setIsOpen(false)}
         />
+        {NAV_LINKS.map((item) =>
+          item.external ? (
+            <a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-2 py-2.5 text-base text-gray-900 border-b border-gray-200"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="px-2 py-2.5 text-base text-gray-900 border-b border-gray-200"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          )
+        )}
+        <p className="text-xs text-gray-500 mt-2">
+          Event page →{" "}
+          <Link
+            href={BLOCK15_PAGE}
+            className="text-blue-700 underline"
+            onClick={() => setIsOpen(false)}
+          >
+            Block 15 details
+          </Link>
+        </p>
       </div>
     </div>
   );

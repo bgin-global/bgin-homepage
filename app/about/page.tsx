@@ -46,31 +46,6 @@ export default function About() {
       <Hero type={2} />
 
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
-        <div className={CUSTOM_STYLES.SECTION_FLEX.LATERAL}>
-          <Image
-            src="/images/About/01.svg"
-            alt="block10 meeting"
-            width={100}
-            height={100}
-            className="w-full h-[300px] lg:h-auto"
-            style={{
-              objectFit: "cover",
-            }}
-          />
-          <Image
-            src="/images/About/02.svg"
-            alt="block10 meeting"
-            width={100}
-            height={100}
-            className="w-full h-[300px] lg:h-auto"
-            style={{
-              objectFit: "cover",
-            }}
-          />
-        </div>
-      </div>
-
-      <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="BGIN Principle" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
           {principles.map((principle, index) => (
@@ -86,6 +61,27 @@ export default function About() {
       <div className={CUSTOM_STYLES.SECTION_CONTAINER.BLUE}>
         <SectionTitle title="BGIN Story" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <Image
+              src="/images/About/story-01.jpg"
+              alt="BGIN kick-off workshop session"
+              width={2400}
+              height={1800}
+              className="w-full h-auto rounded-md object-cover aspect-[4/3]"
+              sizes="(max-width: 768px) 100vw, 512px"
+              quality={85}
+              priority={false}
+            />
+            <Image
+              src="/images/About/story-02.jpg"
+              alt="BGIN Block meeting in session"
+              width={2400}
+              height={1800}
+              className="w-full h-auto rounded-md object-cover aspect-[4/3]"
+              sizes="(max-width: 768px) 100vw, 512px"
+              quality={85}
+            />
+          </div>
           <div className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700`}>
             　At the time when nobody had yet discussed the question of whether
             we would be able to establish blockchain governance adequate for the
