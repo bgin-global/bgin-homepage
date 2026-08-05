@@ -10,13 +10,13 @@ import Link from "next/link";
 export default function AgenticFrameworkWebinarPage() {
   const getTagStyle = (tag: string) => {
     const tagStyles: { [key: string]: string } = {
-      Latest: "bg-blue-50 text-blue-900 border-blue-200",
+      Latest: "bg-red-100 text-red-800 border-red-200",
       Conference: "bg-blue-100 text-blue-800 border-blue-200",
       "Working Group": "bg-green-100 text-green-800 border-green-200",
-      Event: "bg-gray-100 text-gray-700 border-gray-200",
-      Standards: "bg-gray-100 text-gray-700 border-gray-200",
-      Announcement: "bg-gray-100 text-gray-700 border-gray-200",
-      Publication: "bg-gray-100 text-gray-700 border-gray-200",
+      Event: "bg-purple-100 text-purple-800 border-purple-200",
+      Standards: "bg-orange-100 text-orange-800 border-orange-200",
+      Announcement: "bg-yellow-100 text-yellow-800 border-yellow-200",
+      Publication: "bg-indigo-100 text-indigo-800 border-indigo-200",
     };
     return tagStyles[tag] || "bg-gray-100 text-gray-800 border-gray-200";
   };
@@ -81,7 +81,7 @@ export default function AgenticFrameworkWebinarPage() {
       {/* Article Content */}
       <div className="py-12">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bgin-prose prose prose-lg">
+          <div className="prose prose-lg max-w-none">
             <h2 className={`${CUSTOM_STYLES.SUBTITLE} text-black mt-2 mb-6`}>
               BGIN&apos;ing of Agentic Governance
             </h2>

@@ -26,14 +26,6 @@ export default function Sponsors() {
             blockchain community. Together with our sponsors, we can drive
             meaningful change and create a lasting impact.
           </div>
-          <p className="text-sm text-gray-700 mt-4">
-            What you&apos;ll find here: sponsor and partnership information.
-            Looking for projects or publications?{" "}
-            <a href="/start" className="underline font-medium text-blue-800">
-              Start here
-            </a>
-            .
-          </p>
         </div>
         <SectionSubtitle title="Sustaining Sponsors" />
         <div className={CUSTOM_STYLES.SECTION_FLEX.HOLIZONTAL_SCROLL}>

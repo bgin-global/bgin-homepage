@@ -1,15 +1,6 @@
-/**
- * News card copy conventions (especially WG calls):
- * - Title must name the WG(s) and date (never “Next WG is coming” alone).
- * - Description = one-line summary: agenda focus and/or target projects when known;
- *   otherwise say “agenda TBA” so readers still know what to expect.
- * - Tags must include WG short name(s): IKP | Cyber Security | FASE | Agentic AI
- *   (rendered as colored chips via contents/wgIdentity.ts).
- */
 export interface NewsItem {
   id: string;
   title: string;
-  /** One-line summary shown on Latest News cards (agenda / projects when known). */
   description: string;
   date: string;
   link: string;
@@ -18,55 +9,43 @@ export interface NewsItem {
 }
 
 export const allNews: NewsItem[] = [
+     {
+  id: "15",
+  title: "Next WG is coming in July 30",
+  description: "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+  date: "2026-07-28",
+  link: "/news/260728-wgcall-announcement",
+  tags: ["Working Group", "Event"],
+  image: "/images/Logo/BGIN_logomark_black.png"
+  },  
+   {
+  id: "14",
+  title: "Next WG is coming in July 16",
+  description: "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+  date: "2026-07-13",
+  link: "/news/260713-wgcall-announcement",
+  tags: ["Working Group", "Event"],
+  image: "/images/Logo/BGIN_logomark_black.png"
+  },  
   {
-    id: "16",
-    title: "Block #15 Registration Now Open — Washington, D.C., October 15–16",
-    description:
-      "Registration is open for BGIN Block #15 in Washington, D.C. (15–16 Oct 2026). Hybrid participation available. Priority themes include PQC migration, cybersecurity information sharing, ST/PP, and Accountable Wallet. Register via Eventbrite; fee waivers available for presenting contributors.",
-    date: "2026-08-04",
-    link: "/news/260804-block15-registration-open",
-    tags: ["Latest", "Conference", "Event"],
-    image: "/images/Events/Block3.jpeg",
-  },
+  id: "13",
+  title: "Next WG is coming in July 2nd",
+  description: "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+  date: "2026-06-29",
+  link: "/news/260629-wgcall-announcement",
+  tags: ["Working Group", "Event"],
+  image: "/images/Logo/BGIN_logomark_black.png"
+
+  },  
   {
-    id: "15",
-    title: "IKP WG call — July 30",
-    description:
-      "IKP progress toward GDC26 and Block 15: project updates, contributions, and October agendas.",
-    date: "2026-07-28",
-    link: "/news/260728-wgcall-announcement",
-    tags: ["IKP", "Working Group", "Event"],
-    image: "/images/Logo/BGIN_logomark_black.png",
-  },
-  {
-    id: "14",
-    title: "IKP WG call — July 16",
-    description:
-      "IKP progress toward GDC26 and Block 15: project updates, contributions, and October agendas.",
-    date: "2026-07-13",
-    link: "/news/260713-wgcall-announcement",
-    tags: ["IKP", "Working Group", "Event"],
-    image: "/images/Logo/BGIN_logomark_black.png",
-  },
-  {
-    id: "13",
-    title: "IKP WG call — July 2",
-    description:
-      "IKP WG call: progress tracking, standards updates, and open floor (detailed agenda TBA).",
-    date: "2026-06-29",
-    link: "/news/260629-wgcall-announcement",
-    tags: ["IKP", "Working Group", "Event"],
-    image: "/images/Logo/BGIN_logomark_black.png",
-  },
-  {
-    id: "12",
-    title: "FASE & IKP WG calls — June 3–4",
-    description:
-      "FASE (Jun 3) and IKP (Jun 4): WG progress tracking and open floor (detailed agendas TBA).",
-    date: "2026-05-27",
-    link: "/news/260527-next-wg-test",
-    tags: ["FASE", "IKP", "Working Group", "Event"],
-    image: "/images/Logo/BGIN_logomark_black.png",
+  id: "12",
+  title: "Next WG is coming in June 3rd, and 4th",
+  description: "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+  date: "2026-05-27",
+  link: "/news/260527-next-wg-test",
+  tags: ["Working Group", "Event"],
+  image: "/images/Logo/BGIN_logomark_black.png"
+
   },
   {
     id: "11",
@@ -110,7 +89,7 @@ export const allNews: NewsItem[] = [
     description: "The IKP Working Group successfully hosted the 'BGIN'ing of Agentic Governance' webinar on August 28, 2025, sparking meaningful discussions on the BGIN Agentic Framework (Archive, Codex, and Discourse). The session generated valuable feedback that will shape upcoming presentations at EDCON Osaka and Block #13 in Washington D.C.",
     date: "2025-08-29",
     link: "/news/ikp-webinar",
-    tags: ["IKP", "Working Group", "Event"],
+    tags: ["Working Group", "Event"],
     image: "/images/Events/webinar/BGIN Agentic Framework.avif"
   },
   {

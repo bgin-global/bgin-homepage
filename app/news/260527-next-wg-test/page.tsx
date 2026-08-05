@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import WgChip from "@/components/WgChip";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,17 +13,15 @@ export default function NextWGCallPage() {
         {/* Article Header */}
         <header className="mb-8">
           <h1 className="text-4xl font-bold mb-4 text-gray-900">
-            FASE & IKP WG calls — June 3–4
+            Join the Next BGIN Working Group Calls
           </h1>
           <div className="flex items-center gap-4 text-gray-600 mb-6">
             <time dateTime="2026-05-27">May 27, 2026</time>
-            <div className="flex flex-wrap gap-2 items-center">
-              <WgChip wg="fase" />
-              <WgChip wg="ikp" />
-              <span className="bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">
+            <div className="flex gap-2">
+              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
                 Working Group
               </span>
-              <span className="bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full text-xs font-medium">
+              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
                 Event
               </span>
             </div>
@@ -42,7 +39,7 @@ export default function NextWGCallPage() {
         </div>
 
         {/* Article Content */}
-        <div className="bgin-prose text-gray-900">
+        <div className="text-gray-900">
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             BGIN invites all interested participants to join our upcoming Working Group calls.
             Whether you are a technologist, policymaker, researcher, or practitioner, your
@@ -129,7 +126,7 @@ export default function NextWGCallPage() {
 
         {/* Back to News */}
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <Link href="/news" className="text-blue-700 hover:text-blue-800 font-medium">
+          <Link href="/news" className="text-[#688ff5] hover:text-[#5a7de8] font-medium">
             ← Back to News
           </Link>
         </div>

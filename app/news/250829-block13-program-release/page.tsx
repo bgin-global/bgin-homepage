@@ -40,7 +40,7 @@ export default function Block13ProgramReleasePage() {
         </div>
 
         {/* Article Content */}
-        <div className="bgin-prose text-gray-900">
+        <div className="text-gray-900">
           <p className="text-xl text-gray-700 mb-6 leading-relaxed">
             BGIN is pleased to announce the release of the tentative program for Block #13, 
             taking place in Washington D.C. from October 15-17, 2025, at Georgetown University.
@@ -124,7 +124,7 @@ export default function Block13ProgramReleasePage() {
           <div className="flex gap-4 mt-8">
             <Link
               href="/events/20251015-block13#program"
-              className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors font-semibold"
+              className="bg-[#688ff5] text-white px-6 py-3 rounded-lg hover:bg-[#5a7de8] transition-colors font-semibold"
             >
               View Full Program
             </Link>
@@ -132,7 +132,7 @@ export default function Block13ProgramReleasePage() {
               href="https://www.eventbrite.com/e/bgin-block-13-tickets-1584466825929?aff=oddtdtcreator"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-blue-700 border-2 border-blue-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
+              className="bg-white text-[#688ff5] border-2 border-[#688ff5] px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
             >
               Register Now
             </a>
@@ -175,7 +175,7 @@ export default function Block13ProgramReleasePage() {
 
         {/* Back to News */}
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <Link href="/news" className="text-blue-700 hover:text-blue-800 font-medium">
+          <Link href="/news" className="text-[#688ff5] hover:text-[#5a7de8] font-medium">
             ← Back to News
           </Link>
         </div>

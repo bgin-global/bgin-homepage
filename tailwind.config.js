@@ -5,44 +5,13 @@ module.exports = withMT({
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./contents/**/*.{js,ts,tsx}",
-    "./lib/**/*.{js,ts,tsx}",
-    "./styles/**/*.{js,ts}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        // Keep legacy class names used across the codebase
-        Inter: [
-          "var(--font-sans)",
-          "var(--font-jp)",
-          "system-ui",
-          "-apple-system",
-          "Segoe UI",
-          "sans-serif",
-        ],
-        FamiljenGrotesk: [
-          "var(--font-display)",
-          "var(--font-sans)",
-          "var(--font-jp)",
-          "system-ui",
-          "sans-serif",
-        ],
-        sans: [
-          "var(--font-sans)",
-          "var(--font-jp)",
-          "system-ui",
-          "-apple-system",
-          "Segoe UI",
-          "sans-serif",
-        ],
-        display: [
-          "var(--font-display)",
-          "var(--font-sans)",
-          "var(--font-jp)",
-          "system-ui",
-          "sans-serif",
-        ],
+        Inter: ["Inter"],
+        ComicSansMS: ["Comic Sans MS"],
+        FamiljenGrotesk: ["Familjen Grotesk"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
