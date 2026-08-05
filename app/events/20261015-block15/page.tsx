@@ -13,14 +13,16 @@ import {
 } from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
 import WgChip from "@/components/WgChip";
+import JoinDiscussionBand from "@/components/JoinDiscussionBand";
 import "@/styles/block13.css";
+import { CUSTOM_STYLES } from "@/styles/custom";
 
 function FoldSummary({ title, blurb }: { title: string; blurb: string }) {
   return (
     <summary className="cursor-pointer list-none py-3 [&::-webkit-details-marker]:hidden">
       <div className="flex items-start gap-3 rounded-md border border-gray-200 bg-gray-50 px-4 py-3.5 transition-colors hover:border-blue-700 hover:bg-blue-50/50">
         <div className="min-w-0 flex-1">
-          <div className="font-FamiljenGrotesk text-lg md:text-xl font-semibold text-gray-900">
+          <div className="font-FamiljenGrotesk text-lg font-semibold text-gray-900 leading-snug">
             {title}
           </div>
           <p className="mt-1 text-sm text-gray-600 font-Inter font-normal leading-relaxed max-w-3xl">
@@ -309,10 +311,10 @@ export default function Block15Page() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-[1.2fr_1fr] gap-10">
             <div>
-              <h2 className="text-2xl md:text-3xl font-FamiljenGrotesk font-semibold text-gray-900 mb-3">
+              <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-gray-900 mb-3`}>
                 Why attend Block 15 now
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className={`${CUSTOM_STYLES.TYPE.LEDE} text-gray-700 mb-4`}>
                 {BLOCK15_META.why}
               </p>
               <ul className="space-y-2 text-gray-700 text-sm mb-6">
@@ -402,7 +404,7 @@ export default function Block15Page() {
               {" "}
               <a href="#contributions" className="text-blue-600 hover:text-blue-800 underline font-semibold">Learn more about our contribution process and how to apply →</a>
             </p>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <div className="bg-blue-50 border border-blue-200 rounded-md p-6">
               <h3 className="text-lg font-semibold text-blue-800 mb-2">
                 Themes confirmed · Session titles TBD
               </h3>
@@ -519,7 +521,7 @@ export default function Block15Page() {
         {/* Sponsors & Partners */}
         <section id="sponsors" className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+          <div className="bg-blue-50 border border-blue-200 rounded-md p-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Coming Soon</h3>
             <p className="text-blue-700 text-center">
               Sponsors and partners for Block 15 are currently being finalized. If you are interested in sponsoring Block 15, please contact us at{" "}
@@ -561,7 +563,7 @@ export default function Block15Page() {
               <div className="mt-6">
                 <Link
                   href="/events/20261015-block15/access"
-                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
@@ -579,7 +581,7 @@ export default function Block15Page() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg"
+                className="rounded-md"
               ></iframe>
             </div>
           </div>
@@ -588,7 +590,7 @@ export default function Block15Page() {
         {/* Contribution & Fee Waiver Section */}
         <section id="contributions" className="block13-section">
           <h2 className="block13-section-title">Looking to Present Your Work?</h2>
-          <div className="bg-blue-700 text-white rounded-lg p-6 mb-6">
+          <div className="bg-blue-700 text-white rounded-md p-6 mb-6">
             <p>
               BGIN follows a collaborative standardization process. <strong>Contributors who submit written contributions and present at Block 15 receive complete registration fee waivers.</strong>
             </p>
@@ -661,10 +663,10 @@ export default function Block15Page() {
 
         {/* Folded: secondary information */}
         <div className="pt-6 pb-2 border-t border-gray-200">
-          <h2 className="font-FamiljenGrotesk text-2xl md:text-3xl font-semibold text-gray-900">
+          <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-gray-900`}>
             More information
           </h2>
-          <p className="mt-1 text-sm text-gray-600 max-w-3xl leading-relaxed">
+          <p className={`mt-1 ${CUSTOM_STYLES.TYPE.META} max-w-3xl`}>
             Background, payment options, and archives. Select{" "}
             <span className="font-semibold text-blue-700">Show more</span> on
             any item to open the full section.
@@ -703,7 +705,7 @@ export default function Block15Page() {
                 <p className="text-lg leading-relaxed">
                   Block Meetings drive <strong className="text-blue-800">concrete outcomes</strong> through working group sessions, critical project discussions, and collaborative problem-solving that shapes the future of blockchain technology.
                 </p>
-                <div className="bg-blue-700 rounded-lg p-5 text-white">
+                <div className="bg-blue-700 rounded-md p-5 text-white">
                   <div className="flex items-start gap-3 mb-3">
                     <svg className="w-6 h-6 text-yellow-300 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -716,7 +718,7 @@ export default function Block15Page() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600 mt-6">
+                <div className="bg-white rounded-md p-4 border-l-4 border-blue-600 mt-6">
                   <p className="text-base font-semibold text-gray-800 mb-2">Why You Should Attend:</p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
@@ -742,7 +744,7 @@ export default function Block15Page() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div className="bg-white rounded-md p-6 border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -751,7 +753,7 @@ export default function Block15Page() {
                 <h3 className="font-bold text-gray-800 mb-2">Multi-Stakeholder</h3>
                 <p className="text-sm text-gray-600">Diverse perspectives from all sectors</p>
               </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div className="bg-white rounded-md p-6 border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
@@ -760,7 +762,7 @@ export default function Block15Page() {
                 <h3 className="font-bold text-gray-800 mb-2">Global Network</h3>
                 <p className="text-sm text-gray-600">International collaboration</p>
               </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div className="bg-white rounded-md p-6 border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -769,7 +771,7 @@ export default function Block15Page() {
                 <h3 className="font-bold text-gray-800 mb-2">Action-Oriented</h3>
                 <p className="text-sm text-gray-600">Concrete outcomes & solutions</p>
               </div>
-              <div className="bg-white rounded-lg p-6 border border-gray-200 text-center">
+              <div className="bg-white rounded-md p-6 border border-gray-200 text-center">
                 <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -795,13 +797,13 @@ export default function Block15Page() {
           />
           <div className="pb-8 pt-2">
 
-<div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 p-6 mb-6">
+<div className="bg-white rounded-md overflow-hidden border border-gray-200 p-6 mb-6">
             <p className="text-gray-700 max-w-3xl mb-4">
               Following the enactment of stablecoin regulations in Japan, the United States, and other jurisdictions,
               BGIN has decided to accept registration fees and event sponsor fees in stablecoins (<strong>USDC on Ethereum</strong>). This initiative
               represents a practical application of regulatory frameworks in real-world blockchain governance scenarios.
             </p>
-            <div className="rounded-lg p-4 mb-4 border-2 border-blue-700/30 bg-blue-700/5">
+            <div className="rounded-md p-4 mb-4 border-2 border-blue-700/30 bg-blue-700/5">
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
                 <span style={{ color: '#1d4ed8' }}>Register with USDC (coming soon)</span>
@@ -812,11 +814,11 @@ export default function Block15Page() {
               <p className="text-sm font-semibold mb-3" style={{ color: '#1d4ed8' }}>
                 Important: We accept USDC on the Ethereum network only.
               </p>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm text-blue-800">
+              <div className="bg-blue-50 border border-blue-200 rounded-md p-3 text-sm text-blue-800">
                 USDC payment links will be posted here once registration opens.
               </div>
             </div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
               <h3 className="font-semibold text-blue-900 mb-2">Trial Implementation at Block 15</h3>
               <p className="text-blue-800 text-sm">
                 At Block 15, BGIN will continue accepting stablecoin payments in <strong>USDC on Ethereum</strong> for registration fees and
@@ -839,7 +841,7 @@ export default function Block15Page() {
           />
           <div className="pb-8 pt-2">
 
-<div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+<div className="bg-blue-50 border border-blue-200 rounded-md p-6">
             <h3 className="text-lg font-semibold text-blue-800 mb-2">Coming Soon</h3>
             <p className="text-blue-700">
               Related events for Block 15 will be announced closer to the event date.
@@ -859,7 +861,7 @@ export default function Block15Page() {
           />
           <div className="pb-8 pt-2">
 
-          <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 lg:p-12">
+          <div className="rounded-md border border-gray-200 bg-gray-50 p-8 lg:p-12">
 <div className="grid lg:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold font-FamiljenGrotesk mb-4">Perfect for:</h3>
@@ -892,7 +894,7 @@ export default function Block15Page() {
                   Join the premier forum where blockchain governance decisions are made. Your participation directly impacts
                   international standards that will shape the future of digital economic networks.
                 </p>
-                <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <div className="bg-white rounded-md border border-gray-200 p-6">
                   <h4 className="font-semibold mb-2">Registration</h4>
                   <p className="text-sm text-gray-600 mb-2">
                     Registration is open. Limited in-person capacity in Washington, D.C.
@@ -1024,44 +1026,7 @@ export default function Block15Page() {
           </div>
         </details>
 
-        {/* CTA Section - Join the Discussion */}
-        <section className="block13-section">
-          <div className="bg-white w-full flex-col flex items-center pb-16 h-fit px-4 xl:px-0">
-            <div className="flex items-start h-fit max-w-5xl m-auto">
-              <div className="flex-col flex items-start gap-2.5 py-16">
-                <div className="bg-blue-700 w-full h-full flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-12 rounded-lg border border-white border-opacity-[0.5]">
-                  <div className="flex-1 flex-col flex items-start gap-6 py-4 lg:py-12 pr-6 pl-12">
-                    <div className="w-full flex-col flex items-start gap-6">
-                      <div className="w-full flex-col flex items-start gap-2 text-white">
-                        <div className="text-4xl leading-[50px] font-medium font-FamiljenGrotesk">Join the Discussion</div>
-                        <div className="text-lg leading-7 font-Inter">
-                          Be part of shaping the future of blockchain governance at BGIN Block 15.
-                          Connect with regulators, technologists, and industry leaders from around the world.
-                          Join our community to stay updated on the latest developments and participate in ongoing discussions.
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <a
-                        href="https://bgin.discourse.group/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-white text-black px-6 py-3 font-medium hover:bg-gray-50 transition-all duration-300 hover:shadow-xl inline-flex items-center gap-2"
-                        style={{borderRadius: '45px'}}
-                      >
-                        Join Our Community
-                        <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4.58325 11H17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <path d="M11 4.58325L17.4167 10.9999L11 17.4166" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <JoinDiscussionBand blurb="Orient on how Discourse works, then join the Block 15 conversation — open to anyone." />
       </div>
 
       <Footer />

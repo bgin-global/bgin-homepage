@@ -58,7 +58,7 @@ export default function Home() {
             <p className="text-xs font-bold uppercase tracking-wider text-blue-100 mb-1">
               Next Block meeting · Register now
             </p>
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-1">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-white mb-1`}>
               {BLOCK15_META.title}
             </h2>
             <p className="text-sm text-blue-100 mb-2">
@@ -87,9 +87,9 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-white border-b border-gray-200 py-10">
+      <div className={`bg-white border-b border-gray-200 ${CUSTOM_STYLES.SPACE.SECTION}`}>
         <div className="max-w-5xl mx-auto px-4">
-          <p className="text-sm text-gray-600 mb-4 text-center">
+          <p className={`${CUSTOM_STYLES.TYPE.META} mb-4 text-center`}>
             Participation is permissionless — no membership application. Ways
             to <strong className="text-gray-900">join work</strong>,{" "}
             <strong className="text-gray-900">read</strong>, or{" "}
@@ -104,12 +104,12 @@ export default function Home() {
               <Link
                 key={path.href}
                 href={path.href}
-                className="block rounded-lg border border-gray-200 p-5 hover:border-blue-500 transition-colors bg-gray-50"
+                className="block rounded-md border border-gray-200 p-5 hover:border-blue-700 transition-colors bg-gray-50"
               >
-                <h2 className="text-lg font-semibold font-FamiljenGrotesk text-black mb-2">
+                <h2 className={`${CUSTOM_STYLES.TYPE.SUBTITLE} text-black mb-2`}>
                   {path.title}
                 </h2>
-                <p className="text-sm text-gray-700 mb-3">{path.body}</p>
+                <p className={`${CUSTOM_STYLES.TYPE.META} mb-3`}>{path.body}</p>
                 <span className="text-sm font-medium text-blue-700">
                   {path.cta} →
                 </span>

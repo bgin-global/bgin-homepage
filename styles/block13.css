@@ -48,10 +48,10 @@
   --tbd-border: #e5e7eb;
   
   /* Shadow and Border Radius */
-  --card-radius: 12px;
-  --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --card-radius: 6px;
+  --shadow-soft: none;
+  --shadow-medium: none;
+  --shadow-large: none;
 }
 
 /* Reset and Base Styles for Block 13 */
@@ -156,23 +156,34 @@
   text-decoration: none;
 }
 
-/* Section Styling */
+/* Section Styling — align with SPACE.SECTION / TYPE.SECTION */
 .block13-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .block13-section-container {
-  max-width: 1200px;
+  max-width: 64rem; /* max-w-5xl */
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 .block13-section-title {
   font-family: var(--font-display), var(--font-sans), var(--font-jp), sans-serif;
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  font-weight: 700;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
   color: var(--bgin-text);
+}
+
+@media (min-width: 768px) {
+  .block13-section {
+    padding: 4rem 0;
+  }
+
+  .block13-section-title {
+    font-size: 1.5rem;
+  }
 }
 
 /* Card Components */
@@ -186,8 +197,8 @@
 }
 
 .block13-card:hover {
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-2px);
+  border-color: #d1d5db;
+  transform: none;
 }
 
 /* Working Group Specific Styles */

@@ -3,8 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import { BLOCK15_PAGE, BLOCK15_REGISTER } from "@/contents/block15Promo";
-
-const DISCOURSE = "https://bgin.discourse.group/";
+import DiscourseGuideLink from "@/components/DiscourseGuideLink";
 
 const NAV_LINKS: { href: string; label: string; external?: boolean }[] = [
   { href: "/start", label: "Start here" },
@@ -29,33 +28,28 @@ function Header() {
     <div
       className={`${isOpen ? "" : "border border-b-black"} static w-screen bg-white`}
     >
-      <div className="flex justify-between items-center gap-10 p-4 max-w-5xl m-auto">
+      <div className="flex justify-between items-center gap-6 p-4 max-w-5xl m-auto">
         <Link
           href="/"
-          className="shrink-0 mr-2 inline-flex items-center cursor-pointer"
+          className="shrink-0 mr-1 inline-flex items-center cursor-pointer"
           aria-label="BGIN home"
         >
           <Image
             src="/images/Header/Logo.svg"
             alt="BGIN"
-            className="h-[44px] w-[44px] pointer-events-none"
-            width={44}
-            height={44}
+            className="h-9 w-9 pointer-events-none"
+            width={36}
+            height={36}
             priority
           />
         </Link>
 
         {/* Mobile: only campaign primary + discourse secondary */}
         <div className="flex lg:hidden justify-center items-center gap-2">
-          <a
-            href={DISCOURSE}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Official working forum — open to anyone, no membership required"
-            className="inline-flex px-3 py-2 rounded-md border border-blue-700 text-blue-800 text-sm font-medium hover:bg-blue-50"
-          >
-            Discourse
-          </a>
+          <DiscourseGuideLink
+            label="Discourse"
+            className="px-3 py-2"
+          />
           <a
             href={BLOCK15_REGISTER}
             target="_blank"
@@ -127,28 +121,22 @@ function Header() {
           </button>
         </div>
 
-        <div className="hidden lg:flex justify-center items-center gap-4">
+        <div className="hidden lg:flex justify-center items-center gap-3">
           {NAV_LINKS.filter((l) => l.href !== "https://www.youtube.com/@bgin/videos").map(
             (item) => (
               <Link key={item.href} href={item.href}>
-                <div className="text-lg leading-snug text-black">{item.label}</div>
+                <span className="text-sm font-medium text-gray-700 hover:text-blue-700">
+                  {item.label}
+                </span>
               </Link>
             )
           )}
-          <a
-            href={DISCOURSE}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Official working forum — open to anyone, no membership required"
-            className="inline-flex px-3 py-1.5 rounded-md border border-blue-700 text-blue-800 text-sm font-medium hover:bg-blue-50"
-          >
-            Work on Discourse
-          </a>
+          <DiscourseGuideLink />
           <a
             href={BLOCK15_REGISTER}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex px-4 py-2 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
+            className="inline-flex px-3.5 py-1.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
           >
             Register Block 15
           </a>
@@ -170,15 +158,10 @@ function Header() {
         >
           Register Block 15
         </a>
-        <a
-          href={DISCOURSE}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex justify-center px-4 py-2 rounded-md border border-blue-700 text-blue-800 text-sm font-medium hover:bg-blue-50 mb-3"
+        <DiscourseGuideLink
+          className="justify-center px-4 py-2 mb-3"
           onClick={() => setIsOpen(false)}
-        >
-          Work on Discourse
-        </a>
+        />
         {NAV_LINKS.map((item) =>
           item.external ? (
             <a

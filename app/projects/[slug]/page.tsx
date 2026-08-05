@@ -16,7 +16,9 @@ import {
   BLOCK15_REGISTER,
   isBlock15KeyHub,
 } from "@/contents/block15Promo";
+import { discourseGuideHref } from "@/contents/discourse";
 import { getWgIdentity } from "@/contents/wgIdentity";
+import DiscourseGuideLink from "@/components/DiscourseGuideLink";
 import { publicationsRelatedToHub } from "@/lib/publications";
 import { THEME_LABELS } from "@/contents/themes";
 import { CUSTOM_STYLES } from "@/styles/custom";
@@ -58,25 +60,29 @@ export default function ProjectHubPage({
           >
             ← All projects
           </Link>
-          <p className="text-xs text-gray-500 mt-3 mb-2">
+          <p className={`${CUSTOM_STYLES.TYPE.META} mt-3 mb-2`}>
             Projects / {wgMeta.label} / {hub.title}
           </p>
           <div className="mb-3 flex flex-wrap items-center gap-2">
             <WgChip wg={hub.wg} />
             <StatusChip kind="project" status={hub.status} />
           </div>
-          <h1 className={`${CUSTOM_STYLES.TITLE.LEFT} text-black mb-3`}>
+          <h1 className={`${CUSTOM_STYLES.TYPE.DISPLAY} text-black mb-3`}>
             {hub.title}
           </h1>
-          <p className="text-lg text-gray-700 max-w-3xl mb-6">{hub.pitch}</p>
-          <div className="flex flex-wrap gap-3">
+          <p className={`${CUSTOM_STYLES.TYPE.LEDE} max-w-3xl mb-6`}>{hub.pitch}</p>
+          <div className="flex flex-wrap gap-3 items-center">
+            <DiscourseGuideLink
+              variant="filled"
+              nextUrl={hub.discourseUrl}
+            />
             <a
               href={hub.discourseUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex px-4 py-2 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
+              className="text-sm font-medium text-blue-700 underline"
             >
-              Work on Discourse
+              Open this WG on Discourse ↗
             </a>
             {showBlock15Register && (
               <a
@@ -152,7 +158,7 @@ export default function ProjectHubPage({
 
           {showOverview && (
             <section id="overview">
-              <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+              <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
                 Overview
               </h2>
               <p className="text-gray-800 leading-relaxed">{hub.overview}</p>
@@ -160,7 +166,7 @@ export default function ProjectHubPage({
           )}
 
           <section id="deliverables">
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
               Expected deliverables
             </h2>
             <ul className="list-disc pl-5 space-y-1 text-gray-800">
@@ -171,7 +177,7 @@ export default function ProjectHubPage({
           </section>
 
           <section id="status">
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
               Current status
             </h2>
             <p className="text-gray-800 leading-relaxed">{hub.statusText}</p>
@@ -179,7 +185,7 @@ export default function ProjectHubPage({
 
           {hub.relatedInitiatives && hub.relatedInitiatives.length > 0 && (
             <section id="related-initiatives">
-              <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+              <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
                 Related initiatives
               </h2>
               <p className="text-sm text-gray-600 mb-3">
@@ -202,7 +208,7 @@ export default function ProjectHubPage({
           )}
 
           <section id="documents">
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
               Documents
             </h2>
             {hub.documentsNote && (
@@ -261,7 +267,7 @@ export default function ProjectHubPage({
           </section>
 
           <section id="roadmap">
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
               Roadmap
             </h2>
             <ul className="space-y-0 border-l-2 border-gray-200 ml-2">
@@ -302,7 +308,7 @@ export default function ProjectHubPage({
           </section>
 
           <section id="upcoming">
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
               Upcoming meetings
             </h2>
             <div className="space-y-3">
@@ -313,7 +319,7 @@ export default function ProjectHubPage({
           </section>
 
           <section id="participate">
-            <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
               How to participate
             </h2>
             <ul className="list-disc pl-5 space-y-1 text-gray-800">
@@ -327,13 +333,20 @@ export default function ProjectHubPage({
             </ul>
             <p className="mt-3 text-sm text-gray-600">
               Official working forum (permissionless):{" "}
+              <Link
+                href={discourseGuideHref(hub.discourseUrl)}
+                className="text-blue-700 underline"
+              >
+                How to work on Discourse
+              </Link>
+              {" · "}
               <a
                 href={hub.discourseUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-700 underline"
               >
-                Work on Discourse
+                Open this WG ↗
               </a>
               {" · "}
               <Link href={BLOCK15_PAGE} className="text-blue-700 underline">
@@ -384,7 +397,7 @@ export default function ProjectHubPage({
 
           {(related.length > 0 || relatedPubs.length > 0) && (
             <section id="related">
-              <h2 className="text-2xl font-FamiljenGrotesk font-semibold mb-3">
+              <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} mb-3`}>
                 Related
               </h2>
               {related.length > 0 && (

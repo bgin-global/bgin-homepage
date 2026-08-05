@@ -1,26 +1,76 @@
 import type { ProjectStatus } from "@/contents/projectHubs";
 import type { PublicationStatus } from "@/contents/documents";
 
-/** Muted chips — semantic but low saturation (house gray + soft blue/amber). */
-const PROJECT_CLASS: Record<ProjectStatus, string> = {
-  "In Development": "bg-amber-50 text-amber-950 border border-amber-200",
-  "In Progress": "bg-blue-50 text-blue-900 border border-blue-200",
-  "Public Comment": "bg-gray-100 text-gray-900 border border-gray-300",
-  Published: "bg-gray-100 text-gray-800 border border-gray-200",
-  Dormant: "bg-gray-50 text-gray-600 border border-gray-200",
-  Archived: "bg-gray-100 text-gray-500 border border-gray-200",
+/**
+ * Inline colors — Material Tailwind replaces Tailwind’s amber scale (no 950,
+ * and 900 is bright orange #ff6f00). Class-based amber chips can lose readable
+ * text (light yellow + missing/wrong text color).
+ */
+type ChipStyle = { background: string; color: string; border: string };
+
+const PROJECT_STYLE: Record<ProjectStatus, ChipStyle> = {
+  "In Development": {
+    background: "#fffbeb",
+    color: "#78350f",
+    border: "#fcd34d",
+  },
+  "In Progress": {
+    background: "#eff6ff",
+    color: "#1e3a8a",
+    border: "#bfdbfe",
+  },
+  "Public Comment": {
+    background: "#f3f4f6",
+    color: "#111827",
+    border: "#d1d5db",
+  },
+  Published: {
+    background: "#f3f4f6",
+    color: "#1f2937",
+    border: "#e5e7eb",
+  },
+  Dormant: {
+    background: "#f9fafb",
+    color: "#4b5563",
+    border: "#e5e7eb",
+  },
+  Archived: {
+    background: "#f3f4f6",
+    color: "#6b7280",
+    border: "#e5e7eb",
+  },
 };
 
-const PUBLICATION_CLASS: Record<PublicationStatus, string> = {
-  Current: "bg-blue-50 text-blue-900 border border-blue-200",
-  Superseded: "bg-amber-50 text-amber-950 border border-amber-200",
-  Historical: "bg-gray-100 text-gray-700 border border-gray-200",
+const PUBLICATION_STYLE: Record<PublicationStatus, ChipStyle> = {
+  Current: {
+    background: "#eff6ff",
+    color: "#1e3a8a",
+    border: "#bfdbfe",
+  },
+  Superseded: {
+    background: "#fffbeb",
+    color: "#78350f",
+    border: "#fcd34d",
+  },
+  Historical: {
+    background: "#f3f4f6",
+    color: "#374151",
+    border: "#e5e7eb",
+  },
 };
 
-const TIME_CLASS = {
-  Upcoming: "bg-blue-50 text-blue-900 border border-blue-200",
-  Past: "bg-gray-100 text-gray-600 border border-gray-200",
-} as const;
+const TIME_STYLE: Record<"Upcoming" | "Past", ChipStyle> = {
+  Upcoming: {
+    background: "#eff6ff",
+    color: "#1e3a8a",
+    border: "#bfdbfe",
+  },
+  Past: {
+    background: "#f3f4f6",
+    color: "#4b5563",
+    border: "#e5e7eb",
+  },
+};
 
 type Props =
   | { kind: "project"; status: ProjectStatus }
@@ -28,16 +78,21 @@ type Props =
   | { kind: "time"; status: "Upcoming" | "Past" };
 
 export default function StatusChip(props: Props) {
-  const className =
+  const style =
     props.kind === "project"
-      ? PROJECT_CLASS[props.status]
+      ? PROJECT_STYLE[props.status]
       : props.kind === "publication"
-        ? PUBLICATION_CLASS[props.status]
-        : TIME_CLASS[props.status];
+        ? PUBLICATION_STYLE[props.status]
+        : TIME_STYLE[props.status];
 
   return (
     <span
-      className={`inline-block text-xs font-semibold px-2.5 py-1 rounded ${className}`}
+      className="inline-block text-xs font-semibold px-2.5 py-1 rounded border"
+      style={{
+        background: style.background,
+        color: style.color,
+        borderColor: style.border,
+      }}
     >
       {props.status}
     </span>

@@ -30,8 +30,7 @@ const TimelineItem = ({
           className={`flex shrink-0 self-start ${bgColor} rounded-full h-[60px] w-[60px] z-10`}
         />
         <div
-          className={`grow pt-4 ${highlightImageSrc ? "pb-0" : "pb-7"
-            } ${bgColor} w-fit max-md:max-w-full`}
+          className={`grow pt-4 pb-7 ${bgColor} w-fit max-md:max-w-full`}
         >
           <div className={`${CUSTOM_STYLES.SUBTITLE} ${textColor} px-7`}>
             {date}, {title}
@@ -41,18 +40,20 @@ const TimelineItem = ({
             <Image
               src={imageSrc}
               alt=""
-              width={100}
-              height={100}
-              className="object-contain mt-8 px-7 w-full aspect-[2.12] max-md:mt-10"
+              width={1200}
+              height={675}
+              sizes="(max-width: 768px) 100vw, 640px"
+              className="object-contain mt-8 mb-7 px-7 w-full max-h-56 h-auto max-md:mt-10"
             />
           )}
           {highlightImageSrc && (
             <Image
               src={highlightImageSrc}
               alt=""
-              width={100}
-              height={100}
-              className="object-contain mt-8 w-full h-auto"
+              width={1200}
+              height={400}
+              sizes="(max-width: 768px) 100vw, 640px"
+              className="object-contain mt-8 mb-7 px-7 w-full max-h-56 h-auto"
             />
           )}
         </div>

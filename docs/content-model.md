@@ -112,10 +112,10 @@ One primary filled action per view. Do not compete campaign, join, and orient CT
 | Rank | Action | Treatment | Where |
 |------|--------|-----------|--------|
 | Primary | Register Block 15 (campaign window) | Filled blue-700 / band white button | Header, home Block 15 band, priority hubs |
-| Secondary | Work on Discourse | Outline `border` (not `border-2`), `font-medium` | Header, How to join, hubs |
+| Secondary | Work on Discourse | Outline `border` (not `border-2`), `font-medium` → **`/start/discourse`** (orientation), not a blind external jump | Header, How to join, hubs |
 | Tertiary | Start here, Browse projects/publications/events, Event details | Text links or in-card arrows only — never filled buttons | Nav, intent cards, How to join copy |
 
-Rules: (1) How to join must not re-primary Register or stack Browse/Start as buttons. (2) Register href prefers Eventbrite (`BLOCK15_REGISTER`) for one-click signup; event page is tertiary “details”. (3) After Block 15, demote or remove campaign primary and keep Discourse as the standing secondary.
+Rules: (1) How to join must not re-primary Register or stack Browse/Start as buttons. (2) Register href prefers Eventbrite (`BLOCK15_REGISTER`) for one-click signup; event page is tertiary “details”. (3) After Block 15, demote or remove campaign primary and keep Discourse as the standing secondary. (4) Discourse secondary CTA opens the site guide [`/start/discourse`](/start/discourse) (`contents/discourse.ts`). The guide explains the forum, account signup, and links out to `bgin.discourse.group`. Hubs may pass `?next=` (same-host Discourse URL only) and always offer a text escape “Open this WG on Discourse”.
 
 ## Block meeting photo hero (travel motivation)
 
@@ -142,6 +142,10 @@ Faces load in `app/layout.tsx` via `next/font` (do not `@import` Google Fonts in
 | Japanese | Noto Sans JP | `--font-jp` (stacked after Latin) |
 
 Shared classes: `styles/custom.ts` → `TYPE` / `TITLE` / `DESCRIPTION` (lede uses `text-lg leading-7`). Long-form news body: `.bgin-prose` (`max-width: 65ch`) in `app/globals.css`. Body line-height ≈ 1.6; JP containers (`lang="ja"`) ≈ 1.75.
+
+**Conversion-path scale (prefer `TYPE.*`):** DISPLAY (page H1) → SECTION (H2) → SUBTITLE (H3/cards) → LEDE → BODY → META.  
+**Spacing:** `SPACE.SECTION` (`py-16`), `SPACE.BLOCK` / `STACK`.  
+**Radius:** `RADIUS.CONTROL` = `rounded-md` for buttons, chips, and interactive cards (avoid `rounded-3xl` / pill CTAs on conversion path).
 
 ## Themes (controlled vocabulary)
 

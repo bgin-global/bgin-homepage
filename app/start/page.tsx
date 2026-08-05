@@ -10,6 +10,12 @@ import Link from "next/link";
 
 const PATHS = [
   {
+    title: "I want to join the working forum (Discourse)",
+    body: "See what Discourse is for, how to create an account, then open the official forum. No membership required.",
+    href: "/start/discourse",
+    cta: "How to work on Discourse",
+  },
+  {
     title: "I want to register for Block 15",
     body: `${BLOCK15_META.when} · ${BLOCK15_META.where}. Hybrid meeting — register now, then open a project hub to prepare.`,
     href: BLOCK15_PAGE,
@@ -46,12 +52,12 @@ export default function StartPage() {
     <main className="min-h-screen bg-white w-screen">
       <Header />
 
-      <div className="bg-gray-50 py-16">
+      <div className={`bg-gray-50 ${CUSTOM_STYLES.SPACE.SECTION}`}>
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h1 className={`${CUSTOM_STYLES.TITLE.CENTER} text-black mb-4`}>
+          <h1 className={`${CUSTOM_STYLES.TYPE.DISPLAY} text-black mb-4`}>
             Start here
           </h1>
-          <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-600 max-w-2xl mx-auto`}>
+          <p className={`${CUSTOM_STYLES.TYPE.LEDE} text-gray-600 max-w-2xl mx-auto`}>
             BGIN is permissionless — not a membership organization. Anyone can
             join the work on Discourse, contribute via project hubs, or attend
             meetings. Places to <strong>participate</strong> (Projects) are
@@ -61,12 +67,12 @@ export default function StartPage() {
         </div>
       </div>
 
-      <div className="py-12 max-w-5xl mx-auto px-4 space-y-4">
-        <div className="rounded-lg border-2 border-blue-700 bg-blue-50 p-6">
+      <div className={`py-12 max-w-5xl mx-auto px-4 space-y-4`}>
+        <div className="rounded-md border-2 border-blue-700 bg-blue-50 p-6">
           <p className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-1">
             Registration open
           </p>
-          <h2 className="text-xl font-semibold font-FamiljenGrotesk text-black mb-2">
+          <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-black mb-2`}>
             {BLOCK15_META.title}
           </h2>
           <p className="text-gray-700 mb-4">
@@ -94,12 +100,12 @@ export default function StartPage() {
           <Link
             key={path.href}
             href={path.href}
-            className="block border border-gray-200 rounded-lg p-6 hover:border-blue-500 hover:shadow-sm transition-all bg-white"
+            className="block border border-gray-200 rounded-md p-6 hover:border-blue-700 transition-colors bg-white"
           >
-            <h2 className="text-xl font-semibold font-FamiljenGrotesk text-black mb-2">
+            <h2 className={`${CUSTOM_STYLES.TYPE.SUBTITLE} text-black mb-2`}>
               {path.title}
             </h2>
-            <p className="text-gray-700 mb-3">{path.body}</p>
+            <p className={`${CUSTOM_STYLES.TYPE.BODY} mb-3`}>{path.body}</p>
             <span className="text-blue-700 font-medium text-sm">{path.cta} →</span>
           </Link>
         ))}

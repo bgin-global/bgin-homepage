@@ -22,7 +22,7 @@ export const roadmaps: RoadmapData[] = [
     title: "G20 Osaka Summit",
     description:
       "The 2019 G20 Osaka summit was the fourteenth meeting of the G20, a forum of 19 countries and the EU that together represent most of the world economy",
-    highlightImageSrc: "/images/About/G20_OSAKA.svg",
+    highlightImageSrc: "/images/About/G20_OSAKA.jpg",
     bgColor: "bg-gray-50",
     textColor: "text-black",
   },
@@ -31,7 +31,7 @@ export const roadmaps: RoadmapData[] = [
     title: "FIN/SUM Japan",
     description:
       "Key persons from different stakeholder groups discussed detailed issues and design of multi-stakeholder governance.",
-    imageSrc: "/images/About/FINSUM_2019.svg",
+    imageSrc: "/images/About/FINSUM_2019.jpg",
     bgColor: "bg-blue-700",
     textColor: "text-white",
   },
