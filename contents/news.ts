@@ -9,6 +9,26 @@ export interface NewsItem {
 }
 
 export const allNews: NewsItem[] = [
+    {
+    id: "18",
+    title: "Next WG is coming in August 13",
+    description:
+      "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+    date: "2026-08-09",
+    link: "/news/260809-wgcall-announcement2",
+    tags: ["Working Group", "Event", "Latest"],
+    image: "/images/Events/Block3.jpeg",
+  },
+    {
+    id: "17",
+    title: "Next WG is coming in August 12",
+    description:
+      "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+    date: "2026-08-09",
+    link: "/news/260809-wgcall-announcement1",
+    tags: ["Working Group", "Event"],
+    image: "/images/Events/Block3.jpeg",
+  },
   {
     id: "16",
     title: "Block #15 Registration Now Open — Washington, D.C., October 15–16",
@@ -16,7 +36,7 @@ export const allNews: NewsItem[] = [
       "Registration is open for BGIN Block #15 in Washington, D.C. (15–16 Oct 2026). Hybrid participation available. Priority themes include PQC migration, cybersecurity information sharing, ST/PP, and Accountable Wallet. Register via Eventbrite; fee waivers available for presenting contributors.",
     date: "2026-08-04",
     link: "/news/260804-block15-registration-open",
-    tags: ["Latest", "Conference", "Event"],
+    tags: ["Conference", "Event"],
     image: "/images/Events/Block3.jpeg",
   },
   {
