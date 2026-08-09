@@ -17,7 +17,7 @@ export const allNews: NewsItem[] = [
     date: "2026-08-09",
     link: "/news/260809-wgcall-announcement2",
     tags: ["Working Group", "Event", "Latest"],
-    image: "/images/Events/Block3.jpeg",
+    image: "/images/Logo/BGIN_logomark_black.png",
   },
     {
     id: "17",
@@ -27,7 +27,7 @@ export const allNews: NewsItem[] = [
     date: "2026-08-09",
     link: "/news/260809-wgcall-announcement1",
     tags: ["Working Group", "Event"],
-    image: "/images/Events/Block3.jpeg",
+    image: "/images/Logo/BGIN_logomark_black.png",
   },
   {
     id: "16",
