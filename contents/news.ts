@@ -9,7 +9,17 @@ export interface NewsItem {
 }
 
 export const allNews: NewsItem[] = [
-    {
+  {
+    id: "19",
+    title: "Next WG is coming in August 26, and 27",
+    description:
+      "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+    date: "2026-08-25",
+    link: "/news/260825-wgcall-announcement",
+    tags: ["Working Group", "Event", "Latest"],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
     id: "18",
     title: "Next WG is coming in August 13",
     description:
