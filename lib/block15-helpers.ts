@@ -5,10 +5,13 @@ type SessionRecord = {
   room: string;
   time: string;
   id: string;
+  title: string;
+  wg: string;
   detailPage: string;
   speakers?: string;
   moderator?: string;
   summary?: string;
+  relatedProjectSlugs?: string[];
   [key: string]: unknown;
 };
 
