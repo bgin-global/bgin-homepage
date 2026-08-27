@@ -14,8 +14,18 @@ import {
 import { getHubBySlug } from "@/contents/projectHubs";
 import WgChip from "@/components/WgChip";
 import JoinDiscussionBand from "@/components/JoinDiscussionBand";
+import ProgramTimetable from "@/components/events/block15/ProgramTimetable";
+import {
+  BLOCK15_TIME_ORDER,
+  getBreakTitle,
+  groupSessionsByRoom,
+  groupSessionsByTime,
+  processProgram,
+} from "@/lib/block15-helpers";
 import "@/styles/block13.css";
 import { CUSTOM_STYLES } from "@/styles/custom";
+
+const program = processProgram();
 
 function FoldSummary({ title, blurb }: { title: string; blurb: string }) {
   return (
@@ -91,6 +101,7 @@ export default function Block15Page() {
   };
 
   const [activeDay, setActiveDay] = useState<'day1' | 'day2'>(getDefaultDay());
+  const [viewMode, setViewMode] = useState<'time' | 'room'>('time');
 
   /**
    * Place-first carousel (travel motivation): city/landmark → venue exterior.
@@ -141,48 +152,6 @@ export default function Block15Page() {
     return () => window.removeEventListener("hashchange", openFromHash);
   }, []);
 
-
-  // Program timetable data (TBD)
-  const day1Sessions = [
-    { time: "09:00 - 09:20", title: "Opening Plenary", room: "TBD", summary: "TBD" },
-    { time: "09:20 - 10:50", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "09:20 - 10:50", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "11:00 - 12:30", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "11:00 - 12:30", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "12:30 - 13:30", title: "Lunch Break", room: "", summary: "" },
-    { time: "13:30 - 15:00", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "13:30 - 15:00", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "15:00 - 15:30", title: "Coffee Break", room: "", summary: "" },
-    { time: "15:30 - 17:00", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "15:30 - 17:00", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "17:00 -", title: "Networking Reception", room: "TBD", summary: "TBD" },
-  ];
-
-  const day2Sessions = [
-    { time: "09:00 - 09:20", title: "Opening", room: "TBD", summary: "TBD" },
-    { time: "09:20 - 10:50", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "09:20 - 10:50", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "11:00 - 12:30", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "11:00 - 12:30", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "12:30 - 13:30", title: "Lunch Break", room: "", summary: "" },
-    { time: "13:30 - 15:00", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "13:30 - 15:00", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "15:00 - 15:30", title: "Coffee Break", room: "", summary: "" },
-    { time: "15:30 - 17:00", title: "TBD", room: "Room A", summary: "TBD" },
-    { time: "15:30 - 17:00", title: "TBD", room: "Room B", summary: "TBD" },
-    { time: "17:00 -", title: "Closing", room: "TBD", summary: "TBD" },
-  ];
-
-  const currentSessions = activeDay === 'day1' ? day1Sessions : day2Sessions;
-
-  // Group sessions by time
-  const sessionsByTime: Record<string, typeof day1Sessions> = {};
-  currentSessions.forEach(session => {
-    if (!sessionsByTime[session.time]) {
-      sessionsByTime[session.time] = [];
-    }
-    sessionsByTime[session.time].push(session);
-  });
 
   return (
     <main className="block13-page min-h-screen bg-white w-screen">
@@ -336,9 +305,12 @@ export default function Block15Page() {
                   </a>
                 </li>
                 <li>
-                  <strong className="text-gray-900">Program status:</strong>{" "}
-                  Themes confirmed; detailed session titles will be published as
-                  agendas firm up.
+                  <strong className="text-gray-900">Program:</strong>{" "}
+                  Two-day timetable published — see{" "}
+                  <a href="#program" className="text-blue-700 underline">
+                    Program
+                  </a>
+                  . Session details may be updated as chairs finalize agendas.
                 </li>
               </ul>
               <div className="flex flex-wrap gap-3 items-center">
@@ -406,19 +378,20 @@ export default function Block15Page() {
             </p>
             <div className="bg-blue-50 border border-blue-200 rounded-md p-6">
               <h3 className="text-lg font-semibold text-blue-800 mb-2">
-                Themes confirmed · Session titles TBD
+                Program published
               </h3>
               <p className="text-blue-700">
-                Priority themes are set (see{" "}
-                <a href="#why-attend" className="underline hover:text-blue-900">
-                  Why attend
-                </a>
-                ). The timetable below remains tentative; final session titles
-                will be posted as agendas firm up. Follow our socials:
+                The Block 15 timetable is below (parallel sessions in Room A, Room B, and Open Space).
+                Tea break 11:20–11:30, lunch 13:00–14:00, and tea break 15:30–15:40 each day.
+                Follow our socials:
                 <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">X (Twitter)</a> |
                 <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">LinkedIn</a>
               </p>
             </div>
+          </div>
+
+          <div className="mb-8">
+            <ProgramTimetable />
           </div>
 
           {/* Day Tabs */}
@@ -437,39 +410,160 @@ export default function Block15Page() {
             ))}
           </div>
 
-          <p className="text-sm text-gray-500 mb-6">
+          <p className="text-sm text-gray-500 mb-4">
             {activeDay === 'day1' ? 'Day 1 – October 15, 2026' : 'Day 2 – October 16, 2026'}
           </p>
 
+          <div className="flex justify-between items-center mb-4">
+            <div className="block13-toggle-group">
+              <button
+                onClick={() => setViewMode('time')}
+                className={`block13-toggle ${viewMode === 'time' ? 'active' : ''}`}
+              >
+                By Time
+              </button>
+              <button
+                onClick={() => setViewMode('room')}
+                className={`block13-toggle ${viewMode === 'room' ? 'active' : ''}`}
+              >
+                By Room
+              </button>
+            </div>
+          </div>
+
           {/* Program Content */}
           <div className="space-y-6">
-            {Object.entries(sessionsByTime).map(([time, sessions]) => (
-              <div key={time} className="space-y-3">
-                <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
-                <div className="space-y-2">
-                  {sessions.map((session, idx) => {
-                    const isBreak = session.title === 'Lunch Break' || session.title === 'Coffee Break';
+            {viewMode === 'time' ? (
+              <div className="space-y-6">
+                {BLOCK15_TIME_ORDER[activeDay].map((time) => {
+                  const breakTitle = getBreakTitle(activeDay, time);
+                  if (breakTitle) {
                     return (
-                      <div key={idx} className={`block13-session-card ${isBreak ? 'bg-gray-50' : ''}`}>
-                        <div className="flex flex-row justify-between items-start">
-                          <div className="flex items-center gap-2 flex-grow">
-                            <h3 className="block13-session-title">{session.title}</h3>
-                          </div>
-                          {session.room && (
-                            <div className="flex items-center gap-2 ml-3 flex-shrink-0">
-                              <span className="text-sm text-gray-600 font-medium">{session.room}</span>
-                            </div>
-                          )}
+                      <div key={time} className="space-y-3">
+                        <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
+                        <div className="block13-session-card bg-gray-50">
+                          <h3 className="block13-session-title">{breakTitle}</h3>
                         </div>
-                        {session.summary && !isBreak && (
-                          <p className="text-sm text-gray-500 mt-1">{session.summary}</p>
-                        )}
                       </div>
                     );
-                  })}
-                </div>
+                  }
+
+                  const sessions = (groupSessionsByTime(program[activeDay] as Parameters<typeof groupSessionsByTime>[0])[time] ?? []);
+                  if (sessions.length === 0) return null;
+
+                  return (
+                    <div key={time} className="space-y-3">
+                      <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
+                      <div className="space-y-2">
+                        {sessions.map((session, idx) => (
+                          <Link
+                            key={idx}
+                            href={String(session.detailPage)}
+                            className="block no-underline"
+                          >
+                            <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
+                            <div className="flex flex-row justify-between items-start mb-1">
+                              <div className="flex items-center gap-2 flex-grow">
+                                <h3 className="block13-session-title">{String(session.title)}</h3>
+                              </div>
+                              <div className="flex items-center gap-2 ml-3 flex-shrink-0">
+                                <span className="text-sm text-gray-600 font-medium">{session.room}</span>
+                                {session.wg !== 'General' && (
+                                  <span className={`block13-wg-badge ${String(session.wg).toLowerCase().replace(/\s+/g, '-')}`}>
+                                    {String(session.wg)}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            <p className="text-sm text-gray-600 mb-2">{String(session.summary)}</p>
+                            {Array.isArray(session.relatedProjectSlugs) &&
+                              session.relatedProjectSlugs.length > 0 && (
+                                <div className="mt-1 flex flex-wrap items-center gap-2">
+                                  <span className="text-xs font-semibold text-gray-500">
+                                    Related projects:
+                                  </span>
+                                  {(session.relatedProjectSlugs as string[]).map(
+                                    (slug) => {
+                                      const hub = getHubBySlug(slug);
+                                      if (!hub) return null;
+                                      return (
+                                        <span
+                                          key={slug}
+                                          className="text-xs text-blue-700 underline"
+                                        >
+                                          {hub.shortTitle ?? hub.title}
+                                        </span>
+                                      );
+                                    }
+                                  )}
+                                </div>
+                              )}
+                            {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
+                              <div className="text-xs text-gray-700 flex flex-wrap gap-3">
+                                {session.sessionChair !== 'TBD' && (
+                                  <span><span className="font-semibold">Chair:</span> {String(session.sessionChair)}</span>
+                                )}
+                                {session.contributors !== 'TBD' && (
+                                  <span><span className="font-semibold">Speaker:</span> {String(session.contributors)}</span>
+                                )}
+                              </div>
+                            )}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-            ))}
+            ) : (
+              <div className="space-y-6">
+                {Object.entries(groupSessionsByRoom(program[activeDay] as Parameters<typeof groupSessionsByRoom>[0])).map(([room, sessions]) => (
+                  <div key={room} className="space-y-3">
+                    <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{room}</h3>
+                    <div className="space-y-2">
+                      {sessions.map((session, idx) => (
+                        <Link
+                          key={idx}
+                          href={String(session.detailPage)}
+                          className="block no-underline"
+                        >
+                          <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
+                          <div className="flex flex-row justify-between items-start mb-1">
+                            <h3 className="block13-session-title">{String(session.title)}</h3>
+                            <span className="text-sm text-gray-600 font-medium ml-3">{String(session.displayTime ?? session.time)}</span>
+                          </div>
+                          <p className="text-sm text-gray-600">{String(session.summary)}</p>
+                          {Array.isArray(session.relatedProjectSlugs) &&
+                            session.relatedProjectSlugs.length > 0 && (
+                              <div className="mt-1 flex flex-wrap items-center gap-2">
+                                <span className="text-xs font-semibold text-gray-500">
+                                  Related projects:
+                                </span>
+                                {(session.relatedProjectSlugs as string[]).map(
+                                  (slug) => {
+                                    const hub = getHubBySlug(slug);
+                                    if (!hub) return null;
+                                    return (
+                                      <span
+                                        key={slug}
+                                        className="text-xs text-blue-700 underline"
+                                      >
+                                        {hub.shortTitle ?? hub.title}
+                                      </span>
+                                    );
+                                  }
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
 

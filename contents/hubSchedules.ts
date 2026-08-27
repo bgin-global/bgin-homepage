@@ -1,5 +1,6 @@
 import type { MeetingItem, RoadmapItem } from "./meetingTypes";
 import { WG_META, type ProjectHub, type WgId } from "./projectHubs";
+import { mergeBlock15Meetings } from "@/lib/block15-hub-meetings";
 
 const GDC26 = "https://globaldigitalcollaboration.org/gdc26?day=sept-2-3";
 const BLOCK15 = "/events/20261015-block15";
@@ -285,10 +286,13 @@ const PRIORITY: Record<string, HubSchedule> = {
 };
 
 export function getHubSchedule(hub: ProjectHub): HubSchedule {
-  if (PRIORITY[hub.slug]) return PRIORITY[hub.slug];
-  return {
+  const base = PRIORITY[hub.slug] ?? {
     roadmap: defaultRoadmap(hub.nextMilestone),
     meetings: defaultMeetings(hub),
+  };
+  return {
+    roadmap: base.roadmap,
+    meetings: mergeBlock15Meetings(base.meetings, hub.slug),
   };
 }
 
