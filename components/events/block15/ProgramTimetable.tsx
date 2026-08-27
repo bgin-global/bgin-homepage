@@ -51,10 +51,11 @@ function isBreakSlot(time: string): boolean {
   return time in BREAK_LABELS;
 }
 
-function breakCell(time: string) {
+function breakCell(time: string, rowSpan: number) {
   return (
     <td
       key={time}
+      rowSpan={rowSpan}
       className="border border-gray-300 p-2 bg-gray-100 text-center text-sm text-gray-600 font-medium align-middle"
     >
       {BREAK_LABELS[time]}
@@ -132,13 +133,13 @@ const ProgramTimetable: React.FC = () => {
                         : "bg-gray-50"
                     }`}
                   >
-                    {isBreakSlot(time) ? BREAK_LABELS[time] : time}
+                    {time}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
-              {dayRooms.map((room) => (
+              {dayRooms.map((room, roomIndex) => (
                 <tr key={room}>
                   <td
                     className="border border-gray-300 p-2 text-sm font-medium bg-gray-50 align-top"
@@ -147,7 +148,8 @@ const ProgramTimetable: React.FC = () => {
                   </td>
                   {dayTimeSlots.map((time) => {
                     if (isBreakSlot(time)) {
-                      return breakCell(time);
+                      if (roomIndex !== 0) return null;
+                      return breakCell(time, dayRooms.length);
                     }
 
                     const session = grid[room]?.[time];
