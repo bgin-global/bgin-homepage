@@ -5,14 +5,18 @@ import Link from "next/link";
 import { programData } from "@/lib/block15-program-data";
 import { getWGColorClasses } from "@/lib/block15-wg-colors";
 
+/** Full chronological columns including breaks (matches Sheet 1 / list view). */
 const timeSlots = {
   day1: [
     "09:00 - 09:20",
     "09:20 - 09:50",
     "09:50 - 11:20",
+    "11:20 - 11:30",
     "11:30 - 13:00",
+    "13:00 - 14:00",
     "14:00 - 14:45",
     "14:45 - 15:30",
+    "15:30 - 15:40",
     "15:40 - 17:10",
     "17:10-",
   ],
@@ -20,16 +24,43 @@ const timeSlots = {
     "09:00 - 09:20",
     "09:20 - 09:50",
     "09:50 - 11:20",
+    "11:20 - 11:30",
     "11:30 - 13:00",
+    "13:00 - 14:00",
     "14:00 - 14:45",
+    "15:30 - 15:40",
     "15:40 - 17:10",
   ],
 };
+
+const BREAK_LABELS: Record<string, string> = {
+  "11:20 - 11:30": "Tea Break",
+  "13:00 - 14:00": "Lunch Break",
+  "15:30 - 15:40": "Tea Break",
+};
+
+const RECEPTION_TIME = "17:10-";
+const RECEPTION_SESSION_ID = "1-11";
 
 const rooms = {
   day1: ["Room A", "Room B", "Open Space"],
   day2: ["Room A", "Room B"],
 };
+
+function isBreakSlot(time: string): boolean {
+  return time in BREAK_LABELS;
+}
+
+function breakCell(time: string) {
+  return (
+    <td
+      key={time}
+      className="border border-gray-300 p-2 bg-gray-100 text-center text-sm text-gray-600 font-medium align-middle"
+    >
+      {BREAK_LABELS[time]}
+    </td>
+  );
+}
 
 const ProgramTimetable: React.FC = () => {
   const getSessionGrid = (day: "day1" | "day2") => {
@@ -56,6 +87,14 @@ const ProgramTimetable: React.FC = () => {
       ) {
         grid[roomKey][timeKey] = session;
       }
+      // Networking reception (room TBD) → show in Room A column
+      if (
+        day === "day1" &&
+        session.id === RECEPTION_SESSION_ID &&
+        grid["Room A"]
+      ) {
+        grid["Room A"][RECEPTION_TIME] = session;
+      }
     });
 
     return grid;
@@ -75,11 +114,8 @@ const ProgramTimetable: React.FC = () => {
         <h3 className="text-xl font-bold mb-4">
           {dayLabel} - {date}
         </h3>
-        <p className="text-sm text-gray-500 mb-3">
-          Tea break 11:20–11:30 · Lunch 13:00–14:00 · Tea break 15:30–15:40
-        </p>
         <div className="overflow-x-auto">
-          <table className="w-full border-collapse min-w-[800px]">
+          <table className="w-full border-collapse min-w-[900px]">
             <thead>
               <tr>
                 <th
@@ -90,9 +126,13 @@ const ProgramTimetable: React.FC = () => {
                 {dayTimeSlots.map((time) => (
                   <th
                     key={time}
-                    className="border border-gray-300 bg-gray-50 p-2 text-center text-sm font-semibold"
+                    className={`border border-gray-300 p-2 text-center text-sm font-semibold ${
+                      isBreakSlot(time)
+                        ? "bg-gray-100 text-gray-600"
+                        : "bg-gray-50"
+                    }`}
                   >
-                    {time}
+                    {isBreakSlot(time) ? BREAK_LABELS[time] : time}
                   </th>
                 ))}
               </tr>
@@ -106,12 +146,32 @@ const ProgramTimetable: React.FC = () => {
                     {room}
                   </td>
                   {dayTimeSlots.map((time) => {
+                    if (isBreakSlot(time)) {
+                      return breakCell(time);
+                    }
+
                     const session = grid[room]?.[time];
+
+                    // Day 1 reception: only in Room A column
+                    if (
+                      day === "day1" &&
+                      time === RECEPTION_TIME &&
+                      room !== "Room A"
+                    ) {
+                      return (
+                        <td
+                          key={time}
+                          className="border border-gray-300 p-2 bg-gray-50"
+                        />
+                      );
+                    }
+
                     if (!session) {
                       return (
                         <td key={time} className="border border-gray-300 p-2" />
                       );
                     }
+
                     const wg = String(session.wg ?? "General");
                     const href = `/events/20261015-block15/sessions/${String(session.id)}`;
                     return (
