@@ -234,6 +234,38 @@
   border-left-color: var(--general-color);
 }
 
+/* Session list cards — WG-colored left accent only */
+.block13-session-card.block13-wg-session {
+  border-left: 4px solid var(--general-color);
+}
+
+.block13-session-card.block13-wg-session.ikp {
+  border-left-color: var(--ikp-color);
+}
+
+.block13-session-card.block13-wg-session.cyber-security,
+.block13-session-card.block13-wg-session.cs {
+  border-left-color: var(--cs-color);
+}
+
+.block13-session-card.block13-wg-session.fase,
+.block13-session-card.block13-wg-session.face {
+  border-left-color: var(--fase-color);
+}
+
+.block13-session-card.block13-wg-session.agentic,
+.block13-session-card.block13-wg-session.agentic-ai {
+  border-left-color: var(--agentic-color);
+}
+
+.block13-session-card.block13-wg-session.general {
+  border-left-color: var(--general-color);
+}
+
+.block13-session-card.block13-wg-session.tbd {
+  border-left-color: var(--tbd-color);
+}
+
 .block13-wg-badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;

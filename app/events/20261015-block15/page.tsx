@@ -15,6 +15,7 @@ import { getHubBySlug } from "@/contents/projectHubs";
 import WgChip from "@/components/WgChip";
 import JoinDiscussionBand from "@/components/JoinDiscussionBand";
 import ProgramTimetable from "@/components/events/block15/ProgramTimetable";
+import Block15SessionListCard from "@/components/events/block15/Block15SessionListCard";
 import {
   BLOCK15_TIME_ORDER,
   getBreakTitle,
@@ -456,60 +457,11 @@ export default function Block15Page() {
                       <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
                       <div className="space-y-2">
                         {sessions.map((session, idx) => (
-                          <Link
+                          <Block15SessionListCard
                             key={idx}
-                            href={String(session.detailPage)}
-                            className="block no-underline"
-                          >
-                            <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
-                            <div className="flex flex-row justify-between items-start mb-1">
-                              <div className="flex items-center gap-2 flex-grow">
-                                <h3 className="block13-session-title">{String(session.title)}</h3>
-                              </div>
-                              <div className="flex items-center gap-2 ml-3 flex-shrink-0">
-                                <span className="text-sm text-gray-600 font-medium">{session.room}</span>
-                                {session.wg !== 'General' && (
-                                  <span className={`block13-wg-badge ${String(session.wg).toLowerCase().replace(/\s+/g, '-')}`}>
-                                    {String(session.wg)}
-                                  </span>
-                                )}
-                              </div>
-                            </div>
-                            <p className="text-sm text-gray-600 mb-2">{String(session.summary)}</p>
-                            {Array.isArray(session.relatedProjectSlugs) &&
-                              session.relatedProjectSlugs.length > 0 && (
-                                <div className="mt-1 flex flex-wrap items-center gap-2">
-                                  <span className="text-xs font-semibold text-gray-500">
-                                    Related projects:
-                                  </span>
-                                  {(session.relatedProjectSlugs as string[]).map(
-                                    (slug) => {
-                                      const hub = getHubBySlug(slug);
-                                      if (!hub) return null;
-                                      return (
-                                        <span
-                                          key={slug}
-                                          className="text-xs text-blue-700 underline"
-                                        >
-                                          {hub.shortTitle ?? hub.title}
-                                        </span>
-                                      );
-                                    }
-                                  )}
-                                </div>
-                              )}
-                            {(session.sessionChair !== 'TBD' || session.contributors !== 'TBD') && (
-                              <div className="text-xs text-gray-700 flex flex-wrap gap-3">
-                                {session.sessionChair !== 'TBD' && (
-                                  <span><span className="font-semibold">Chair:</span> {String(session.sessionChair)}</span>
-                                )}
-                                {session.contributors !== 'TBD' && (
-                                  <span><span className="font-semibold">Speaker:</span> {String(session.contributors)}</span>
-                                )}
-                              </div>
-                            )}
-                            </div>
-                          </Link>
+                            session={session}
+                            variant="byTime"
+                          />
                         ))}
                       </div>
                     </div>
@@ -523,41 +475,11 @@ export default function Block15Page() {
                     <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{room}</h3>
                     <div className="space-y-2">
                       {sessions.map((session, idx) => (
-                        <Link
+                        <Block15SessionListCard
                           key={idx}
-                          href={String(session.detailPage)}
-                          className="block no-underline"
-                        >
-                          <div className="block13-session-card cursor-pointer hover:shadow-md transition-shadow">
-                          <div className="flex flex-row justify-between items-start mb-1">
-                            <h3 className="block13-session-title">{String(session.title)}</h3>
-                            <span className="text-sm text-gray-600 font-medium ml-3">{String(session.displayTime ?? session.time)}</span>
-                          </div>
-                          <p className="text-sm text-gray-600">{String(session.summary)}</p>
-                          {Array.isArray(session.relatedProjectSlugs) &&
-                            session.relatedProjectSlugs.length > 0 && (
-                              <div className="mt-1 flex flex-wrap items-center gap-2">
-                                <span className="text-xs font-semibold text-gray-500">
-                                  Related projects:
-                                </span>
-                                {(session.relatedProjectSlugs as string[]).map(
-                                  (slug) => {
-                                    const hub = getHubBySlug(slug);
-                                    if (!hub) return null;
-                                    return (
-                                      <span
-                                        key={slug}
-                                        className="text-xs text-blue-700 underline"
-                                      >
-                                        {hub.shortTitle ?? hub.title}
-                                      </span>
-                                    );
-                                  }
-                                )}
-                              </div>
-                            )}
-                          </div>
-                        </Link>
+                          session={session}
+                          variant="byRoom"
+                        />
                       ))}
                     </div>
                   </div>
