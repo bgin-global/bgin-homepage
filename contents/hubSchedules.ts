@@ -195,24 +195,27 @@ const PRIORITY: Record<string, HubSchedule> = {
   "security-ai-agent": {
     roadmap: [
       { when: "2025–26", what: "Concept & dependency on framework", done: true },
-      { when: "2–3 Sep 2026", what: "GDC26 vulnerability handling session", current: true },
-      { when: "Oct 2026", what: "Block 15" },
+      {
+        when: "2 Sep 2026",
+        what: "GDC26 vulnerability handling session",
+        done: true,
+      },
+      { when: "Oct 2026", what: "Block 15", current: true },
     ],
     meetings: [
       {
         type: "gdc",
         typeLabel: "GDC breakout",
         title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
+        when: "2 Sep 2026 · 12:00–12:50",
         sessionTitle:
           "Vulnerability Handling in the Agentic AI Era",
         plan: [
-          "Discuss agentic approaches to vulnerability and threat information handling.",
-          "Map outcomes back to the Information Sharing Framework.",
-          "Identify Block 15 contributors and open questions.",
+          "Meeting report published (Chatham House Rule).",
+          "Session slides are linked from the report.",
+          "Continue at Block 15: Cyber + IKP Security AI Agent session.",
         ],
-        href: GDC26,
-        external: true,
+        href: "/news/260902-gdc26-vulnerability-handling",
         priority: true,
       },
       {

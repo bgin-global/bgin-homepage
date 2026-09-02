@@ -411,7 +411,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Early workstream on agent roles for vulnerability and threat information handling. Kept on its own URL so In Development status is not confused with the published Framework track. Closely dependent on Cybersecurity Information Sharing Framework.",
     statusText:
-      "Scoping and design discussions; no standalone published package yet. Public programme includes a GDC26 session on vulnerability handling in the agentic AI era. Use the Framework hub for the living information-sharing document.",
+      "The GDC26 Geneva breakout (2 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on work is scheduled at Block 15. Use the Framework hub for the living information-sharing document.",
     deliverables: [
       "Agent workflow concepts for information sharing",
       "Alignment with the Information Sharing Framework",
@@ -420,17 +420,42 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["cybersecurity", "agentic-ai", "ai"],
     discourseUrl: WG_META.cs.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
-    latestDocumentTitle: "See Framework hub + upcoming sessions",
-    nextMilestone: "GDC26 → Block 15",
-    documents: [],
-    documentsNote:
-      "No standalone document package yet. Start with the Information Sharing Framework hub and join the GDC26 / Block 15 sessions listed under Progress.",
+    secondaryCta: {
+      label: "GDC26 report",
+      href: "/news/260902-gdc26-vulnerability-handling",
+    },
+    latestDocumentTitle:
+      "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
+    nextMilestone: "Block 15 (Oct)",
+    documents: [
+      {
+        type: "Meeting report",
+        title: "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
+        when: "2026/09",
+        href: "/news/260902-gdc26-vulnerability-handling",
+      },
+      {
+        type: "Slides",
+        title: "GDC26 session slides",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Vulnerability_Handling_Agentic_AI_Slides.pdf"
+        ),
+      },
+      {
+        type: "Meeting report (PDF)",
+        title: "GDC26 MR (citeable PDF)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Vulnerability_Handling_Agentic_AI_MR.pdf"
+        ),
+      },
+    ],
     relatedSlugs: ["cybersecurity-information-sharing", "agent-standards"],
     participateBullets: [
       "Discuss scope and risks on Discourse — open to anyone",
       "Read the related Framework hub first",
-      "Join the GDC26 Security AI Agent session when the agenda is published",
+      "Read the GDC26 meeting report and continue at Block 15",
     ],
     listed: true,
   },

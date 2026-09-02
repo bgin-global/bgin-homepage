@@ -10,6 +10,24 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "21",
+    title:
+      "GDC26 meeting report: Vulnerability Handling in the Agentic AI Era (Cyber Security / Agentic AI)",
+    description:
+      "Chatham House record of the 2 September 2026 Geneva breakout on sharing, triage, and multistakeholder cooperation. Session slides are included.",
+    date: "2026-09-02",
+    link: "/news/260902-gdc26-vulnerability-handling",
+    tags: [
+      "Publication",
+      "Report",
+      "Cyber Security",
+      "Agentic AI",
+      "Conference",
+      "Latest",
+    ],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
     id: "20",
     title: "The meeting schedule has been released.",
     description:
