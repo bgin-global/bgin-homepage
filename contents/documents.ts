@@ -1245,6 +1245,43 @@ export const documents: Document[] = [
     what: "meeting_report",
   },
 
+  // ===== GDC 2026 (2–3 September 2026, Geneva) =====
+  {
+    id: "GDC26_mr_01",
+    title:
+      "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
+    path: "meeting-reports/gdc26/GDC26_Vulnerability_Handling_Agentic_AI_MR.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "CS",
+    language: "EN",
+    what: "meeting_report",
+    slug: "gdc26-vulnerability-handling",
+    status: "Current",
+    themes: ["cybersecurity", "agentic-ai", "ai"],
+    summary:
+      "Chatham House record of the GDC 2026 Geneva breakout (2 Sep 2026, 12:00–12:50) on sharing, triage, and multistakeholder cooperation for AI-speed vulnerability findings. Session slides are linked from the report.",
+    relatedProjectSlugs: [
+      "security-ai-agent",
+      "cybersecurity-information-sharing",
+    ],
+  },
+  {
+    id: "GDC26_slides_01",
+    title:
+      "GDC26 Slides: Vulnerability Handling in the Agentic AI Era",
+    path: "meeting-reports/gdc26/GDC26_Vulnerability_Handling_Agentic_AI_Slides.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "CS",
+    language: "EN",
+    what: "other",
+    themes: ["cybersecurity", "agentic-ai", "ai"],
+    summary:
+      "BGIN Beamer deck for the GDC 2026 vulnerability-handling breakout, including Block 15 continuation links.",
+    relatedProjectSlugs: ["security-ai-agent"],
+  },
+
   // ===== Layer2 Meetup 2024 @Tokyo (September 2024) =====
   // when: 2024/09 - confirmed by study-reports/layer2-governance/240920_ prefix
   {
