@@ -57,8 +57,8 @@ export default function EventsPage() {
     {
       title: "GDC 2026 · Geneva",
       description: "BGIN breakouts on PQC migration, wallet ST/PP, and agentic vulnerability handling (2–3 Sep 2026).",
-      link: "/news",
-      count: "3 meeting reports in News"
+      link: "/news/260904-gdc26-wrap",
+      count: "Event wrap & 3 meeting reports"
     },
     {
       title: "Block Conferences",

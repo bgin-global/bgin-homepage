@@ -123,8 +123,11 @@ export default function Home() {
         <SectionTitle title="Next activities" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0 mt-6 space-y-3">
           <p className={`${CUSTOM_STYLES.DESCRIPTION} text-black mb-4`}>
-            GDC 2026 session records are in{" "}
-            <Link href="/news" className="text-blue-800 underline font-medium">
+            GDC 2026 wrap and session records are in{" "}
+            <Link
+              href="/news/260904-gdc26-wrap"
+              className="text-blue-800 underline font-medium"
+            >
               News
             </Link>
             . Next gathering is Block 15 — same card pattern as project hub
