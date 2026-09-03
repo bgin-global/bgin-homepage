@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { BLOCK15_REGISTER } from "@/contents/block15Promo";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,16 +44,22 @@ export default function EventsPage() {
       date: "2026 Oct. 15 - 16",
       time: "9:00 - 17:00",
       type: "Block Conference",
-      description: "Join us for BGIN Block #15. This upcoming conference will bring together global stakeholders to advance blockchain governance frameworks and foster international collaboration.",
-      link: "events/20261015-block15",
+      description: "BGIN Block 15 continues GDC 2026 work on PQC migration, cybersecurity information sharing, wallet ST/PP, and related governance tracks. Hybrid meeting in Washington, D.C.",
+      link: "/events/20261015-block15",
       color: eventTypeColors["Block Conference"],
       venue: "Washington, D.C.",
-      registerLink: undefined,
+      registerLink: BLOCK15_REGISTER,
       image: "/images/Events/Block3.jpeg"
     },
   ];
 
   const pastEventCategories = [
+    {
+      title: "GDC 2026 · Geneva",
+      description: "BGIN breakouts on PQC migration, wallet ST/PP, and agentic vulnerability handling (2–3 Sep 2026).",
+      link: "/news",
+      count: "3 meeting reports in News"
+    },
     {
       title: "Block Conferences",
       description: "BGIN General Assemblies and major conferences",
