@@ -170,7 +170,8 @@ export default function Gdc26WrapPage() {
               records are, and where the work goes next. It does not replace
               the three Chatham House meeting reports. Those remain the
               citeable session records. Information from the rooms may be used;
-              floor speakers are not identified here.
+              floor speakers are not identified here. Photographs on this page
+              were taken at Palexpo and on Quai des Bergues during GDC 2026.
             </p>
 
             <div className="max-w-sm mx-auto mb-10">
@@ -302,15 +303,6 @@ export default function Gdc26WrapPage() {
                 </Link>
               </li>
             </ul>
-
-            <Photo
-              src="/images/news/gdc26/sponsors.jpg"
-              alt="GDC 2026 plenary screen thanking conference sponsors"
-              caption="GDC plenary, Palexpo. BGIN’s breakouts sat inside this multi-sponsor programme, next to the identity and trust-infrastructure community."
-              width={1600}
-              height={900}
-              className="mb-10"
-            />
 
             <hr className="border-gray-300 my-8" />
             <p
