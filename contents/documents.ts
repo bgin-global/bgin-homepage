@@ -1281,6 +1281,36 @@ export const documents: Document[] = [
       "BGIN Beamer deck for the GDC 2026 vulnerability-handling breakout, including Block 15 continuation links.",
     relatedProjectSlugs: ["security-ai-agent"],
   },
+  {
+    id: "GDC26_mr_02",
+    title: "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
+    path: "meeting-reports/gdc26/GDC26_Wallet_Security_Assurance_STPP_MR.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "CS",
+    language: "EN",
+    what: "meeting_report",
+    slug: "gdc26-wallet-security-assurance",
+    status: "Current",
+    themes: ["wallet", "cybersecurity", "identity"],
+    summary:
+      "Chatham House record of the GDC 2026 Geneva breakout (3 Sep 2026, 15:00–15:50) on ST/PP for crypto wallets and convergence with digital-identity certification. Speaker: Julien Bringer. Session slides are linked from the report.",
+    relatedProjectSlugs: ["st-pp"],
+  },
+  {
+    id: "GDC26_slides_02",
+    title: "GDC26 Slides: Wallet Security Assurance — ST/PP and Convergence",
+    path: "meeting-reports/gdc26/GDC26_Wallet_Security_Assurance_STPP_Slides.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "CS",
+    language: "EN",
+    what: "other",
+    themes: ["wallet", "cybersecurity", "identity"],
+    summary:
+      "BGIN Beamer deck for the GDC 2026 wallet security assurance breakout, including Block 15 continuation links.",
+    relatedProjectSlugs: ["st-pp"],
+  },
 
   // ===== Layer2 Meetup 2024 @Tokyo (September 2024) =====
   // when: 2024/09 - confirmed by study-reports/layer2-governance/240920_ prefix

@@ -10,6 +10,23 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "22",
+    title:
+      "GDC26 meeting report: Wallet Security Assurance — ST/PP and Convergence (Cyber Security)",
+    description:
+      "Chatham House record of the 3 September 2026 Geneva breakout on crypto-wallet protection profiles and convergence with digital-identity certification. Session slides are included. Speaker: Julien Bringer.",
+    date: "2026-09-03",
+    link: "/news/260903-gdc26-wallet-security-assurance",
+    tags: [
+      "Publication",
+      "Report",
+      "Cyber Security",
+      "Conference",
+      "Latest",
+    ],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
     id: "21",
     title:
       "GDC26 meeting report: Vulnerability Handling in the Agentic AI Era (Cyber Security / Agentic AI)",

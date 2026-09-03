@@ -245,23 +245,26 @@ const PRIORITY: Record<string, HubSchedule> = {
   "st-pp": {
     roadmap: [
       { when: "2025–26", what: "ST/PP drafting", done: true },
-      { when: "2–3 Sep 2026", what: "GDC26 wallet assurance session", current: true },
-      { when: "Oct 2026", what: "Block 15" },
+      {
+        when: "3 Sep 2026",
+        what: "GDC26 wallet assurance session",
+        done: true,
+      },
+      { when: "Oct 2026", what: "Block 15", current: true },
     ],
     meetings: [
       {
         type: "gdc",
         typeLabel: "GDC breakout",
         title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
+        when: "3 Sep 2026 · 15:00–15:50",
         sessionTitle: "Wallet Security Assurance: ST/PP and Convergence",
         plan: [
-          "Discuss ST/PP approaches for wallet security assurance.",
-          "Explore convergence with certification themes.",
-          "Feed outcomes into Block 15 and Accountable Wallet adjacency.",
+          "Meeting report published (Chatham House Rule).",
+          "Session slides are linked from the report.",
+          "Continue at Block 15: Cyber ST/PP session.",
         ],
-        href: GDC26,
-        external: true,
+        href: "/news/260903-gdc26-wallet-security-assurance",
         priority: true,
       },
       {

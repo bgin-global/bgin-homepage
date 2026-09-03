@@ -471,7 +471,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "ST/PP materials for wallet security assurance and convergence with certification programmes. Session series from Block 12–14 documents progress; GDC26 and Block 15 continue the track in CS WG.",
     statusText:
-      "Active across Block 12–14 meeting reports. GDC26 includes a wallet security assurance session; continues toward Block 15 with CS WG discussion on Discourse.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on drafting is scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
       "ST/PP drafts for wallet security",
       "Convergence notes with assurance / certification themes",
@@ -479,10 +479,36 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["wallet", "cybersecurity"],
     discourseUrl: WG_META.cs.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
-    latestDocumentTitle: "Block 14: Security Target and Protection Profile",
-    nextMilestone: "GDC26 → Block 15",
+    secondaryCta: {
+      label: "GDC26 report",
+      href: "/news/260903-gdc26-wallet-security-assurance",
+    },
+    latestDocumentTitle:
+      "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
+    nextMilestone: "Block 15 (Oct)",
     documents: [
+      {
+        type: "Meeting report",
+        title: "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
+        when: "2026/09",
+        href: "/news/260903-gdc26-wallet-security-assurance",
+      },
+      {
+        type: "Slides",
+        title: "GDC26 session slides",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Wallet_Security_Assurance_STPP_Slides.pdf"
+        ),
+      },
+      {
+        type: "Meeting report (PDF)",
+        title: "GDC26 MR (citeable PDF)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Wallet_Security_Assurance_STPP_MR.pdf"
+        ),
+      },
       {
         type: "Meeting report",
         title: "Block 14: Security Target and Protection Profile",
@@ -520,9 +546,9 @@ export const projectHubs: ProjectHub[] = [
       "cybersecurity-information-sharing",
     ],
     participateBullets: [
+      "Read the GDC26 meeting report and continue at Block 15",
       "Review Block 14 ST/PP materials before commenting",
       "Raise evaluation / scope issues on CS Discourse",
-      "Join the GDC26 wallet assurance session and Block 15 CS sessions",
     ],
     listed: true,
   },
