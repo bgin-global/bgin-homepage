@@ -87,8 +87,6 @@ export const WG_META: Record<
   },
 };
 
-const GDC26 = "https://globaldigitalcollaboration.org/gdc26?day=sept-2-3";
-
 export const projectHubs: ProjectHub[] = [
   {
     slug: "pqc-migration",
@@ -99,7 +97,7 @@ export const projectHubs: ProjectHub[] = [
     pitch:
       "Preparing blockchain systems for post-quantum cryptography: crypto agility, migration playbooks, and neutral evaluation infrastructure — coordinated internationally through BGIN.",
     overview:
-      "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement — feeding Block meetings and GDC26.",
+      "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement — feeding Block meetings, including Block 15 follow-on from the GDC26 Geneva breakout.",
     statusText:
       "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on PQC sessions and evaluation-committee work are scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
@@ -364,11 +362,11 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["cybersecurity"],
     discourseUrl: WG_META.cs.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
+    secondaryCta: { label: "Block 15", href: "/events/20261015-block15" },
     workingFolder:
       "https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link",
     latestDocumentTitle: "BGIN Information Sharing Framework (Aug 2025)",
-    nextMilestone: "GDC26 → Block 15 · ISO path",
+    nextMilestone: "Block 15 · ISO path",
     documents: [
       {
         type: "Framework",
@@ -421,7 +419,7 @@ export const projectHubs: ProjectHub[] = [
     participateBullets: [
       "Read the August 2025 framework PDF and raise issues on Discourse (no membership)",
       "Join CS WG sessions linked under Upcoming meetings",
-      "Contribute at GDC26 and Block 15",
+      "Contribute at Block 15",
     ],
     listed: true,
   },
@@ -494,7 +492,7 @@ export const projectHubs: ProjectHub[] = [
     pitch:
       "Wallet security assurance through Security Target and Protection Profile approaches, including certification adjacency.",
     overview:
-      "ST/PP materials for wallet security assurance and convergence with certification programmes. Session series from Block 12–14 documents progress; GDC26 and Block 15 continue the track in CS WG.",
+      "ST/PP materials for wallet security assurance and convergence with certification programmes. Session series from Block 12–14 documents progress; the GDC26 report is published, and Block 15 continues the track in CS WG.",
     statusText:
       "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on drafting is scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
@@ -686,7 +684,7 @@ export const projectHubs: ProjectHub[] = [
       "Shared industry-structure framing across crypto-assets, stablecoins, and tokenized deposits to support regulatory debate.",
     overview:
       "Produces a shared view of industry structure as a basis for regulatory and supervisory debate across jurisdictions.",
-    statusText: "Discussion paper and Block sessions underway toward a 2026 deliverable.",
+    statusText: "Discussion paper and Block sessions underway; next working sessions at Block 15.",
     deliverables: [
       "Industry structure discussion paper",
       "Cross-jurisdiction comparison notes",
@@ -698,7 +696,7 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Summer 2026 document target",
+    nextMilestone: "Block 15",
     documents: [
       {
         type: "Reference",

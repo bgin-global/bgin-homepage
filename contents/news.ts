@@ -10,6 +10,16 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "24",
+    title: "BGIN at GDC 2026: three Geneva breakouts, onward to Block 15",
+    description:
+      "Event wrap from Palexpo, 2–3 September 2026. Links to the three Chatham House session records and Block 15 registration.",
+    date: "2026-09-04",
+    link: "/news/260904-gdc26-wrap",
+    tags: ["Conference", "Latest"],
+    image: "/images/news/gdc26/palexpo-sign.jpg",
+  },
+  {
     id: "23",
     title:
       "GDC26 meeting report: Post-Quantum Cryptography Migration on DLTs (IKP)",
