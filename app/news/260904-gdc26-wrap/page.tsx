@@ -304,15 +304,6 @@ export default function Gdc26WrapPage() {
               </li>
             </ul>
 
-            <Photo
-              src="/images/news/gdc26/sponsors.jpg"
-              alt="GDC 2026 plenary screen thanking conference sponsors"
-              caption="GDC plenary, Palexpo. BGIN’s breakouts sat inside this multi-sponsor programme, next to the identity and trust-infrastructure community."
-              width={1600}
-              height={900}
-              className="mb-10"
-            />
-
             <hr className="border-gray-300 my-8" />
             <p
               className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-600 italic text-center`}
