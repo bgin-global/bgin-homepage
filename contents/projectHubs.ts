@@ -101,7 +101,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement — feeding Block meetings and GDC26.",
     statusText:
-      "Dedicated sessions at Block 13 and Block 14 produced meeting reports. Outreach continues for GDC26 (2–3 Sep 2026) and Block 15 (Oct 2026, Washington, D.C.), including dialogue with research and evaluation partners.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on PQC sessions and evaluation-committee work are scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
       "Practical guidance on PQC migration for blockchain stacks",
       "Crypto-agility architecture patterns (hybrid / algorithm agility)",
@@ -110,10 +110,35 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["pqc", "privacy"],
     discourseUrl: WG_META.ikp.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
-    latestDocumentTitle: "Block 14 MR: Crypto Agility and PQC Migration",
-    nextMilestone: "GDC26 (2–3 Sep) → Block 15 (Oct)",
+    secondaryCta: {
+      label: "GDC26 report",
+      href: "/news/260903-gdc26-pqc-migration",
+    },
+    latestDocumentTitle: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
+    nextMilestone: "Block 15 (Oct)",
     documents: [
+      {
+        type: "Meeting report",
+        title: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
+        when: "2026/09",
+        href: "/news/260903-gdc26-pqc-migration",
+      },
+      {
+        type: "Slides",
+        title: "GDC26 session slides",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides.pdf"
+        ),
+      },
+      {
+        type: "Meeting report (PDF)",
+        title: "GDC26 MR (citeable PDF)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_MR.pdf"
+        ),
+      },
       {
         type: "Meeting report",
         title: "Block 14 MR: Crypto Agility and PQC Migration",
@@ -159,9 +184,9 @@ export const projectHubs: ProjectHub[] = [
       },
     ],
     participateBullets: [
+      "Read the GDC26 meeting report and continue at Block 15",
       "Work on Discourse (IKP) — open to anyone, no membership required",
       "Read the Block 14 meeting report and comment on open issues",
-      "Contribute at GDC26 and Block 15 sessions listed below",
     ],
     listed: true,
   },

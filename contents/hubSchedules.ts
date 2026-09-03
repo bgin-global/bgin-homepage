@@ -57,8 +57,12 @@ const PRIORITY: Record<string, HubSchedule> = {
   "pqc-migration": {
     roadmap: [
       { when: "Mar 2026", what: "Block 14 deep dive", done: true },
-      { when: "2–3 Sep 2026", what: "GDC26 Geneva", current: true },
-      { when: "Oct 2026", what: "Block 15 (Washington, D.C.)" },
+      {
+        when: "3 Sep 2026",
+        what: "GDC26 PQC migration session",
+        done: true,
+      },
+      { when: "Oct 2026", what: "Block 15 (Washington, D.C.)", current: true },
       { when: "Dec 2026", what: "Related SSR workshop track" },
       { when: "2027+", what: "Public migration guidance" },
     ],
@@ -67,16 +71,15 @@ const PRIORITY: Record<string, HubSchedule> = {
         type: "gdc",
         typeLabel: "GDC breakout",
         title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
+        when: "3 Sep 2026 · 17:00–17:50",
         sessionTitle:
           "Post-Quantum Cryptography Migration on DLTs: Deployment, Agility & Governance",
         plan: [
-          "Compare DLT/wallet PQC migration roadmaps (hybrid signatures, staged rollout, infra trade-offs).",
-          "Document deployment gaps and policy alignment across public and private speakers.",
-          "Capture outcomes that feed BGIN Block #15 dialogue with NIST (Oct 2026).",
+          "Meeting report published (Chatham House Rule).",
+          "Session slides are linked from the report.",
+          "Continue at Block 15: PQC keynote and IKP PQC Migration sessions.",
         ],
-        href: GDC26,
-        external: true,
+        href: "/news/260903-gdc26-pqc-migration",
         priority: true,
       },
       {

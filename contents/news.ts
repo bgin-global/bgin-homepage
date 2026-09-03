@@ -10,6 +10,17 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "23",
+    title:
+      "GDC26 meeting report: Post-Quantum Cryptography Migration on DLTs (IKP)",
+    description:
+      "Chatham House record of the 3 September 2026 Geneva breakout on PQC deployment, crypto agility, and a Japan-hosted migration prize. Session slides are included.",
+    date: "2026-09-03",
+    link: "/news/260903-gdc26-pqc-migration",
+    tags: ["Publication", "Report", "Conference", "Latest"],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
     id: "22",
     title:
       "GDC26 meeting report: Wallet Security Assurance — ST/PP and Convergence (Cyber Security)",

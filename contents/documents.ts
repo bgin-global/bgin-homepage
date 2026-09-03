@@ -1311,6 +1311,36 @@ export const documents: Document[] = [
       "BGIN Beamer deck for the GDC 2026 wallet security assurance breakout, including Block 15 continuation links.",
     relatedProjectSlugs: ["st-pp"],
   },
+  {
+    id: "GDC26_mr_03",
+    title: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
+    path: "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_MR.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "IKP",
+    language: "EN",
+    what: "meeting_report",
+    slug: "gdc26-pqc-migration",
+    status: "Current",
+    themes: ["pqc", "wallet", "identity"],
+    summary:
+      "Chatham House record of the GDC 2026 Geneva breakout (3 Sep 2026, 17:00–17:50) on PQC deployment, crypto agility, and a Japan-hosted migration prize. Session slides are linked from the report.",
+    relatedProjectSlugs: ["pqc-migration"],
+  },
+  {
+    id: "GDC26_slides_03",
+    title: "GDC26 Slides: Post-Quantum Cryptography Migration on DLTs",
+    path: "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "IKP",
+    language: "EN",
+    what: "other",
+    themes: ["pqc", "wallet"],
+    summary:
+      "BGIN Beamer deck for the GDC 2026 PQC migration breakout, including Block 15 continuation links.",
+    relatedProjectSlugs: ["pqc-migration"],
+  },
 
   // ===== Layer2 Meetup 2024 @Tokyo (September 2024) =====
   // when: 2024/09 - confirmed by study-reports/layer2-governance/240920_ prefix
