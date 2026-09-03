@@ -170,7 +170,8 @@ export default function Gdc26WrapPage() {
               records are, and where the work goes next. It does not replace
               the three Chatham House meeting reports. Those remain the
               citeable session records. Information from the rooms may be used;
-              floor speakers are not identified here.
+              floor speakers are not identified here. Photographs on this page
+              were taken at Palexpo and on Quai des Bergues during GDC 2026.
             </p>
 
             <div className="max-w-sm mx-auto mb-10">
