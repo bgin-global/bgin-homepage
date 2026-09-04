@@ -2,6 +2,7 @@
 
 English handover for whoever continues after PR **#89** landed on `main`.  
 **Session log (what happened):** [`session-2026-08-05-log.md`](./session-2026-08-05-log.md)  
+**Later session (GDC wrap / Block 15 next / browserslist):** [`session-2026-09-04-handover.md`](./session-2026-09-04-handover.md)  
 **Editorial model:** [`content-model.md`](./content-model.md) · **IA overview:** [`content-ia-handover.md`](./content-ia-handover.md) · **Sitewide checklist:** [`sitewide-ia-rollout.md`](./sitewide-ia-rollout.md)
 
 ---
@@ -16,6 +17,10 @@ English handover for whoever continues after PR **#89** landed on `main`.
 ---
 
 ## Do this next (priority)
+
+### P0 — October 2026: browserslist refresh (once)
+
+See [`session-2026-09-04-handover.md`](./session-2026-09-04-handover.md). Run `npm run update-browserslist` **once in October 2026**. Commit `package-lock.json` only if it changes. Do not restore the old `postinstall` hook.
 
 ### P0 — Confirm News listing for Block 15 registration
 

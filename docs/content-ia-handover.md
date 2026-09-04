@@ -2,7 +2,7 @@
 
 **Language:** All handover and initial design documentation for this workstream is written in **English** (this file and `docs/content-model.md`). Keep future design / handover notes in English as well.
 
-**Related:** Editorial rules → [`content-model.md`](./content-model.md) · Sitewide rollout → [`sitewide-ia-rollout.md`](./sitewide-ia-rollout.md) · Session 2026-08-05 → [`session-2026-08-05-log.md`](./session-2026-08-05-log.md) · [`session-2026-08-05-handover.md`](./session-2026-08-05-handover.md)
+**Related:** Editorial rules → [`content-model.md`](./content-model.md) · Sitewide rollout → [`sitewide-ia-rollout.md`](./sitewide-ia-rollout.md) · Session 2026-08-05 → [`session-2026-08-05-log.md`](./session-2026-08-05-log.md) · [`session-2026-08-05-handover.md`](./session-2026-08-05-handover.md) · Session 2026-09-04 (October browserslist homework) → [`session-2026-09-04-handover.md`](./session-2026-09-04-handover.md)
 
 ## Problem
 
