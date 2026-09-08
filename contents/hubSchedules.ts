@@ -2,7 +2,6 @@ import type { MeetingItem, RoadmapItem } from "./meetingTypes";
 import { WG_META, type ProjectHub, type WgId } from "./projectHubs";
 import { mergeBlock15Meetings } from "@/lib/block15-hub-meetings";
 
-const GDC26 = "https://globaldigitalcollaboration.org/gdc26?day=sept-2-3";
 const BLOCK15 = "/events/20261015-block15";
 
 export interface HubSchedule {
@@ -14,8 +13,8 @@ function defaultRoadmap(nextMilestone?: string): RoadmapItem[] {
   return [
     { when: "2025–26", what: "Block sessions & drafts", done: true },
     {
-      when: "Sep–Oct 2026",
-      what: nextMilestone ?? "GDC26 → Block 15",
+      when: "Oct 2026",
+      what: nextMilestone ?? "Block 15",
       current: true,
     },
     { when: "2027", what: "Follow-on deliverables" },
@@ -36,6 +35,7 @@ function defaultMeetings(hub: ProjectHub): MeetingItem[] {
         "Confirm materials and contributors for the Block 15 program.",
       ],
       href: BLOCK15,
+      priority: true,
     },
     {
       type: "wg",
@@ -44,7 +44,7 @@ function defaultMeetings(hub: ProjectHub): MeetingItem[] {
       when: "Announced on Discourse",
       plan: [
         "Review open comments on the latest draft or meeting report.",
-        "Prep agenda items and contributors for upcoming Block / GDC milestones.",
+        "Prep agenda items and contributors for Block 15.",
         "Coordinate cross-WG handoffs where needed.",
       ],
       href: hub.discourseUrl,
@@ -57,28 +57,16 @@ const PRIORITY: Record<string, HubSchedule> = {
   "pqc-migration": {
     roadmap: [
       { when: "Mar 2026", what: "Block 14 deep dive", done: true },
-      { when: "2–3 Sep 2026", what: "GDC26 Geneva", current: true },
-      { when: "Oct 2026", what: "Block 15 (Washington, D.C.)" },
+      {
+        when: "3 Sep 2026",
+        what: "GDC26 PQC migration session",
+        done: true,
+      },
+      { when: "Oct 2026", what: "Block 15 (Washington, D.C.)", current: true },
       { when: "Dec 2026", what: "Related SSR workshop track" },
       { when: "2027+", what: "Public migration guidance" },
     ],
     meetings: [
-      {
-        type: "gdc",
-        typeLabel: "GDC breakout",
-        title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
-        sessionTitle:
-          "Post-Quantum Cryptography Migration on DLTs: Deployment, Agility & Governance",
-        plan: [
-          "Compare DLT/wallet PQC migration roadmaps (hybrid signatures, staged rollout, infra trade-offs).",
-          "Document deployment gaps and policy alignment across public and private speakers.",
-          "Capture outcomes that feed BGIN Block #15 dialogue with NIST (Oct 2026).",
-        ],
-        href: GDC26,
-        external: true,
-        priority: true,
-      },
       {
         type: "block",
         typeLabel: "Block meeting",
@@ -90,6 +78,7 @@ const PRIORITY: Record<string, HubSchedule> = {
           "Confirm materials and contributors for the Block 15 program.",
         ],
         href: BLOCK15,
+        priority: true,
       },
       {
         type: "wg",
@@ -98,7 +87,7 @@ const PRIORITY: Record<string, HubSchedule> = {
         when: "Announced on Discourse",
         plan: [
           "Review open comments on the latest draft or meeting report.",
-          "Prep agenda items and contributors for upcoming Block / GDC milestones.",
+          "Prep agenda items and contributors for Block 15.",
           "Coordinate cross-WG handoffs where needed.",
         ],
         href: WG_META.ikp.discourseUrl,
@@ -124,6 +113,7 @@ const PRIORITY: Record<string, HubSchedule> = {
           "Identify follow-on drafting needs for Block 15 outcomes.",
         ],
         href: BLOCK15,
+        priority: true,
       },
       {
         type: "wg",
@@ -145,27 +135,12 @@ const PRIORITY: Record<string, HubSchedule> = {
       { when: "Mar 2026", what: "Block 14 sessions", done: true },
       {
         when: "2–3 Sep 2026",
-        what: "GDC26 + ISO-oriented next steps",
-        current: true,
+        what: "GDC26 CS track (Security AI Agent session)",
+        done: true,
       },
-      { when: "Oct 2026", what: "Block 15 coordination" },
+      { when: "Oct 2026", what: "Block 15 · ISO path", current: true },
     ],
     meetings: [
-      {
-        type: "gdc",
-        typeLabel: "GDC breakout",
-        title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
-        sessionTitle: "Cybersecurity information sharing (CS track)",
-        plan: [
-          "Share framework adoption lessons with operators and ISAC-adjacent partners.",
-          "Clarify handoff points to the Security AI Agent workstream.",
-          "Capture ISO-path questions for Block 15.",
-        ],
-        href: GDC26,
-        external: true,
-        priority: true,
-      },
       {
         type: "block",
         typeLabel: "Block meeting",
@@ -177,6 +152,7 @@ const PRIORITY: Record<string, HubSchedule> = {
           "Confirm owners for post-Block drafting.",
         ],
         href: BLOCK15,
+        priority: true,
       },
       {
         type: "wg",
@@ -185,7 +161,7 @@ const PRIORITY: Record<string, HubSchedule> = {
         when: "Announced on Discourse",
         plan: [
           "Track open comments on the Aug 2025 framework and Block 14 MRs.",
-          "Prep Block / GDC materials; keep AI Agent track on its own agenda.",
+          "Prep Block 15 materials; keep AI Agent track on its own agenda.",
         ],
         href: WG_META.cs.discourseUrl,
         external: true,
@@ -195,26 +171,14 @@ const PRIORITY: Record<string, HubSchedule> = {
   "security-ai-agent": {
     roadmap: [
       { when: "2025–26", what: "Concept & dependency on framework", done: true },
-      { when: "2–3 Sep 2026", what: "GDC26 vulnerability handling session", current: true },
-      { when: "Oct 2026", what: "Block 15" },
+      {
+        when: "2 Sep 2026",
+        what: "GDC26 vulnerability handling session",
+        done: true,
+      },
+      { when: "Oct 2026", what: "Block 15", current: true },
     ],
     meetings: [
-      {
-        type: "gdc",
-        typeLabel: "GDC breakout",
-        title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
-        sessionTitle:
-          "Vulnerability Handling in the Agentic AI Era",
-        plan: [
-          "Discuss agentic approaches to vulnerability and threat information handling.",
-          "Map outcomes back to the Information Sharing Framework.",
-          "Identify Block 15 contributors and open questions.",
-        ],
-        href: GDC26,
-        external: true,
-        priority: true,
-      },
       {
         type: "block",
         typeLabel: "Block meeting",
@@ -225,6 +189,7 @@ const PRIORITY: Record<string, HubSchedule> = {
           "Collect stakeholder feedback for next development milestones.",
         ],
         href: BLOCK15,
+        priority: true,
       },
       {
         type: "wg",
@@ -242,25 +207,14 @@ const PRIORITY: Record<string, HubSchedule> = {
   "st-pp": {
     roadmap: [
       { when: "2025–26", what: "ST/PP drafting", done: true },
-      { when: "2–3 Sep 2026", what: "GDC26 wallet assurance session", current: true },
-      { when: "Oct 2026", what: "Block 15" },
+      {
+        when: "3 Sep 2026",
+        what: "GDC26 wallet assurance session",
+        done: true,
+      },
+      { when: "Oct 2026", what: "Block 15", current: true },
     ],
     meetings: [
-      {
-        type: "gdc",
-        typeLabel: "GDC breakout",
-        title: "GDC26 · Geneva",
-        when: "2–3 Sep 2026 · times TBA",
-        sessionTitle: "Wallet Security Assurance: ST/PP and Convergence",
-        plan: [
-          "Discuss ST/PP approaches for wallet security assurance.",
-          "Explore convergence with certification themes.",
-          "Feed outcomes into Block 15 and Accountable Wallet adjacency.",
-        ],
-        href: GDC26,
-        external: true,
-        priority: true,
-      },
       {
         type: "block",
         typeLabel: "Block meeting",
@@ -268,9 +222,10 @@ const PRIORITY: Record<string, HubSchedule> = {
         when: "15–16 Oct 2026 · Washington, D.C.",
         plan: [
           "Advance ST/PP drafts and assurance notes.",
-          "Assign owners for post-GDC follow-ups.",
+          "Assign owners for Block 15 follow-ups.",
         ],
         href: BLOCK15,
+        priority: true,
       },
       {
         type: "wg",
@@ -299,19 +254,6 @@ export function getHubSchedule(hub: ProjectHub): HubSchedule {
 /** Sitewide upcoming activities for Home / Events (shared MeetingCard model). */
 export function getSiteUpcomingMeetings(): MeetingItem[] {
   return [
-    {
-      type: "gdc",
-      typeLabel: "GDC",
-      title: "GDC26 · Geneva",
-      when: "2–3 Sep 2026",
-      plan: [
-        "Public programme includes BGIN-related sessions on PQC migration, wallet ST/PP, and agentic vulnerability handling.",
-        "Use project hubs for session context and Block 15 follow-on.",
-      ],
-      href: GDC26,
-      external: true,
-      priority: true,
-    },
     {
       type: "block",
       typeLabel: "Block meeting",

@@ -10,13 +10,66 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
-    id: "21",
+    id: "25",
     title: "Next WG is coming in September 9, and 10",
     description:
       "[Announcement] A BGIN working group meeting will be held. Click here for details.",
     date: "2026-09-08",
     link: "/news/260908-wgcall-announcement",
     tags: ["Working Group", "Event", "Latest"],
+  },
+  {
+    id: "24",
+    title: "BGIN at GDC 2026: three Geneva breakouts, onward to Block 15",
+    description:
+      "Event wrap from Palexpo, 2–3 September 2026. Links to the three Chatham House session records and Block 15 registration.",
+    date: "2026-09-04",
+    link: "/news/260904-gdc26-wrap",
+    tags: ["Conference"],
+    image: "/images/news/gdc26/palexpo-sign.jpg",
+  },
+  {
+    id: "23",
+    title:
+      "GDC26 meeting report: Post-Quantum Cryptography Migration on DLTs (IKP)",
+    description:
+      "Chatham House record of the 3 September 2026 Geneva breakout on PQC deployment, crypto agility, and a Japan-hosted migration prize. Session slides are included.",
+    date: "2026-09-03",
+    link: "/news/260903-gdc26-pqc-migration",
+    tags: ["Publication", "Report", "Conference"],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
+    id: "22",
+    title:
+      "GDC26 meeting report: Wallet Security Assurance — ST/PP and Convergence (Cyber Security)",
+    description:
+      "Chatham House record of the 3 September 2026 Geneva breakout on crypto-wallet protection profiles and convergence with digital-identity certification. Session slides are included. Speaker: Julien Bringer.",
+    date: "2026-09-03",
+    link: "/news/260903-gdc26-wallet-security-assurance",
+    tags: [
+      "Publication",
+      "Report",
+      "Cyber Security",
+      "Conference",
+    ],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
+    id: "21",
+    title:
+      "GDC26 meeting report: Vulnerability Handling in the Agentic AI Era (Cyber Security / Agentic AI)",
+    description:
+      "Chatham House record of the 2 September 2026 Geneva breakout on sharing, triage, and multistakeholder cooperation. Session slides are included.",
+    date: "2026-09-02",
+    link: "/news/260902-gdc26-vulnerability-handling",
+    tags: [
+      "Publication",
+      "Report",
+      "Cyber Security",
+      "Agentic AI",
+      "Conference",
+    ],
     image: "/images/Logo/BGIN_logomark_black.png",
   },
   {

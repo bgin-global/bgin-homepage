@@ -87,8 +87,6 @@ export const WG_META: Record<
   },
 };
 
-const GDC26 = "https://globaldigitalcollaboration.org/gdc26?day=sept-2-3";
-
 export const projectHubs: ProjectHub[] = [
   {
     slug: "pqc-migration",
@@ -99,9 +97,9 @@ export const projectHubs: ProjectHub[] = [
     pitch:
       "Preparing blockchain systems for post-quantum cryptography: crypto agility, migration playbooks, and neutral evaluation infrastructure — coordinated internationally through BGIN.",
     overview:
-      "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement — feeding Block meetings and GDC26.",
+      "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement — feeding Block meetings, including Block 15 follow-on from the GDC26 Geneva breakout.",
     statusText:
-      "Dedicated sessions at Block 13 and Block 14 produced meeting reports. Outreach continues for GDC26 (2–3 Sep 2026) and Block 15 (Oct 2026, Washington, D.C.), including dialogue with research and evaluation partners.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on PQC sessions and evaluation-committee work are scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
       "Practical guidance on PQC migration for blockchain stacks",
       "Crypto-agility architecture patterns (hybrid / algorithm agility)",
@@ -110,10 +108,35 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["pqc", "privacy"],
     discourseUrl: WG_META.ikp.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
-    latestDocumentTitle: "Block 14 MR: Crypto Agility and PQC Migration",
-    nextMilestone: "GDC26 (2–3 Sep) → Block 15 (Oct)",
+    secondaryCta: {
+      label: "GDC26 report",
+      href: "/news/260903-gdc26-pqc-migration",
+    },
+    latestDocumentTitle: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
+    nextMilestone: "Block 15 (Oct)",
     documents: [
+      {
+        type: "Meeting report",
+        title: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
+        when: "2026/09",
+        href: "/news/260903-gdc26-pqc-migration",
+      },
+      {
+        type: "Slides",
+        title: "GDC26 session slides",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides.pdf"
+        ),
+      },
+      {
+        type: "Meeting report (PDF)",
+        title: "GDC26 MR (citeable PDF)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_MR.pdf"
+        ),
+      },
       {
         type: "Meeting report",
         title: "Block 14 MR: Crypto Agility and PQC Migration",
@@ -159,9 +182,9 @@ export const projectHubs: ProjectHub[] = [
       },
     ],
     participateBullets: [
+      "Read the GDC26 meeting report and continue at Block 15",
       "Work on Discourse (IKP) — open to anyone, no membership required",
       "Read the Block 14 meeting report and comment on open issues",
-      "Contribute at GDC26 and Block 15 sessions listed below",
     ],
     listed: true,
   },
@@ -339,11 +362,11 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["cybersecurity"],
     discourseUrl: WG_META.cs.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
+    secondaryCta: { label: "Block 15", href: "/events/20261015-block15" },
     workingFolder:
       "https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link",
     latestDocumentTitle: "BGIN Information Sharing Framework (Aug 2025)",
-    nextMilestone: "GDC26 → Block 15 · ISO path",
+    nextMilestone: "Block 15 · ISO path",
     documents: [
       {
         type: "Framework",
@@ -396,7 +419,7 @@ export const projectHubs: ProjectHub[] = [
     participateBullets: [
       "Read the August 2025 framework PDF and raise issues on Discourse (no membership)",
       "Join CS WG sessions linked under Upcoming meetings",
-      "Contribute at GDC26 and Block 15",
+      "Contribute at Block 15",
     ],
     listed: true,
   },
@@ -411,7 +434,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Early workstream on agent roles for vulnerability and threat information handling. Kept on its own URL so In Development status is not confused with the published Framework track. Closely dependent on Cybersecurity Information Sharing Framework.",
     statusText:
-      "Scoping and design discussions; no standalone published package yet. Public programme includes a GDC26 session on vulnerability handling in the agentic AI era. Use the Framework hub for the living information-sharing document.",
+      "The GDC26 Geneva breakout (2 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on work is scheduled at Block 15. Use the Framework hub for the living information-sharing document.",
     deliverables: [
       "Agent workflow concepts for information sharing",
       "Alignment with the Information Sharing Framework",
@@ -420,17 +443,42 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["cybersecurity", "agentic-ai", "ai"],
     discourseUrl: WG_META.cs.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
-    latestDocumentTitle: "See Framework hub + upcoming sessions",
-    nextMilestone: "GDC26 → Block 15",
-    documents: [],
-    documentsNote:
-      "No standalone document package yet. Start with the Information Sharing Framework hub and join the GDC26 / Block 15 sessions listed under Progress.",
+    secondaryCta: {
+      label: "GDC26 report",
+      href: "/news/260902-gdc26-vulnerability-handling",
+    },
+    latestDocumentTitle:
+      "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
+    nextMilestone: "Block 15 (Oct)",
+    documents: [
+      {
+        type: "Meeting report",
+        title: "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
+        when: "2026/09",
+        href: "/news/260902-gdc26-vulnerability-handling",
+      },
+      {
+        type: "Slides",
+        title: "GDC26 session slides",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Vulnerability_Handling_Agentic_AI_Slides.pdf"
+        ),
+      },
+      {
+        type: "Meeting report (PDF)",
+        title: "GDC26 MR (citeable PDF)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Vulnerability_Handling_Agentic_AI_MR.pdf"
+        ),
+      },
+    ],
     relatedSlugs: ["cybersecurity-information-sharing", "agent-standards"],
     participateBullets: [
       "Discuss scope and risks on Discourse — open to anyone",
       "Read the related Framework hub first",
-      "Join the GDC26 Security AI Agent session when the agenda is published",
+      "Read the GDC26 meeting report and continue at Block 15",
     ],
     listed: true,
   },
@@ -444,9 +492,9 @@ export const projectHubs: ProjectHub[] = [
     pitch:
       "Wallet security assurance through Security Target and Protection Profile approaches, including certification adjacency.",
     overview:
-      "ST/PP materials for wallet security assurance and convergence with certification programmes. Session series from Block 12–14 documents progress; GDC26 and Block 15 continue the track in CS WG.",
+      "ST/PP materials for wallet security assurance and convergence with certification programmes. Session series from Block 12–14 documents progress; the GDC26 report is published, and Block 15 continues the track in CS WG.",
     statusText:
-      "Active across Block 12–14 meeting reports. GDC26 includes a wallet security assurance session; continues toward Block 15 with CS WG discussion on Discourse.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on drafting is scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
       "ST/PP drafts for wallet security",
       "Convergence notes with assurance / certification themes",
@@ -454,10 +502,36 @@ export const projectHubs: ProjectHub[] = [
     ],
     themes: ["wallet", "cybersecurity"],
     discourseUrl: WG_META.cs.discourseUrl,
-    secondaryCta: { label: "GDC26 session", href: GDC26 },
-    latestDocumentTitle: "Block 14: Security Target and Protection Profile",
-    nextMilestone: "GDC26 → Block 15",
+    secondaryCta: {
+      label: "GDC26 report",
+      href: "/news/260903-gdc26-wallet-security-assurance",
+    },
+    latestDocumentTitle:
+      "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
+    nextMilestone: "Block 15 (Oct)",
     documents: [
+      {
+        type: "Meeting report",
+        title: "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
+        when: "2026/09",
+        href: "/news/260903-gdc26-wallet-security-assurance",
+      },
+      {
+        type: "Slides",
+        title: "GDC26 session slides",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Wallet_Security_Assurance_STPP_Slides.pdf"
+        ),
+      },
+      {
+        type: "Meeting report (PDF)",
+        title: "GDC26 MR (citeable PDF)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_Wallet_Security_Assurance_STPP_MR.pdf"
+        ),
+      },
       {
         type: "Meeting report",
         title: "Block 14: Security Target and Protection Profile",
@@ -495,9 +569,9 @@ export const projectHubs: ProjectHub[] = [
       "cybersecurity-information-sharing",
     ],
     participateBullets: [
+      "Read the GDC26 meeting report and continue at Block 15",
       "Review Block 14 ST/PP materials before commenting",
       "Raise evaluation / scope issues on CS Discourse",
-      "Join the GDC26 wallet assurance session and Block 15 CS sessions",
     ],
     listed: true,
   },
@@ -610,7 +684,7 @@ export const projectHubs: ProjectHub[] = [
       "Shared industry-structure framing across crypto-assets, stablecoins, and tokenized deposits to support regulatory debate.",
     overview:
       "Produces a shared view of industry structure as a basis for regulatory and supervisory debate across jurisdictions.",
-    statusText: "Discussion paper and Block sessions underway toward a 2026 deliverable.",
+    statusText: "Discussion paper and Block sessions underway; next working sessions at Block 15.",
     deliverables: [
       "Industry structure discussion paper",
       "Cross-jurisdiction comparison notes",
@@ -622,7 +696,7 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Summer 2026 document target",
+    nextMilestone: "Block 15",
     documents: [
       {
         type: "Reference",

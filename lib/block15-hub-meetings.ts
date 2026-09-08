@@ -113,6 +113,7 @@ function sessionToMeeting(sessionId: string): MeetingItem | null {
       "Prepare written contributions if you plan to present.",
     ],
     href: `/events/20261015-block15/sessions/${sessionId}`,
+    priority: true,
   };
 }
 
@@ -143,5 +144,5 @@ export function mergeBlock15Meetings(
     (m) => m.type !== "gdc" && m.type !== "wg"
   );
 
-  return [...gdc, ...block15, ...other, ...wg];
+  return [...block15, ...other, ...wg, ...gdc];
 }
