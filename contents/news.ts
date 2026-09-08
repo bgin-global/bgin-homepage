@@ -10,13 +10,22 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "25",
+    title: "Next WG is coming in September 9, and 10",
+    description:
+      "[Announcement] A BGIN working group meeting will be held. Click here for details.",
+    date: "2026-09-08",
+    link: "/news/260908-wgcall-announcement",
+    tags: ["Working Group", "Event", "Latest"],
+  },
+  {
     id: "24",
     title: "BGIN at GDC 2026: three Geneva breakouts, onward to Block 15",
     description:
       "Event wrap from Palexpo, 2–3 September 2026. Links to the three Chatham House session records and Block 15 registration.",
     date: "2026-09-04",
     link: "/news/260904-gdc26-wrap",
-    tags: ["Conference", "Latest"],
+    tags: ["Conference"],
     image: "/images/news/gdc26/palexpo-sign.jpg",
   },
   {
@@ -27,7 +36,7 @@ export const allNews: NewsItem[] = [
       "Chatham House record of the 3 September 2026 Geneva breakout on PQC deployment, crypto agility, and a Japan-hosted migration prize. Session slides are included.",
     date: "2026-09-03",
     link: "/news/260903-gdc26-pqc-migration",
-    tags: ["Publication", "Report", "Conference", "Latest"],
+    tags: ["Publication", "Report", "Conference"],
     image: "/images/Logo/BGIN_logomark_black.png",
   },
   {
@@ -43,7 +52,6 @@ export const allNews: NewsItem[] = [
       "Report",
       "Cyber Security",
       "Conference",
-      "Latest",
     ],
     image: "/images/Logo/BGIN_logomark_black.png",
   },
@@ -61,7 +69,6 @@ export const allNews: NewsItem[] = [
       "Cyber Security",
       "Agentic AI",
       "Conference",
-      "Latest",
     ],
     image: "/images/Logo/BGIN_logomark_black.png",
   },
@@ -72,7 +79,7 @@ export const allNews: NewsItem[] = [
       "[Announcement] Let's check the schedule for BGIN15.",
     date: "2026-08-27",
     link: "/news/260827-schedule-opened",
-    tags: ["Conference", "Event", "Latest"],
+    tags: ["Conference", "Event"],
     image: "/images/Events/Block3.jpeg"
   },
   {
