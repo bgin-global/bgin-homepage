@@ -372,28 +372,28 @@ export const programData = {
   },
   rooms: {
     "Room A": {
-      displayName: "Georgetown University — Room A",
+      displayName: "Capitol Campus — Room A (2416)",
       capacity: "TBD",
-      image: "/images/Events/block13/Arrupe Hall - outside.png",
-      address: "3700 O St NW, Washington, DC 20057, United States",
+      image: "/images/Events/block15/room-2416.jpg",
+      address: "111 Massachusetts Avenue NW, Washington, DC 20001, United States",
     },
     "Room B": {
-      displayName: "Georgetown University — Room B",
+      displayName: "Capitol Campus — Room B (2424)",
       capacity: "TBD",
-      image: "/images/Events/block13/Hairiri - outisde.png",
-      address: "3700 O St NW, Washington, DC 20057, United States",
+      image: "/images/Events/block15/room-2424.jpg",
+      address: "111 Massachusetts Avenue NW, Washington, DC 20001, United States",
     },
     "Open Space": {
-      displayName: "Georgetown University — Open Space",
+      displayName: "Capitol Campus — Open Space",
       capacity: "TBD",
-      image: null,
-      address: "3700 O St NW, Washington, DC 20057, United States",
+      image: "/images/Events/block15/capitol-campus-lounge.jpg",
+      address: "111 Massachusetts Avenue NW, Washington, DC 20001, United States",
     },
     TBD: {
       displayName: "To Be Determined",
       capacity: "TBD",
       image: null,
-      address: "3700 O St NW, Washington, DC 20057, United States",
+      address: "111 Massachusetts Avenue NW, Washington, DC 20001, United States",
     },
   },
   workingGroups: {

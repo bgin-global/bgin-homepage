@@ -274,7 +274,7 @@ export default function Block15SessionDetailPage() {
                     </p>
                   )}
                   <p className="text-xs text-gray-500 mt-2">
-                    Georgetown University · Washington, D.C.
+                    Georgetown University Capitol Campus · Washington, D.C.
                   </p>
                   <Link
                     href="/events/20261015-block15/access"
