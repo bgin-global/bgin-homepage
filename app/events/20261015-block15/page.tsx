@@ -109,14 +109,17 @@ export default function Block15Page() {
    * Skip empty meeting-room stills — they don’t sell travel.
    */
   const heroImages = [
-    { src: "/images/Events/Block3.jpeg", alt: "Washington, D.C." },
     {
-      src: "/images/Events/block13/Arrupe Hall - outside.png",
-      alt: "Georgetown University venue exterior — Arrupe Hall",
+      src: "/images/Events/block15/capitol-view-from-campus.jpg",
+      alt: "U.S. Capitol dome seen from Georgetown University Capitol Campus",
     },
     {
-      src: "/images/Events/block13/Hairiri - outisde.png",
-      alt: "Georgetown University venue exterior — Hariri Building",
+      src: "/images/Events/block15/capitol-campus-exterior.jpg",
+      alt: "Georgetown University Capitol Campus exterior at 111 Massachusetts Avenue NW, with the U.S. Capitol in the distance",
+    },
+    {
+      src: "/images/Events/block15/capitol-campus-sign.jpg",
+      alt: "Georgetown University Capitol Campus wayfinding sign — 111 Mass Ave NW",
     },
   ];
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
@@ -555,25 +558,25 @@ export default function Block15Page() {
             <div>
               <h4 className="font-semibold mb-2">Location</h4>
               <p className="text-gray-600 mb-4">
-                Georgetown University<br/>
+                Georgetown University Capitol Campus<br/>
                 Washington, D.C., United States
               </p>
 
               <h4 className="font-semibold mb-2 mt-6">Address</h4>
               <p className="text-sm text-gray-600 mb-4">
-                3700 O St NW<br/>
-                Washington, DC 20057<br/>
+                111 Massachusetts Avenue NW<br/>
+                Washington, DC 20001<br/>
                 United States
               </p>
 
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Room A (TBD)</strong> - Main Sessions</li>
-                <li><strong>Room B (TBD)</strong> - Main Sessions</li>
+                <li><strong>Room A (2416)</strong> — Main Sessions</li>
+                <li><strong>Room B (2424)</strong> — Main Sessions</li>
               </ul>
 
-              <p className="text-sm text-gray-600 mt-4 italic">
-                Same venue as Block 13
+              <p className="text-sm text-gray-600 mt-4">
+                Downtown Capitol Campus — near the U.S. Capitol and Union Station corridor.
               </p>
 
               <div className="mt-6">
@@ -590,7 +593,7 @@ export default function Block15Page() {
             </div>
             <div className="block13-map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.0!2d-77.0730!3d38.9076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b63732a07e83%3A0x9c3e197fa8f3eb97!2sGeorgetown%20University!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://maps.google.com/maps?q=111+Massachusetts+Avenue+NW,+Washington,+DC+20001&hl=en&z=16&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -598,6 +601,7 @@ export default function Block15Page() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-md"
+                title="Map of Georgetown University Capitol Campus, 111 Massachusetts Avenue NW"
               ></iframe>
             </div>
           </div>
