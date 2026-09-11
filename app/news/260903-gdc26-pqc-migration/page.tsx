@@ -10,6 +10,9 @@ const SLIDES_HREF =
   "/documents/meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides.pdf";
 const REPORT_PDF_HREF =
   "/documents/meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_MR.pdf";
+const SCENE_SETTING_SLIDES_HREF =
+  "/documents/meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides_GoogleQuantumAI.pdf";
+const PAPER_DOI_HREF = "https://doi.org/10.1103/j3xf-bw18";
 const PUBLICATION_HREF = "/publications/gdc26-pqc-migration";
 const HUB_HREF = "/projects/pqc-migration";
 const BLOCK15_HREF = "/events/20261015-block15";
@@ -204,6 +207,28 @@ export default function Gdc26PqcMigrationReportPage() {
                 Publications
               </Link>
               .
+            </p>
+            <p className={`${CUSTOM_STYLES.DESCRIPTION} text-gray-700 mb-6`}>
+              The scene-setting slides presented by Google Quantum AI,{" "}
+              <em>
+                When ECC and RSA Break: Urgency of Migrating to Post-Quantum
+                Cryptography
+              </em>
+              , are also available:{" "}
+              <a
+                href={SCENE_SETTING_SLIDES_HREF}
+                className="text-blue-700 underline"
+              >
+                download the scene-setting slides (PDF)
+              </a>
+              . They draw on the open-access paper{" "}
+              <a href={PAPER_DOI_HREF} className="text-blue-700 underline">
+                Securing Elliptic Curve Cryptocurrencies against Quantum
+                Vulnerabilities: Resource Estimates and Mitigations
+              </a>{" "}
+              (PRX Quantum 7, 031001, 21 August 2026), which gives the
+              resource estimates and the on-spend / at-rest / on-setup attack
+              classes used in the discussion.
             </p>
 
             <h2 className={`${CUSTOM_STYLES.SUBTITLE} text-black mt-12 mb-4`}>

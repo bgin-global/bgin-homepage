@@ -35,6 +35,12 @@ export interface ProjectHub {
   deliverables: string[];
   themes: Theme[];
   discourseUrl: string;
+  /**
+   * Project-specific Discourse category (e.g. the competition category).
+   * When set, the primary “Work on Discourse” action lands here; the WG
+   * category link (discourseUrl) is still shown alongside.
+   */
+  forum?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   workingFolder?: string;
   latestDocumentTitle?: string;
@@ -87,6 +93,14 @@ export const WG_META: Record<
   },
 };
 
+/** BGIN coordination repository for the METI/NEDO PQC Migration Prize (public record). */
+export const PQC_COMPETITION_REPO =
+  "https://github.com/bgin-global/pqc-agility-competition";
+
+/** Dedicated Discourse category for the competition (IKP remains the WG home). */
+export const PQC_COMPETITION_DISCOURSE =
+  "https://bgin.discourse.group/c/post-quantum-crypto-agility-competition/44";
+
 export const projectHubs: ProjectHub[] = [
   {
     slug: "pqc-migration",
@@ -95,26 +109,38 @@ export const projectHubs: ProjectHub[] = [
     wgLabel: "IKP — IAM, Key Management and Privacy",
     status: "In Progress",
     pitch:
-      "Preparing blockchain systems for post-quantum cryptography: crypto agility, migration playbooks, and neutral evaluation infrastructure — coordinated internationally through BGIN.",
+      "Preparing blockchain systems for post-quantum cryptography: crypto agility, migration playbooks, and neutral evaluation infrastructure for the METI/NEDO PQC Migration Prize — coordinated internationally through BGIN.",
     overview:
-      "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement — feeding Block meetings, including Block 15 follow-on from the GDC26 Geneva breakout.",
+      "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement. Since September 2026 the workstream also carries BGIN’s coordination role for the Japan-hosted PQC Migration Prize (2026–2028): forming the evaluation committee, drafting the evaluation metrics and rubric, specifying a neutral crypto-agility testbed, and running a six-workshop series (Sep 2026 → Feb 2027) that feeds the host’s call text. BGIN does not select algorithms and does not run the competition.",
     statusText:
-      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on PQC sessions and evaluation-committee work are scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. The public coordination repository for the PQC Migration Prize opened in September 2026: governance, core outcomes (O1–O6), a 22-metric evaluation register, testbed scheme and harness specifications, and the workshop roadmap are all published as draft v0 for open review. The evaluation committee is forming — nominations are open, and the competition’s public discussion has its own category on the BGIN Discourse. Block 15 is the second workshop anchor: seating the committee, moving the metrics register from v0 to v1, and ruling on scheme scope. The SSR-co-located workshop on 13 Dec 2026 targets the call-text input package and a working definition of a “PQC-ready chain”. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
       "Practical guidance on PQC migration for blockchain stacks",
       "Crypto-agility architecture patterns (hybrid / algorithm agility)",
-      "Inputs to neutral evaluation and measurement (testbed coordination)",
-      "Session outcomes and meeting reports from Block meetings",
+      "Evaluation framework for the PQC Migration Prize — metrics register, rubric, and a “PQC-ready chain” definition in standards-ready vocabulary",
+      "Neutral, reproducible testbed evidence (BSafe.network concept) on pre-existing NIST-class signature schemes in Bitcoin- and Ethereum-mappable configurations",
+      "Call-text inputs delivered to the host (METI/NEDO) ahead of the planned January 2027 opening",
+      "Session outcomes and meeting reports from Block, GDC, and workshop meetings",
     ],
     themes: ["pqc", "privacy"],
     discourseUrl: WG_META.ikp.discourseUrl,
+    forum: {
+      label: "Competition category on Discourse",
+      href: PQC_COMPETITION_DISCOURSE,
+    },
     secondaryCta: {
-      label: "GDC26 report",
-      href: "/news/260903-gdc26-pqc-migration",
+      label: "Competition repository",
+      href: PQC_COMPETITION_REPO,
     },
     latestDocumentTitle: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
-    nextMilestone: "Block 15 (Oct)",
+    nextMilestone: "Block 15 (Oct) · committee seated",
     documents: [
+      {
+        type: "Working repository",
+        title: "PQC Migration Prize — BGIN coordination repository (draft v0)",
+        when: "2026/09",
+        href: PQC_COMPETITION_REPO,
+      },
       {
         type: "Meeting report",
         title: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
@@ -128,6 +154,22 @@ export const projectHubs: ProjectHub[] = [
         href: documentHref(
           "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides.pdf"
         ),
+      },
+      {
+        type: "Slides (speaker)",
+        title:
+          "GDC26 scene-setting: When ECC and RSA Break — Urgency of Migrating to PQC (Google Quantum AI)",
+        when: "2026/09",
+        href: documentHref(
+          "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides_GoogleQuantumAI.pdf"
+        ),
+      },
+      {
+        type: "Paper",
+        title:
+          "Securing Elliptic Curve Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and Mitigations (PRX Quantum 7, 031001)",
+        when: "2026/08",
+        href: "https://doi.org/10.1103/j3xf-bw18",
       },
       {
         type: "Meeting report (PDF)",
@@ -169,22 +211,52 @@ export const projectHubs: ProjectHub[] = [
           "meeting-reports/block12/BGIN Block#12 MR Transition to Post-Quantum Cryptography _  Crypto Agility.pdf"
         ),
       },
+      {
+        type: "Roadmap",
+        title: "BGIN × NEDO PQC competition — roadmap and community alignment",
+        when: "2026/05",
+        href: "https://bgin.discourse.group/t/bgin-x-nedo-pqc-competition-roadmap-and-community-alignment/987",
+      },
+      {
+        type: "Session report (draft)",
+        title: "FC / CoDecFin 2026: PQC-Competition session report",
+        when: "2026/03",
+        href: "https://bgin.discourse.group/t/fc-codecfin-pqc-competition-session-report-draft/931",
+      },
+      {
+        type: "Discussion",
+        title: "IKP Post-Quantum Cryptography thread (talks archive)",
+        when: "2026/06",
+        href: "https://bgin.discourse.group/t/ikp-post-quantum-cryptography-thread-06-26/1001",
+      },
+      {
+        type: "Discussion",
+        title: "Post-Quantum Crypto Agility Competition — Discourse category",
+        when: "2026/09",
+        href: PQC_COMPETITION_DISCOURSE,
+      },
     ],
     relatedSlugs: ["st-pp", "accountable-wallet", "offline-key-management"],
     relatedInitiatives: [
       {
-        title: "NEDO/METI technology competition",
-        body: "Competition on PQC migration and advanced key management hosted by NEDO/METI — not by BGIN. Not a call for new PQC algorithms; BGIN’s role is international multi-stakeholder coordination and neutral testbed collaboration.",
+        title: "PQC Migration Prize Competition (METI/NEDO, 2026–2028)",
+        body: "Internationally open prize on PQC migration and advanced key management for public blockchains, hosted and funded by the Japanese Government (METI/NEDO) — not by BGIN. Not a call for new PQC algorithms: schemes come from the NIST process, and NIST remains the primitive authority. Applications are planned to open in January 2027; winner selection is provisional (mid-September 2028 per the July 2026 community briefing; March 2029 per the GDC26 meeting report) until the host publishes the call. Intended path: competition evaluation → BGIN Standard → ISO/TC 307 → Japan’s crypto-asset security criteria.",
       },
       {
-        title: "SSR 2026 PQC workshop track",
-        body: "Related research venue (Baltimore) with a separate PC/paper process. Shown for coordination context only.",
+        title: "SSR 2026 co-located PQC workshop (13 Dec 2026, Baltimore)",
+        body: "Research venue with a separate PC/paper process. The target window for the competition’s call-text input package and the “PQC-ready chain” definition; shown for coordination context only.",
+      },
+      {
+        title: "Ecosystem calendar around Block 15",
+        body: "CBT (~17 Sep 2026, PQC session), the Ethereum Foundation Quantum Retreat (9–12 Oct, specs and testbeds), CSS / BWS (19–23 Oct, guideline drafting), and CoDecFin 2027 at FC’27 (8–12 Feb 2027, Barbados; proposed special area “PQC Migration, Evaluation, and Crypto Agility”). All dates provisional until confirmed by their organizers.",
       },
     ],
     participateBullets: [
-      "Read the GDC26 meeting report and continue at Block 15",
-      "Work on Discourse (IKP) — open to anyone, no membership required",
-      "Read the Block 14 meeting report and comment on open issues",
+      "Nominate an evaluation-committee member — including yourself — via the repository issue template; conflict-of-interest disclosure follows the published policy",
+      "Propose or challenge a metric, or argue a scheme scope ruling (C-01…C-06), in the repository or on Discourse",
+      "Offer a testbed node — universities and neutral labs host BSafe.network evaluation nodes, separated from judging",
+      "Bring comments, corrections, and proposed “PQC-ready chain” definitions to the GDC26 report thread and to the Block 15 PQC sessions (15 Oct)",
+      "Work on Discourse (IKP and the competition category) — open to anyone, no membership required",
     ],
     listed: true,
   },
@@ -316,21 +388,56 @@ export const projectHubs: ProjectHub[] = [
     pitch: "Authentication patterns with privacy guarantees, aligned with IKP identity and key management work.",
     overview:
       "Develops authentication patterns that preserve privacy while meeting practical identity and access needs in blockchain ecosystems.",
-    statusText: "Working documents and Block discussions ongoing within IKP.",
+    statusText:
+      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and a privacy / proof-of-personhood taxonomy is being prepared for an open, topic-focused IKP meeting ahead of Block 15. Block 15 holds a dedicated session on 16 October (privacy-enhanced authentication, ZKP, and proof of personhood).",
     deliverables: [
       "Authentication patterns with privacy guarantees",
-      "Alignment notes with IKP identity / key management work",
+      "Privacy / proof-of-personhood taxonomy: what each proof attests, where the biometric lives, revocation, linkability scope, agent authority",
+      "Alignment notes with IKP identity / key management and PQC migration work",
       "Meeting reports and working drafts",
     ],
     themes: ["privacy", "identity"],
     discourseUrl: WG_META.ikp.discourseUrl,
     secondaryCta: {
-      label: "IKP working documents",
-      href: "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
+      label: "Block 14 report",
+      href: documentHref(
+        "block-events/block14/IKP/IKP_Privacy_Enhanced_Authentication_Key_Management.pdf"
+      ),
     },
-    latestDocumentTitle: "IKP working documents",
-    nextMilestone: "Block 15",
+    workingFolder:
+      "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
+    latestDocumentTitle:
+      "Block 14 MR: Privacy Enhanced Authentication and Key Management",
+    nextMilestone: "Block 15 (16 Oct session)",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 14 MR: Privacy Enhanced Authentication and Key Management",
+        when: "2026/03",
+        href: documentHref(
+          "block-events/block14/IKP/IKP_Privacy_Enhanced_Authentication_Key_Management.pdf"
+        ),
+      },
+      {
+        type: "Meeting report",
+        title: "Block 14 MR: Proof of Personhood",
+        when: "2026/03",
+        href: documentHref("block-events/block14/IKP/IKP_Proof_of_Personhood.pdf"),
+      },
+      {
+        type: "Meeting report",
+        title: "Block 13: ZKP and Privacy Enhanced Authentication",
+        when: "2025/10",
+        href: documentHref(
+          "block-events/block13/1-4 ZKP and Privacy Enhanced Authentication.pdf"
+        ),
+      },
+      {
+        type: "Research pathway",
+        title: "IKP research pathway: ZKP and private biometric authentication",
+        when: "2026/07",
+        href: "https://bgin.discourse.group/t/block-15-ikp-sessions-proposed-agenda/1012/2",
+      },
       {
         type: "Reference",
         title: "IKP working documents",
@@ -338,7 +445,12 @@ export const projectHubs: ProjectHub[] = [
         href: "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
       },
     ],
-    relatedSlugs: ["accountable-wallet"],
+    relatedSlugs: ["accountable-wallet", "pqc-migration"],
+    participateBullets: [
+      "Read the Block 14 meeting reports and add research questions to the ZKP / biometric authentication pathway thread",
+      "Join the open IKP meeting on the privacy / proof-of-personhood taxonomy (announced on Discourse)",
+      "Work on Discourse (IKP) — open to anyone, no membership required",
+    ],
     listed: true,
   },
   {

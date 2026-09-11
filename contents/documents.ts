@@ -1341,6 +1341,21 @@ export const documents: Document[] = [
       "BGIN Beamer deck for the GDC 2026 PQC migration breakout, including Block 15 continuation links.",
     relatedProjectSlugs: ["pqc-migration"],
   },
+  {
+    id: "GDC26_slides_04",
+    title:
+      "GDC26 Scene-setting Slides: When ECC and RSA Break — Urgency of Migrating to Post-Quantum Cryptography (Google Quantum AI)",
+    path: "meeting-reports/gdc26/GDC26_PQC_Migration_DLTs_Slides_GoogleQuantumAI.pdf",
+    where: "Other",
+    when: "2026/09",
+    author: "Other",
+    language: "EN",
+    what: "other",
+    themes: ["pqc"],
+    summary:
+      "Scene-setting deck presented at the GDC 2026 PQC migration breakout (3 Sep 2026) by Google Quantum AI, based on the PRX Quantum paper “Securing Elliptic Curve Cryptocurrencies against Quantum Vulnerabilities: Resource Estimates and Mitigations” (doi.org/10.1103/j3xf-bw18): ECDLP exposure, capability-driven timelines, and attack classes by on-chain consequence.",
+    relatedProjectSlugs: ["pqc-migration"],
+  },
 
   // ===== Layer2 Meetup 2024 @Tokyo (September 2024) =====
   // when: 2024/09 - confirmed by study-reports/layer2-governance/240920_ prefix

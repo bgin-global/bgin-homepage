@@ -3,16 +3,16 @@ import { findBlock15Session } from "./block15-find-session";
 
 const SESSION_PLANS: Record<string, string[]> = {
   "1-2": [
-    "Set the PQC migration framing for IKP working sessions on Day 1.",
-    "Connect policy and deployment questions to project hub materials.",
+    "Set the PQC migration framing for IKP working sessions on Day 1: deployment, crypto agility, and governance — not a new-algorithm contest.",
+    "Connect the GDC26 findings (hybrid then cutover; attack classes; the wrong monitors) to the competition evaluation work.",
   ],
   "1-3": [
     "Discuss AI–blockchain synergies and governance risks with practitioners.",
     "Capture use cases that feed FASE and Agentic AI follow-on work.",
   ],
   "1-4": [
-    "Advance crypto agility and PQC migration drafts with IKP contributors.",
-    "Identify open questions for neutral evaluation and testbed coordination.",
+    "Resource estimates and the ECDSA.fail community: what the benchmark numbers mean for migration timelines, and how they feed competition judging criteria.",
+    "Pressure-test the draft evaluation metrics (v0) and the open questions on reference hardware and block mix in public.",
   ],
   "1-5": [
     "Hands-on Agent Hack work in open space alongside Local Pi connectivity.",
@@ -23,8 +23,8 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Assign owners for post-Block revisions and WG comments.",
   ],
   "1-7": [
-    "Continue IKP PQC migration dialogue from the morning session.",
-    "Consolidate feedback for migration playbook updates.",
+    "Crypto agility as a governance property and the NIST PQC signature migration path across Bitcoin, Ethereum, and other ecosystems — with NIST participation.",
+    "Seat the evaluation committee (Phase A), take the scheme scope rulings, and consolidate feedback for the metrics register v1 and the migration playbook.",
   ],
   "1-8": [
     "Industry-led policy session (partner to be announced).",
@@ -51,8 +51,8 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Connect decentralization metrics work to industry-structure framing.",
   ],
   "2-6": [
-    "Review privacy-enhanced authentication, ZKP, and proof-of-personhood topics.",
-    "Capture IKP comments for draft pattern updates.",
+    "Biometric ZKP side by side: what each proof actually proves, where the biometric lives, and what revocation means for a credential bound to something that cannot be rotated.",
+    "Proof of personhood as agentic AI raises the cost of not knowing a counterparty is human — review the privacy / personhood taxonomy and capture IKP comments for draft pattern updates.",
   ],
   "2-7": [
     "Compare stablecoin policy approaches across jurisdictions.",
