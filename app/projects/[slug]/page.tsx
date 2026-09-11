@@ -41,6 +41,7 @@ export default function ProjectHubPage({
   const relatedPubs = publicationsRelatedToHub(hub, 5);
   const wgMeta = WG_META[hub.wg];
   const { roadmap, meetings } = getHubSchedule(hub);
+  const forumUrl = hub.forum?.href ?? hub.discourseUrl;
   const showOverview = hub.overview.trim() !== hub.pitch.trim();
   const showBlock15Register = isBlock15KeyHub(hub.slug);
   const wgId = getWgIdentity(hub.wg);
@@ -74,8 +75,18 @@ export default function ProjectHubPage({
           <div className="flex flex-wrap gap-3 items-center">
             <DiscourseGuideLink
               variant="filled"
-              nextUrl={hub.discourseUrl}
+              nextUrl={forumUrl}
             />
+            {hub.forum && (
+              <a
+                href={hub.forum.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-blue-700 underline"
+              >
+                {hub.forum.label} ↗
+              </a>
+            )}
             <a
               href={hub.discourseUrl}
               target="_blank"
@@ -334,11 +345,24 @@ export default function ProjectHubPage({
             <p className="mt-3 text-sm text-gray-600">
               Official working forum (permissionless):{" "}
               <Link
-                href={discourseGuideHref(hub.discourseUrl)}
+                href={discourseGuideHref(forumUrl)}
                 className="text-blue-700 underline"
               >
                 How to work on Discourse
               </Link>
+              {hub.forum && (
+                <>
+                  {" · "}
+                  <a
+                    href={hub.forum.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 underline"
+                  >
+                    {hub.forum.label} ↗
+                  </a>
+                </>
+              )}
               {" · "}
               <a
                 href={hub.discourseUrl}

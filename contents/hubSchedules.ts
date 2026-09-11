@@ -1,5 +1,10 @@
 import type { MeetingItem, RoadmapItem } from "./meetingTypes";
-import { WG_META, type ProjectHub, type WgId } from "./projectHubs";
+import {
+  PQC_COMPETITION_REPO,
+  WG_META,
+  type ProjectHub,
+  type WgId,
+} from "./projectHubs";
 import { mergeBlock15Meetings } from "@/lib/block15-hub-meetings";
 
 const BLOCK15 = "/events/20261015-block15";
@@ -62,9 +67,23 @@ const PRIORITY: Record<string, HubSchedule> = {
         what: "GDC26 PQC migration session",
         done: true,
       },
-      { when: "Oct 2026", what: "Block 15 (Washington, D.C.)", current: true },
-      { when: "Dec 2026", what: "Related SSR workshop track" },
-      { when: "2027+", what: "Public migration guidance" },
+      {
+        when: "Sep 2026",
+        what: "Coordination repository open; committee nominations open",
+        done: true,
+      },
+      {
+        when: "Oct 2026",
+        what: "Block 15 (Washington, D.C.) — committee seated, metrics v1, scheme scope rulings",
+        current: true,
+      },
+      { when: "Nov 2026", what: "Testbed harness, node-host call, COI policy" },
+      {
+        when: "13 Dec 2026",
+        what: "SSR workshop — call-text package and “PQC-ready chain” definition",
+      },
+      { when: "Jan 2027", what: "Applications open (planned by the host)" },
+      { when: "2027–28", what: "Evaluation rounds → BGIN Standard → ISO/TC 307" },
     ],
     meetings: [
       {
@@ -81,13 +100,25 @@ const PRIORITY: Record<string, HubSchedule> = {
         priority: true,
       },
       {
+        type: "other",
+        typeLabel: "Workshop",
+        title: "SSR 2026 co-located PQC workshop",
+        when: "13 Dec 2026 · Baltimore",
+        plan: [
+          "Rubric v1 and the working definition of a “PQC-ready chain”.",
+          "Call-text input package handed to the host ahead of the planned January 2027 opening.",
+        ],
+        href: PQC_COMPETITION_REPO + "/blob/main/workshops/ROADMAP.md",
+        external: true,
+      },
+      {
         type: "wg",
         typeLabel: "WG call",
         title: "IKP Working Group",
         when: "Announced on Discourse",
         plan: [
-          "Review open comments on the latest draft or meeting report.",
-          "Prep agenda items and contributors for Block 15.",
+          "Review open comments on the competition repository drafts (governance, outcomes, metrics, testbed).",
+          "Track evaluation-committee nominations and prep the Block 15 PQC sessions.",
           "Coordinate cross-WG handoffs where needed.",
         ],
         href: WG_META.ikp.discourseUrl,
