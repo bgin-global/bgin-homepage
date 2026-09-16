@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { BLOCK15_KEYNOTE } from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
 import { findBlock15Session } from "@/lib/block15-find-session";
 import { programData } from "@/lib/block15-program-data";
@@ -52,6 +53,8 @@ export default function Block15SessionDetailPage() {
     : session.time;
 
   const relatedSlugs = (session as SessionRecord).relatedProjectSlugs ?? [];
+  const keynote =
+    session.id === BLOCK15_KEYNOTE.sessionId ? BLOCK15_KEYNOTE : null;
 
   return (
     <main className="min-h-screen bg-white">
@@ -166,10 +169,23 @@ export default function Block15SessionDetailPage() {
             <div className="md:col-span-2 space-y-8">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Session Overview</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  {session.summary ||
-                    "Detailed session information will be available soon."}
-                </p>
+                {keynote ? (
+                  <div className="space-y-4">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+                      {keynote.label} · {keynote.title}
+                    </p>
+                    {keynote.abstract.map((para, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-700 leading-relaxed">
+                    {session.summary ||
+                      "Detailed session information will be available soon."}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -202,11 +218,71 @@ export default function Block15SessionDetailPage() {
                       <p className="text-gray-600">{session.moderator}</p>
                     </div>
                   )}
-                  {session.speakers && (
-                    <div>
-                      <h3 className="font-semibold text-gray-700">Speakers</h3>
-                      <p className="text-gray-600">{session.speakers}</p>
+                  {keynote ? (
+                    <div className="border border-gray-200 rounded-lg p-5 bg-gray-50">
+                      <div className="flex flex-col sm:flex-row gap-5">
+                        <div className="relative w-28 h-28 sm:w-32 sm:h-32 shrink-0 rounded-full overflow-hidden ring-2 ring-white shadow">
+                          <Image
+                            src={keynote.speaker.image}
+                            alt={keynote.speaker.name}
+                            fill
+                            sizes="128px"
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="min-w-0">
+                          <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
+                            Keynote speaker
+                          </h3>
+                          <p className="text-xl font-bold text-gray-900">
+                            {keynote.speaker.name}
+                          </p>
+                          <p className="text-sm text-gray-600 mb-3">
+                            {keynote.speaker.role}
+                          </p>
+                          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                            <a
+                              href={keynote.speaker.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 hover:underline"
+                            >
+                              LinkedIn
+                            </a>
+                            <a
+                              href={keynote.speaker.x}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 hover:underline"
+                            >
+                              X
+                            </a>
+                            <a
+                              href={keynote.organization.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 hover:underline"
+                            >
+                              {keynote.organization.name}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-4 space-y-3">
+                        {keynote.bio.map((para, idx) => (
+                          <p key={idx} className="text-sm text-gray-700 leading-relaxed">
+                            {para}
+                          </p>
+                        ))}
+                      </div>
                     </div>
+                  ) : (
+                    session.speakers && (
+                      <div>
+                        <h3 className="font-semibold text-gray-700">Speakers</h3>
+                        <p className="text-gray-600">{session.speakers}</p>
+                      </div>
+                    )
                   )}
                   {!session.moderator && !session.speakers && (
                     <p className="text-gray-500">

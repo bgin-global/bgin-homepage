@@ -47,3 +47,37 @@ const KEY_HUB_SLUGS: Set<string> = new Set(
 export function isBlock15KeyHub(slug: string): boolean {
   return KEY_HUB_SLUGS.has(slug);
 }
+
+/** Block 15 opening keynote (Day 1, 09:20–09:50, Room A) — session 1-2 in the program. */
+export const BLOCK15_KEYNOTE = {
+  sessionId: "1-2",
+  sessionPage: `${BLOCK15_PAGE}/sessions/1-2`,
+  label: "Opening keynote",
+  title: "Crypto Agility in the Quantum and AI Era",
+  when: "15 Oct 2026 · 09:20–09:50",
+  room: "Room A",
+  speaker: {
+    name: "Alex Pruden",
+    role: "CEO & Co-Founder, Project Eleven",
+    image: "/images/Events/person/AlexPruden.jpeg",
+    x: "https://x.com/apruden08",
+    linkedin: "https://www.linkedin.com/in/alex-pruden/",
+  },
+  organization: {
+    name: "Project Eleven",
+    website: "https://www.projecteleven.com",
+    x: "https://x.com/projecteleven",
+    linkedin: "https://www.linkedin.com/company/p-11/",
+  },
+  /** One-line version for cards and the home page band. */
+  teaser:
+    "Why choosing the “right” algorithm is no longer enough — crypto agility as a design principle for digital assets and blockchain systems, and the practical work of migrating systems that secure billions of dollars in value.",
+  abstract: [
+    "Cryptography has long been treated as foundational infrastructure: choose secure primitives, implement them correctly, and expect them to remain reliable for decades. That assumption is beginning to break down. Advances in quantum computing are creating a clear migration imperative for widely deployed public-key cryptography, while AI is accelerating both the pace and sophistication of security threats.",
+    "In this environment, the challenge is no longer simply choosing the “right” cryptographic algorithm. Organizations need the ability to adapt their cryptographic infrastructure as threats, standards, and technologies evolve. This talk will explore crypto agility as an essential design principle for digital assets and blockchain systems, the practical challenges of migrating systems that secure billions of dollars in value, and why organizations should begin preparing for cryptographic change well before existing standards are broken.",
+  ],
+  bio: [
+    "Alex Pruden is the CEO & Co-Founder of Project Eleven, an applied lab of builders and technologists at the intersection of quantum computing and cryptography to harden digital assets and build the financial rails in the post-quantum era.",
+    "Alex is a former U.S. Army Green Beret who transitioned from military service to a career in blockchain and cryptocurrency after witnessing the profound challenges in conflict zones like Iraq, Afghanistan, and Syria. After earning an MBA from Stanford, he began his decade-long career in the industry at GGV Capital, Coinbase, and Andreessen Horowitz before joining Aleo as the first employee. As CEO, he scaled the organization to pioneer the first permissionless, privacy-preserving smart contract blockchain powered by zero-knowledge proofs.",
+  ],
+} as const;
