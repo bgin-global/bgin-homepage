@@ -3,8 +3,8 @@ import { findBlock15Session } from "./block15-find-session";
 
 const SESSION_PLANS: Record<string, string[]> = {
   "1-2": [
-    "Set the PQC migration framing for IKP working sessions on Day 1: deployment, crypto agility, and governance — not a new-algorithm contest.",
-    "Connect the GDC26 findings (hybrid then cutover; attack classes; the wrong monitors) to the competition evaluation work.",
+    "Opening keynote: Alex Pruden (CEO & Co-Founder, Project Eleven) on crypto agility as a design principle for digital assets and blockchain systems, and the practical work of migrating systems that secure billions of dollars in value.",
+    "Sets the Day 1 framing for the IKP PQC sessions that follow: deployment, crypto agility, and governance — not a new-algorithm contest — and connects the GDC26 findings to the competition evaluation work.",
   ],
   "1-3": [
     "Discuss AI–blockchain synergies and governance risks with practitioners.",

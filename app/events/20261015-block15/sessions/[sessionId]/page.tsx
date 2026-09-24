@@ -5,6 +5,11 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import {
+  BLOCK15_KEYNOTE,
+  BLOCK15_PQC_SESSIONS,
+  isBlock15PqcSession,
+} from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
 import { findBlock15Session } from "@/lib/block15-find-session";
 import { programData } from "@/lib/block15-program-data";
@@ -52,6 +57,9 @@ export default function Block15SessionDetailPage() {
     : session.time;
 
   const relatedSlugs = (session as SessionRecord).relatedProjectSlugs ?? [];
+  const keynote =
+    session.id === BLOCK15_KEYNOTE.sessionId ? BLOCK15_KEYNOTE : null;
+  const pqc = isBlock15PqcSession(session.id) ? BLOCK15_PQC_SESSIONS : null;
 
   return (
     <main className="min-h-screen bg-white">
@@ -166,11 +174,107 @@ export default function Block15SessionDetailPage() {
             <div className="md:col-span-2 space-y-8">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Session Overview</h2>
-                <p className="text-gray-700 leading-relaxed">
-                  {session.summary ||
-                    "Detailed session information will be available soon."}
-                </p>
+                {keynote ? (
+                  <div className="space-y-4">
+                    <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+                      {keynote.label} · {keynote.title}
+                    </p>
+                    {keynote.abstract.map((para, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-700 leading-relaxed">
+                    {session.summary ||
+                      "Detailed session information will be available soon."}
+                  </p>
+                )}
+                {pqc && (
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                    <Link
+                      href={pqc.keynote.href}
+                      className="text-blue-700 hover:underline"
+                    >
+                      Follows the {pqc.keynote.label} — {pqc.keynote.speaker} →
+                    </Link>
+                    {pqc.sessionIds
+                      .filter((id) => id !== session.id)
+                      .map((id) => (
+                        <Link
+                          key={id}
+                          href={`/events/20261015-block15/sessions/${id}`}
+                          className="text-blue-700 hover:underline"
+                        >
+                          {session.id < id ? "Continues in" : "Continued from"}{" "}
+                          session {id} →
+                        </Link>
+                      ))}
+                  </div>
+                )}
               </div>
+
+              {pqc && (
+                <div className="border border-blue-200 rounded-lg p-6 bg-blue-50/40">
+                  <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                    The {pqc.competition.name}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-5">
+                    {pqc.competition.blurb}
+                  </p>
+
+                  <h3 className="font-semibold text-gray-800 mb-2">Pathway</h3>
+                  <ol className="grid sm:grid-cols-4 gap-2 mb-5 list-none">
+                    {pqc.pathway.map((p, idx) => (
+                      <li
+                        key={p.step}
+                        className="bg-white border border-gray-200 rounded-md p-3"
+                      >
+                        <p className="text-xs text-gray-500">{idx + 1}</p>
+                        <p className="font-semibold text-gray-900 text-sm">
+                          {p.step}
+                        </p>
+                        <p className="text-xs text-gray-600 mt-1">{p.detail}</p>
+                      </li>
+                    ))}
+                  </ol>
+
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    Workshop series · Sep 2026 → Feb 2027
+                  </h3>
+                  <ul className="space-y-1 mb-5 text-sm list-none">
+                    {pqc.workshops.map((w) => (
+                      <li
+                        key={w.id}
+                        className={
+                          "current" in w && w.current
+                            ? "font-semibold text-blue-900"
+                            : "text-gray-700"
+                        }
+                      >
+                        <span className="inline-block w-8">{w.id}</span>
+                        <span className="text-gray-500">{w.when}</span> —{" "}
+                        {w.focus}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                    {pqc.links.map((l) => (
+                      <a
+                        key={l.href}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-700 hover:underline"
+                      >
+                        {l.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div>
                 <h2 className="text-2xl font-bold mb-4">Agenda</h2>
@@ -202,11 +306,71 @@ export default function Block15SessionDetailPage() {
                       <p className="text-gray-600">{session.moderator}</p>
                     </div>
                   )}
-                  {session.speakers && (
-                    <div>
-                      <h3 className="font-semibold text-gray-700">Speakers</h3>
-                      <p className="text-gray-600">{session.speakers}</p>
+                  {keynote ? (
+                    <div className="border border-gray-200 rounded-lg p-5 bg-gray-50">
+                      <div className="flex flex-col sm:flex-row gap-5">
+                        <div className="relative w-28 h-28 sm:w-32 sm:h-32 shrink-0 rounded-full overflow-hidden ring-2 ring-white shadow">
+                          <Image
+                            src={keynote.speaker.image}
+                            alt={keynote.speaker.name}
+                            fill
+                            sizes="128px"
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="min-w-0">
+                          <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
+                            Keynote speaker
+                          </h3>
+                          <p className="text-xl font-bold text-gray-900">
+                            {keynote.speaker.name}
+                          </p>
+                          <p className="text-sm text-gray-600 mb-3">
+                            {keynote.speaker.role}
+                          </p>
+                          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                            <a
+                              href={keynote.speaker.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 hover:underline"
+                            >
+                              LinkedIn
+                            </a>
+                            <a
+                              href={keynote.speaker.x}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 hover:underline"
+                            >
+                              X
+                            </a>
+                            <a
+                              href={keynote.organization.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-700 hover:underline"
+                            >
+                              {keynote.organization.name}
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-4 space-y-3">
+                        {keynote.bio.map((para, idx) => (
+                          <p key={idx} className="text-sm text-gray-700 leading-relaxed">
+                            {para}
+                          </p>
+                        ))}
+                      </div>
                     </div>
+                  ) : (
+                    session.speakers && (
+                      <div>
+                        <h3 className="font-semibold text-gray-700">Speakers</h3>
+                        <p className="text-gray-600">{session.speakers}</p>
+                      </div>
+                    )
                   )}
                   {!session.moderator && !session.speakers && (
                     <p className="text-gray-500">
