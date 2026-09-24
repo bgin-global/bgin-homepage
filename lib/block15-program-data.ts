@@ -64,7 +64,7 @@ export const programData = {
           summary:
             "IKP working session on crypto agility and post-quantum cryptography migration for blockchain stacks and wallets.",
           wg: "IKP",
-          speakers: "",
+          speakers: "Kanta Matsuura, Tadahiko Itoh",
           moderator: "",
           detailPage: "/events/20261015-block15/sessions/1-4",
           agenda: [],
@@ -112,7 +112,7 @@ export const programData = {
           summary:
             "Continued IKP session on post-quantum cryptography migration and crypto agility.",
           wg: "IKP",
-          speakers: "",
+          speakers: "Kanta Matsuura,Tadahiko Itoh",
           moderator: "",
           detailPage: "/events/20261015-block15/sessions/1-7",
           agenda: [],
