@@ -138,13 +138,29 @@ export const programData = {
           time: "11:30 - 13:00",
           room: "Room A",
           summary:
-            "Cybersecurity working session on the Governance of the Security Supply Chain project — vendor guidelines, dependency risk, and supply-chain integrity across blockchain software and operations.",
+            "Cybersecurity risks in crypto-asset services increasingly arise not only from vulnerabilities in blockchain protocols or the compromise of signing keys, but also from dependencies across the broader operational and technology supply chain. Recent incidents have highlighted risks involving external service providers, cloud and CI/CD environments, transaction-generation processes, administrative privileges, smart contracts, oracles, bridges, and other external components.\n\n" +
+            "This session will use the June 2026 research paper Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses as a starting point for discussion. The paper maps the structure and dependencies of the crypto-asset ecosystem, examines recent cybersecurity incidents, and identifies priority areas including third-party risk management, protection against code and transaction tampering, controls over smart contracts and DeFi operations, and the effective use of third-party assessments.\n\n" +
+            "Building on these findings, participants will discuss how security-supply-chain risks should be governed in practice: how critical dependencies should be identified, what operators should verify themselves rather than delegate to vendors or auditors, how responsibilities should be allocated across service providers and subcontractors, and what contractual, technical, monitoring, and assurance mechanisms are appropriate.\n\n" +
+            "The discussion will provide input to BGIN’s ongoing Governance of the Security Supply Chain project, with the aim of developing practical principles and vendor-guideline considerations for crypto and blockchain systems.",
           wg: "Cyber Security",
-          speakers: "",
+          speakers:
+            "Takaya Sugino (Deputy Director, Innovation Strategy Office, Crypto-asset and Stablecoin Division, Asset Management and Insurance Business Supervision Bureau, Financial Services Agency)",
           moderator: "",
           detailPage: "/events/20261015-block15/sessions/1-6",
-          agenda: [],
-          documents: [],
+          agenda: [
+            "Key findings from the June 2026 research paper, including recent incidents, ecosystem dependencies, and priority areas for cybersecurity risk management.",
+            "Discussion on how operators should identify and manage risks arising from vendors, subcontractors, software components, cloud services, smart contracts, oracles, bridges, and other external dependencies.",
+            "Discussion on what operators should verify themselves, what may be delegated to third parties, and how audits, monitoring, contractual controls, and technical safeguards should be combined.",
+            "Identify common principles and practical considerations that could inform BGIN’s work on security supply-chain governance and vendor guidelines.",
+          ],
+          documents: [
+            {
+              title:
+                "Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses — Research paper, June 30, 2026 (Deloitte Tohmatsu LLC)",
+              link: "/documents/block-events/block15/CS/ResearchPaper_dtc_20260630_en.pdf",
+              type: "PDF",
+            },
+          ],
           relatedProjects: ["Governance of the Security Supply Chain"],
           relatedProjectSlugs: ["security-supply-chain"],
         },

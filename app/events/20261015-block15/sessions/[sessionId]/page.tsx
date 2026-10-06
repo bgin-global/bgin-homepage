@@ -185,10 +185,17 @@ export default function Block15SessionDetailPage() {
                       </p>
                     ))}
                   </div>
+                ) : session.summary ? (
+                  <div className="space-y-4">
+                    {session.summary.split("\n\n").map((para, idx) => (
+                      <p key={idx} className="text-gray-700 leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
                 ) : (
                   <p className="text-gray-700 leading-relaxed">
-                    {session.summary ||
-                      "Detailed session information will be available soon."}
+                    Detailed session information will be available soon.
                   </p>
                 )}
                 {pqc && (
