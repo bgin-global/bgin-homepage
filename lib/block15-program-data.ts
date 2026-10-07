@@ -79,7 +79,7 @@ export const programData = {
             "First of two IKP working sessions on the PQC Migration Prize Competition (hosted by METI/NEDO; BGIN coordinates and runs the neutral evaluation testbed). Picks up from the opening keynote on crypto agility and walks through the public competition repository — core outcomes, the draft evaluation metrics register, the testbed scheme register and bench harness — then puts the open evaluation questions to the room.",
           wg: "IKP",
           speakers: "Kanta Matsuura, Tadahiko Itoh",
-          moderator: "",
+          moderator: "Mitchell Travers (Co-Chair, IKP)",
           detailPage: "/events/20261015-block15/sessions/1-4",
           agenda: [
             "From the keynote to the competition: crypto agility as the thing being evaluated — deployment, evaluation, testbeds, and migration governance on live public chains, not new primitives",
@@ -164,7 +164,7 @@ export const programData = {
             "The discussion will provide input to BGIN’s ongoing Governance of the Security Supply Chain project, with the aim of developing practical principles and vendor-guideline considerations for crypto and blockchain systems.",
           wg: "Cyber Security",
           speakers: "",
-          moderator: "",
+          moderator: "Julien Bringer (Chair, Cyber Security)",
           detailPage: "/events/20261015-block15/sessions/1-6",
           agenda: [
             "Key findings from the June 2026 research paper, including recent incidents, ecosystem dependencies, and priority areas for cybersecurity risk management.",
@@ -192,7 +192,7 @@ export const programData = {
             "Second IKP working session on the PQC Migration Prize Competition — the decisions session. Crypto agility as a governance property and the NIST PQC signature migration path across Bitcoin, Ethereum, and other ecosystems, with NIST participation. Block 15 is the second workshop (W2) of the six-month series: the aim is to seat the evaluation committee, take the scheme scope rulings, and move the metrics register from v0 to v1 on the pathway from competition to BGIN Standard to ISO/TC 307.",
           wg: "IKP",
           speakers: "Kanta Matsuura,Tadahiko Itoh",
-          moderator: "",
+          moderator: "Mitchell Travers (Co-Chair, IKP)",
           detailPage: "/events/20261015-block15/sessions/1-7",
           agenda: [
             "Seating the evaluation committee (Phase A): nominations, conflict-of-interest disclosures, chairs",
@@ -419,7 +419,7 @@ export const programData = {
             "Joint Cyber Security and IKP session on the Security AI Agent workstream — information sharing and vulnerability handling in agentic systems.",
           wg: "Cyber Security",
           speakers: "",
-          moderator: "",
+          moderator: "Julien Bringer (Chair, Cyber Security)",
           detailPage: "/events/20261015-block15/sessions/2-4",
           agenda: [
             "Picking up from the GDC26 Geneva breakout on vulnerability handling in the agentic AI era",
@@ -480,7 +480,7 @@ export const programData = {
             "IKP session on authentication that proves the claim without disclosing the person. Builds on the two Block 14 meeting reports and the IKP open meetings since: a high-level view of privacy-enhanced authentication, the proof-of-personhood taxonomy and the distinctions it has to keep (with World as a main discussant), how verifiable trust agents acting for a person could carry that assurance, and where zero-knowledge proofs do the work. Twenty minutes for contributors, then open discussion feeding the IKP proof-of-personhood paper.",
           wg: "IKP",
           speakers: "",
-          moderator: "",
+          moderator: "Mitchell Travers (Co-Chair, IKP)",
           detailPage: "/events/20261015-block15/sessions/2-6",
           agenda: [
             "Why now: agentic AI raises the cost of not knowing a counterparty is human — picking up from the Block 14 reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood) and the IKP open meetings since",
@@ -559,7 +559,7 @@ export const programData = {
             "Joint Cyber Security and IKP session on standards and good practices for offline key management.",
           wg: "Cyber Security",
           speakers: "",
-          moderator: "",
+          moderator: "Julien Bringer (Chair, Cyber Security)",
           detailPage: "/events/20261015-block15/sessions/2-8",
           agenda: [
             "Picking up from the Block 14 report on Privacy Enhanced Authentication and Key Management: one system holds the keys, another composes the transactions",
@@ -620,7 +620,7 @@ export const programData = {
             "Cybersecurity session on Security Target and Protection Profile standards for wallet security assurance.",
           wg: "Cyber Security",
           speakers: "",
-          moderator: "",
+          moderator: "Julien Bringer (Chair, Cyber Security)",
           detailPage: "/events/20261015-block15/sessions/2-10",
           agenda: [
             "Picking up from the GDC26 Geneva breakout on wallet security assurance",
