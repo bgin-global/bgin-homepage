@@ -409,7 +409,7 @@ export default function Block15Page() {
               </h3>
               <p className="text-blue-700">
                 The Block 15 timetable is below (parallel sessions in Room A, Room B, and Open Space).
-                Tea break 11:20–11:30, lunch 13:00–14:00, and tea break 15:30–15:40 each day.
+                Tea break 11:20–11:30, lunch 13:00–14:00, and tea break 15:30–15:40 each day. On Day 2, lunch hosts an industry session with World.
                 Follow our socials:
                 <a href="https://twitter.com/bgin_global" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">X (Twitter)</a> |
                 <a href="https://www.linkedin.com/company/blockchain-governance-initiative-network/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-900 ml-1">LinkedIn</a>
@@ -481,7 +481,8 @@ export default function Block15Page() {
               <div className="space-y-6">
                 {BLOCK15_TIME_ORDER[activeDay].map((time) => {
                   const breakTitle = getBreakTitle(activeDay, time);
-                  if (breakTitle) {
+                  const sessions = (groupSessionsByTime(program[activeDay] as Parameters<typeof groupSessionsByTime>[0])[time] ?? []);
+                  if (breakTitle && sessions.length === 0) {
                     return (
                       <div key={time} className="space-y-3">
                         <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
@@ -491,13 +492,11 @@ export default function Block15Page() {
                       </div>
                     );
                   }
-
-                  const sessions = (groupSessionsByTime(program[activeDay] as Parameters<typeof groupSessionsByTime>[0])[time] ?? []);
                   if (sessions.length === 0) return null;
 
                   return (
                     <div key={time} className="space-y-3">
-                      <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}</h3>
+                      <h3 className="text-xl font-bold text-gray-800 border-b-2 border-gray-300 pb-2">{time}{breakTitle ? ` · ${breakTitle}` : ""}</h3>
                       <div className="space-y-2">
                         {sessions.map((session, idx) => (
                           <Block15SessionListCard

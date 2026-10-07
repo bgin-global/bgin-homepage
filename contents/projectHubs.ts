@@ -360,7 +360,7 @@ export const projectHubs: ProjectHub[] = [
     workingFolder:
       "https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb",
     latestDocumentTitle: "Distinguishing blockchain forensics from analytics",
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 16 Oct, 15:40 (session 2-9)",
     documents: [
       {
         type: "Public comment",
@@ -389,7 +389,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Develops authentication patterns that preserve privacy while meeting practical identity and access needs in blockchain ecosystems.",
     statusText:
-      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and a privacy / proof-of-personhood taxonomy is being prepared for an open, topic-focused IKP meeting ahead of Block 15. Block 15 holds a dedicated session on 16 October (privacy-enhanced authentication, ZKP, and proof of personhood).",
+      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and the privacy / proof-of-personhood taxonomy has been taken through open, topic-focused IKP meetings since. At Block 15 the dedicated session on 16 October (2-6) covers privacy-enhanced authentication, the proof-of-personhood taxonomy, verifiable trust agents and zero-knowledge proofs, with World as a main discussant; World follows with a lunchtime industry session.",
     deliverables: [
       "Authentication patterns with privacy guarantees",
       "Privacy / proof-of-personhood taxonomy: what each proof attests, where the biometric lives, revocation, linkability scope, agent authority",
@@ -408,7 +408,7 @@ export const projectHubs: ProjectHub[] = [
       "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
     latestDocumentTitle:
       "Block 14 MR: Privacy Enhanced Authentication and Key Management",
-    nextMilestone: "Block 15 (16 Oct session)",
+    nextMilestone: "Block 15 · 16 Oct, 11:30 (session 2-6) + lunch session with World",
     documents: [
       {
         type: "Meeting report",
@@ -478,7 +478,7 @@ export const projectHubs: ProjectHub[] = [
     workingFolder:
       "https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link",
     latestDocumentTitle: "BGIN Information Sharing Framework (Aug 2025)",
-    nextMilestone: "Block 15 · ISO path",
+    nextMilestone: "Block 15 · 16 Oct, 09:50 (session 2-4) · ISO path",
     documents: [
       {
         type: "Framework",
@@ -561,7 +561,7 @@ export const projectHubs: ProjectHub[] = [
     },
     latestDocumentTitle:
       "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
-    nextMilestone: "Block 15 (Oct)",
+    nextMilestone: "Block 15 · 16 Oct, 09:50 (session 2-4)",
     documents: [
       {
         type: "Meeting report",
@@ -620,7 +620,7 @@ export const projectHubs: ProjectHub[] = [
     },
     latestDocumentTitle:
       "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
-    nextMilestone: "Block 15 (Oct)",
+    nextMilestone: "Block 15 · 16 Oct, 15:40 (session 2-10)",
     documents: [
       {
         type: "Meeting report",
@@ -707,7 +707,7 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 16 Oct, 14:00 (session 2-8)",
     documents: [
       {
         type: "Reference",
@@ -737,7 +737,7 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 15 Oct, 11:30 (session 1-6)",
     documents: [
       {
         type: "Reference",
@@ -773,7 +773,7 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z",
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 16 Oct, 14:00 (session 2-7)",
     documents: [
       {
         type: "Reference",
@@ -796,7 +796,8 @@ export const projectHubs: ProjectHub[] = [
       "Shared industry-structure framing across crypto-assets, stablecoins, and tokenized deposits to support regulatory debate.",
     overview:
       "Produces a shared view of industry structure as a basis for regulatory and supervisory debate across jurisdictions.",
-    statusText: "Discussion paper and Block sessions underway; next working sessions at Block 15.",
+    statusText:
+      "The Discussion Paper \"The Industrial Structure of Digital Assets\" (Study Group on the Ideal Industrial Structure for Digital Assets) was first presented at Block 14 in Tokyo and has been revised through open consultation; the current version is dated 11 June 2026. A FASE contribution (discussion draft, 23 September 2026) reports early findings on three of its six open questions: competitive asymmetry, infrastructure and global markets, and public chains as public goods. Block 15 session 2-3 takes all six questions to the room.",
     deliverables: [
       "Industry structure discussion paper",
       "Cross-jurisdiction comparison notes",
@@ -808,8 +809,22 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Block 15",
+    latestDocumentTitle:
+      "Discussion Paper: The Industrial Structure of Digital Assets (11 June 2026)",
+    nextMilestone: "Block 15 · 16 Oct, 09:50 (session 2-3)",
     documents: [
+      {
+        type: "Discussion",
+        title: "The Industrial Structure of Digital Assets — Discussion Paper (version of 11 June 2026)",
+        when: "2026/06",
+        href: "https://docs.google.com/document/d/1JEJYKLRpNIGZe36kCbjQbzbGc7PGF02U/edit",
+      },
+      {
+        type: "Slides",
+        title: "FASE contribution: Offshore, Infrastructure, Public Goods (discussion draft)",
+        when: "2026/09",
+        href: "https://docs.google.com/presentation/d/1C7DsLsA9UCPvYBO8r6eXIehZN3-fa7aJUiiCU6yczXc/edit",
+      },
       {
         type: "Reference",
         title: "FASE working folder",
@@ -838,7 +853,7 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 16 Oct, 15:40 (session 2-9)",
     documents: [
       {
         type: "Reference",
@@ -861,7 +876,8 @@ export const projectHubs: ProjectHub[] = [
       "Categories and classification methods for decentralization that regulators, auditors, and operators can apply consistently.",
     overview:
       "Compiles reportable metrics and classification approaches suitable for blockchain and crypto-assets.",
-    statusText: "Report work in progress, informed by jurisdictional debates (e.g. maturity / classification).",
+    statusText:
+      "Report work in progress, informed by jurisdictional debates (e.g. maturity / classification). The FASE study report \"Compute-as-Commodity\" asks whether decentralised compute networks can be considered commodity markets: it applies six commodity-market criteria to Akash, Bittensor, Render and Aethir, tests whether the blockchain layer is load-bearing, and separates productive from circular flows. It is open for comment and is discussed at Block 15 session 2-5.",
     deliverables: [
       "Categories and classification methods",
       "Guidance for consistent application",
@@ -872,8 +888,15 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Block 15",
+    latestDocumentTitle: "BGIN SR: Compute-as-Commodity (open for comment)",
+    nextMilestone: "Block 15 · 16 Oct, 11:30 (session 2-5)",
     documents: [
+      {
+        type: "Draft",
+        title: "BGIN SR (FASE): Compute-as-Commodity — Observable Flows in Decentralised Compute Infrastructure",
+        when: "2026/10",
+        href: "https://docs.google.com/document/d/1td0hDHE-Ahq9KG7I-pS0QULtQtvqCy1mmG1pkqdUfks/edit",
+      },
       {
         type: "Reference",
         title: "FASE working folder",
@@ -895,7 +918,8 @@ export const projectHubs: ProjectHub[] = [
       "Exploring synergies and risks where blockchain and AI intersect — data, governance, and real-world use cases.",
     overview:
       "Futures-oriented discussion of positive and negative synergies between AI and blockchain, grounded in use cases.",
-    statusText: "Active discussion track with working folder materials.",
+    statusText:
+      "Block 15 session 1-3 gives an overview of the AI and blockchain industry as it stands today — agents that hold wallets and pay in stablecoins, on-chain provenance for data, models and outputs, AI for on-chain analytics and auditing — and puts the policy questions to the room: accountability when an autonomous agent transacts, agent identity and authorisation, and AML/CFT and consumer protection for machine-initiated activity. The discussion scopes the FASE AI + Blockchain workstream.",
     deliverables: ["Use-case framing", "Governance risk notes", "Meeting reports"],
     themes: ["ai", "governance"],
     discourseUrl: WG_META.fase.discourseUrl,
@@ -905,7 +929,7 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/folders/1-ngWvRGQ_5N36Mr0Pgh119tGIGmCExSu?usp=drive_link",
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 15 Oct, 09:50 (session 1-3)",
     documents: [
       {
         type: "Reference",
@@ -935,7 +959,7 @@ export const projectHubs: ProjectHub[] = [
       label: "Discourse",
       href: WG_META.agentic.discourseUrl,
     },
-    nextMilestone: "Block 15",
+    nextMilestone: "Block 15 · 15 Oct, 09:50 (session 1-5, open space)",
     documents: [
       {
         type: "Reference",

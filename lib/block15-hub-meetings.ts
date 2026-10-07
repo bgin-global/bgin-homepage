@@ -7,8 +7,8 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Sets the Day 1 framing for the IKP PQC sessions that follow: deployment, crypto agility, and governance — not a new-algorithm contest — and connects the GDC26 findings to the competition evaluation work.",
   ],
   "1-3": [
-    "Discuss AI–blockchain synergies and governance risks with practitioners.",
-    "Capture use cases that feed FASE and Agentic AI follow-on work.",
+    "Overview of the AI and blockchain industry today: agents that hold wallets and pay in stablecoins, on-chain provenance for data, models and outputs, and AI for on-chain analytics and auditing.",
+    "Policy questions: accountability when an autonomous agent transacts, agent identity and authorisation, AML/CFT and consumer protection for machine-initiated activity — scoping the FASE AI + Blockchain workstream.",
   ],
   "1-4": [
     "Resource estimates and the ECDSA.fail community: what the benchmark numbers mean for migration timelines, and how they feed competition judging criteria.",
@@ -39,20 +39,24 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Link regulatory themes to harmonization discussion paper progress.",
   ],
   "2-3": [
-    "Advance shared industry-structure models for digital assets.",
-    "Integrate feedback into the harmonization deliverable timeline.",
+    "The Discussion Paper \"The Industrial Structure of Digital Assets\": mapping the stakeholders and structural features of the industry as Japan moves crypto-asset regulation to the FIEA.",
+    "Six open questions — competitive asymmetry, infrastructure, compete vs. share, public chains as public goods, coexistence with DeFi, diversifying capital markets — with proposals from the room.",
   ],
   "2-4": [
     "Joint Cyber + IKP session on Security AI Agent and information sharing.",
     "Map agent workflows to the published Information Sharing Framework.",
   ],
   "2-5": [
-    "Discuss decentralized compute and market-structure implications.",
-    "Connect decentralization metrics work to industry-structure framing.",
+    "Could decentralised compute networks be commodity markets? The FASE study report \"Compute-as-Commodity\" applies six criteria to Akash, Bittensor, Render and Aethir.",
+    "Productive vs. circular flows, regulatory gaps, and a draft policymaker checklist; links to the concentration-of-computing-resources challenge from session 2-3.",
   ],
   "2-6": [
     "Biometric ZKP side by side: what each proof actually proves, where the biometric lives, and what revocation means for a credential bound to something that cannot be rotated.",
     "Proof of personhood as agentic AI raises the cost of not knowing a counterparty is human — review the privacy / personhood taxonomy and capture IKP comments for draft pattern updates.",
+  ],
+  "2-L": [
+    "Lunchtime industry session with World: proof of a unique human without identifying the human, and client-side zero-knowledge proving on everyday phones.",
+    "Questions from the room feed the IKP proof-of-personhood taxonomy discussed in session 2-6.",
   ],
   "2-7": [
     "Compare stablecoin policy approaches across jurisdictions.",
@@ -81,7 +85,7 @@ const HUB_SESSION_IDS: Record<string, string[]> = {
   harmonization: ["1-8", "1-9", "2-2", "2-3", "2-5"],
   "security-ai-agent": ["2-4"],
   "cybersecurity-information-sharing": ["2-4"],
-  "privacy-enhanced-auth": ["2-6"],
+  "privacy-enhanced-auth": ["2-6", "2-L"],
   "stablecoin-guide": ["2-7"],
   "offline-key-management": ["2-8"],
   "forensics-analysis": ["2-9"],
