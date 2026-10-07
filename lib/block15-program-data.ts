@@ -588,7 +588,7 @@ export const programData = {
             "Joint FASE and IKP session on AML policy, forensics and analytics, and a common taxonomy for harmful on-chain activities.",
           wg: "FASE",
           speakers: "",
-          moderator: "",
+          moderator: "Mitchell Travers (Co-Chair, IKP), Chloe White (Co-Chair, FASE)",
           detailPage: "/events/20261015-block15/sessions/2-9",
           agenda: [
             "The Forensics & Analysis document in public comment: review of comments received",
