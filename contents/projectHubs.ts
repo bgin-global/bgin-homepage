@@ -360,7 +360,7 @@ export const projectHubs: ProjectHub[] = [
     workingFolder:
       "https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb",
     latestDocumentTitle: "Distinguishing blockchain forensics from analytics",
-    nextMilestone: "Block 15 · 16 Oct, 15:40 (session 2-9)",
+    nextMilestone: "Block 15 · 16 Oct, 16:10 (session 2-9)",
     documents: [
       {
         type: "Public comment",
@@ -389,7 +389,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Develops authentication patterns that preserve privacy while meeting practical identity and access needs in blockchain ecosystems.",
     statusText:
-      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and the privacy / proof-of-personhood taxonomy has been taken through open, topic-focused IKP meetings since. At Block 15 the dedicated session on 16 October (2-6) covers privacy-enhanced authentication, the proof-of-personhood taxonomy, verifiable trust agents and zero-knowledge proofs, with World as a main discussant; World follows with a lunchtime industry session.",
+      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and the privacy / proof-of-personhood taxonomy has been taken through open, topic-focused IKP meetings since. At Block 15 the dedicated session on 16 October (2-6) covers privacy-enhanced authentication, the proof-of-personhood taxonomy, verifiable trust agents and zero-knowledge proofs, with World as a main discussant.",
     deliverables: [
       "Authentication patterns with privacy guarantees",
       "Privacy / proof-of-personhood taxonomy: what each proof attests, where the biometric lives, revocation, linkability scope, agent authority",
@@ -408,7 +408,7 @@ export const projectHubs: ProjectHub[] = [
       "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
     latestDocumentTitle:
       "Block 14 MR: Privacy Enhanced Authentication and Key Management",
-    nextMilestone: "Block 15 · 16 Oct, 11:30 (session 2-6) + lunch session with World",
+    nextMilestone: "Block 15 · 16 Oct, 11:30 (session 2-6)",
     documents: [
       {
         type: "Meeting report",
@@ -620,7 +620,7 @@ export const projectHubs: ProjectHub[] = [
     },
     latestDocumentTitle:
       "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
-    nextMilestone: "Block 15 · 16 Oct, 15:40 (session 2-10)",
+    nextMilestone: "Block 15 · 16 Oct, 16:10 (session 2-10)",
     documents: [
       {
         type: "Meeting report",
@@ -707,7 +707,7 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15 · 16 Oct, 14:00 (session 2-8)",
+    nextMilestone: "Block 15 · 16 Oct, 14:30 (session 2-8)",
     documents: [
       {
         type: "Reference",
@@ -773,7 +773,7 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z",
-    nextMilestone: "Block 15 · 16 Oct, 14:00 (session 2-7)",
+    nextMilestone: "Block 15 · 16 Oct, 14:30 (session 2-7)",
     documents: [
       {
         type: "Reference",
@@ -853,7 +853,7 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Block 15 · 16 Oct, 15:40 (session 2-9)",
+    nextMilestone: "Block 15 · 16 Oct, 16:10 (session 2-9)",
     documents: [
       {
         type: "Reference",

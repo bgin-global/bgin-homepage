@@ -72,8 +72,8 @@ export const BLOCK15_BREAKS: Record<"day1" | "day2", { time: string; title: stri
   ],
   day2: [
     { time: "11:20 - 11:30", title: "Tea Break" },
-    { time: "13:00 - 14:00", title: "Lunch Break" },
-    { time: "15:30 - 15:40", title: "Tea Break" },
+    { time: "13:45 - 14:30", title: "Lunch Break" },
+    { time: "16:00 - 16:10", title: "Tea Break" },
   ],
 };
 
@@ -86,11 +86,11 @@ export const BLOCK15_TIME_ORDER: Record<"day1" | "day2", string[]> = {
     "11:20 - 11:30",
     "11:30 - 13:00",
     "13:00 - 14:00",
-    "14:00 - 14:45",
-    "14:45 - 15:30",
+    "14:00 - 15:30",
     "15:30 - 15:40",
     "15:40 - 17:10",
-    "17:10 onwards",
+    "17:10 - 18:00",
+    "18:00 onwards",
   ],
   day2: [
     "09:00 - 09:20",
@@ -98,10 +98,11 @@ export const BLOCK15_TIME_ORDER: Record<"day1" | "day2", string[]> = {
     "09:50 - 11:20",
     "11:20 - 11:30",
     "11:30 - 13:00",
-    "13:00 - 14:00",
-    "14:00 - 14:45",
-    "15:30 - 15:40",
-    "15:40 - 17:10",
+    "13:00 - 13:45",
+    "13:45 - 14:30",
+    "14:30 - 16:00",
+    "16:00 - 16:10",
+    "16:10 - 17:40",
   ],
 };
 

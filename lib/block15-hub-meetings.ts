@@ -26,14 +26,6 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Crypto agility as a governance property and the NIST PQC signature migration path across Bitcoin, Ethereum, and other ecosystems — with NIST participation.",
     "Seat the evaluation committee (Phase A), take the scheme scope rulings, and consolidate feedback for the metrics register v1 and the migration playbook.",
   ],
-  "1-8": [
-    "Industry-led policy session (partner to be announced).",
-    "Relate industry input to harmonization and industry-structure work.",
-  ],
-  "1-9": [
-    "Second industry session (partner to be announced).",
-    "Collect practitioner perspectives for FASE harmonization deliverables.",
-  ],
   "2-2": [
     "Policy keynote framing for Day 2 FASE and cross-WG sessions.",
     "Link regulatory themes to harmonization discussion paper progress.",
@@ -55,8 +47,8 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Proof of personhood as agentic AI raises the cost of not knowing a counterparty is human — review the privacy / personhood taxonomy and capture IKP comments for draft pattern updates.",
   ],
   "2-L": [
-    "Lunchtime industry session with World: proof of a unique human without identifying the human, and client-side zero-knowledge proving on everyday phones.",
-    "Questions from the room feed the IKP proof-of-personhood taxonomy discussed in session 2-6.",
+    "Industry-led session on policy and market themes (partner and format to be announced).",
+    "Practitioner perspectives on harmonized treatment of crypto-assets, stablecoins and tokenized deposits, feeding FASE harmonization deliverables.",
   ],
   "2-7": [
     "Compare stablecoin policy approaches across jurisdictions.",
@@ -82,10 +74,10 @@ const HUB_SESSION_IDS: Record<string, string[]> = {
   "ai-blockchain": ["1-3"],
   "agent-standards": ["1-5"],
   "security-supply-chain": ["1-6"],
-  harmonization: ["1-8", "1-9", "2-2", "2-3", "2-5"],
+  harmonization: ["2-2", "2-3", "2-5", "2-L"],
   "security-ai-agent": ["2-4"],
   "cybersecurity-information-sharing": ["2-4"],
-  "privacy-enhanced-auth": ["2-6", "2-L"],
+  "privacy-enhanced-auth": ["2-6"],
   "stablecoin-guide": ["2-7"],
   "offline-key-management": ["2-8"],
   "forensics-analysis": ["2-9"],
