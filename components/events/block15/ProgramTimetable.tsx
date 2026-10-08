@@ -14,11 +14,11 @@ const timeSlots = {
     "11:20 - 11:30",
     "11:30 - 13:00",
     "13:00 - 14:00",
-    "14:00 - 14:45",
-    "14:45 - 15:30",
+    "14:00 - 15:30",
     "15:30 - 15:40",
     "15:40 - 17:10",
-    "17:10-",
+    "17:10 - 18:00",
+    "18:00-",
   ],
   day2: [
     "09:00 - 09:20",
@@ -26,20 +26,28 @@ const timeSlots = {
     "09:50 - 11:20",
     "11:20 - 11:30",
     "11:30 - 13:00",
-    "13:00 - 14:00",
-    "14:00 - 14:45",
-    "15:30 - 15:40",
-    "15:40 - 17:10",
+    "13:00 - 13:45",
+    "13:45 - 14:30",
+    "14:30 - 16:00",
+    "16:00 - 16:10",
+    "16:10 - 17:40",
   ],
 };
 
-const BREAK_LABELS: Record<string, string> = {
-  "11:20 - 11:30": "Tea Break",
-  "13:00 - 14:00": "Lunch Break",
-  "15:30 - 15:40": "Tea Break",
+const BREAK_LABELS: Record<"day1" | "day2", Record<string, string>> = {
+  day1: {
+    "11:20 - 11:30": "Tea Break",
+    "13:00 - 14:00": "Lunch Break",
+    "15:30 - 15:40": "Tea Break",
+  },
+  day2: {
+    "11:20 - 11:30": "Tea Break",
+    "13:45 - 14:30": "Lunch Break",
+    "16:00 - 16:10": "Tea Break",
+  },
 };
 
-const RECEPTION_TIME = "17:10-";
+const RECEPTION_TIME = "18:00-";
 const RECEPTION_SESSION_ID = "1-11";
 
 const rooms = {
@@ -47,18 +55,18 @@ const rooms = {
   day2: ["Room A", "Room B"],
 };
 
-function isBreakSlot(time: string): boolean {
-  return time in BREAK_LABELS;
+function isBreakSlot(day: "day1" | "day2", time: string): boolean {
+  return time in BREAK_LABELS[day];
 }
 
-function breakCell(time: string, rowSpan: number) {
+function breakCell(day: "day1" | "day2", time: string, rowSpan: number) {
   return (
     <td
       key={time}
       rowSpan={rowSpan}
       className="border border-gray-300 p-2 bg-gray-100 text-center text-sm text-gray-600 font-medium align-middle"
     >
-      {BREAK_LABELS[time]}
+      {BREAK_LABELS[day][time]}
     </td>
   );
 }
@@ -128,7 +136,7 @@ const ProgramTimetable: React.FC = () => {
                   <th
                     key={time}
                     className={`border border-gray-300 p-2 text-center text-sm font-semibold ${
-                      isBreakSlot(time)
+                      isBreakSlot(day, time)
                         ? "bg-gray-100 text-gray-600"
                         : "bg-gray-50"
                     }`}
@@ -147,9 +155,9 @@ const ProgramTimetable: React.FC = () => {
                     {room}
                   </td>
                   {dayTimeSlots.map((time) => {
-                    if (isBreakSlot(time)) {
+                    if (isBreakSlot(day, time)) {
                       if (roomIndex !== 0) return null;
-                      return breakCell(time, dayRooms.length);
+                      return breakCell(day, time, dayRooms.length);
                     }
 
                     const session = grid[room]?.[time];

@@ -48,7 +48,7 @@ export const programData = {
         {
           id: "1-3",
           title: "FASE: AI & Blockchain",
-          time: "09:50 - 11:20",
+          time: "14:00 - 15:30",
           room: "Room A",
           summary:
             "AI and blockchain systems are beginning to depend on each other in practice rather than in theory: AI agents hold wallets, pay for services in stablecoins and act on-chain for users; blockchains record the provenance of data, models and outputs and settle the compute AI workloads consume; and AI is applied to on-chain analytics, smart-contract auditing and security monitoring. This session gives an overview of the industry as it stands today, then turns to the open questions that matter most for policymakers and practitioners. The discussion will inform the scope of FASE's AI + Blockchain workstream and identify topics for future written contributions.",
@@ -74,7 +74,7 @@ export const programData = {
           id: "1-4",
           title: "IKP: PQC Migration",
           time: "09:50 - 11:20",
-          room: "Room B",
+          room: "Room A",
           summary:
             "First of two IKP working sessions on the PQC Migration Prize Competition (hosted by METI/NEDO; BGIN coordinates and runs the neutral evaluation testbed). Picks up from the opening keynote on crypto agility and walks through the public competition repository — core outcomes, the draft evaluation metrics register, the testbed scheme register and bench harness — then puts the open evaluation questions to the room.",
           wg: "IKP",
@@ -155,7 +155,7 @@ export const programData = {
         {
           id: "1-6",
           title: "Cyber: Governance of the Security Supply Chain",
-          time: "11:30 - 13:00",
+          time: "15:40 - 17:10",
           room: "Room A",
           summary:
             "Cybersecurity risks in crypto-asset services increasingly arise not only from vulnerabilities in blockchain protocols or the compromise of signing keys, but also from dependencies across the broader operational and technology supply chain. Recent incidents have highlighted risks involving external service providers, cloud and CI/CD environments, transaction-generation processes, administrative privileges, smart contracts, oracles, bridges, and other external components.\n\n" +
@@ -187,7 +187,7 @@ export const programData = {
           id: "1-7",
           title: "IKP: PQC Migration (2)",
           time: "11:30 - 13:00",
-          room: "Room B",
+          room: "Room A",
           summary:
             "Second IKP working session on the PQC Migration Prize Competition — the decisions session. Crypto agility as a governance property and the NIST PQC signature migration path across Bitcoin, Ethereum, and other ecosystems, with NIST participation. Block 15 is the second workshop (W2) of the six-month series: the aim is to seat the evaluation committee, take the scheme scope rulings, and move the metrics register from v0 to v1 on the pathway from competition to BGIN Standard to ISO/TC 307.",
           wg: "IKP",
@@ -244,53 +244,9 @@ export const programData = {
           relatedProjectSlugs: ["pqc-migration"],
         },
         {
-          id: "1-8",
-          title: "Industry Session 1",
-          time: "14:00 - 14:45",
-          room: "Room A",
-          summary:
-            "Industry-led session on policy and market themes. Partner organization to be announced.",
-          wg: "General",
-          speakers: "",
-          moderator: "",
-          detailPage: "/events/20261015-block15/sessions/1-8",
-          agenda: [
-            "Industry presentation (partner to be announced)",
-            "Discussion: what industry needs from harmonized treatment of crypto-assets, stablecoins and tokenized deposits",
-            "Inputs to the FASE harmonization discussion paper and industry-structure work",
-          ],
-          documents: [],
-          relatedProjects: [
-            "Harmonization among Crypto-asset, Stablecoin and Tokenized Deposit",
-          ],
-          relatedProjectSlugs: ["harmonization"],
-        },
-        {
-          id: "1-9",
-          title: "Industry Session 2",
-          time: "14:45 - 15:30",
-          room: "Room A",
-          summary:
-            "Second industry-led session. Partner organization and format to be announced.",
-          wg: "General",
-          speakers: "",
-          moderator: "",
-          detailPage: "/events/20261015-block15/sessions/1-9",
-          agenda: [
-            "Industry presentation (partner and format to be announced)",
-            "Practitioner perspectives on where standards would reduce cost or risk",
-            "Inputs to the FASE harmonization deliverables",
-          ],
-          documents: [],
-          relatedProjects: [
-            "Harmonization among Crypto-asset, Stablecoin and Tokenized Deposit",
-          ],
-          relatedProjectSlugs: ["harmonization"],
-        },
-        {
           id: "1-10",
           title: "BGIN Business Meeting",
-          time: "15:40 - 17:10",
+          time: "17:10 - 18:00",
           room: "Room A",
           summary:
             "BGIN steering and business session for members and stakeholders.",
@@ -312,7 +268,7 @@ export const programData = {
         {
           id: "1-11",
           title: "Networking Reception",
-          time: "17:10-",
+          time: "18:00-",
           room: "TBD",
           summary: "Networking reception for all Block 15 participants.",
           wg: "General",
@@ -373,7 +329,7 @@ export const programData = {
         },
         {
           id: "2-3",
-          title: "FASE: Industrial Structure of Digital Assets",
+          title: "FASE: Industrial Design of Digital Assets",
           time: "09:50 - 11:20",
           room: "Room A",
           summary:
@@ -509,30 +465,31 @@ export const programData = {
         },
         {
           id: "2-L",
-          title: "Industry Session (Lunch): World — Proof of Personhood in Practice",
-          time: "13:00 - 14:00",
-          room: "Room B",
+          title: "Industry Session",
+          time: "13:00 - 13:45",
+          room: "Room A",
           summary:
-            "Lunchtime industry session with World on proof of personhood in practice: proving that someone is a unique human without revealing who they are, and the client-side zero-knowledge tooling behind it. Follows directly from the IKP session on privacy-enhanced authentication, ZKP and proof of personhood (2-6), where World is a main discussant.",
+            "Industry-led session on policy and market themes. Partner organization and format to be announced.",
           wg: "General",
-          speakers: "World",
+          speakers: "",
           moderator: "",
           detailPage: "/events/20261015-block15/sessions/2-L",
           agenda: [
-            "Proof of a unique human, not of a specific human: World's approach to personhood and uniqueness",
-            "Privacy architecture: where the biometric data lives, how uniqueness is checked without a lookup of identity, and what stays on the person's device",
-            "Client-side zero-knowledge proving on the phones people already own, and verification on chain or in a browser",
-            "Use cases in deployment: age verification without a date of birth, and human verification on social platforms",
-            "Questions from the room, carried into the IKP proof-of-personhood taxonomy work",
+            "Industry presentation (partner and format to be announced)",
+            "Discussion: what industry needs from harmonized treatment of crypto-assets, stablecoins and tokenized deposits",
+            "Practitioner perspectives on where standards would reduce cost or risk",
+            "Inputs to the FASE harmonization discussion paper, industry-structure work and harmonization deliverables",
           ],
           documents: [],
-          relatedProjects: ["Privacy Enhanced Authentication"],
-          relatedProjectSlugs: ["privacy-enhanced-auth"],
+          relatedProjects: [
+            "Harmonization among Crypto-asset, Stablecoin and Tokenized Deposit",
+          ],
+          relatedProjectSlugs: ["harmonization"],
         },
         {
           id: "2-7",
           title: "FASE: Stablecoin Policy — a Global Outlook",
-          time: "14:00 - 14:45",
+          time: "14:30 - 16:00",
           room: "Room A",
           summary:
             "Comparative discussion of stablecoin regulatory approaches and policy priorities across jurisdictions.",
@@ -553,7 +510,7 @@ export const programData = {
         {
           id: "2-8",
           title: "Cyber + IKP: Offline Key Management",
-          time: "14:00 - 14:45",
+          time: "14:30 - 16:00",
           room: "Room B",
           summary:
             "Joint Cyber Security and IKP session on standards and good practices for offline key management.",
@@ -582,7 +539,7 @@ export const programData = {
           id: "2-9",
           title:
             "AML Policy, Forensics & Analytics — Common Taxonomy (FASE/IKP)",
-          time: "15:40 - 17:10",
+          time: "16:10 - 17:40",
           room: "Room A",
           summary:
             "Joint FASE and IKP session on AML policy, forensics and analytics, and a common taxonomy for harmful on-chain activities.",
@@ -614,7 +571,7 @@ export const programData = {
         {
           id: "2-10",
           title: "Cyber: Security Target & Protection Profile (ST/PP)",
-          time: "15:40 - 17:10",
+          time: "16:10 - 17:40",
           room: "Room B",
           summary:
             "Cybersecurity session on Security Target and Protection Profile standards for wallet security assurance.",
