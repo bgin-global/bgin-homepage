@@ -28,25 +28,7 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 
 const program = processProgram();
 
-const BLOCK15_KEY_CONTRIBUTORS: { topic: string; names: string[] }[] = [
-  { topic: "AI & Blockchain", names: ["James Angel", "Nathan Vandy"] },
-  { topic: "AML Policy, Forensics & Analytics", names: ["Arianna Trozze"] },
-  { topic: "Offline Key Management", names: ["Daniel Saito", "Yuto Takei"] },
-  { topic: "Industrial Design of Digital Assets 2", names: ["Ken Katayama", "Tetsuro Morishita"] },
-  {
-    topic: "PQC Migration",
-    names: [
-      "Conor Deegan",
-      "Kigen Fukuda",
-      "Ethan Heilman",
-      "Tadahiko Itoh",
-      "Kanta Matsuura",
-      "Grethen Matthew",
-      "Valentina Rivas",
-    ],
-  },
-  { topic: "Privacy Enhanced Auth", names: ["Scott Jones", "Vikas Malhortra", "Dom Simon", "Cody Wood"] },
-];
+
 
 function FoldSummary({ title, blurb }: { title: string; blurb: string }) {
   return (
@@ -279,9 +261,6 @@ export default function Block15Page() {
           <a href="#program" className="font-medium text-gray-700 hover:text-blue-700">
             Program
           </a>
-          <a href="#key-contributors" className="font-medium text-gray-700 hover:text-blue-700">
-            Key contributors
-          </a>
           <a href="#critical-projects" className="font-medium text-gray-700 hover:text-blue-700">
             Key projects
           </a>
@@ -420,23 +399,6 @@ export default function Block15Page() {
           <div className="mb-8">
             <ProgramTimetable />
           </div>
-
-        {/* Key Contributors */}
-        <section id="key-contributors" className="block13-section">
-          <h2 className="block13-section-title">Key Contributors (Tentative, in alphabetical order)</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {BLOCK15_KEY_CONTRIBUTORS.map((group) => (
-              <div key={group.topic} className="bg-white border border-gray-200 rounded-md px-4 py-3">
-                <h3 className="font-semibold text-gray-900 mb-2">{group.topic}</h3>
-                <ul className="text-lg text-gray-700 space-y-1">
-                  {group.names.map((name) => (
-                    <li key={name}>{name}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
 
           {/* Day Tabs */}
           <div id="detailed-program" className="block13-tabs scroll-mt-20">
