@@ -310,8 +310,8 @@ export const programData = {
           time: "09:20 - 09:50",
           room: "Room A",
           summary:
-            "Policy keynote by Carole House (Founder and CEO, Penumbra Strategies). Instant settlement, programmable money, digital identity, and AI agents are changing the accountability assumptions commerce has relied on. The talk treats accountability as a design question for the next generation of commercial infrastructure, not a question to be settled after the harm.",
-          wg: "General",
+            "FASE policy keynote by Carole House (Founder and CEO, Penumbra Strategies). Instant settlement, programmable money, digital identity, and AI agents are changing the accountability assumptions commerce has relied on. The talk treats accountability as a design question for the next generation of commercial infrastructure, not a question to be settled after the harm.",
+          wg: "FASE",
           speakers: "Carole House (Founder and CEO, Penumbra Strategies)",
           moderator: "",
           detailPage: "/events/20261015-block15/sessions/2-2",
