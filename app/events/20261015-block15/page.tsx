@@ -542,6 +542,41 @@ export default function Block15Page() {
         <section id="sponsors" className="block13-section">
           <h2 className="block13-section-title text-center">Sponsors & Partners</h2>
 
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">
+              Academic Hosts
+            </h3>
+            <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
+                <Image
+                  src="/images/Events/sponsor/CyberSMART.jpeg"
+                  alt="CyberSMART"
+                  width={320}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
+                <Image
+                  src="/images/Events/sponsor/Georgetown Department of Computer Science.png"
+                  alt="Georgetown University, Department of Computer Science"
+                  width={320}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex items-center justify-center h-[200px] w-[380px]">
+                <Image
+                  src="/images/Events/sponsor/Georgetown University Psaros Center.png"
+                  alt="Georgetown University Psaros Center for Financial Markets and Policy"
+                  width={320}
+                  height={160}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Sustaining Sponsors */}
           <div className="mb-10">
             <h3 className="text-xl font-semibold text-center mb-6 text-gray-800">Sustaining Sponsors</h3>
