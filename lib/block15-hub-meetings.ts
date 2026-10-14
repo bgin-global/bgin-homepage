@@ -27,7 +27,7 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Seat the evaluation committee (Phase A), take the scheme scope rulings, and consolidate feedback for the metrics register v1 and the migration playbook.",
   ],
   "2-2": [
-    "Policy keynote: Carole House (Founder and CEO, Penumbra Strategies) on The Conservation of Accountability.",
+    "FASE policy keynote: Carole House (Founder and CEO, Penumbra Strategies) on The Conservation of Accountability.",
     "How instant settlement, programmable money, digital identity, and AI agents change who can be held responsible, and why accountability has to be designed in rather than settled after the harm.",
   ],
   "2-3": [
