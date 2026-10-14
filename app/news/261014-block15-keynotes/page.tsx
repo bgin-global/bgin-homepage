@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import WgChip from "@/components/WgChip";
 import {
   BLOCK15_DAY2_KEYNOTE,
   BLOCK15_KEYNOTE,
@@ -87,7 +88,8 @@ export default function Block15KeynotesAnnouncedPage() {
                       />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-sm text-gray-500">{talk.when}</p>
+                      <WgChip wg={talk.wgId} />
+                      <p className="text-sm text-gray-500 mt-2">{talk.when}</p>
                       <h2 className="text-xl font-bold text-gray-900 mt-1">
                         {talk.speaker.name}
                       </h2>
