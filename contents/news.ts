@@ -10,6 +10,16 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "27",
+    title: "Block 15 keynote speakers announced",
+    description:
+      "Alex Pruden opens Day 1 on crypto agility. Carole House opens Day 2 on the conservation of accountability. Both speak at 09:20 in Room A.",
+    date: "2026-10-14T12:00:00",
+    link: "/news/261014-block15-keynotes",
+    tags: ["Conference", "Event"],
+    image: "/images/Events/Block3.jpeg",
+  },
+  {
     id: "26",
     title: "Next WG is coming in September 23rd, and 24th",
     description:
