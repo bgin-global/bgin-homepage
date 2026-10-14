@@ -27,8 +27,8 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Seat the evaluation committee (Phase A), take the scheme scope rulings, and consolidate feedback for the metrics register v1 and the migration playbook.",
   ],
   "2-2": [
-    "Policy keynote framing for Day 2 FASE and cross-WG sessions.",
-    "Link regulatory themes to harmonization discussion paper progress.",
+    "Policy keynote: Carole House (Founder and CEO, Penumbra Strategies) on The Conservation of Accountability.",
+    "How instant settlement, programmable money, digital identity, and AI agents change who can be held responsible, and why accountability has to be designed in rather than settled after the harm.",
   ],
   "2-3": [
     "The Discussion Paper \"The Industrial Structure of Digital Assets\": mapping the stakeholders and structural features of the industry as Japan moves crypto-asset regulation to the FIEA.",
@@ -74,7 +74,7 @@ const HUB_SESSION_IDS: Record<string, string[]> = {
   "ai-blockchain": ["1-3"],
   "agent-standards": ["1-5"],
   "security-supply-chain": ["1-6"],
-  harmonization: ["2-2", "2-3", "2-5", "2-L"],
+  harmonization: ["2-3", "2-5", "2-L"],
   "security-ai-agent": ["2-4"],
   "cybersecurity-information-sharing": ["2-4"],
   "privacy-enhanced-auth": ["2-6"],

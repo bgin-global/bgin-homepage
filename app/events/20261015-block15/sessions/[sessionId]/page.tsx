@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import {
-  BLOCK15_KEYNOTE,
   BLOCK15_PQC_SESSIONS,
+  block15KeynoteForSession,
   isBlock15PqcSession,
 } from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
@@ -57,8 +57,7 @@ export default function Block15SessionDetailPage() {
     : session.time;
 
   const relatedSlugs = (session as SessionRecord).relatedProjectSlugs ?? [];
-  const keynote =
-    session.id === BLOCK15_KEYNOTE.sessionId ? BLOCK15_KEYNOTE : null;
+  const keynote = block15KeynoteForSession(session.id);
   const pqc = isBlock15PqcSession(session.id) ? BLOCK15_PQC_SESSIONS : null;
 
   return (
@@ -336,30 +335,38 @@ export default function Block15SessionDetailPage() {
                             {keynote.speaker.role}
                           </p>
                           <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                            <a
-                              href={keynote.speaker.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-700 hover:underline"
-                            >
-                              LinkedIn
-                            </a>
-                            <a
-                              href={keynote.speaker.x}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-700 hover:underline"
-                            >
-                              X
-                            </a>
-                            <a
-                              href={keynote.organization.website}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-700 hover:underline"
-                            >
-                              {keynote.organization.name}
-                            </a>
+                            {"linkedin" in keynote.speaker &&
+                              keynote.speaker.linkedin && (
+                                <a
+                                  href={keynote.speaker.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-700 hover:underline"
+                                >
+                                  LinkedIn
+                                </a>
+                              )}
+                            {"x" in keynote.speaker && keynote.speaker.x && (
+                              <a
+                                href={keynote.speaker.x}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-700 hover:underline"
+                              >
+                                X
+                              </a>
+                            )}
+                            {"website" in keynote.organization &&
+                              keynote.organization.website && (
+                                <a
+                                  href={keynote.organization.website}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-700 hover:underline"
+                                >
+                                  {keynote.organization.name}
+                                </a>
+                              )}
                           </div>
                         </div>
                       </div>

@@ -82,6 +82,42 @@ export const BLOCK15_KEYNOTE = {
   ],
 } as const;
 
+/** Block 15 policy keynote (Day 2, 09:20–09:50, Room A) — session 2-2 in the program. */
+export const BLOCK15_DAY2_KEYNOTE = {
+  sessionId: "2-2",
+  sessionPage: `${BLOCK15_PAGE}/sessions/2-2`,
+  label: "Policy keynote",
+  title: "The Conservation of Accountability",
+  when: "16 Oct 2026 · 09:20–09:50",
+  room: "Room A",
+  speaker: {
+    name: "Carole House",
+    role: "Founder and CEO, Penumbra Strategies",
+    image: "/images/Events/person/CaroleHouseBlock15.jpeg",
+  },
+  organization: {
+    name: "Penumbra Strategies",
+  },
+  teaser:
+    "Accountability as a design question for commercial infrastructure — instant settlement, programmable money, digital identity, and AI agents are changing who can be held responsible, and not knowing in advance who bears a loss has a cost.",
+  abstract: [
+    "Commerce has always rested on an infrastructure of accountability. A counterparty is a legal person, someone authorized the transaction, an intermediary sits in the middle with both the ability and the duty to intervene, and when something goes wrong there is a party to hold responsible. Instant settlement, programmable money, digital identity and AI agents are changing each of these assumptions at once, and largely without anyone having decided they should. Accountability does not disappear as a result, but it becomes harder to predict, and that carries its own cost.",
+    "When no one can say in advance who bears a loss, firms and consumers price in the uncertainty, withdraw from the market, or consolidate around the few platforms large enough to absorb the risk. Policy has not kept pace. In the United States, the rules that exist rest mainly on agency discretion, piecemeal statutes and litigation. These can do real work, but unevenly and after the harm.",
+    "This keynote argues that accountability should be treated as a design question for the next generation of commercial infrastructure, and not left to be settled in the aftermath. It draws on DeFi governance, financial integrity policy and the emerging law of autonomous systems. The stakes include consumer protection and market stability, and also the trust on which open digital markets and U.S.-led payment systems depend.",
+  ],
+  bio: [
+    "Carole House is a strategic technology executive who has spent her career focusing on leveraging innovative technologies to defend US national and economic security interests, including across three tours at the White House, advising five financial regulatory agencies, and service as a U.S. Army Captain. She is the founder and CEO of a strategic technology and national security advisory practice, Penumbra Strategies, senior advisor to defensetech VC firm New Vista Capital, an appointed Member of the California Governor's Innovation Council, and serves as a Distinguished Senior Fellow for the ACAMS International Anti-Fraud and Technology Task Force and a Senior Fellow at the Atlantic Council GeoEconomics Center.",
+    "Carole recently served at the White House National Security Council as Special Advisor for Cybersecurity and Critical Infrastructure and Director for Cybersecurity and Secure Digital Innovation. During her time at the White House, Carole architected two Executive Orders driving critical steps to promote innovation in cybersecurity, digital identity, artificial intelligence, and digital assets. Carole has held positions in the private sector as an Executive in Residence at Terranet Ventures, Inc., co-founder and interim COO for a stealth fintech startup, and served on corporate and advisory boards for three financial regulatory agencies, four non-profits, and an AI and quantum security startup.",
+    "She also has been recognized for her leadership in cyber and emerging tech initiatives, including the prestigious \"Fed100\" award and AFFIRM's \"Leadership in Crisis\" award, in addition to various publications across the Atlantic Council, Bloomberg, the Small Wars Journal, and the Military Review. Carole's prior government experience includes service as a U.S. Army intelligence and chemical defense officer as well as positions leading emerging tech, cybersecurity, and national security initiatives across the White House, Senate Homeland Security Committee, and the U.S. Treasury.",
+  ],
+} as const;
+
+export function block15KeynoteForSession(sessionId: string) {
+  if (sessionId === BLOCK15_KEYNOTE.sessionId) return BLOCK15_KEYNOTE;
+  if (sessionId === BLOCK15_DAY2_KEYNOTE.sessionId) return BLOCK15_DAY2_KEYNOTE;
+  return null;
+}
+
 /**
  * Block 15 IKP PQC working sessions (Day 1, Room B) — sessions 1-4 and 1-7.
  * Shared competition context: the PQC Migration Prize, its public repository,
