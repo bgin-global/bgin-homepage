@@ -6,7 +6,9 @@ import Header from "@/components/Header";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  BLOCK15_DAY2_KEYNOTE,
   BLOCK15_KEY_HUBS,
+  BLOCK15_KEYNOTE,
   BLOCK15_META,
   BLOCK15_REGISTER,
   BLOCK15_WHO,
@@ -27,6 +29,7 @@ import "@/styles/block13.css";
 import { CUSTOM_STYLES } from "@/styles/custom";
 
 const program = processProgram();
+const keynotes = [BLOCK15_KEYNOTE, BLOCK15_DAY2_KEYNOTE];
 
 
 
@@ -255,6 +258,9 @@ export default function Block15Page() {
         aria-label="Jump to section"
       >
         <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+          <a href="#keynotes" className="font-medium text-gray-700 hover:text-blue-700">
+            Keynotes
+          </a>
           <a href="#why-attend" className="font-medium text-gray-700 hover:text-blue-700">
             Why attend
           </a>
@@ -280,6 +286,54 @@ export default function Block15Page() {
           </a>
         </div>
       </nav>
+
+      <section id="keynotes" className="py-12 px-4 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-gray-900 mb-2`}>
+            Keynotes
+          </h2>
+          <p className="text-sm text-gray-600 mb-6">
+            Room A · 09:20–09:50 each morning
+          </p>
+          <ul className="grid md:grid-cols-2 gap-4 list-none">
+            {keynotes.map((talk) => (
+              <li key={talk.sessionId}>
+                <Link
+                  href={talk.sessionPage}
+                  className={`flex gap-4 rounded-md border border-gray-200 bg-white p-4 no-underline hover:border-blue-700 ${
+                    talk.wgId === "fase"
+                      ? "border-l-4 border-l-violet-700"
+                      : "border-l-4 border-l-sky-700"
+                  }`}
+                >
+                  <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src={talk.speaker.image}
+                      alt=""
+                      fill
+                      sizes="80px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <WgChip wg={talk.wgId} />
+                    <p className="mt-2 text-lg font-semibold leading-snug text-gray-900">
+                      {talk.speaker.name}
+                    </p>
+                    <p className="text-sm text-gray-600">{talk.speaker.role}</p>
+                    <p className="mt-1 text-sm font-medium text-gray-900">
+                      {talk.title}
+                    </p>
+                    <p className="mt-1 text-xs text-gray-500">
+                      {talk.when} · {talk.room}
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       {/* Why attend / Who should come — conversion-first */}
       <section id="why-attend" className="py-12 px-4 bg-white border-b border-gray-200">
