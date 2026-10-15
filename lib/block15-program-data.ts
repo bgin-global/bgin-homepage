@@ -382,6 +382,11 @@ export const programData = {
               type: "Discussion Paper",
             },
             {
+              title: "Presentation: Local Rules, Global Markets — Tetsuro Morishita (Sophia University), on behalf of the Study Group",
+              link: "/documents/block-events/block15/FASE/Local_Rules_Global_Markets_Morishita.pdf",
+              type: "PDF",
+            },
+            {
               title: "FASE contribution: Offshore, Infrastructure, Public Goods — early findings on three open questions (discussion draft, 23 Sep 2026)",
               link: "https://docs.google.com/presentation/d/1C7DsLsA9UCPvYBO8r6eXIehZN3-fa7aJUiiCU6yczXc/edit",
               type: "Slides",

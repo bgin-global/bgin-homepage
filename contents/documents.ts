@@ -1245,6 +1245,22 @@ export const documents: Document[] = [
     what: "meeting_report",
   },
 
+  // ===== Block 15 (15–16 October 2026, Washington, D.C.) =====
+  {
+    id: "B15_pres_01",
+    title: "Block 15 Presentation: Local Rules, Global Markets (Tetsuro Morishita, Sophia University)",
+    path: "block-events/block15/FASE/Local_Rules_Global_Markets_Morishita.pdf",
+    where: "Block 15",
+    when: "2026/10",
+    author: "FASE",
+    language: "EN",
+    what: "other",
+    themes: ["governance", "defi"],
+    summary:
+      "Session 2-3 (FASE: Industrial Design of Digital Assets). Presentation on behalf of the Study Group on the Appropriate Industrial Structure for Digital Assets, drawing on the Discussion Paper v1.0.",
+    relatedProjectSlugs: ["harmonization"],
+  },
+
   // ===== GDC 2026 (2–3 September 2026, Geneva) =====
   {
     id: "GDC26_mr_01",
