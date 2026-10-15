@@ -20,7 +20,13 @@ export const programData = {
             "The two days at a glance: what each working group room (IKP, Cyber Security, FASE, Agentic AI) is working on and aims to settle this Block",
             "How to take part: how session outcomes become meeting reports, the public-comment cycle, and following the work on the BGIN Discourse",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Opening Plenary slides — BGIN Block 15",
+              link: "/documents/block-events/block15/Plenary/Block15_Opening_Plenary.pdf",
+              type: "PDF",
+            },
+          ],
           relatedProjects: [],
           relatedProjectSlugs: [],
         },
