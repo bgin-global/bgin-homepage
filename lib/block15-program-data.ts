@@ -181,6 +181,11 @@ export const programData = {
           ],
           documents: [
             {
+              title: "Session introduction slides — Shin'ichiro Matsuo (Session Chair)",
+              link: "/documents/block-events/block15/CS/Block15_Supply_Chain_Intro.pdf",
+              type: "PDF",
+            },
+            {
               title:
                 "Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses — Research paper, June 30, 2026 (Deloitte Tohmatsu LLC)",
               link: "/documents/block-events/block15/CS/ResearchPaper_dtc_20260630_en.pdf",
