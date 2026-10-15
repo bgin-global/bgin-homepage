@@ -1260,6 +1260,21 @@ export const documents: Document[] = [
       "Session 2-3 (FASE: Industrial Design of Digital Assets). Presentation on behalf of the Study Group on the Appropriate Industrial Structure for Digital Assets, drawing on the Discussion Paper v1.0.",
     relatedProjectSlugs: ["harmonization"],
   },
+  {
+    id: "B15_pres_02",
+    title:
+      "Block 15 Presentation: Crypto Asset Cybersecurity (Takaya Sugino, Japan Financial Services Agency)",
+    path: "block-events/block15/CS/Crypto_Asset_Cybersecurity_Sugino_JFSA.pdf",
+    where: "Block 15",
+    when: "2026/10",
+    author: "CS",
+    language: "EN",
+    what: "other",
+    themes: ["cybersecurity", "governance"],
+    summary:
+      "Session 1-6 (Cyber: Governance of the Security Supply Chain). Presentation by Takaya Sugino, Crypto Assets & Stablecoin Division, Japan Financial Services Agency, on policy approaches and attack cases across the crypto-asset ecosystem.",
+    relatedProjectSlugs: ["security-supply-chain"],
+  },
 
   // ===== GDC 2026 (2–3 September 2026, Geneva) =====
   {
