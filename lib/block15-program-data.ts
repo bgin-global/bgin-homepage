@@ -187,6 +187,12 @@ export const programData = {
             },
             {
               title:
+                "Presentation: Crypto Asset Cybersecurity — Takaya Sugino (Japan Financial Services Agency)",
+              link: "/documents/block-events/block15/CS/Crypto_Asset_Cybersecurity_Sugino_JFSA.pdf",
+              type: "PDF",
+            },
+            {
+              title:
                 "Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses — Research paper, June 30, 2026 (Deloitte Tohmatsu LLC)",
               link: "/documents/block-events/block15/CS/ResearchPaper_dtc_20260630_en.pdf",
               type: "PDF",
