@@ -629,15 +629,15 @@ export const programData = {
   },
   rooms: {
     "Room A": {
-      displayName: "Capitol Campus — Room A (2416)",
+      displayName: "Capitol Campus — Room A (2424)",
       capacity: "TBD",
-      image: "/images/Events/block15/room-2416.jpg",
+      image: "/images/Events/block15/room-2424.jpg",
       address: "111 Massachusetts Avenue NW, Washington, DC 20001, United States",
     },
     "Room B": {
-      displayName: "Capitol Campus — Room B (2424)",
+      displayName: "Capitol Campus — Room B (2416)",
       capacity: "TBD",
-      image: "/images/Events/block15/room-2424.jpg",
+      image: "/images/Events/block15/room-2416.jpg",
       address: "111 Massachusetts Avenue NW, Washington, DC 20001, United States",
     },
     "Open Space": {

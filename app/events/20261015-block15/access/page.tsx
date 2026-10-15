@@ -46,8 +46,8 @@ export default function Block15AccessPage() {
 
               <h4 className="font-semibold mb-2 mt-6">Event Rooms</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Room A — 2416</strong> — Main Sessions (Day 1 &amp; 2)</li>
-                <li><strong>Room B — 2424</strong> — Main Sessions (Day 1 &amp; 2)</li>
+                <li><strong>Room A — 2424</strong> — Main Sessions (Day 1 &amp; 2)</li>
+                <li><strong>Room B — 2416</strong> — Main Sessions (Day 1 &amp; 2)</li>
                 <li><strong>Open Space</strong> — Agent Hack / informal collaboration (location within the building to be confirmed on site)</li>
               </ul>
 
@@ -118,25 +118,25 @@ export default function Block15AccessPage() {
             <div className="block13-grid block13-grid-2 mb-8">
               <div className="block13-card overflow-hidden">
                 <Image
-                  src="/images/Events/block15/room-2416.jpg"
-                  alt="Capitol Campus Room 2416 — classroom used as Room A"
+                  src="/images/Events/block15/room-2424.jpg"
+                  alt="Capitol Campus Room 2424 — classroom used as Room A"
                   width={600}
-                  height={800}
+                  height={450}
                   className="w-full h-64 object-cover mb-4 rounded-lg"
                 />
-                <h3 className="text-xl font-semibold mb-2">Room A — 2416</h3>
+                <h3 className="text-xl font-semibold mb-2">Room A — 2424</h3>
                 <p className="text-gray-600">Main Sessions (Day 1 &amp; 2)</p>
               </div>
 
               <div className="block13-card overflow-hidden">
                 <Image
-                  src="/images/Events/block15/room-2424.jpg"
-                  alt="Capitol Campus Room 2424 — classroom used as Room B"
+                  src="/images/Events/block15/room-2416.jpg"
+                  alt="Capitol Campus Room 2416 — classroom used as Room B"
                   width={600}
-                  height={450}
+                  height={800}
                   className="w-full h-64 object-cover mb-4 rounded-lg"
                 />
-                <h3 className="text-xl font-semibold mb-2">Room B — 2424</h3>
+                <h3 className="text-xl font-semibold mb-2">Room B — 2416</h3>
                 <p className="text-gray-600">Main Sessions (Day 1 &amp; 2)</p>
               </div>
             </div>
