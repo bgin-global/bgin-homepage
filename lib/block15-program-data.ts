@@ -164,19 +164,20 @@ export const programData = {
           time: "15:40 - 17:10",
           room: "Room A",
           summary:
-            "Cybersecurity risks in crypto-asset services increasingly arise not only from vulnerabilities in blockchain protocols or the compromise of signing keys, but also from dependencies across the broader operational and technology supply chain. Recent incidents have highlighted risks involving external service providers, cloud and CI/CD environments, transaction-generation processes, administrative privileges, smart contracts, oracles, bridges, and other external components.\n\n" +
-            "This session will use the June 2026 research paper Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses as a starting point for discussion. The paper maps the structure and dependencies of the crypto-asset ecosystem, examines recent cybersecurity incidents, and identifies priority areas including third-party risk management, protection against code and transaction tampering, controls over smart contracts and DeFi operations, and the effective use of third-party assessments.\n\n" +
-            "Building on these findings, participants will discuss how security-supply-chain risks should be governed in practice: how critical dependencies should be identified, what operators should verify themselves rather than delegate to vendors or auditors, how responsibilities should be allocated across service providers and subcontractors, and what contractual, technical, monitoring, and assurance mechanisms are appropriate.\n\n" +
-            "The discussion will provide input to BGIN’s ongoing Governance of the Security Supply Chain project, with the aim of developing practical principles and vendor-guideline considerations for crypto and blockchain systems.",
+            "Cybersecurity risks in crypto-asset services increasingly arise not only from vulnerabilities in blockchain protocols or the compromise of signing keys, but from dependencies across the wider operational and technology supply chain: wallet-system vendors and their staff, cloud and CI/CD environments, transaction-generation processes, administrative privileges, smart contracts, oracles and bridges — and, as October 2026 has shown, the physical distribution channel for the hardware wallets that hold the keys.\n\n" +
+            "The session starts from the work already done. After the May 2024 DMM Bitcoin loss, which was traced to a compromise at a wallet-system vendor outside the regulatory perimeter, JPCrypto-ISAC documented a third-party (vendor) management guideline for crypto-asset businesses, built on the FISC framework, with an MOU template and a control checklist; it was presented to BGIN at Block 14. Takaya Sugino (Japan Financial Services Agency) will then present the JFSA's April 2026 policy on strengthening cybersecurity at crypto-asset exchange service providers — self-help, mutual aid and public support, including raising the supervisory guideline's expectations for external audit and outsourcing management — and the June 2026 research paper Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses commissioned under it.\n\n" +
+            "The room will then take up the hardware-wallet supply-chain incident reported in October 2026, in which devices sold through third-party resellers carried covert implants that captured recovery phrases at setup — an attack that left the secure element, firmware and genuine-device check intact — and ask what it adds to the picture: distribution-channel assurance, device provenance and tamper evidence, and the limits of attestation.\n\n" +
+            "Finally, participants will discuss which additional perspectives the BGIN security-supply-chain document needs beyond vendor management (open-source and software components, SBOM, hardware and distribution channels, DeFi and cross-chain dependencies, assurance and certification) and confirm the roadmap, owners and timeline toward publication.",
           wg: "Cyber Security",
-          speakers: "",
-          moderator: "Julien Bringer (Chair, Cyber Security)",
+          speakers: "Takaya Sugino (Japan Financial Services Agency)",
+          moderator: "Shin'ichiro Matsuo (Georgetown University)",
           detailPage: "/events/20261015-block15/sessions/1-6",
           agenda: [
-            "Key findings from the June 2026 research paper, including recent incidents, ecosystem dependencies, and priority areas for cybersecurity risk management.",
-            "Discussion on how operators should identify and manage risks arising from vendors, subcontractors, software components, cloud services, smart contracts, oracles, bridges, and other external dependencies.",
-            "Discussion on what operators should verify themselves, what may be delegated to third parties, and how audits, monitoring, contractual controls, and technical safeguards should be combined.",
-            "Identify common principles and practical considerations that could inform BGIN’s work on security supply-chain governance and vendor guidelines.",
+            "Introduction (Shin'ichiro Matsuo): where the work stands — the third-party management guideline documented after the DMM Bitcoin incident (JPCrypto-ISAC, presented at Block 14) and what BGIN has covered so far.",
+            "JFSA presentation (Takaya Sugino): the April 2026 policy on strengthening cybersecurity at crypto-asset exchange service providers, and the June 2026 research paper on cybersecurity issues and countermeasures in crypto-asset-related businesses.",
+            "Discussion: the October 2026 hardware-wallet distribution incident — implants inserted through reseller channels, what genuine-device checks can and cannot detect, and what operators, vendors and resellers should each be accountable for.",
+            "Discussion: additional perspectives for the BGIN security-supply-chain document beyond vendor management — open-source and software components (SBOM), hardware and distribution channels, cloud and CI/CD, DeFi and cross-chain dependencies, assurance and certification.",
+            "Roadmap toward publication: document scope and structure, editors and section owners, WG-call schedule, and the review cycle after Block 15.",
           ],
           documents: [
             {
@@ -184,6 +185,22 @@ export const programData = {
                 "Cybersecurity Issues and Countermeasures in Crypto-Asset-Related Businesses — Research paper, June 30, 2026 (Deloitte Tohmatsu LLC)",
               link: "/documents/block-events/block15/CS/ResearchPaper_dtc_20260630_en.pdf",
               type: "PDF",
+            },
+            {
+              title:
+                "JFSA: Policy on Strengthening Cybersecurity at Crypto-Asset Exchange Service Providers, April 3, 2026 (Japanese)",
+              link: "https://www.fsa.go.jp/news/r7/sonota/20260403/20260403.html",
+              type: "Policy",
+            },
+            {
+              title: "Block 14 MR: Governance of Security Supply Chain",
+              link: "/documents/block-events/block14/CS/Security_Governance_of_security_supply_chain.pdf",
+              type: "Meeting Report",
+            },
+            {
+              title: "Block 13 MR: Governance of Security Supply Chain",
+              link: "/documents/block-events/block13/1-2 Governance of Security Supply Chain.pdf",
+              type: "Meeting Report",
             },
           ],
           relatedProjects: ["Governance of the Security Supply Chain"],

@@ -19,8 +19,8 @@ const SESSION_PLANS: Record<string, string[]> = {
     "Align agent standards discussions with Security AI Agent themes.",
   ],
   "1-6": [
-    "Review the Security Supply Chain draft and vendor-guideline framing.",
-    "Assign owners for post-Block revisions and WG comments.",
+    "From the vendor-management guideline documented after the DMM Bitcoin incident to the JFSA's April 2026 cybersecurity policy (presented by Takaya Sugino, JFSA), and what the October 2026 hardware-wallet distribution incident adds.",
+    "Agree the additional perspectives for the BGIN security-supply-chain document and confirm the roadmap, owners and timeline toward publication.",
   ],
   "1-7": [
     "Crypto agility as a governance property and the NIST PQC signature migration path across Bitcoin, Ethereum, and other ecosystems — with NIST participation.",

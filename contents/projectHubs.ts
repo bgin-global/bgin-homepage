@@ -737,7 +737,7 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15 · 15 Oct, 11:30 (session 1-6)",
+    nextMilestone: "Block 15 · 15 Oct, 15:40 (session 1-6)",
     documents: [
       {
         type: "Reference",
