@@ -682,8 +682,8 @@ export default function Block15Page() {
 
               <h4 className="font-semibold mb-2 mt-6">Main Venues</h4>
               <ul className="text-sm text-gray-600 space-y-2">
-                <li><strong>Room A (2416)</strong> — Main Sessions</li>
-                <li><strong>Room B (2424)</strong> — Main Sessions</li>
+                <li><strong>Room A (2424)</strong> — Main Sessions</li>
+                <li><strong>Room B (2416)</strong> — Main Sessions</li>
               </ul>
 
               <p className="text-sm text-gray-600 mt-4">
