@@ -33,7 +33,7 @@ export default function Bsaq2026CallPage() {
       </div>
 
       <div className="py-12">
-        <div className="max-w-4xl mx-auto px-4 text-lg leading-7 text-gray-800">
+        <div className="bsaq-cfp max-w-4xl mx-auto px-4 text-lg leading-7 text-gray-800">
           <h2 className="font-FamiljenGrotesk text-xl leading-snug font-semibold text-black mb-4">
             主催（二組織による共催）：
           </h2>
