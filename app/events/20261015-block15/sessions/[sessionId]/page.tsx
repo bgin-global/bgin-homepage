@@ -517,16 +517,17 @@ export default function Block15SessionDetailPage() {
               )}
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="font-bold mb-2 text-blue-900">Register</h3>
+                <h3 className="font-bold mb-2 text-blue-900">
+                  Block 15 has concluded
+                </h3>
                 <p className="text-sm text-blue-800 mb-3">
-                  Contributors who submit written work and present may qualify
-                  for a registration fee waiver.
+                  This session was held 15–16 October 2026.
                 </p>
                 <Link
-                  href="/events/20261015-block15#contributions"
+                  href="/events/20261015-block15#program"
                   className="text-sm font-semibold text-blue-700 hover:underline"
                 >
-                  Contribution process →
+                  Program →
                 </Link>
               </div>
             </div>

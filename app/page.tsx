@@ -14,7 +14,6 @@ import {
   BLOCK15_KEY_HUBS,
   BLOCK15_META,
   BLOCK15_PAGE,
-  BLOCK15_REGISTER,
 } from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
 import Link from "next/link";
@@ -51,37 +50,30 @@ export default function Home() {
 
       <section
         className="border-y border-blue-700 bg-blue-700 text-white"
-        aria-label="Block 15 registration"
+        aria-label="Block 15 has concluded"
       >
         <div className="max-w-5xl mx-auto px-4 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <div className="min-w-0">
             <p className="text-xs font-bold uppercase tracking-wider text-blue-100 mb-1">
-              Next Block meeting · Register now
+              Block meeting concluded
             </p>
             <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-white mb-1`}>
               {BLOCK15_META.title}
             </h2>
             <p className="text-sm text-blue-100 mb-2">
-              {BLOCK15_META.when} · {BLOCK15_META.where} · {BLOCK15_META.format}
+              {BLOCK15_META.when} · {BLOCK15_META.where}
             </p>
             <p className="text-sm text-blue-50 max-w-xl leading-relaxed">
-              {BLOCK15_META.why}
+              The meeting was held 15–16 October 2026. The program and session
+              pages remain on the event page.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 shrink-0">
-            <a
-              href={BLOCK15_REGISTER}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex justify-center items-center px-5 py-3 rounded-md bg-white text-blue-800 text-sm font-semibold hover:bg-blue-50"
-            >
-              Register now
-            </a>
             <Link
               href={BLOCK15_PAGE}
-              className="inline-flex justify-center items-center px-5 py-3 rounded-md border border-white text-white text-sm font-semibold hover:bg-white/10"
+              className="inline-flex justify-center items-center px-5 py-3 rounded-md bg-white text-blue-800 text-sm font-semibold hover:bg-blue-50"
             >
-              Event details
+              Event page
             </Link>
           </div>
         </div>
@@ -155,7 +147,7 @@ export default function Home() {
         <SectionTitle title="Key projects now" />
         <div className="w-full max-w-5xl m-auto px-6 xl:px-0 mt-4 mb-2">
           <p className={`${CUSTOM_STYLES.DESCRIPTION} text-black`}>
-            Priority hubs for Block 15 and ongoing standards work. Open a hub
+            Priority hubs from Block 15 and ongoing standards work. Open a hub
             for status, documents, and how to contribute.
           </p>
         </div>

@@ -8,7 +8,6 @@ import Link from "next/link";
 import {
   BLOCK15_KEY_HUBS,
   BLOCK15_META,
-  BLOCK15_REGISTER,
   BLOCK15_WHO,
 } from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
@@ -193,7 +192,7 @@ export default function Block15Page() {
           style={{ position: "relative", zIndex: 50 }}
         >
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-200 mb-3">
-            BGIN · Next Block meeting
+            BGIN · This meeting has concluded
           </p>
           <h1>{BLOCK15_META.title}</h1>
           <p>
@@ -201,7 +200,7 @@ export default function Block15Page() {
           </p>
           <p className="text-base md:text-lg font-semibold text-white drop-shadow-md mt-2 mb-4 flex items-center justify-center gap-2 flex-wrap">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-white border border-white/70 bg-black/50 text-sm font-semibold">
-              Hybrid — remote participation available
+              Held 15–16 October 2026
             </span>
           </p>
           <p className="text-base text-white/90 max-w-xl mx-auto mb-8 leading-relaxed drop-shadow">
@@ -212,31 +211,12 @@ export default function Block15Page() {
             style={{ position: "relative", zIndex: 51, pointerEvents: "auto" }}
           >
             <a
-              href={BLOCK15_REGISTER}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#program"
               className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
             >
-              Register on Eventbrite
-            </a>
-            <a
-              href="#why-attend"
-              className="text-sm font-medium text-white underline underline-offset-2 hover:text-blue-100"
-            >
-              Why attend →
+              View the program
             </a>
           </div>
-          <p className="mt-6 text-sm text-white/80 leading-7 max-w-sm mx-auto">
-            Card payment open now.
-            <br />
-            <a
-              href="#stablecoin-payment"
-              className="underline hover:text-white"
-            >
-              USDC on Ethereum
-            </a>{" "}
-            available closer to the event.
-          </p>
         </div>
       </section>
 
@@ -245,8 +225,8 @@ export default function Block15Page() {
         aria-label="Participation format"
       >
         <div className="max-w-4xl mx-auto text-center text-sm text-blue-50">
-          <strong className="text-white">Remote participants welcome.</strong>{" "}
-          Connection details are sent after registration.
+          <strong className="text-white">This meeting has concluded.</strong>{" "}
+          It was held 15–16 October 2026 in Washington, D.C.
         </div>
       </section>
 
@@ -270,14 +250,6 @@ export default function Block15Page() {
           <a href="#contributions" className="font-medium text-gray-700 hover:text-blue-700">
             Fee waiver
           </a>
-          <a
-            href={BLOCK15_REGISTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex px-3 py-1 rounded-md bg-blue-700 text-white text-xs font-semibold hover:bg-blue-800"
-          >
-            Register
-          </a>
         </div>
       </nav>
 
@@ -287,7 +259,7 @@ export default function Block15Page() {
           <div className="grid md:grid-cols-[1.2fr_1fr] gap-10">
             <div>
               <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-gray-900 mb-3`}>
-                Why attend Block 15 now
+                What Block 15 covered
               </h2>
               <p className={`${CUSTOM_STYLES.TYPE.LEDE} text-gray-700 mb-4`}>
                 {BLOCK15_META.why}
@@ -321,12 +293,10 @@ export default function Block15Page() {
               </ul>
               <div className="flex flex-wrap gap-3 items-center">
                 <a
-                  href={BLOCK15_REGISTER}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#program"
                   className="inline-flex items-center px-5 py-3 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
                 >
-                  Register on Eventbrite
+                  View the program
                 </a>
                 <a
                   href="#critical-projects"
@@ -924,7 +894,7 @@ export default function Block15Page() {
         >
           <FoldSummary
             title="Stablecoin payment"
-            blurb="Card registration is open on Eventbrite. USDC on Ethereum will be available closer to the event for registration and sponsor fees."
+            blurb="Registration for this meeting has closed. The program and session pages remain below."
           />
           <div className="pb-8 pt-2">
 
@@ -937,16 +907,16 @@ export default function Block15Page() {
             <div className="rounded-md p-4 mb-4 border-2 border-blue-700/30 bg-blue-700/5">
               <h3 className="font-semibold mb-2 flex items-center gap-2">
                 <Image src="/images/Events/usdc-logo.svg" alt="USDC" width={24} height={24} className="flex-shrink-0" />
-                <span style={{ color: '#1d4ed8' }}>Register with USDC (coming soon)</span>
+                <span style={{ color: '#1d4ed8' }}>USDC registration closed with the meeting</span>
               </h3>
               <p className="text-gray-700 text-sm mb-3">
-                Registration in <strong>USDC on Ethereum</strong> via Coinbase Commerce will be available closer to the event date. Ticket options will match those available on Eventbrite.
+                Block 15 has concluded. USDC registration for this meeting did not open.
               </p>
               <p className="text-sm font-semibold mb-3" style={{ color: '#1d4ed8' }}>
                 Important: We accept USDC on the Ethereum network only.
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-md p-3 text-sm text-blue-800">
-                USDC payment links will be posted here once registration opens.
+                Registration for Block 15 is closed.
               </div>
             </div>
             <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
@@ -1026,30 +996,16 @@ export default function Block15Page() {
                   international standards that will shape the future of digital economic networks.
                 </p>
                 <div className="bg-white rounded-md border border-gray-200 p-6">
-                  <h4 className="font-semibold mb-2">Registration</h4>
+                  <h4 className="font-semibold mb-2">Registration closed</h4>
                   <p className="text-sm text-gray-600 mb-2">
-                    Registration is open. Limited in-person capacity in Washington, D.C.
-                  </p>
-                  <p className="text-sm text-gray-600 mb-2">
-                    Register by card on Eventbrite.{" "}
-                    <a href="#stablecoin-payment" className="font-medium text-blue-700 underline">
-                      USDC on Ethereum
-                    </a>{" "}
-                    will be available closer to the event.
-                  </p>
-                  <p className="text-sm text-gray-600 mb-4">
-                    <strong>Contributors:</strong>{" "}
-                    <a href="#contributions" className="text-blue-700 underline">
-                      Fee waivers available for those presenting work
-                    </a>
+                    Block 15 was held 15–16 October 2026 in Washington, D.C.
+                    Registration is closed.
                   </p>
                   <a
-                    href={BLOCK15_REGISTER}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#program"
                     className="inline-flex items-center px-5 py-2.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
                   >
-                    Register on Eventbrite
+                    View the program
                   </a>
                 </div>
               </div>

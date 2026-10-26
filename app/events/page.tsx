@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { BLOCK15_REGISTER } from "@/contents/block15Promo";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,19 +55,6 @@ export default function EventsPage() {
       color: eventTypeColors["Workshop"],
       venue: "University of Tokyo, Komaba Research Campus",
     },
-    {
-      id: "block15",
-      title: "BGIN Block #15 Meeting",
-      date: "2026 Oct. 15 - 16",
-      time: "9:00 - 17:00",
-      type: "Block Conference",
-      description: "BGIN Block 15 continues GDC 2026 work on PQC migration, cybersecurity information sharing, wallet ST/PP, and related governance tracks. Hybrid meeting in Washington, D.C.",
-      link: "/events/20261015-block15",
-      color: eventTypeColors["Block Conference"],
-      venue: "Washington, D.C.",
-      registerLink: BLOCK15_REGISTER,
-      image: "/images/Events/Block3.jpeg"
-    },
   ];
 
   const pastEventCategories = [
@@ -82,7 +68,7 @@ export default function EventsPage() {
       title: "Block Conferences",
       description: "BGIN General Assemblies and major conferences",
       link: "/activities/block-conference",
-      count: "14 past events"
+      count: "15 past events"
     },
     {
       title: "Layer 2 Meetups",

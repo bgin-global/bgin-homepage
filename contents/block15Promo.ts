@@ -1,4 +1,4 @@
-/** Shared Block 15 campaign links and copy (registration drive through Oct 2026). */
+/** Shared Block 15 links. The meeting was held 15–16 October 2026. */
 
 export const BLOCK15_PAGE = "/events/20261015-block15";
 export const BLOCK15_REGISTER =
@@ -164,7 +164,7 @@ export const BLOCK15_PQC_SESSIONS = {
   /** The six-month workshop series (Sep 2026 → Feb 2027); Block 15 is W2. */
   workshops: [
     { id: "W1", when: "Sep 2026", focus: "Kickoff: repository chartered, core outcomes, committee nominations opened" },
-    { id: "W2", when: "Oct 2026 · Block 15", focus: "Committee seated (Phase A); metrics v0 → v1; scheme scope rulings", current: true },
+    { id: "W2", when: "Oct 2026 · Block 15", focus: "Committee seated (Phase A); metrics v0 → v1; scheme scope rulings" },
     { id: "W3", when: "Nov 2026", focus: "Testbed: harness interface, reference CPU class, COI policy, node-host call" },
     { id: "W4", when: "13 Dec 2026 · SSR, Baltimore", focus: "Rubric v1; “PQC-ready chain” definition; call-text input package to METI/NEDO" },
     { id: "W5", when: "Jan 2027", focus: "Pilot nodes running reference runs" },
