@@ -284,40 +284,28 @@ export default function Bsaq2026CallPage() {
             <p className="text-gray-600 text-sm mb-4">
               特記なき限り Anywhere on Earth（AoE = UTC−12時間）です。
             </p>
-            <div className="overflow-x-auto mb-8">
-              <table className="w-full text-left border border-gray-200">
-                <thead className="bg-gray-50">
+            <div className="not-prose overflow-x-auto mb-8">
+              <table className="bsaq-dates w-full text-left text-base text-gray-800">
+                <thead>
                   <tr>
-                    <th className="px-4 py-3 border-b border-gray-200 font-semibold">
-                      項目
-                    </th>
-                    <th className="px-4 py-3 border-b border-gray-200 font-semibold">
+                    <th className="bg-gray-50 font-semibold">項目</th>
+                    <th className="bg-gray-50 font-semibold whitespace-nowrap">
                       日付
                     </th>
                   </tr>
                 </thead>
-                <tbody className="text-gray-800">
+                <tbody>
                   <tr>
-                    <td className="px-4 py-3 border-b border-gray-200">
-                      論文投稿締切
-                    </td>
-                    <td className="px-4 py-3 border-b border-gray-200">
-                      2026年11月4日（水）
-                    </td>
+                    <td>論文投稿締切</td>
+                    <td className="whitespace-nowrap">2026年11月4日（水）</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 border-b border-gray-200">
-                      採否通知（予告無く延期する場合があります）
-                    </td>
-                    <td className="px-4 py-3 border-b border-gray-200">
-                      2026年11月16日（月）
-                    </td>
+                    <td>採否通知（予告無く延期する場合があります）</td>
+                    <td className="whitespace-nowrap">2026年11月16日（月）</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3">
-                      ワークショップ開催（現地時間）
-                    </td>
-                    <td className="px-4 py-3">
+                    <td>ワークショップ開催（現地時間）</td>
+                    <td className="whitespace-nowrap">
                       2026年11月30日（月） 東京・駒場
                     </td>
                   </tr>
