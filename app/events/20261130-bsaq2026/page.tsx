@@ -1,9 +1,11 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
+import Link from "next/link";
 
 const EASYCHAIR_HREF = "https://easychair.org/conferences/?conf=bsaq2026";
 const ACCESS_HREF = "https://www.iis.u-tokyo.ac.jp/ja/access/";
+const HUB_HREF = "/projects/pqc-migration";
 
 export default function Bsaq2026CallPage() {
   return (
@@ -25,10 +27,26 @@ export default function Bsaq2026CallPage() {
           <p className="font-FamiljenGrotesk text-2xl leading-snug font-semibold text-black text-center mb-3">
             量子計算機時代のブロックチェーンシステムの安全性確保技術ワークショップ
           </p>
-          <p className="text-gray-700 text-center">
+          <p className="text-gray-700 text-center mb-8">
             （Workshop on Technologies for Securing Blockchain Systems in the
             Age of Quantum Computers: BSAQ2026）
           </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a
+              href={EASYCHAIR_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex px-6 py-3 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800"
+            >
+              EasyChair で投稿する
+            </a>
+            <Link
+              href={HUB_HREF}
+              className="inline-flex px-6 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 font-semibold hover:bg-gray-50"
+            >
+              PQC Migration hub
+            </Link>
+          </div>
         </div>
       </div>
 
