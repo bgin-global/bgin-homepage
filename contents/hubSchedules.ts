@@ -80,6 +80,7 @@ const PRIORITY: Record<string, HubSchedule> = {
       {
         when: "30 Nov 2026",
         what: "BSAQ2026 domestic workshop, University of Tokyo (Call for Papers, in Japanese)",
+        current: true,
       },
       { when: "Nov 2026", what: "Testbed harness, node-host call, COI policy" },
       {
@@ -287,32 +288,27 @@ const PRIORITY: Record<string, HubSchedule> = {
   },
 };
 
+function closeFinishedBlock15(item: RoadmapItem): RoadmapItem {
+  if (!item.current || !/Block 15/.test(item.what)) return item;
+  return { ...item, current: false, done: true };
+}
+
 export function getHubSchedule(hub: ProjectHub): HubSchedule {
   const base = PRIORITY[hub.slug] ?? {
     roadmap: defaultRoadmap(hub.nextMilestone),
     meetings: defaultMeetings(hub),
   };
   return {
-    roadmap: base.roadmap,
-    meetings: mergeBlock15Meetings(base.meetings, hub.slug),
+    roadmap: base.roadmap.map(closeFinishedBlock15),
+    meetings: mergeBlock15Meetings(base.meetings, hub.slug).filter(
+      (meeting) => !meeting.href.includes("/events/20261015-block15")
+    ),
   };
 }
 
 /** Sitewide upcoming activities for Home / Events (shared MeetingCard model). */
 export function getSiteUpcomingMeetings(): MeetingItem[] {
   return [
-    {
-      type: "block",
-      typeLabel: "Block meeting",
-      title: "BGIN Block 15",
-      when: "15–16 Oct 2026 · Washington, D.C.",
-      plan: [
-        "General meeting to advance critical projects, review drafts, and lock next deliverables.",
-        "Join via the Block 15 event page; open relevant project hubs before you arrive.",
-      ],
-      href: BLOCK15,
-      priority: true,
-    },
     {
       type: "other",
       typeLabel: "Workshop",

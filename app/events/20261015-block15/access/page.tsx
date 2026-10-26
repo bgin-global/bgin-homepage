@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BLOCK15_REGISTER } from "@/contents/block15Promo";
 import "@/styles/block13.css";
 
 export default function Block15AccessPage() {
@@ -181,9 +180,10 @@ export default function Block15AccessPage() {
           {/* Back to main page CTA */}
           <section className="block13-section">
             <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">Ready to Join Block 15?</h2>
+              <h2 className="text-3xl font-bold mb-4">Block 15 has concluded</h2>
               <p className="text-gray-700 mb-6">
-                Register now to secure your spot at BGIN Block 15
+                The meeting was held 15–16 October 2026. The program remains on
+                the event page.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -195,17 +195,6 @@ export default function Block15AccessPage() {
                   </svg>
                   Back to Event Page
                 </Link>
-                <a
-                  href={BLOCK15_REGISTER}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block13-btn-primary"
-                >
-                  Register Now
-                  <svg className="ml-2 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </a>
               </div>
             </div>
           </section>

@@ -13,7 +13,6 @@ import { getHubSchedule } from "@/contents/hubSchedules";
 import {
   BLOCK15_META,
   BLOCK15_PAGE,
-  BLOCK15_REGISTER,
   isBlock15KeyHub,
 } from "@/contents/block15Promo";
 import { discourseGuideHref } from "@/contents/discourse";
@@ -43,7 +42,6 @@ export default function ProjectHubPage({
   const { roadmap, meetings } = getHubSchedule(hub);
   const forumUrl = hub.forum?.href ?? hub.discourseUrl;
   const showOverview = hub.overview.trim() !== hub.pitch.trim();
-  const showBlock15Register = isBlock15KeyHub(hub.slug);
   const wgId = getWgIdentity(hub.wg);
 
   return (
@@ -95,16 +93,6 @@ export default function ProjectHubPage({
             >
               Open this WG on Discourse ↗
             </a>
-            {showBlock15Register && (
-              <a
-                href={BLOCK15_REGISTER}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex px-4 py-2 rounded-md bg-blue-900 text-white text-sm font-semibold hover:bg-blue-950"
-              >
-                Register for Block 15
-              </a>
-            )}
             {hub.secondaryCta && (
               <a
                 href={hub.secondaryCta.href}
@@ -116,11 +104,11 @@ export default function ProjectHubPage({
               </a>
             )}
           </div>
-          {showBlock15Register && (
+          {isBlock15KeyHub(hub.slug) && (
             <p className="mt-3 text-sm text-gray-600">
-              {BLOCK15_META.when} · {BLOCK15_META.where} ·{" "}
+              Block 15 was held {BLOCK15_META.when} in {BLOCK15_META.where}.{" "}
               <Link href={BLOCK15_PAGE} className="text-blue-700 underline">
-                Event details
+                Event page
               </Link>
             </p>
           )}
@@ -376,47 +364,7 @@ export default function ProjectHubPage({
               <Link href={BLOCK15_PAGE} className="text-blue-700 underline">
                 Block 15
               </Link>
-              {showBlock15Register && (
-                <>
-                  {" · "}
-                  <a
-                    href={BLOCK15_REGISTER}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 underline font-semibold"
-                  >
-                    Register
-                  </a>
-                </>
-              )}
             </p>
-            {showBlock15Register && (
-              <div className="mt-4 rounded-lg border border-blue-200 bg-blue-50 p-4">
-                <p className="text-sm font-semibold text-blue-900 mb-1">
-                  Invite path for Block 15
-                </p>
-                <p className="text-sm text-blue-900/80 mb-3">
-                  Share this hub for project context, then ask contacts to
-                  register for the meeting.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <a
-                    href={BLOCK15_REGISTER}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex px-3 py-1.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
-                  >
-                    Register on Eventbrite
-                  </a>
-                  <Link
-                    href={`${BLOCK15_PAGE}#why-attend`}
-                    className="inline-flex px-3 py-1.5 rounded-md border border-blue-700 text-blue-800 text-sm font-semibold hover:bg-white"
-                  >
-                    Why attend →
-                  </Link>
-                </div>
-              </div>
-            )}
           </section>
 
           {(related.length > 0 || relatedPubs.length > 0) && (

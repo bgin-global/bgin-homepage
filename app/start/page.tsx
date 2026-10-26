@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import {
   BLOCK15_META,
   BLOCK15_PAGE,
-  BLOCK15_REGISTER,
 } from "@/contents/block15Promo";
 import { CUSTOM_STYLES } from "@/styles/custom";
 import Link from "next/link";
@@ -16,10 +15,10 @@ const PATHS = [
     cta: "How to work on Discourse",
   },
   {
-    title: "I want to register for Block 15",
-    body: `${BLOCK15_META.when} · ${BLOCK15_META.where}. Hybrid meeting — register now, then open a project hub to prepare.`,
+    title: "Block 15 has concluded",
+    body: `Held ${BLOCK15_META.when} in ${BLOCK15_META.where}. The program and session pages remain on the event page.`,
     href: BLOCK15_PAGE,
-    cta: "Block 15 details & register",
+    cta: "Open the event page",
   },
   {
     title: "I want to join or invite someone",
@@ -70,28 +69,21 @@ export default function StartPage() {
       <div className={`py-12 max-w-5xl mx-auto px-4 space-y-4`}>
         <div className="rounded-md border-2 border-blue-700 bg-blue-50 p-6">
           <p className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-1">
-            Registration open
+            Concluded
           </p>
           <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-black mb-2`}>
             {BLOCK15_META.title}
           </h2>
           <p className="text-gray-700 mb-4">
-            {BLOCK15_META.when} · {BLOCK15_META.where} · {BLOCK15_META.format}
+            Held {BLOCK15_META.when} in {BLOCK15_META.where}. The program and
+            session pages remain available.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href={BLOCK15_REGISTER}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex px-4 py-2 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
-            >
-              Register on Eventbrite
-            </a>
             <Link
               href={BLOCK15_PAGE}
-              className="inline-flex px-4 py-2 rounded-md border border-blue-700 text-blue-800 text-sm font-semibold hover:bg-white"
+              className="inline-flex px-4 py-2 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
             >
-              Event details →
+              Event page →
             </Link>
           </div>
         </div>

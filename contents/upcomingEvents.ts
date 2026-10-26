@@ -34,12 +34,7 @@ export const upcomingBlockConference: {
   location: string;
   link: string | null;
   thumbnail?: string;
-} = {
-  title: "BGIN Block #15 Meeting",
-  date: "October 15 - 16",
-  location: "Washington, D.C.",
-  link: "/events/20261015-block15",
-};
+} | null = null;
 
 export const upcomingLayer2Meetup = {
   title: "Layer2 Meetup",
