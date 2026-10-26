@@ -97,6 +97,11 @@ th, td {
   border: 1px solid #e5e7eb;
 }
 
+/* Manuscript already uses ・ ● ➢. Drop the sitewide disc on these items. */
+.bsaq-cfp li {
+  list-style: none;
+}
+
 .speakers {
   display: grid;
   grid-auto-flow: row;
