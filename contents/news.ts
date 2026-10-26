@@ -10,6 +10,16 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "28",
+    title: "Call for Papers: BSAQ2026, Tokyo, 30 November (in Japanese)",
+    description:
+      "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN. Papers are due 4 November 2026 (AoE). The call is in Japanese.",
+    date: "2026-10-26T09:00:00",
+    link: "/events/20261130-bsaq2026",
+    tags: ["Conference", "Event"],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
     id: "27",
     title: "Block 15 keynote speakers announced",
     description:
