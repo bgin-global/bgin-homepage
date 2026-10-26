@@ -130,8 +130,14 @@ export default function Home() {
             >
               News
             </Link>
-            . Next gathering is Block 15 — same card pattern as project hub
-            meetings.
+            . The next workshop is BSAQ2026 in Tokyo on 30 November.{" "}
+            <Link
+              href="/events/20261130-bsaq2026"
+              className="text-blue-800 underline font-medium"
+            >
+              Call for Papers (in Japanese)
+            </Link>
+            .
           </p>
           {upcoming.map((m) => (
             <MeetingCard key={`${m.title}-${m.when}`} meeting={m} />

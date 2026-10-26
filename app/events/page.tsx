@@ -11,6 +11,7 @@ export default function EventsPage() {
     "Block Conference": "bg-indigo-50 border-indigo-500",
     "Layer 2 Meetup": "bg-purple-50 border-purple-500",
     "Webinar": "bg-green-50 border-green-500",
+    "Workshop": "bg-amber-50 border-amber-500",
     "Other": "bg-gray-50 border-gray-500"
   };
   
@@ -19,6 +20,7 @@ export default function EventsPage() {
     "Block Conference": "bg-indigo-100 text-indigo-700",
     "Layer 2 Meetup": "bg-purple-100 text-purple-700",
     "Webinar": "bg-green-100 text-green-700",
+    "Workshop": "bg-amber-100 text-amber-800",
     "Other": "bg-gray-100 text-gray-700"
   };
 
@@ -37,7 +39,23 @@ export default function EventsPage() {
     registerLink?: string;
     secondaryRegisterLink?: string;
     image?: string;
+    detailsLabel?: string;
+    omitRegister?: boolean;
   }> = [
+    {
+      id: "bsaq2026",
+      title: "BSAQ2026 — Call for Papers (in Japanese)",
+      date: "2026 Nov. 30",
+      time: "In person · Tokyo",
+      type: "Workshop",
+      description:
+        "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN. Papers are due 4 November 2026 (AoE). No pre-registration. The call is in Japanese.",
+      link: "/events/20261130-bsaq2026",
+      detailsLabel: "Call for Papers (in Japanese)",
+      omitRegister: true,
+      color: eventTypeColors["Workshop"],
+      venue: "University of Tokyo, Komaba Research Campus",
+    },
     {
       id: "block15",
       title: "BGIN Block #15 Meeting",
@@ -192,10 +210,10 @@ export default function EventsPage() {
                         href={event.link}
                         className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-center text-sm"
                       >
-                        View Details
+                        {event.detailsLabel ?? "View Details"}
                       </Link>
                     )}
-                    {event.registerLink ? (
+                    {event.omitRegister ? null : event.registerLink ? (
                       <>
                         <Link 
                           href={event.registerLink}

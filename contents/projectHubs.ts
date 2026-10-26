@@ -132,9 +132,15 @@ export const projectHubs: ProjectHub[] = [
       label: "Competition repository",
       href: PQC_COMPETITION_REPO,
     },
-    latestDocumentTitle: "GDC26 MR: Post-Quantum Cryptography Migration on DLTs",
-    nextMilestone: "Block 15 (Oct) · committee seated",
+    latestDocumentTitle: "BSAQ2026 Call for Papers (in Japanese)",
+    nextMilestone: "BSAQ2026, 30 Nov, Tokyo (Call for Papers, in Japanese)",
     documents: [
+      {
+        type: "Call for Papers",
+        title: "BSAQ2026 Call for Papers, Tokyo, 30 November (in Japanese)",
+        when: "2026/11",
+        href: "/events/20261130-bsaq2026",
+      },
       {
         type: "Working repository",
         title: "PQC Migration Prize — BGIN coordination repository (draft v0)",

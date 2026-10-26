@@ -77,6 +77,10 @@ const PRIORITY: Record<string, HubSchedule> = {
         what: "Block 15 (Washington, D.C.) — committee seated, metrics v1, scheme scope rulings",
         current: true,
       },
+      {
+        when: "30 Nov 2026",
+        what: "BSAQ2026 domestic workshop, University of Tokyo (Call for Papers, in Japanese)",
+      },
       { when: "Nov 2026", what: "Testbed harness, node-host call, COI policy" },
       {
         when: "13 Dec 2026",
@@ -97,6 +101,18 @@ const PRIORITY: Record<string, HubSchedule> = {
           "Confirm materials and contributors for the Block 15 program.",
         ],
         href: BLOCK15,
+        priority: true,
+      },
+      {
+        type: "other",
+        typeLabel: "Workshop",
+        title: "BSAQ2026 — Call for Papers (in Japanese)",
+        when: "30 Nov 2026 · Tokyo, Komaba",
+        plan: [
+          "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN.",
+          "Paper deadline: 4 November 2026 (AoE). In person only. The call is in Japanese.",
+        ],
+        href: "/events/20261130-bsaq2026",
         priority: true,
       },
       {
@@ -295,6 +311,18 @@ export function getSiteUpcomingMeetings(): MeetingItem[] {
         "Join via the Block 15 event page; open relevant project hubs before you arrive.",
       ],
       href: BLOCK15,
+      priority: true,
+    },
+    {
+      type: "other",
+      typeLabel: "Workshop",
+      title: "BSAQ2026 — Call for Papers (in Japanese)",
+      when: "30 Nov 2026 · Tokyo, Komaba",
+      plan: [
+        "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN.",
+        "Paper deadline: 4 November 2026 (AoE). The call is in Japanese.",
+      ],
+      href: "/events/20261130-bsaq2026",
       priority: true,
     },
     {
