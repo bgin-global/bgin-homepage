@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import { BLOCK15_PAGE, BLOCK15_REGISTER } from "@/contents/block15Promo";
+import { BLOCK15_PAGE } from "@/contents/block15Promo";
 import DiscourseGuideLink from "@/components/DiscourseGuideLink";
 
 const NAV_LINKS: { href: string; label: string; external?: boolean }[] = [
@@ -50,14 +50,6 @@ function Header() {
             label="Discourse"
             className="px-3 py-2"
           />
-          <a
-            href={BLOCK15_REGISTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex px-3 py-2 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
-          >
-            Register
-          </a>
           <button
             type="button"
             className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -132,14 +124,6 @@ function Header() {
             )
           )}
           <DiscourseGuideLink />
-          <a
-            href={BLOCK15_REGISTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex px-3.5 py-1.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800"
-          >
-            Register Block 15
-          </a>
         </div>
       </div>
 
@@ -149,15 +133,6 @@ function Header() {
         } lg:hidden flex-1 flex-col w-full h-screen flex items-stretch gap-1 bg-gray-50 px-4 py-4`}
         id="navbar"
       >
-        <a
-          href={BLOCK15_REGISTER}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex justify-center px-4 py-2.5 rounded-md bg-blue-700 text-white text-sm font-semibold hover:bg-blue-800 mb-1"
-          onClick={() => setIsOpen(false)}
-        >
-          Register Block 15
-        </a>
         <DiscourseGuideLink
           className="justify-center px-4 py-2 mb-3"
           onClick={() => setIsOpen(false)}
@@ -186,13 +161,13 @@ function Header() {
           )
         )}
         <p className="text-xs text-gray-500 mt-2">
-          Event page →{" "}
+          Block 15 has concluded →{" "}
           <Link
             href={BLOCK15_PAGE}
             className="text-blue-700 underline"
             onClick={() => setIsOpen(false)}
           >
-            Block 15 details
+            Event page
           </Link>
         </p>
       </div>

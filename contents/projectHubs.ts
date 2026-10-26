@@ -292,7 +292,7 @@ export const projectHubs: ProjectHub[] = [
     workingFolder:
       "https://drive.google.com/drive/folders/1wOoJNpeTvJ1VEPoJXgDUZ8ebysn0efWK?usp=drive_link",
     latestDocumentTitle: "Accountable Wallet (published package)",
-    nextMilestone: "Block 15 follow-on",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Published",
@@ -366,7 +366,7 @@ export const projectHubs: ProjectHub[] = [
     workingFolder:
       "https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb",
     latestDocumentTitle: "Distinguishing blockchain forensics from analytics",
-    nextMilestone: "Block 15 · 16 Oct, 16:10 (session 2-9)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Public comment",
@@ -414,7 +414,7 @@ export const projectHubs: ProjectHub[] = [
       "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
     latestDocumentTitle:
       "Block 14 MR: Privacy Enhanced Authentication and Key Management",
-    nextMilestone: "Block 15 · 16 Oct, 11:30 (session 2-6)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Meeting report",
@@ -484,7 +484,7 @@ export const projectHubs: ProjectHub[] = [
     workingFolder:
       "https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link",
     latestDocumentTitle: "BGIN Information Sharing Framework (Aug 2025)",
-    nextMilestone: "Block 15 · 16 Oct, 09:50 (session 2-4) · ISO path",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Framework",
@@ -567,7 +567,7 @@ export const projectHubs: ProjectHub[] = [
     },
     latestDocumentTitle:
       "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
-    nextMilestone: "Block 15 · 16 Oct, 09:50 (session 2-4)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Meeting report",
@@ -626,7 +626,7 @@ export const projectHubs: ProjectHub[] = [
     },
     latestDocumentTitle:
       "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
-    nextMilestone: "Block 15 · 16 Oct, 16:10 (session 2-10)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Meeting report",
@@ -713,7 +713,7 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15 · 16 Oct, 14:30 (session 2-8)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Reference",
@@ -743,7 +743,7 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15 · 15 Oct, 15:40 (session 1-6)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Reference",
@@ -779,7 +779,7 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z",
-    nextMilestone: "Block 15 · 16 Oct, 14:30 (session 2-7)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Reference",
@@ -817,7 +817,7 @@ export const projectHubs: ProjectHub[] = [
     },
     latestDocumentTitle:
       "Discussion Paper: The Industrial Structure of Digital Assets (11 June 2026)",
-    nextMilestone: "Block 15 · 16 Oct, 09:50 (session 2-3)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Discussion",
@@ -859,7 +859,7 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Block 15 · 16 Oct, 16:10 (session 2-9)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Reference",
@@ -895,7 +895,7 @@ export const projectHubs: ProjectHub[] = [
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
     latestDocumentTitle: "BGIN SR: Compute-as-Commodity (open for comment)",
-    nextMilestone: "Block 15 · 16 Oct, 11:30 (session 2-5)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Draft",
@@ -935,7 +935,7 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/folders/1-ngWvRGQ_5N36Mr0Pgh119tGIGmCExSu?usp=drive_link",
-    nextMilestone: "Block 15 · 15 Oct, 09:50 (session 1-3)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Reference",
@@ -965,7 +965,7 @@ export const projectHubs: ProjectHub[] = [
       label: "Discourse",
       href: WG_META.agentic.discourseUrl,
     },
-    nextMilestone: "Block 15 · 15 Oct, 09:50 (session 1-5, open space)",
+    nextMilestone: "Block 15 held (Oct 2026)",
     documents: [
       {
         type: "Reference",
