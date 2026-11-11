@@ -22,6 +22,11 @@ export const programData = {
           ],
           documents: [
             {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_Opening.pdf",
+              type: "Meeting report",
+            },
+            {
               title: "Opening Plenary slides — BGIN Block 15",
               link: "/documents/block-events/block15/Plenary/Block15_Opening_Plenary.pdf",
               type: "PDF",
@@ -47,7 +52,13 @@ export const programData = {
             "The practical challenges of migrating systems that secure billions of dollars in value",
             "Why organizations should begin preparing for cryptographic change well before existing standards are broken",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_Keynote_PQC.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: ["PQC Migration"],
           relatedProjectSlugs: ["pqc-migration"],
         },
@@ -72,7 +83,13 @@ export const programData = {
             "Open question: where does the convergence create opportunities that current regulatory frameworks do not yet recognise?",
             "Scope of the FASE AI + Blockchain workstream and topics for future written contributions",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_AI_Blockchain.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: ["AI and Blockchain"],
           relatedProjectSlugs: ["ai-blockchain"],
         },
@@ -97,6 +114,11 @@ export const programData = {
             "Tagging each metric by the attack class it defends against — on-spend, at-rest, on-setup (the GDC26 taxonomy)",
           ],
           documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_PQC_Migration_1.pdf",
+              type: "Meeting report",
+            },
             {
               title: "PQC Migration Prize — competition repository (public record)",
               link: "https://github.com/bgin-global/pqc-agility-competition",
@@ -181,6 +203,11 @@ export const programData = {
           ],
           documents: [
             {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_Supply_Chain.pdf",
+              type: "Meeting report",
+            },
+            {
               title: "Session introduction slides — Shin'ichiro Matsuo (Session Chair)",
               link: "/documents/block-events/block15/CS/Block15_Supply_Chain_Intro.pdf",
               type: "PDF",
@@ -239,6 +266,11 @@ export const programData = {
           ],
           documents: [
             {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_PQC_Migration_2.pdf",
+              type: "Meeting report",
+            },
+            {
               title: "PQC Migration Prize — competition repository (public record)",
               link: "https://github.com/bgin-global/pqc-agility-competition",
               type: "Repository",
@@ -295,7 +327,13 @@ export const programData = {
             "Membership, sponsorship and contributor participation",
             "Upcoming meetings: workshops between Blocks and the next Block",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day1_Business_Meeting.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: [],
           relatedProjectSlugs: [],
         },
@@ -334,7 +372,13 @@ export const programData = {
             "Day 2 programme and how the rooms connect",
             "Logistics and closing arrangements",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Opening_Keynote_Policy.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: [],
           relatedProjectSlugs: [],
         },
@@ -356,7 +400,13 @@ export const programData = {
             "Why existing U.S. tools — agency discretion, piecemeal statutes, and litigation — arrive after the harm",
             "Treating accountability as a design question for the next generation of commercial infrastructure, drawing on DeFi governance, financial integrity policy, and the emerging law of autonomous systems",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Opening_Keynote_Policy.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: [],
           relatedProjectSlugs: [],
         },
@@ -382,6 +432,11 @@ export const programData = {
             "Open discussion: participants propose ways to address or mitigate the six questions",
           ],
           documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Industrial_Design.pdf",
+              type: "Meeting report",
+            },
             {
               title: "Discussion Paper: The Industrial Structure of Digital Assets (Study Group on the Ideal Industrial Structure for Digital Assets, version of 11 June 2026)",
               link: "https://docs.google.com/document/d/1JEJYKLRpNIGZe36kCbjQbzbGc7PGF02U/edit",
@@ -422,7 +477,13 @@ export const programData = {
             "The IKP angle: what an agent may share, with whom, and under what delegated authority — identity, keys and access control for agents that exchange security information",
             "Path to a first public draft: scope, owners and timeline",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Security_Agent.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: [
             "Security AI Agent",
             "Cybersecurity Information Sharing Framework",
@@ -452,6 +513,11 @@ export const programData = {
             "Link to the concentration-of-computing-resources challenge raised in the Industrial Structure session (2-3)",
           ],
           documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Decentralized_Compute.pdf",
+              type: "Meeting report",
+            },
             {
               title: "BGIN SR (FASE): Compute-as-Commodity — Observable Flows in Decentralised Compute Infrastructure (open for comment)",
               link: "https://docs.google.com/document/d/1td0hDHE-Ahq9KG7I-pS0QULtQtvqCy1mmG1pkqdUfks/edit",
@@ -487,6 +553,11 @@ export const programData = {
             "Next steps: room comments into the IKP proof-of-personhood paper, a release for public comment, and the ISO TC 307 Technical Report path",
           ],
           documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Privacy_PoP.pdf",
+              type: "Meeting report",
+            },
             {
               title: "Block 14 MR: Privacy Enhanced Authentication and Key Management",
               link: "/documents/block-events/block14/IKP/IKP_Privacy_Enhanced_Authentication_Key_Management.pdf",
@@ -541,7 +612,13 @@ export const programData = {
             "Implementation realities from issuers and intermediaries",
             "Roadmap update for the Practical Stablecoin Implementation Guide",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Stablecoin_Policy.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: ["Practical Stablecoin Implementation Guide"],
           relatedProjectSlugs: ["stablecoin-guide"],
         },
@@ -564,6 +641,11 @@ export const programData = {
             "Alignment with the wallet security assurance (ST/PP) work, and owners for the guidance draft",
           ],
           documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_Offline_Key.pdf",
+              type: "Meeting report",
+            },
             {
               title: "Block 14 MR: Privacy Enhanced Authentication and Key Management",
               link: "/documents/block-events/block14/IKP/IKP_Privacy_Enhanced_Authentication_Key_Management.pdf",
@@ -595,6 +677,11 @@ export const programData = {
           ],
           documents: [
             {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_AML_Forensics.pdf",
+              type: "Meeting report",
+            },
+            {
               title: "Block 14 MR: Forensics & Analysis — Common Lexicon of Harmful Activities",
               link: "/documents/block-events/block14/IKP/IKP_FASE_Forensics_Analysis_Common_Lexicon_Harmful_Activities.pdf",
               type: "Meeting Report",
@@ -624,7 +711,13 @@ export const programData = {
             "Alignment with the offline key management guidance",
             "Owners and timeline for follow-on drafting after the Block",
           ],
-          documents: [],
+          documents: [
+            {
+              title: "Block 15 session report (draft for working-group review)",
+              link: "/documents/meeting-reports/block15/Block15_Day2_STPP.pdf",
+              type: "Meeting report",
+            },
+          ],
           relatedProjects: [
             "Security Target & Protection Profile (ST/PP)",
           ],

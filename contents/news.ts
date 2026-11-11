@@ -10,6 +10,16 @@ export interface NewsItem {
 
 export const allNews: NewsItem[] = [
   {
+    id: "29",
+    title: "Block 15 meeting reports posted for working-group review",
+    description:
+      "Sixteen session reports from Block 15 (15–16 October 2026, Washington, D.C.) are available as drafts for working-group review, prepared under the Chatham House Rule. Each project page links the report for its session.",
+    date: "2026-11-11T09:00:00",
+    link: "/events/20261015-block15/meeting-reports",
+    tags: ["Conference"],
+    image: "/images/Logo/BGIN_logomark_black.png",
+  },
+  {
     id: "28",
     title: "Call for Papers: BSAQ2026, Tokyo, 30 November (in Japanese)",
     description:
