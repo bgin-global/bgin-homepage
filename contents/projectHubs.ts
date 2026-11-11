@@ -113,7 +113,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "BGIN coordinates multi-stakeholder dialogue on how DLT stacks, wallets, and operators migrate to post-quantum cryptography without inventing new algorithms. Work focuses on crypto-agility patterns, staged rollout, deployment gaps, and neutral measurement. Since September 2026 the workstream also carries BGIN’s coordination role for the Japan-hosted PQC Migration Prize (2026–2028): forming the evaluation committee, drafting the evaluation metrics and rubric, specifying a neutral crypto-agility testbed, and running a six-workshop series (Sep 2026 → Feb 2027) that feeds the host’s call text. BGIN does not select algorithms and does not run the competition.",
     statusText:
-      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. The public coordination repository for the PQC Migration Prize opened in September 2026: governance, core outcomes (O1–O6), a 22-metric evaluation register, testbed scheme and harness specifications, and the workshop roadmap are all published as draft v0 for open review. The evaluation committee is forming — nominations are open, and the competition’s public discussion has its own category on the BGIN Discourse. Block 15 is the second workshop anchor: seating the committee, moving the metrics register from v0 to v1, and ruling on scheme scope. The SSR-co-located workshop on 13 Dec 2026 targets the call-text input package and a working definition of a “PQC-ready chain”. Earlier Block 12–14 reports remain on this hub.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. The public coordination repository for the PQC Migration Prize opened in September 2026: governance, core outcomes (O1–O6), a 22-metric evaluation register, testbed scheme and harness specifications, and the workshop roadmap are all published as draft v0 for open review. The evaluation committee is forming — nominations are open, and the competition’s public discussion has its own category on the BGIN Discourse. Block 15 (15–16 Oct 2026, Washington, D.C.) was the second workshop anchor; the keynote report and the two PQC Migration session reports are posted below as drafts for working-group review. The SSR-co-located workshop on 13 Dec 2026 targets the call-text input package and a working definition of a “PQC-ready chain”. Earlier Block 12–14 reports remain on this hub.",
     deliverables: [
       "Practical guidance on PQC migration for blockchain stacks",
       "Crypto-agility architecture patterns (hybrid / algorithm agility)",
@@ -135,6 +135,24 @@ export const projectHubs: ProjectHub[] = [
     latestDocumentTitle: "BSAQ2026 Call for Papers (in Japanese)",
     nextMilestone: "BSAQ2026, 30 Nov, Tokyo (Call for Papers, in Japanese)",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Keynote: Crypto Agility in the Quantum and AI Era",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day1_Keynote_PQC.pdf"),
+      },
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): IKP: PQC Migration",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day1_PQC_Migration_1.pdf"),
+      },
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): IKP: PQC Migration (2)",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day1_PQC_Migration_2.pdf"),
+      },
       {
         type: "Call for Papers",
         title: "BSAQ2026 Call for Papers, Tokyo, 30 November (in Japanese)",
@@ -351,7 +369,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "This workstream clarifies lexicon and practice notes for blockchain forensics versus analytics, with public-comment iterations.",
     statusText:
-      "Public Comment phase. Document under review; Block and WG discussions continue to refine lexicon and practice notes.",
+      "Public Comment phase. Document under review; Block and WG discussions continue to refine lexicon and practice notes. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Common framing of forensics vs analytics",
       "Guidance for VASPs / investigators / educators",
@@ -365,9 +383,15 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/folders/1erhESSrRUPT4uuI74m_XMlfyyrKWhOnb",
-    latestDocumentTitle: "Distinguishing blockchain forensics from analytics",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): AML Policy, Forensics and Analytics — Common Taxonomy (FASE/IKP)",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_AML_Forensics.pdf"),
+      },
       {
         type: "Public comment",
         title: "Distinguishing blockchain forensics from analytics",
@@ -395,7 +419,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Develops authentication patterns that preserve privacy while meeting practical identity and access needs in blockchain ecosystems.",
     statusText:
-      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and the privacy / proof-of-personhood taxonomy has been taken through open, topic-focused IKP meetings since. At Block 15 the dedicated session on 16 October (2-6) covers privacy-enhanced authentication, the proof-of-personhood taxonomy, verifiable trust agents and zero-knowledge proofs, with World as a main discussant.",
+      "Block 14 produced two meeting reports (Privacy Enhanced Authentication and Key Management; Proof of Personhood). An IKP research pathway on zero-knowledge proofs for biometric authentication opened in July 2026, and the privacy / proof-of-personhood taxonomy has been taken through open, topic-focused IKP meetings since. At Block 15 the dedicated session on 16 October (2-6) covered privacy-enhanced authentication, the proof-of-personhood taxonomy, verifiable trust agents and zero-knowledge proofs, with World as a main discussant. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Authentication patterns with privacy guarantees",
       "Privacy / proof-of-personhood taxonomy: what each proof attests, where the biometric lives, revocation, linkability scope, agent authority",
@@ -412,10 +436,15 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/folders/1A2aRasX47J7BNEQG_j1rlujUlSuz8KhI?usp=sharing",
-    latestDocumentTitle:
-      "Block 14 MR: Privacy Enhanced Authentication and Key Management",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): IKP: Privacy Enhanced Authentication, ZKP and Proof of Personhood",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Privacy_PoP.pdf"),
+      },
       {
         type: "Meeting report",
         title: "Block 14 MR: Privacy Enhanced Authentication and Key Management",
@@ -471,7 +500,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "How the crypto industry can share vulnerability and threat information internationally through multi-stakeholder alignment. Tracked separately from the Security AI Agent workstream so the living framework and agent tooling each have a clear URL and status.",
     statusText:
-      "Framework PDF (Aug 2025) and CS roadmap are public; Block 14 produced two session meeting reports. On an ISO-oriented path. Security AI Agent builds operational tooling on a separate hub.",
+      "Framework PDF (Aug 2025) and CS roadmap are public; Block 14 produced two session meeting reports. On an ISO-oriented path. Security AI Agent builds operational tooling on a separate hub. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Information sharing framework document (living)",
       "Operational guidance for industry participants",
@@ -483,9 +512,15 @@ export const projectHubs: ProjectHub[] = [
     secondaryCta: { label: "Block 15", href: "/events/20261015-block15" },
     workingFolder:
       "https://drive.google.com/drive/folders/1UFTRJsSyhKqRelAnet86UsTH1si53Sia?usp=drive_link",
-    latestDocumentTitle: "BGIN Information Sharing Framework (Aug 2025)",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Cyber + IKP: Security AI Agent — Information Sharing and Vulnerability Handling",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Security_Agent.pdf"),
+      },
       {
         type: "Framework",
         title: "BGIN Information Sharing Framework (11 Aug 2025)",
@@ -552,7 +587,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Early workstream on agent roles for vulnerability and threat information handling. Kept on its own URL so In Development status is not confused with the published Framework track. Closely dependent on Cybersecurity Information Sharing Framework.",
     statusText:
-      "The GDC26 Geneva breakout (2 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on work is scheduled at Block 15. Use the Framework hub for the living information-sharing document.",
+      "The GDC26 Geneva breakout (2 Sep 2026) produced a Chatham House meeting report and session slides. Use the Framework hub for the living information-sharing document. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Agent workflow concepts for information sharing",
       "Alignment with the Information Sharing Framework",
@@ -565,10 +600,15 @@ export const projectHubs: ProjectHub[] = [
       label: "GDC26 report",
       href: "/news/260902-gdc26-vulnerability-handling",
     },
-    latestDocumentTitle:
-      "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Cyber + IKP: Security AI Agent — Information Sharing and Vulnerability Handling",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Security_Agent.pdf"),
+      },
       {
         type: "Meeting report",
         title: "GDC26 MR: Vulnerability Handling in the Agentic AI Era",
@@ -612,7 +652,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "ST/PP materials for wallet security assurance and convergence with certification programmes. Session series from Block 12–14 documents progress; the GDC26 report is published, and Block 15 continues the track in CS WG.",
     statusText:
-      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Follow-on drafting is scheduled at Block 15. Earlier Block 12–14 reports remain on this hub.",
+      "The GDC26 Geneva breakout (3 Sep 2026) produced a Chatham House meeting report and session slides. Earlier Block 12–14 reports remain on this hub. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "ST/PP drafts for wallet security",
       "Convergence notes with assurance / certification themes",
@@ -624,10 +664,15 @@ export const projectHubs: ProjectHub[] = [
       label: "GDC26 report",
       href: "/news/260903-gdc26-wallet-security-assurance",
     },
-    latestDocumentTitle:
-      "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Cyber: Security Target and Protection Profile (ST/PP)",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_STPP.pdf"),
+      },
       {
         type: "Meeting report",
         title: "GDC26 MR: Wallet Security Assurance — ST/PP and Convergence",
@@ -702,7 +747,7 @@ export const projectHubs: ProjectHub[] = [
     pitch: "Standards and good practices for offline key management systems in blockchain contexts.",
     overview:
       "Produces guidance for offline key management suitable for operators and assurance discussions.",
-    statusText: "In progress within CS WG; Block sessions continue.",
+    statusText: "In progress within CS WG; Block sessions continue. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Good-practice guidance for offline key management",
       "Alignment with wallet / ST-PP assurance work",
@@ -713,8 +758,15 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Cyber + IKP: Offline Key Management",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Offline_Key.pdf"),
+      },
       {
         type: "Reference",
         title: "CS working folder",
@@ -735,7 +787,7 @@ export const projectHubs: ProjectHub[] = [
     pitch: "Governance approaches for the security supply chain in crypto and blockchain systems.",
     overview:
       "Examines how operators and standards bodies can govern dependencies and security supply-chain risk.",
-    statusText: "In progress; discussions at Block and WG calls.",
+    statusText: "In progress; discussions at Block and WG calls. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: ["Supply-chain governance framing", "Practical recommendations for operators"],
     themes: ["cybersecurity", "governance"],
     discourseUrl: WG_META.cs.discourseUrl,
@@ -743,8 +795,15 @@ export const projectHubs: ProjectHub[] = [
       label: "CS documents",
       href: "https://drive.google.com/drive/folders/15LAJyJhgPrkcDd4qzGnwhaFjtI54jssH?usp=drive_link",
     },
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Cyber: Governance of the Security Supply Chain",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day1_Supply_Chain.pdf"),
+      },
       {
         type: "Reference",
         title: "CS working folder",
@@ -765,7 +824,7 @@ export const projectHubs: ProjectHub[] = [
     pitch: "Practical guidance for stablecoin implementation, policy gaps, and anticipated legal reforms.",
     overview:
       "Identifies policy gaps and issues for practitioners and policymakers, with a forward-looking view of stablecoin reforms.",
-    statusText: "Active FASE workstream with Block sessions and working documents.",
+    statusText: "Active FASE workstream with Block sessions and working documents. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Practical implementation guide",
       "Policy gap analysis",
@@ -779,8 +838,15 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/u/0/folders/1o9DRR9o_SxfukO7r5kmSvA_IlqD94Z9Z",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): FASE: Stablecoin Policy — a Global Outlook",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Stablecoin_Policy.pdf"),
+      },
       {
         type: "Reference",
         title: "Working folder",
@@ -803,7 +869,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Produces a shared view of industry structure as a basis for regulatory and supervisory debate across jurisdictions.",
     statusText:
-      "The Discussion Paper \"The Industrial Structure of Digital Assets\" (Study Group on the Ideal Industrial Structure for Digital Assets) was first presented at Block 14 in Tokyo and has been revised through open consultation; the current version is dated 11 June 2026. A FASE contribution (discussion draft, 23 September 2026) reports early findings on three of its six open questions: competitive asymmetry, infrastructure and global markets, and public chains as public goods. Block 15 session 2-3 takes all six questions to the room.",
+      "The Discussion Paper \"The Industrial Structure of Digital Assets\" (Study Group on the Ideal Industrial Structure for Digital Assets) was first presented at Block 14 in Tokyo and has been revised through open consultation; the current version is dated 11 June 2026. A FASE contribution (discussion draft, 23 September 2026) reports early findings on three of its six open questions: competitive asymmetry, infrastructure and global markets, and public chains as public goods. Block 15 session 2-3 takes all six questions to the room. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Industry structure discussion paper",
       "Cross-jurisdiction comparison notes",
@@ -815,10 +881,27 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    latestDocumentTitle:
-      "Discussion Paper: The Industrial Structure of Digital Assets (11 June 2026)",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): Day 2 Opening and Keynote: The Conservation of Accountability",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Opening_Keynote_Policy.pdf"),
+      },
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): FASE: Industrial Design of Digital Assets",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Industrial_Design.pdf"),
+      },
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): FASE: Decentralized Compute and Market Structure",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Decentralized_Compute.pdf"),
+      },
       {
         type: "Discussion",
         title: "The Industrial Structure of Digital Assets — Discussion Paper (version of 11 June 2026)",
@@ -851,7 +934,7 @@ export const projectHubs: ProjectHub[] = [
     pitch: "A common lexicon and framing for illicit-activity discussions across policy and industry.",
     overview:
       "Builds shared language for illicit activities involving crypto-assets to improve cross-stakeholder dialogue.",
-    statusText: "Lexicon work in progress with Block and WG input.",
+    statusText: "Lexicon work in progress with Block and WG input. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: ["Common lexicon", "Use notes for practitioners and policymakers"],
     themes: ["defi", "forensics", "governance"],
     discourseUrl: WG_META.fase.discourseUrl,
@@ -859,8 +942,15 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): AML Policy, Forensics and Analytics — Common Taxonomy (FASE/IKP)",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_AML_Forensics.pdf"),
+      },
       {
         type: "Reference",
         title: "FASE working folder",
@@ -883,7 +973,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Compiles reportable metrics and classification approaches suitable for blockchain and crypto-assets.",
     statusText:
-      "Report work in progress, informed by jurisdictional debates (e.g. maturity / classification). The FASE study report \"Compute-as-Commodity\" asks whether decentralised compute networks can be considered commodity markets: it applies six commodity-market criteria to Akash, Bittensor, Render and Aethir, tests whether the blockchain layer is load-bearing, and separates productive from circular flows. It is open for comment and is discussed at Block 15 session 2-5.",
+      "Report work in progress, informed by jurisdictional debates (e.g. maturity / classification). The FASE study report \"Compute-as-Commodity\" asks whether decentralised compute networks can be considered commodity markets: it applies six commodity-market criteria to Akash, Bittensor, Render and Aethir, tests whether the blockchain layer is load-bearing, and separates productive from circular flows. It is open for comment and is discussed at Block 15 session 2-5. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: [
       "Categories and classification methods",
       "Guidance for consistent application",
@@ -894,9 +984,15 @@ export const projectHubs: ProjectHub[] = [
       label: "FASE documents",
       href: "https://drive.google.com/drive/folders/1xlDWwnL3lotlW8Uqa_zH4HGCrdhgAygp?usp=drive_link",
     },
-    latestDocumentTitle: "BGIN SR: Compute-as-Commodity (open for comment)",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): FASE: Decentralized Compute and Market Structure",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day2_Decentralized_Compute.pdf"),
+      },
       {
         type: "Draft",
         title: "BGIN SR (FASE): Compute-as-Commodity — Observable Flows in Decentralised Compute Infrastructure",
@@ -925,7 +1021,7 @@ export const projectHubs: ProjectHub[] = [
     overview:
       "Futures-oriented discussion of positive and negative synergies between AI and blockchain, grounded in use cases.",
     statusText:
-      "Block 15 session 1-3 gives an overview of the AI and blockchain industry as it stands today — agents that hold wallets and pay in stablecoins, on-chain provenance for data, models and outputs, AI for on-chain analytics and auditing — and puts the policy questions to the room: accountability when an autonomous agent transacts, agent identity and authorisation, and AML/CFT and consumer protection for machine-initiated activity. The discussion scopes the FASE AI + Blockchain workstream.",
+      "Block 15 session 1-3 gives an overview of the AI and blockchain industry as it stands today — agents that hold wallets and pay in stablecoins, on-chain provenance for data, models and outputs, AI for on-chain analytics and auditing — and puts the policy questions to the room: accountability when an autonomous agent transacts, agent identity and authorisation, and AML/CFT and consumer protection for machine-initiated activity. The discussion scopes the FASE AI + Blockchain workstream. Block 15 (15–16 Oct 2026, Washington, D.C.) took this work up in session; the session report is posted below as a draft for working-group review.",
     deliverables: ["Use-case framing", "Governance risk notes", "Meeting reports"],
     themes: ["ai", "governance"],
     discourseUrl: WG_META.fase.discourseUrl,
@@ -935,8 +1031,15 @@ export const projectHubs: ProjectHub[] = [
     },
     workingFolder:
       "https://drive.google.com/drive/folders/1-ngWvRGQ_5N36Mr0Pgh119tGIGmCExSu?usp=drive_link",
-    nextMilestone: "Block 15 held (Oct 2026)",
+    latestDocumentTitle: "Block 15 session report (draft for working-group review)",
+    nextMilestone: "Block 15 report review — comments on Discourse",
     documents: [
+      {
+        type: "Meeting report",
+        title: "Block 15 MR (draft): FASE: AI and Blockchain",
+        when: "2026/10",
+        href: documentHref("meeting-reports/block15/Block15_Day1_AI_Blockchain.pdf"),
+      },
       {
         type: "Reference",
         title: "Working folder",

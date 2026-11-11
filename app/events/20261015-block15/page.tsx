@@ -216,6 +216,12 @@ export default function Block15Page() {
             >
               View the program
             </a>
+            <Link
+              href="/events/20261015-block15/meeting-reports"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-white/80 bg-black/40 text-white text-sm font-semibold hover:bg-black/60"
+            >
+              Meeting reports
+            </Link>
           </div>
         </div>
       </section>
@@ -241,6 +247,12 @@ export default function Block15Page() {
           <a href="#program" className="font-medium text-gray-700 hover:text-blue-700">
             Program
           </a>
+          <Link
+            href="/events/20261015-block15/meeting-reports"
+            className="font-medium text-gray-700 hover:text-blue-700"
+          >
+            Meeting reports
+          </Link>
           <a href="#critical-projects" className="font-medium text-gray-700 hover:text-blue-700">
             Key projects
           </a>
