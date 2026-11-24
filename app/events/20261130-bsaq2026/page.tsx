@@ -155,7 +155,7 @@ export default function Bsaq2026CallPage() {
                 <tr>
                   <td className="whitespace-nowrap">16:50–17:10</td>
                   <td>クロージング</td>
-                  <td>—</td>
+                  <td>松浦 幹太</td>
                 </tr>
               </tbody>
             </table>
