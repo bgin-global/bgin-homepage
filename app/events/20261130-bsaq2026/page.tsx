@@ -22,23 +22,21 @@ export default function Bsaq2026CallPage() {
             className="mx-auto mb-8"
           />
           <h1 className="font-FamiljenGrotesk text-3xl md:text-[2rem] leading-tight font-semibold tracking-tight text-black text-center mb-4">
-            論文募集（Call for Papers）
-          </h1>
-          <p className="font-FamiljenGrotesk text-2xl leading-snug font-semibold text-black text-center mb-3">
             量子計算機時代のブロックチェーンシステムの安全性確保技術ワークショップ
-          </p>
-          <p className="text-gray-700 text-center mb-8">
+          </h1>
+          <p className="text-gray-700 text-center mb-3">
             （Workshop on Technologies for Securing Blockchain Systems in the
             Age of Quantum Computers: BSAQ2026）
           </p>
+          <p className="text-gray-700 text-center mb-8">
+            暫定プログラムを掲載しています。論文募集は締め切りました。
+          </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
-              href={EASYCHAIR_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#program"
               className="inline-flex px-6 py-3 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800"
             >
-              EasyChair で投稿する
+              暫定プログラム
             </a>
             <Link
               href={HUB_HREF}
@@ -82,6 +80,89 @@ export default function Bsaq2026CallPage() {
             </a>
           </p>
           <p className="mb-10">※ハイブリッド開催ではありません。</p>
+
+          <h2
+            id="program"
+            className="font-FamiljenGrotesk text-xl leading-snug font-semibold text-black mb-4 scroll-mt-24"
+          >
+            プログラム（暫定）
+          </h2>
+          <p className="mb-4">
+            時刻は暫定です。聴講のみの参加も歓迎します。参加費は無料で、事前登録は不要です。当日、受付へお越しください。
+          </p>
+          <div className="overflow-x-auto mb-4">
+            <table className="bsaq-dates w-full text-left text-base text-gray-800">
+              <thead>
+                <tr>
+                  <th className="bg-gray-50 font-semibold">時間</th>
+                  <th className="bg-gray-50 font-semibold">内容</th>
+                  <th className="bg-gray-50 font-semibold">講演者</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="whitespace-nowrap">10:00–10:15</td>
+                  <td>開会</td>
+                  <td>松浦 幹太</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">10:15–10:55</td>
+                  <td>BGINの過去の議論</td>
+                  <td>松尾 真一郎</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">11:00–11:25</td>
+                  <td>Ethereumの現況</td>
+                  <td>Nyx</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">11:25–11:50</td>
+                  <td>Bitcoinの現況</td>
+                  <td>安土 茂亨（Chaintope）</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">11:50–12:05</td>
+                  <td>質疑</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">12:05–13:05</td>
+                  <td>昼休憩</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">13:05–13:25</td>
+                  <td>金融庁の説明</td>
+                  <td>金融庁</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">13:30–14:50</td>
+                  <td>提案: 技術・評価対象</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">15:00–15:40</td>
+                  <td>提案: 評価方法・テストベッド</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">15:50–16:50</td>
+                  <td>パネル（評価基準・評価方法）</td>
+                  <td>
+                    松本 泰、竹井 悠人（メルカリ）。司会: 松尾 真一郎
+                  </td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">16:50–17:10</td>
+                  <td>クロージング</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mb-10">
+            提案セッションの講演者は、決まり次第この表に追加します。
+          </p>
 
           <h2 className="font-FamiljenGrotesk text-xl leading-snug font-semibold text-black mb-4">
             概要
@@ -260,6 +341,9 @@ export default function Bsaq2026CallPage() {
           <h2 className="font-FamiljenGrotesk text-xl leading-snug font-semibold text-black mb-4">
             投稿方法（EasyChair）
           </h2>
+          <p className="mb-4">
+            論文投稿の締切（2026年11月4日）は過ぎています。以下は募集時の案内です。
+          </p>
           <ul className="list-none pl-0 mb-10 space-y-3">
             <li>
               ●論文は本ワークショップのEasyChairサイト

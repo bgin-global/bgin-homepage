@@ -43,14 +43,14 @@ export default function EventsPage() {
   }> = [
     {
       id: "bsaq2026",
-      title: "BSAQ2026 — Call for Papers (in Japanese)",
+      title: "BSAQ2026 — Provisional program (in Japanese)",
       date: "2026 Nov. 30",
       time: "In person · Tokyo",
       type: "Workshop",
       description:
-        "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN. Papers are due 4 November 2026 (AoE). No pre-registration. The call is in Japanese.",
+        "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN. A provisional program is posted. In person only. No pre-registration. The program is in Japanese.",
       link: "/events/20261130-bsaq2026",
-      detailsLabel: "Call for Papers (in Japanese)",
+      detailsLabel: "Provisional program (in Japanese)",
       omitRegister: true,
       color: eventTypeColors["Workshop"],
       venue: "University of Tokyo, Komaba Research Campus",

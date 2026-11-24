@@ -132,12 +132,12 @@ export const projectHubs: ProjectHub[] = [
       label: "Competition repository",
       href: PQC_COMPETITION_REPO,
     },
-    latestDocumentTitle: "BSAQ2026 Call for Papers (in Japanese)",
-    nextMilestone: "BSAQ2026, 30 Nov, Tokyo (Call for Papers, in Japanese)",
+    latestDocumentTitle: "BSAQ2026 provisional program (in Japanese)",
+    nextMilestone: "BSAQ2026, 30 Nov, Tokyo (provisional program, in Japanese)",
     documents: [
       {
-        type: "Call for Papers",
-        title: "BSAQ2026 Call for Papers, Tokyo, 30 November (in Japanese)",
+        type: "Program",
+        title: "BSAQ2026 provisional program, Tokyo, 30 November (in Japanese)",
         when: "2026/11",
         href: "/events/20261130-bsaq2026",
       },

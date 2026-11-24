@@ -127,7 +127,7 @@ export default function Home() {
               href="/events/20261130-bsaq2026"
               className="text-blue-800 underline font-medium"
             >
-              Call for Papers (in Japanese)
+              Provisional program (in Japanese)
             </Link>
             .
           </p>

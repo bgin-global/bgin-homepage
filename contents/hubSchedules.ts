@@ -79,7 +79,7 @@ const PRIORITY: Record<string, HubSchedule> = {
       },
       {
         when: "30 Nov 2026",
-        what: "BSAQ2026 domestic workshop, University of Tokyo (Call for Papers, in Japanese)",
+        what: "BSAQ2026 domestic workshop, University of Tokyo (provisional program, in Japanese)",
         current: true,
       },
       { when: "Nov 2026", what: "Testbed harness, node-host call, COI policy" },
@@ -107,11 +107,11 @@ const PRIORITY: Record<string, HubSchedule> = {
       {
         type: "other",
         typeLabel: "Workshop",
-        title: "BSAQ2026 — Call for Papers (in Japanese)",
+        title: "BSAQ2026 — Provisional program (in Japanese)",
         when: "30 Nov 2026 · Tokyo, Komaba",
         plan: [
           "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN.",
-          "Paper deadline: 4 November 2026 (AoE). In person only. The call is in Japanese.",
+          "Provisional program is posted. In person only. No pre-registration. The program is in Japanese.",
         ],
         href: "/events/20261130-bsaq2026",
         priority: true,
@@ -312,11 +312,11 @@ export function getSiteUpcomingMeetings(): MeetingItem[] {
     {
       type: "other",
       typeLabel: "Workshop",
-      title: "BSAQ2026 — Call for Papers (in Japanese)",
+      title: "BSAQ2026 — Provisional program (in Japanese)",
       when: "30 Nov 2026 · Tokyo, Komaba",
       plan: [
         "Domestic workshop on securing blockchain systems in the quantum-computing era, co-organized by the University of Tokyo IIS and BGIN.",
-        "Paper deadline: 4 November 2026 (AoE). The call is in Japanese.",
+        "Provisional program is posted. In person only. No pre-registration. The program is in Japanese.",
       ],
       href: "/events/20261130-bsaq2026",
       priority: true,
