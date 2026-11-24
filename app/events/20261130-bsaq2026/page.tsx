@@ -113,7 +113,7 @@ export default function Bsaq2026CallPage() {
                 <tr>
                   <td className="whitespace-nowrap">11:00–11:25</td>
                   <td>Ethereumの現況</td>
-                  <td>津田 匠貴</td>
+                  <td>津田匠貴（Nyx Foundation）</td>
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">11:25–11:50</td>
