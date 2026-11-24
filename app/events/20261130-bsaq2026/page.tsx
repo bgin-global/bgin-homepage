@@ -133,7 +133,13 @@ export default function Bsaq2026CallPage() {
                 <tr>
                   <td className="whitespace-nowrap">13:05–13:25</td>
                   <td>金融庁における耐量子計算機暗号に関する取り組み</td>
-                  <td>金融庁</td>
+                  <td>
+                    五十嵐ほづえ（金融庁
+                    銀行・証券監督局総務課ITサイバー・経済安全保障監理官室参事官）
+                    <br />
+                    杉野隆弥（金融庁
+                    資産運用・保険監督局暗号資産・ステーブルコイン課イノベーション推進室課長補佐）
+                  </td>
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">13:30–14:50</td>
