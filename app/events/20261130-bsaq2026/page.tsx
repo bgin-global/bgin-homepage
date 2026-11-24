@@ -107,7 +107,7 @@ export default function Bsaq2026CallPage() {
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">10:15–10:55</td>
-                  <td>BGINの過去の議論</td>
+                  <td>ブロックチェーンのPQC対応に関する過去のBGIN等での議論</td>
                   <td>松尾 真一郎</td>
                 </tr>
                 <tr>
