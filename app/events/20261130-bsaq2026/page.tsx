@@ -149,7 +149,7 @@ export default function Bsaq2026CallPage() {
                   <td className="whitespace-nowrap">15:50–16:50</td>
                   <td>パネル（評価基準・評価方法）</td>
                   <td>
-                    松本 泰、竹井 悠人（メルカリ）。司会: 松尾 真一郎
+                    松本 泰、竹井 悠人（メルカリ）、ほか。司会: 松尾 真一郎
                   </td>
                 </tr>
                 <tr>
