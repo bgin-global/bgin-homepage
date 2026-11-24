@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import { BLOCK15_PAGE } from "@/contents/block15Promo";
 import DiscourseGuideLink from "@/components/DiscourseGuideLink";
 
 const NAV_LINKS: { href: string; label: string; external?: boolean }[] = [
@@ -160,16 +159,6 @@ function Header() {
             </Link>
           )
         )}
-        <p className="text-xs text-gray-500 mt-2">
-          Block 15 has concluded →{" "}
-          <Link
-            href={BLOCK15_PAGE}
-            className="text-blue-700 underline"
-            onClick={() => setIsOpen(false)}
-          >
-            Event page
-          </Link>
-        </p>
       </div>
     </div>
   );
