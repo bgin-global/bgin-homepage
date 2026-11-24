@@ -10,11 +10,7 @@ import { CUSTOM_STYLES } from "@/styles/custom";
 import News from "@/components/News";
 import { allNews } from "@/contents/news";
 import { getSiteUpcomingMeetings } from "@/contents/hubSchedules";
-import {
-  BLOCK15_KEY_HUBS,
-  BLOCK15_META,
-  BLOCK15_PAGE,
-} from "@/contents/block15Promo";
+import { BLOCK15_KEY_HUBS } from "@/contents/block15Promo";
 import { getHubBySlug } from "@/contents/projectHubs";
 import Link from "next/link";
 
@@ -47,37 +43,6 @@ export default function Home() {
       <Header />
 
       <Hero type={1} />
-
-      <section
-        className="border-y border-blue-700 bg-blue-700 text-white"
-        aria-label="Block 15 has concluded"
-      >
-        <div className="max-w-5xl mx-auto px-4 py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div className="min-w-0">
-            <p className="text-xs font-bold uppercase tracking-wider text-blue-100 mb-1">
-              Block meeting concluded
-            </p>
-            <h2 className={`${CUSTOM_STYLES.TYPE.SECTION} text-white mb-1`}>
-              {BLOCK15_META.title}
-            </h2>
-            <p className="text-sm text-blue-100 mb-2">
-              {BLOCK15_META.when} · {BLOCK15_META.where}
-            </p>
-            <p className="text-sm text-blue-50 max-w-xl leading-relaxed">
-              The meeting was held 15–16 October 2026. The program and session
-              pages remain on the event page.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 shrink-0">
-            <Link
-              href={BLOCK15_PAGE}
-              className="inline-flex justify-center items-center px-5 py-3 rounded-md bg-white text-blue-800 text-sm font-semibold hover:bg-blue-50"
-            >
-              Event page
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <div className={`bg-white border-b border-gray-200 ${CUSTOM_STYLES.SPACE.SECTION}`}>
         <div className="max-w-5xl mx-auto px-4">
@@ -127,7 +92,7 @@ export default function Home() {
               href="/events/20261130-bsaq2026"
               className="text-blue-800 underline font-medium"
             >
-              Call for Papers (in Japanese)
+              Provisional program (in Japanese)
             </Link>
             .
           </p>
