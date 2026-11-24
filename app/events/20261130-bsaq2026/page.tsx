@@ -112,12 +112,12 @@ export default function Bsaq2026CallPage() {
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">11:00–11:25</td>
-                  <td>Ethereumの現況</td>
+                  <td>PQC対応におけるEthereumの現況</td>
                   <td>津田匠貴（Nyx Foundation）</td>
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">11:25–11:50</td>
-                  <td>Bitcoinの現況</td>
+                  <td>PQC対応におけるBitcoinの現況</td>
                   <td>安土 茂亨（Chaintope）</td>
                 </tr>
                 <tr>
