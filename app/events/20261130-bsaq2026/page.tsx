@@ -113,7 +113,7 @@ export default function Bsaq2026CallPage() {
                 <tr>
                   <td className="whitespace-nowrap">11:00–11:25</td>
                   <td>Ethereumの現況</td>
-                  <td>Nyx</td>
+                  <td>津田 匠貴</td>
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">11:25–11:50</td>
@@ -132,7 +132,7 @@ export default function Bsaq2026CallPage() {
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">13:05–13:25</td>
-                  <td>金融庁の説明</td>
+                  <td>金融庁における耐量子計算機暗号に関する取り組み</td>
                   <td>金融庁</td>
                 </tr>
                 <tr>
