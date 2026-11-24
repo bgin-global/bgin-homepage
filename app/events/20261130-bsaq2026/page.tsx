@@ -138,12 +138,12 @@ export default function Bsaq2026CallPage() {
                 <tr>
                   <td className="whitespace-nowrap">13:30–14:50</td>
                   <td>提案: 技術・評価対象</td>
-                  <td>—</td>
+                  <td>近日発表</td>
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">15:00–15:40</td>
                   <td>提案: 評価方法・テストベッド</td>
-                  <td>—</td>
+                  <td>近日発表</td>
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap">15:50–16:50</td>
@@ -161,7 +161,7 @@ export default function Bsaq2026CallPage() {
             </table>
           </div>
           <p className="mb-10">
-            提案セッションの講演者は、決まり次第この表に追加します。
+            2つの提案セッションの講演者は、近日中に発表します。
           </p>
 
           <h2 className="font-FamiljenGrotesk text-xl leading-snug font-semibold text-black mb-4">
