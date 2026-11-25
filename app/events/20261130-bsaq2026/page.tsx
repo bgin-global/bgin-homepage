@@ -142,7 +142,12 @@ export default function Bsaq2026CallPage() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap">13:30–14:50</td>
+                  <td className="whitespace-nowrap">13:25–13:50</td>
+                  <td>カストディ向けの高度な鍵管理技術について</td>
+                  <td>竹井 悠人（メルカリ）</td>
+                </tr>
+                <tr>
+                  <td className="whitespace-nowrap">13:55–14:50</td>
                   <td>提案: 技術・評価対象</td>
                   <td>近日発表</td>
                 </tr>
@@ -160,6 +165,8 @@ export default function Bsaq2026CallPage() {
                     竹井 悠人（メルカリ）
                     <br />
                     津田 匠貴（Nyx Foundation）
+                    <br />
+                    安土 茂亨（Chaintope）
                     <br />
                     ほか
                     <br />
