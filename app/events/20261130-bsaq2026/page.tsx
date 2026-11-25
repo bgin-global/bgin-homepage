@@ -160,7 +160,7 @@ export default function Bsaq2026CallPage() {
                   <td className="whitespace-nowrap">15:50–16:50</td>
                   <td>パネル（評価基準・評価方法）</td>
                   <td>
-                    松本 泰
+                    松本 泰（NPO JNSA）
                     <br />
                     竹井 悠人（メルカリ）
                     <br />
